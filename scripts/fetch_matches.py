@@ -170,6 +170,42 @@ def main():
 
     all_matches.sort(key=lambda m: m["kickoff_jst"])
 
+    # 既存matches.jsonがあれば、TBD（home_id=None）の試合は過去の確定済みデータを保持する。
+    # football-data.org の無料プランでは、CL等のノックアウトラウンドの対戦カードが
+    # APIから後日になって null で返ってくるケースがある（2026-04-29で実測）。
+    out_path = DATA / "matches.json"
+    if out_path.exists():
+        try:
+            old_data = json.loads(out_path.read_text(encoding="utf-8"))
+            old_by_id = {m["id"]: m for m in old_data.get("matches", [])}
+            preserved = 0
+            for m in all_matches:
+                old = old_by_id.get(m["id"])
+                if not old:
+                    continue
+                # home/away それぞれ独立に判定（片方だけTBDのケースもありうる）
+                if m["home_id"] is None and old.get("home_id"):
+                    for k in ("home_id", "home_ja", "home_en", "home_crest"):
+                        m[k] = old.get(k)
+                    # JP playersも再ハイドレート（home側）
+                    home_jp_existing = [p for p in m["japanese_players"] if p["side"] == "home"]
+                    if not home_jp_existing:
+                        for p in player_idx.get(m["home_id"], []):
+                            m["japanese_players"].append({"name_ja": p["name_ja"], "position": p["position"], "side": "home"})
+                    preserved += 1
+                if m["away_id"] is None and old.get("away_id"):
+                    for k in ("away_id", "away_ja", "away_en", "away_crest"):
+                        m[k] = old.get(k)
+                    away_jp_existing = [p for p in m["japanese_players"] if p["side"] == "away"]
+                    if not away_jp_existing:
+                        for p in player_idx.get(m["away_id"], []):
+                            m["japanese_players"].append({"name_ja": p["name_ja"], "position": p["position"], "side": "away"})
+                    preserved += 1
+            if preserved:
+                print(f"[INFO] APIがnull返却した {preserved}件 のチーム情報を、前回データから補完しました。")
+        except Exception as e:
+            print(f"[WARN] 既存データの参照に失敗: {e}")
+
     output = {
         "updated": datetime.now(JST).isoformat(),
         "date_from": date_from,
@@ -178,7 +214,6 @@ def main():
         "matches": all_matches,
     }
 
-    out_path = DATA / "matches.json"
     out_path.write_text(json.dumps(output, ensure_ascii=False, indent=2), encoding="utf-8")
     print(f"[OK] {len(all_matches)}試合を {out_path} に書き出しました。")
 
