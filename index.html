@@ -12,8 +12,9 @@
     <p class="updated" id="updated"></p>
     <p class="period" id="period"></p>
     <div class="view-tabs">
-      <button class="view-tab active" data-view="list">📋 リスト</button>
-      <button class="view-tab" data-view="calendar">📅 カレンダー</button>
+      <button class="view-tab active" data-view="schedule">📅 予定を見る</button>
+      <button class="view-tab" data-view="results">✅ 結果を見る</button>
+      <button class="view-tab" data-view="calendar">📆 カレンダー</button>
       <button class="view-tab" data-view="ranking">📊 順位・ランキング</button>
     </div>
   </header>
@@ -23,10 +24,6 @@
       <input type="checkbox" id="onlyJp" checked>
       <span>🇯🇵 日本人選手の試合のみ</span>
     </label>
-    <label class="toggle">
-      <input type="checkbox" id="hideFinished" checked>
-      <span>終了試合を非表示</span>
-    </label>
     <details class="league-filter">
       <summary>リーグで絞り込み</summary>
       <div id="leagueChecks"></div>
@@ -34,7 +31,8 @@
   </section>
 
   <main>
-    <div id="listView" class="view"></div>
+    <div id="scheduleView" class="view"></div>
+    <div id="resultsView" class="view hidden"></div>
 
     <div id="calendarView" class="view hidden">
       <div class="cal-nav">

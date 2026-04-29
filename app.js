@@ -1,5 +1,6 @@
 (function () {
-  const listEl = document.getElementById('listView');
+  const scheduleEl = document.getElementById('scheduleView');
+  const resultsEl = document.getElementById('resultsView');
   const calendarEl = document.getElementById('calendarView');
   const rankingEl = document.getElementById('rankingView');
   const calGridEl = document.getElementById('calGrid');
@@ -8,7 +9,6 @@
   const updatedEl = document.getElementById('updated');
   const periodEl = document.getElementById('period');
   const onlyJpEl = document.getElementById('onlyJp');
-  const hideFinishedEl = document.getElementById('hideFinished');
   const leagueChecksEl = document.getElementById('leagueChecks');
   const matchFiltersEl = document.getElementById('matchFilters');
   const rankLeagueEl = document.getElementById('rankLeague');
@@ -28,7 +28,8 @@
   let dataRangeFrom = null;
   let dataRangeTo = null;
   const enabledLeagues = new Set();
-  let currentView = localStorage.getItem('view') || 'list';
+  let currentView = localStorage.getItem('view') || 'schedule';
+  if (currentView === 'list') currentView = 'schedule';
   let calCursor = null;
   let calSelected = null;
   let currentRankLeague = null;
@@ -189,11 +190,9 @@
 
   function filtered() {
     const onlyJp = onlyJpEl.checked;
-    const hideFin = hideFinishedEl.checked;
     return allMatches.filter(m => {
       if (!enabledLeagues.has(m.competition_id)) return false;
       if (onlyJp && (!m.japanese_players || m.japanese_players.length === 0)) return false;
-      if (hideFin && m.status === 'FINISHED') return false;
       return true;
     });
   }
@@ -202,7 +201,8 @@
     currentView = view;
     localStorage.setItem('view', view);
     viewTabs.forEach(t => t.classList.toggle('active', t.dataset.view === view));
-    listEl.classList.toggle('hidden', view !== 'list');
+    scheduleEl.classList.toggle('hidden', view !== 'schedule');
+    resultsEl.classList.toggle('hidden', view !== 'results');
     calendarEl.classList.toggle('hidden', view !== 'calendar');
     rankingEl.classList.toggle('hidden', view !== 'ranking');
     matchFiltersEl.classList.toggle('hidden', view === 'ranking');
@@ -210,16 +210,17 @@
   }
 
   function rerender() {
-    if (currentView === 'list') renderList();
+    if (currentView === 'schedule') renderSchedule();
+    else if (currentView === 'results') renderResults();
     else if (currentView === 'calendar') renderCalendar();
     else if (currentView === 'ranking') renderRanking();
   }
 
-  // ===== List view =====
-  function renderList() {
-    const matches = filtered();
+  // ===== Schedule view =====
+  function renderSchedule() {
+    const matches = filtered().filter(m => m.status !== 'FINISHED');
     if (matches.length === 0) {
-      listEl.innerHTML = `<p class="empty">表示できる試合がありません。<br>フィルタ条件を変更してください。</p>`;
+      scheduleEl.innerHTML = `<p class="empty">予定されている試合はありません。<br>フィルタ条件を変更してください。</p>`;
       return;
     }
     const groups = new Map();
@@ -235,7 +236,30 @@
       html.push(`<h2 class="date-heading${isToday ? ' today' : ''}">${fmtDateHeading(key)}${isToday ? ' ・ 今日' : ''}</h2>`);
       for (const m of ms) html.push(renderMatch(m, isToday));
     }
-    listEl.innerHTML = html.join('');
+    scheduleEl.innerHTML = html.join('');
+  }
+
+  // ===== Results view =====
+  function renderResults() {
+    const matches = filtered().filter(m => m.status === 'FINISHED').slice().reverse();
+    if (matches.length === 0) {
+      resultsEl.innerHTML = `<p class="empty">直近の結果はありません。<br>フィルタ条件を変更してください。</p>`;
+      return;
+    }
+    const groups = new Map();
+    for (const m of matches) {
+      const k = dateKey(m.kickoff_jst);
+      if (!groups.has(k)) groups.set(k, []);
+      groups.get(k).push(m);
+    }
+    const today = todayKey();
+    const html = [];
+    for (const [key, ms] of groups) {
+      const isToday = key === today;
+      html.push(`<h2 class="date-heading${isToday ? ' today' : ''}">${fmtDateHeading(key)}${isToday ? ' ・ 今日' : ''}</h2>`);
+      for (const m of ms) html.push(renderMatch(m, isToday));
+    }
+    resultsEl.innerHTML = html.join('');
   }
 
   function renderMatch(m, isToday) {
@@ -569,7 +593,6 @@
 
   // ==== Events ====
   onlyJpEl.addEventListener('change', rerender);
-  hideFinishedEl.addEventListener('change', rerender);
   viewTabs.forEach(t => t.addEventListener('click', () => switchView(t.dataset.view)));
   sortBtns.forEach(b => b.addEventListener('click', () => {
     sortBtns.forEach(x => x.classList.toggle('active', x === b));
