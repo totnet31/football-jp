@@ -1,0 +1,33 @@
+name: 毎朝データ更新
+
+on:
+  schedule:
+    - cron: '0 22 * * *'  # 毎日22:00 UTC = 翌7:00 JST
+  workflow_dispatch:        # GitHubの画面から手動実行も可能
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: リポジトリを取得
+        uses: actions/checkout@v4
+
+      - name: Python をセットアップ
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: APIキーを設定
+        run: echo "FOOTBALL_DATA_TOKEN=${{ secrets.FOOTBALL_DATA_TOKEN }}" > .env
+
+      - name: データ取得スクリプトを実行
+        run: python3 scripts/fetch_matches.py
+
+      - name: 更新したデータをGitHubに保存
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/
+          git diff --cached --quiet || git commit -m "data: $(date -u '+%Y-%m-%d') 自動更新"
+          git push
