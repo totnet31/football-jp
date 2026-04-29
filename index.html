@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>海外サッカー 日本人選手 試合スケジュール</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>⚽ 海外サッカー 日本人選手 試合スケジュール</h1>
+    <p class="updated" id="updated"></p>
+    <p class="period" id="period"></p>
+    <div class="view-tabs">
+      <button class="view-tab active" data-view="list">📋 リスト</button>
+      <button class="view-tab" data-view="calendar">📅 カレンダー</button>
+      <button class="view-tab" data-view="ranking">📊 順位・ランキング</button>
+    </div>
+  </header>
+
+  <section class="filters" id="matchFilters">
+    <label class="toggle">
+      <input type="checkbox" id="onlyJp" checked>
+      <span>🇯🇵 日本人選手の試合のみ</span>
+    </label>
+    <label class="toggle">
+      <input type="checkbox" id="hideFinished" checked>
+      <span>終了試合を非表示</span>
+    </label>
+    <details class="league-filter">
+      <summary>リーグで絞り込み</summary>
+      <div id="leagueChecks"></div>
+    </details>
+  </section>
+
+  <main>
+    <div id="listView" class="view"></div>
+
+    <div id="calendarView" class="view hidden">
+      <div class="cal-nav">
+        <button id="calPrev">←</button>
+        <span id="calMonthLabel"></span>
+        <button id="calNext">→</button>
+        <button id="calToday">今月</button>
+      </div>
+      <div id="calGrid" class="cal-grid"></div>
+      <div id="calDayDetail" class="cal-day-detail"></div>
+    </div>
+
+    <div id="rankingView" class="view hidden">
+      <div class="rank-controls">
+        <label>
+          リーグ:
+          <select id="rankLeague"></select>
+        </label>
+      </div>
+      <h2 class="rank-section-title">順位表</h2>
+      <div id="standingsContent"></div>
+      <h2 class="rank-section-title">得点・アシストランキング（上位50名）</h2>
+      <div class="rank-controls">
+        <span>並び替え:</span>
+        <button class="sort-btn active" data-sort="goals">ゴール</button>
+        <button class="sort-btn" data-sort="assists">アシスト</button>
+        <button class="sort-btn" data-sort="ga">G+A</button>
+      </div>
+      <div id="scorersContent"></div>
+    </div>
+  </main>
+
+  <footer>
+    <p>データ提供: <a href="https://www.football-data.org/" target="_blank" rel="noopener">football-data.org</a></p>
+    <p>放送情報は2026-04-29時点。シーズンによって変動します。</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
