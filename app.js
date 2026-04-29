@@ -288,8 +288,10 @@
       const scoreHtml = scoreVal != null ? `<span class="team-score">${scoreVal}</span>` : '';
       return `<div class="team-row${win ? ' winner' : ''}">
         ${crestHtml}
-        <span class="team-name">${escape(name)}</span>
-        ${jpHtml}
+        <div class="team-mid">
+          <span class="team-name">${escape(name)}</span>
+          ${jpHtml}
+        </div>
         ${scoreHtml}
       </div>`;
     };

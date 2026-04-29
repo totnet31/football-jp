@@ -209,11 +209,11 @@ main {
 }
 
 .team-row {
-  display: flex;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
   align-items: center;
   gap: 8px;
   font-size: 15px;
-  flex-wrap: wrap;
 }
 
 .team-crest {
@@ -221,6 +221,14 @@ main {
   height: 22px;
   flex-shrink: 0;
   object-fit: contain;
+}
+
+.team-mid {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px 8px;
+  min-width: 0;
 }
 
 .team-name { flex-shrink: 0; }
@@ -243,7 +251,6 @@ main {
   font-feature-settings: "tnum";
   min-width: 22px;
   text-align: right;
-  margin-left: auto;
 }
 
 .team-row.winner .team-name,
