@@ -193,6 +193,8 @@
     return allMatches.filter(m => {
       if (!enabledLeagues.has(m.competition_id)) return false;
       if (onlyJp && (!m.japanese_players || m.japanese_players.length === 0)) return false;
+      // 両チームともTBD（CLノックアウト等の未確定試合）はAPI側で名前未確定なので非表示
+      if (m.home_ja === '未定' && m.away_ja === '未定') return false;
       return true;
     });
   }
