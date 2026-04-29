@@ -1,5 +1,5 @@
 {
-  "updated": "2026-04-30T01:54:47.184288+09:00",
+  "updated": "2026-04-30T07:40:51.898242+09:00",
   "competitions": {
     "39": {
       "name_ja": "プレミアリーグ",
@@ -4302,10 +4302,10 @@
           "team_id": 78,
           "team_ja": "アトレティコ・マドリー",
           "team_crest": "https://crests.football-data.org/78.png",
-          "goals": 9,
+          "goals": 10,
           "assists": 3,
-          "penalties": 2,
-          "playedMatches": 13
+          "penalties": 3,
+          "playedMatches": 14
         },
         {
           "player_id": 38101,
@@ -4353,7 +4353,7 @@
           "goals": 6,
           "assists": 2,
           "penalties": null,
-          "playedMatches": 11
+          "playedMatches": 12
         },
         {
           "player_id": 37916,
@@ -4437,7 +4437,7 @@
           "goals": 6,
           "assists": 1,
           "penalties": null,
-          "playedMatches": 13
+          "playedMatches": 14
         },
         {
           "player_id": 270725,
@@ -4512,6 +4512,18 @@
           "playedMatches": 11
         },
         {
+          "player_id": 8279,
+          "player_name": "Viktor Gyökeres",
+          "nationality": "Sweden",
+          "team_id": 57,
+          "team_ja": "アーセナル",
+          "team_crest": "https://crests.football-data.org/57.png",
+          "goals": 5,
+          "assists": 2,
+          "penalties": 1,
+          "playedMatches": 11
+        },
+        {
           "player_id": 16347,
           "player_name": "Dominik Szoboszlai",
           "nationality": "Hungary",
@@ -4581,7 +4593,7 @@
           "goals": 4,
           "assists": 1,
           "penalties": null,
-          "playedMatches": 12
+          "playedMatches": 13
         },
         {
           "player_id": 16739,
@@ -4652,18 +4664,6 @@
           "team_crest": "https://crests.football-data.org/4.png",
           "goals": 4,
           "assists": 3,
-          "penalties": null,
-          "playedMatches": 10
-        },
-        {
-          "player_id": 8279,
-          "player_name": "Viktor Gyökeres",
-          "nationality": "Sweden",
-          "team_id": 57,
-          "team_ja": "アーセナル",
-          "team_crest": "https://crests.football-data.org/57.png",
-          "goals": 4,
-          "assists": 2,
           "penalties": null,
           "playedMatches": 10
         },

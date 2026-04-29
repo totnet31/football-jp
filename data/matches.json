@@ -1,5 +1,5 @@
 {
-  "updated": "2026-04-30T01:53:46.769370+09:00",
+  "updated": "2026-04-30T07:39:50.506850+09:00",
   "date_from": "2026-04-23",
   "date_to": "2026-05-14",
   "match_count": 211,
@@ -2538,25 +2538,19 @@
       "status": "FINISHED",
       "stage": "SEMI_FINALS",
       "matchday": 1,
-      "home_id": 524,
-      "home_ja": "PSG",
-      "home_en": "PSG",
-      "home_crest": "https://crests.football-data.org/524.png",
-      "away_id": 5,
-      "away_ja": "バイエルン",
-      "away_en": "Bayern",
-      "away_crest": "https://crests.football-data.org/5.png",
+      "home_id": null,
+      "home_ja": "未定",
+      "home_en": "",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "未定",
+      "away_en": "",
+      "away_crest": null,
       "score": {
         "home": 5,
         "away": 4
       },
-      "japanese_players": [
-        {
-          "name_ja": "伊藤洋輝",
-          "position": "DF",
-          "side": "away"
-        }
-      ],
+      "japanese_players": [],
       "broadcasters": [
         {
           "name": "WOWOW",
@@ -2579,18 +2573,21 @@
       "competition_category": "europe",
       "competition_flag": "🇪🇺",
       "kickoff_jst": "2026-04-30T04:00:00+09:00",
-      "status": "TIMED",
+      "status": "FINISHED",
       "stage": "SEMI_FINALS",
       "matchday": 1,
-      "home_id": 78,
-      "home_ja": "アトレティコ・マドリー",
-      "home_en": "Atleti",
-      "home_crest": "https://crests.football-data.org/78.png",
-      "away_id": 57,
-      "away_ja": "アーセナル",
-      "away_en": "Arsenal",
-      "away_crest": "https://crests.football-data.org/57.png",
-      "score": null,
+      "home_id": null,
+      "home_ja": "未定",
+      "home_en": "",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "未定",
+      "away_en": "",
+      "away_crest": null,
+      "score": {
+        "home": 1,
+        "away": 1
+      },
       "japanese_players": [],
       "broadcasters": [
         {
@@ -4981,14 +4978,14 @@
       "status": "TIMED",
       "stage": "SEMI_FINALS",
       "matchday": 2,
-      "home_id": 57,
-      "home_ja": "アーセナル",
-      "home_en": "Arsenal",
-      "home_crest": "https://crests.football-data.org/57.png",
-      "away_id": 78,
-      "away_ja": "アトレティコ・マドリー",
-      "away_en": "Atleti",
-      "away_crest": "https://crests.football-data.org/78.png",
+      "home_id": null,
+      "home_ja": "未定",
+      "home_en": "",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "未定",
+      "away_en": "",
+      "away_crest": null,
       "score": null,
       "japanese_players": [],
       "broadcasters": [
@@ -5016,22 +5013,16 @@
       "status": "TIMED",
       "stage": "SEMI_FINALS",
       "matchday": 2,
-      "home_id": 5,
-      "home_ja": "バイエルン",
-      "home_en": "Bayern",
-      "home_crest": "https://crests.football-data.org/5.png",
-      "away_id": 524,
-      "away_ja": "PSG",
-      "away_en": "PSG",
-      "away_crest": "https://crests.football-data.org/524.png",
+      "home_id": null,
+      "home_ja": "未定",
+      "home_en": "",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "未定",
+      "away_en": "",
+      "away_crest": null,
       "score": null,
-      "japanese_players": [
-        {
-          "name_ja": "伊藤洋輝",
-          "position": "DF",
-          "side": "home"
-        }
-      ],
+      "japanese_players": [],
       "broadcasters": [
         {
           "name": "WOWOW",
