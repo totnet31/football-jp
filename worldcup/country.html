@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title id="pageTitle">国別プロフィール｜W杯2026</title>
+  <meta name="description" content="2026 FIFAワールドカップ出場国の代表プロフィール。FIFAランク・過去成績・注目選手・日本との関係性。">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .country-hero {
+      background: linear-gradient(135deg, var(--wc-primary), #1a2754);
+      color: white;
+      border-radius: 12px;
+      padding: 24px 22px;
+      margin-bottom: 18px;
+      text-align: center;
+    }
+    .country-hero .flag { font-size: 64px; line-height: 1; margin-bottom: 8px; }
+    .country-hero h2 { margin: 0 0 4px; font-size: 26px; }
+    .country-hero .en { font-size: 13px; opacity: 0.7; }
+    .country-hero .group-tag {
+      display: inline-block;
+      background: rgba(255,255,255,0.2);
+      padding: 4px 12px;
+      border-radius: 999px;
+      font-size: 12px;
+      margin-top: 8px;
+    }
+    .info-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 10px;
+      margin-bottom: 18px;
+    }
+    .info-card {
+      background: var(--wc-card);
+      border: 1px solid var(--wc-border);
+      border-radius: 8px;
+      padding: 12px 14px;
+      text-align: center;
+    }
+    .info-card .label { font-size: 11px; color: var(--wc-text-sub); margin-bottom: 4px; }
+    .info-card .value { font-size: 17px; font-weight: 700; color: var(--wc-primary); }
+    .country-section {
+      background: var(--wc-card);
+      border: 1px solid var(--wc-border);
+      border-radius: 10px;
+      padding: 18px 20px;
+      margin-bottom: 14px;
+    }
+    .country-section h3 { margin: 0 0 12px; font-size: 16px; color: var(--wc-primary); border-bottom: 2px solid var(--wc-primary); padding-bottom: 6px; }
+    .country-section p { margin: 0 0 8px; line-height: 1.7; }
+    .player-card {
+      background: #fafafa;
+      border: 1px solid var(--wc-border);
+      border-radius: 8px;
+      padding: 12px 14px;
+      margin-bottom: 8px;
+    }
+    .player-card .name { font-size: 14px; font-weight: 700; }
+    .player-card .meta { font-size: 12px; color: var(--wc-text-sub); margin: 2px 0 6px; }
+    .player-card .note { font-size: 13px; }
+    .stub-warning {
+      background: #fff8ed;
+      border: 1px solid #f0d8a0;
+      border-radius: 8px;
+      padding: 14px 16px;
+      font-size: 13px;
+      line-height: 1.7;
+    }
+    .matches-list {
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body class="wc-page">
+
+<header class="wc-header">
+  <a href="../" class="wc-back-link">⚽ football-jp トップへ</a>
+  <h1 id="headerTitle">国別プロフィール</h1>
+  <p class="wc-tagline" id="headerSub">2026 FIFAワールドカップ 出場国</p>
+</header>
+
+<div class="wc-container">
+
+  <nav class="wc-nav">
+    <a href="./">📅 トップ</a>
+    <a href="./japan.html">🇯🇵 日本代表</a>
+    <a href="./groups.html">📊 グループ順位</a>
+    <a href="./bracket.html">🏆 トーナメント</a>
+    <a href="./countries.html" class="active">🌍 48か国</a>
+    <a href="./rules.html">📜 ルール</a>
+  </nav>
+
+  <div id="content"></div>
+
+  <p style="margin-top: 20px;"><a href="./countries.html" style="color:var(--wc-primary); font-size: 13px;">← 48か国一覧に戻る</a></p>
+
+  <footer class="wc-footer">
+    <p>データ提供: <a href="https://www.football-data.org/" target="_blank" rel="noopener">Football data provided by the Football-Data.org API</a></p>
+    <p>このページは2026 FIFA W杯の期間限定特集です／<a href="../">football-jp トップへ</a></p>
+  </footer>
+</div>
+
+<script>
+(async () => {
+  const params = new URLSearchParams(window.location.search);
+  const tla = (params.get('tla') || 'JPN').toUpperCase();
+
+  const [profilesRes, matchesRes] = await Promise.all([
+    fetch('../data/wc2026/country_profiles.json'),
+    fetch('../data/wc2026/matches.json'),
+  ]);
+  const profiles = (await profilesRes.json()).profiles;
+  const matches = (await matchesRes.json()).matches || [];
+
+  const p = profiles[tla];
+  if (!p) {
+    document.getElementById('content').innerHTML = '<div class="stub-warning">指定された国（' + escapeHtml(tla) + '）のプロフィールが見つかりません。<br><a href="./countries.html">48か国一覧に戻る</a></div>';
+    return;
+  }
+
+  // タイトル更新
+  document.getElementById('pageTitle').textContent = `${p.ja} 代表プロフィール｜W杯2026`;
+  document.getElementById('headerTitle').innerHTML = `${p.flag} ${escapeHtml(p.ja)}`;
+  document.getElementById('headerSub').textContent = `${p.en}（Group ${p.group}）`;
+
+  // この国の試合（グループステージ）
+  const teamMatches = matches.filter(m => m.home_tla === tla || m.away_tla === tla)
+    .sort((a, b) => a.kickoff_jst.localeCompare(b.kickoff_jst));
+
+  let html = `
+    <div class="country-hero">
+      <div class="flag">${p.flag}</div>
+      <h2>${escapeHtml(p.ja)}</h2>
+      <div class="en">${escapeHtml(p.en)}</div>
+      <span class="group-tag">Group ${p.group}</span>
+    </div>
+  `;
+
+  if (p.detailed) {
+    // 詳細プロフィール（4か国）
+    html += `
+      <div class="info-grid">
+        <div class="info-card"><div class="label">FIFAランク</div><div class="value">${p.fifa_rank ? p.fifa_rank + '位' : '—'}</div></div>
+        <div class="info-card"><div class="label">W杯出場回数</div><div class="value">${p.wc_appearances ? p.wc_appearances + '回' : '—'}</div></div>
+        <div class="info-card"><div class="label">監督</div><div class="value" style="font-size:13px;">${escapeHtml(p.manager || '—')}</div></div>
+      </div>
+
+      <section class="country-section">
+        <h3>📋 サマリー</h3>
+        <p>${escapeHtml(p.summary || '—')}</p>
+        ${p.expectations ? `<p><strong>期待値：</strong>${escapeHtml(p.expectations)}</p>` : ''}
+      </section>
+
+      <section class="country-section">
+        <h3>🏆 過去W杯成績</h3>
+        <p>${escapeHtml(p.best_result || '—')}</p>
+      </section>
+
+      <section class="country-section">
+        <h3>🇯🇵 日本との関係性</h3>
+        <p>${escapeHtml(p.japan_relation || '—')}</p>
+      </section>
+
+      <section class="country-section">
+        <h3>⭐ 注目選手3名</h3>
+        ${(p.key_players || []).map(pl => `
+          <div class="player-card">
+            <div class="name">${escapeHtml(pl.name)}</div>
+            <div class="meta">${escapeHtml(pl.position)} ｜ ${escapeHtml(pl.club)}</div>
+            <div class="note">${escapeHtml(pl.note || '')}</div>
+          </div>
+        `).join('')}
+      </section>
+    `;
+  } else {
+    // スタブ
+    html += `
+      <div class="stub-warning">
+        ⏳ この国の詳細プロフィールは<strong>準備中</strong>です（順次拡充）。<br>
+        現時点では基本情報のみ表示しています。
+      </div>
+      ${p.japan_relation ? `<section class="country-section">
+        <h3>🇯🇵 日本との関係性</h3>
+        <p>${escapeHtml(p.japan_relation)}</p>
+      </section>` : ''}
+    `;
+  }
+
+  // この国のグループステージ試合
+  if (teamMatches.length > 0) {
+    html += `
+      <section class="country-section">
+        <h3>📅 ${escapeHtml(p.ja)}の試合（グループステージ）</h3>
+        <div class="matches-list">${teamMatches.map(m => renderMatchSummary(m, tla)).join('')}</div>
+      </section>
+    `;
+  }
+
+  document.getElementById('content').innerHTML = html;
+})();
+
+function renderMatchSummary(m, currentTla) {
+  const ko = new Date(m.kickoff_jst);
+  const dateStr = ko.toLocaleDateString('ja-JP', { month: 'numeric', day: 'numeric', weekday: 'short' });
+  const timeStr = ko.toLocaleTimeString('ja-JP', { hour: '2-digit', minute: '2-digit' });
+  const homeIsCurrent = m.home_tla === currentTla;
+  const oppFlag = homeIsCurrent ? m.away_flag : m.home_flag;
+  const oppName = homeIsCurrent ? m.away_ja : m.home_ja;
+  const venue = homeIsCurrent ? 'ホーム表示' : 'アウェー表示';
+  const score = m.score;
+  let scoreStr = '—';
+  if (score) {
+    scoreStr = homeIsCurrent ? `${score.home} - ${score.away}` : `${score.away} - ${score.home}`;
+  }
+  return `
+    <div class="player-card" style="display:grid; grid-template-columns: 80px 1fr auto; gap:12px; align-items:center;">
+      <div style="font-size:11px; color:var(--wc-text-sub);">${dateStr}<br>${timeStr} JST</div>
+      <div>vs <strong>${oppFlag} ${escapeHtml(oppName)}</strong></div>
+      <div style="font-size:14px; font-weight:700;">${scoreStr}</div>
+    </div>
+  `;
+}
+
+function escapeHtml(s) {
+  return String(s || '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+}
+</script>
+
+</body>
+</html>

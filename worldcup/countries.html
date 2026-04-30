@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>48か国プロフィール一覧 W杯2026｜FIFA W杯2026 日本時間ガイド</title>
+  <meta name="description" content="2026 FIFAワールドカップ出場全48か国の一覧。グループ別・FIFAランク・日本との関係性で各国プロフィールへ。">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .group-block {
+      background: var(--wc-card);
+      border: 1px solid var(--wc-border);
+      border-radius: 10px;
+      padding: 16px 18px;
+      margin-bottom: 14px;
+    }
+    .group-block h3 {
+      margin: 0 0 12px;
+      padding-bottom: 6px;
+      border-bottom: 2px solid var(--wc-primary);
+      font-size: 16px;
+      color: var(--wc-primary);
+    }
+    .country-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+      gap: 8px;
+    }
+    .country-card {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 12px;
+      background: #fafafa;
+      border: 1px solid var(--wc-border);
+      border-radius: 8px;
+      text-decoration: none;
+      color: var(--wc-text);
+      transition: all 0.15s;
+    }
+    .country-card:hover {
+      background: white;
+      border-color: var(--wc-primary);
+      transform: translateY(-1px);
+    }
+    .country-card.is-japan {
+      background: #fff5f7;
+      border-color: var(--wc-japan);
+      border-width: 2px;
+    }
+    .country-card .flag { font-size: 22px; line-height: 1; }
+    .country-card .name { font-size: 13px; font-weight: 600; }
+    .country-card .badge {
+      margin-left: auto;
+      background: #d4af37;
+      color: white;
+      font-size: 9px;
+      padding: 2px 6px;
+      border-radius: 999px;
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body class="wc-page">
+
+<header class="wc-header">
+  <a href="../" class="wc-back-link">⚽ football-jp トップへ</a>
+  <h1>🌍 48か国プロフィール</h1>
+  <p class="wc-tagline">12グループ × 4チーム ＝ 全48か国／グループ別に並べ替え</p>
+</header>
+
+<div class="wc-container">
+
+  <nav class="wc-nav">
+    <a href="./">📅 トップ</a>
+    <a href="./japan.html">🇯🇵 日本代表</a>
+    <a href="./groups.html">📊 グループ順位</a>
+    <a href="./bracket.html">🏆 トーナメント</a>
+    <a href="./countries.html" class="active">🌍 48か国</a>
+    <a href="./rules.html">📜 ルール</a>
+  </nav>
+
+  <p class="wc-empty" style="text-align:left; padding: 12px 14px; background:#fff8ed; border:1px solid #f0d8a0; border-radius:8px; font-size:12px;">
+    💡 各国カードをクリックで詳細プロフィールページへ。<span style="color:#d4af37; font-weight:700;">★</span>マーク＝詳細記述完了／無印＝スタブ（順次拡充中）
+  </p>
+
+  <div id="groupContent"></div>
+
+  <footer class="wc-footer">
+    <p>データ提供: <a href="https://www.football-data.org/" target="_blank" rel="noopener">Football data provided by the Football-Data.org API</a></p>
+    <p>このページは2026 FIFA W杯の期間限定特集です／<a href="../">football-jp トップへ</a></p>
+  </footer>
+</div>
+
+<script>
+(async () => {
+  const [countriesRes, profilesRes] = await Promise.all([
+    fetch('../data/wc2026/countries.json'),
+    fetch('../data/wc2026/country_profiles.json'),
+  ]);
+  const countriesData = await countriesRes.json();
+  const profilesData = await profilesRes.json();
+  const countries = countriesData.countries;
+  const profiles = profilesData.profiles;
+
+  // グループ別に整理
+  const byGroup = {};
+  for (const tla of Object.keys(profiles).filter(k => !k.startsWith('_'))) {
+    const p = profiles[tla];
+    const grp = p.group;
+    if (!byGroup[grp]) byGroup[grp] = [];
+    byGroup[grp].push({ tla, ...p });
+  }
+
+  const sortedGroups = Object.keys(byGroup).sort();
+  const html = sortedGroups.map(g => {
+    const list = byGroup[g];
+    const cards = list.map(c => {
+      const isJp = c.tla === 'JPN';
+      const detailMark = c.detailed ? '<span class="badge">★ 詳細</span>' : '';
+      return `<a href="./country.html?tla=${c.tla}" class="country-card ${isJp ? 'is-japan' : ''}">
+        <span class="flag">${c.flag}</span>
+        <span class="name">${escapeHtml(c.ja)}</span>
+        ${detailMark}
+      </a>`;
+    }).join('');
+    return `<div class="group-block">
+      <h3>Group ${escapeHtml(g)}（4チーム）</h3>
+      <div class="country-list">${cards}</div>
+    </div>`;
+  }).join('');
+
+  document.getElementById('groupContent').innerHTML = html;
+})();
+
+function escapeHtml(s) {
+  return String(s || '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,126 @@
+{
+  "_note": "48か国の詳細プロフィール。Group Fの4か国と海外サッカー馴染み深い数か国を詳細記述、残りは順次拡充。",
+  "_updated": "2026-04-30",
+  "_disclaimer": "FIFAランク・出場回数は2026年4月時点。注目選手はW杯本大会前の予想なので変動あり。",
+  "profiles": {
+    "JPN": {
+      "ja": "日本", "en": "Japan", "flag": "🇯🇵", "group": "F",
+      "fifa_rank": 17,
+      "wc_appearances": 8,
+      "best_result": "ベスト16（2002・2010・2018・2022）",
+      "manager": "森保一",
+      "key_players": [
+        { "name": "三笘 薫", "position": "MF/FW", "club": "ブライトン", "note": "左ウイングのキードリブラー" },
+        { "name": "久保 建英", "position": "MF", "club": "レアル・ソシエダ", "note": "テクニカルな攻撃的MF" },
+        { "name": "上田 綺世", "position": "FW", "club": "フェイエノールト", "note": "1トップのエース候補" }
+      ],
+      "japan_relation": "自国（言わずもがな）",
+      "summary": "森保ジャパンとしてアジア最終予選を圧倒的成績で突破。3大会連続のW杯出場。Group F は上位国揃いのため、グループ突破は前回大会以上の難関。",
+      "expectations": "目標はベスト8以上（過去未到達）。",
+      "detailed": true
+    },
+    "NED": {
+      "ja": "オランダ", "en": "Netherlands", "flag": "🇳🇱", "group": "F",
+      "fifa_rank": 6,
+      "wc_appearances": 12,
+      "best_result": "準優勝3回（1974・1978・2010）",
+      "manager": "ロナルド・クーマン",
+      "key_players": [
+        { "name": "ヴァージル・ファン・ダイク", "position": "DF", "club": "リヴァプール", "note": "世界最高クラスCB、キャプテン" },
+        { "name": "コーディ・ガクポ", "position": "FW", "club": "リヴァプール", "note": "得点力高い左ウイング" },
+        { "name": "フレンキー・デ・ヨング", "position": "MF", "club": "バルセロナ", "note": "ゲームメイクの中心" }
+      ],
+      "japan_relation": "Group Fの本命。日本は初戦（6/15 5:00 JST）で激突。過去対戦は親善試合のみ。",
+      "summary": "「オランジュ」の異名を持つ強豪。優勝経験はないが3度の準優勝。直近の欧州予選も安定して突破。",
+      "expectations": "Group F首位通過が濃厚。決勝T進出は規定路線。",
+      "detailed": true
+    },
+    "SWE": {
+      "ja": "スウェーデン", "en": "Sweden", "flag": "🇸🇪", "group": "F",
+      "fifa_rank": 32,
+      "wc_appearances": 13,
+      "best_result": "準優勝（1958・本国開催）",
+      "manager": "ヤン・トルナビーク",
+      "key_players": [
+        { "name": "アレクサンデル・イサク", "position": "FW", "club": "ニューカッスル", "note": "プレミア得点ランカーのエース" },
+        { "name": "ビクトル・グスタフソン", "position": "MF", "club": "（クラブ未確定）", "note": "若手の有望株" },
+        { "name": "デヤン・クルセフスキ", "position": "MF/FW", "club": "トッテナム", "note": "右サイドの攻撃エンジン" }
+      ],
+      "japan_relation": "Group F最終戦の相手（6/26 8:00 JST）。日本との過去対戦は実績少なく親善試合のみ。",
+      "summary": "イブラヒモビッチ引退後の世代交代期。フィジカル戦術が伝統。今回は本国予選苦戦で出場権獲得まで紆余曲折があった。",
+      "expectations": "Group F 2位争いの本命。日本にとって最大のライバル。",
+      "detailed": true
+    },
+    "TUN": {
+      "ja": "チュニジア", "en": "Tunisia", "flag": "🇹🇳", "group": "F",
+      "fifa_rank": 41,
+      "wc_appearances": 6,
+      "best_result": "グループステージ敗退（5回）／2022カタール大会では最終戦でフランス代表に勝利",
+      "manager": "ジャレル・カドリ（暫定）",
+      "key_players": [
+        { "name": "ハンニバル・メイブリ", "position": "MF", "club": "マンチェスター・ユナイテッド", "note": "若手中盤の核" },
+        { "name": "アイサ・ライドゥニ", "position": "MF", "club": "（中東リーグ）", "note": "ボランチの司令塔" },
+        { "name": "イッサム・ジェバリ", "position": "FW", "club": "ESトゥニス", "note": "30代の経験豊富なFW" }
+      ],
+      "japan_relation": "Group F第2戦の相手（6/21 13:00 JST）。日本にとって**勝ち点3を最優先で取りたい相手**。",
+      "summary": "アフリカ枠（CAF）で安定した強国。組織的な堅守速攻が伝統で、攻撃力よりも守備で時間を作る戦い方。",
+      "expectations": "Group F 3位を争う立場。日本が決勝T進出を狙うなら必勝戦。",
+      "detailed": true
+    },
+
+    "MEX": { "ja": "メキシコ", "en": "Mexico", "flag": "🇲🇽", "group": "A", "japan_relation": "開催国（共同開催）。日本は2018ロシア大会以来の対戦は無し。", "stub": true },
+    "RSA": { "ja": "南アフリカ", "en": "South Africa", "flag": "🇿🇦", "group": "A", "stub": true },
+    "KOR": { "ja": "韓国", "en": "South Korea", "flag": "🇰🇷", "group": "A", "japan_relation": "ライバル関係。AFC同士。本大会では初戦Aブロックなので日本と対戦するのは決勝T以降。", "stub": true },
+    "CZE": { "ja": "チェコ", "en": "Czechia", "flag": "🇨🇿", "group": "A", "stub": true },
+
+    "BIH": { "ja": "ボスニア・ヘルツェゴビナ", "en": "Bosnia-Herzegovina", "flag": "🇧🇦", "group": "B", "stub": true },
+    "CAN": { "ja": "カナダ", "en": "Canada", "flag": "🇨🇦", "group": "B", "japan_relation": "開催国（共同開催）。", "stub": true },
+    "QAT": { "ja": "カタール", "en": "Qatar", "flag": "🇶🇦", "group": "B", "japan_relation": "AFC同士。日本と組み分け同じになる場合は2027アジア杯出場と関連深い。", "stub": true },
+    "SUI": { "ja": "スイス", "en": "Switzerland", "flag": "🇨🇭", "group": "B", "stub": true },
+
+    "BRA": { "ja": "ブラジル", "en": "Brazil", "flag": "🇧🇷", "group": "C", "japan_relation": "5回優勝の歴代最多優勝国。日本との対戦は親善試合のみ。", "stub": true },
+    "MAR": { "ja": "モロッコ", "en": "Morocco", "flag": "🇲🇦", "group": "C", "japan_relation": "2022年大会でアフリカ勢初の4強入り。要注目。", "stub": true },
+    "HAI": { "ja": "ハイチ", "en": "Haiti", "flag": "🇭🇹", "group": "C", "stub": true },
+    "SCO": { "ja": "スコットランド", "en": "Scotland", "flag": "🏴󠁧󠁢󠁳󠁣󠁴󠁿", "group": "C", "stub": true },
+
+    "TUR": { "ja": "トルコ", "en": "Turkey", "flag": "🇹🇷", "group": "D", "stub": true },
+    "USA": { "ja": "アメリカ", "en": "United States", "flag": "🇺🇸", "group": "D", "japan_relation": "開催国（共同開催）。", "stub": true },
+    "PAR": { "ja": "パラグアイ", "en": "Paraguay", "flag": "🇵🇾", "group": "D", "stub": true },
+    "AUS": { "ja": "オーストラリア", "en": "Australia", "flag": "🇦🇺", "group": "D", "japan_relation": "AFC同士・最終予選の常連ライバル。", "stub": true },
+
+    "GER": { "ja": "ドイツ", "en": "Germany", "flag": "🇩🇪", "group": "E", "japan_relation": "2022年大会の初戦で日本がドイツに勝利した「ドーハの奇跡II」の相手。", "stub": true },
+    "CUW": { "ja": "キュラソー", "en": "Curaçao", "flag": "🇨🇼", "group": "E", "stub": true },
+    "CIV": { "ja": "コートジボワール", "en": "Ivory Coast", "flag": "🇨🇮", "group": "E", "stub": true },
+    "ECU": { "ja": "エクアドル", "en": "Ecuador", "flag": "🇪🇨", "group": "E", "stub": true },
+
+    "BEL": { "ja": "ベルギー", "en": "Belgium", "flag": "🇧🇪", "group": "G", "japan_relation": "2018ロシア大会のロストフの悲劇（日本2-3負け）の相手。", "stub": true },
+    "EGY": { "ja": "エジプト", "en": "Egypt", "flag": "🇪🇬", "group": "G", "stub": true },
+    "IRN": { "ja": "イラン", "en": "Iran", "flag": "🇮🇷", "group": "G", "japan_relation": "AFC同士。アジア最終予選の常連相手。", "stub": true },
+    "NZL": { "ja": "ニュージーランド", "en": "New Zealand", "flag": "🇳🇿", "group": "G", "stub": true },
+
+    "ESP": { "ja": "スペイン", "en": "Spain", "flag": "🇪🇸", "group": "H", "japan_relation": "2022年大会・グループ最終戦で日本が2-1で勝利したライバル。", "stub": true },
+    "CPV": { "ja": "カーボベルデ", "en": "Cape Verde Islands", "flag": "🇨🇻", "group": "H", "stub": true },
+    "KSA": { "ja": "サウジアラビア", "en": "Saudi Arabia", "flag": "🇸🇦", "group": "H", "japan_relation": "AFC同士。最終予選の常連。", "stub": true },
+    "URU": { "ja": "ウルグアイ", "en": "Uruguay", "flag": "🇺🇾", "group": "H", "japan_relation": "2010年南アフリカ大会の決勝T1回戦の対戦相手。", "stub": true },
+
+    "IRQ": { "ja": "イラク", "en": "Iraq", "flag": "🇮🇶", "group": "I", "japan_relation": "AFC同士。", "stub": true },
+    "FRA": { "ja": "フランス", "en": "France", "flag": "🇫🇷", "group": "I", "japan_relation": "2018年大会優勝・2022年準優勝。日本との対戦は親善試合のみ。", "stub": true },
+    "SEN": { "ja": "セネガル", "en": "Senegal", "flag": "🇸🇳", "group": "I", "japan_relation": "2018年大会グループ第2戦で日本2-2の対戦相手。", "stub": true },
+    "NOR": { "ja": "ノルウェー", "en": "Norway", "flag": "🇳🇴", "group": "I", "japan_relation": "ハーランド擁する強豪復活組。", "stub": true },
+
+    "ARG": { "ja": "アルゼンチン", "en": "Argentina", "flag": "🇦🇷", "group": "J", "japan_relation": "2022年カタール大会優勝国。メッシ最後のW杯後の世代。", "stub": true },
+    "ALG": { "ja": "アルジェリア", "en": "Algeria", "flag": "🇩🇿", "group": "J", "stub": true },
+    "AUT": { "ja": "オーストリア", "en": "Austria", "flag": "🇦🇹", "group": "J", "stub": true },
+    "JOR": { "ja": "ヨルダン", "en": "Jordan", "flag": "🇯🇴", "group": "J", "japan_relation": "AFC同士。最終予選の常連。", "stub": true },
+
+    "COD": { "ja": "コンゴ民主共和国", "en": "Congo DR", "flag": "🇨🇩", "group": "K", "stub": true },
+    "POR": { "ja": "ポルトガル", "en": "Portugal", "flag": "🇵🇹", "group": "K", "japan_relation": "C・ロナウド世代後、ベルナルド・シウバらの新世代。日本との対戦は親善試合のみ。", "stub": true },
+    "UZB": { "ja": "ウズベキスタン", "en": "Uzbekistan", "flag": "🇺🇿", "group": "K", "japan_relation": "AFC同士。最終予選の常連。**初のW杯本大会出場**。", "stub": true },
+    "COL": { "ja": "コロンビア", "en": "Colombia", "flag": "🇨🇴", "group": "K", "stub": true },
+
+    "ENG": { "ja": "イングランド", "en": "England", "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿", "group": "L", "japan_relation": "歴代優勝1回（1966）。直近2大会は4強・準決勝。日本との対戦は親善試合のみ。", "stub": true },
+    "CRO": { "ja": "クロアチア", "en": "Croatia", "flag": "🇭🇷", "group": "L", "japan_relation": "2022年大会・決勝T1回戦でPK負けした因縁の相手。", "stub": true },
+    "GHA": { "ja": "ガーナ", "en": "Ghana", "flag": "🇬🇭", "group": "L", "stub": true },
+    "PAN": { "ja": "パナマ", "en": "Panama", "flag": "🇵🇦", "group": "L", "stub": true }
+  }
+}
