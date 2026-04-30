@@ -1,0 +1,49 @@
+{
+  "_note": "FIFA 2026 World Cup bracket template (出典: Wikipedia 2026_FIFA_World_Cup_knockout_stage)。試合確定前でも構造を表示するための雛形。",
+  "_updated": "2026-04-30",
+  "last32": [
+    { "match": 73, "label": "Group A 2位 vs Group B 2位",          "home": "2A", "away": "2B" },
+    { "match": 74, "label": "Group E 1位 vs 3位 (A/B/C/D/F)",       "home": "1E", "away": "3W" },
+    { "match": 75, "label": "Group F 1位 vs Group C 2位",           "home": "1F", "away": "2C" },
+    { "match": 76, "label": "Group C 1位 vs Group F 2位",           "home": "1C", "away": "2F" },
+    { "match": 77, "label": "Group I 1位 vs 3位 (C/D/F/G/H)",       "home": "1I", "away": "3X" },
+    { "match": 78, "label": "Group E 2位 vs Group I 2位",           "home": "2E", "away": "2I" },
+    { "match": 79, "label": "Group A 1位 vs 3位 (C/E/F/H/I)",       "home": "1A", "away": "3Y" },
+    { "match": 80, "label": "Group L 1位 vs 3位 (E/H/I/J/K)",       "home": "1L", "away": "3Z" },
+    { "match": 81, "label": "Group D 1位 vs 3位 (B/E/F/I/J)",       "home": "1D", "away": "3U" },
+    { "match": 82, "label": "Group G 1位 vs 3位 (A/E/H/I/J)",       "home": "1G", "away": "3V" },
+    { "match": 83, "label": "Group K 2位 vs Group L 2位",           "home": "2K", "away": "2L" },
+    { "match": 84, "label": "Group H 1位 vs Group J 2位",           "home": "1H", "away": "2J" },
+    { "match": 85, "label": "Group B 1位 vs 3位 (E/F/G/I/J)",       "home": "1B", "away": "3T" },
+    { "match": 86, "label": "Group J 1位 vs Group H 2位",           "home": "1J", "away": "2H" },
+    { "match": 87, "label": "Group K 1位 vs 3位 (D/E/I/J/L)",       "home": "1K", "away": "3S" },
+    { "match": 88, "label": "Group D 2位 vs Group G 2位",           "home": "2D", "away": "2G" }
+  ],
+  "last16": [
+    { "match": 89, "label": "Winner M74 vs Winner M77" },
+    { "match": 90, "label": "Winner M73 vs Winner M75" },
+    { "match": 91, "label": "Winner M76 vs Winner M78" },
+    { "match": 92, "label": "Winner M79 vs Winner M80" },
+    { "match": 93, "label": "Winner M83 vs Winner M84" },
+    { "match": 94, "label": "Winner M81 vs Winner M82" },
+    { "match": 95, "label": "Winner M86 vs Winner M88" },
+    { "match": 96, "label": "Winner M85 vs Winner M87" }
+  ],
+  "quarter_finals": [
+    { "match": 97, "label": "Winner M89 vs Winner M90" },
+    { "match": 98, "label": "Winner M93 vs Winner M94" },
+    { "match": 99, "label": "Winner M91 vs Winner M92" },
+    { "match": 100, "label": "Winner M95 vs Winner M96" }
+  ],
+  "semi_finals": [
+    { "match": 101, "label": "Winner M97 vs Winner M98" },
+    { "match": 102, "label": "Winner M99 vs Winner M100" }
+  ],
+  "third_place": [
+    { "match": 103, "label": "Loser M101 vs Loser M102" }
+  ],
+  "final": [
+    { "match": 104, "label": "Winner M101 vs Winner M102" }
+  ],
+  "_japan_path_note": "🇯🇵日本(Group F)の経路: 1F→M75 / 2F→M76 / 3F→M74,M77,M81,M85のいずれか（成績次第）"
+}
