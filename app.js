@@ -321,26 +321,25 @@
     if (isToday) cls.push('today');
     if (finished) cls.push('finished');
 
-    // ハイライト動画リンク（試合終了時のみ表示）
-    let highlightsHtml = '';
+    // ハイライト動画リンク（試合終了時のみ・1試合に1ボタン・YouTubeスタイル）
+    let highlightCell = '';
     if (finished && Array.isArray(m.highlights) && m.highlights.length > 0) {
-      const links = m.highlights.map(h => {
-        const url = h.url || (h.video_id ? `https://youtu.be/${h.video_id}` : '');
-        if (!url) return '';
-        return `<a class="highlight-link" href="${escape(url)}" target="_blank" rel="noopener">▶ ${escape(h.broadcaster || 'YouTube')}</a>`;
-      }).join('');
-      highlightsHtml = `<div class="highlights-bar">${links}</div>`;
+      const first = m.highlights.find(h => h.url || h.video_id);
+      if (first) {
+        const url = first.url || `https://youtu.be/${first.video_id}`;
+        highlightCell = `<a class="match-highlight" href="${escape(url)}" target="_blank" rel="noopener" aria-label="ハイライト動画（YouTube）">▶ ハイライト</a>`;
+      }
     }
 
     return `<div class="${cls.join(' ')}">
-      <div class="match-top">
+      <div class="match-top${highlightCell ? ' has-highlight' : ''}">
         <div class="kickoff">${timeLabel}</div>
         <div class="teams">
           ${teamRow(m.home_ja, m.home_crest, score ? score.home : null, homeWin, homeJp)}
           ${teamRow(m.away_ja, m.away_crest, score ? score.away : null, awayWin, awayJp)}
         </div>
+        ${highlightCell}
       </div>
-      ${highlightsHtml}
       <div class="tags">
         <div class="tags-row primary">${primaryTags.join('')}</div>
         ${broadcasterTags.length ? `<div class="tags-row broadcasters">${broadcasterTags.join('')}</div>` : ''}

@@ -107,8 +107,9 @@ function renderMatch(m, highlight) {
   const score = m.score ? { home: m.score.home, away: m.score.away } : null;
   const homeWin = score && score.home > score.away;
   const awayWin = score && score.away > score.home;
+  const highlightCell = renderHighlightCell(m);
   return `<div class="${cls}">
-    <div class="wc-match-top">
+    <div class="wc-match-top${highlightCell ? ' has-highlight' : ''}">
       <div class="wc-kickoff">${timeStr}<small>${dateStr}</small></div>
       <div class="wc-teams">
         <div class="wc-team-row ${homeWin ? 'winner' : ''}">
@@ -128,8 +129,8 @@ function renderMatch(m, highlight) {
           <span class="wc-team-score">${score ? score.away : '—'}</span>
         </div>
       </div>
+      ${highlightCell}
     </div>
-    ${renderHighlights(m)}
     <div class="wc-tags">
       ${m.group ? `<span class="wc-tag group">${m.group}</span>` : ''}
       <span class="wc-tag stage">${stageJa(m.stage, m.matchday)}</span>
@@ -139,14 +140,12 @@ function renderMatch(m, highlight) {
   </div>`;
 }
 
-function renderHighlights(m) {
+function renderHighlightCell(m) {
   if (m.status !== 'FINISHED' || !Array.isArray(m.highlights) || m.highlights.length === 0) return '';
-  const links = m.highlights.map(h => {
-    const url = h.url || (h.video_id ? `https://youtu.be/${h.video_id}` : '');
-    if (!url) return '';
-    return `<a class="wc-highlight-link" href="${escapeHtml(url)}" target="_blank" rel="noopener">▶ ${escapeHtml(h.broadcaster || 'YouTube')}</a>`;
-  }).join('');
-  return `<div class="wc-highlights-bar">${links}</div>`;
+  const first = m.highlights.find(h => h.url || h.video_id);
+  if (!first) return '';
+  const url = first.url || `https://youtu.be/${first.video_id}`;
+  return `<a class="wc-match-highlight" href="${escapeHtml(url)}" target="_blank" rel="noopener" aria-label="ハイライト動画（YouTube）">▶ ハイライト</a>`;
 }
 
 function stageJa(stage, md) {

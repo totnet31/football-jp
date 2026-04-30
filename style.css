@@ -355,30 +355,29 @@ main {
 .team-row.winner .team-name,
 .team-row.winner .team-score { font-weight: 700; }
 
-/* === ハイライト動画リンク === */
-.highlights-bar {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 6px;
-  margin-top: 10px;
-  padding-top: 8px;
-  border-top: 1px dotted var(--border);
+/* === ハイライト動画リンク（YouTubeスタイル・1試合1ボタン） === */
+.match-top.has-highlight {
+  grid-template-columns: auto 1fr auto;
 }
-.highlight-link {
+.match-highlight {
   display: inline-flex;
   align-items: center;
   gap: 4px;
-  padding: 6px 12px;
-  background: linear-gradient(135deg, #c1304a, #8a1f30);
+  padding: 8px 12px;
+  background: #ff0000;
   color: #ffffff !important;
-  font-size: 12px;
+  font-size: 11px;
   font-weight: 700;
   text-decoration: none;
-  letter-spacing: 0.02em;
-  transition: filter 0.15s;
+  letter-spacing: 0.04em;
+  border-radius: 4px;
+  white-space: nowrap;
+  align-self: center;
+  transition: background 0.15s;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.12);
 }
-.highlight-link:hover {
-  filter: brightness(1.1);
+.match-highlight:hover {
+  background: #cc0000;
   text-decoration: none !important;
 }
 
