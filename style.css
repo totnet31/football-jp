@@ -443,6 +443,17 @@ main {
   font-size: 9px;
   line-height: 1;
 }
+.bc-tag .bc-logo {
+  width: 16px;
+  height: 16px;
+  object-fit: contain;
+  border-radius: 2px;
+  flex-shrink: 0;
+  background: #ffffff;
+}
+.bc-tag.bc-dazn .bc-logo {
+  background: transparent;
+}
 a.bc-tag:hover { text-decoration: none; }
 
 /* per-broadcaster brand colors */

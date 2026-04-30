@@ -310,10 +310,14 @@
     if (m.broadcasters && m.broadcasters.length > 0) {
       for (const b of m.broadcasters) {
         const brandCls = bcBrandClass(b.name);
+        const logoFile = bcLogoFile(b.name);
+        const logoHtml = logoFile
+          ? `<img class="bc-logo" src="assets/broadcasters/${logoFile}" alt="" width="16" height="16" loading="lazy">`
+          : `<span class="bc-play">▶</span>`;
         if (b.url) {
-          broadcasterTags.push(`<a class="bc-tag ${brandCls}" href="${escape(b.url)}" target="_blank" rel="noopener"><span class="bc-play">▶</span>${escape(b.name)}</a>`);
+          broadcasterTags.push(`<a class="bc-tag ${brandCls}" href="${escape(b.url)}" target="_blank" rel="noopener">${logoHtml}${escape(b.name)}</a>`);
         } else {
-          broadcasterTags.push(`<span class="bc-tag ${brandCls}"><span class="bc-play">▶</span>${escape(b.name)}</span>`);
+          broadcasterTags.push(`<span class="bc-tag ${brandCls}">${logoHtml}${escape(b.name)}</span>`);
         }
       }
     }
@@ -357,6 +361,17 @@
     if (n.includes('u-next') || n.includes('unext')) return 'bc-unext';
     if (n.includes('bs10')) return 'bc-bs10';
     return 'bc-default';
+  }
+
+  function bcLogoFile(name) {
+    const n = String(name || '').toLowerCase();
+    if (n.includes('wowow')) return 'wowow.png';
+    if (n.includes('dazn')) return 'dazn.png';
+    if (n.includes('lemino')) return 'lemino.png';
+    if (n.includes('abema')) return 'abema.png';
+    if (n.includes('u-next') || n.includes('unext')) return 'unext.png';
+    if (n.includes('bs10')) return 'bs10.png';
+    return null;
   }
 
   function stageLabel(s) {
