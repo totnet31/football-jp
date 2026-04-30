@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>決勝トーナメント表 W杯2026｜FIFA W杯2026 日本時間ガイド</title>
+  <meta name="description" content="2026 FIFAワールドカップ決勝トーナメント表。32チーム→16→8→4→決勝までの全経路を日本時間で。">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .br-stage { margin-bottom: 28px; }
+    .br-stage h3 {
+      margin: 0 0 10px;
+      padding: 8px 12px;
+      background: linear-gradient(90deg, var(--wc-primary), #1a2754);
+      color: white;
+      border-radius: 8px;
+      font-size: 14px;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+    }
+    .br-stage .br-match {
+      background: var(--wc-card);
+      border: 1px solid var(--wc-border);
+      border-radius: 10px;
+      margin-bottom: 8px;
+      padding: 10px 14px;
+      font-size: 13px;
+    }
+    .br-stage .br-match.has-japan {
+      border-color: var(--wc-japan);
+      border-width: 2px;
+      background: #fff8f9;
+    }
+    .br-stage .br-match.tbd {
+      opacity: 0.45;
+      font-style: italic;
+    }
+    .br-meta {
+      font-size: 11px;
+      color: var(--wc-text-sub);
+      margin-bottom: 6px;
+    }
+    .br-row {
+      display: grid;
+      grid-template-columns: auto 1fr auto;
+      gap: 10px;
+      align-items: center;
+      padding: 4px 0;
+    }
+    .br-row.winner { font-weight: 700; }
+    .br-row.winner .br-flag { transform: scale(1.1); }
+    .br-flag { font-size: 18px; line-height: 1; }
+    .br-name { font-size: 13px; }
+    .br-score {
+      min-width: 24px;
+      text-align: right;
+      font-weight: 700;
+      font-feature-settings: "tnum";
+    }
+    .br-divider {
+      height: 1px;
+      background: var(--wc-border);
+      margin: 4px 0;
+    }
+    @media (min-width: 800px) {
+      .br-stages-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 18px;
+      }
+      .br-stage.full-row { grid-column: span 3; }
+    }
+  </style>
+</head>
+<body class="wc-page">
+
+<header class="wc-header">
+  <a href="../" class="wc-back-link">⚽ football-jp トップへ</a>
+  <h1>🏆 決勝トーナメント表 — W杯2026</h1>
+  <p class="wc-tagline">32チーム → 16 → 8 → 4 → 決勝（拡大版・48か国大会の新フォーマット）</p>
+</header>
+
+<div class="wc-container">
+
+  <nav class="wc-nav">
+    <a href="./">📅 トップ</a>
+    <a href="./japan.html">🇯🇵 日本代表</a>
+    <a href="./groups.html">📊 グループ順位</a>
+    <a href="./bracket.html" class="active">🏆 トーナメント</a>
+  </nav>
+
+  <p class="wc-empty" style="text-align:left; padding: 12px 14px; background:#fff8ed; border:1px solid #f0d8a0; border-radius:8px; font-size:12px;">
+    💡 グループステージ終了までは対戦カード未定。試合確定で自動更新されます。
+    <br>赤枠＝🇯🇵日本進出試合
+  </p>
+
+  <div id="bracketContent"></div>
+
+  <footer class="wc-footer">
+    <p>データ提供: <a href="https://www.football-data.org/" target="_blank" rel="noopener">Football data provided by the Football-Data.org API</a></p>
+    <p>このページは2026 FIFA W杯の期間限定特集です／<a href="../">football-jp トップへ</a></p>
+  </footer>
+</div>
+
+<script>
+(async () => {
+  const matchesRes = await fetch('../data/wc2026/matches.json');
+  const matches = (await matchesRes.json()).matches || [];
+
+  // ノックアウトステージのみ
+  const STAGES = [
+    { key: 'LAST_32',         label: '🥉 ベスト32（Round of 32／1回戦）',   expected: 16, fullRow: true },
+    { key: 'LAST_16',         label: '⚔️ ベスト16（Round of 16／2回戦）',  expected: 8,  fullRow: true },
+    { key: 'QUARTER_FINALS',  label: '🔥 準々決勝（QF）',                   expected: 4,  fullRow: false },
+    { key: 'SEMI_FINALS',     label: '⚡ 準決勝（SF）',                     expected: 2,  fullRow: false },
+    { key: 'THIRD_PLACE',     label: '🥉 3位決定戦',                         expected: 1,  fullRow: false },
+    { key: 'FINAL',           label: '🏆 決勝',                              expected: 1,  fullRow: true },
+  ];
+
+  const html = STAGES.map(s => {
+    const stageMatches = matches.filter(m => m.stage === s.key)
+      .sort((a, b) => a.kickoff_jst.localeCompare(b.kickoff_jst));
+    const cards = (stageMatches.length ? stageMatches : Array(s.expected).fill(null))
+      .map(m => renderBracketMatch(m))
+      .join('');
+    return `<section class="br-stage ${s.fullRow ? 'full-row' : ''}"><h3>${escapeHtml(s.label)}</h3>${cards}</section>`;
+  }).join('');
+
+  document.getElementById('bracketContent').innerHTML =
+    `<div class="br-stages-grid">${html}</div>`;
+})();
+
+function renderBracketMatch(m) {
+  if (!m) {
+    return `<div class="br-match tbd">
+      <div class="br-meta">対戦カード未定</div>
+      <div class="br-row"><span class="br-flag">⚽</span><span class="br-name">未定</span><span class="br-score">—</span></div>
+      <div class="br-divider"></div>
+      <div class="br-row"><span class="br-flag">⚽</span><span class="br-name">未定</span><span class="br-score">—</span></div>
+    </div>`;
+  }
+  const ko = new Date(m.kickoff_jst);
+  const dateStr = ko.toLocaleDateString('ja-JP', { month: 'numeric', day: 'numeric', weekday: 'short' });
+  const timeStr = ko.toLocaleTimeString('ja-JP', { hour: '2-digit', minute: '2-digit' });
+  const score = m.score ? { home: m.score.home, away: m.score.away } : null;
+  const homeWin = score && score.home > score.away;
+  const awayWin = score && score.away > score.home;
+  const isJp = m.home_tla === 'JPN' || m.away_tla === 'JPN';
+  const tbdClass = (m.home_ja === '未定' || !m.home_ja) ? 'tbd' : '';
+  return `<div class="br-match ${isJp ? 'has-japan' : ''} ${tbdClass}">
+    <div class="br-meta">${dateStr} ${timeStr} JST</div>
+    <div class="br-row ${homeWin ? 'winner' : ''}">
+      <span class="br-flag">${m.home_flag || '⚽'}</span>
+      <span class="br-name">${escapeHtml(m.home_ja || '未定')}</span>
+      <span class="br-score">${score ? score.home : '—'}</span>
+    </div>
+    <div class="br-divider"></div>
+    <div class="br-row ${awayWin ? 'winner' : ''}">
+      <span class="br-flag">${m.away_flag || '⚽'}</span>
+      <span class="br-name">${escapeHtml(m.away_ja || '未定')}</span>
+      <span class="br-score">${score ? score.away : '—'}</span>
+    </div>
+  </div>`;
+}
+
+function escapeHtml(s) {
+  return String(s || '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+}
+</script>
+
+</body>
+</html>

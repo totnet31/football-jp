@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>グループ順位 W杯2026｜FIFA W杯2026 日本時間ガイド</title>
+  <meta name="description" content="2026 FIFAワールドカップ12グループ（A〜L）全順位。各組4チームの勝点・得失点差・突破ライン。日本はGroup F。">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="wc-page">
+
+<header class="wc-header">
+  <a href="../" class="wc-back-link">⚽ football-jp トップへ</a>
+  <h1>📊 グループ順位 — W杯2026</h1>
+  <p class="wc-tagline">12グループ × 各4チーム＝48か国／上位2位（と一部3位）が決勝Tへ</p>
+</header>
+
+<div class="wc-container">
+
+  <nav class="wc-nav">
+    <a href="./">📅 トップ</a>
+    <a href="./japan.html">🇯🇵 日本代表</a>
+    <a href="./groups.html" class="active">📊 グループ順位</a>
+    <a href="./bracket.html">🏆 トーナメント</a>
+  </nav>
+
+  <p class="wc-empty" style="text-align:left; padding: 12px 14px; background:#fff8ed; border:1px solid #f0d8a0; border-radius:8px; font-size:12px;">
+    💡 大会開幕前は全チームが0-0-0スタート。試合進行に伴い自動更新されます。
+    <br>赤背景＝🇯🇵日本　／　金線＝突破ライン（上位2チーム）
+  </p>
+
+  <div id="allGroups"></div>
+
+  <footer class="wc-footer">
+    <p>データ提供: <a href="https://www.football-data.org/" target="_blank" rel="noopener">Football data provided by the Football-Data.org API</a></p>
+    <p>このページは2026 FIFA W杯の期間限定特集です／<a href="../">football-jp トップへ</a></p>
+  </footer>
+</div>
+
+<script>
+(async () => {
+  const standingsRes = await fetch('../data/wc2026/standings.json');
+  const standingsData = await standingsRes.json();
+  const groups = standingsData.groups || [];
+
+  const html = groups.map(g => {
+    const rows = g.table.map(r => {
+      const cls = r.team_tla === 'JPN' ? 'japan' : '';
+      const qline = r.position <= 2 ? 'qualify-line' : '';
+      return `<tr class="${cls} ${qline}">
+        <td class="num">${r.position}</td>
+        <td>${r.team_flag} ${escapeHtml(r.team_ja)}</td>
+        <td class="num">${r.playedGames}</td>
+        <td class="num">${r.won}</td>
+        <td class="num">${r.draw}</td>
+        <td class="num">${r.lost}</td>
+        <td class="num">${r.goalsFor}-${r.goalsAgainst}</td>
+        <td class="num">${r.goalDifference >= 0 ? '+' : ''}${r.goalDifference}</td>
+        <td class="num"><strong>${r.points}</strong></td>
+      </tr>`;
+    }).join('');
+    return `
+    <section class="wc-section">
+      <h2>Group ${escapeHtml(g.group)}</h2>
+      <table class="wc-table">
+        <thead><tr><th class="num">#</th><th>国</th><th class="num">試</th><th class="num">勝</th><th class="num">分</th><th class="num">敗</th><th class="num">得-失</th><th class="num">差</th><th class="num">勝点</th></tr></thead>
+        <tbody>${rows}</tbody>
+      </table>
+    </section>`;
+  }).join('');
+
+  document.getElementById('allGroups').innerHTML = html;
+})();
+
+function escapeHtml(s) {
+  return String(s || '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+}
+</script>
+
+</body>
+</html>
