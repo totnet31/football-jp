@@ -17,10 +17,11 @@ ROOT = Path(__file__).resolve().parent.parent
 DATA = ROOT / "data"
 JST = timezone(timedelta(hours=9))
 
+# 「アップロード再生リスト」URL（最新100動画取得可能。channel_idのUCをUUに置換）
 CHANNELS = [
-    {"name": "DAZN", "url": "https://www.youtube.com/@DAZNJapan/videos"},
-    {"name": "U-NEXT", "url": "https://www.youtube.com/@UNEXT_football/videos"},
-    {"name": "WOWOW", "url": "https://www.youtube.com/@wowowsoccer/videos"},
+    {"name": "DAZN",   "url": "https://www.youtube.com/playlist?list=UUoFLB_Gw_AoxUuuzKjXrc_Q"},
+    {"name": "U-NEXT", "url": "https://www.youtube.com/playlist?list=UUMjvvElkdLRTgcTKklAUkSw"},
+    {"name": "WOWOW",  "url": "https://www.youtube.com/playlist?list=UUJQj2lbG_3w8UrncJd7JZXw"},
 ]
 
 UA = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
