@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" role="img" aria-label="football-jp logo: JP-Ball">
+  <title>football-jp / JP-Ball</title>
+  <desc>サッカーボールの中心に日の丸を配したロゴ。「日本×サッカー」を直感的に表現。</desc>
+
+  <!-- 外周リング（極薄ダークグレー） -->
+  <circle cx="100" cy="100" r="92" fill="#ffffff" stroke="#1a1a1a" stroke-width="3"/>
+
+  <!-- 5つの黒い五角形（サッカーボールのパネル風） — 5方向に等間隔配置 -->
+  <g fill="#1a1a1a">
+    <!-- 上 12時 -->
+    <polygon points="100,18 84,40 92,64 108,64 116,40"/>
+    <!-- 右上 2時方向 -->
+    <polygon points="170,68 146,72 138,96 154,114 174,98"/>
+    <!-- 右下 4時方向 -->
+    <polygon points="160,150 138,142 122,158 132,180 154,176"/>
+    <!-- 左下 8時方向 -->
+    <polygon points="40,150 46,176 68,180 78,158 62,142"/>
+    <!-- 左上 10時方向 -->
+    <polygon points="30,68 26,98 46,114 62,96 54,72"/>
+  </g>
+
+  <!-- 中央：日の丸 -->
+  <circle cx="100" cy="100" r="36" fill="#BC002D"/>
+</svg>

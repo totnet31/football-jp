@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" role="img" aria-label="football-jp logo: J×Goal">
+  <title>football-jp / J×Goal</title>
+  <desc>「J」の字をゴール＋ボールとして再構築したミニマルロゴ。ドット部分がサッカーボール、Jのカーブにゴールネットを暗示。</desc>
+
+  <!-- 背景：透明 -->
+
+  <!-- ボール（Jの上部ドット） -->
+  <circle cx="118" cy="44" r="20" fill="#1a1a1a"/>
+  <!-- ボールの簡易パネル感（白い小ライン） -->
+  <g stroke="#ffffff" stroke-width="2" fill="none" stroke-linecap="round">
+    <path d="M 110,38 L 126,50"/>
+    <path d="M 108,46 L 128,42"/>
+    <path d="M 118,32 L 118,56"/>
+  </g>
+
+  <!-- J 縦棒 -->
+  <rect x="108" y="68" width="22" height="76" fill="#1a1a1a" rx="2"/>
+
+  <!-- J カーブ（左下に折れ込む） -->
+  <path d="M 130,144
+           Q 130,168 106,168
+           L 60,168
+           Q 36,168 36,144
+           L 36,124
+           L 58,124
+           L 58,144
+           Q 58,146 60,146
+           L 106,146
+           Q 108,146 108,144
+           L 108,124
+           L 130,124
+           Z"
+        fill="#1a1a1a"/>
+
+  <!-- ゴールネット（Jのカーブの内側に薄く） -->
+  <g stroke="#1a1a1a" stroke-width="1" stroke-opacity="0.25" fill="none">
+    <line x1="46" y1="148" x2="56" y2="158"/>
+    <line x1="56" y1="148" x2="66" y2="158"/>
+    <line x1="66" y1="148" x2="76" y2="158"/>
+    <line x1="76" y1="148" x2="86" y2="158"/>
+    <line x1="86" y1="148" x2="96" y2="158"/>
+    <line x1="56" y1="148" x2="46" y2="158"/>
+    <line x1="66" y1="148" x2="56" y2="158"/>
+    <line x1="76" y1="148" x2="66" y2="158"/>
+    <line x1="86" y1="148" x2="76" y2="158"/>
+    <line x1="96" y1="148" x2="86" y2="158"/>
+  </g>
+
+  <!-- 日の丸アクセント（ボール上部にハイライト的に） -->
+  <circle cx="118" cy="44" r="6" fill="#BC002D"/>
+</svg>
