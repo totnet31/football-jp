@@ -48,32 +48,32 @@ a:hover { text-decoration: underline; }
 
 /* === Header === */
 .wc-header {
-  background: #ffffff;
+  background: #0d0d0d;
   border-bottom: 4px solid var(--c-accent);
-  padding: 18px 16px 14px;
+  padding: 20px 16px 18px;
   margin-bottom: 0;
 }
 .wc-header h1 {
   margin: 0 0 4px;
-  font-size: 19px;
-  font-weight: 700;
-  letter-spacing: 0.01em;
-  color: var(--c-text);
+  font-size: 20px;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  color: #ffffff;
 }
 .wc-header .wc-tagline {
   margin: 0;
   font-size: 12px;
-  color: var(--c-text-sub);
+  color: rgba(255, 255, 255, 0.7);
   line-height: 1.5;
 }
 .wc-back-link {
   display: inline-block;
   font-size: 11px;
-  color: var(--c-text-sub);
-  margin-bottom: 6px;
+  color: rgba(255, 255, 255, 0.55);
+  margin-bottom: 8px;
   text-decoration: none;
 }
-.wc-back-link:hover { color: var(--c-accent); text-decoration: none; }
+.wc-back-link:hover { color: #ffffff; text-decoration: none; }
 
 /* === Countdown === */
 .wc-countdown {
