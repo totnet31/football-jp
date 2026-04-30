@@ -351,6 +351,9 @@
     const cls = ['match'];
     if (isToday) cls.push('today');
     if (finished) cls.push('finished');
+    // 終了試合かつイベントデータあり → 詳細モーダルを開けるようにdata属性付与
+    const hasDetails = finished && events.length > 0;
+    if (hasDetails) cls.push('clickable');
 
     // ハイライト動画リンク（試合終了時のみ・1試合に1ボタン・YouTubeスタイル）
     let highlightCell = '';
@@ -362,7 +365,7 @@
       }
     }
 
-    return `<div class="${cls.join(' ')}">
+    return `<div class="${cls.join(' ')}"${hasDetails ? ` data-match-id="${m.id}"` : ''}>
       <div class="match-top${highlightCell ? ' has-highlight' : ''}">
         <div class="kickoff">${timeLabel}</div>
         <div class="teams">
@@ -686,6 +689,125 @@
     initCalCursor();
     renderCalendar();
   });
+
+  // ===== 試合詳細モーダル =====
+  document.body.addEventListener('click', (e) => {
+    // バッジ・リンクなどのクリックは透過
+    if (e.target.closest('a')) return;
+    const card = e.target.closest('.match.clickable');
+    if (!card) return;
+    const mid = card.getAttribute('data-match-id');
+    if (!mid) return;
+    openMatchModal(mid);
+  });
+
+  function openMatchModal(matchId) {
+    const m = allMatches.find(x => String(x.id) === String(matchId));
+    if (!m) return;
+    const events = matchEvents[String(matchId)] || [];
+    const score = m.score || { home: '—', away: '—' };
+
+    const goalLine = (e) => {
+      const cls = e.is_japanese ? 'modal-goal jp' : 'modal-goal';
+      const minStr = e.minute_raw && e.minute_raw.includes('+') ? `${e.minute}'` : `${e.minute}'`;
+      const noteStr = e.note ? ` (${e.note})` : '';
+      const flag = e.is_japanese ? '🇯🇵 ' : '';
+      return `<li class="${cls}">⚽ ${flag}${escape(e.player_ja)} <span class="modal-min">${minStr}${noteStr}</span></li>`;
+    };
+    const homeGoals = events.filter(e => e.type === 'goal' && e.side === 'home').sort((a,b) => a.minute - b.minute);
+    const awayGoals = events.filter(e => e.type === 'goal' && e.side === 'away').sort((a,b) => a.minute - b.minute);
+
+    const bcs = (m.broadcasters || []).map(b => {
+      const cls = bcBrandClass(b.name);
+      const lf = bcLogoFile(b.name);
+      const logo = lf ? `<img class="bc-logo" src="assets/broadcasters/${lf}" alt="" width="16" height="16">` : '<span class="bc-play">▶</span>';
+      return b.url
+        ? `<a class="bc-tag ${cls}" href="${escape(b.url)}" target="_blank" rel="noopener">${logo}${escape(b.name)}</a>`
+        : `<span class="bc-tag ${cls}">${logo}${escape(b.name)}</span>`;
+    }).join('');
+
+    const highlights = (m.highlights || []).filter(h => h.url || h.video_id);
+    const highlightHtml = highlights.length
+      ? highlights.map(h => {
+          const url = h.url || `https://youtu.be/${h.video_id}`;
+          return `<a class="match-highlight" href="${escape(url)}" target="_blank" rel="noopener">▶ ${escape(h.title || 'ハイライト動画')}</a>`;
+        }).join('')
+      : '';
+
+    const overlay = document.createElement('div');
+    overlay.className = 'match-modal-overlay';
+    overlay.innerHTML = `
+      <div class="match-modal" role="dialog" aria-modal="true">
+        <button class="match-modal-close" aria-label="閉じる">×</button>
+        <div class="modal-comp">
+          <span class="league-tag cat-league-${m.competition_id}">${m.competition_flag || ''} ${escape(m.competition_ja)}</span>
+          ${m.matchday ? `<span class="status-tag">第${m.matchday}節</span>` : ''}
+          ${m.stage && m.stage !== 'REGULAR_SEASON' ? `<span class="status-tag">${escape(stageLabel(m.stage))}</span>` : ''}
+        </div>
+        <div class="modal-score">
+          <div class="modal-team">
+            ${m.home_crest ? `<img src="${escape(m.home_crest)}" alt="" class="modal-crest">` : ''}
+            <div class="modal-name">${escape(m.home_ja)}</div>
+          </div>
+          <div class="modal-result">${score.home != null ? score.home : '—'} - ${score.away != null ? score.away : '—'}</div>
+          <div class="modal-team">
+            ${m.away_crest ? `<img src="${escape(m.away_crest)}" alt="" class="modal-crest">` : ''}
+            <div class="modal-name">${escape(m.away_ja)}</div>
+          </div>
+        </div>
+        <div class="modal-meta">${escape(fmtKickoff(m.kickoff_jst))}</div>
+        ${(homeGoals.length || awayGoals.length) ? `
+          <div class="modal-section">
+            <h3>得点者</h3>
+            <div class="modal-goals">
+              <div class="modal-goals-side">
+                <div class="modal-goals-title">${escape(m.home_ja)}</div>
+                <ul class="modal-goal-list">${homeGoals.map(goalLine).join('') || '<li class="modal-goal-empty">—</li>'}</ul>
+              </div>
+              <div class="modal-goals-side">
+                <div class="modal-goals-title">${escape(m.away_ja)}</div>
+                <ul class="modal-goal-list">${awayGoals.map(goalLine).join('') || '<li class="modal-goal-empty">—</li>'}</ul>
+              </div>
+            </div>
+          </div>
+        ` : ''}
+        ${highlightHtml ? `
+          <div class="modal-section">
+            <h3>ハイライト動画</h3>
+            <div class="modal-highlights">${highlightHtml}</div>
+          </div>
+        ` : ''}
+        ${bcs ? `
+          <div class="modal-section">
+            <h3>放送・配信</h3>
+            <div class="tags-row broadcasters">${bcs}</div>
+          </div>
+        ` : ''}
+        <div class="modal-source">出典: Wikipedia 各クラブ2025-26シーズンページ／ハイライトはYouTube公式チャンネル</div>
+      </div>
+    `;
+    document.body.appendChild(overlay);
+    document.body.style.overflow = 'hidden';
+    const close = () => {
+      overlay.remove();
+      document.body.style.overflow = '';
+    };
+    overlay.addEventListener('click', (e) => {
+      if (e.target === overlay) close();
+    });
+    overlay.querySelector('.match-modal-close').addEventListener('click', close);
+    document.addEventListener('keydown', function esc(e) {
+      if (e.key === 'Escape') {
+        close();
+        document.removeEventListener('keydown', esc);
+      }
+    });
+  }
+
+  function fmtKickoff(iso) {
+    const d = new Date(iso);
+    return `${d.getFullYear()}/${pad(d.getMonth()+1)}/${pad(d.getDate())}（${WEEKDAY[d.getDay()]}）${pad(d.getHours())}:${pad(d.getMinutes())} キックオフ`;
+  }
 
   loadAll();
 })();

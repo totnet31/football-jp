@@ -382,21 +382,24 @@ def main():
                     jp_clubs.add(p["club_id"])
         # それらクラブのboxesから日付+対戦相手で照合
         events = []
+        matched = False
         for cid in jp_clubs:
+            if matched:
+                break
             for box in boxes_per_club.get(cid, []):
                 if not find_match(m, box):
                     continue
+                matched = True
                 # team1 = home相当 と仮定
                 h_norm = normalize_team(m.get("home_en"))
                 t1_norm = normalize_team(box["team1"])
                 home_is_team1 = (h_norm in t1_norm or t1_norm in h_norm) if (h_norm and t1_norm) else True
-                # 各 goals ブロックから日本人選手をフィルタ
+                # 各 goals ブロックから全得点を保存（日本人にはフラグ付与）
                 for side, gblock in [
                     ("home" if home_is_team1 else "away", box["goals1"]),
                     ("away" if home_is_team1 else "home", box["goals2"]),
                 ]:
                     for entry in gblock:
-                        # 名前マッチ（display, wiki_target, last）
                         candidates = [entry.get("display", ""), entry.get("wiki_target") or ""]
                         ja = None
                         for c in candidates:
@@ -412,16 +415,15 @@ def main():
                             if last and last in jp_lookup:
                                 ja = jp_lookup[last]
                                 break
-                        if not ja:
-                            continue
                         for g in entry["goals"]:
                             minute = parse_minute(g["minute_raw"])
                             if minute is None:
                                 continue
                             events.append({
                                 "type": "goal",
-                                "player_ja": ja,
+                                "player_ja": ja or entry["display"],
                                 "player_en": entry["display"],
+                                "is_japanese": ja is not None,
                                 "minute": minute,
                                 "minute_raw": g["minute_raw"],
                                 "note": g["note"],
