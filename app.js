@@ -117,7 +117,7 @@
       }
       const updated = fmtUpdated(m.updated);
       updatedEl.textContent = `更新: ${updated} / ${m.match_count}試合`;
-      periodEl.textContent = `データ期間: ${fmtDateShort(dataRangeFrom)} 〜 ${fmtDateShort(dataRangeTo)}（過去7日 〜 今後14日）`;
+      periodEl.textContent = `データ期間: ${fmtDateShort(dataRangeFrom)} 〜 ${fmtDateShort(dataRangeTo)}`;
       buildLeagueChecks();
       buildRankLeagueOptions();
       initCalCursor();

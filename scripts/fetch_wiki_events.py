@@ -80,7 +80,7 @@ def candidate_pages(club_en, club_id):
         "Mallorca": ["RCD Mallorca"],
         "Birmingham": ["Birmingham City"],
         "Coventry": ["Coventry City"],
-        "Hull City": ["Hull City"],
+        "Hull City": ["Hull City A.F.C.", "Hull City"],
         "Blackburn": ["Blackburn Rovers"],
         "Eintracht Frankfurt": ["Eintracht Frankfurt"],
         "SC Freiburg": ["SC Freiburg"],
@@ -93,6 +93,7 @@ def candidate_pages(club_en, club_id):
         "NEC Nijmegen": ["NEC Nijmegen"],
         "Sparta Rotterdam": ["Sparta Rotterdam"],
         "Gil Vicente": ["Gil Vicente F.C."],
+        "Leeds": ["Leeds United F.C.", "Leeds United"],
     }
     for alt in aliases.get(base, []):
         cands.extend([
@@ -142,7 +143,9 @@ def parse_date(s):
 
 
 def strip_wiki_link(s):
-    """[[Real Name|Display]] → 'Display'、[[Name]] → 'Name'、その他はそのまま"""
+    """[[Real Name|Display]] → 'Display'、[[Name]] → 'Name'、{{fbaicon|GER}} などのテンプレート除去"""
+    # {{flagicon|...}} {{fbaicon|...}} などのインラインテンプレート除去
+    s = re.sub(r"\{\{[^}]+\}\}", "", s)
     s = re.sub(r"\[\[([^\]\|]+)\|([^\]]+)\]\]", r"\2", s)
     s = re.sub(r"\[\[([^\]]+)\]\]", r"\1", s)
     return s.strip()
@@ -186,17 +189,20 @@ def parse_goals_block(text):
                 rest = line[mp.end():]
             else:
                 continue
-        # {{goal|MIN}} もしくは {{goal|MIN|pen.}} 等を抽出（複数あり）
+        # {{goal|MIN}} 〜 {{goal|MIN|MIN|...}} 〜 {{goal|MIN|note|MIN|...}} を抽出
+        # 全パイプ区切りのトークンを取得し、数値（"45+3"含む）はゴール、それ以外（pen.等）は直前のゴールの注記
         goals = []
-        for gm in re.finditer(r"\{\{goal\s*\|\s*([^\}\|]+?)(?:\s*\|\s*([^\}]+?))?\s*\}\}", rest):
-            mins_str = gm.group(1).strip()
-            note = gm.group(2).strip().lower() if gm.group(2) else ""
-            # 複数分の連結 (例: '2||20||31||45' は4ゴール) も考慮
-            for part in mins_str.split("||"):
-                part = part.strip()
-                if not part:
-                    continue
-                goals.append({"minute_raw": part, "note": note})
+        for gm in re.finditer(r"\{\{goal\s*\|([^}]+)\}\}", rest):
+            tokens_raw = gm.group(1)
+            # || は単独 | と等価扱い
+            tokens = [t.strip() for t in re.split(r"\|+", tokens_raw) if t.strip() != ""]
+            current_note = ""
+            for tok in tokens:
+                if re.match(r"^\d+\s*\+?\s*\d*$", tok):
+                    goals.append({"minute_raw": tok, "note": current_note.lower()})
+                    current_note = ""
+                else:
+                    current_note = tok
         if display_name and goals:
             out.append({
                 "wiki_target": link_target,
@@ -218,8 +224,11 @@ def parse_minute(raw):
 
 
 def parse_match_boxes(wikitext):
-    """{{football box collapsible}} 群を抽出。リスト返却"""
+    """{{football box collapsible}} と {{football box}} 両方を抽出"""
+    # collapsible版（メイン）
     boxes = re.findall(r"\{\{[Ff]ootball box collapsible(.*?)\n\}\}", wikitext, re.DOTALL)
+    # 非collapsible版
+    boxes += re.findall(r"\{\{[Ff]ootball box\b(?! collapsible)(.*?)\n\}\}", wikitext, re.DOTALL)
     out = []
     for b in boxes:
         date_raw = parse_box_field(b, "date")
