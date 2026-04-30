@@ -344,7 +344,34 @@ a:hover { text-decoration: underline; }
   .wc-header h1 { font-size: 17px; }
   .wc-countdown .timer { font-size: 22px; }
   .wc-section h2 { font-size: 13px; }
-  .wc-nav a { padding: 8px 10px; font-size: 12px; }
+
+  /* スマホ：ナビを2列均等割に */
+  .wc-nav {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    border-bottom: none;
+    border: 1px solid var(--c-border);
+  }
+  .wc-nav a {
+    padding: 12px 8px;
+    font-size: 13px;
+    text-align: center;
+    border-bottom: 1px solid var(--c-border);
+    border-right: 1px solid var(--c-border);
+    margin-bottom: 0;
+  }
+  /* 右列の要素は右borderなし */
+  .wc-nav a:nth-child(2n) {
+    border-right: none;
+  }
+  /* 偶数個前提なら最終2行は下borderなし */
+  .wc-nav a.active {
+    border-bottom-color: var(--c-accent);
+    border-bottom-width: 2px;
+    background: var(--c-bg-subtle);
+  }
+
   .kpi-grid { grid-template-columns: repeat(2, 1fr); }
   .kpi { font-size: 11px; }
   .kpi-value { font-size: 18px; }
