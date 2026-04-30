@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FIFA W杯2026 日本代表 試合スケジュール 日本時間まとめ</title>
+  <meta name="description" content="2026年6月11日開幕のFIFA W杯。日本代表（Group F：オランダ・スウェーデン・チュニジア）の試合日程・グループ順位を日本時間で整理。">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="wc-page">
+
+<header class="wc-header">
+  <a href="../" class="wc-back-link">⚽ 海外サッカー 日本人選手スケジュールへ</a>
+  <h1>🏆 FIFA ワールドカップ 2026 日本時間ガイド</h1>
+  <p class="wc-tagline">2026/6/11 開幕（北米3か国共催）／日本はGroup F：オランダ・スウェーデン・チュニジア</p>
+</header>
+
+<div class="wc-container">
+
+  <div class="wc-countdown">
+    <div class="label">日本代表 初戦まで</div>
+    <div class="next-match" id="cdMatch">日本 vs オランダ（読み込み中...）</div>
+    <div class="timer" id="cdTimer">--日 --:--:--</div>
+    <div class="when" id="cdWhen"></div>
+  </div>
+
+  <nav class="wc-nav">
+    <a href="./" class="active">📅 トップ</a>
+    <a href="./japan.html">🇯🇵 日本代表</a>
+    <a href="./groups.html">📊 グループ順位</a>
+    <a href="./bracket.html">🏆 トーナメント</a>
+  </nav>
+
+  <section class="wc-section">
+    <h2>🇯🇵 日本代表の3試合（Group F）</h2>
+    <div id="japanMatches"></div>
+  </section>
+
+  <section class="wc-section">
+    <h2>🗓 直近の試合（今日〜明後日）</h2>
+    <div id="upcomingMatches"></div>
+  </section>
+
+  <section class="wc-section">
+    <h2>📊 Group F 順位表</h2>
+    <div id="groupFTable"></div>
+  </section>
+
+  <footer class="wc-footer">
+    <p>データ提供: <a href="https://www.football-data.org/" target="_blank" rel="noopener">Football data provided by the Football-Data.org API</a></p>
+    <p>このページは2026 FIFA W杯の期間限定特集です／<a href="../">football-jp トップへ</a></p>
+  </footer>
+</div>
+
+<script>
+(async () => {
+  const matchesRes = await fetch('../data/wc2026/matches.json');
+  const matchesData = await matchesRes.json();
+  const matches = matchesData.matches || [];
+
+  const standingsRes = await fetch('../data/wc2026/standings.json');
+  const standingsData = await standingsRes.json();
+
+  // ===== 日本の試合 =====
+  const JAPAN_TLA = 'JPN';
+  const japan = matches.filter(m => m.home_tla === JAPAN_TLA || m.away_tla === JAPAN_TLA)
+    .sort((a, b) => a.kickoff_jst.localeCompare(b.kickoff_jst));
+
+  // カウントダウン：未来の最初の日本戦
+  const now = new Date();
+  const nextJapan = japan.find(m => new Date(m.kickoff_jst) > now);
+  if (nextJapan) {
+    const opp = nextJapan.home_tla === JAPAN_TLA
+      ? `${nextJapan.away_flag} ${nextJapan.away_ja}`
+      : `${nextJapan.home_flag} ${nextJapan.home_ja}`;
+    document.getElementById('cdMatch').textContent = `🇯🇵 日本 vs ${opp}`;
+    const ko = new Date(nextJapan.kickoff_jst);
+    document.getElementById('cdWhen').textContent = ko.toLocaleString('ja-JP', { weekday: 'short', month: 'numeric', day: 'numeric', hour: '2-digit', minute: '2-digit' }) + ' キックオフ（日本時間）';
+    function tick() {
+      const diff = ko - new Date();
+      if (diff <= 0) { document.getElementById('cdTimer').textContent = '🔥 試合中・直前'; return; }
+      const d = Math.floor(diff / 86400000);
+      const h = Math.floor((diff % 86400000) / 3600000);
+      const m = Math.floor((diff % 3600000) / 60000);
+      const s = Math.floor((diff % 60000) / 1000);
+      document.getElementById('cdTimer').textContent = `${d}日 ${String(h).padStart(2,'0')}:${String(m).padStart(2,'0')}:${String(s).padStart(2,'0')}`;
+    }
+    tick();
+    setInterval(tick, 1000);
+  } else {
+    document.getElementById('cdMatch').textContent = '日本代表の予定試合なし';
+    document.getElementById('cdTimer').textContent = '—';
+  }
+
+  // ===== 日本3試合の表示 =====
+  const jpEl = document.getElementById('japanMatches');
+  jpEl.innerHTML = japan.map(m => renderMatch(m, true)).join('');
+
+  // ===== 直近の試合（今日～明後日） =====
+  const today = new Date();
+  today.setHours(0, 0, 0, 0);
+  const horizon = new Date(today.getTime() + 3 * 86400000);
+  const upcoming = matches.filter(m => {
+    const ko = new Date(m.kickoff_jst);
+    return ko >= today && ko < horizon;
+  }).slice(0, 8);
+  document.getElementById('upcomingMatches').innerHTML = upcoming.length
+    ? upcoming.map(m => renderMatch(m, false)).join('')
+    : '<div class="wc-empty">今日〜明後日に予定された試合はありません</div>';
+
+  // ===== Group F 順位表 =====
+  const groupF = (standingsData.groups || []).find(g => g.group === 'F');
+  if (groupF) {
+    const rows = groupF.table.map(r => {
+      const cls = r.team_tla === JAPAN_TLA ? 'japan' : '';
+      const qline = r.position === 2 ? 'qualify-line' : '';
+      return `<tr class="${cls} ${qline}">
+        <td class="num">${r.position}</td>
+        <td>${r.team_flag} ${r.team_ja}</td>
+        <td class="num">${r.playedGames}</td>
+        <td class="num">${r.won}</td>
+        <td class="num">${r.draw}</td>
+        <td class="num">${r.lost}</td>
+        <td class="num">${r.goalsFor}-${r.goalsAgainst}</td>
+        <td class="num">${r.goalDifference >= 0 ? '+' : ''}${r.goalDifference}</td>
+        <td class="num"><strong>${r.points}</strong></td>
+      </tr>`;
+    }).join('');
+    document.getElementById('groupFTable').innerHTML = `
+      <table class="wc-table">
+        <thead><tr><th class="num">#</th><th>国</th><th class="num">試</th><th class="num">勝</th><th class="num">分</th><th class="num">敗</th><th class="num">得-失</th><th class="num">差</th><th class="num">勝点</th></tr></thead>
+        <tbody>${rows}</tbody>
+      </table>
+      <p class="wc-empty" style="font-size:11px; padding:8px 0;">※ 上位2チーム（と一部3位）が決勝Tへ。決勝Tは LAST_32（32か国）から。</p>
+    `;
+  }
+})();
+
+function renderMatch(m, highlight) {
+  const ko = new Date(m.kickoff_jst);
+  const dateStr = ko.toLocaleDateString('ja-JP', { month: 'numeric', day: 'numeric', weekday: 'short' });
+  const timeStr = ko.toLocaleTimeString('ja-JP', { hour: '2-digit', minute: '2-digit' });
+  const cls = highlight ? 'wc-match japan-match' : 'wc-match';
+  const score = m.score ? { home: m.score.home, away: m.score.away } : null;
+  const homeWin = score && score.home > score.away;
+  const awayWin = score && score.away > score.home;
+  const stageLabel = stageJa(m.stage, m.matchday);
+  return `<div class="${cls}">
+    <div class="wc-match-top">
+      <div class="wc-kickoff">${timeStr}<small>${dateStr}</small></div>
+      <div class="wc-teams">
+        <div class="wc-team-row ${homeWin ? 'winner' : ''}">
+          <span class="wc-team-flag">${m.home_flag || '🌐'}</span>
+          <div class="wc-team-mid">
+            <span class="wc-team-name">${escapeHtml(m.home_ja)}</span>
+            <span class="wc-team-tla">${m.home_tla || ''}</span>
+          </div>
+          <span class="wc-team-score">${score ? score.home : '—'}</span>
+        </div>
+        <div class="wc-team-row ${awayWin ? 'winner' : ''}">
+          <span class="wc-team-flag">${m.away_flag || '🌐'}</span>
+          <div class="wc-team-mid">
+            <span class="wc-team-name">${escapeHtml(m.away_ja)}</span>
+            <span class="wc-team-tla">${m.away_tla || ''}</span>
+          </div>
+          <span class="wc-team-score">${score ? score.away : '—'}</span>
+        </div>
+      </div>
+    </div>
+    <div class="wc-tags">
+      ${m.group ? `<span class="wc-tag group">${m.group.replace('Group ','Group ')}</span>` : ''}
+      <span class="wc-tag stage">${stageLabel}</span>
+      ${m.status === 'FINISHED' ? '<span class="wc-tag status-finished">終了</span>' : ''}
+      ${m.status === 'IN_PLAY' || m.status === 'PAUSED' ? '<span class="wc-tag status-live">LIVE</span>' : ''}
+    </div>
+  </div>`;
+}
+
+function stageJa(stage, md) {
+  const map = {
+    'GROUP_STAGE': `グループステージ${md ? ' 第' + md + '節' : ''}`,
+    'LAST_32': '決勝T 1回戦（32→16）',
+    'LAST_16': '決勝T 2回戦（16→8）',
+    'QUARTER_FINALS': '準々決勝',
+    'SEMI_FINALS': '準決勝',
+    'THIRD_PLACE': '3位決定戦',
+    'FINAL': '決勝',
+  };
+  return map[stage] || stage;
+}
+
+function escapeHtml(s) {
+  return String(s || '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+}
+</script>
+
+</body>
+</html>

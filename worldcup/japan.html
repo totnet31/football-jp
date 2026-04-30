@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>日本代表 W杯2026 試合・組み合わせ・対戦相手分析｜FIFA W杯2026 日本時間ガイド</title>
+  <meta name="description" content="2026 FIFAワールドカップ日本代表（Group F）の3試合を日本時間で。オランダ・スウェーデン・チュニジアとの組み合わせ・キックオフ時刻・現状の戦力分析。">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="wc-page">
+
+<header class="wc-header">
+  <a href="../" class="wc-back-link">⚽ football-jp トップへ</a>
+  <h1>🇯🇵 日本代表 W杯2026 ガイド</h1>
+  <p class="wc-tagline">Group F：日本／オランダ／スウェーデン／チュニジア</p>
+</header>
+
+<div class="wc-container">
+
+  <nav class="wc-nav">
+    <a href="./">📅 トップ</a>
+    <a href="./japan.html" class="active">🇯🇵 日本代表</a>
+    <a href="./groups.html">📊 グループ順位</a>
+    <a href="./bracket.html">🏆 トーナメント</a>
+  </nav>
+
+  <section class="wc-section">
+    <h2>🇯🇵 日本代表3試合（グループステージ）</h2>
+    <div id="japanMatches"></div>
+  </section>
+
+  <section class="wc-section">
+    <h2>📊 Group F 順位表</h2>
+    <div id="groupFTable"></div>
+  </section>
+
+  <section class="wc-section">
+    <h2>🌐 対戦3か国メモ（暫定）</h2>
+    <div class="wc-match" style="line-height:1.7;">
+      <p><strong>🇳🇱 オランダ</strong>：Group Fの本命。直近欧州予選でも安定。エースはMan Cityに移籍したGakpoらアタッカー陣。日本にとって**初戦**で、グループ突破の鍵を握る。</p>
+      <p><strong>🇸🇪 スウェーデン</strong>：日本の最終戦相手。長身FW陣を活かしたフィジカル戦術が伝統。ただしW杯予選苦戦組で出場権獲得自体に紆余曲折があった。</p>
+      <p><strong>🇹🇳 チュニジア</strong>：日本の2戦目。アフリカ枠で堅守速攻型。日本としては**勝ち点3を最優先**に取りたい相手。</p>
+      <p style="font-size:12px; color:var(--wc-text-sub); margin-top:12px;">※ 詳細分析は本大会前（5月末〜6月上旬）に各国26名スカッド発表後に更新予定。</p>
+    </div>
+  </section>
+
+  <section class="wc-section">
+    <h2>📋 日本代表26名スカッド</h2>
+    <div class="wc-empty">
+      ※ 5月下旬〜6月上旬の正式発表後に掲載します。<br>
+      最新の招集情報は <a href="../" style="color:var(--wc-primary);">football-jp</a>（クラブ単位の試合情報）でも追えます。
+    </div>
+  </section>
+
+  <footer class="wc-footer">
+    <p>データ提供: <a href="https://www.football-data.org/" target="_blank" rel="noopener">Football data provided by the Football-Data.org API</a></p>
+    <p>このページは2026 FIFA W杯の期間限定特集です／<a href="../">football-jp トップへ</a></p>
+  </footer>
+</div>
+
+<script>
+(async () => {
+  const matchesRes = await fetch('../data/wc2026/matches.json');
+  const matches = (await matchesRes.json()).matches || [];
+
+  const standingsRes = await fetch('../data/wc2026/standings.json');
+  const standingsData = await standingsRes.json();
+
+  const JPN = 'JPN';
+  const japan = matches.filter(m => m.home_tla === JPN || m.away_tla === JPN)
+    .sort((a, b) => a.kickoff_jst.localeCompare(b.kickoff_jst));
+  document.getElementById('japanMatches').innerHTML = japan.map(m => renderMatch(m, true)).join('');
+
+  const groupF = (standingsData.groups || []).find(g => g.group === 'F');
+  if (groupF) {
+    const rows = groupF.table.map(r => {
+      const cls = r.team_tla === JPN ? 'japan' : '';
+      const qline = r.position === 2 ? 'qualify-line' : '';
+      return `<tr class="${cls} ${qline}">
+        <td class="num">${r.position}</td>
+        <td>${r.team_flag} ${r.team_ja}</td>
+        <td class="num">${r.playedGames}</td>
+        <td class="num">${r.won}</td>
+        <td class="num">${r.draw}</td>
+        <td class="num">${r.lost}</td>
+        <td class="num">${r.goalsFor}-${r.goalsAgainst}</td>
+        <td class="num">${r.goalDifference >= 0 ? '+' : ''}${r.goalDifference}</td>
+        <td class="num"><strong>${r.points}</strong></td>
+      </tr>`;
+    }).join('');
+    document.getElementById('groupFTable').innerHTML = `
+      <table class="wc-table">
+        <thead><tr><th class="num">#</th><th>国</th><th class="num">試</th><th class="num">勝</th><th class="num">分</th><th class="num">敗</th><th class="num">得-失</th><th class="num">差</th><th class="num">勝点</th></tr></thead>
+        <tbody>${rows}</tbody>
+      </table>
+    `;
+  }
+})();
+
+function renderMatch(m, highlight) {
+  const ko = new Date(m.kickoff_jst);
+  const dateStr = ko.toLocaleDateString('ja-JP', { month: 'numeric', day: 'numeric', weekday: 'short' });
+  const timeStr = ko.toLocaleTimeString('ja-JP', { hour: '2-digit', minute: '2-digit' });
+  const cls = highlight ? 'wc-match japan-match' : 'wc-match';
+  const score = m.score ? { home: m.score.home, away: m.score.away } : null;
+  const homeWin = score && score.home > score.away;
+  const awayWin = score && score.away > score.home;
+  return `<div class="${cls}">
+    <div class="wc-match-top">
+      <div class="wc-kickoff">${timeStr}<small>${dateStr}</small></div>
+      <div class="wc-teams">
+        <div class="wc-team-row ${homeWin ? 'winner' : ''}">
+          <span class="wc-team-flag">${m.home_flag || '🌐'}</span>
+          <div class="wc-team-mid">
+            <span class="wc-team-name">${escapeHtml(m.home_ja)}</span>
+            <span class="wc-team-tla">${m.home_tla || ''}</span>
+          </div>
+          <span class="wc-team-score">${score ? score.home : '—'}</span>
+        </div>
+        <div class="wc-team-row ${awayWin ? 'winner' : ''}">
+          <span class="wc-team-flag">${m.away_flag || '🌐'}</span>
+          <div class="wc-team-mid">
+            <span class="wc-team-name">${escapeHtml(m.away_ja)}</span>
+            <span class="wc-team-tla">${m.away_tla || ''}</span>
+          </div>
+          <span class="wc-team-score">${score ? score.away : '—'}</span>
+        </div>
+      </div>
+    </div>
+    <div class="wc-tags">
+      ${m.group ? `<span class="wc-tag group">${m.group}</span>` : ''}
+      <span class="wc-tag stage">${stageJa(m.stage, m.matchday)}</span>
+      ${m.status === 'FINISHED' ? '<span class="wc-tag status-finished">終了</span>' : ''}
+      ${m.status === 'IN_PLAY' || m.status === 'PAUSED' ? '<span class="wc-tag status-live">LIVE</span>' : ''}
+    </div>
+  </div>`;
+}
+
+function stageJa(stage, md) {
+  const map = {
+    'GROUP_STAGE': `グループステージ${md ? ' 第' + md + '節' : ''}`,
+    'LAST_32': '決勝T 1回戦',
+    'LAST_16': '決勝T 2回戦',
+    'QUARTER_FINALS': '準々決勝',
+    'SEMI_FINALS': '準決勝',
+    'THIRD_PLACE': '3位決定戦',
+    'FINAL': '決勝',
+  };
+  return map[stage] || stage;
+}
+
+function escapeHtml(s) {
+  return String(s || '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+}
+</script>
+
+</body>
+</html>

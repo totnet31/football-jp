@@ -28,6 +28,9 @@ jobs:
       - name: データ取得スクリプトを実行
         run: python3 scripts/fetch_matches.py
 
+      - name: W杯2026データ取得
+        run: python3 scripts/fetch_wc.py
+
       - name: 更新したデータをGitHubに保存
         run: |
           git config user.name "github-actions[bot]"

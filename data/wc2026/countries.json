@@ -1,0 +1,389 @@
+{
+  "updated": "2026-04-29",
+  "countries": {
+    "798": {
+      "id": 798,
+      "en": "Czechia",
+      "tla": "CZE",
+      "ja": "チェコ",
+      "flag": "🇨🇿",
+      "group": "A"
+    },
+    "769": {
+      "id": 769,
+      "en": "Mexico",
+      "tla": "MEX",
+      "ja": "メキシコ",
+      "flag": "🇲🇽",
+      "group": "A"
+    },
+    "774": {
+      "id": 774,
+      "en": "South Africa",
+      "tla": "RSA",
+      "ja": "南アフリカ",
+      "flag": "🇿🇦",
+      "group": "A"
+    },
+    "772": {
+      "id": 772,
+      "en": "South Korea",
+      "tla": "KOR",
+      "ja": "韓国",
+      "flag": "🇰🇷",
+      "group": "A"
+    },
+    "1060": {
+      "id": 1060,
+      "en": "Bosnia-Herzegovina",
+      "tla": "BIH",
+      "ja": "ボスニア・ヘルツェゴビナ",
+      "flag": "🇧🇦",
+      "group": "B"
+    },
+    "828": {
+      "id": 828,
+      "en": "Canada",
+      "tla": "CAN",
+      "ja": "カナダ",
+      "flag": "🇨🇦",
+      "group": "B"
+    },
+    "8030": {
+      "id": 8030,
+      "en": "Qatar",
+      "tla": "QAT",
+      "ja": "カタール",
+      "flag": "🇶🇦",
+      "group": "B"
+    },
+    "788": {
+      "id": 788,
+      "en": "Switzerland",
+      "tla": "SUI",
+      "ja": "スイス",
+      "flag": "🇨🇭",
+      "group": "B"
+    },
+    "764": {
+      "id": 764,
+      "en": "Brazil",
+      "tla": "BRA",
+      "ja": "ブラジル",
+      "flag": "🇧🇷",
+      "group": "C"
+    },
+    "815": {
+      "id": 815,
+      "en": "Morocco",
+      "tla": "MAR",
+      "ja": "モロッコ",
+      "flag": "🇲🇦",
+      "group": "C"
+    },
+    "836": {
+      "id": 836,
+      "en": "Haiti",
+      "tla": "HAI",
+      "ja": "ハイチ",
+      "flag": "🇭🇹",
+      "group": "C"
+    },
+    "8873": {
+      "id": 8873,
+      "en": "Scotland",
+      "tla": "SCO",
+      "ja": "スコットランド",
+      "flag": "🏴󠁧󠁢󠁳󠁣󠁴󠁿",
+      "group": "C"
+    },
+    "803": {
+      "id": 803,
+      "en": "Turkey",
+      "tla": "TUR",
+      "ja": "トルコ",
+      "flag": "🇹🇷",
+      "group": "D"
+    },
+    "771": {
+      "id": 771,
+      "en": "United States",
+      "tla": "USA",
+      "ja": "アメリカ",
+      "flag": "🇺🇸",
+      "group": "D"
+    },
+    "761": {
+      "id": 761,
+      "en": "Paraguay",
+      "tla": "PAR",
+      "ja": "パラグアイ",
+      "flag": "🇵🇾",
+      "group": "D"
+    },
+    "779": {
+      "id": 779,
+      "en": "Australia",
+      "tla": "AUS",
+      "ja": "オーストラリア",
+      "flag": "🇦🇺",
+      "group": "D"
+    },
+    "759": {
+      "id": 759,
+      "en": "Germany",
+      "tla": "GER",
+      "ja": "ドイツ",
+      "flag": "🇩🇪",
+      "group": "E"
+    },
+    "9460": {
+      "id": 9460,
+      "en": "Curaçao",
+      "tla": "CUR",
+      "ja": "キュラソー",
+      "flag": "🇨🇼",
+      "group": "E"
+    },
+    "1935": {
+      "id": 1935,
+      "en": "Ivory Coast",
+      "tla": "CIV",
+      "ja": "コートジボワール",
+      "flag": "🇨🇮",
+      "group": "E"
+    },
+    "791": {
+      "id": 791,
+      "en": "Ecuador",
+      "tla": "ECU",
+      "ja": "エクアドル",
+      "flag": "🇪🇨",
+      "group": "E"
+    },
+    "792": {
+      "id": 792,
+      "en": "Sweden",
+      "tla": "SWE",
+      "ja": "スウェーデン",
+      "flag": "🇸🇪",
+      "group": "F"
+    },
+    "8601": {
+      "id": 8601,
+      "en": "Netherlands",
+      "tla": "NED",
+      "ja": "オランダ",
+      "flag": "🇳🇱",
+      "group": "F"
+    },
+    "766": {
+      "id": 766,
+      "en": "Japan",
+      "tla": "JPN",
+      "ja": "日本",
+      "flag": "🇯🇵",
+      "group": "F"
+    },
+    "802": {
+      "id": 802,
+      "en": "Tunisia",
+      "tla": "TUN",
+      "ja": "チュニジア",
+      "flag": "🇹🇳",
+      "group": "F"
+    },
+    "805": {
+      "id": 805,
+      "en": "Belgium",
+      "tla": "BEL",
+      "ja": "ベルギー",
+      "flag": "🇧🇪",
+      "group": "G"
+    },
+    "825": {
+      "id": 825,
+      "en": "Egypt",
+      "tla": "EGY",
+      "ja": "エジプト",
+      "flag": "🇪🇬",
+      "group": "G"
+    },
+    "840": {
+      "id": 840,
+      "en": "Iran",
+      "tla": "IRN",
+      "ja": "イラン",
+      "flag": "🇮🇷",
+      "group": "G"
+    },
+    "783": {
+      "id": 783,
+      "en": "New Zealand",
+      "tla": "NZL",
+      "ja": "ニュージーランド",
+      "flag": "🇳🇿",
+      "group": "G"
+    },
+    "760": {
+      "id": 760,
+      "en": "Spain",
+      "tla": "ESP",
+      "ja": "スペイン",
+      "flag": "🇪🇸",
+      "group": "H"
+    },
+    "1930": {
+      "id": 1930,
+      "en": "Cape Verde Islands",
+      "tla": "CPV",
+      "ja": "カーボベルデ",
+      "flag": "🇨🇻",
+      "group": "H"
+    },
+    "801": {
+      "id": 801,
+      "en": "Saudi Arabia",
+      "tla": "KSA",
+      "ja": "サウジアラビア",
+      "flag": "🇸🇦",
+      "group": "H"
+    },
+    "758": {
+      "id": 758,
+      "en": "Uruguay",
+      "tla": "URU",
+      "ja": "ウルグアイ",
+      "flag": "🇺🇾",
+      "group": "H"
+    },
+    "8062": {
+      "id": 8062,
+      "en": "Iraq",
+      "tla": "IRQ",
+      "ja": "イラク",
+      "flag": "🇮🇶",
+      "group": "I"
+    },
+    "773": {
+      "id": 773,
+      "en": "France",
+      "tla": "FRA",
+      "ja": "フランス",
+      "flag": "🇫🇷",
+      "group": "I"
+    },
+    "804": {
+      "id": 804,
+      "en": "Senegal",
+      "tla": "SEN",
+      "ja": "セネガル",
+      "flag": "🇸🇳",
+      "group": "I"
+    },
+    "8872": {
+      "id": 8872,
+      "en": "Norway",
+      "tla": "NOR",
+      "ja": "ノルウェー",
+      "flag": "🇳🇴",
+      "group": "I"
+    },
+    "762": {
+      "id": 762,
+      "en": "Argentina",
+      "tla": "ARG",
+      "ja": "アルゼンチン",
+      "flag": "🇦🇷",
+      "group": "J"
+    },
+    "778": {
+      "id": 778,
+      "en": "Algeria",
+      "tla": "ALG",
+      "ja": "アルジェリア",
+      "flag": "🇩🇿",
+      "group": "J"
+    },
+    "816": {
+      "id": 816,
+      "en": "Austria",
+      "tla": "AUT",
+      "ja": "オーストリア",
+      "flag": "🇦🇹",
+      "group": "J"
+    },
+    "8049": {
+      "id": 8049,
+      "en": "Jordan",
+      "tla": "JOR",
+      "ja": "ヨルダン",
+      "flag": "🇯🇴",
+      "group": "J"
+    },
+    "1934": {
+      "id": 1934,
+      "en": "Congo DR",
+      "tla": "COD",
+      "ja": "コンゴ民主共和国",
+      "flag": "🇨🇩",
+      "group": "K"
+    },
+    "765": {
+      "id": 765,
+      "en": "Portugal",
+      "tla": "POR",
+      "ja": "ポルトガル",
+      "flag": "🇵🇹",
+      "group": "K"
+    },
+    "8070": {
+      "id": 8070,
+      "en": "Uzbekistan",
+      "tla": "UZB",
+      "ja": "ウズベキスタン",
+      "flag": "🇺🇿",
+      "group": "K"
+    },
+    "818": {
+      "id": 818,
+      "en": "Colombia",
+      "tla": "COL",
+      "ja": "コロンビア",
+      "flag": "🇨🇴",
+      "group": "K"
+    },
+    "770": {
+      "id": 770,
+      "en": "England",
+      "tla": "ENG",
+      "ja": "イングランド",
+      "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+      "group": "L"
+    },
+    "799": {
+      "id": 799,
+      "en": "Croatia",
+      "tla": "CRO",
+      "ja": "クロアチア",
+      "flag": "🇭🇷",
+      "group": "L"
+    },
+    "763": {
+      "id": 763,
+      "en": "Ghana",
+      "tla": "GHA",
+      "ja": "ガーナ",
+      "flag": "🇬🇭",
+      "group": "L"
+    },
+    "1836": {
+      "id": 1836,
+      "en": "Panama",
+      "tla": "PAN",
+      "ja": "パナマ",
+      "flag": "🇵🇦",
+      "group": "L"
+    }
+  }
+}

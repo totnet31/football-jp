@@ -1,0 +1,269 @@
+/* W杯2026 専用スタイル（football-jpの既存style.cssを拡張） */
+:root {
+  --wc-primary: #2c3e7e;
+  --wc-accent: #e94560;
+  --wc-gold: #d4af37;
+  --wc-bg: #fafbfc;
+  --wc-card: #ffffff;
+  --wc-border: #e0e3e8;
+  --wc-text: #1a1d29;
+  --wc-text-sub: #6b7280;
+  --wc-japan: #bc002d;
+}
+
+body.wc-page {
+  background: var(--wc-bg);
+  color: var(--wc-text);
+  margin: 0;
+  font-family: -apple-system, "Hiragino Kaku Gothic ProN", YuGothic, "メイリオ", sans-serif;
+  line-height: 1.6;
+}
+
+.wc-container {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 0 14px 60px;
+}
+
+.wc-header {
+  background: linear-gradient(135deg, var(--wc-primary) 0%, #1a2754 100%);
+  color: white;
+  padding: 22px 18px 18px;
+  margin-bottom: 18px;
+  border-radius: 0 0 12px 12px;
+}
+.wc-header h1 {
+  margin: 0 0 6px;
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+.wc-header .wc-tagline {
+  margin: 0;
+  font-size: 13px;
+  opacity: 0.85;
+}
+.wc-back-link {
+  color: rgba(255,255,255,0.85);
+  font-size: 12px;
+  text-decoration: none;
+  display: inline-block;
+  margin-bottom: 8px;
+}
+.wc-back-link:hover { color: white; }
+
+.wc-countdown {
+  background: var(--wc-card);
+  border: 2px solid var(--wc-japan);
+  border-radius: 10px;
+  padding: 18px 20px;
+  margin: 16px 0;
+  text-align: center;
+}
+.wc-countdown .label {
+  font-size: 12px;
+  color: var(--wc-text-sub);
+  margin-bottom: 4px;
+}
+.wc-countdown .next-match {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+.wc-countdown .timer {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--wc-japan);
+  font-feature-settings: "tnum";
+  letter-spacing: 0.05em;
+}
+.wc-countdown .when {
+  font-size: 12px;
+  color: var(--wc-text-sub);
+  margin-top: 6px;
+}
+
+.wc-nav {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 8px;
+  margin-bottom: 22px;
+}
+.wc-nav a {
+  background: var(--wc-card);
+  border: 1px solid var(--wc-border);
+  border-radius: 8px;
+  padding: 14px 12px;
+  text-align: center;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--wc-text);
+  text-decoration: none;
+  transition: all 0.15s;
+}
+.wc-nav a:hover {
+  border-color: var(--wc-primary);
+  background: #f5f6fa;
+}
+.wc-nav a.active {
+  border-color: var(--wc-japan);
+  background: #fff5f7;
+  color: var(--wc-japan);
+}
+
+.wc-section {
+  margin: 20px 0;
+}
+.wc-section h2 {
+  font-size: 17px;
+  font-weight: 700;
+  margin: 0 0 10px;
+  padding-bottom: 6px;
+  border-bottom: 2px solid var(--wc-primary);
+  color: var(--wc-primary);
+}
+
+.wc-match {
+  background: var(--wc-card);
+  border: 1px solid var(--wc-border);
+  border-radius: 10px;
+  padding: 12px 14px;
+  margin-bottom: 8px;
+}
+.wc-match.japan-match {
+  border-color: var(--wc-japan);
+  border-width: 2px;
+  background: #fff8f9;
+}
+.wc-match-top {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 12px;
+  align-items: center;
+}
+.wc-kickoff {
+  font-size: 14px;
+  font-weight: 700;
+  font-feature-settings: "tnum";
+  min-width: 64px;
+  text-align: center;
+}
+.wc-kickoff small {
+  display: block;
+  font-size: 10px;
+  font-weight: normal;
+  color: var(--wc-text-sub);
+}
+.wc-teams {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 0;
+}
+.wc-team-row {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 8px;
+  align-items: center;
+  font-size: 14px;
+}
+.wc-team-row.winner .wc-team-name { font-weight: 700; }
+.wc-team-flag {
+  font-size: 18px;
+  line-height: 1;
+}
+.wc-team-mid {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px 8px;
+  min-width: 0;
+}
+.wc-team-name { flex-shrink: 0; }
+.wc-team-tla {
+  font-size: 11px;
+  color: var(--wc-text-sub);
+  font-feature-settings: "tnum";
+}
+.wc-team-score {
+  font-weight: 700;
+  font-feature-settings: "tnum";
+  min-width: 22px;
+  text-align: right;
+}
+.wc-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 8px;
+}
+.wc-tag {
+  font-size: 11px;
+  padding: 2px 8px;
+  border-radius: 999px;
+  background: #eef0f4;
+  color: var(--wc-text-sub);
+}
+.wc-tag.group {
+  background: #e8edf6;
+  color: var(--wc-primary);
+  font-weight: 600;
+}
+.wc-tag.stage {
+  background: #fff0e0;
+  color: #b8552d;
+}
+.wc-tag.status-finished { background: #ddd; }
+.wc-tag.status-live { background: var(--wc-japan); color: white; }
+
+.wc-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--wc-card);
+  border: 1px solid var(--wc-border);
+  border-radius: 8px;
+  overflow: hidden;
+  font-size: 13px;
+}
+.wc-table th, .wc-table td {
+  padding: 8px 10px;
+  text-align: left;
+  border-bottom: 1px solid var(--wc-border);
+}
+.wc-table th {
+  background: #f0f1f5;
+  color: var(--wc-primary);
+  font-weight: 600;
+  font-size: 11px;
+}
+.wc-table td.num, .wc-table th.num {
+  text-align: right;
+  font-feature-settings: "tnum";
+}
+.wc-table tr.japan { background: #fff5f7; font-weight: 700; }
+.wc-table tr.qualify-line {
+  border-bottom: 2px solid var(--wc-gold);
+}
+
+.wc-empty {
+  text-align: center;
+  padding: 40px 20px;
+  color: var(--wc-text-sub);
+  font-size: 14px;
+}
+
+.wc-footer {
+  text-align: center;
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid var(--wc-border);
+  font-size: 11px;
+  color: var(--wc-text-sub);
+}
+.wc-footer a { color: var(--wc-primary); }
+
+@media (max-width: 600px) {
+  .wc-header h1 { font-size: 18px; }
+  .wc-countdown .timer { font-size: 22px; }
+  .wc-nav { grid-template-columns: repeat(2, 1fr); }
+}
