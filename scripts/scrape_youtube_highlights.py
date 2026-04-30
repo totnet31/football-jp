@@ -22,15 +22,19 @@ CHANNELS = [
     {"name": "DAZN",   "url": "https://www.youtube.com/playlist?list=UUoFLB_Gw_AoxUuuzKjXrc_Q"},
     {"name": "U-NEXT", "url": "https://www.youtube.com/playlist?list=UUMjvvElkdLRTgcTKklAUkSw"},
     {"name": "WOWOW",  "url": "https://www.youtube.com/playlist?list=UUJQj2lbG_3w8UrncJd7JZXw"},
+    {"name": "ABEMA",  "url": "https://www.youtube.com/playlist?list=UUVjvtweGM-Kak2D53AvfNOA"},
 ]
 
-UA = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
+UA = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36"
+ACCEPT_LANG = "ja,en-US;q=0.9,en;q=0.8"
 
 # 試合英語チーム名 → 日本語照合キーワード
 TEAM_KEYWORDS = {
     "Liverpool": ["リヴァプール", "リバプール"],
     "Manchester City": ["マンチェスター・シティ", "マンチェスターC", "マンC"],
+    "Man City": ["マンチェスター・シティ", "マンC"],
     "Manchester United": ["マンチェスター・ユナイテッド", "マンU"],
+    "Man United": ["マンチェスター・ユナイテッド", "マンU"],
     "Arsenal": ["アーセナル"],
     "Chelsea": ["チェルシー"],
     "Tottenham": ["トッテナム"],
@@ -42,6 +46,7 @@ TEAM_KEYWORDS = {
     "Wolverhampton": ["ウルブス", "ウルバーハンプトン", "ウォルバーハンプトン"],
     "Everton": ["エヴァートン", "エバートン"],
     "Nottingham Forest": ["ノッティンガム"],
+    "Nottingham": ["ノッティンガム"],
     "Fulham": ["フラム"],
     "Brentford": ["ブレントフォード"],
     "Bournemouth": ["ボーンマス"],
@@ -50,6 +55,7 @@ TEAM_KEYWORDS = {
     # Championship
     "Southampton": ["サウサンプトン"],
     "Ipswich": ["イプスウィッチ"],
+    "Ipswich Town": ["イプスウィッチ"],
     "Birmingham": ["バーミンガム"],
     "Bristol City": ["ブリストル・シティ", "ブリストルシティ"],
     "Coventry": ["コヴェントリー"],
@@ -69,17 +75,29 @@ TEAM_KEYWORDS = {
     "Sunderland": ["サンダーランド"],
     "WBA": ["WBA", "ウェスト・ブロムウィッチ"],
     "Sheffield United": ["シェフィールド・ユナイテッド"],
+    "Sheffield Utd": ["シェフィールド・ユナイテッド"],
     "Sheffield Wednesday": ["シェフィールド・ウェンズデー"],
+    "Sheffield Wed": ["シェフィールド・ウェンズデー"],
     "Preston": ["プレストン"],
+    "Preston NE": ["プレストン"],
     "Oxford": ["オックスフォード"],
+    "Oxford United": ["オックスフォード"],
     "Wrexham": ["レクサム"],
+    "WBA": ["WBA", "ウェスト・ブロムウィッチ"],
+    "West Brom": ["WBA", "ウェスト・ブロムウィッチ"],
+    "Stoke": ["ストーク"],
+    "Stoke City": ["ストーク"],
     # La Liga
     "Real Madrid": ["レアル・マドリード", "レアル・マドリー", "マドリー"],
     "FC Barcelona": ["バルセロナ"],
+    "Barça": ["バルセロナ"],
     "Atlético Madrid": ["アトレティコ・マドリード", "アトレティコ・マドリー", "アトレティコ"],
+    "Atleti": ["アトレティコ・マドリード", "アトレティコ・マドリー", "アトレティコ"],
     "Real Sociedad": ["レアル・ソシエダ"],
     "Athletic Club": ["アスレティック・ビルバオ", "ビルバオ"],
+    "Athletic": ["アスレティック・ビルバオ", "ビルバオ"],
     "Sevilla": ["セビージャ", "セビリア"],
+    "Sevilla FC": ["セビージャ", "セビリア"],
     "Villarreal": ["ビジャレアル"],
     "Valencia": ["バレンシア"],
     "Real Betis": ["レアル・ベティス", "ベティス"],
@@ -92,12 +110,14 @@ TEAM_KEYWORDS = {
     "Alavés": ["アラベス"],
     "Real Oviedo": ["レアル・オビエド", "オビエド"],
     "Celta de Vigo": ["セルタ"],
+    "Celta": ["セルタ"],
     "Osasuna": ["オサスナ"],
     "Elche": ["エルチェ"],
     # Serie A
     "Juventus": ["ユヴェントス", "ユベントス"],
     "Inter": ["インテル"],
-    "AC Milan": ["ACミラン"],
+    "AC Milan": ["ACミラン", "ミラン"],
+    "Milan": ["ACミラン", "ミラン"],
     "Napoli": ["ナポリ"],
     "Roma": ["ローマ"],
     "Lazio": ["ラツィオ"],
@@ -113,11 +133,27 @@ TEAM_KEYWORDS = {
     "Genoa": ["ジェノア"],
     "Cagliari": ["カリアリ"],
     "Verona": ["ヴェローナ"],
+    "Como 1907": ["コモ"],
+    "Udinese": ["ウディネーゼ"],
     # Bundesliga
     "Bayern": ["バイエルン"],
     "Borussia Dortmund": ["ドルトムント"],
+    "Dortmund": ["ドルトムント"],
     "Borussia Mönchengladbach": ["ボルシアMG", "メンヒェングラートバッハ", "MG"],
+    "M'gladbach": ["ボルシアMG", "メンヒェングラートバッハ"],
     "Bayer Leverkusen": ["レバークーゼン"],
+    "Leverkusen": ["レバークーゼン"],
+    "Freiburg": ["フライブルク"],
+    "Mainz": ["マインツ"],
+    "Augsburg": ["アウクスブルク"],
+    "St. Pauli": ["ザンクト・パウリ"],
+    "Heidenheim": ["ハイデンハイム"],
+    "Wolfsburg": ["ヴォルフスブルク"],
+    "Werder": ["ブレーメン"],
+    "Bremen": ["ブレーメン"],
+    "Stuttgart": ["シュトゥットガルト"],
+    "HSV": ["ハンブルガー"],
+    "Hoffenheim": ["ホッフェンハイム"],
     "RB Leipzig": ["RBライプツィヒ", "ライプツィヒ"],
     "Eintracht Frankfurt": ["フランクフルト"],
     "VfB Stuttgart": ["シュトゥットガルト"],
@@ -136,17 +172,20 @@ TEAM_KEYWORDS = {
     "PSG": ["PSG", "パリ・サンジェルマン", "パリSG"],
     "Marseille": ["マルセイユ"],
     "Lyon": ["リヨン"],
+    "Olympique Lyon": ["リヨン"],
     "Monaco": ["モナコ"],
     "Lille": ["リール"],
     "Rennes": ["レンヌ"],
+    "Stade Rennais": ["レンヌ"],
     "Strasbourg": ["ストラスブール"],
     "Nice": ["ニース"],
     "Nantes": ["ナント"],
     "Le Havre": ["ル・アーヴル", "ルアーヴル"],
     "Brest": ["ブレスト"],
     "Lens": ["ランス"],
+    "RC Lens": ["ランス"],
     "FC Metz": ["メス"],
-    "Toulouse": ["トゥールーズ"],
+    "Toulouse": ["トゥールーズ", "トゥールズ"],
     "Auxerre": ["オセール"],
     "Lorient": ["ロリアン"],
     "Angers SCO": ["アンジェ"],
@@ -162,7 +201,9 @@ TEAM_KEYWORDS = {
     "Volendam": ["フォレンダム"],
     "Heerenveen": ["ヘーレンフェーン"],
     "Fortuna Sittard": ["フォルトゥナ・シッタート"],
+    "Sittard": ["フォルトゥナ・シッタート"],
     "PEC Zwolle": ["ズヴォレ"],
+    "Zwolle": ["ズヴォレ"],
     "NEC": ["NEC"],
     "Excelsior": ["エクセルシオール"],
     "Utrecht": ["ユトレヒト"],
@@ -172,7 +213,9 @@ TEAM_KEYWORDS = {
     # Primeira
     "Sporting CP": ["スポルティング"],
     "FC Porto": ["ポルト"],
+    "Porto": ["ポルト"],
     "Benfica": ["ベンフィカ"],
+    "SL Benfica": ["ベンフィカ"],
     "Braga": ["ブラガ"],
     "Gil Vicente": ["ジル・ヴィセンテ"],
     "Casa Pia": ["カーザ・ピア"],
@@ -181,17 +224,22 @@ TEAM_KEYWORDS = {
     "Alverca": ["アルヴェルカ"],
     "Arouca": ["アロウカ"],
     "Estoril": ["エストリル"],
+    "Estoril Praia": ["エストリル"],
     "Famalicão": ["ファマリカン"],
     "Vitória": ["ヴィトーリア"],
+    "Vitória SC": ["ヴィトーリア"],
     "Rio Ave": ["リオアヴェ"],
     "Santa Clara": ["サンタクララ"],
     "Estrela Amadora": ["アマドーラ"],
+    "Amadora": ["アマドーラ"],
     "Nacional": ["ナシオナル"],
+    "CD Nacional": ["ナシオナル"],
+    "Moreirense": ["モレイレンセ"],
 }
 
 
 def fetch(url):
-    req = Request(url, headers={"User-Agent": UA})
+    req = Request(url, headers={"User-Agent": UA, "Accept-Language": ACCEPT_LANG})
     try:
         with urlopen(req, timeout=20) as r:
             return r.read().decode("utf-8", errors="replace")
@@ -277,8 +325,8 @@ def main():
 
     print(f"[INFO] 合計動画: {len(all_videos)}本")
 
-    # 既存ハイライトクリア（公式3チャンネル外）
-    APPROVED = {"DAZN", "U-NEXT", "WOWOW"}
+    # 既存ハイライトクリア（公式4チャンネル外）
+    APPROVED = {"DAZN", "U-NEXT", "WOWOW", "ABEMA"}
     cleared = 0
     for m in matches:
         if not m.get("highlights"):
