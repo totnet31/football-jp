@@ -321,6 +321,17 @@
     if (isToday) cls.push('today');
     if (finished) cls.push('finished');
 
+    // ハイライト動画リンク（試合終了時のみ表示）
+    let highlightsHtml = '';
+    if (finished && Array.isArray(m.highlights) && m.highlights.length > 0) {
+      const links = m.highlights.map(h => {
+        const url = h.url || (h.video_id ? `https://youtu.be/${h.video_id}` : '');
+        if (!url) return '';
+        return `<a class="highlight-link" href="${escape(url)}" target="_blank" rel="noopener">▶ ${escape(h.broadcaster || 'YouTube')}</a>`;
+      }).join('');
+      highlightsHtml = `<div class="highlights-bar">${links}</div>`;
+    }
+
     return `<div class="${cls.join(' ')}">
       <div class="match-top">
         <div class="kickoff">${timeLabel}</div>
@@ -329,6 +340,7 @@
           ${teamRow(m.away_ja, m.away_crest, score ? score.away : null, awayWin, awayJp)}
         </div>
       </div>
+      ${highlightsHtml}
       <div class="tags">
         <div class="tags-row primary">${primaryTags.join('')}</div>
         ${broadcasterTags.length ? `<div class="tags-row broadcasters">${broadcasterTags.join('')}</div>` : ''}

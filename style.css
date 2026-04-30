@@ -354,6 +354,33 @@ main {
 .team-row.winner .team-name,
 .team-row.winner .team-score { font-weight: 700; }
 
+/* === ハイライト動画リンク === */
+.highlights-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 10px;
+  padding-top: 8px;
+  border-top: 1px dotted var(--border);
+}
+.highlight-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 6px 12px;
+  background: linear-gradient(135deg, #c1304a, #8a1f30);
+  color: #ffffff !important;
+  font-size: 12px;
+  font-weight: 700;
+  text-decoration: none;
+  letter-spacing: 0.02em;
+  transition: filter 0.15s;
+}
+.highlight-link:hover {
+  filter: brightness(1.1);
+  text-decoration: none !important;
+}
+
 .tags {
   display: flex;
   flex-direction: column;

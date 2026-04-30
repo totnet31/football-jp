@@ -263,6 +263,33 @@ a:hover { text-decoration: underline; }
   font-weight: 700;
 }
 
+/* === ハイライト動画リンク === */
+.wc-highlights-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 10px;
+  padding-top: 8px;
+  border-top: 1px dotted var(--c-border);
+}
+.wc-highlight-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 6px 12px;
+  background: linear-gradient(135deg, #c1304a, #8a1f30);
+  color: #ffffff !important;
+  font-size: 12px;
+  font-weight: 700;
+  text-decoration: none;
+  letter-spacing: 0.02em;
+  transition: filter 0.15s;
+}
+.wc-highlight-link:hover {
+  filter: brightness(1.1);
+  text-decoration: none !important;
+}
+
 /* === Tables === */
 .wc-table {
   width: 100%;

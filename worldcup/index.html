@@ -169,6 +169,7 @@ function renderMatch(m, highlight) {
         </div>
       </div>
     </div>
+    ${renderHighlights(m)}
     <div class="wc-tags">
       ${m.group ? `<span class="wc-tag group">${m.group.replace('Group ','Group ')}</span>` : ''}
       <span class="wc-tag stage">${stageLabel}</span>
@@ -176,6 +177,16 @@ function renderMatch(m, highlight) {
       ${m.status === 'IN_PLAY' || m.status === 'PAUSED' ? '<span class="wc-tag status-live">LIVE</span>' : ''}
     </div>
   </div>`;
+}
+
+function renderHighlights(m) {
+  if (m.status !== 'FINISHED' || !Array.isArray(m.highlights) || m.highlights.length === 0) return '';
+  const links = m.highlights.map(h => {
+    const url = h.url || (h.video_id ? `https://youtu.be/${h.video_id}` : '');
+    if (!url) return '';
+    return `<a class="wc-highlight-link" href="${escapeHtml(url)}" target="_blank" rel="noopener">▶ ${escapeHtml(h.broadcaster || 'YouTube')}</a>`;
+  }).join('');
+  return `<div class="wc-highlights-bar">${links}</div>`;
 }
 
 function stageJa(stage, md) {

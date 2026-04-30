@@ -184,11 +184,14 @@ def main():
             old_data = json.loads(out_path.read_text(encoding="utf-8"))
             old_by_id = {m["id"]: m for m in old_data.get("matches", [])}
 
-            # 1) TBD補完：新フェッチでhome_id=Noneだった試合を旧データで補完
+            # 1) TBD補完＋手動追加フィールド保持（highlights等）：
             for m in all_matches:
                 old = old_by_id.get(m["id"])
                 if not old:
                     continue
+                # 手動追加データを保持
+                if old.get("highlights"):
+                    m["highlights"] = old["highlights"]
                 if m["home_id"] is None and old.get("home_id"):
                     for k in ("home_id", "home_ja", "home_en", "home_crest"):
                         m[k] = old.get(k)

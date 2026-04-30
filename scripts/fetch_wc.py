@@ -149,11 +149,14 @@ def main():
             old = json.loads(matches_path.read_text(encoding="utf-8"))
             old_by_id = {m["id"]: m for m in old.get("matches", [])}
 
-            # 1) TBD補完
+            # 1) TBD補完＋手動追加フィールド保持（highlights等）
             for m in transformed:
                 old_m = old_by_id.get(m["id"])
                 if not old_m:
                     continue
+                # 手動追加データを保持
+                if old_m.get("highlights"):
+                    m["highlights"] = old_m["highlights"]
                 if m["home_id"] is None and old_m.get("home_id"):
                     for k in ("home_id", "home_ja", "home_en", "home_flag", "home_tla", "home_crest"):
                         m[k] = old_m.get(k)
