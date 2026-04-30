@@ -8,7 +8,7 @@
       "en": "Japan",
       "flag": "🇯🇵",
       "group": "F",
-      "fifa_rank": 17,
+      "fifa_rank": 18,
       "wc_appearances": 8,
       "best_result": "ベスト16（2002・2010・2018・2022）",
       "manager": "森保一",
@@ -35,14 +35,16 @@
       "japan_relation": "自国（言わずもがな）",
       "summary": "森保ジャパンとしてアジア最終予選を圧倒的成績で突破。3大会連続のW杯出場。Group F は上位国揃いのため、グループ突破は前回大会以上の難関。",
       "expectations": "目標はベスト8以上（過去未到達）。",
-      "detailed": true
+      "detailed": true,
+      "fifa_rank_as_of": "2025-11-19",
+      "_fifa_rank_auto": true
     },
     "NED": {
       "ja": "オランダ",
       "en": "Netherlands",
       "flag": "🇳🇱",
       "group": "F",
-      "fifa_rank": 6,
+      "fifa_rank": 7,
       "wc_appearances": 12,
       "best_result": "準優勝3回（1974・1978・2010）",
       "manager": "ロナルド・クーマン",
@@ -69,14 +71,16 @@
       "japan_relation": "Group Fの本命。日本は初戦（6/15 5:00 JST）で激突。過去対戦は親善試合のみ。",
       "summary": "「オランジュ」の異名を持つ強豪。優勝経験はないが3度の準優勝。直近の欧州予選も安定して突破。",
       "expectations": "Group F首位通過が濃厚。決勝T進出は規定路線。",
-      "detailed": true
+      "detailed": true,
+      "fifa_rank_as_of": "2025-11-19",
+      "_fifa_rank_auto": true
     },
     "SWE": {
       "ja": "スウェーデン",
       "en": "Sweden",
       "flag": "🇸🇪",
       "group": "F",
-      "fifa_rank": 32,
+      "fifa_rank": 47,
       "wc_appearances": 13,
       "best_result": "準優勝（1958・本国開催）",
       "manager": "ヤン・トルナビーク",
@@ -103,14 +107,16 @@
       "japan_relation": "Group F最終戦の相手（6/26 8:00 JST）。日本との過去対戦は実績少なく親善試合のみ。",
       "summary": "イブラヒモビッチ引退後の世代交代期。フィジカル戦術が伝統。今回は本国予選苦戦で出場権獲得まで紆余曲折があった。",
       "expectations": "Group F 2位争いの本命。日本にとって最大のライバル。",
-      "detailed": true
+      "detailed": true,
+      "fifa_rank_as_of": "2025-11-19",
+      "_fifa_rank_auto": true
     },
     "TUN": {
       "ja": "チュニジア",
       "en": "Tunisia",
       "flag": "🇹🇳",
       "group": "F",
-      "fifa_rank": 41,
+      "fifa_rank": 40,
       "wc_appearances": 6,
       "best_result": "グループステージ敗退（5回）／2022カタール大会では最終戦でフランス代表に勝利",
       "manager": "ジャレル・カドリ（暫定）",
@@ -137,7 +143,9 @@
       "japan_relation": "Group F第2戦の相手（6/21 13:00 JST）。日本にとって**勝ち点3を最優先で取りたい相手**。",
       "summary": "アフリカ枠（CAF）で安定した強国。組織的な堅守速攻が伝統で、攻撃力よりも守備で時間を作る戦い方。",
       "expectations": "Group F 3位を争う立場。日本が決勝T進出を狙うなら必勝戦。",
-      "detailed": true
+      "detailed": true,
+      "fifa_rank_as_of": "2025-11-19",
+      "_fifa_rank_auto": true
     },
     "MEX": {
       "ja": "メキシコ",
@@ -148,12 +156,14 @@
       "stub": true,
       "manager_en": "Javier Aguirre",
       "captain_en": "Edson Álvarez",
-      "fifa_max_rank": "4",
       "wc_appearances": 18,
       "best_result": "ベスト8",
       "auto_filled": true,
       "detailed": true,
-      "source_wiki": "Mexico national football team"
+      "source_wiki": "Mexico national football team",
+      "fifa_rank": 15,
+      "fifa_rank_as_of": "2025-11-19",
+      "_fifa_rank_auto": true
     },
     "RSA": {
       "ja": "南アフリカ",
@@ -163,12 +173,14 @@
       "stub": true,
       "manager_en": "Hugo Broos",
       "captain_en": "Ronwen Williams",
-      "fifa_max_rank": "16",
       "wc_appearances": 4,
       "best_result": "グループステージ",
       "auto_filled": true,
       "detailed": true,
-      "source_wiki": "South Africa national football team"
+      "source_wiki": "South Africa national football team",
+      "fifa_rank": 61,
+      "fifa_rank_as_of": "2025-11-19",
+      "_fifa_rank_auto": true
     },
     "KOR": {
       "ja": "韓国",
@@ -179,12 +191,14 @@
       "stub": true,
       "manager_en": "Hong Myung-bo",
       "captain_en": "Son Heung-min",
-      "fifa_max_rank": "17",
       "wc_appearances": 12,
       "best_result": "4位",
       "auto_filled": true,
       "detailed": true,
-      "source_wiki": "South Korea national football team"
+      "source_wiki": "South Korea national football team",
+      "fifa_rank": 22,
+      "fifa_rank_as_of": "2025-11-19",
+      "_fifa_rank_auto": true
     },
     "CZE": {
       "ja": "チェコ",
@@ -194,12 +208,14 @@
       "stub": true,
       "manager_en": "Miroslav Koubek",
       "captain_en": "Ladislav Krejčí",
-      "fifa_max_rank": "2",
       "wc_appearances": 10,
       "best_result": "準優勝",
       "auto_filled": true,
       "detailed": true,
-      "source_wiki": "Czech Republic national football team"
+      "source_wiki": "Czech Republic national football team",
+      "fifa_rank": 41,
+      "fifa_rank_as_of": "2025-11-19",
+      "_fifa_rank_auto": true
     },
     "BIH": {
       "ja": "ボスニア・ヘルツェゴビナ",
@@ -214,7 +230,10 @@
       "best_result": "グループステージ",
       "auto_filled": true,
       "detailed": true,
-      "source_wiki": "Bosnia and Herzegovina national football team"
+      "source_wiki": "Bosnia and Herzegovina national football team",
+      "fifa_rank": 75,
+      "fifa_rank_as_of": "2025-11-19",
+      "_fifa_rank_auto": true
     },
     "CAN": {
       "ja": "カナダ",
@@ -225,12 +244,14 @@
       "stub": true,
       "manager_en": "Jesse Marsch",
       "captain_en": "Alphonso Davies",
-      "fifa_max_rank": "26",
       "wc_appearances": 3,
       "best_result": "グループステージ",
       "auto_filled": true,
       "detailed": true,
-      "source_wiki": "Canada men's national soccer team"
+      "source_wiki": "Canada men's national soccer team",
+      "fifa_rank": 27,
+      "fifa_rank_as_of": "2025-11-19",
+      "_fifa_rank_auto": true
     },
     "QAT": {
       "ja": "カタール",
@@ -241,12 +262,14 @@
       "stub": true,
       "manager_en": "Julen Lopetegui",
       "captain_en": "Hassan Al-Haydos",
-      "fifa_max_rank": "34",
       "wc_appearances": 2,
       "best_result": "グループステージ",
       "auto_filled": true,
       "detailed": true,
-      "source_wiki": "Qatar national football team"
+      "source_wiki": "Qatar national football team",
+      "fifa_rank": 51,
+      "fifa_rank_as_of": "2025-11-19",
+      "_fifa_rank_auto": true
     },
     "SUI": {
       "ja": "スイス",
@@ -256,12 +279,14 @@
       "stub": true,
       "manager_en": "Murat Yakin",
       "captain_en": "Granit Xhaka",
-      "fifa_max_rank": "3",
       "wc_appearances": 13,
       "best_result": "ベスト8",
       "auto_filled": true,
       "detailed": true,
-      "source_wiki": "Switzerland national football team"
+      "source_wiki": "Switzerland national football team",
+      "fifa_rank": 17,
+      "fifa_rank_as_of": "2025-11-19",
+      "_fifa_rank_auto": true
     },
     "BRA": {
       "ja": "ブラジル",
@@ -272,12 +297,14 @@
       "stub": true,
       "manager_en": "Carlo Ancelotti",
       "captain_en": "Marquinhos",
-      "fifa_max_rank": "1",
       "wc_appearances": 23,
       "best_result": "優勝（5回）",
       "auto_filled": true,
       "detailed": true,
-      "source_wiki": "Brazil national football team"
+      "source_wiki": "Brazil national football team",
+      "fifa_rank": 5,
+      "fifa_rank_as_of": "2025-11-19",
+      "_fifa_rank_auto": true
     },
     "MAR": {
       "ja": "モロッコ",
@@ -288,13 +315,15 @@
       "stub": true,
       "manager_en": "Mohamed Ouahbi",
       "captain_en": "Achraf Hakimi",
-      "fifa_max_rank": "8",
       "wc_appearances": 6,
       "best_result": "ベスト4（2022）",
       "auto_filled": true,
       "detailed": true,
       "source_wiki": "Morocco national football team",
-      "_manual_filled": true
+      "_manual_filled": true,
+      "fifa_rank": 11,
+      "fifa_rank_as_of": "2025-11-19",
+      "_fifa_rank_auto": true
     },
     "HAI": {
       "ja": "ハイチ",
@@ -304,12 +333,14 @@
       "stub": true,
       "manager_en": "Sébastien Migné",
       "captain_en": "Johny Placide",
-      "fifa_max_rank": "38",
       "wc_appearances": 2,
       "best_result": "グループステージ",
       "auto_filled": true,
       "detailed": true,
-      "source_wiki": "Haiti national football team"
+      "source_wiki": "Haiti national football team",
+      "fifa_rank": 84,
+      "fifa_rank_as_of": "2025-11-19",
+      "_fifa_rank_auto": true
     },
     "SCO": {
       "ja": "スコットランド",
@@ -319,13 +350,15 @@
       "stub": true,
       "manager_en": "Steve Clarke",
       "captain_en": "Andy Robertson",
-      "fifa_max_rank": "13",
       "wc_appearances": 8,
       "best_result": "グループステージ",
       "auto_filled": true,
       "detailed": true,
       "source_wiki": "Scotland national football team",
-      "_manual_filled": true
+      "_manual_filled": true,
+      "fifa_rank": 36,
+      "fifa_rank_as_of": "2025-11-19",
+      "_fifa_rank_auto": true
     },
     "TUR": {
       "ja": "トルコ",
@@ -335,13 +368,15 @@
       "stub": true,
       "manager_en": "Vincenzo Montella",
       "captain_en": "Hakan Çalhanoğlu",
-      "fifa_max_rank": "5",
       "wc_appearances": 2,
       "best_result": "3位（2002）",
       "auto_filled": true,
       "detailed": true,
       "source_wiki": "Turkey national football team",
-      "_manual_filled": true
+      "_manual_filled": true,
+      "fifa_rank": 28,
+      "fifa_rank_as_of": "2025-11-19",
+      "_fifa_rank_auto": true
     },
     "USA": {
       "ja": "アメリカ",
@@ -352,13 +387,15 @@
       "stub": true,
       "manager_en": "Mauricio Pochettino",
       "captain_en": "Tim Ream",
-      "fifa_max_rank": "4",
       "wc_appearances": 11,
       "best_result": "3位（1930）",
       "auto_filled": true,
       "detailed": true,
       "source_wiki": "United States men's national soccer team",
-      "_manual_filled": true
+      "_manual_filled": true,
+      "fifa_rank": 14,
+      "fifa_rank_as_of": "2025-11-19",
+      "_fifa_rank_auto": true
     },
     "PAR": {
       "ja": "パラグアイ",
@@ -368,12 +405,14 @@
       "stub": true,
       "manager_en": "Gustavo Alfaro",
       "captain_en": "Gustavo Gómez",
-      "fifa_max_rank": "9",
       "wc_appearances": 9,
       "best_result": "ベスト8",
       "auto_filled": true,
       "detailed": true,
-      "source_wiki": "Paraguay national football team"
+      "source_wiki": "Paraguay national football team",
+      "fifa_rank": 39,
+      "fifa_rank_as_of": "2025-11-19",
+      "_fifa_rank_auto": true
     },
     "AUS": {
       "ja": "オーストラリア",
@@ -384,13 +423,15 @@
       "stub": true,
       "manager_en": "Tony Popovic",
       "captain_en": "Mathew Ryan",
-      "fifa_max_rank": "14",
       "wc_appearances": 6,
       "best_result": "ベスト16",
       "auto_filled": true,
       "detailed": true,
       "source_wiki": "Australia men's national soccer team",
-      "_manual_filled": true
+      "_manual_filled": true,
+      "fifa_rank": 26,
+      "fifa_rank_as_of": "2025-11-19",
+      "_fifa_rank_auto": true
     },
     "GER": {
       "ja": "ドイツ",
@@ -401,13 +442,15 @@
       "stub": true,
       "manager_en": "Julian Nagelsmann",
       "captain_en": "Joshua Kimmich",
-      "fifa_max_rank": "1",
       "wc_appearances": 21,
       "best_result": "優勝（4回）",
       "auto_filled": true,
       "detailed": true,
       "source_wiki": "Germany national football team",
-      "_manual_filled": true
+      "_manual_filled": true,
+      "fifa_rank": 9,
+      "fifa_rank_as_of": "2025-11-19",
+      "_fifa_rank_auto": true
     },
     "CUW": {
       "ja": "キュラソー",
@@ -417,7 +460,10 @@
       "stub": true,
       "wc_appearances": 1,
       "best_result": "初出場（2026）",
-      "_manual_filled": true
+      "_manual_filled": true,
+      "fifa_rank": 82,
+      "fifa_rank_as_of": "2025-11-19",
+      "_fifa_rank_auto": true
     },
     "CIV": {
       "ja": "コートジボワール",
@@ -427,12 +473,14 @@
       "stub": true,
       "manager_en": "Emerse Faé",
       "captain_en": "Franck Kessié",
-      "fifa_max_rank": "12",
       "wc_appearances": 4,
       "best_result": "グループステージ",
       "auto_filled": true,
       "detailed": true,
-      "source_wiki": "Ivory Coast national football team"
+      "source_wiki": "Ivory Coast national football team",
+      "fifa_rank": 42,
+      "fifa_rank_as_of": "2025-11-19",
+      "_fifa_rank_auto": true
     },
     "ECU": {
       "ja": "エクアドル",
@@ -442,12 +490,14 @@
       "stub": true,
       "manager_en": "Sebastián Beccacece",
       "captain_en": "Enner Valencia",
-      "fifa_max_rank": "10",
       "wc_appearances": 5,
       "best_result": "ベスト16",
       "auto_filled": true,
       "detailed": true,
-      "source_wiki": "Ecuador national football team"
+      "source_wiki": "Ecuador national football team",
+      "fifa_rank": 23,
+      "fifa_rank_as_of": "2025-11-19",
+      "_fifa_rank_auto": true
     },
     "BEL": {
       "ja": "ベルギー",
@@ -458,13 +508,15 @@
       "stub": true,
       "manager_en": null,
       "captain_en": null,
-      "fifa_max_rank": null,
       "wc_appearances": 14,
       "best_result": "3位（2018）",
       "auto_filled": true,
       "detailed": true,
       "source_wiki": "Belgium national football team",
-      "_manual_filled": true
+      "_manual_filled": true,
+      "fifa_rank": 8,
+      "fifa_rank_as_of": "2025-11-19",
+      "_fifa_rank_auto": true
     },
     "EGY": {
       "ja": "エジプト",
@@ -474,12 +526,14 @@
       "stub": true,
       "manager_en": "Hossam Hassan",
       "captain_en": "Mohamed Salah",
-      "fifa_max_rank": "9",
       "wc_appearances": 3,
       "best_result": "ベスト16",
       "auto_filled": true,
       "detailed": true,
-      "source_wiki": "Egypt national football team"
+      "source_wiki": "Egypt national football team",
+      "fifa_rank": 34,
+      "fifa_rank_as_of": "2025-11-19",
+      "_fifa_rank_auto": true
     },
     "IRN": {
       "ja": "イラン",
@@ -490,12 +544,14 @@
       "stub": true,
       "manager_en": "Amir Ghalenoei",
       "captain_en": "Alireza Jahanbakhsh",
-      "fifa_max_rank": "15",
       "wc_appearances": 6,
       "best_result": "グループステージ",
       "auto_filled": true,
       "detailed": true,
-      "source_wiki": "Iran national football team"
+      "source_wiki": "Iran national football team",
+      "fifa_rank": 20,
+      "fifa_rank_as_of": "2025-11-19",
+      "_fifa_rank_auto": true
     },
     "NZL": {
       "ja": "ニュージーランド",
@@ -505,13 +561,15 @@
       "stub": true,
       "manager_en": "Darren Bazeley",
       "captain_en": "Chris Wood",
-      "fifa_max_rank": "47",
       "wc_appearances": 2,
       "best_result": "グループステージ（無敗・2010）",
       "auto_filled": true,
       "detailed": true,
       "source_wiki": "New Zealand men's national football team",
-      "_manual_filled": true
+      "_manual_filled": true,
+      "fifa_rank": 86,
+      "fifa_rank_as_of": "2025-11-19",
+      "_fifa_rank_auto": true
     },
     "ESP": {
       "ja": "スペイン",
@@ -522,12 +580,14 @@
       "stub": true,
       "manager_en": "Luis de la Fuente",
       "captain_en": "Álvaro Morata",
-      "fifa_max_rank": "1",
       "wc_appearances": 17,
       "best_result": "優勝（1回）",
       "auto_filled": true,
       "detailed": true,
-      "source_wiki": "Spain national football team"
+      "source_wiki": "Spain national football team",
+      "fifa_rank": 1,
+      "fifa_rank_as_of": "2025-11-19",
+      "_fifa_rank_auto": true
     },
     "CPV": {
       "ja": "カーボベルデ",
@@ -537,13 +597,15 @@
       "stub": true,
       "manager_en": "Bubista",
       "captain_en": "Ryan Mendes",
-      "fifa_max_rank": "27",
       "wc_appearances": 1,
       "best_result": "初出場（2026）",
       "auto_filled": true,
       "detailed": true,
       "source_wiki": "Cape Verde national football team",
-      "_manual_filled": true
+      "_manual_filled": true,
+      "fifa_rank": 68,
+      "fifa_rank_as_of": "2025-11-19",
+      "_fifa_rank_auto": true
     },
     "KSA": {
       "ja": "サウジアラビア",
@@ -554,12 +616,14 @@
       "stub": true,
       "manager_en": "Georgios Donis",
       "captain_en": "Salem Al-Dawsari",
-      "fifa_max_rank": "21",
       "wc_appearances": 8,
       "best_result": "ベスト16",
       "auto_filled": true,
       "detailed": true,
-      "source_wiki": "Saudi Arabia national football team"
+      "source_wiki": "Saudi Arabia national football team",
+      "fifa_rank": 60,
+      "fifa_rank_as_of": "2025-11-19",
+      "_fifa_rank_auto": true
     },
     "URU": {
       "ja": "ウルグアイ",
@@ -570,12 +634,14 @@
       "stub": true,
       "manager_en": "Marcelo Bielsa",
       "captain_en": "José María Giménez",
-      "fifa_max_rank": "2",
       "wc_appearances": 15,
       "best_result": "優勝（2回）",
       "auto_filled": true,
       "detailed": true,
-      "source_wiki": "Uruguay national football team"
+      "source_wiki": "Uruguay national football team",
+      "fifa_rank": 16,
+      "fifa_rank_as_of": "2025-11-19",
+      "_fifa_rank_auto": true
     },
     "IRQ": {
       "ja": "イラク",
@@ -586,12 +652,14 @@
       "stub": true,
       "manager_en": "Graham Arnold",
       "captain_en": "Jalal Hassan",
-      "fifa_max_rank": "39",
       "wc_appearances": 2,
       "best_result": "グループステージ",
       "auto_filled": true,
       "detailed": true,
-      "source_wiki": "Iraq national football team"
+      "source_wiki": "Iraq national football team",
+      "fifa_rank": 67,
+      "fifa_rank_as_of": "2025-11-19",
+      "_fifa_rank_auto": true
     },
     "FRA": {
       "ja": "フランス",
@@ -602,12 +670,14 @@
       "stub": true,
       "manager_en": "Didier Deschamps",
       "captain_en": "Kylian Mbappé",
-      "fifa_max_rank": "1",
       "wc_appearances": 17,
       "best_result": "優勝（2回）",
       "auto_filled": true,
       "detailed": true,
-      "source_wiki": "France national football team"
+      "source_wiki": "France national football team",
+      "fifa_rank": 3,
+      "fifa_rank_as_of": "2025-11-19",
+      "_fifa_rank_auto": true
     },
     "SEN": {
       "ja": "セネガル",
@@ -618,12 +688,14 @@
       "stub": true,
       "manager_en": "Pape Thiaw",
       "captain_en": "Kalidou Koulibaly",
-      "fifa_max_rank": "12",
       "wc_appearances": 4,
       "best_result": "ベスト8",
       "auto_filled": true,
       "detailed": true,
-      "source_wiki": "Senegal national football team"
+      "source_wiki": "Senegal national football team",
+      "fifa_rank": 19,
+      "fifa_rank_as_of": "2025-11-19",
+      "_fifa_rank_auto": true
     },
     "NOR": {
       "ja": "ノルウェー",
@@ -634,12 +706,14 @@
       "stub": true,
       "manager_en": "Ståle Solbakken",
       "captain_en": "Martin Ødegaard",
-      "fifa_max_rank": "2",
       "wc_appearances": 4,
       "best_result": "ベスト16",
       "auto_filled": true,
       "detailed": true,
-      "source_wiki": "Norway national football team"
+      "source_wiki": "Norway national football team",
+      "fifa_rank": 29,
+      "fifa_rank_as_of": "2025-11-19",
+      "_fifa_rank_auto": true
     },
     "ARG": {
       "ja": "アルゼンチン",
@@ -650,13 +724,15 @@
       "stub": true,
       "manager_en": "Lionel Scaloni",
       "captain_en": "Lionel Messi",
-      "fifa_max_rank": "1",
       "wc_appearances": 19,
       "best_result": "優勝（3回）",
       "auto_filled": true,
       "detailed": true,
       "source_wiki": "Argentina national football team",
-      "_manual_filled": true
+      "_manual_filled": true,
+      "fifa_rank": 2,
+      "fifa_rank_as_of": "2025-11-19",
+      "_fifa_rank_auto": true
     },
     "ALG": {
       "ja": "アルジェリア",
@@ -666,12 +742,14 @@
       "stub": true,
       "manager_en": "Vladimir Petković",
       "captain_en": "Riyad Mahrez",
-      "fifa_max_rank": "15",
       "wc_appearances": 4,
       "best_result": "ベスト16",
       "auto_filled": true,
       "detailed": true,
-      "source_wiki": "Algeria national football team"
+      "source_wiki": "Algeria national football team",
+      "fifa_rank": 35,
+      "fifa_rank_as_of": "2025-11-19",
+      "_fifa_rank_auto": true
     },
     "AUT": {
       "ja": "オーストリア",
@@ -681,12 +759,14 @@
       "stub": true,
       "manager_en": "Ralf Rangnick",
       "captain_en": "David Alaba",
-      "fifa_max_rank": "10",
       "wc_appearances": 8,
       "best_result": "3位",
       "auto_filled": true,
       "detailed": true,
-      "source_wiki": "Austria national football team"
+      "source_wiki": "Austria national football team",
+      "fifa_rank": 24,
+      "fifa_rank_as_of": "2025-11-19",
+      "_fifa_rank_auto": true
     },
     "JOR": {
       "ja": "ヨルダン",
@@ -697,13 +777,15 @@
       "stub": true,
       "manager_en": "Jamal Sellami",
       "captain_en": "Ihsan Haddad",
-      "fifa_max_rank": "37",
       "wc_appearances": 1,
       "best_result": "初出場（2026）",
       "auto_filled": true,
       "detailed": true,
       "source_wiki": "Jordan national football team",
-      "_manual_filled": true
+      "_manual_filled": true,
+      "fifa_rank": 66,
+      "fifa_rank_as_of": "2025-11-19",
+      "_fifa_rank_auto": true
     },
     "COD": {
       "ja": "コンゴ民主共和国",
@@ -713,12 +795,14 @@
       "stub": true,
       "manager_en": "Sébastien Desabre",
       "captain_en": "Chancel Mbemba",
-      "fifa_max_rank": "28",
       "wc_appearances": 2,
       "best_result": "グループステージ",
       "auto_filled": true,
       "detailed": true,
-      "source_wiki": "DR Congo national football team"
+      "source_wiki": "DR Congo national football team",
+      "fifa_rank": 65,
+      "fifa_rank_as_of": "2025-11-19",
+      "_fifa_rank_auto": true
     },
     "POR": {
       "ja": "ポルトガル",
@@ -729,12 +813,14 @@
       "stub": true,
       "manager_en": "Roberto Martínez",
       "captain_en": "Cristiano Ronaldo",
-      "fifa_max_rank": "3",
       "wc_appearances": 9,
       "best_result": "3位",
       "auto_filled": true,
       "detailed": true,
-      "source_wiki": "Portugal national football team"
+      "source_wiki": "Portugal national football team",
+      "fifa_rank": 6,
+      "fifa_rank_as_of": "2025-11-19",
+      "_fifa_rank_auto": true
     },
     "UZB": {
       "ja": "ウズベキスタン",
@@ -745,13 +831,15 @@
       "stub": true,
       "manager_en": "Fabio Cannavaro",
       "captain_en": "Eldor Shomurodov",
-      "fifa_max_rank": "45",
       "wc_appearances": 1,
       "best_result": "初出場（2026）",
       "auto_filled": true,
       "detailed": true,
       "source_wiki": "Uzbekistan national football team",
-      "_manual_filled": true
+      "_manual_filled": true,
+      "fifa_rank": 50,
+      "fifa_rank_as_of": "2025-11-19",
+      "_fifa_rank_auto": true
     },
     "COL": {
       "ja": "コロンビア",
@@ -761,12 +849,14 @@
       "stub": true,
       "manager_en": "Néstor Lorenzo",
       "captain_en": "James Rodríguez",
-      "fifa_max_rank": "3",
       "wc_appearances": 7,
       "best_result": "ベスト8",
       "auto_filled": true,
       "detailed": true,
-      "source_wiki": "Colombia national football team"
+      "source_wiki": "Colombia national football team",
+      "fifa_rank": 13,
+      "fifa_rank_as_of": "2025-11-19",
+      "_fifa_rank_auto": true
     },
     "ENG": {
       "ja": "イングランド",
@@ -777,13 +867,15 @@
       "stub": true,
       "manager_en": "Thomas Tuchel",
       "captain_en": "Harry Kane",
-      "fifa_max_rank": "3",
       "wc_appearances": 16,
       "best_result": "優勝（1回・1966）",
       "auto_filled": true,
       "detailed": true,
       "source_wiki": "England national football team",
-      "_manual_filled": true
+      "_manual_filled": true,
+      "fifa_rank": 4,
+      "fifa_rank_as_of": "2025-11-19",
+      "_fifa_rank_auto": true
     },
     "CRO": {
       "ja": "クロアチア",
@@ -794,13 +886,15 @@
       "stub": true,
       "manager_en": "Zlatko Dalić",
       "captain_en": "Luka Modrić",
-      "fifa_max_rank": "3",
       "wc_appearances": 6,
       "best_result": "準優勝（2018）／3位（2022）",
       "auto_filled": true,
       "detailed": true,
       "source_wiki": "Croatia national football team",
-      "_manual_filled": true
+      "_manual_filled": true,
+      "fifa_rank": 10,
+      "fifa_rank_as_of": "2025-11-19",
+      "_fifa_rank_auto": true
     },
     "GHA": {
       "ja": "ガーナ",
@@ -810,12 +904,14 @@
       "stub": true,
       "manager_en": "Carlos Queiroz",
       "captain_en": "Jordan Ayew",
-      "fifa_max_rank": "14",
       "wc_appearances": 5,
       "best_result": "ベスト8",
       "auto_filled": true,
       "detailed": true,
-      "source_wiki": "Ghana national football team"
+      "source_wiki": "Ghana national football team",
+      "fifa_rank": 72,
+      "fifa_rank_as_of": "2025-11-19",
+      "_fifa_rank_auto": true
     },
     "PAN": {
       "ja": "パナマ",
@@ -825,17 +921,18 @@
       "stub": true,
       "manager_en": "Thomas Christiansen",
       "captain_en": "Aníbal Godoy",
-      "fifa_max_rank": "29",
       "wc_appearances": 1,
       "best_result": "グループステージ",
       "auto_filled": true,
       "detailed": true,
-      "source_wiki": "Panama national football team"
+      "source_wiki": "Panama national football team",
+      "fifa_rank": 30,
+      "fifa_rank_as_of": "2025-11-19",
+      "_fifa_rank_auto": true
     },
     "CUR": {
       "manager_en": "Fred Rutten",
       "captain_en": "Leandro Bacuna",
-      "fifa_max_rank": "68",
       "wc_appearances": 1,
       "best_result": "初出場（2026）",
       "ja": "キュラソー",
@@ -845,7 +942,10 @@
       "auto_filled": true,
       "detailed": true,
       "source_wiki": "Curaçao national football team",
-      "_manual_filled": true
+      "_manual_filled": true,
+      "fifa_rank": 82,
+      "fifa_rank_as_of": "2025-11-19",
+      "_fifa_rank_auto": true
     }
   },
   "updated": "2026-05-01T00:52:24.874709+09:00"
