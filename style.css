@@ -353,6 +353,10 @@ main {
   padding: 2px 8px;
   border-radius: 4px;
   font-weight: 500;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
 }
 
 .match { position: relative; }
@@ -422,7 +426,8 @@ main {
   align-self: center;
 }
 
-/* スマホ：ハイライトボタンを試合カードの最下段（タグ・配信先の下）に移動 */
+/* スマホ：3列レイアウトを2列に戻す（96px枠でチーム名と重なる問題を解消）
+   ハイライトはカードタップで開くモーダル内から見られるためカード上では非表示 */
 @media (max-width: 600px) {
   .match-top.has-highlight {
     grid-template-columns: auto 1fr;
@@ -431,14 +436,6 @@ main {
   .match-top.has-highlight > .match-highlight-placeholder {
     display: none;
   }
-  .match-highlight-mobile-row {
-    margin-top: 8px;
-    display: flex;
-    justify-content: flex-end;
-  }
-}
-@media (min-width: 601px) {
-  .match-highlight-mobile-row { display: none; }
 }
 .match-highlight:hover {
   background: #cc0000;

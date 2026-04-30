@@ -300,9 +300,19 @@
     const awayCorner = cornerBadge(awayJpGoals.length > 0, awayJpAssists.length > 0);
 
     const teamRow = (name, crest, scoreVal, win, jp) => {
-      const jpHtml = jp.length > 0
-        ? `<span class="team-jp">🇯🇵 ${jp.map(p => escape(p.name_ja)).join('・')}</span>`
-        : '';
+      // 日本人選手名：簡略化（3人以上は最初2人 + 残り人数を表示・(レンタル)等の補足は除去）
+      let jpHtml = '';
+      if (jp.length > 0) {
+        const cleaned = jp.map(p => String(p.name_ja || '').replace(/（[^）]*）/g, '').trim()).filter(Boolean);
+        let label;
+        if (cleaned.length <= 2) {
+          label = cleaned.join('・');
+        } else {
+          label = `${cleaned[0]}・${cleaned[1]} +${cleaned.length - 2}`;
+        }
+        const tip = cleaned.join('・');
+        jpHtml = `<span class="team-jp" title="${escape(tip)}">🇯🇵 ${escape(label)}</span>`;
+      }
       const crestHtml = crest ? `<img class="team-crest" src="${escape(crest)}" alt="" loading="lazy">` : '<span class="team-crest"></span>';
       const scoreHtml = scoreVal != null ? `<span class="team-score">${scoreVal}</span>` : '';
       return `<div class="team-row${win ? ' winner' : ''}">
@@ -347,8 +357,8 @@
     const hasDetails = finished;
     if (hasDetails) cls.push('clickable');
 
-    // ハイライト動画リンク（試合終了時のみ・1試合に1ボタン・YouTubeスタイル）
-    // ハイライト有無でスコア位置がズレないよう、空時もプレースホルダで枠を確保
+    // ハイライト動画リンク（試合終了時のみ・1試合1ボタン・PC表示用）
+    // ※モバイルではカード上に表示せず、モーダル内に集約
     let highlightCell = '<span class="match-highlight-placeholder" aria-hidden="true"></span>';
     if (finished && Array.isArray(m.highlights) && m.highlights.length > 0) {
       const first = m.highlights.find(h => h.url || h.video_id);
@@ -357,11 +367,6 @@
         highlightCell = `<a class="match-highlight" href="${escape(url)}" target="_blank" rel="noopener" aria-label="ハイライト動画（YouTube）">▶ ハイライト</a>`;
       }
     }
-
-    // モバイル時はカード末尾（タグ＋配信先の下）に同じ highlightCell を出す
-    const mobileHighlightRow = (highlightCell.includes('match-highlight-placeholder'))
-      ? ''
-      : `<div class="match-highlight-mobile-row">${highlightCell}</div>`;
 
     return `<div class="${cls.join(' ')}"${hasDetails ? ` data-match-id="${m.id}"` : ''}>
       ${homeCorner ? `<div class="jp-corner-wrap left">${homeCorner}</div>` : ''}
@@ -378,7 +383,6 @@
         <div class="tags-row primary">${primaryTags.join('')}</div>
         ${broadcasterTags.length ? `<div class="tags-row broadcasters">${broadcasterTags.join('')}</div>` : ''}
       </div>
-      ${mobileHighlightRow}
     </div>`;
   }
 
