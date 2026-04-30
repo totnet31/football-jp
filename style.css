@@ -289,11 +289,20 @@ main {
 
 .tags {
   display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 12px;
+  margin-top: 8px;
+}
+.tags-row {
+  display: flex;
   flex-wrap: wrap;
   gap: 6px;
   align-items: center;
-  font-size: 12px;
-  margin-top: 8px;
+}
+.tags-row.broadcasters {
+  padding-top: 6px;
+  border-top: 1px dotted var(--border);
 }
 
 .league-tag {

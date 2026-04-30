@@ -298,22 +298,23 @@
       </div>`;
     };
 
-    const tags = [];
-    tags.push(`<span class="league-tag cat-league-${m.competition_id}">${m.competition_flag || ''} ${escape(m.competition_ja)}</span>`);
+    // タグを2グループに分離（リーグ＋ステージ／放送局）して見やすく
+    const primaryTags = [];
+    primaryTags.push(`<span class="league-tag cat-league-${m.competition_id}">${m.competition_flag || ''} ${escape(m.competition_ja)}</span>`);
+    if (live) primaryTags.push(`<span class="status-tag status-live">LIVE</span>`);
+    if (m.stage && m.stage !== 'REGULAR_SEASON') {
+      primaryTags.push(`<span class="status-tag">${escape(stageLabel(m.stage))}</span>`);
+    }
 
+    const broadcasterTags = [];
     if (m.broadcasters && m.broadcasters.length > 0) {
       for (const b of m.broadcasters) {
         if (b.url) {
-          tags.push(`<a class="bc-tag" href="${escape(b.url)}" target="_blank" rel="noopener">📺 ${escape(b.name)}</a>`);
+          broadcasterTags.push(`<a class="bc-tag" href="${escape(b.url)}" target="_blank" rel="noopener">📺 ${escape(b.name)}</a>`);
         } else {
-          tags.push(`<span class="bc-tag">📺 ${escape(b.name)}</span>`);
+          broadcasterTags.push(`<span class="bc-tag">📺 ${escape(b.name)}</span>`);
         }
       }
-    }
-
-    if (live) tags.push(`<span class="status-tag status-live">LIVE</span>`);
-    if (m.stage && m.stage !== 'REGULAR_SEASON') {
-      tags.push(`<span class="status-tag">${escape(stageLabel(m.stage))}</span>`);
     }
 
     const cls = ['match'];
@@ -328,7 +329,10 @@
           ${teamRow(m.away_ja, m.away_crest, score ? score.away : null, awayWin, awayJp)}
         </div>
       </div>
-      <div class="tags">${tags.join('')}</div>
+      <div class="tags">
+        <div class="tags-row primary">${primaryTags.join('')}</div>
+        ${broadcasterTags.length ? `<div class="tags-row broadcasters">${broadcasterTags.join('')}</div>` : ''}
+      </div>
     </div>`;
   }
 
