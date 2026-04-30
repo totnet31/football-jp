@@ -33,8 +33,8 @@ TEAM_KEYWORDS = {
     "Liverpool": ["リヴァプール", "リバプール"],
     "Manchester City": ["マンチェスター・シティ", "マンチェスターC", "マンC"],
     "Man City": ["マンチェスター・シティ", "マンC"],
-    "Manchester United": ["マンチェスター・ユナイテッド", "マンU"],
-    "Man United": ["マンチェスター・ユナイテッド", "マンU"],
+    "Manchester United": ["マンチェスター・ユナイテッド", "マンチェスター・U", "マンU"],
+    "Man United": ["マンチェスター・ユナイテッド", "マンチェスター・U", "マンU"],
     "Arsenal": ["アーセナル"],
     "Chelsea": ["チェルシー"],
     "Tottenham": ["トッテナム"],
@@ -313,16 +313,24 @@ def main():
     matches_data = json.loads(matches_path.read_text(encoding="utf-8"))
     matches = matches_data.get("matches", [])
 
-    # 全チャンネル取得
+    # 全チャンネル取得（0件返却時はリトライ）
+    import time
     all_videos = []
     for ch in CHANNELS:
         print(f"[INFO] {ch['name']} 取得中: {ch['url']}")
-        html = fetch(ch["url"])
-        vids = extract_videos(html)
+        vids = []
+        for attempt in range(3):
+            html = fetch(ch["url"])
+            vids = extract_videos(html)
+            if vids:
+                break
+            print(f"  → 0本（リトライ {attempt+1}/3）")
+            time.sleep(2)
         print(f"  → {len(vids)}本")
         for v in vids:
             v["channel_name"] = ch["name"]
             all_videos.append(v)
+        time.sleep(0.5)
 
     print(f"[INFO] 合計動画: {len(all_videos)}本")
 
@@ -365,6 +373,42 @@ def main():
     matches_data["updated_yt_highlights_scrape"] = datetime.now(JST).isoformat()
     matches_path.write_text(json.dumps(matches_data, ensure_ascii=False, indent=2), encoding="utf-8")
     print(f"\n[DONE] ハイライト追加: {found}件 / 試合データ {len(finished)}件中")
+
+    # === 未検出の自己診断 ===
+    # 未取得試合について、各動画タイトルで「片方のチームだけ」マッチした候補を出す
+    # → 表記ゆれ（例：ウォルヴァーハンプトン vs ウルブス）が原因かを把握
+    print("\n=== 未検出試合の自己診断 ===")
+    no_highlight = [m for m in finished if not m.get("highlights")]
+    print(f"未検出: {len(no_highlight)}試合")
+    suspects = []
+    for m in no_highlight:
+        home_en = m.get("home_en", "")
+        away_en = m.get("away_en", "")
+        h_kws = team_kws(home_en)
+        a_kws = team_kws(away_en)
+        for v in all_videos:
+            title = v["title"]
+            home_hit = any(k in title for k in h_kws)
+            away_hit = any(k in title for k in a_kws)
+            # 「片方だけ」マッチした候補を疑い対象に
+            if home_hit ^ away_hit:
+                suspects.append({
+                    "match": f"{m.get('home_ja')} vs {m.get('away_ja')}",
+                    "home_en": home_en, "away_en": away_en,
+                    "video": v["title"][:80],
+                    "channel": v["channel_name"],
+                    "url": f"https://youtu.be/{v['video_id']}",
+                    "matched_side": "home" if home_hit else "away",
+                })
+    if suspects:
+        print(f"片方だけマッチした候補 {len(suspects)}件（表記ゆれの可能性）:")
+        for s in suspects[:30]:
+            print(f"  ⚠️ [{s['match']}] ({s['matched_side']}側のみマッチ)")
+            print(f"     英: {s['home_en']} vs {s['away_en']}")
+            print(f"     動画: [{s['channel']}] {s['video']}")
+            print(f"     URL: {s['url']}")
+    else:
+        print("片方マッチの候補はなし。動画自体が公式4チャンネルに存在しないと推定。")
 
 
 if __name__ == "__main__":
