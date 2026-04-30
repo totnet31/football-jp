@@ -909,7 +909,15 @@ footer a { color: var(--text-sub); }
   color: var(--text-sub);
 }
 .modal-highlights {
-  display: flex; flex-wrap: wrap; gap: 6px;
+  display: flex; flex-direction: column; gap: 6px;
+}
+.modal-highlights .match-highlight {
+  white-space: normal;
+  word-break: break-word;
+  text-align: left;
+  line-height: 1.4;
+  font-size: 12px;
+  padding: 10px 14px;
 }
 .modal-source {
   margin-top: 14px;
