@@ -4,70 +4,121 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>決勝トーナメント表 W杯2026｜FIFA W杯2026 日本時間ガイド</title>
-  <meta name="description" content="2026 FIFAワールドカップ決勝トーナメント表。32→16→8→4→決勝のFIFA確定スロット構造を可視化。日本(Group F)経路をハイライト。">
+  <meta name="description" content="2026 FIFAワールドカップ決勝トーナメント（32→16→8→4→2→決勝）のブラケット表。日本（Group F）の進出経路を明示。">
   <link rel="stylesheet" href="style.css">
   <style>
-    .br-stage { margin-bottom: 28px; }
-    .br-stage h3 {
-      margin: 0 0 10px;
-      padding: 8px 12px;
-      background: linear-gradient(90deg, var(--wc-primary), #1a2754);
-      color: white;
-      border-radius: 4px;
-      font-size: 14px;
-      font-weight: 600;
+    /* 横長ブラケット（クラシック） */
+    .bracket-wrap {
+      overflow-x: auto;
+      margin: 16px 0;
+      -webkit-overflow-scrolling: touch;
+    }
+    .bracket {
+      position: relative;
+      min-width: 1380px;
+      height: 1340px;
+      padding: 12px 0;
+    }
+    .br-svg {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      pointer-events: none;
+      z-index: 1;
+    }
+    .br-svg path {
+      fill: none;
+      stroke: var(--c-border-strong, #cccccc);
+      stroke-width: 1.5;
+    }
+    .br-col {
+      position: absolute;
+      top: 0;
+      width: 200px;
+    }
+    .br-col-label {
+      text-align: center;
+      font-size: 11px;
+      font-weight: 700;
       letter-spacing: 0.04em;
-    }
-    .br-match {
-      background: var(--wc-card);
-      border: 1px solid var(--wc-border);
-      border-radius: 4px;
+      color: var(--c-text-sub);
+      padding: 6px 0;
+      border-bottom: 2px solid var(--c-accent);
       margin-bottom: 8px;
-      padding: 12px 14px;
-      font-size: 13px;
     }
-    .br-match.has-japan-path {
-      border-color: var(--wc-japan);
+    .br-card {
+      position: absolute;
+      width: 200px;
+      height: 70px;
+      background: #ffffff;
+      border: 1px solid var(--c-border);
+      border-radius: 4px;
+      padding: 6px 8px;
+      font-size: 12px;
+      box-sizing: border-box;
+      z-index: 2;
+    }
+    .br-card.has-japan {
+      border-color: var(--c-japan);
       border-width: 2px;
       background: #fff8f9;
     }
-    .br-match-num {
-      font-size: 10px;
-      color: var(--wc-text-sub);
-      letter-spacing: 0.06em;
+    .br-card.is-final {
+      background: linear-gradient(135deg, #fff9e0 0%, #fef0d0 100%);
+      border: 2px solid #d4af37;
+    }
+    .br-card.is-third {
+      background: #f7f7f7;
+    }
+    .br-mnum {
+      font-size: 9px;
+      color: var(--c-text-sub);
       font-feature-settings: "tnum";
+      letter-spacing: 0.04em;
     }
-    .br-match-time {
-      font-size: 11px;
-      color: var(--wc-text-sub);
-      margin: 2px 0 6px;
-    }
-    .br-row {
+    .br-team {
       display: grid;
       grid-template-columns: auto 1fr auto;
-      gap: 10px;
+      gap: 6px;
       align-items: center;
-      padding: 4px 0;
+      padding: 1px 0;
+      font-size: 11.5px;
     }
-    .br-row.winner { font-weight: 700; }
-    .br-flag { font-size: 18px; line-height: 1; }
-    .br-name { font-size: 13px; }
-    .br-name.tbd {
-      color: var(--wc-text-sub);
-      font-size: 12px;
-      font-weight: 500;
-    }
-    .br-score {
-      min-width: 24px;
-      text-align: right;
+    .br-team.winner { font-weight: 700; }
+    .br-team.tbd { color: var(--c-text-sub); font-style: italic; }
+    .br-team .br-flag { font-size: 13px; }
+    .br-team .br-score {
       font-weight: 700;
       font-feature-settings: "tnum";
+      min-width: 14px;
+      text-align: right;
     }
-    .br-divider {
-      height: 1px;
-      background: var(--wc-border);
-      margin: 4px 0;
+    .br-time {
+      position: absolute;
+      bottom: -16px; left: 0; right: 0;
+      text-align: center;
+      font-size: 9px;
+      color: var(--c-text-sub);
     }
+
+    /* スマホは縦スタック切り替え */
+    @media (max-width: 800px) {
+      .bracket-wrap { overflow-x: auto; }
+      .bracket-mobile-hint {
+        text-align: center;
+        font-size: 11px;
+        color: var(--c-text-sub);
+        padding: 6px 0;
+        background: #fff8ed;
+        border: 1px solid #f0d8a0;
+        border-radius: 4px;
+        margin-bottom: 8px;
+      }
+    }
+    @media (min-width: 801px) {
+      .bracket-mobile-hint { display: none; }
+    }
+
     .japan-path-banner {
       background: linear-gradient(90deg, #fff8f9, #fff0f3);
       border: 2px solid var(--wc-japan);
@@ -78,14 +129,6 @@
       line-height: 1.7;
     }
     .japan-path-banner strong { color: var(--wc-japan); }
-    @media (min-width: 800px) {
-      .br-stages-grid {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 18px;
-      }
-      .br-stage.full-row { grid-column: span 3; }
-    }
   </style>
 </head>
 <body class="wc-page">
@@ -93,7 +136,7 @@
 <header class="wc-header">
   <a href="../" class="wc-back-link">⚽ football-jp トップへ</a>
   <h1>🏆 決勝トーナメント表 — W杯2026</h1>
-  <p class="wc-tagline">FIFA確定の32試合スロット構造（48か国大会の新フォーマット）</p>
+  <p class="wc-tagline">32か国（24グループ上位 + 一部3位）→ 16 → 8 → 4 → 決勝</p>
 </header>
 
 <div class="wc-container">
@@ -109,11 +152,11 @@
     <br>・3位通過 → 成績次第で M74 / M77 / M81 / M85 のいずれかへ
   </div>
 
-  <p class="wc-empty" style="text-align:left; padding: 12px 14px; background:#fff8ed; border:1px solid #f0d8a0; border-radius:4px; font-size:12px;">
-    💡 各試合のスロット位置（"Group A 2位"等）はFIFA事前確定。実際の対戦国はグループステージ終了後（6/24頃）に確定し、自動更新されます。
-  </p>
+  <p class="bracket-mobile-hint">📱 横スワイプでブラケット全体を確認できます</p>
 
-  <div id="bracketContent"></div>
+  <div class="bracket-wrap">
+    <div class="bracket" id="bracket"></div>
+  </div>
 
   <footer class="wc-footer">
     <p>データ提供: <a href="https://www.football-data.org/" target="_blank" rel="noopener">Football data provided by the Football-Data.org API</a></p>
@@ -130,95 +173,197 @@
   const matches = (await matchesRes.json()).matches || [];
   const template = await templateRes.json();
 
-  const STAGES = [
-    { key: 'last32',         stage: 'LAST_32',        label: '🥉 ベスト32（Round of 32 / M73-88）',  fullRow: true },
-    { key: 'last16',         stage: 'LAST_16',        label: '⚔️ ベスト16（Round of 16 / M89-96）',  fullRow: true },
-    { key: 'quarter_finals', stage: 'QUARTER_FINALS', label: '🔥 準々決勝 QF（M97-100）',             fullRow: false },
-    { key: 'semi_finals',    stage: 'SEMI_FINALS',    label: '⚡ 準決勝 SF（M101-102）',             fullRow: false },
-    { key: 'third_place',    stage: 'THIRD_PLACE',    label: '🥉 3位決定戦（M103）',                 fullRow: false },
-    { key: 'final',          stage: 'FINAL',          label: '🏆 決勝（M104）',                       fullRow: true },
-  ];
+  // ブラケット構造（FIFA W杯2026 標準）
+  // R32 上から下の順番（R16ペア＋QFペア＋SFペアが整列するように）
+  const R32_ORDER = [74, 77, 73, 75, 83, 84, 81, 82, 76, 78, 79, 80, 86, 88, 85, 87];
+  const R16_ORDER = [89, 90, 93, 94, 91, 92, 95, 96];
+  const QF_ORDER = [97, 98, 99, 100];
+  const SF_ORDER = [101, 102];
+  const FINAL_M = 104;
+  const THIRD_M = 103;
 
-  // 各stageの実試合データを kickoff_jst順にソート
-  const matchesByStage = {};
-  for (const s of STAGES) {
-    matchesByStage[s.stage] = matches.filter(m => m.stage === s.stage)
+  // レイアウト定数
+  const CARD_W = 200;
+  const CARD_H = 70;
+  const ROW_H = 80;       // R32 行間
+  const COL_GAP = 60;     // 列間
+  const COL_X = [];       // 各列の左端 X
+  COL_X[0] = 0;
+  COL_X[1] = COL_X[0] + CARD_W + COL_GAP;
+  COL_X[2] = COL_X[1] + CARD_W + COL_GAP;
+  COL_X[3] = COL_X[2] + CARD_W + COL_GAP;
+  COL_X[4] = COL_X[3] + CARD_W + COL_GAP;
+  COL_X[5] = COL_X[4] + CARD_W + COL_GAP;  // 3rd place column
+
+  // 各試合の Top-Y を計算（ペアの中央に次ラウンドのカード中心が来るように）
+  const yMap = {};
+  R32_ORDER.forEach((m, i) => yMap[m] = i * ROW_H);                             // 0,80,160,...
+  R16_ORDER.forEach((m, i) => yMap[m] = i * 160 + 40);                          // pair中央
+  QF_ORDER.forEach((m, i) => yMap[m] = i * 320 + 120);                          // pair中央
+  SF_ORDER.forEach((m, i) => yMap[m] = i * 640 + 280);                          // pair中央
+  yMap[FINAL_M] = 600;                                                           // SF[0]とSF[1]の中央
+  const TOTAL_H = R32_ORDER.length * ROW_H;
+  yMap[THIRD_M] = TOTAL_H - CARD_H;                                              // 最下部
+
+  // 各 round の column
+  const colMap = {};
+  R32_ORDER.forEach(m => colMap[m] = 0);
+  R16_ORDER.forEach(m => colMap[m] = 1);
+  QF_ORDER.forEach(m => colMap[m] = 2);
+  SF_ORDER.forEach(m => colMap[m] = 3);
+  colMap[FINAL_M] = 4;
+  colMap[THIRD_M] = 5;
+
+  // テンプレートからスロット情報を吸い上げ
+  const allTemplates = []
+    .concat(template.last32 || [])
+    .concat(template.last16 || [])
+    .concat(template.quarter_finals || [])
+    .concat(template.semi_finals || [])
+    .concat(template.third_place || [])
+    .concat(template.final || []);
+  const slotByM = {};
+  for (const s of allTemplates) slotByM[s.match] = s;
+
+  // 実試合データ → match番号でマップ（matchdayまたはstageの順序ベースで紐付ける）
+  // football-data側はFIFA Match Numberを直接持っていない可能性が高いので、stage+kickoff_jstで近似
+  const realByM = {};  // M番号 → real match
+  const STAGE_TO_LIST = {
+    'LAST_32': R32_ORDER, 'LAST_16': R16_ORDER, 'QUARTER_FINALS': QF_ORDER,
+    'SEMI_FINALS': SF_ORDER, 'THIRD_PLACE': [THIRD_M], 'FINAL': [FINAL_M],
+  };
+  for (const stageKey of Object.keys(STAGE_TO_LIST)) {
+    const list = STAGE_TO_LIST[stageKey];
+    const stageMatches = matches.filter(m => m.stage === stageKey)
       .sort((a, b) => a.kickoff_jst.localeCompare(b.kickoff_jst));
+    list.forEach((mNum, i) => {
+      if (stageMatches[i]) realByM[mNum] = stageMatches[i];
+    });
   }
 
-  // 各stageのテンプレートをループしてカード生成
-  // テンプレートの順番＝Match Number順（73,74,...）。実試合データも同じ順序でマップ。
-  // ※注：実試合のkickoff順とFIFA Match Number順は完全一致しない可能性があるため、
-  //   実データは「対戦カード確定後」のときのみ表示し、それまでは template の slot を表示。
-  const html = STAGES.map(s => {
-    const tmpl = template[s.key] || [];
-    const cards = tmpl.map((slot, idx) => {
-      // 実試合データから対戦カード確定済みのものを探す
-      const realMatches = matchesByStage[s.stage] || [];
-      const real = realMatches[idx];
-      const teamsConfirmed = real && real.home_ja && real.home_ja !== '未定';
-      return renderBracketCard(slot, real, teamsConfirmed);
-    }).join('');
-    return `<section class="br-stage ${s.fullRow ? 'full-row' : ''}"><h3>${escapeHtml(s.label)}</h3>${cards}</section>`;
-  }).join('');
+  // SVGコネクタ
+  const lines = [];
+  function makeLine(srcM, dstM) {
+    const sx = COL_X[colMap[srcM]] + CARD_W;
+    const sy = yMap[srcM] + CARD_H / 2;
+    const dx = COL_X[colMap[dstM]];
+    const dy = yMap[dstM] + CARD_H / 2;
+    const midX = (sx + dx) / 2;
+    return `M ${sx} ${sy} L ${midX} ${sy} L ${midX} ${dy} L ${dx} ${dy}`;
+  }
+  // R32 → R16
+  // 各R16にはペアのR32が結ぶ。テンプレート label "Winner MX vs Winner MY" から読み取る
+  function parseSourceMs(label) {
+    const ms = [];
+    const re = /M(\d+)/g;
+    let m;
+    while ((m = re.exec(label)) !== null) ms.push(parseInt(m[1], 10));
+    return ms;
+  }
+  const allEdges = [];
+  for (const tgtRound of [R16_ORDER, QF_ORDER, SF_ORDER, [FINAL_M]]) {
+    for (const tgtM of tgtRound) {
+      const slot = slotByM[tgtM];
+      if (!slot) continue;
+      const srcs = parseSourceMs(slot.label || '');
+      for (const sm of srcs) {
+        if (yMap[sm] !== undefined) allEdges.push([sm, tgtM]);
+      }
+    }
+  }
+  // 3rd place は SFの敗者、視覚的には特別扱いだが線は薄く
+  for (const sf of SF_ORDER) allEdges.push([sf, THIRD_M]);
 
-  document.getElementById('bracketContent').innerHTML =
-    `<div class="br-stages-grid">${html}</div>`;
+  // SVG文字列
+  const svgPaths = allEdges.map(([s, d]) => `<path d="${makeLine(s, d)}"></path>`).join('');
+  const svgW = COL_X[5] + CARD_W;
+  const svgH = TOTAL_H + 60;
+
+  // 各カードレンダリング
+  function renderCard(mNum) {
+    const slot = slotByM[mNum];
+    const real = realByM[mNum];
+    const x = COL_X[colMap[mNum]];
+    const y = yMap[mNum];
+
+    let homeName, awayName, homeFlag, awayFlag, homeScore = '—', awayScore = '—';
+    let homeWin = false, awayWin = false, isJp = false;
+
+    if (real && real.home_ja && real.home_ja !== '未定') {
+      homeName = real.home_ja;
+      awayName = real.away_ja;
+      homeFlag = real.home_flag || '⚽';
+      awayFlag = real.away_flag || '⚽';
+      if (real.score) {
+        homeScore = real.score.home;
+        awayScore = real.score.away;
+        homeWin = real.score.home > real.score.away;
+        awayWin = real.score.away > real.score.home;
+      }
+      isJp = real.home_tla === 'JPN' || real.away_tla === 'JPN';
+    } else if (slot) {
+      const parts = (slot.label || '').split(/\s+vs\s+/);
+      homeName = parts[0] || '未定';
+      awayName = parts[1] || '未定';
+      homeFlag = '?'; awayFlag = '?';
+      isJp = (slot.label || '').includes('1F') || (slot.label || '').includes('2F') || (slot.label || '').includes('3F') || (slot.label || '').includes('Group F');
+    } else {
+      homeName = '—'; awayName = '—';
+      homeFlag = '?'; awayFlag = '?';
+    }
+
+    const cls = ['br-card'];
+    if (isJp) cls.push('has-japan');
+    if (mNum === FINAL_M) cls.push('is-final');
+    if (mNum === THIRD_M) cls.push('is-third');
+
+    const ko = real ? new Date(real.kickoff_jst) : null;
+    const koStr = ko
+      ? `${ko.getMonth()+1}/${ko.getDate()} ${String(ko.getHours()).padStart(2,'0')}:${String(ko.getMinutes()).padStart(2,'0')}`
+      : '日程未定';
+
+    return `<div class="${cls.join(' ')}" style="left:${x}px;top:${y}px">
+      <div class="br-mnum">M${mNum}${isJp ? ' 🇯🇵' : ''}</div>
+      <div class="br-team ${homeWin ? 'winner' : ''} ${(!real || !real.home_ja || real.home_ja === '未定') ? 'tbd' : ''}">
+        <span class="br-flag">${homeFlag}</span>
+        <span>${escapeHtml(homeName)}</span>
+        <span class="br-score">${homeScore}</span>
+      </div>
+      <div class="br-team ${awayWin ? 'winner' : ''} ${(!real || !real.away_ja || real.away_ja === '未定') ? 'tbd' : ''}">
+        <span class="br-flag">${awayFlag}</span>
+        <span>${escapeHtml(awayName)}</span>
+        <span class="br-score">${awayScore}</span>
+      </div>
+      <div class="br-time">${escapeHtml(koStr)}</div>
+    </div>`;
+  }
+
+  // 列ラベル
+  const colLabels = [
+    { x: COL_X[0], label: 'Round of 32' },
+    { x: COL_X[1], label: 'Round of 16' },
+    { x: COL_X[2], label: '準々決勝' },
+    { x: COL_X[3], label: '準決勝' },
+    { x: COL_X[4], label: '🏆 決勝' },
+    { x: COL_X[5], label: '3位決定戦' },
+  ];
+  const colLabelHtml = colLabels.map(c =>
+    `<div class="br-col" style="left:${c.x}px"><div class="br-col-label">${c.label}</div></div>`
+  ).join('');
+
+  // 全カード
+  const allMs = [...R32_ORDER, ...R16_ORDER, ...QF_ORDER, ...SF_ORDER, FINAL_M, THIRD_M];
+  const cardsHtml = allMs.map(renderCard).join('');
+
+  document.getElementById('bracket').innerHTML = `
+    <svg class="br-svg" viewBox="0 0 ${svgW} ${svgH}" preserveAspectRatio="none">${svgPaths}</svg>
+    ${colLabelHtml}
+    ${cardsHtml}
+  `;
 })();
 
-function renderBracketCard(slot, real, confirmed) {
-  const matchNum = `M${slot.match}`;
-  let homeName, awayName, homeFlag, awayFlag, homeScore, awayScore, time, isJp;
-  let homeWin = false, awayWin = false;
-
-  if (confirmed && real) {
-    homeName = real.home_ja;
-    awayName = real.away_ja;
-    homeFlag = real.home_flag || '⚽';
-    awayFlag = real.away_flag || '⚽';
-    homeScore = real.score ? real.score.home : '—';
-    awayScore = real.score ? real.score.away : '—';
-    homeWin = real.score && real.score.home > real.score.away;
-    awayWin = real.score && real.score.away > real.score.home;
-    isJp = real.home_tla === 'JPN' || real.away_tla === 'JPN';
-  } else {
-    // テンプレからスロット表示
-    const parts = slot.label.split(/\s+vs\s+/);
-    homeName = parts[0] || slot.home || '未定';
-    awayName = parts[1] || slot.away || '未定';
-    homeFlag = '⚽';
-    awayFlag = '⚽';
-    homeScore = '—';
-    awayScore = '—';
-    isJp = slot.label.includes('Group F') || slot.label.includes('1F') || slot.label.includes('2F');
-  }
-
-  const ko = real ? new Date(real.kickoff_jst) : null;
-  const koStr = ko
-    ? ko.toLocaleDateString('ja-JP', { month: 'numeric', day: 'numeric', weekday: 'short' }) + ' ' + ko.toLocaleTimeString('ja-JP', { hour: '2-digit', minute: '2-digit' }) + ' JST'
-    : '日程未定';
-
-  const tbdClass = confirmed ? '' : 'tbd';
-
-  return `<div class="br-match ${isJp ? 'has-japan-path' : ''}">
-    <div class="br-match-num">${matchNum}</div>
-    <div class="br-match-time">${escapeHtml(koStr)}</div>
-    <div class="br-row ${homeWin ? 'winner' : ''}">
-      <span class="br-flag">${homeFlag}</span>
-      <span class="br-name ${tbdClass}">${escapeHtml(homeName)}</span>
-      <span class="br-score">${homeScore}</span>
-    </div>
-    <div class="br-divider"></div>
-    <div class="br-row ${awayWin ? 'winner' : ''}">
-      <span class="br-flag">${awayFlag}</span>
-      <span class="br-name ${tbdClass}">${escapeHtml(awayName)}</span>
-      <span class="br-score">${awayScore}</span>
-    </div>
-  </div>`;
-}
-
 function escapeHtml(s) {
-  return String(s || '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+  return String(s == null ? '' : s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 }
 </script>
 
