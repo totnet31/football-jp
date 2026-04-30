@@ -1,0 +1,8 @@
+# Cloudflare Pages リダイレクトルール
+# https://developers.cloudflare.com/pages/configuration/redirects/
+
+# www → apex (SEO: canonical URL を1本化)
+https://www.football-jp.com/* https://football-jp.com/:splat 301
+
+# pages.dev → 独自ドメイン（旧URLからの301）
+https://football-jp.pages.dev/* https://football-jp.com/:splat 301
