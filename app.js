@@ -764,7 +764,7 @@
               </div>
             </div>
           ` : `
-            <div class="modal-goal-empty">得点者データを取得中です（Wikipediaの更新待ち）。1〜2日後に再度ご確認ください。</div>
+            <div class="modal-goal-empty">得点者データはまだ取得できていません。</div>
           `}
         </div>
         ${highlightHtml ? `
