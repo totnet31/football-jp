@@ -148,7 +148,7 @@ header h1 {
 .view-tab {
   flex: 1;
   min-width: 0;
-  padding: 12px 14px;
+  padding: 10px 14px;
   border: 1.5px solid var(--border);
   background: #ffffff;
   color: var(--text-sub);
@@ -159,6 +159,16 @@ header h1 {
   text-align: center;
   transition: all 0.15s ease;
   font-family: inherit;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+.view-tab .vt-icon {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  display: inline-block;
 }
 
 .view-tab:hover {

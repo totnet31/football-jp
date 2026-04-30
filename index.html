@@ -28,10 +28,42 @@
   </a>
 
   <nav class="view-tabs">
-    <button class="view-tab active" data-view="schedule">📅 予定を見る</button>
-    <button class="view-tab" data-view="results">✅ 結果を見る</button>
-    <button class="view-tab" data-view="calendar">📆 カレンダー</button>
-    <button class="view-tab" data-view="ranking">📊 順位・ランキング</button>
+    <button class="view-tab active" data-view="schedule">
+      <svg class="vt-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <circle cx="12" cy="12" r="9"/>
+        <path d="M12 7v5l3.5 2"/>
+      </svg>
+      <span>予定を見る</span>
+    </button>
+    <button class="view-tab" data-view="results">
+      <svg class="vt-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <circle cx="12" cy="12" r="9"/>
+        <path d="M8 12.5l3 3 5-6"/>
+      </svg>
+      <span>結果を見る</span>
+    </button>
+    <button class="view-tab" data-view="calendar">
+      <svg class="vt-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <rect x="3.5" y="5" width="17" height="15.5" rx="1.5"/>
+        <path d="M3.5 10h17"/>
+        <path d="M8 3v4M16 3v4"/>
+        <circle cx="8" cy="14" r="0.9" fill="currentColor" stroke="none"/>
+        <circle cx="12" cy="14" r="0.9" fill="currentColor" stroke="none"/>
+        <circle cx="16" cy="14" r="0.9" fill="currentColor" stroke="none"/>
+        <circle cx="8" cy="17.5" r="0.9" fill="currentColor" stroke="none"/>
+        <circle cx="12" cy="17.5" r="0.9" fill="currentColor" stroke="none"/>
+      </svg>
+      <span>カレンダー</span>
+    </button>
+    <button class="view-tab" data-view="ranking">
+      <svg class="vt-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M4 20h16"/>
+        <path d="M7 20v-5"/>
+        <path d="M12 20v-9"/>
+        <path d="M17 20v-13"/>
+      </svg>
+      <span>順位・ランキング</span>
+    </button>
   </nav>
 
   <section class="filters" id="matchFilters">
