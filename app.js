@@ -309,10 +309,11 @@
     const broadcasterTags = [];
     if (m.broadcasters && m.broadcasters.length > 0) {
       for (const b of m.broadcasters) {
+        const brandCls = bcBrandClass(b.name);
         if (b.url) {
-          broadcasterTags.push(`<a class="bc-tag" href="${escape(b.url)}" target="_blank" rel="noopener">📺 ${escape(b.name)}</a>`);
+          broadcasterTags.push(`<a class="bc-tag ${brandCls}" href="${escape(b.url)}" target="_blank" rel="noopener"><span class="bc-play">▶</span>${escape(b.name)}</a>`);
         } else {
-          broadcasterTags.push(`<span class="bc-tag">📺 ${escape(b.name)}</span>`);
+          broadcasterTags.push(`<span class="bc-tag ${brandCls}"><span class="bc-play">▶</span>${escape(b.name)}</span>`);
         }
       }
     }
@@ -345,6 +346,17 @@
         ${broadcasterTags.length ? `<div class="tags-row broadcasters">${broadcasterTags.join('')}</div>` : ''}
       </div>
     </div>`;
+  }
+
+  function bcBrandClass(name) {
+    const n = String(name || '').toLowerCase();
+    if (n.includes('wowow')) return 'bc-wowow';
+    if (n.includes('dazn')) return 'bc-dazn';
+    if (n.includes('lemino')) return 'bc-lemino';
+    if (n.includes('abema')) return 'bc-abema';
+    if (n.includes('u-next') || n.includes('unext')) return 'bc-unext';
+    if (n.includes('bs10')) return 'bc-bs10';
+    return 'bc-default';
   }
 
   function stageLabel(s) {

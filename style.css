@@ -395,8 +395,10 @@ main {
   align-items: center;
 }
 .tags-row.broadcasters {
-  padding-top: 6px;
-  border-top: 1px dotted var(--border);
+  padding-top: 8px;
+  margin-top: 4px;
+  border-top: 1px solid var(--border);
+  gap: 6px;
 }
 
 .league-tag {
@@ -422,21 +424,45 @@ main {
 .league-tag.cat-league-94 { background: var(--ppl); }
 
 .bc-tag {
-  background: #f0f7f1;
-  color: #156d3a;
-  border: 1px solid #c8e0cf;
-  padding: 2px 8px;
-  border-radius: 999px;
-  font-size: 11px;
-  text-decoration: none;
   display: inline-flex;
   align-items: center;
-  gap: 3px;
+  gap: 5px;
+  padding: 6px 11px;
+  border-radius: 4px;
+  font-size: 12.5px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  border: 1.5px solid var(--border-strong, #cccccc);
+  background: #ffffff;
+  color: var(--text-sub);
+  white-space: nowrap;
+  transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
 }
+.bc-tag .bc-play {
+  font-size: 9px;
+  line-height: 1;
+}
+a.bc-tag:hover { text-decoration: none; }
 
-a.bc-tag:hover {
-  background: #d8eedc;
-}
+/* per-broadcaster brand colors */
+.bc-tag.bc-wowow { color: #003a78; border-color: #003a78; }
+a.bc-tag.bc-wowow:hover { background: #003a78; color: #ffffff; }
+
+.bc-tag.bc-dazn { color: #000000; border-color: #000000; background: #fee100; }
+a.bc-tag.bc-dazn:hover { background: #000000; color: #fee100; }
+
+.bc-tag.bc-lemino { color: #c0003f; border-color: #c0003f; }
+a.bc-tag.bc-lemino:hover { background: #c0003f; color: #ffffff; }
+
+.bc-tag.bc-abema { color: #00aa55; border-color: #00aa55; }
+a.bc-tag.bc-abema:hover { background: #00aa55; color: #ffffff; }
+
+.bc-tag.bc-unext { color: #000000; border-color: #000000; }
+a.bc-tag.bc-unext:hover { background: #000000; color: #ffffff; }
+
+.bc-tag.bc-bs10 { color: #0066b3; border-color: #0066b3; }
+a.bc-tag.bc-bs10:hover { background: #0066b3; color: #ffffff; }
 
 .status-tag {
   background: #eee;
