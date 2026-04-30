@@ -285,32 +285,18 @@
     const homeJp = (m.japanese_players || []).filter(p => p.side === 'home');
     const awayJp = (m.japanese_players || []).filter(p => p.side === 'away');
 
-    // 日本人選手の得点バッジ（match_events.json から）
+    // 日本人選手のイベント有無（カードでは「あった」ことだけ示す）
     const events = matchEvents[String(m.id)] || [];
-    const homeGoals = events.filter(e => e.type === 'goal' && e.side === 'home');
-    const awayGoals = events.filter(e => e.type === 'goal' && e.side === 'away');
+    const homeJpGoals = events.filter(e => e.type === 'goal' && e.side === 'home' && e.is_japanese);
+    const awayJpGoals = events.filter(e => e.type === 'goal' && e.side === 'away' && e.is_japanese);
 
-    const renderJpGoals = (goals) => {
-      if (!goals || !goals.length) return '';
-      // 同一選手の複数ゴールはまとめて表示
-      const byPlayer = new Map();
-      for (const g of goals) {
-        if (!byPlayer.has(g.player_ja)) byPlayer.set(g.player_ja, []);
-        byPlayer.get(g.player_ja).push(g.minute);
-      }
-      const items = [];
-      for (const [name, minutes] of byPlayer) {
-        const minStr = minutes.sort((a,b)=>a-b).map(x => x + "'").join(', ');
-        items.push(`<span class="jp-goal-badge">⚽ ${escape(name)} ${minStr}</span>`);
-      }
-      return items.join('');
-    };
-
-    const teamRow = (name, crest, scoreVal, win, jp, jpGoals) => {
+    const teamRow = (name, crest, scoreVal, win, jp, jpHasGoal) => {
       const jpHtml = jp.length > 0
         ? `<span class="team-jp">🇯🇵 ${jp.map(p => escape(p.name_ja)).join('・')}</span>`
         : '';
-      const goalHtml = renderJpGoals(jpGoals);
+      const goalHtml = jpHasGoal
+        ? `<span class="jp-goal-badge" title="日本人選手ゴールあり（タップで詳細）">⚽ ゴール</span>`
+        : '';
       const crestHtml = crest ? `<img class="team-crest" src="${escape(crest)}" alt="" loading="lazy">` : '<span class="team-crest"></span>';
       const scoreHtml = scoreVal != null ? `<span class="team-score">${scoreVal}</span>` : '';
       return `<div class="team-row${win ? ' winner' : ''}">
@@ -351,8 +337,8 @@
     const cls = ['match'];
     if (isToday) cls.push('today');
     if (finished) cls.push('finished');
-    // 終了試合かつイベントデータあり → 詳細モーダルを開けるようにdata属性付与
-    const hasDetails = finished && events.length > 0;
+    // 終了試合は詳細モーダル可（イベント無しでも空状態で表示）
+    const hasDetails = finished;
     if (hasDetails) cls.push('clickable');
 
     // ハイライト動画リンク（試合終了時のみ・1試合に1ボタン・YouTubeスタイル）
@@ -369,8 +355,8 @@
       <div class="match-top${highlightCell ? ' has-highlight' : ''}">
         <div class="kickoff">${timeLabel}</div>
         <div class="teams">
-          ${teamRow(m.home_ja, m.home_crest, score ? score.home : null, homeWin, homeJp, homeGoals)}
-          ${teamRow(m.away_ja, m.away_crest, score ? score.away : null, awayWin, awayJp, awayGoals)}
+          ${teamRow(m.home_ja, m.home_crest, score ? score.home : null, homeWin, homeJp, homeJpGoals.length > 0)}
+          ${teamRow(m.away_ja, m.away_crest, score ? score.away : null, awayWin, awayJp, awayJpGoals.length > 0)}
         </div>
         ${highlightCell}
       </div>
@@ -756,9 +742,9 @@
           </div>
         </div>
         <div class="modal-meta">${escape(fmtKickoff(m.kickoff_jst))}</div>
-        ${(homeGoals.length || awayGoals.length) ? `
-          <div class="modal-section">
-            <h3>得点者</h3>
+        <div class="modal-section">
+          <h3>得点者</h3>
+          ${(homeGoals.length || awayGoals.length) ? `
             <div class="modal-goals">
               <div class="modal-goals-side">
                 <div class="modal-goals-title">${escape(m.home_ja)}</div>
@@ -769,8 +755,10 @@
                 <ul class="modal-goal-list">${awayGoals.map(goalLine).join('') || '<li class="modal-goal-empty">—</li>'}</ul>
               </div>
             </div>
-          </div>
-        ` : ''}
+          ` : `
+            <div class="modal-goal-empty">得点者データを取得中です（Wikipediaの更新待ち）。1〜2日後に再度ご確認ください。</div>
+          `}
+        </div>
         ${highlightHtml ? `
           <div class="modal-section">
             <h3>ハイライト動画</h3>
