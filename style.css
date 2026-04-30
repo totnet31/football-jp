@@ -340,8 +340,8 @@ main {
   background: #fff0f0;
   color: var(--accent);
   border: 1px solid #f4c0c0;
-  padding: 1px 6px;
-  border-radius: 999px;
+  padding: 2px 8px;
+  border-radius: 4px;
   font-weight: 500;
 }
 
@@ -478,8 +478,8 @@ a.bc-tag.bc-bs10:hover { background: #0066b3; color: #ffffff; }
 .status-tag {
   background: #eee;
   color: var(--text-sub);
-  padding: 2px 8px;
-  border-radius: 999px;
+  padding: 3px 10px;
+  border-radius: 4px;
   font-size: 11px;
 }
 
