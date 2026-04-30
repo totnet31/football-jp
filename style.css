@@ -426,7 +426,7 @@ main {
   align-self: center;
 }
 
-/* スマホ：ハイライト枠を60pxに圧縮、ボタンは▶アイコンのみ */
+/* スマホ：ハイライトはYouTubeアイコン（44x44）に置換 */
 @media (max-width: 600px) {
   .match-top.has-highlight {
     grid-template-columns: auto 1fr 44px;
@@ -434,13 +434,22 @@ main {
   }
   .match-highlight-placeholder { width: 44px; }
   .match-highlight {
-    padding: 10px 0;
+    padding: 0;
     width: 44px;
     height: 44px;
-    font-size: 16px;
-    box-sizing: border-box;
+    background: transparent !important;
+    box-shadow: none !important;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
   }
+  .match-highlight:hover { background: transparent !important; }
   .match-highlight .label-text { display: none; }
+  .yt-icon {
+    width: 36px;
+    height: 26px;
+    display: block;
+  }
 }
 @media (min-width: 601px) {
   .match-highlight .icon-only { display: none; }

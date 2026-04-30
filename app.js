@@ -364,7 +364,9 @@
       const first = m.highlights.find(h => h.url || h.video_id);
       if (first) {
         const url = first.url || `https://youtu.be/${first.video_id}`;
-        highlightCell = `<a class="match-highlight" href="${escape(url)}" target="_blank" rel="noopener" aria-label="ハイライト動画（YouTube）" title="ハイライト動画"><span class="icon-only">▶</span><span class="label-text">▶ ハイライト</span></a>`;
+        // YouTube公式アイコン風 SVG（赤角丸 + 白▶）
+        const ytIcon = `<svg class="yt-icon" viewBox="0 0 28 20" aria-hidden="true"><rect width="28" height="20" rx="5" fill="#ff0000"/><path d="M11 6 L11 14 L18 10 Z" fill="#ffffff"/></svg>`;
+        highlightCell = `<a class="match-highlight" href="${escape(url)}" target="_blank" rel="noopener" aria-label="ハイライト動画（YouTube）" title="ハイライト動画"><span class="icon-only">${ytIcon}</span><span class="label-text">▶ ハイライト</span></a>`;
       }
     }
 
