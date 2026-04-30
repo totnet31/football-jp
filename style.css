@@ -426,16 +426,24 @@ main {
   align-self: center;
 }
 
-/* スマホ：3列レイアウトを2列に戻す（96px枠でチーム名と重なる問題を解消）
-   ハイライトはカードタップで開くモーダル内から見られるためカード上では非表示 */
+/* スマホ：ハイライト枠を60pxに圧縮、ボタンは▶アイコンのみ */
 @media (max-width: 600px) {
   .match-top.has-highlight {
-    grid-template-columns: auto 1fr;
+    grid-template-columns: auto 1fr 44px;
+    gap: 8px;
   }
-  .match-top.has-highlight > .match-highlight,
-  .match-top.has-highlight > .match-highlight-placeholder {
-    display: none;
+  .match-highlight-placeholder { width: 44px; }
+  .match-highlight {
+    padding: 10px 0;
+    width: 44px;
+    height: 44px;
+    font-size: 16px;
+    box-sizing: border-box;
   }
+  .match-highlight .label-text { display: none; }
+}
+@media (min-width: 601px) {
+  .match-highlight .icon-only { display: none; }
 }
 .match-highlight:hover {
   background: #cc0000;

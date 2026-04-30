@@ -364,7 +364,7 @@
       const first = m.highlights.find(h => h.url || h.video_id);
       if (first) {
         const url = first.url || `https://youtu.be/${first.video_id}`;
-        highlightCell = `<a class="match-highlight" href="${escape(url)}" target="_blank" rel="noopener" aria-label="ハイライト動画（YouTube）">▶ ハイライト</a>`;
+        highlightCell = `<a class="match-highlight" href="${escape(url)}" target="_blank" rel="noopener" aria-label="ハイライト動画（YouTube）" title="ハイライト動画"><span class="icon-only">▶</span><span class="label-text">▶ ハイライト</span></a>`;
       }
     }
 
