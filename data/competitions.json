@@ -18,6 +18,7 @@
     { "id": 88,  "fd_code": "DED", "name_ja": "エールディビジ",                "name_en": "Eredivisie",                  "category": "league", "country": "Netherlands", "flag": "🇳🇱", "covered": true  },
     { "id": 90,  "fd_code": null,  "name_ja": "KNVBベーカー",                  "name_en": "KNVB Beker",                  "category": "cup",    "country": "Netherlands", "flag": "🇳🇱", "covered": false },
     { "id": 144, "fd_code": null,  "name_ja": "ジュピラー・プロ・リーグ",      "name_en": "Jupiler Pro League",          "category": "league", "country": "Belgium",     "flag": "🇧🇪", "covered": false },
+    { "id": 94,  "fd_code": "PPL", "name_ja": "プリメイラ・リーガ",            "name_en": "Primeira Liga",               "category": "league", "country": "Portugal",    "flag": "🇵🇹", "covered": true  },
     { "id": 2,   "fd_code": "CL",  "name_ja": "UEFAチャンピオンズリーグ",      "name_en": "UEFA Champions League",       "category": "europe", "country": "Europe",      "flag": "🇪🇺", "covered": true  },
     { "id": 3,   "fd_code": null,  "name_ja": "UEFAヨーロッパリーグ",          "name_en": "UEFA Europa League",          "category": "europe", "country": "Europe",      "flag": "🇪🇺", "covered": false },
     { "id": 848, "fd_code": null,  "name_ja": "UEFAカンファレンスリーグ",      "name_en": "UEFA Europa Conference League","category": "europe", "country": "Europe",      "flag": "🇪🇺", "covered": false }

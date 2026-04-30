@@ -18,6 +18,7 @@
   --fl1: #1c2c5b;
   --ded: #ee5c1d;
   --cl: #00306e;
+  --ppl: #00733e;
 
   --cl-promo: #d4f5d4;     /* 昇格・CL圏 */
   --cl-uel: #fff3c2;       /* EL圏 */
@@ -419,6 +420,7 @@ main {
 .league-tag.cat-league-61 { background: var(--fl1); }
 .league-tag.cat-league-88 { background: var(--ded); }
 .league-tag.cat-league-2 { background: var(--cl); }
+.league-tag.cat-league-94 { background: var(--ppl); }
 
 .bc-tag {
   background: #f0f7f1;
