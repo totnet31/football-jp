@@ -248,32 +248,43 @@
   `;
 
   if (p.detailed) {
-    // 詳細プロフィール（4か国）
+    const manager = p.manager || p.manager_en || '—';
+    const captain = p.captain || p.captain_en || null;
+    const wcStr = p.wc_appearances ? p.wc_appearances + '回' : '—';
+    const fifaStr = p.fifa_rank ? p.fifa_rank + '位' : (p.fifa_max_rank ? '最高' + p.fifa_max_rank + '位' : '—');
+
     html += `
       <div class="info-grid">
-        <div class="info-card"><div class="label">FIFAランク</div><div class="value">${p.fifa_rank ? p.fifa_rank + '位' : '—'}</div></div>
-        <div class="info-card"><div class="label">W杯出場回数</div><div class="value">${p.wc_appearances ? p.wc_appearances + '回' : '—'}</div></div>
-        <div class="info-card"><div class="label">監督</div><div class="value" style="font-size:13px;">${escapeHtml(p.manager || '—')}</div></div>
+        <div class="info-card"><div class="label">FIFAランク</div><div class="value">${fifaStr}</div></div>
+        <div class="info-card"><div class="label">W杯出場回数</div><div class="value">${wcStr}</div></div>
+        <div class="info-card"><div class="label">監督</div><div class="value" style="font-size:13px;">${escapeHtml(manager)}</div></div>
+        ${captain ? `<div class="info-card"><div class="label">キャプテン</div><div class="value" style="font-size:13px;">${escapeHtml(captain)}</div></div>` : ''}
       </div>
+    `;
 
-      <section class="country-section">
+    if (p.summary) {
+      html += `<section class="country-section">
         <h3>📋 サマリー</h3>
-        <p>${escapeHtml(p.summary || '—')}</p>
+        <p>${escapeHtml(p.summary)}</p>
         ${p.expectations ? `<p><strong>期待値：</strong>${escapeHtml(p.expectations)}</p>` : ''}
-      </section>
+      </section>`;
+    }
 
-      <section class="country-section">
-        <h3>🏆 過去W杯成績</h3>
-        <p>${escapeHtml(p.best_result || '—')}</p>
-      </section>
+    html += `<section class="country-section">
+      <h3>🏆 過去W杯成績</h3>
+      <p>${escapeHtml(p.best_result || '—')}</p>
+    </section>`;
 
-      <section class="country-section">
+    if (p.japan_relation) {
+      html += `<section class="country-section">
         <h3>🇯🇵 日本との関係性</h3>
-        <p>${escapeHtml(p.japan_relation || '—')}</p>
-      </section>
+        <p>${escapeHtml(p.japan_relation)}</p>
+      </section>`;
+    }
 
-      <section class="country-section">
-        <h3>⭐ 注目選手3名</h3>
+    if ((p.key_players || []).length > 0) {
+      html += `<section class="country-section">
+        <h3>⭐ 注目選手</h3>
         ${(p.key_players || []).map(pl => `
           <div class="player-card">
             <div class="name">${escapeHtml(pl.name)}</div>
@@ -281,8 +292,8 @@
             <div class="note">${escapeHtml(pl.note || '')}</div>
           </div>
         `).join('')}
-      </section>
-    `;
+      </section>`;
+    }
   } else {
     // スタブ
     html += `
