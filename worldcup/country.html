@@ -319,10 +319,10 @@
         <td class="col-pos"><span class="pos-tag ${pl.pos}">${pl.pos || '—'}</span></td>
         <td class="col-name"><strong>${escapeHtml(pl.name_ja)}</strong><br><span style="font-size:10px;color:var(--wc-text-sub);">${escapeHtml(pl.name_en)}</span></td>
         <td class="col-club"><span class="club-name">${escapeHtml(c.name)}</span>${c.country ? `<span class="club-country">${escapeHtml(c.country)}</span>` : ''}</td>
-        <td class="num col-dob">${pl.dob ? pl.dob.slice(2) : '—'}<br><span style="font-size:10px;color:var(--wc-text-sub);">${ageStr ? ageStr+'歳' : ''}</span></td>
+        <td class="num col-dob">${pl.dob ? pl.dob.replace(/-/g, '/') : '—'}<br><span style="font-size:10px;color:var(--wc-text-sub);">${ageStr ? ageStr+'歳' : ''}</span></td>
         <td class="num col-h hide-on-mobile">${pl.height_cm ? pl.height_cm + 'cm' : '—'}</td>
         <td class="num col-w hide-on-mobile">${pl.weight_kg ? pl.weight_kg + 'kg' : '—'}</td>
-        <td class="num col-hw show-on-mobile" style="display:none;">${pl.height_cm || '—'}/${pl.weight_kg || '—'}</td>
+        <td class="num col-hw show-on-mobile" style="display:none;">${pl.height_cm ? pl.height_cm + 'cm' : '—'}/${pl.weight_kg ? pl.weight_kg + 'kg' : '—'}</td>
       </tr>`;
     }).join('');
     html += `
