@@ -21,12 +21,26 @@ JST = timezone(timedelta(hours=9))
 
 UA = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 Chrome/130.0.0.0 Safari/537.36"
 
-# RSSソース
+# RSSソース（ニュース性高い順）
 SOURCES = [
     {"name": "サッカーキング", "url": "https://www.soccer-king.jp/feed"},
+    {"name": "Football Channel", "url": "https://www.footballchannel.jp/feed/"},
+    {"name": "Footballista", "url": "https://www.footballista.jp/feed"},
+    {"name": "THE WORLD", "url": "https://www.theworldmagazine.jp/feed"},
     {"name": "ゲキサカ", "url": "https://web.gekisaka.jp/feed"},
     {"name": "Football Zone", "url": "https://www.football-zone.net/feed"},
     {"name": "Number Web (サッカー)", "url": "https://number.bunshun.jp/list/feed?genre=soccer"},
+]
+
+# 低品質タイトルパターン（試合記録/写真ギャラリーのみは除外）
+LOW_QUALITY_PATTERNS = [
+    r"^.+vs.+\s*試合記録\s*$",
+    r"^.+vs.+\s*$",  # 単なる "AvsB" だけ
+    r"試合記録$",
+    r"^【写真ギャラリー】",
+    r"^【写真特集】",
+    r"\(\d+枚\)$",  # "(N枚)" で終わる写真ギャラリー
+    r"^写真[一覧]?[:：]",
 ]
 
 
@@ -76,22 +90,35 @@ def parse_rss(xml, source_name):
     return out
 
 
+# 追加：playersに無いが、海外でプレーする日本人選手（ニュース捕捉用）
+EXTRA_OVERSEAS_PLAYERS = [
+    "旗手怜央", "中村敬斗", "鈴木優磨", "前田大然", "古橋亨梧",
+    "西川潤", "鈴木武蔵", "伊東純也", "森下龍矢", "湊谷凌",
+    "南野拓実", "冨安健洋", "板倉滉", "守田英正", "鎌田大地",
+    "上田綺世", "町田浩樹", "佐野海舟", "佐野航大", "藤田譲瑠チマ",
+    "遠藤渓太", "原口元気", "鎌田大地", "三好康児", "守田英正",
+]
+
+
 def build_player_keywords(players_data):
     """各選手の検索キーワード（名前・苗字）"""
     out = []
+    seen = set()
     for p in players_data.get("players", []):
         name_ja = p.get("name_ja", "").strip()
-        if not name_ja:
+        if not name_ja or name_ja in seen:
             continue
-        # 「三笘 薫」「三笘薫」「久保 建英」「久保建英」両方マッチさせるため、苗字単体も入れる
-        # 苗字: 全角スペース or 半角スペース or 漢字2文字目までで分割
+        seen.add(name_ja)
         last_name = name_ja.split()[0] if " " in name_ja else (name_ja.split("　")[0] if "　" in name_ja else name_ja[:2] if len(name_ja) >= 2 else name_ja)
         full = name_ja.replace(" ", "").replace("　", "")
-        out.append({
-            "name_ja": name_ja,
-            "full_no_space": full,
-            "last_name": last_name,
-        })
+        out.append({"name_ja": name_ja, "full_no_space": full, "last_name": last_name})
+    # 追加分も足す
+    for name_ja in EXTRA_OVERSEAS_PLAYERS:
+        if name_ja in seen:
+            continue
+        seen.add(name_ja)
+        last_name = name_ja[:2] if len(name_ja) >= 2 else name_ja
+        out.append({"name_ja": name_ja, "full_no_space": name_ja, "last_name": last_name})
     return out
 
 
@@ -120,11 +147,22 @@ OVERSEAS_CONTEXT = [
 ]
 
 
+def is_low_quality(title):
+    """単なる試合記録・写真ギャラリーは除外"""
+    for pat in LOW_QUALITY_PATTERNS:
+        if re.search(pat, title):
+            return True
+    return False
+
+
 def article_matches(title, desc, players):
     """フルネーム or 苗字+海外文脈 にマッチするものを採用。J-League記事は除外"""
     text = f"{title} {desc}"
     # J-League記事は除外
     if any(k in text for k in JLEAGUE_EXCLUDE):
+        return []
+    # 低品質タイトル（試合記録のみ等）は除外
+    if is_low_quality(title):
         return []
     matched_players = []
     for p in players:
