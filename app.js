@@ -358,6 +358,11 @@
       }
     }
 
+    // モバイル時はカード末尾（タグ＋配信先の下）に同じ highlightCell を出す
+    const mobileHighlightRow = (highlightCell.includes('match-highlight-placeholder'))
+      ? ''
+      : `<div class="match-highlight-mobile-row">${highlightCell}</div>`;
+
     return `<div class="${cls.join(' ')}"${hasDetails ? ` data-match-id="${m.id}"` : ''}>
       ${homeCorner ? `<div class="jp-corner-wrap left">${homeCorner}</div>` : ''}
       ${awayCorner ? `<div class="jp-corner-wrap right">${awayCorner}</div>` : ''}
@@ -373,6 +378,7 @@
         <div class="tags-row primary">${primaryTags.join('')}</div>
         ${broadcasterTags.length ? `<div class="tags-row broadcasters">${broadcasterTags.join('')}</div>` : ''}
       </div>
+      ${mobileHighlightRow}
     </div>`;
   }
 

@@ -422,19 +422,23 @@ main {
   align-self: center;
 }
 
-/* スマホ：ハイライトボタン/プレースホルダを別行に移動してチーム名と重ならないように */
+/* スマホ：ハイライトボタンを試合カードの最下段（タグ・配信先の下）に移動 */
 @media (max-width: 600px) {
   .match-top.has-highlight {
     grid-template-columns: auto 1fr;
-    grid-template-rows: auto auto;
   }
   .match-top.has-highlight > .match-highlight,
   .match-top.has-highlight > .match-highlight-placeholder {
-    grid-column: 1 / span 2;
-    justify-self: flex-end;
-    margin-top: 4px;
+    display: none;
   }
-  .match-highlight-placeholder { display: none; }
+  .match-highlight-mobile-row {
+    margin-top: 8px;
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+@media (min-width: 601px) {
+  .match-highlight-mobile-row { display: none; }
 }
 .match-highlight:hover {
   background: #cc0000;
