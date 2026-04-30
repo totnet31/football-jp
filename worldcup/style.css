@@ -117,6 +117,7 @@ a:hover { text-decoration: underline; }
   border-bottom: 1px solid var(--c-border);
 }
 .wc-nav a {
+  flex: 1;
   padding: 10px 14px;
   font-size: 13px;
   font-weight: 500;
@@ -124,6 +125,8 @@ a:hover { text-decoration: underline; }
   text-decoration: none;
   border-bottom: 2px solid transparent;
   margin-bottom: -1px;
+  text-align: center;
+  white-space: nowrap;
 }
 .wc-nav a:hover {
   color: var(--c-text);
