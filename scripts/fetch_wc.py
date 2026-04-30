@@ -138,13 +138,18 @@ def main():
     transformed = [transform_match(m, countries) for m in raw_matches]
     transformed.sort(key=lambda m: m["kickoff_jst"])
 
-    # 既存matches.jsonがあれば、null返却された試合を前回データから補完（football-jpと同じパターン）
+    # ===== 過去データ保持＋TBD補完マージ =====
     matches_path = DATA / "matches.json"
+    new_by_id = {m["id"]: m for m in transformed}
+    accumulated = []
+    preserved_old = 0
+    preserved_tbd = 0
     if matches_path.exists():
         try:
             old = json.loads(matches_path.read_text(encoding="utf-8"))
             old_by_id = {m["id"]: m for m in old.get("matches", [])}
-            preserved = 0
+
+            # 1) TBD補完
             for m in transformed:
                 old_m = old_by_id.get(m["id"])
                 if not old_m:
@@ -152,24 +157,37 @@ def main():
                 if m["home_id"] is None and old_m.get("home_id"):
                     for k in ("home_id", "home_ja", "home_en", "home_flag", "home_tla", "home_crest"):
                         m[k] = old_m.get(k)
-                    preserved += 1
+                    preserved_tbd += 1
                 if m["away_id"] is None and old_m.get("away_id"):
                     for k in ("away_id", "away_ja", "away_en", "away_flag", "away_tla", "away_crest"):
                         m[k] = old_m.get(k)
-                    preserved += 1
-            if preserved:
-                print(f"[INFO] APIがnull返却した {preserved}件 を前回データから補完しました。")
+                    preserved_tbd += 1
+
+            # 2) 過去データ保持：新フェッチに含まれない古い試合は継承
+            for old_id, old_m in old_by_id.items():
+                if old_id not in new_by_id:
+                    accumulated.append(old_m)
+                    preserved_old += 1
         except Exception as e:
             print(f"[WARN] 既存data補完エラー: {e}")
+
+    accumulated.extend(transformed)
+    accumulated.sort(key=lambda m: m["kickoff_jst"])
+
+    if preserved_tbd:
+        print(f"[INFO] APIがnull返却した {preserved_tbd}件 を前回データから補完しました。")
+    if preserved_old:
+        print(f"[INFO] フェッチ外の過去試合 {preserved_old}件 を保持しました（累積モード）。")
 
     matches_out = {
         "updated": datetime.now(JST).isoformat(),
         "competition": "FIFA World Cup 2026",
-        "match_count": len(transformed),
-        "matches": transformed,
+        "match_count": len(accumulated),
+        "_note": "累積保持モード：APIから消えた試合データもそのまま保持される。",
+        "matches": accumulated,
     }
     matches_path.write_text(json.dumps(matches_out, ensure_ascii=False, indent=2), encoding="utf-8")
-    print(f"[OK] {len(transformed)}試合 → {matches_path}")
+    print(f"[OK] {len(accumulated)}試合 → {matches_path}")
 
     # ===== 2. standings =====
     time.sleep(RATE_SLEEP)

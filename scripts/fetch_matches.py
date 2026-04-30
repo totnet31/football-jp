@@ -170,29 +170,33 @@ def main():
 
     all_matches.sort(key=lambda m: m["kickoff_jst"])
 
-    # 既存matches.jsonがあれば、TBD（home_id=None）の試合は過去の確定済みデータを保持する。
-    # football-data.org の無料プランでは、CL等のノックアウトラウンドの対戦カードが
-    # APIから後日になって null で返ってくるケースがある（2026-04-29で実測）。
+    # ===== 過去データ保持＋TBD補完マージ =====
+    # 既存matches.jsonにある古い試合（フェッチ窓 -7日 より古い）はそのまま残し、
+    # 新フェッチ範囲内の試合は新データで上書きする「累積保持」モードに変更。
+    # かつTBD（home_id=None）が新データで返ってきた場合は前回データから補完する。
     out_path = DATA / "matches.json"
+    new_by_id = {m["id"]: m for m in all_matches}
+    accumulated_matches = []
+    preserved_old = 0
+    preserved_tbd = 0
     if out_path.exists():
         try:
             old_data = json.loads(out_path.read_text(encoding="utf-8"))
             old_by_id = {m["id"]: m for m in old_data.get("matches", [])}
-            preserved = 0
+
+            # 1) TBD補完：新フェッチでhome_id=Noneだった試合を旧データで補完
             for m in all_matches:
                 old = old_by_id.get(m["id"])
                 if not old:
                     continue
-                # home/away それぞれ独立に判定（片方だけTBDのケースもありうる）
                 if m["home_id"] is None and old.get("home_id"):
                     for k in ("home_id", "home_ja", "home_en", "home_crest"):
                         m[k] = old.get(k)
-                    # JP playersも再ハイドレート（home側）
                     home_jp_existing = [p for p in m["japanese_players"] if p["side"] == "home"]
                     if not home_jp_existing:
                         for p in player_idx.get(m["home_id"], []):
                             m["japanese_players"].append({"name_ja": p["name_ja"], "position": p["position"], "side": "home"})
-                    preserved += 1
+                    preserved_tbd += 1
                 if m["away_id"] is None and old.get("away_id"):
                     for k in ("away_id", "away_ja", "away_en", "away_crest"):
                         m[k] = old.get(k)
@@ -200,18 +204,32 @@ def main():
                     if not away_jp_existing:
                         for p in player_idx.get(m["away_id"], []):
                             m["japanese_players"].append({"name_ja": p["name_ja"], "position": p["position"], "side": "away"})
-                    preserved += 1
-            if preserved:
-                print(f"[INFO] APIがnull返却した {preserved}件 のチーム情報を、前回データから補完しました。")
+                    preserved_tbd += 1
+
+            # 2) 過去データ保持：新フェッチに含まれない古い試合をそのまま継承
+            for old_id, old_m in old_by_id.items():
+                if old_id not in new_by_id:
+                    accumulated_matches.append(old_m)
+                    preserved_old += 1
         except Exception as e:
             print(f"[WARN] 既存データの参照に失敗: {e}")
+
+    # 新+旧をマージしてソート
+    accumulated_matches.extend(all_matches)
+    accumulated_matches.sort(key=lambda m: m["kickoff_jst"])
+
+    if preserved_tbd:
+        print(f"[INFO] APIがnull返却した {preserved_tbd}件 のチーム情報を、前回データから補完しました。")
+    if preserved_old:
+        print(f"[INFO] フェッチ窓外の過去データ {preserved_old}件 を保持しました（累積モード）。")
 
     output = {
         "updated": datetime.now(JST).isoformat(),
         "date_from": date_from,
         "date_to": date_to,
-        "match_count": len(all_matches),
-        "matches": all_matches,
+        "match_count": len(accumulated_matches),
+        "_note": "累積保持モード：フェッチ窓外の過去試合データはそのまま保持される。",
+        "matches": accumulated_matches,
     }
 
     out_path.write_text(json.dumps(output, ensure_ascii=False, indent=2), encoding="utf-8")
