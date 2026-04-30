@@ -62,9 +62,77 @@ header h1 {
   color: rgba(255, 255, 255, 0.7);
 }
 
-/* W杯特集バナーは白で目立たせる（黒ヘッダ内に置きたいので背景を上書き） */
-header > p[style*="linear-gradient"] {
-  margin: 8px 0 !important;
+/* === W杯特集バナー（ヘッダー直下のプロモ） === */
+.wc-promo {
+  display: block;
+  background: linear-gradient(135deg, #c1304a 0%, #7a1928 100%);
+  color: #ffffff !important;
+  text-decoration: none;
+  padding: 16px 18px;
+  border-bottom: 4px solid #0d0d0d;
+  transition: filter 0.15s ease;
+}
+.wc-promo:hover {
+  filter: brightness(1.08);
+  text-decoration: none !important;
+}
+.wc-promo-grid {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 16px;
+  align-items: center;
+  max-width: 720px;
+  margin: 0 auto;
+}
+.wc-promo .trophy {
+  font-size: 38px;
+  line-height: 1;
+  filter: drop-shadow(0 1px 2px rgba(0,0,0,0.3));
+}
+.wc-promo .text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+.wc-promo .title {
+  font-size: 16px;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+}
+.wc-promo .sub {
+  font-size: 11px;
+  opacity: 0.88;
+  line-height: 1.5;
+}
+.wc-promo .countdown-block {
+  text-align: right;
+  border-left: 1px solid rgba(255,255,255,0.3);
+  padding-left: 14px;
+  min-width: 64px;
+}
+.wc-promo .countdown {
+  font-size: 28px;
+  font-weight: 800;
+  font-feature-settings: "tnum";
+  line-height: 1;
+}
+.wc-promo .countdown .num { display: inline; }
+.wc-promo .countdown .unit { font-size: 14px; margin-left: 2px; opacity: 0.85; }
+.wc-promo .countdown-label {
+  font-size: 10px;
+  opacity: 0.85;
+  margin-top: 4px;
+  letter-spacing: 0.04em;
+}
+@media (max-width: 600px) {
+  .wc-promo { padding: 14px 14px; }
+  .wc-promo-grid { gap: 12px; }
+  .wc-promo .trophy { font-size: 32px; }
+  .wc-promo .title { font-size: 15px; }
+  .wc-promo .sub { font-size: 11px; }
+  .wc-promo .countdown { font-size: 22px; }
+  .wc-promo .countdown-block { padding-left: 10px; min-width: 56px; }
 }
 
 .view-tabs {
