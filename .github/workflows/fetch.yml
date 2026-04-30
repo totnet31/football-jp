@@ -31,6 +31,10 @@ jobs:
       - name: W杯2026データ取得
         run: python3 scripts/fetch_wc.py
 
+      - name: Wikipedia イベント取得（日本人選手の得点）
+        run: python3 scripts/fetch_wiki_events.py
+        continue-on-error: true
+
       - name: 更新したデータをGitHubに保存
         run: |
           git config user.name "github-actions[bot]"

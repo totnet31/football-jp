@@ -22,6 +22,7 @@
   let allMatches = [];
   let standingsData = null;
   let scorersData = null;
+  let matchEvents = {};  // match_id (string) → [{type:'goal', player_ja, minute, side}]
   let jpPlayerNames = new Set();   // 日本人選手名（ローマ字）の集合（ハイライト用）
   let jpClubIds = new Set();       // 日本人選手が所属するクラブID
   let jpPlayersByClub = new Map(); // クラブID → 選手名(日本語)の配列
@@ -80,15 +81,17 @@
 
   async function loadAll() {
     try {
-      const [m, s, sc, players] = await Promise.all([
+      const [m, s, sc, players, evts] = await Promise.all([
         fetchJson('data/matches.json'),
         fetchJson('data/standings.json').catch(() => null),
         fetchJson('data/scorers.json').catch(() => null),
         fetchJson('data/players.json').catch(() => null),
+        fetchJson('data/match_events.json').catch(() => null),
       ]);
       allMatches = m.matches || [];
       standingsData = s;
       scorersData = sc;
+      matchEvents = (evts && evts.events) ? evts.events : {};
       // 実際の試合データの最小・最大日付（JST）から範囲を算出。
       // API側のdate_from/date_toはUTC基準のため時差で1日ズレる試合があるので、
       // 実データから求める方がカレンダーのグレーアウトと整合する。
@@ -282,10 +285,32 @@
     const homeJp = (m.japanese_players || []).filter(p => p.side === 'home');
     const awayJp = (m.japanese_players || []).filter(p => p.side === 'away');
 
-    const teamRow = (name, crest, scoreVal, win, jp) => {
+    // 日本人選手の得点バッジ（match_events.json から）
+    const events = matchEvents[String(m.id)] || [];
+    const homeGoals = events.filter(e => e.type === 'goal' && e.side === 'home');
+    const awayGoals = events.filter(e => e.type === 'goal' && e.side === 'away');
+
+    const renderJpGoals = (goals) => {
+      if (!goals || !goals.length) return '';
+      // 同一選手の複数ゴールはまとめて表示
+      const byPlayer = new Map();
+      for (const g of goals) {
+        if (!byPlayer.has(g.player_ja)) byPlayer.set(g.player_ja, []);
+        byPlayer.get(g.player_ja).push(g.minute);
+      }
+      const items = [];
+      for (const [name, minutes] of byPlayer) {
+        const minStr = minutes.sort((a,b)=>a-b).map(x => x + "'").join(', ');
+        items.push(`<span class="jp-goal-badge">⚽ ${escape(name)} ${minStr}</span>`);
+      }
+      return items.join('');
+    };
+
+    const teamRow = (name, crest, scoreVal, win, jp, jpGoals) => {
       const jpHtml = jp.length > 0
         ? `<span class="team-jp">🇯🇵 ${jp.map(p => escape(p.name_ja)).join('・')}</span>`
         : '';
+      const goalHtml = renderJpGoals(jpGoals);
       const crestHtml = crest ? `<img class="team-crest" src="${escape(crest)}" alt="" loading="lazy">` : '<span class="team-crest"></span>';
       const scoreHtml = scoreVal != null ? `<span class="team-score">${scoreVal}</span>` : '';
       return `<div class="team-row${win ? ' winner' : ''}">
@@ -293,6 +318,7 @@
         <div class="team-mid">
           <span class="team-name">${escape(name)}</span>
           ${jpHtml}
+          ${goalHtml}
         </div>
         ${scoreHtml}
       </div>`;
@@ -340,8 +366,8 @@
       <div class="match-top${highlightCell ? ' has-highlight' : ''}">
         <div class="kickoff">${timeLabel}</div>
         <div class="teams">
-          ${teamRow(m.home_ja, m.home_crest, score ? score.home : null, homeWin, homeJp)}
-          ${teamRow(m.away_ja, m.away_crest, score ? score.away : null, awayWin, awayJp)}
+          ${teamRow(m.home_ja, m.home_crest, score ? score.home : null, homeWin, homeJp, homeGoals)}
+          ${teamRow(m.away_ja, m.away_crest, score ? score.away : null, awayWin, awayJp, awayGoals)}
         </div>
         ${highlightCell}
       </div>

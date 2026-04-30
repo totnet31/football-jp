@@ -355,6 +355,21 @@ main {
   font-weight: 500;
 }
 
+.jp-goal-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  font-size: 11.5px;
+  font-weight: 700;
+  background: #fff8e1;
+  color: #b8770a;
+  border: 1px solid #f0c860;
+  padding: 2px 7px;
+  border-radius: 4px;
+  white-space: nowrap;
+  font-feature-settings: "tnum";
+}
+
 .team-score {
   font-weight: 700;
   font-feature-settings: "tnum";
