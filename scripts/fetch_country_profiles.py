@@ -152,8 +152,8 @@ def parse_wc_record(wt, country_en=None):
                 if result.get("appearances"):
                     return result
 
-    # {{main|Page}} 参照があれば、同じページからTotalを試みる
-    main_link = re.search(r"\{\{main\|([^|}]+)\}\}", section_text)
+    # {{main|Page}} or {{Main|Page}} 参照があれば、同じページからTotalを試みる
+    main_link = re.search(r"\{\{[Mm]ain\|([^|}]+)\}\}", section_text)
     if main_link:
         sub_title = main_link.group(1).strip()
         sub_wt = fetch_wikitext(sub_title)
@@ -206,7 +206,6 @@ def _extract_total(section):
             appearances = int(ams[0].group(1))
 
         # 最高成績: Highest finish 周辺・Tooltip内のラベル探索
-        # Tooltipの第1引数が最高成績ラベル
         tooltip_first = re.search(r"\{\{Tooltip\|([^|}]+)\|Highest finish\}\}", chunk)
         if tooltip_first:
             best_text = tooltip_first.group(1).strip()
@@ -217,11 +216,17 @@ def _extract_total(section):
             if best_label is None:
                 best_label = best_text  # 不明ラベルはそのまま
         else:
-            # ラベル直書き
-            for label, (ja, sc) in RESULT_RANK.items():
-                if re.search(rf"\b{re.escape(label)}\b", chunk):
-                    best_label = ja
-                    break
+            # 「X Title(s)」検出 → 優勝（X回）
+            title_m = re.search(r"(\d+)\s*Title", chunk)
+            if title_m:
+                n = int(title_m.group(1))
+                best_label = f"優勝（{n}回）"
+            else:
+                # ラベル直書き
+                for label, (ja, sc) in RESULT_RANK.items():
+                    if re.search(rf"\b{re.escape(label)}\b", chunk):
+                        best_label = ja
+                        break
 
     return {"appearances": appearances, "best_result": best_label}
 
