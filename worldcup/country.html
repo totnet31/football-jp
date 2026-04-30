@@ -8,63 +8,84 @@
   <link rel="stylesheet" href="style.css">
   <style>
     .country-hero {
-      background: linear-gradient(135deg, var(--wc-primary), #1a2754);
-      color: white;
-      border-radius: 12px;
-      padding: 24px 22px;
+      background: #ffffff;
+      border-bottom: 1px solid var(--c-border);
+      padding: 20px 0 18px;
       margin-bottom: 18px;
-      text-align: center;
+      display: grid;
+      grid-template-columns: auto 1fr auto;
+      align-items: center;
+      gap: 16px;
     }
-    .country-hero .flag { font-size: 64px; line-height: 1; margin-bottom: 8px; }
-    .country-hero h2 { margin: 0 0 4px; font-size: 26px; }
-    .country-hero .en { font-size: 13px; opacity: 0.7; }
+    .country-hero .flag { font-size: 56px; line-height: 1; }
+    .country-hero .name-block h2 {
+      margin: 0;
+      font-size: 26px;
+      font-weight: 800;
+      letter-spacing: 0.01em;
+    }
+    .country-hero .en {
+      font-size: 12px;
+      color: var(--c-text-sub);
+      letter-spacing: 0.06em;
+      margin-top: 2px;
+    }
     .country-hero .group-tag {
       display: inline-block;
-      background: rgba(255,255,255,0.2);
-      padding: 4px 12px;
-      border-radius: 999px;
-      font-size: 12px;
-      margin-top: 8px;
+      padding: 3px 10px;
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--c-accent);
+      border: 1px solid var(--c-accent);
+      letter-spacing: 0.04em;
     }
     .info-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-      gap: 10px;
-      margin-bottom: 18px;
+      gap: 0;
+      margin-bottom: 22px;
+      border: 1px solid var(--c-border);
     }
     .info-card {
-      background: var(--wc-card);
-      border: 1px solid var(--wc-border);
-      border-radius: 8px;
+      background: #fff;
+      border-right: 1px solid var(--c-border);
       padding: 12px 14px;
-      text-align: center;
+      text-align: left;
     }
-    .info-card .label { font-size: 11px; color: var(--wc-text-sub); margin-bottom: 4px; }
-    .info-card .value { font-size: 17px; font-weight: 700; color: var(--wc-primary); }
+    .info-card:last-child { border-right: none; }
+    .info-card .label { font-size: 11px; color: var(--c-text-sub); margin-bottom: 4px; letter-spacing: 0.04em; }
+    .info-card .value { font-size: 17px; font-weight: 800; color: var(--c-text); font-feature-settings: "tnum"; }
     .country-section {
-      background: var(--wc-card);
-      border: 1px solid var(--wc-border);
-      border-radius: 10px;
-      padding: 18px 20px;
-      margin-bottom: 14px;
+      background: #fff;
+      padding: 18px 0;
+      margin-bottom: 0;
+      border-bottom: 1px solid var(--c-border);
     }
-    .country-section h3 { margin: 0 0 12px; font-size: 16px; color: var(--wc-primary); border-bottom: 2px solid var(--wc-primary); padding-bottom: 6px; }
-    .country-section p { margin: 0 0 8px; line-height: 1.7; }
+    .country-section:last-child { border-bottom: none; }
+    .country-section h3 {
+      margin: 0 0 14px;
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      padding-left: 10px;
+      border-left: 4px solid var(--c-accent);
+      color: var(--c-text);
+    }
+    .country-section p { margin: 0 0 8px; line-height: 1.7; font-size: 13px; }
     .player-card {
-      background: #fafafa;
-      border: 1px solid var(--wc-border);
-      border-radius: 8px;
+      background: #fff;
+      border: 1px solid var(--c-border);
       padding: 12px 14px;
-      margin-bottom: 8px;
+      margin-bottom: 6px;
     }
     .player-card .name { font-size: 14px; font-weight: 700; }
-    .player-card .meta { font-size: 12px; color: var(--wc-text-sub); margin: 2px 0 6px; }
+    .player-card .meta { font-size: 12px; color: var(--c-text-sub); margin: 2px 0 6px; }
     .player-card .note { font-size: 13px; }
     .stub-warning {
-      background: #fff8ed;
-      border: 1px solid #f0d8a0;
-      border-radius: 8px;
-      padding: 14px 16px;
+      background: #fff;
+      border: 1px solid var(--c-border);
+      border-left: 3px solid #d4af37;
+      padding: 12px 14px;
       font-size: 13px;
       line-height: 1.7;
     }
@@ -79,38 +100,41 @@
     }
     .squad-table th {
       background: #f0f1f5;
-      color: var(--wc-primary);
+      color: var(--c-text);
       font-weight: 600;
       font-size: 11px;
       padding: 8px 6px;
       text-align: left;
-      border-bottom: 2px solid var(--wc-primary);
+      border-bottom: 2px solid var(--c-text);
     }
     .squad-table td {
       padding: 8px 6px;
-      border-bottom: 1px solid var(--wc-border);
+      border-bottom: 1px solid var(--c-border);
       font-size: 12px;
     }
     .squad-table td.num {
       text-align: right;
       font-feature-settings: "tnum";
     }
-    .squad-table tr.pos-GK { background: #fff3e6; }
-    .squad-table tr.pos-DF { background: #e8f0fb; }
-    .squad-table tr.pos-MF { background: #f0f6e8; }
-    .squad-table tr.pos-FW { background: #ffeef0; }
+    /* ポジション行の背景色は廃止（AIっぽさ削減）／ハイライトはhoverのみ */
+    .squad-table tr:hover { background: var(--c-bg-subtle); }
     .squad-table .pos-tag {
       display: inline-block;
       padding: 1px 6px;
-      border-radius: 3px;
       font-size: 10px;
       font-weight: 700;
-      color: white;
+      color: var(--c-text);
+      border: 1px solid var(--c-border-strong);
+      background: #fff;
+      letter-spacing: 0.02em;
     }
-    .pos-tag.GK { background: #e07b00; }
-    .pos-tag.DF { background: #2c5e9e; }
-    .pos-tag.MF { background: #5a8a3a; }
-    .pos-tag.FW { background: #c1304a; }
+    .pos-tag.GK, .pos-tag.DF, .pos-tag.MF, .pos-tag.FW {
+      color: var(--c-text);
+      background: #fff;
+      border-color: var(--c-border-strong);
+    }
+    /* 区切りはポジション間のセパレータライン */
+    .squad-table tr.first-of-pos td { border-top: 2px solid var(--c-border-strong); }
     .squad-disclaimer {
       background: #fff8ed;
       border-left: 3px solid #d4af37;
@@ -123,7 +147,7 @@
     .club-country {
       display: block;
       font-size: 10px;
-      color: var(--wc-text-sub);
+      color: var(--c-text-sub);
       margin-top: 1px;
     }
     /* モバイル：表からカード型へ切替 */
@@ -136,16 +160,16 @@
         grid-template-columns: auto 1fr auto;
         gap: 4px 10px;
         padding: 10px 12px;
-        border: 1px solid var(--wc-border);
+        border: 1px solid var(--c-border);
         border-radius: 8px;
         margin-bottom: 6px;
         align-items: start;
       }
       .squad-table td { display: block; padding: 0; border: none; }
-      .squad-table td.col-no { grid-column: 1; grid-row: 1; font-weight:700; font-size: 14px; align-self: center; min-width: 26px; text-align: center; color: var(--wc-text-sub); }
+      .squad-table td.col-no { grid-column: 1; grid-row: 1; font-weight:700; font-size: 14px; align-self: center; min-width: 26px; text-align: center; color: var(--c-text-sub); }
       .squad-table td.col-pos { grid-column: 1; grid-row: 2; align-self: center; }
       .squad-table td.col-name { grid-column: 2; grid-row: 1 / span 2; }
-      .squad-table td.col-club { grid-column: 1 / span 3; grid-row: 3; font-size: 11px; padding-top: 4px; border-top: 1px dashed var(--wc-border); margin-top: 4px; }
+      .squad-table td.col-club { grid-column: 1 / span 3; grid-row: 3; font-size: 11px; padding-top: 4px; border-top: 1px dashed var(--c-border); margin-top: 4px; }
       .squad-table td.col-dob { grid-column: 3; grid-row: 1; text-align: right; font-size: 11px; }
       .squad-table td.col-h, .squad-table td.col-w { display: none !important; }
       .squad-table td.col-hw {
@@ -178,7 +202,7 @@
 
   <div id="content"></div>
 
-  <p style="margin-top: 20px;"><a href="./countries.html" style="color:var(--wc-primary); font-size: 13px;">← 48か国一覧に戻る</a></p>
+  <p style="margin-top: 20px;"><a href="./countries.html" style="color:var(--c-text); font-size: 13px;">← 48か国一覧に戻る</a></p>
 
   <footer class="wc-footer">
     <p>データ提供: <a href="https://www.football-data.org/" target="_blank" rel="noopener">Football data provided by the Football-Data.org API</a></p>
@@ -219,8 +243,10 @@
   let html = `
     <div class="country-hero">
       <div class="flag">${p.flag}</div>
-      <h2>${escapeHtml(p.ja)}</h2>
-      <div class="en">${escapeHtml(p.en)}</div>
+      <div class="name-block">
+        <h2>${escapeHtml(p.ja)}</h2>
+        <div class="en">${escapeHtml(p.en)}</div>
+      </div>
       <span class="group-tag">Group ${p.group}</span>
     </div>
   `;
@@ -317,9 +343,9 @@
       return `<tr class="pos-${pl.pos}">
         <td class="num col-no">${pl.no || '—'}</td>
         <td class="col-pos"><span class="pos-tag ${pl.pos}">${pl.pos || '—'}</span></td>
-        <td class="col-name"><strong>${escapeHtml(pl.name_ja)}</strong><br><span style="font-size:10px;color:var(--wc-text-sub);">${escapeHtml(pl.name_en)}</span></td>
+        <td class="col-name"><strong>${escapeHtml(pl.name_ja)}</strong><br><span style="font-size:10px;color:var(--c-text-sub);">${escapeHtml(pl.name_en)}</span></td>
         <td class="col-club"><span class="club-name">${escapeHtml(c.name)}</span>${c.country ? `<span class="club-country">${escapeHtml(c.country)}</span>` : ''}</td>
-        <td class="num col-dob">${pl.dob ? pl.dob.replace(/-/g, '/') : '—'}<br><span style="font-size:10px;color:var(--wc-text-sub);">${ageStr ? ageStr+'歳' : ''}</span></td>
+        <td class="num col-dob">${pl.dob ? pl.dob.replace(/-/g, '/') : '—'}<br><span style="font-size:10px;color:var(--c-text-sub);">${ageStr ? ageStr+'歳' : ''}</span></td>
         <td class="num col-h hide-on-mobile">${pl.height_cm ? pl.height_cm + 'cm' : '—'}</td>
         <td class="num col-w hide-on-mobile">${pl.weight_kg ? pl.weight_kg + 'kg' : '—'}</td>
         <td class="num col-hw show-on-mobile" style="display:none;">${pl.height_cm ? pl.height_cm + 'cm' : '—'}/${pl.weight_kg ? pl.weight_kg + 'kg' : '—'}</td>
@@ -331,7 +357,7 @@
         <div class="squad-disclaimer">
           ⚠️ ${escapeHtml(squad.as_of || '参考データ')}を表示中。
           2026年最終スカッドは6/1のFIFA発表後に更新します。
-          <span style="display:block; margin-top:4px; font-size:11px; color:var(--wc-text-sub);">出典: ${escapeHtml(squadsData._source || 'unknown')}</span>
+          <span style="display:block; margin-top:4px; font-size:11px; color:var(--c-text-sub);">出典: ${escapeHtml(squadsData._source || 'unknown')}</span>
         </div>
         <table class="squad-table">
           <thead>
@@ -372,7 +398,7 @@ function renderMatchSummary(m, currentTla) {
   }
   return `
     <div class="player-card" style="display:grid; grid-template-columns: 80px 1fr auto; gap:12px; align-items:center;">
-      <div style="font-size:11px; color:var(--wc-text-sub);">${dateStr}<br>${timeStr} JST</div>
+      <div style="font-size:11px; color:var(--c-text-sub);">${dateStr}<br>${timeStr} JST</div>
       <div>vs <strong>${oppFlag} ${escapeHtml(oppName)}</strong></div>
       <div style="font-size:14px; font-weight:700;">${scoreStr}</div>
     </div>
