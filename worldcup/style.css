@@ -351,6 +351,17 @@ a:hover { text-decoration: underline; }
 .wc-table tr.qualify-line {
   border-bottom: 2px solid var(--c-accent);
 }
+.wc-table .country-link {
+  color: var(--c-text);
+  text-decoration: none;
+  border-bottom: 1px dotted var(--c-border-strong);
+}
+.wc-table .country-link:hover {
+  color: var(--c-accent);
+  border-bottom-color: var(--c-accent);
+  text-decoration: none;
+}
+.wc-table tr.japan .country-link { color: var(--c-japan); }
 
 /* === KPI grid === */
 .kpi-grid {

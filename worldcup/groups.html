@@ -21,7 +21,7 @@
   <script src="wc-nav.js"></script>
   <script>document.getElementById('wcNav').innerHTML = wcRenderNav('groups');</script>
 
-  <p class="wc-empty" style="text-align:left; padding: 12px 14px; background:#fff8ed; border:1px solid #f0d8a0; border-radius:8px; font-size:12px;">
+  <p class="wc-empty" style="text-align:left; padding: 12px 14px; background:#fff8ed; border:1px solid #f0d8a0; border-radius:4px; font-size:12px;">
     💡 大会開幕前は全チームが0-0-0スタート。試合進行に伴い自動更新されます。
     <br>赤背景＝🇯🇵日本　／　金線＝突破ライン（上位2チーム）
   </p>
@@ -44,9 +44,12 @@
     const rows = g.table.map(r => {
       const cls = r.team_tla === 'JPN' ? 'japan' : '';
       const qline = r.position <= 2 ? 'qualify-line' : '';
+      const nameCell = r.team_tla
+        ? `${r.team_flag} <a href="./country.html?tla=${encodeURIComponent(r.team_tla)}" class="country-link">${escapeHtml(r.team_ja)}</a>`
+        : `${r.team_flag} ${escapeHtml(r.team_ja)}`;
       return `<tr class="${cls} ${qline}">
         <td class="num">${r.position}</td>
-        <td>${r.team_flag} ${escapeHtml(r.team_ja)}</td>
+        <td>${nameCell}</td>
         <td class="num">${r.playedGames}</td>
         <td class="num">${r.won}</td>
         <td class="num">${r.draw}</td>

@@ -73,9 +73,12 @@
     const rows = groupF.table.map(r => {
       const cls = r.team_tla === JPN ? 'japan' : '';
       const qline = r.position === 2 ? 'qualify-line' : '';
+      const nameCell = r.team_tla
+        ? `${r.team_flag} <a href="./country.html?tla=${encodeURIComponent(r.team_tla)}" class="country-link">${escapeHtml(r.team_ja)}</a>`
+        : `${r.team_flag} ${escapeHtml(r.team_ja)}`;
       return `<tr class="${cls} ${qline}">
         <td class="num">${r.position}</td>
-        <td>${r.team_flag} ${r.team_ja}</td>
+        <td>${nameCell}</td>
         <td class="num">${r.playedGames}</td>
         <td class="num">${r.won}</td>
         <td class="num">${r.draw}</td>
