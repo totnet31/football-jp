@@ -112,29 +112,32 @@ a:hover { text-decoration: underline; }
 .wc-nav {
   display: flex;
   flex-wrap: wrap;
-  gap: 0;
-  margin: 16px 0 24px;
-  border-bottom: 1px solid var(--c-border);
+  gap: 6px;
+  margin: 18px 0 24px;
 }
 .wc-nav a {
   flex: 1;
-  padding: 10px 14px;
+  min-width: 0;
+  padding: 11px 12px;
   font-size: 13px;
-  font-weight: 500;
+  font-weight: 600;
   color: var(--c-text-sub);
   text-decoration: none;
-  border-bottom: 2px solid transparent;
-  margin-bottom: -1px;
   text-align: center;
   white-space: nowrap;
+  background: #ffffff;
+  border: 1.5px solid var(--c-border);
+  transition: all 0.15s ease;
 }
 .wc-nav a:hover {
   color: var(--c-text);
+  border-color: var(--c-text);
   text-decoration: none;
 }
 .wc-nav a.active {
-  color: var(--c-text);
-  border-bottom-color: var(--c-accent);
+  color: #ffffff;
+  background: #0d0d0d;
+  border-color: #0d0d0d;
   font-weight: 700;
 }
 
@@ -348,31 +351,16 @@ a:hover { text-decoration: underline; }
   .wc-countdown .timer { font-size: 22px; }
   .wc-section h2 { font-size: 13px; }
 
-  /* スマホ：ナビを2列均等割に */
+  /* スマホ：ナビを2列均等割（カード風） */
   .wc-nav {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 0;
-    border-bottom: none;
-    border: 1px solid var(--c-border);
+    gap: 6px;
+    margin: 12px 0 18px;
   }
   .wc-nav a {
     padding: 12px 8px;
-    font-size: 13px;
-    text-align: center;
-    border-bottom: 1px solid var(--c-border);
-    border-right: 1px solid var(--c-border);
-    margin-bottom: 0;
-  }
-  /* 右列の要素は右borderなし */
-  .wc-nav a:nth-child(2n) {
-    border-right: none;
-  }
-  /* 偶数個前提なら最終2行は下borderなし */
-  .wc-nav a.active {
-    border-bottom-color: var(--c-accent);
-    border-bottom-width: 2px;
-    background: var(--c-bg-subtle);
+    font-size: 12.5px;
   }
 
   .kpi-grid { grid-template-columns: repeat(2, 1fr); }
