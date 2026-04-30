@@ -127,12 +127,13 @@
       border: 1px solid var(--c-border-strong);
       background: #fff;
       letter-spacing: 0.02em;
+      border-radius: 3px;
     }
-    .pos-tag.GK, .pos-tag.DF, .pos-tag.MF, .pos-tag.FW {
-      color: var(--c-text);
-      background: #fff;
-      border-color: var(--c-border-strong);
-    }
+    /* ポジション別カラー（サッカー定番の配色） */
+    .pos-tag.GK { color: #b8770a; background: #fff8e1; border-color: #f0c860; }
+    .pos-tag.DF { color: #1565c0; background: #e6f0fa; border-color: #90c1e6; }
+    .pos-tag.MF { color: #2d7a4d; background: #e6f4ec; border-color: #a0cfb4; }
+    .pos-tag.FW { color: #c1304a; background: #fff0f0; border-color: #f4c0c0; }
     /* 区切りはポジション間のセパレータライン */
     .squad-table tr.first-of-pos td { border-top: 2px solid var(--c-border-strong); }
     .squad-disclaimer {
