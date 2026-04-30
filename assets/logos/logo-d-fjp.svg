@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" role="img" aria-label="football-jp logo: f.jp Wordmark">
+  <title>football-jp / f.jp wordmark</title>
+  <desc>黒い角丸バッジに「f.jp」のミニマル文字ロゴ。ドットを赤い日の丸に置き換え。</desc>
+
+  <!-- Black rounded square -->
+  <rect x="14" y="14" width="172" height="172" rx="34" fill="#0d0d0d"/>
+
+  <!-- "f" -->
+  <g fill="#ffffff">
+    <!-- vertical bar + curve top -->
+    <path d="M 56,142
+             L 56,72
+             Q 56,50 78,50
+             L 88,50
+             L 88,68
+             L 80,68
+             Q 76,68 76,72
+             L 76,82
+             L 88,82
+             L 88,98
+             L 76,98
+             L 76,142
+             Z"/>
+  </g>
+
+  <!-- "j" -->
+  <g fill="#ffffff">
+    <path d="M 110,82
+             L 130,82
+             L 130,142
+             Q 130,158 114,158
+             L 100,158
+             Q 84,158 84,142
+             L 84,134
+             L 102,134
+             L 102,140
+             Q 102,142 104,142
+             L 108,142
+             Q 110,142 110,140
+             Z"/>
+    <!-- j のドット → 日の丸（次のグループで描画） -->
+  </g>
+
+  <!-- "p" -->
+  <g fill="#ffffff">
+    <path d="M 144,82
+             L 162,82
+             L 162,162
+             L 144,162
+             Z
+             M 162,82
+             L 174,82
+             Q 188,82 188,98
+             L 188,114
+             Q 188,128 174,128
+             L 162,128
+             Z"/>
+  </g>
+
+  <!-- ドット（j のドット = 赤い日の丸）-->
+  <circle cx="120" cy="68" r="8" fill="#BC002D"/>
+</svg>

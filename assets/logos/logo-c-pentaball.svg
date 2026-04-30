@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" role="img" aria-label="football-jp logo: Penta Ball">
+  <title>football-jp / Penta Ball</title>
+  <desc>黒円の中に大きな白五角形（クラブクレスト風）。中央に小さく赤丸（日の丸）を配置。Premier感のあるモノマーク。</desc>
+
+  <!-- Black circle background -->
+  <circle cx="100" cy="100" r="92" fill="#0d0d0d"/>
+
+  <!-- Large white pentagon (knockout) -->
+  <polygon points="100,38 158,80 136,148 64,148 42,80" fill="#ffffff"/>
+
+  <!-- Inner cut: black smaller pentagon outline (Just inside) -->
+  <polygon points="100,58 144,90 128,138 72,138 56,90" fill="#0d0d0d"/>
+
+  <!-- Inner white pentagon -->
+  <polygon points="100,78 130,98 122,128 78,128 70,98" fill="#ffffff"/>
+
+  <!-- Hinomaru center -->
+  <circle cx="100" cy="103" r="10" fill="#BC002D"/>
+</svg>

@@ -4,93 +4,134 @@
 <meta charset="UTF-8">
 <title>football-jp Logo Preview</title>
 <style>
-  body { font-family: -apple-system, "Hiragino Kaku Gothic ProN", sans-serif; background: #f5f5f5; padding: 20px; margin: 0; }
-  h1 { font-size: 18px; margin-bottom: 24px; color: #333; }
-  h2 { font-size: 15px; color: #1a2754; margin-top: 30px; margin-bottom: 12px; }
-  .row { display: flex; align-items: center; gap: 24px; flex-wrap: wrap; padding: 18px; background: white; border-radius: 8px; margin-bottom: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.08); }
-  .row.dark { background: #1a1d29; }
-  .row.dark span { color: #ddd; }
-  .row.gold { background: #fff8ed; }
-  .label { font-size: 11px; color: #666; min-width: 80px; }
-  .row img, .row svg { display: block; }
-  .size-32 { width: 32px; height: 32px; }
-  .size-64 { width: 64px; height: 64px; }
-  .size-128 { width: 128px; height: 128px; }
-  .size-180 { width: 180px; height: 180px; }
-  .header-mock { background: linear-gradient(135deg, #2c3e7e 0%, #1a2754 100%); color: white; padding: 14px 16px; border-radius: 6px; display: flex; align-items: center; gap: 12px; }
+  * { box-sizing: border-box; }
+  body { font-family: -apple-system, "Hiragino Kaku Gothic ProN", sans-serif; background: #f0f0f2; padding: 0; margin: 0; color: #1a1a1a; }
+  header { background: #0d0d0d; color: white; padding: 28px 24px; }
+  header h1 { margin: 0 0 4px; font-size: 18px; font-weight: 700; letter-spacing: 0.02em; }
+  header p { margin: 0; font-size: 12px; opacity: 0.7; }
+  main { max-width: 1100px; margin: 0 auto; padding: 24px; }
+  .concept { background: white; border-radius: 12px; padding: 24px; margin-bottom: 20px; box-shadow: 0 1px 4px rgba(0,0,0,0.06); }
+  .concept h2 { margin: 0 0 4px; font-size: 17px; color: #0d0d0d; }
+  .concept .desc { margin: 0 0 16px; font-size: 12px; color: #666; }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 12px;
+  }
+  .swatch {
+    background: #fafafa;
+    border: 1px solid #e0e0e2;
+    border-radius: 8px;
+    padding: 16px 12px;
+    text-align: center;
+  }
+  .swatch.dark { background: #1a1a1a; }
+  .swatch.dark .label { color: #aaa; }
+  .swatch.gold { background: #fff8ed; }
+  .swatch.brand { background: linear-gradient(135deg, #2c3e7e 0%, #1a2754 100%); }
+  .swatch.brand .label { color: #c5cfe5; }
+  .swatch img { display: block; margin: 0 auto 10px; }
+  .swatch .label { font-size: 10px; color: #888; }
+  .header-mock {
+    background: linear-gradient(135deg, #2c3e7e 0%, #1a2754 100%);
+    color: white;
+    padding: 14px 18px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-top: 12px;
+  }
   .header-mock h3 { margin: 0; font-size: 16px; font-weight: 700; }
-  .header-mock .sub { font-size: 11px; opacity: 0.85; }
+  .header-mock .sub { font-size: 11px; opacity: 0.85; margin-top: 2px; }
+  .header-mock img { width: 40px; height: 40px; }
+  .meta { font-size: 12px; color: #666; line-height: 1.7; margin-top: 10px; }
 </style>
 </head>
 <body>
 
-<h1>⚽ football-jp ロゴプレビュー（A・E）</h1>
+<header>
+  <h1>football-jp ロゴプレビュー｜黒ベース・白抜きライン</h1>
+  <p>4 concepts on white / dark / brand backgrounds</p>
+</header>
 
-<h2>Concept A: JP-Ball</h2>
+<main>
 
-<div class="row">
-  <span class="label">favicon (32px)</span>
-  <img src="logo-a-jpball.svg" class="size-32" alt="A 32">
-  <span class="label">標準 (64px)</span>
-  <img src="logo-a-jpball.svg" class="size-64" alt="A 64">
-  <span class="label">中 (128px)</span>
-  <img src="logo-a-jpball.svg" class="size-128" alt="A 128">
-  <span class="label">大 (180px)</span>
-  <img src="logo-a-jpball.svg" class="size-180" alt="A 180">
-</div>
-
-<div class="row dark">
-  <span class="label">ダーク背景</span>
-  <img src="logo-a-jpball.svg" class="size-32" alt="A dark 32">
-  <img src="logo-a-jpball.svg" class="size-64" alt="A dark 64">
-  <img src="logo-a-jpball.svg" class="size-128" alt="A dark 128">
-</div>
-
-<div class="row">
-  <div class="header-mock">
-    <img src="logo-a-jpball.svg" style="width: 44px; height: 44px;" alt="A in header">
-    <div>
-      <h3>football-jp</h3>
-      <div class="sub">海外サッカー 日本人選手スケジュール</div>
+  <section class="concept">
+    <h2>A2: Stitch Ball — 黒いボール×白ステッチ</h2>
+    <p class="desc">黒い円球に白いステッチ線で五角形＋外周パネルを浮かせ、中央に小さな日の丸。サッカーボールの記号性を残しつつミニマル。</p>
+    <div class="grid">
+      <div class="swatch"><img src="logo-a2-stitchball.svg" width="32" height="32"><div class="label">favicon 32</div></div>
+      <div class="swatch"><img src="logo-a2-stitchball.svg" width="64" height="64"><div class="label">標準 64</div></div>
+      <div class="swatch"><img src="logo-a2-stitchball.svg" width="128" height="128"><div class="label">中 128</div></div>
+      <div class="swatch dark"><img src="logo-a2-stitchball.svg" width="64" height="64"><div class="label">on dark</div></div>
+      <div class="swatch brand"><img src="logo-a2-stitchball.svg" width="64" height="64"><div class="label">on brand</div></div>
     </div>
-  </div>
-</div>
-
-<h2>Concept E: J×Goal</h2>
-
-<div class="row">
-  <span class="label">favicon (32px)</span>
-  <img src="logo-e-jgoal.svg" class="size-32" alt="E 32">
-  <span class="label">標準 (64px)</span>
-  <img src="logo-e-jgoal.svg" class="size-64" alt="E 64">
-  <span class="label">中 (128px)</span>
-  <img src="logo-e-jgoal.svg" class="size-128" alt="E 128">
-  <span class="label">大 (180px)</span>
-  <img src="logo-e-jgoal.svg" class="size-180" alt="E 180">
-</div>
-
-<div class="row dark">
-  <span class="label">ダーク背景</span>
-  <img src="logo-e-jgoal.svg" class="size-32" alt="E dark 32">
-  <img src="logo-e-jgoal.svg" class="size-64" alt="E dark 64">
-  <img src="logo-e-jgoal.svg" class="size-128" alt="E dark 128">
-</div>
-
-<div class="row">
-  <div class="header-mock">
-    <img src="logo-e-jgoal.svg" style="width: 44px; height: 44px;" alt="E in header">
-    <div>
-      <h3>football-jp</h3>
-      <div class="sub">海外サッカー 日本人選手スケジュール</div>
+    <div class="header-mock">
+      <img src="logo-a2-stitchball.svg">
+      <div><h3>football-jp</h3><div class="sub">海外サッカー 日本人選手スケジュール</div></div>
     </div>
-  </div>
-</div>
+  </section>
 
-<h2>📌 比較メモ</h2>
-<div style="background: white; padding: 18px; border-radius: 8px; line-height: 1.7; font-size: 14px;">
-  <p><strong>A (JP-Ball)</strong>：直感的「日本×サッカー」、faviconで最も認識しやすい。<strong>E (J×Goal)</strong>：モダン・ミニマル、文字としても機能、モノクロ印刷OK。</p>
-  <p>調整候補：A→ボール五角形の位置・大きさ、中央日の丸サイズ、リング線の太さ／E→Jのカーブ、ボールの位置（ドット）、ネット透過度</p>
-</div>
+  <section class="concept">
+    <h2>B: JP Mono — 角丸バッジに白「JP」</h2>
+    <p class="desc">プレミアム感のある角丸スクエアバッジ。極太の「JP」を白抜きで配し、右上に小さな日の丸ドット。アパレル・グッズ展開に強い。</p>
+    <div class="grid">
+      <div class="swatch"><img src="logo-b-jpmono.svg" width="32" height="32"><div class="label">favicon 32</div></div>
+      <div class="swatch"><img src="logo-b-jpmono.svg" width="64" height="64"><div class="label">標準 64</div></div>
+      <div class="swatch"><img src="logo-b-jpmono.svg" width="128" height="128"><div class="label">中 128</div></div>
+      <div class="swatch dark"><img src="logo-b-jpmono.svg" width="64" height="64"><div class="label">on dark</div></div>
+      <div class="swatch brand"><img src="logo-b-jpmono.svg" width="64" height="64"><div class="label">on brand</div></div>
+    </div>
+    <div class="header-mock">
+      <img src="logo-b-jpmono.svg">
+      <div><h3>football-jp</h3><div class="sub">海外サッカー 日本人選手スケジュール</div></div>
+    </div>
+  </section>
 
+  <section class="concept">
+    <h2>C: Penta Ball — 黒円×白五角形（クラブクレスト風）</h2>
+    <p class="desc">欧州クラブのクレストを彷彿とさせる、黒円の中に白の五角形を入れ子で。中央に日の丸。海外サッカーファンに刺さる王道感。</p>
+    <div class="grid">
+      <div class="swatch"><img src="logo-c-pentaball.svg" width="32" height="32"><div class="label">favicon 32</div></div>
+      <div class="swatch"><img src="logo-c-pentaball.svg" width="64" height="64"><div class="label">標準 64</div></div>
+      <div class="swatch"><img src="logo-c-pentaball.svg" width="128" height="128"><div class="label">中 128</div></div>
+      <div class="swatch dark"><img src="logo-c-pentaball.svg" width="64" height="64"><div class="label">on dark</div></div>
+      <div class="swatch brand"><img src="logo-c-pentaball.svg" width="64" height="64"><div class="label">on brand</div></div>
+    </div>
+    <div class="header-mock">
+      <img src="logo-c-pentaball.svg">
+      <div><h3>football-jp</h3><div class="sub">海外サッカー 日本人選手スケジュール</div></div>
+    </div>
+  </section>
+
+  <section class="concept">
+    <h2>D: f.jp wordmark — 角丸バッジに「f.jp」</h2>
+    <p class="desc">ドメイン名（football-jp.com）の略形をワードマーク化。「j」のドットを赤い日の丸に置き換え。文字情報量があり機能的。</p>
+    <div class="grid">
+      <div class="swatch"><img src="logo-d-fjp.svg" width="32" height="32"><div class="label">favicon 32</div></div>
+      <div class="swatch"><img src="logo-d-fjp.svg" width="64" height="64"><div class="label">標準 64</div></div>
+      <div class="swatch"><img src="logo-d-fjp.svg" width="128" height="128"><div class="label">中 128</div></div>
+      <div class="swatch dark"><img src="logo-d-fjp.svg" width="64" height="64"><div class="label">on dark</div></div>
+      <div class="swatch brand"><img src="logo-d-fjp.svg" width="64" height="64"><div class="label">on brand</div></div>
+    </div>
+    <div class="header-mock">
+      <img src="logo-d-fjp.svg">
+      <div><h3>football-jp</h3><div class="sub">海外サッカー 日本人選手スケジュール</div></div>
+    </div>
+  </section>
+
+  <section class="concept">
+    <h2>📌 比較メモ</h2>
+    <div class="meta">
+      <p><b>A2 Stitch Ball</b>：サッカーボールの記号性が強く、faviconでも一発で「サッカー」と分かる／一方で他サイトとの差別化はやや弱い</p>
+      <p><b>B JP Mono</b>：最もプレミアム・覚えやすい・グッズ展開に強い／文字主体なので「サッカー」感は弱い</p>
+      <p><b>C Penta Ball</b>：欧州クラブクレスト感が出る・海外サッカーファンに刺さる／A2より複雑だが個性的</p>
+      <p><b>D f.jp</b>：機能的・ドメインと一致・ワードマーク／ロゴというよりタグ感</p>
+      <p style="margin-top:14px;"><b>調整候補</b>：色味（赤を別色に）／ロゴ角丸の半径／ステッチ線の太さ・密度／全体サイズ感</p>
+    </div>
+  </section>
+
+</main>
 </body>
 </html>
