@@ -348,7 +348,8 @@
     if (hasDetails) cls.push('clickable');
 
     // ハイライト動画リンク（試合終了時のみ・1試合に1ボタン・YouTubeスタイル）
-    let highlightCell = '';
+    // ハイライト有無でスコア位置がズレないよう、空時もプレースホルダで枠を確保
+    let highlightCell = '<span class="match-highlight-placeholder" aria-hidden="true"></span>';
     if (finished && Array.isArray(m.highlights) && m.highlights.length > 0) {
       const first = m.highlights.find(h => h.url || h.video_id);
       if (first) {
@@ -360,7 +361,7 @@
     return `<div class="${cls.join(' ')}"${hasDetails ? ` data-match-id="${m.id}"` : ''}>
       ${homeCorner ? `<div class="jp-corner-wrap left">${homeCorner}</div>` : ''}
       ${awayCorner ? `<div class="jp-corner-wrap right">${awayCorner}</div>` : ''}
-      <div class="match-top${highlightCell ? ' has-highlight' : ''}">
+      <div class="match-top has-highlight">
         <div class="kickoff">${timeLabel}</div>
         <div class="teams">
           ${teamRow(m.home_ja, m.home_crest, score ? score.home : null, homeWin, homeJp)}
