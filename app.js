@@ -81,13 +81,15 @@
 
   async function loadAll() {
     try {
-      const [m, s, sc, players, evts] = await Promise.all([
+      const [m, s, sc, players, evts, news] = await Promise.all([
         fetchJson('data/matches.json'),
         fetchJson('data/standings.json').catch(() => null),
         fetchJson('data/scorers.json').catch(() => null),
         fetchJson('data/players.json').catch(() => null),
         fetchJson('data/match_events.json').catch(() => null),
+        fetchJson('data/news.json').catch(() => null),
       ]);
+      renderNews(news);
       allMatches = m.matches || [];
       standingsData = s;
       scorersData = sc;
@@ -816,6 +818,28 @@
   function fmtKickoff(iso) {
     const d = new Date(iso);
     return `${d.getFullYear()}/${pad(d.getMonth()+1)}/${pad(d.getDate())}（${WEEKDAY[d.getDay()]}）${pad(d.getHours())}:${pad(d.getMinutes())} キックオフ`;
+  }
+
+  function renderNews(newsData) {
+    const section = document.getElementById('newsSection');
+    const list = document.getElementById('newsList');
+    if (!section || !list || !newsData || !Array.isArray(newsData.items) || newsData.items.length === 0) {
+      return;
+    }
+    const items = newsData.items.slice(0, 10);
+    list.innerHTML = items.map(it => {
+      const dateStr = it.published ? it.published.slice(0, 10) : '';
+      const players = (it.matched_players || []).slice(0, 3).join('・');
+      return `<a href="${escape(it.link)}" target="_blank" rel="noopener" class="news-item">
+        <div class="news-meta">
+          <span class="news-date">${escape(dateStr)}</span>
+          <span class="news-source">${escape(it.source || '')}</span>
+          ${players ? `<span class="news-players">🇯🇵 ${escape(players)}</span>` : ''}
+        </div>
+        <div class="news-title">${escape(it.title)}</div>
+      </a>`;
+    }).join('');
+    section.hidden = false;
   }
 
   loadAll();
