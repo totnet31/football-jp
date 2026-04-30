@@ -17,14 +17,9 @@
 
 <div class="wc-container">
 
-  <nav class="wc-nav">
-    <a href="./">📅 トップ</a>
-    <a href="./japan.html" class="active">🇯🇵 日本代表</a>
-    <a href="./groups.html">📊 グループ順位</a>
-    <a href="./bracket.html">🏆 トーナメント</a>
-    <a href="./countries.html">🌍 48か国</a>
-    <a href="./rules.html">📜 ルール</a>
-  </nav>
+  <nav class="wc-nav" id="wcNav"></nav>
+  <script src="wc-nav.js"></script>
+  <script>document.getElementById('wcNav').innerHTML = wcRenderNav('japan');</script>
 
   <section class="wc-section">
     <h2>🇯🇵 日本代表3試合（グループステージ）</h2>

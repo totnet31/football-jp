@@ -118,7 +118,7 @@ a:hover { text-decoration: underline; }
 .wc-nav a {
   flex: 1;
   min-width: 0;
-  padding: 11px 12px;
+  padding: 10px 12px;
   font-size: 13px;
   font-weight: 600;
   color: var(--c-text-sub);
@@ -128,6 +128,15 @@ a:hover { text-decoration: underline; }
   background: #ffffff;
   border: 1.5px solid var(--c-border);
   transition: all 0.15s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+.wc-nav-icon {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
 }
 .wc-nav a:hover {
   color: var(--c-text);
@@ -292,11 +301,22 @@ a:hover { text-decoration: underline; }
 /* === Tables === */
 .wc-table {
   width: 100%;
+  table-layout: fixed;
   border-collapse: collapse;
   background: #ffffff;
   border: 1px solid var(--c-border);
   font-size: 13px;
 }
+/* グループ順位表 共通列幅（Group A〜Lで揃える） */
+.wc-table th:nth-child(1), .wc-table td:nth-child(1) { width: 6%; }
+.wc-table th:nth-child(2), .wc-table td:nth-child(2) { width: 32%; }
+.wc-table th:nth-child(3), .wc-table td:nth-child(3) { width: 7%; }
+.wc-table th:nth-child(4), .wc-table td:nth-child(4) { width: 7%; }
+.wc-table th:nth-child(5), .wc-table td:nth-child(5) { width: 7%; }
+.wc-table th:nth-child(6), .wc-table td:nth-child(6) { width: 7%; }
+.wc-table th:nth-child(7), .wc-table td:nth-child(7) { width: 14%; }
+.wc-table th:nth-child(8), .wc-table td:nth-child(8) { width: 8%; }
+.wc-table th:nth-child(9), .wc-table td:nth-child(9) { width: 12%; }
 .wc-table th {
   background: var(--c-bg-subtle);
   padding: 8px 10px;
@@ -311,6 +331,7 @@ a:hover { text-decoration: underline; }
   padding: 8px 10px;
   border-bottom: 1px solid var(--c-border);
   font-size: 13px;
+  word-break: break-word;
 }
 .wc-table tr:last-child td { border-bottom: none; }
 .wc-table td.num, .wc-table th.num {

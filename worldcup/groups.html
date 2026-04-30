@@ -17,14 +17,9 @@
 
 <div class="wc-container">
 
-  <nav class="wc-nav">
-    <a href="./">📅 トップ</a>
-    <a href="./japan.html">🇯🇵 日本代表</a>
-    <a href="./groups.html" class="active">📊 グループ順位</a>
-    <a href="./bracket.html">🏆 トーナメント</a>
-    <a href="./countries.html">🌍 48か国</a>
-    <a href="./rules.html">📜 ルール</a>
-  </nav>
+  <nav class="wc-nav" id="wcNav"></nav>
+  <script src="wc-nav.js"></script>
+  <script>document.getElementById('wcNav').innerHTML = wcRenderNav('groups');</script>
 
   <p class="wc-empty" style="text-align:left; padding: 12px 14px; background:#fff8ed; border:1px solid #f0d8a0; border-radius:8px; font-size:12px;">
     💡 大会開幕前は全チームが0-0-0スタート。試合進行に伴い自動更新されます。

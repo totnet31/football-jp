@@ -72,14 +72,9 @@
 
 <div class="wc-container">
 
-  <nav class="wc-nav">
-    <a href="./">📅 トップ</a>
-    <a href="./japan.html">🇯🇵 日本代表</a>
-    <a href="./groups.html">📊 グループ順位</a>
-    <a href="./bracket.html">🏆 トーナメント</a>
-    <a href="./countries.html">🌍 48か国</a>
-    <a href="./rules.html" class="active">📜 ルール</a>
-  </nav>
+  <nav class="wc-nav" id="wcNav"></nav>
+  <script src="wc-nav.js"></script>
+  <script>document.getElementById('wcNav').innerHTML = wcRenderNav('rules');</script>
 
   <div class="rules-toc">
     <strong>📑 目次：</strong>
