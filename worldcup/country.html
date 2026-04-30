@@ -71,6 +71,54 @@
     .matches-list {
       margin-top: 10px;
     }
+    .squad-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13px;
+      margin-top: 4px;
+    }
+    .squad-table th {
+      background: #f0f1f5;
+      color: var(--wc-primary);
+      font-weight: 600;
+      font-size: 11px;
+      padding: 8px 6px;
+      text-align: left;
+      border-bottom: 2px solid var(--wc-primary);
+    }
+    .squad-table td {
+      padding: 8px 6px;
+      border-bottom: 1px solid var(--wc-border);
+      font-size: 12px;
+    }
+    .squad-table td.num {
+      text-align: right;
+      font-feature-settings: "tnum";
+    }
+    .squad-table tr.pos-GK { background: #fff3e6; }
+    .squad-table tr.pos-DF { background: #e8f0fb; }
+    .squad-table tr.pos-MF { background: #f0f6e8; }
+    .squad-table tr.pos-FW { background: #ffeef0; }
+    .squad-table .pos-tag {
+      display: inline-block;
+      padding: 1px 6px;
+      border-radius: 3px;
+      font-size: 10px;
+      font-weight: 700;
+      color: white;
+    }
+    .pos-tag.GK { background: #e07b00; }
+    .pos-tag.DF { background: #2c5e9e; }
+    .pos-tag.MF { background: #5a8a3a; }
+    .pos-tag.FW { background: #c1304a; }
+    .squad-disclaimer {
+      background: #fff8ed;
+      border-left: 3px solid #d4af37;
+      padding: 8px 12px;
+      margin: 10px 0;
+      font-size: 12px;
+      line-height: 1.6;
+    }
   </style>
 </head>
 <body class="wc-page">
@@ -107,12 +155,15 @@
   const params = new URLSearchParams(window.location.search);
   const tla = (params.get('tla') || 'JPN').toUpperCase();
 
-  const [profilesRes, matchesRes] = await Promise.all([
+  const [profilesRes, matchesRes, squadsRes] = await Promise.all([
     fetch('../data/wc2026/country_profiles.json'),
     fetch('../data/wc2026/matches.json'),
+    fetch('../data/wc2026/squads.json').catch(() => null),
   ]);
   const profiles = (await profilesRes.json()).profiles;
   const matches = (await matchesRes.json()).matches || [];
+  const squadsData = squadsRes ? await squadsRes.json().catch(() => null) : null;
+  const squad = squadsData ? squadsData[tla] : null;
 
   const p = profiles[tla];
   if (!p) {
@@ -194,6 +245,65 @@
       <section class="country-section">
         <h3>📅 ${escapeHtml(p.ja)}の試合（グループステージ）</h3>
         <div class="matches-list">${teamMatches.map(m => renderMatchSummary(m, tla)).join('')}</div>
+      </section>
+    `;
+  }
+
+  // スカッド表
+  if (squad && squad.players && squad.players.length > 0) {
+    const players = squad.players.slice().sort((a, b) => {
+      const posOrder = { GK: 0, DF: 1, MF: 2, FW: 3 };
+      const pa = posOrder[a.pos] ?? 9;
+      const pb = posOrder[b.pos] ?? 9;
+      if (pa !== pb) return pa - pb;
+      return (a.no || 0) - (b.no || 0);
+    });
+    const ageAt = (dob) => {
+      try {
+        const d = new Date(dob);
+        const ref = new Date('2026-06-11');
+        let age = ref.getFullYear() - d.getFullYear();
+        const m = ref.getMonth() - d.getMonth();
+        if (m < 0 || (m === 0 && ref.getDate() < d.getDate())) age--;
+        return age;
+      } catch { return ''; }
+    };
+    const rows = players.map(pl => {
+      return `<tr class="pos-${pl.pos}">
+        <td class="num">${pl.no || '—'}</td>
+        <td><span class="pos-tag ${pl.pos}">${pl.pos || '—'}</span></td>
+        <td><strong>${escapeHtml(pl.name_ja)}</strong><br><span style="font-size:10px;color:var(--wc-text-sub);">${escapeHtml(pl.name_en)}</span></td>
+        <td>${escapeHtml(pl.club || '—')}</td>
+        <td class="num">${pl.dob || '—'}<br><span style="font-size:10px;color:var(--wc-text-sub);">(${ageAt(pl.dob)}歳)</span></td>
+        <td class="num">${pl.height_cm ? pl.height_cm + 'cm' : '—'}</td>
+        <td class="num">${pl.weight_kg ? pl.weight_kg + 'kg' : '—'}</td>
+      </tr>`;
+    }).join('');
+    html += `
+      <section class="country-section">
+        <h3>👥 ${escapeHtml(p.ja)}代表 全選手プロフィール（${players.length}名）</h3>
+        <div class="squad-disclaimer">
+          ⚠️ ${escapeHtml(squad.as_of || '参考データ')}を表示中。
+          2026年最終スカッドは6/1のFIFA発表後に更新します。
+          <span style="display:block; margin-top:4px; font-size:11px; color:var(--wc-text-sub);">出典: ${escapeHtml(squadsData._source || 'unknown')}</span>
+        </div>
+        <table class="squad-table">
+          <thead>
+            <tr><th>#</th><th>Pos</th><th>選手名</th><th>所属クラブ</th><th>生年月日</th><th>身長</th><th>体重</th></tr>
+          </thead>
+          <tbody>${rows}</tbody>
+        </table>
+      </section>
+    `;
+  } else if (p && p.detailed) {
+    // 詳細ページがあるけどスカッド未登録
+    html += `
+      <section class="country-section">
+        <h3>👥 ${escapeHtml(p.ja)}代表 全選手プロフィール</h3>
+        <div class="squad-disclaimer">
+          ⏳ 全選手プロフィールは準備中です。<br>
+          5/11の予備リスト（35〜55名）または6/1の最終スカッド（23〜26名）発表後に表示予定。
+        </div>
       </section>
     `;
   }
