@@ -342,6 +342,7 @@
     const cls = ['match'];
     if (isToday) cls.push('today');
     if (finished) cls.push('finished');
+    if (homeCorner || awayCorner) cls.push('has-jp-corner');
     // 終了試合は詳細モーダル可（イベント無しでも空状態で表示）
     const hasDetails = finished;
     if (hasDetails) cls.push('clickable');
