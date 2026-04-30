@@ -289,13 +289,19 @@
     const events = matchEvents[String(m.id)] || [];
     const homeJpGoals = events.filter(e => e.type === 'goal' && e.side === 'home' && e.is_japanese);
     const awayJpGoals = events.filter(e => e.type === 'goal' && e.side === 'away' && e.is_japanese);
+    const homeJpAssists = events.filter(e => e.type === 'assist' && e.side === 'home' && e.is_japanese);
+    const awayJpAssists = events.filter(e => e.type === 'assist' && e.side === 'away' && e.is_japanese);
+    const cornerBadge = (hasG, hasA) => {
+      if (!hasG && !hasA) return '';
+      const label = (hasG ? 'G' : '') + (hasA ? 'A' : '');
+      return `<span class="jp-corner" title="日本人選手の${hasG ? 'ゴール':''}${hasG && hasA ? '/':''}${hasA ? 'アシスト':''}（タップで詳細）">🇯🇵 <strong>${label}</strong></span>`;
+    };
+    const homeCorner = cornerBadge(homeJpGoals.length > 0, homeJpAssists.length > 0);
+    const awayCorner = cornerBadge(awayJpGoals.length > 0, awayJpAssists.length > 0);
 
-    const teamRow = (name, crest, scoreVal, win, jp, jpHasGoal) => {
+    const teamRow = (name, crest, scoreVal, win, jp) => {
       const jpHtml = jp.length > 0
         ? `<span class="team-jp">🇯🇵 ${jp.map(p => escape(p.name_ja)).join('・')}</span>`
-        : '';
-      const goalHtml = jpHasGoal
-        ? `<span class="jp-goal-badge" title="日本人選手ゴールあり（タップで詳細）">⚽ ゴール</span>`
         : '';
       const crestHtml = crest ? `<img class="team-crest" src="${escape(crest)}" alt="" loading="lazy">` : '<span class="team-crest"></span>';
       const scoreHtml = scoreVal != null ? `<span class="team-score">${scoreVal}</span>` : '';
@@ -304,7 +310,6 @@
         <div class="team-mid">
           <span class="team-name">${escape(name)}</span>
           ${jpHtml}
-          ${goalHtml}
         </div>
         ${scoreHtml}
       </div>`;
@@ -352,11 +357,13 @@
     }
 
     return `<div class="${cls.join(' ')}"${hasDetails ? ` data-match-id="${m.id}"` : ''}>
+      ${homeCorner ? `<div class="jp-corner-wrap left">${homeCorner}</div>` : ''}
+      ${awayCorner ? `<div class="jp-corner-wrap right">${awayCorner}</div>` : ''}
       <div class="match-top${highlightCell ? ' has-highlight' : ''}">
         <div class="kickoff">${timeLabel}</div>
         <div class="teams">
-          ${teamRow(m.home_ja, m.home_crest, score ? score.home : null, homeWin, homeJp, homeJpGoals.length > 0)}
-          ${teamRow(m.away_ja, m.away_crest, score ? score.away : null, awayWin, awayJp, awayJpGoals.length > 0)}
+          ${teamRow(m.home_ja, m.home_crest, score ? score.home : null, homeWin, homeJp)}
+          ${teamRow(m.away_ja, m.away_crest, score ? score.away : null, awayWin, awayJp)}
         </div>
         ${highlightCell}
       </div>
