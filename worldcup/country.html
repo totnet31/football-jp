@@ -119,6 +119,42 @@
       font-size: 12px;
       line-height: 1.6;
     }
+    .club-name { font-weight: 600; }
+    .club-country {
+      display: block;
+      font-size: 10px;
+      color: var(--wc-text-sub);
+      margin-top: 1px;
+    }
+    /* モバイル：表からカード型へ切替 */
+    @media (max-width: 600px) {
+      .squad-table { display: block; font-size: 12px; }
+      .squad-table thead { display: none; }
+      .squad-table tbody { display: block; }
+      .squad-table tr {
+        display: grid;
+        grid-template-columns: auto 1fr auto;
+        gap: 4px 10px;
+        padding: 10px 12px;
+        border: 1px solid var(--wc-border);
+        border-radius: 8px;
+        margin-bottom: 6px;
+        align-items: start;
+      }
+      .squad-table td { display: block; padding: 0; border: none; }
+      .squad-table td.col-no { grid-column: 1; grid-row: 1; font-weight:700; font-size: 14px; align-self: center; min-width: 26px; text-align: center; color: var(--wc-text-sub); }
+      .squad-table td.col-pos { grid-column: 1; grid-row: 2; align-self: center; }
+      .squad-table td.col-name { grid-column: 2; grid-row: 1 / span 2; }
+      .squad-table td.col-club { grid-column: 1 / span 3; grid-row: 3; font-size: 11px; padding-top: 4px; border-top: 1px dashed var(--wc-border); margin-top: 4px; }
+      .squad-table td.col-dob { grid-column: 3; grid-row: 1; text-align: right; font-size: 11px; }
+      .squad-table td.col-h, .squad-table td.col-w { display: none !important; }
+      .squad-table td.col-hw {
+        display: block !important;
+        grid-column: 3; grid-row: 2; text-align: right; font-size: 11px;
+        font-feature-settings: "tnum";
+      }
+      .club-country { display: inline; margin-left: 6px; }
+    }
   </style>
 </head>
 <body class="wc-page">
@@ -268,15 +304,25 @@
         return age;
       } catch { return ''; }
     };
+    // クラブ名を「クラブ名」と「(国名)」に分離
+    const splitClub = (club) => {
+      if (!club) return { name: '—', country: '' };
+      const m = club.match(/^(.+?)\s*\((.+?)\)\s*$/);
+      if (m) return { name: m[1].trim(), country: m[2].trim() };
+      return { name: club.trim(), country: '' };
+    };
     const rows = players.map(pl => {
+      const c = splitClub(pl.club);
+      const ageStr = ageAt(pl.dob);
       return `<tr class="pos-${pl.pos}">
-        <td class="num">${pl.no || '—'}</td>
-        <td><span class="pos-tag ${pl.pos}">${pl.pos || '—'}</span></td>
-        <td><strong>${escapeHtml(pl.name_ja)}</strong><br><span style="font-size:10px;color:var(--wc-text-sub);">${escapeHtml(pl.name_en)}</span></td>
-        <td>${escapeHtml(pl.club || '—')}</td>
-        <td class="num">${pl.dob || '—'}<br><span style="font-size:10px;color:var(--wc-text-sub);">(${ageAt(pl.dob)}歳)</span></td>
-        <td class="num">${pl.height_cm ? pl.height_cm + 'cm' : '—'}</td>
-        <td class="num">${pl.weight_kg ? pl.weight_kg + 'kg' : '—'}</td>
+        <td class="num col-no">${pl.no || '—'}</td>
+        <td class="col-pos"><span class="pos-tag ${pl.pos}">${pl.pos || '—'}</span></td>
+        <td class="col-name"><strong>${escapeHtml(pl.name_ja)}</strong><br><span style="font-size:10px;color:var(--wc-text-sub);">${escapeHtml(pl.name_en)}</span></td>
+        <td class="col-club"><span class="club-name">${escapeHtml(c.name)}</span>${c.country ? `<span class="club-country">${escapeHtml(c.country)}</span>` : ''}</td>
+        <td class="num col-dob">${pl.dob ? pl.dob.slice(2) : '—'}<br><span style="font-size:10px;color:var(--wc-text-sub);">${ageStr ? ageStr+'歳' : ''}</span></td>
+        <td class="num col-h hide-on-mobile">${pl.height_cm ? pl.height_cm + 'cm' : '—'}</td>
+        <td class="num col-w hide-on-mobile">${pl.weight_kg ? pl.weight_kg + 'kg' : '—'}</td>
+        <td class="num col-hw show-on-mobile" style="display:none;">${pl.height_cm || '—'}/${pl.weight_kg || '—'}</td>
       </tr>`;
     }).join('');
     html += `
