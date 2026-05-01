@@ -189,19 +189,44 @@ function injectMatchSchema(matches) {
   if (!matches || !matches.length) return;
   const data = matches.map(m => {
     const finished = m.status === 'FINISHED';
-    return {
+    const start = new Date(m.kickoff_jst);
+    const end = new Date(start.getTime() + 105 * 60 * 1000);
+    const pad2 = n => String(n).padStart(2, '0');
+    const endJst = `${end.getFullYear()}-${pad2(end.getMonth()+1)}-${pad2(end.getDate())}T${pad2(end.getHours())}:${pad2(end.getMinutes())}:00+09:00`;
+    const venue = m.venue || `${m.home_ja} ホームスタジアム`;
+    const evt = {
       '@context': 'https://schema.org',
       '@type': 'SportsEvent',
       'name': `${m.home_ja} vs ${m.away_ja}`,
+      'description': `FIFA W杯2026 グループステージ：${m.home_ja} vs ${m.away_ja}（${start.getFullYear()}年${start.getMonth()+1}月${start.getDate()}日 ${pad2(start.getHours())}:${pad2(start.getMinutes())} JSTキックオフ）`,
       'startDate': m.kickoff_jst,
+      'endDate': endJst,
       'sport': 'Football',
-      'homeTeam': { '@type': 'SportsTeam', 'name': m.home_ja },
-      'awayTeam': { '@type': 'SportsTeam', 'name': m.away_ja },
-      'organizer': { '@type': 'SportsOrganization', 'name': 'FIFA World Cup 2026' },
+      'location': {
+        '@type': 'Place',
+        'name': venue,
+        'address': {
+          '@type': 'PostalAddress',
+          'addressCountry': m.host_country_code || 'US'
+        }
+      },
+      'homeTeam': { '@type': 'SportsTeam', 'name': m.home_ja, 'sport': 'Football' },
+      'awayTeam': { '@type': 'SportsTeam', 'name': m.away_ja, 'sport': 'Football' },
+      'performer': [
+        { '@type': 'SportsTeam', 'name': m.home_ja },
+        { '@type': 'SportsTeam', 'name': m.away_ja }
+      ],
+      'organizer': {
+        '@type': 'SportsOrganization',
+        'name': 'FIFA World Cup 2026',
+        'url': 'https://www.fifa.com/worldcup/'
+      },
       'eventStatus': finished
         ? 'https://schema.org/EventCompleted'
         : 'https://schema.org/EventScheduled'
     };
+    if (m.home_crest) evt.image = m.home_crest;
+    return evt;
   });
   const script = document.createElement('script');
   script.type = 'application/ld+json';
