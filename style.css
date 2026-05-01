@@ -1095,3 +1095,96 @@ footer a { color: var(--text-sub); }
   text-align: center;
   font-style: italic;
 }
+
+/* ======================================
+   Legal pages (privacy, terms etc.)
+   ====================================== */
+.legal-page {
+  background: #fafafa;
+  color: #222;
+}
+.legal-header {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 24px 20px 12px;
+  border-bottom: 1px solid #e0e0e0;
+}
+.legal-header h1 {
+  font-size: 1.6rem;
+  margin: 8px 0 4px;
+  color: #1a1a1a;
+}
+.legal-meta {
+  font-size: 0.85rem;
+  color: #666;
+  margin: 4px 0 0;
+}
+.legal-back-link {
+  display: inline-block;
+  font-size: 0.9rem;
+  color: #0a4ea0;
+  text-decoration: none;
+  margin-bottom: 4px;
+}
+.legal-back-link:hover { text-decoration: underline; }
+
+.legal-main {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 16px 20px 32px;
+  line-height: 1.75;
+  font-size: 0.95rem;
+}
+.legal-main section { margin: 24px 0; }
+.legal-main h2 {
+  font-size: 1.1rem;
+  margin: 0 0 8px;
+  padding-bottom: 6px;
+  border-bottom: 2px solid #0a4ea0;
+  color: #0a4ea0;
+}
+.legal-main p { margin: 8px 0; }
+.legal-main ul {
+  margin: 8px 0 8px 20px;
+  padding-left: 8px;
+}
+.legal-main li { margin: 4px 0; }
+.legal-main a {
+  color: #0a4ea0;
+  text-decoration: underline;
+}
+.legal-contact { list-style: none; margin-left: 0; padding-left: 0; }
+.legal-contact li {
+  background: #fff;
+  border: 1px solid #ddd;
+  padding: 8px 12px;
+  border-radius: 4px;
+  margin: 6px 0;
+}
+
+.legal-footer {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 16px 20px 32px;
+  border-top: 1px solid #e0e0e0;
+  text-align: center;
+  font-size: 0.85rem;
+  color: #666;
+}
+.legal-footer a {
+  color: #0a4ea0;
+  text-decoration: none;
+}
+.legal-footer a:hover { text-decoration: underline; }
+.legal-copy { margin-top: 12px; }
+
+/* footer-links (privacy link in site footer) */
+.footer-links {
+  margin-top: 8px;
+  font-size: 0.85rem;
+}
+.footer-links a {
+  color: #666;
+  text-decoration: underline;
+}
+.footer-links a:hover { color: #0a4ea0; }
