@@ -105,6 +105,29 @@
 </div>
 
 <script>
+// TLA → slug マッピング（generate_country_pages.py と同期）
+const TLA_SLUG = {
+  "ALG": "algeria", "ARG": "argentina", "AUS": "australia", "AUT": "austria",
+  "BEL": "belgium", "BIH": "bosnia-herzegovina", "BRA": "brazil", "CAN": "canada",
+  "CPV": "cape-verde-islands", "COL": "colombia", "COD": "congo-dr", "CRO": "croatia",
+  "CUR": "curacao", "CUW": "curacao-cuw", "CZE": "czechia", "ECU": "ecuador",
+  "EGY": "egypt", "ENG": "england", "FRA": "france", "GER": "germany",
+  "GHA": "ghana", "HAI": "haiti", "IRN": "iran", "IRQ": "iraq",
+  "CIV": "ivory-coast", "JPN": "japan", "JOR": "jordan", "MEX": "mexico",
+  "MAR": "morocco", "NED": "netherlands", "NZL": "new-zealand", "NOR": "norway",
+  "PAN": "panama", "PAR": "paraguay", "POR": "portugal", "QAT": "qatar",
+  "KSA": "saudi-arabia", "SCO": "scotland", "SEN": "senegal", "RSA": "south-africa",
+  "KOR": "south-korea", "ESP": "spain", "SWE": "sweden", "SUI": "switzerland",
+  "TUN": "tunisia", "TUR": "turkey", "USA": "united-states", "URU": "uruguay",
+  "UZB": "uzbekistan"
+};
+
+function tlaToSlug(tla) {
+  if (TLA_SLUG[tla]) return TLA_SLUG[tla];
+  // フォールバック: en から動的生成
+  return tla.toLowerCase();
+}
+
 (async () => {
   const [countriesRes, profilesRes] = await Promise.all([
     fetch('../data/wc2026/countries.json'),
@@ -130,7 +153,8 @@
     const cards = list.map(c => {
       const isJp = c.tla === 'JPN';
       const detailMark = c.detailed ? '<span class="badge">★ 詳細</span>' : '';
-      return `<a href="./country.html?tla=${c.tla}" class="country-card ${isJp ? 'is-japan' : ''}">
+      const slug = tlaToSlug(c.tla);
+      return `<a href="./countries/${slug}/" class="country-card ${isJp ? 'is-japan' : ''}">
         <span class="flag">${c.flag}</span>
         <span class="name">${escapeHtml(c.ja)}</span>
         ${detailMark}

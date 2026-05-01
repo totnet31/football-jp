@@ -6,3 +6,54 @@ https://www.football-jp.com/* https://football-jp.com/:splat 301
 
 # pages.dev → 独自ドメイン（旧URLからの301）
 https://football-jp.pages.dev/* https://football-jp.com/:splat 301
+
+# [自動生成] /worldcup/country.html?tla=XXX → 静的ページ 301リダイレクト
+/worldcup/country.html?tla=ALG  /worldcup/countries/algeria/  301
+/worldcup/country.html?tla=ARG  /worldcup/countries/argentina/  301
+/worldcup/country.html?tla=AUS  /worldcup/countries/australia/  301
+/worldcup/country.html?tla=AUT  /worldcup/countries/austria/  301
+/worldcup/country.html?tla=BEL  /worldcup/countries/belgium/  301
+/worldcup/country.html?tla=BIH  /worldcup/countries/bosnia-herzegovina/  301
+/worldcup/country.html?tla=BRA  /worldcup/countries/brazil/  301
+/worldcup/country.html?tla=CAN  /worldcup/countries/canada/  301
+/worldcup/country.html?tla=CIV  /worldcup/countries/ivory-coast/  301
+/worldcup/country.html?tla=COD  /worldcup/countries/congo-dr/  301
+/worldcup/country.html?tla=COL  /worldcup/countries/colombia/  301
+/worldcup/country.html?tla=CPV  /worldcup/countries/cape-verde-islands/  301
+/worldcup/country.html?tla=CRO  /worldcup/countries/croatia/  301
+/worldcup/country.html?tla=CUR  /worldcup/countries/curacao/  301
+/worldcup/country.html?tla=CUW  /worldcup/countries/curacao-cuw/  301
+/worldcup/country.html?tla=CZE  /worldcup/countries/czechia/  301
+/worldcup/country.html?tla=ECU  /worldcup/countries/ecuador/  301
+/worldcup/country.html?tla=EGY  /worldcup/countries/egypt/  301
+/worldcup/country.html?tla=ENG  /worldcup/countries/england/  301
+/worldcup/country.html?tla=ESP  /worldcup/countries/spain/  301
+/worldcup/country.html?tla=FRA  /worldcup/countries/france/  301
+/worldcup/country.html?tla=GER  /worldcup/countries/germany/  301
+/worldcup/country.html?tla=GHA  /worldcup/countries/ghana/  301
+/worldcup/country.html?tla=HAI  /worldcup/countries/haiti/  301
+/worldcup/country.html?tla=IRN  /worldcup/countries/iran/  301
+/worldcup/country.html?tla=IRQ  /worldcup/countries/iraq/  301
+/worldcup/country.html?tla=JOR  /worldcup/countries/jordan/  301
+/worldcup/country.html?tla=JPN  /worldcup/countries/japan/  301
+/worldcup/country.html?tla=KOR  /worldcup/countries/south-korea/  301
+/worldcup/country.html?tla=KSA  /worldcup/countries/saudi-arabia/  301
+/worldcup/country.html?tla=MAR  /worldcup/countries/morocco/  301
+/worldcup/country.html?tla=MEX  /worldcup/countries/mexico/  301
+/worldcup/country.html?tla=NED  /worldcup/countries/netherlands/  301
+/worldcup/country.html?tla=NOR  /worldcup/countries/norway/  301
+/worldcup/country.html?tla=NZL  /worldcup/countries/new-zealand/  301
+/worldcup/country.html?tla=PAN  /worldcup/countries/panama/  301
+/worldcup/country.html?tla=PAR  /worldcup/countries/paraguay/  301
+/worldcup/country.html?tla=POR  /worldcup/countries/portugal/  301
+/worldcup/country.html?tla=QAT  /worldcup/countries/qatar/  301
+/worldcup/country.html?tla=RSA  /worldcup/countries/south-africa/  301
+/worldcup/country.html?tla=SCO  /worldcup/countries/scotland/  301
+/worldcup/country.html?tla=SEN  /worldcup/countries/senegal/  301
+/worldcup/country.html?tla=SUI  /worldcup/countries/switzerland/  301
+/worldcup/country.html?tla=SWE  /worldcup/countries/sweden/  301
+/worldcup/country.html?tla=TUN  /worldcup/countries/tunisia/  301
+/worldcup/country.html?tla=TUR  /worldcup/countries/turkey/  301
+/worldcup/country.html?tla=URU  /worldcup/countries/uruguay/  301
+/worldcup/country.html?tla=USA  /worldcup/countries/united-states/  301
+/worldcup/country.html?tla=UZB  /worldcup/countries/uzbekistan/  301
