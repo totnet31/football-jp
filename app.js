@@ -824,6 +824,21 @@
   }
 
   // ===== SportsEvent Schema.org JSON-LD 注入 =====
+  // 大会の公式サイトURL（organizer.url 用）
+  const COMPETITION_URLS = {
+    39: 'https://www.premierleague.com',
+    40: 'https://www.efl.com/clubs-and-competitions/sky-bet-championship',
+    140: 'https://www.laliga.com',
+    135: 'https://www.legaseriea.it',
+    78: 'https://www.bundesliga.com',
+    61: 'https://www.ligue1.com',
+    88: 'https://eredivisie.nl',
+    94: 'https://www.ligaportugal.pt',
+    2: 'https://www.uefa.com/uefachampionsleague',
+    3: 'https://www.uefa.com/uefaeuropaleague',
+    848: 'https://www.uefa.com/uefaeuropaconferenceleague'
+  };
+
   function injectMatchSchema(matches) {
     // 既存スキーマ（同じid）があれば削除して二重注入防止
     const old = document.getElementById('matchSchema');
@@ -832,28 +847,59 @@
 
     const data = matches.map(m => {
       const finished = m.status === 'FINISHED';
-      return {
+      // 試合終了予定時刻 = キックオフ + 105分（90分 + 15分ハーフタイム）
+      const start = new Date(m.kickoff_jst);
+      const end = new Date(start.getTime() + 105 * 60 * 1000);
+      const endIso = end.toISOString().replace('Z', '+09:00').replace(/\.\d{3}/, '');
+      // ローカルJSTのISO形式に揃える
+      const tz = '+09:00';
+      const pad2 = n => String(n).padStart(2, '0');
+      const endJst = `${end.getFullYear()}-${pad2(end.getMonth()+1)}-${pad2(end.getDate())}T${pad2(end.getHours())}:${pad2(end.getMinutes())}:00${tz}`;
+
+      const event = {
         '@context': 'https://schema.org',
         '@type': 'SportsEvent',
         'name': `${m.home_ja} vs ${m.away_ja}`,
+        'description': `${m.competition_ja}：${m.home_ja} vs ${m.away_ja}（${start.getFullYear()}年${start.getMonth()+1}月${start.getDate()}日 ${pad2(start.getHours())}:${pad2(start.getMinutes())} JSTキックオフ）`,
         'startDate': m.kickoff_jst,
+        'endDate': endJst,
         'sport': 'Football',
+        'location': {
+          '@type': 'Place',
+          'name': `${m.home_ja} ホームスタジアム`,
+          'address': {
+            '@type': 'PostalAddress',
+            'addressCountry': m.competition_flag || ''
+          }
+        },
         'homeTeam': {
           '@type': 'SportsTeam',
-          'name': m.home_ja
+          'name': m.home_ja,
+          'sport': 'Football'
         },
         'awayTeam': {
           '@type': 'SportsTeam',
-          'name': m.away_ja
+          'name': m.away_ja,
+          'sport': 'Football'
         },
+        'performer': [
+          { '@type': 'SportsTeam', 'name': m.home_ja },
+          { '@type': 'SportsTeam', 'name': m.away_ja }
+        ],
         'organizer': {
           '@type': 'SportsOrganization',
-          'name': m.competition_ja
+          'name': m.competition_ja,
+          'url': COMPETITION_URLS[m.competition_id] || 'https://football-jp.com/'
         },
         'eventStatus': finished
           ? 'https://schema.org/EventCompleted'
           : 'https://schema.org/EventScheduled'
       };
+      // 画像（ホームチームのクレスト）— あれば付加
+      if (m.home_crest) {
+        event.image = m.home_crest;
+      }
+      return event;
     });
 
     const script = document.createElement('script');
