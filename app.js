@@ -125,6 +125,8 @@
       buildRankLeagueOptions();
       initCalCursor();
       switchView(currentView);
+      // Schema.org SportsEvent 注入
+      injectSchemaForView();
     } catch (e) {
       listEl.innerHTML = `<p class="empty">データの読み込みに失敗しました: ${escape(e.message)}<br>scripts/fetch_matches.py を実行してください。</p>`;
     }
@@ -819,6 +821,77 @@
   function fmtKickoff(iso) {
     const d = new Date(iso);
     return `${d.getFullYear()}/${pad(d.getMonth()+1)}/${pad(d.getDate())}（${WEEKDAY[d.getDay()]}）${pad(d.getHours())}:${pad(d.getMinutes())} キックオフ`;
+  }
+
+  // ===== SportsEvent Schema.org JSON-LD 注入 =====
+  function injectMatchSchema(matches) {
+    // 既存スキーマ（同じid）があれば削除して二重注入防止
+    const old = document.getElementById('matchSchema');
+    if (old) old.remove();
+    if (!matches || !matches.length) return;
+
+    const data = matches.map(m => {
+      const finished = m.status === 'FINISHED';
+      return {
+        '@context': 'https://schema.org',
+        '@type': 'SportsEvent',
+        'name': `${m.home_ja} vs ${m.away_ja}`,
+        'startDate': m.kickoff_jst,
+        'sport': 'Football',
+        'homeTeam': {
+          '@type': 'SportsTeam',
+          'name': m.home_ja
+        },
+        'awayTeam': {
+          '@type': 'SportsTeam',
+          'name': m.away_ja
+        },
+        'organizer': {
+          '@type': 'SportsOrganization',
+          'name': m.competition_ja
+        },
+        'eventStatus': finished
+          ? 'https://schema.org/EventCompleted'
+          : 'https://schema.org/EventScheduled'
+      };
+    });
+
+    const script = document.createElement('script');
+    script.type = 'application/ld+json';
+    script.id = 'matchSchema';
+    script.textContent = JSON.stringify(data);
+    document.head.appendChild(script);
+  }
+
+  function injectSchemaForView() {
+    const now = new Date();
+    let schemaMatches = [];
+
+    if (currentView === 'schedule') {
+      // 予定試合（未終了）の先頭10件
+      schemaMatches = filtered()
+        .filter(m => m.status !== 'FINISHED')
+        .slice(0, 10);
+    } else if (currentView === 'results') {
+      // 終了済み試合の最新10件（降順で先頭10件）
+      schemaMatches = filtered()
+        .filter(m => m.status === 'FINISHED')
+        .slice()
+        .reverse()
+        .slice(0, 10);
+    } else if (currentView === 'calendar') {
+      // 当月の試合（最大10件）
+      const y = now.getFullYear();
+      const mo = now.getMonth();
+      schemaMatches = filtered()
+        .filter(m => {
+          const d = new Date(m.kickoff_jst);
+          return d.getFullYear() === y && d.getMonth() === mo;
+        })
+        .slice(0, 10);
+    }
+    // ranking ビューは試合なし → 空配列でスキーマなし
+    injectMatchSchema(schemaMatches);
   }
 
   function renderNews(newsData) {
