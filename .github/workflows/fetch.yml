@@ -65,6 +65,14 @@ jobs:
           git diff --cached --quiet || git commit -m "data: $(TZ=Asia/Tokyo date '+%Y-%m-%d') 自動更新"
           git push
 
+      - name: developにmainをマージして同期
+        run: |
+          git fetch origin develop
+          git checkout develop
+          git merge main --no-edit
+          git push origin develop
+          git checkout main
+
       - name: 失敗時にDiscordへ通知
         if: failure()
         env:
