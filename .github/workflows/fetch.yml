@@ -16,8 +16,11 @@ jobs:
       FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
 
     steps:
-      - name: リポジトリを取得
+      - name: リポジトリを取得（develop ブランチ）
         uses: actions/checkout@v4
+        with:
+          ref: develop
+          fetch-depth: 0  # main も参照したいので全履歴
 
       - name: Python をセットアップ
         uses: actions/setup-python@v5
@@ -26,6 +29,14 @@ jobs:
 
       - name: APIキーを設定
         run: echo "FOOTBALL_DATA_TOKEN=${{ secrets.FOOTBALL_DATA_TOKEN }}" > .env
+
+      - name: 既存コード変更があれば main から取り込み
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git fetch origin main
+          # main の変更を develop に反映（コンフリクト時はdevelop優先）
+          git merge origin/main --no-edit -X theirs || true
 
       - name: データ取得スクリプトを実行
         run: python3 scripts/fetch_matches.py
@@ -57,21 +68,38 @@ jobs:
         run: python3 scripts/fetch_uefa_secondary.py
         continue-on-error: true
 
-      - name: 更新したデータをGitHubに保存
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add data/
-          git diff --cached --quiet || git commit -m "data: $(TZ=Asia/Tokyo date '+%Y-%m-%d') 自動更新"
-          git push
+      - name: スモークテスト（data整合性チェック）
+        id: smoke
+        run: python3 scripts/smoke_test.py
 
-      - name: developにmainをマージして同期
+      - name: developにデータ変更を保存
+        id: commit_data
         run: |
-          git fetch origin develop
-          git checkout develop
-          git merge main --no-edit
-          git push origin develop
+          git add data/
+          if git diff --cached --quiet; then
+            echo "no_change=true" >> $GITHUB_OUTPUT
+            echo "データ変更なし"
+          else
+            git commit -m "data: $(TZ=Asia/Tokyo date '+%Y-%m-%d') 自動更新"
+            git push origin develop
+            echo "no_change=false" >> $GITHUB_OUTPUT
+          fi
+
+      - name: スモークOKならmainにマージ（dataフォルダのみ）
+        if: steps.commit_data.outputs.no_change != 'true'
+        run: |
+          # main に切替
           git checkout main
+          git pull origin main
+          # develop の data/ 配下だけを main に反映（develop に未マージのコード変更を本番化しない）
+          git checkout develop -- data/
+          if git diff --cached --quiet && [ -z "$(git status --porcelain)" ]; then
+            echo "main 側に data 変更が無いためスキップ"
+          else
+            git add data/
+            git diff --cached --quiet || git commit -m "data: $(TZ=Asia/Tokyo date '+%Y-%m-%d') 自動更新（develop→main）"
+            git push origin main
+          fi
 
       - name: 失敗時にDiscordへ通知
         if: failure()
@@ -83,7 +111,7 @@ jobs:
             exit 0
           fi
           RUN_URL="${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
-          MSG="⚠️ football-jp の自動データ更新が失敗しました\\nRun: $RUN_URL"
+          MSG="⚠️ football-jp の自動データ更新が失敗しました（main未反映の可能性）\\nRun: $RUN_URL"
           curl -s -X POST "$WEBHOOK" \
             -H "Content-Type: application/json" \
             -d "{\"content\": \"$MSG\"}" || true
