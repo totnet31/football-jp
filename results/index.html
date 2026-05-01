@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>海外サッカー 日本人選手 試合スケジュール｜football-jp</title>
-  <meta name="description" content="プレミア・ラ・リーガ・セリエA・ブンデス・リーグ1・エールディビジ等で活躍する日本人選手の試合スケジュールを日本時間で。ハイライト動画＋日本人選手の得点をワンクリック確認。">
-  <link rel="canonical" href="https://football-jp.com/">
+  <title>海外サッカー 日本人選手 試合結果｜football-jp</title>
+  <meta name="description" content="プレミア・ラ・リーガ・セリエA・ブンデス・リーグ1・エールディビジ等で活躍する日本人選手の最新試合結果。スコア・ゴール・アシスト・ハイライト動画を日本時間で。">
+  <link rel="canonical" href="https://football-jp.com/results/">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://football-jp.com/">
-  <meta property="og:title" content="海外サッカー 日本人選手 試合スケジュール｜football-jp">
-  <meta property="og:description" content="プレミア・ラ・リーガ・セリエA・ブンデス等で活躍する日本人選手の試合スケジュールを日本時間で。">
+  <meta property="og:url" content="https://football-jp.com/results/">
+  <meta property="og:title" content="海外サッカー 日本人選手 試合結果｜football-jp">
+  <meta property="og:description" content="プレミア・ラ・リーガ・セリエA・ブンデス等で活躍する日本人選手の最新試合結果を日本時間で。">
   <meta property="og:site_name" content="football-jp">
   <meta property="og:locale" content="ja_JP">
   <meta name="twitter:card" content="summary_large_image">
@@ -28,9 +28,9 @@
   <link rel="icon" type="image/png" sizes="16x16" href="/assets/logos/favicon-16.png">
   <link rel="apple-touch-icon" sizes="180x180" href="/assets/logos/favicon-180.png">
 </head>
-<body data-view="schedule">
+<body data-view="results">
   <header>
-    <h1><img src="/assets/logos/logo-header.png" alt="football-jp" class="header-logo"> 海外サッカー 日本人選手 試合スケジュール</h1>
+    <h1><a href="/" style="color:inherit;text-decoration:none;"><img src="/assets/logos/logo-header.png" alt="football-jp" class="header-logo"> 海外サッカー 日本人選手 試合結果</a></h1>
     <p class="updated" id="updated"></p>
     <p class="period" id="period"></p>
   </header>
@@ -50,14 +50,14 @@
   </a>
 
   <nav class="view-tabs">
-    <a class="view-tab active" href="/" data-view="schedule">
+    <a class="view-tab" href="/" data-view="schedule">
       <svg class="vt-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
         <circle cx="12" cy="12" r="9"/>
         <path d="M12 7v5l3.5 2"/>
       </svg>
       <span>予定を見る</span>
     </a>
-    <a class="view-tab" href="/results/" data-view="results">
+    <a class="view-tab active" href="/results/" data-view="results">
       <svg class="vt-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
         <circle cx="12" cy="12" r="9"/>
         <path d="M8 12.5l3 3 5-6"/>
@@ -111,8 +111,8 @@
       <p class="news-source-note">出典：サッカーキング・Football Channel・Footballista・THE WORLD・ゲキサカ・Football Zone 各公式RSS／毎朝7時更新</p>
     </details>
 
-    <div id="scheduleView" class="view"></div>
-    <div id="resultsView" class="view hidden"></div>
+    <div id="scheduleView" class="view hidden"></div>
+    <div id="resultsView" class="view"></div>
 
     <div id="calendarView" class="view hidden">
       <div class="cal-nav">
@@ -153,7 +153,6 @@
 
   <script src="/app.js"></script>
   <script>
-  // W杯 日本初戦カウントダウン (Netherlands vs Japan: 2026-06-15 05:00 JST)
   (function() {
     const target = new Date('2026-06-15T05:00:00+09:00').getTime();
     const el = document.getElementById('wcDays');
@@ -165,7 +164,7 @@
       el.innerHTML = `<span class="num">${days}</span><span class="unit">日</span>`;
     }
     tick();
-    setInterval(tick, 60000); // 毎分更新
+    setInterval(tick, 60000);
   })();
   </script>
 </body>
