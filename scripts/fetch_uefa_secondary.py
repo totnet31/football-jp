@@ -16,6 +16,7 @@ Wikipedia の knockout phase ページから {{Football box}} テンプレート
 import json
 import re
 import sys
+import time
 from pathlib import Path
 from urllib.request import Request, urlopen
 from urllib.error import HTTPError, URLError
@@ -27,7 +28,7 @@ JST = timezone(timedelta(hours=9))
 UTC = timezone.utc
 
 WIKI_API = "https://en.wikipedia.org/w/api.php"
-UA = "Mozilla/5.0 football-jp/0.1"
+UA = "football-jp/1.0 (https://football-jp.com; contact: saito@tottot.net) Python-urllib"
 
 COMPETITIONS = [
     {
@@ -60,16 +61,31 @@ STAGE_NORMALIZE = {
 }
 
 
-def fetch_wikitext(title):
+def fetch_wikitext(title, max_retries=4):
     from urllib.parse import quote
     url = f"{WIKI_API}?action=parse&page={quote(title)}&prop=wikitext&format=json&formatversion=2&redirects=1"
-    req = Request(url, headers={"User-Agent": UA})
-    try:
-        with urlopen(req, timeout=20) as r:
-            return json.loads(r.read()).get("parse", {}).get("wikitext", "")
-    except (HTTPError, URLError) as e:
-        print(f"  [ERROR] {title}: {e}", file=sys.stderr)
-        return ""
+    for attempt in range(max_retries):
+        req = Request(url, headers={"User-Agent": UA, "Accept": "application/json"})
+        try:
+            with urlopen(req, timeout=30) as r:
+                return json.loads(r.read()).get("parse", {}).get("wikitext", "")
+        except HTTPError as e:
+            if e.code == 429 and attempt < max_retries - 1:
+                wait = 2 ** (attempt + 2)  # 4, 8, 16, 32秒
+                print(f"  [WARN] {title}: HTTP 429（リトライ {attempt+1}/{max_retries}, {wait}秒待機）", file=sys.stderr)
+                time.sleep(wait)
+                continue
+            print(f"  [ERROR] {title}: {e}", file=sys.stderr)
+            return None
+        except URLError as e:
+            if attempt < max_retries - 1:
+                wait = 2 ** (attempt + 1)
+                print(f"  [WARN] {title}: {e}（リトライ {attempt+1}/{max_retries}, {wait}秒待機）", file=sys.stderr)
+                time.sleep(wait)
+                continue
+            print(f"  [ERROR] {title}: {e}", file=sys.stderr)
+            return None
+    return None
 
 
 def strip_wiki(s):
@@ -263,12 +279,16 @@ def main():
     players_data = json.loads((DATA / "players.json").read_text(encoding="utf-8"))
     players_index = [p for p in players_data.get("players", []) if p.get("club_en")]
 
-    new_matches = []
+    # 競技ごとに「取得成功 + 新試合リスト」を保持
+    fetched_per_comp = {}  # comp_short -> list[match] (None なら取得失敗)
     for comp in COMPETITIONS:
         print(f"[INFO] {comp['name_ja']}: {comp['knockout_page']}")
         wt = fetch_wikitext(comp["knockout_page"])
-        if not wt:
+        if wt is None or wt == "":
+            print(f"  [SKIP] {comp['name_short']}: 取得失敗のため既存データ保持")
+            fetched_per_comp[comp["name_short"]] = None
             continue
+        comp_matches = []
         # Semi-finals
         sf_m = re.search(r"==\s*Semi-finals\s*==.*?(?:==\s*Final\s*==)", wt, re.DOTALL)
         sf_section = sf_m.group(0) if sf_m else ""
@@ -276,24 +296,41 @@ def main():
         for body in sf_boxes:
             m = parse_match_box(body, "SEMI_FINALS", comp, clubs_data, players_index)
             if m:
-                new_matches.append(m)
-        # Final（==Final== 以降は他のセクションが続かない場合があるので $ にも対応）
+                comp_matches.append(m)
+        # Final
         fn_m = re.search(r"==\s*Final\s*==(.+)", wt, re.DOTALL)
         fn_section = fn_m.group(1) if fn_m else ""
         fn_boxes = extract_template(fn_section, "Football box")
         for body in fn_boxes:
             m = parse_match_box(body, "FINAL", comp, clubs_data, players_index)
             if m:
-                new_matches.append(m)
-        print(f"  → SF: {len(sf_boxes)}件 / Final: {len(fn_boxes)}件")
+                comp_matches.append(m)
+        print(f"  → SF: {len(sf_boxes)}件 / Final: {len(fn_boxes)}件 / parsed: {len(comp_matches)}件")
+        fetched_per_comp[comp["name_short"]] = comp_matches
+        time.sleep(2)  # Wikipedia 思いやりウェイト
 
-    # 既存matchesと重複排除（idベース）
-    existing_ids = {m.get("id") for m in matches if isinstance(m.get("id"), str) and (m.get("id", "").startswith("EL_") or m.get("id", "").startswith("ECL_"))}
-    # 古い EL/ECL 試合を一旦削除（再生成）
-    matches = [m for m in matches if not (isinstance(m.get("id"), str) and (m.get("id", "").startswith("EL_") or m.get("id", "").startswith("ECL_")))]
+    # 取得成功した競技だけ既存試合を入れ替える（失敗した競技は既存データを保持）
+    new_matches = []
+    for comp in COMPETITIONS:
+        short = comp["name_short"]
+        comp_id = comp["id"]
+        prefix = f"{short}_"
+        if fetched_per_comp.get(short):
+            # 既存の同競技試合を削除し新規で置き換え
+            matches = [m for m in matches
+                       if not (isinstance(m.get("id"), str) and m["id"].startswith(prefix))]
+            new_matches.extend(fetched_per_comp[short])
+
     matches.extend(new_matches)
     # kickoff順にソート
     matches.sort(key=lambda m: m.get("kickoff_jst", ""))
+
+    # サニティチェック：もし全競技失敗で既存も0件なら警告
+    if not new_matches and not any(
+        isinstance(m.get("id"), str) and (m["id"].startswith("EL_") or m["id"].startswith("ECL_"))
+        for m in matches
+    ):
+        print("[WARN] EL/ECL 試合が0件です（取得失敗で既存も無し）", file=sys.stderr)
 
     matches_data["matches"] = matches
     matches_data["match_count"] = len(matches)
