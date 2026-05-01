@@ -51,6 +51,10 @@ jobs:
         run: python3 scripts/fetch_news.py
         continue-on-error: true
 
+      - name: EL/ECL 準決勝・決勝データ取得（Wikipedia）
+        run: python3 scripts/fetch_uefa_secondary.py
+        continue-on-error: true
+
       - name: 更新したデータをGitHubに保存
         run: |
           git config user.name "github-actions[bot]"
