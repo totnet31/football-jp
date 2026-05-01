@@ -86,6 +86,43 @@ def build_page(tla: str, p: dict, slug: str) -> str:
     og_title = esc(title)
     og_url = canonical
 
+    # key_players は JSON-LD 生成でも使うため先に取得
+    key_players = p.get("key_players", [])
+
+    # --- SportsTeam JSON-LD ---
+    schema_obj = {
+        "@context": "https://schema.org",
+        "@type": "SportsTeam",
+        "name": f"{ja} 代表",
+        "alternateName": f"{en} national football team",
+        "sport": "Football",
+        "url": canonical,
+        "memberOf": {
+            "@type": "SportsOrganization",
+            "name": "FIFA"
+        }
+    }
+    # key_players が1件以上あれば athlete を追加（最大5名、nullフィールドは除外）
+    valid_players = []
+    for pl in key_players[:5]:
+        name = pl.get("name") or ""
+        position = pl.get("position") or ""
+        club = pl.get("club") or ""
+        if not name or not position or not club:
+            continue
+        valid_players.append({
+            "@type": "Person",
+            "name": name,
+            "jobTitle": position,
+            "affiliation": {
+                "@type": "SportsTeam",
+                "name": club
+            }
+        })
+    if valid_players:
+        schema_obj["athlete"] = valid_players
+    sports_team_ld = json.dumps(schema_obj, ensure_ascii=False, indent=2)
+
     # --- info-grid values ---
     fifa_rank = p.get("fifa_rank")
     if fifa_rank:
@@ -143,8 +180,7 @@ def build_page(tla: str, p: dict, slug: str) -> str:
       <p>{esc(japan_relation)}</p>
     </section>"""
 
-    # key_players
-    key_players = p.get("key_players", [])
+    # key_players (key_players は上部で取得済み)
     if key_players:
         player_cards = ""
         for pl in key_players:
@@ -375,6 +411,24 @@ def build_page(tla: str, p: dict, slug: str) -> str:
       .club-country {{ display: inline; margin-left: 6px; }}
     }}
   </style>
+  <script type="application/ld+json">
+{sports_team_ld}
+  </script>
+  <script type="application/ld+json">
+{{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "football-jp",
+  "alternateName": "海外サッカー 日本人選手 試合スケジュール",
+  "url": "https://football-jp.com/",
+  "inLanguage": "ja-JP",
+  "publisher": {{
+    "@type": "Organization",
+    "name": "football-jp",
+    "url": "https://football-jp.com/"
+  }}
+}}
+  </script>
 </head>
 <body class="wc-page">
 

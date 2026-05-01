@@ -85,6 +85,9 @@
     .sort((a, b) => a.kickoff_jst.localeCompare(b.kickoff_jst));
   document.getElementById('japanMatches').innerHTML = japan.map(m => renderMatch(m, true)).join('');
 
+  // Schema.org SportsEvent 注入（日本代表戦・最大10件）
+  injectMatchSchema(japan.slice(0, 10));
+
   const groupF = (standingsData.groups || []).find(g => g.group === 'F');
   if (groupF) {
     const rows = groupF.table.map(r => {
@@ -178,6 +181,33 @@ function stageJa(stage, md) {
 
 function escapeHtml(s) {
   return String(s || '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+}
+
+function injectMatchSchema(matches) {
+  const old = document.getElementById('matchSchema');
+  if (old) old.remove();
+  if (!matches || !matches.length) return;
+  const data = matches.map(m => {
+    const finished = m.status === 'FINISHED';
+    return {
+      '@context': 'https://schema.org',
+      '@type': 'SportsEvent',
+      'name': `${m.home_ja} vs ${m.away_ja}`,
+      'startDate': m.kickoff_jst,
+      'sport': 'Football',
+      'homeTeam': { '@type': 'SportsTeam', 'name': m.home_ja },
+      'awayTeam': { '@type': 'SportsTeam', 'name': m.away_ja },
+      'organizer': { '@type': 'SportsOrganization', 'name': 'FIFA World Cup 2026' },
+      'eventStatus': finished
+        ? 'https://schema.org/EventCompleted'
+        : 'https://schema.org/EventScheduled'
+    };
+  });
+  const script = document.createElement('script');
+  script.type = 'application/ld+json';
+  script.id = 'matchSchema';
+  script.textContent = JSON.stringify(data);
+  document.head.appendChild(script);
 }
 </script>
 
