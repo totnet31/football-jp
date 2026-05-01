@@ -47,6 +47,10 @@ jobs:
           fi
         continue-on-error: true
 
+      - name: 日本人選手ニュース取得（RSS集約）
+        run: python3 scripts/fetch_news.py
+        continue-on-error: true
+
       - name: 更新したデータをGitHubに保存
         run: |
           git config user.name "github-actions[bot]"

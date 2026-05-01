@@ -39,10 +39,20 @@
 3. `scripts/fetch_wiki_events.py` — Wikipedia 日本人選手の得点抽出
 4. `scripts/scrape_youtube_highlights.py` — YouTube公式ハイライト自動取得
 
-## ホスティング
+## ホスティング・デプロイフロー
 
-- **Cloudflare Pages**（GitHub `main` ブランチに push で自動デプロイ）
+- **Cloudflare Pages**でホスティング
 - カスタムドメイン: `football-jp.com` / `www.football-jp.com`（apex に301リダイレクト）
+
+### ブランチ運用
+- `main` → **本番環境**（https://football-jp.com/）にデプロイ
+- `develop` → **ステージング環境**（https://develop.football-jp.pages.dev/）にデプロイ
+- その他の任意ブランチ → 各ブランチ専用のプレビューURL
+
+### 推奨ワークフロー
+1. `develop` ブランチで作業 → push
+2. プレビューURL（`https://develop.football-jp.pages.dev/`）で動作確認
+3. OK なら `main` にマージ → 本番反映
 
 ## ライセンス・出典
 
