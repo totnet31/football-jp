@@ -2,7 +2,9 @@ name: 毎朝データ更新
 
 on:
   schedule:
-    - cron: '0 22 * * *'  # 毎日22:00 UTC = 翌7:00 JST
+    - cron: '0 22 * * *'  # 22:00 UTC = 翌7:00 JST（朝・全データ更新）
+    - cron: '0 3 * * *'   # 3:00 UTC = 12:00 JST（昼・EL/ECL等の朝試合の結果反映）
+    - cron: '0 9 * * *'   # 9:00 UTC = 18:00 JST（夕方・WikipediaがUEFA戦の結果を反映した頃）
   workflow_dispatch:        # GitHubの画面から手動実行も可能
 
 jobs:
