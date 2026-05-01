@@ -3,24 +3,197 @@
   "data_source": "football-data.org (free tier)",
   "note": "covered=true の大会のみデータ取得対象。covered=false は将来の有料化時に復活させる。",
   "competitions": [
-    { "id": 39,  "fd_code": "PL",  "name_ja": "プレミアリーグ",                "name_en": "Premier League",              "category": "league", "country": "England",     "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿", "covered": true  },
-    { "id": 40,  "fd_code": "ELC", "name_ja": "チャンピオンシップ",            "name_en": "Championship",                "category": "league", "country": "England",     "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿", "covered": true  },
-    { "id": 45,  "fd_code": null,  "name_ja": "FAカップ",                      "name_en": "FA Cup",                      "category": "cup",    "country": "England",     "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿", "covered": false },
-    { "id": 140, "fd_code": "PD",  "name_ja": "ラ・リーガ",                    "name_en": "La Liga",                     "category": "league", "country": "Spain",       "flag": "🇪🇸", "covered": true  },
-    { "id": 143, "fd_code": null,  "name_ja": "コパ・デル・レイ",              "name_en": "Copa del Rey",                "category": "cup",    "country": "Spain",       "flag": "🇪🇸", "covered": false },
-    { "id": 78,  "fd_code": "BL1", "name_ja": "ブンデスリーガ",                "name_en": "Bundesliga",                  "category": "league", "country": "Germany",     "flag": "🇩🇪", "covered": true  },
-    { "id": 81,  "fd_code": null,  "name_ja": "DFBポカール",                   "name_en": "DFB Pokal",                   "category": "cup",    "country": "Germany",     "flag": "🇩🇪", "covered": false },
-    { "id": 135, "fd_code": "SA",  "name_ja": "セリエA",                       "name_en": "Serie A",                     "category": "league", "country": "Italy",       "flag": "🇮🇹", "covered": true  },
-    { "id": 137, "fd_code": null,  "name_ja": "コッパ・イタリア",              "name_en": "Coppa Italia",                "category": "cup",    "country": "Italy",       "flag": "🇮🇹", "covered": false },
-    { "id": 61,  "fd_code": "FL1", "name_ja": "リーグ・アン",                  "name_en": "Ligue 1",                     "category": "league", "country": "France",      "flag": "🇫🇷", "covered": true  },
-    { "id": 62,  "fd_code": null,  "name_ja": "リーグ・ドゥ",                  "name_en": "Ligue 2",                     "category": "league", "country": "France",      "flag": "🇫🇷", "covered": false },
-    { "id": 66,  "fd_code": null,  "name_ja": "クープ・ドゥ・フランス",        "name_en": "Coupe de France",             "category": "cup",    "country": "France",      "flag": "🇫🇷", "covered": false },
-    { "id": 88,  "fd_code": "DED", "name_ja": "エールディビジ",                "name_en": "Eredivisie",                  "category": "league", "country": "Netherlands", "flag": "🇳🇱", "covered": true  },
-    { "id": 90,  "fd_code": null,  "name_ja": "KNVBベーカー",                  "name_en": "KNVB Beker",                  "category": "cup",    "country": "Netherlands", "flag": "🇳🇱", "covered": false },
-    { "id": 144, "fd_code": null,  "name_ja": "ジュピラー・プロ・リーグ",      "name_en": "Jupiler Pro League",          "category": "league", "country": "Belgium",     "flag": "🇧🇪", "covered": false },
-    { "id": 94,  "fd_code": "PPL", "name_ja": "プリメイラ・リーガ",            "name_en": "Primeira Liga",               "category": "league", "country": "Portugal",    "flag": "🇵🇹", "covered": true  },
-    { "id": 2,   "fd_code": "CL",  "name_ja": "UEFAチャンピオンズリーグ",      "name_en": "UEFA Champions League",       "category": "europe", "country": "Europe",      "flag": "🇪🇺", "covered": true  },
-    { "id": 3,   "fd_code": null,  "name_ja": "UEFAヨーロッパリーグ",          "name_en": "UEFA Europa League",          "category": "europe", "country": "Europe",      "flag": "🇪🇺", "covered": false },
-    { "id": 848, "fd_code": null,  "name_ja": "UEFAカンファレンスリーグ",      "name_en": "UEFA Europa Conference League","category": "europe", "country": "Europe",      "flag": "🇪🇺", "covered": false }
+    {
+      "id": 39,
+      "fd_code": "PL",
+      "name_ja": "プレミアリーグ",
+      "name_en": "Premier League",
+      "category": "league",
+      "country": "England",
+      "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+      "covered": true
+    },
+    {
+      "id": 40,
+      "fd_code": "ELC",
+      "name_ja": "チャンピオンシップ",
+      "name_en": "Championship",
+      "category": "league",
+      "country": "England",
+      "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+      "covered": true
+    },
+    {
+      "id": 45,
+      "fd_code": null,
+      "name_ja": "FAカップ",
+      "name_en": "FA Cup",
+      "category": "cup",
+      "country": "England",
+      "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+      "covered": false
+    },
+    {
+      "id": 140,
+      "fd_code": "PD",
+      "name_ja": "ラ・リーガ",
+      "name_en": "La Liga",
+      "category": "league",
+      "country": "Spain",
+      "flag": "🇪🇸",
+      "covered": true
+    },
+    {
+      "id": 143,
+      "fd_code": null,
+      "name_ja": "コパ・デル・レイ",
+      "name_en": "Copa del Rey",
+      "category": "cup",
+      "country": "Spain",
+      "flag": "🇪🇸",
+      "covered": false
+    },
+    {
+      "id": 78,
+      "fd_code": "BL1",
+      "name_ja": "ブンデスリーガ",
+      "name_en": "Bundesliga",
+      "category": "league",
+      "country": "Germany",
+      "flag": "🇩🇪",
+      "covered": true
+    },
+    {
+      "id": 81,
+      "fd_code": null,
+      "name_ja": "DFBポカール",
+      "name_en": "DFB Pokal",
+      "category": "cup",
+      "country": "Germany",
+      "flag": "🇩🇪",
+      "covered": false
+    },
+    {
+      "id": 135,
+      "fd_code": "SA",
+      "name_ja": "セリエA",
+      "name_en": "Serie A",
+      "category": "league",
+      "country": "Italy",
+      "flag": "🇮🇹",
+      "covered": true
+    },
+    {
+      "id": 137,
+      "fd_code": null,
+      "name_ja": "コッパ・イタリア",
+      "name_en": "Coppa Italia",
+      "category": "cup",
+      "country": "Italy",
+      "flag": "🇮🇹",
+      "covered": false
+    },
+    {
+      "id": 61,
+      "fd_code": "FL1",
+      "name_ja": "リーグ・アン",
+      "name_en": "Ligue 1",
+      "category": "league",
+      "country": "France",
+      "flag": "🇫🇷",
+      "covered": true
+    },
+    {
+      "id": 62,
+      "fd_code": null,
+      "name_ja": "リーグ・ドゥ",
+      "name_en": "Ligue 2",
+      "category": "league",
+      "country": "France",
+      "flag": "🇫🇷",
+      "covered": false
+    },
+    {
+      "id": 66,
+      "fd_code": null,
+      "name_ja": "クープ・ドゥ・フランス",
+      "name_en": "Coupe de France",
+      "category": "cup",
+      "country": "France",
+      "flag": "🇫🇷",
+      "covered": false
+    },
+    {
+      "id": 88,
+      "fd_code": "DED",
+      "name_ja": "エールディビジ",
+      "name_en": "Eredivisie",
+      "category": "league",
+      "country": "Netherlands",
+      "flag": "🇳🇱",
+      "covered": true
+    },
+    {
+      "id": 90,
+      "fd_code": null,
+      "name_ja": "KNVBベーカー",
+      "name_en": "KNVB Beker",
+      "category": "cup",
+      "country": "Netherlands",
+      "flag": "🇳🇱",
+      "covered": false
+    },
+    {
+      "id": 144,
+      "fd_code": null,
+      "name_ja": "ジュピラー・プロ・リーグ",
+      "name_en": "Jupiler Pro League",
+      "category": "league",
+      "country": "Belgium",
+      "flag": "🇧🇪",
+      "covered": false
+    },
+    {
+      "id": 94,
+      "fd_code": "PPL",
+      "name_ja": "プリメイラ・リーガ",
+      "name_en": "Primeira Liga",
+      "category": "league",
+      "country": "Portugal",
+      "flag": "🇵🇹",
+      "covered": true
+    },
+    {
+      "id": 2,
+      "fd_code": "CL",
+      "name_ja": "UEFAチャンピオンズリーグ",
+      "name_en": "UEFA Champions League",
+      "category": "europe",
+      "country": "Europe",
+      "flag": "🇪🇺",
+      "covered": true
+    },
+    {
+      "id": 3,
+      "fd_code": null,
+      "name_ja": "UEFAヨーロッパリーグ",
+      "name_en": "UEFA Europa League",
+      "category": "europe",
+      "country": "Europe",
+      "flag": "🇪🇺",
+      "covered": true,
+      "fetch_method": "wikipedia"
+    },
+    {
+      "id": 848,
+      "fd_code": null,
+      "name_ja": "UEFAカンファレンスリーグ",
+      "name_en": "UEFA Europa Conference League",
+      "category": "europe",
+      "country": "Europe",
+      "flag": "🇪🇺",
+      "covered": true,
+      "fetch_method": "wikipedia"
+    }
   ]
 }
