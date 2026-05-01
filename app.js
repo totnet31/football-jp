@@ -29,7 +29,8 @@
   let dataRangeFrom = null;
   let dataRangeTo = null;
   const enabledLeagues = new Set();
-  let currentView = localStorage.getItem('view') || 'schedule';
+  // ビューはURL（=ページ）で決まる。body[data-view] を優先、無ければレガシーlocalStorageを参照
+  let currentView = document.body.dataset.view || localStorage.getItem('view') || 'schedule';
   if (currentView === 'list') currentView = 'schedule';
   let calCursor = null;
   let calSelected = null;
@@ -82,12 +83,12 @@
   async function loadAll() {
     try {
       const [m, s, sc, players, evts, news] = await Promise.all([
-        fetchJson('data/matches.json'),
-        fetchJson('data/standings.json').catch(() => null),
-        fetchJson('data/scorers.json').catch(() => null),
-        fetchJson('data/players.json').catch(() => null),
-        fetchJson('data/match_events.json').catch(() => null),
-        fetchJson('data/news.json').catch(() => null),
+        fetchJson('/data/matches.json'),
+        fetchJson('/data/standings.json').catch(() => null),
+        fetchJson('/data/scorers.json').catch(() => null),
+        fetchJson('/data/players.json').catch(() => null),
+        fetchJson('/data/match_events.json').catch(() => null),
+        fetchJson('/data/news.json').catch(() => null),
       ]);
       renderNews(news);
       allMatches = m.matches || [];
@@ -205,8 +206,8 @@
   }
 
   function switchView(view) {
+    // タブはURL遷移するため、このページで使うビューを表示するだけ
     currentView = view;
-    localStorage.setItem('view', view);
     viewTabs.forEach(t => t.classList.toggle('active', t.dataset.view === view));
     scheduleEl.classList.toggle('hidden', view !== 'schedule');
     resultsEl.classList.toggle('hidden', view !== 'results');
@@ -677,7 +678,7 @@
 
   // ==== Events ====
   onlyJpEl.addEventListener('change', rerender);
-  viewTabs.forEach(t => t.addEventListener('click', () => switchView(t.dataset.view)));
+  // タブは <a> 要素で各ページにナビゲートする（クリックハンドラ不要）
   sortBtns.forEach(b => b.addEventListener('click', () => {
     sortBtns.forEach(x => x.classList.toggle('active', x === b));
     currentSort = b.dataset.sort;
