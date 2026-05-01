@@ -851,10 +851,6 @@
           ">残り${items.length - INITIAL}件を見る ▼</button>` : '');
     if (count) count.textContent = `(${items.length})`;
     section.hidden = false;
-    // PC（>=601px）はデフォルト展開、スマホは折りたたみ
-    if (window.matchMedia && window.matchMedia('(min-width: 601px)').matches) {
-      section.open = true;
-    }
   }
 
   loadAll();
