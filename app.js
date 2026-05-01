@@ -828,7 +828,8 @@
       return;
     }
     const items = newsData.items.slice(0, 10);
-    list.innerHTML = items.map(it => {
+    const INITIAL = 3;
+    const renderItem = it => {
       const dateStr = it.published ? it.published.slice(0, 10) : '';
       const players = (it.matched_players || []).slice(0, 3).join('・');
       return `<a href="${escape(it.link)}" target="_blank" rel="noopener" class="news-item">
@@ -839,7 +840,15 @@
         </div>
         <div class="news-title">${escape(it.title)}</div>
       </a>`;
-    }).join('');
+    };
+    const visibleHtml = items.slice(0, INITIAL).map(renderItem).join('');
+    const hiddenHtml  = items.slice(INITIAL).map(renderItem).join('');
+    list.innerHTML = visibleHtml
+      + (hiddenHtml ? `<div class="news-more-items" hidden>${hiddenHtml}</div>
+          <button class="news-more-btn" onclick="
+            this.previousElementSibling.hidden=false;
+            this.remove();
+          ">残り${items.length - INITIAL}件を見る ▼</button>` : '');
     if (count) count.textContent = `(${items.length})`;
     section.hidden = false;
     // PC（>=601px）はデフォルト展開、スマホは折りたたみ
