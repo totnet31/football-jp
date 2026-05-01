@@ -41,6 +41,10 @@ jobs:
       - name: データ取得スクリプトを実行
         run: python3 scripts/fetch_matches.py
 
+      - name: sitemap.xml 自動生成
+        run: python3 scripts/generate_sitemap.py
+        continue-on-error: true
+
       - name: W杯2026データ取得
         run: python3 scripts/fetch_wc.py
 
