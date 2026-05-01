@@ -1188,3 +1188,6 @@ footer a { color: var(--text-sub); }
   text-decoration: underline;
 }
 .footer-links a:hover { color: #0a4ea0; }
+
+.legal-contact .at-mark { color: #c93434; font-weight: 600; }
+.legal-note { color: #888; font-size: 0.8rem; display: inline-block; margin-top: 4px; }
