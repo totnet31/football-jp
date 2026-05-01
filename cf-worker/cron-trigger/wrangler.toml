@@ -1,0 +1,8 @@
+name = "football-jp-cron-trigger"
+main = "src/index.ts"
+compatibility_date = "2025-04-01"
+
+# Cloudflare Cron Triggers
+# 毎朝7:00 JST (22:00 UTC) に GitHub Actions の workflow_dispatch を発火
+[triggers]
+crons = ["0 22 * * *"]

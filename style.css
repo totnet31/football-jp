@@ -970,17 +970,46 @@ footer a { color: var(--text-sub); }
 /* ===== 日本人選手ニュース ===== */
 .news-section {
   background: var(--bg-subtle);
-  padding: 16px 16px 14px;
+  padding: 0;
   border: 1px solid var(--border);
   border-radius: 4px;
   margin-bottom: 24px;
 }
+.news-section[open] {
+  padding: 0 16px 14px;
+}
 .news-section-title {
-  margin: 0 0 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 16px;
+  margin: 0;
   font-size: 14px;
   font-weight: 700;
   letter-spacing: 0.04em;
   color: var(--text);
+  cursor: pointer;
+  list-style: none;
+  user-select: none;
+}
+.news-section-title::-webkit-details-marker { display: none; }
+.news-section-title:hover { background: rgba(0,0,0,0.03); }
+.news-icon { font-size: 16px; }
+.news-label { flex: 1; }
+.news-count {
+  font-size: 11px;
+  color: var(--text-sub);
+  font-weight: 500;
+  font-feature-settings: "tnum";
+}
+.news-toggle-arrow {
+  font-size: 10px;
+  color: var(--text-sub);
+  transition: transform 0.2s ease;
+}
+.news-section[open] .news-toggle-arrow { transform: rotate(180deg); }
+.news-section[open] > .news-list {
+  margin-top: 4px;
 }
 .news-list {
   display: flex;

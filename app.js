@@ -823,6 +823,7 @@
   function renderNews(newsData) {
     const section = document.getElementById('newsSection');
     const list = document.getElementById('newsList');
+    const count = document.getElementById('newsCount');
     if (!section || !list || !newsData || !Array.isArray(newsData.items) || newsData.items.length === 0) {
       return;
     }
@@ -839,7 +840,12 @@
         <div class="news-title">${escape(it.title)}</div>
       </a>`;
     }).join('');
+    if (count) count.textContent = `(${items.length})`;
     section.hidden = false;
+    // PC（>=601px）はデフォルト展開、スマホは折りたたみ
+    if (window.matchMedia && window.matchMedia('(min-width: 601px)').matches) {
+      section.open = true;
+    }
   }
 
   loadAll();
