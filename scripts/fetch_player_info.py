@@ -945,15 +945,11 @@ def extract_ja_birth_place(ja_wikitext):
         return None
 
     # |出身地 = や |生誕地 = を探す
+    # 行末まで貪欲にキャプチャ → bracket counting でテンプレ除去
     for key in ["出身地", "生誕地", "出生地", "birth_place", "birthplace"]:
-        m = re.search(r'\|\s*{}\s*=\s*([^\n|}}]+)'.format(key), ja_wikitext)
+        m = re.search(r'\|\s*{}\s*=\s*([^\n]*)'.format(key), ja_wikitext)
         if m:
-            val = m.group(1).strip()
-            # wikitextのリンク記法などを除去
-            val = re.sub(r'\[\[(?:[^|\]]*\|)?([^\]]+)\]\]', r'\1', val)
-            val = re.sub(r'\{\{[^}]*\}\}', '', val)
-            val = re.sub(r'<[^>]+>', '', val)
-            val = val.strip()
+            val = clean_wiki_text(m.group(1))
             if val:
                 return val
     return None
@@ -968,6 +964,7 @@ def extract_ja_career(ja_wikitext):
 
     # 日本語版infoboxからクラブ情報を抽出
     # |クラブ1 = や |年1 = など
+    # 行末まで貪欲にキャプチャ → bracket counting でテンプレ除去
     for i in range(1, 25):
         year_keys = ["年{}".format(i), "clb_years{}".format(i)]
         club_keys = ["クラブ{}".format(i), "clb{}".format(i)]
@@ -976,19 +973,15 @@ def extract_ja_career(ja_wikitext):
         club = ""
 
         for yk in year_keys:
-            m = re.search(r'\|\s*{}\s*=\s*([^\n|}}]+)'.format(yk), ja_wikitext)
+            m = re.search(r'\|\s*{}\s*=\s*([^\n]*)'.format(yk), ja_wikitext)
             if m:
-                years = m.group(1).strip()
-                years = re.sub(r'\[\[(?:[^|\]]*\|)?([^\]]+)\]\]', r'\1', years)
-                years = re.sub(r'\{\{[^}]*\}\}', '', years).strip()
+                years = clean_wiki_text(m.group(1))
                 break
 
         for ck in club_keys:
-            m = re.search(r'\|\s*{}\s*=\s*([^\n|}}]+)'.format(ck), ja_wikitext)
+            m = re.search(r'\|\s*{}\s*=\s*([^\n]*)'.format(ck), ja_wikitext)
             if m:
-                club = m.group(1).strip()
-                club = re.sub(r'\[\[(?:[^|\]]*\|)?([^\]]+)\]\]', r'\1', club)
-                club = re.sub(r'\{\{[^}]*\}\}', '', club).strip()
+                club = clean_wiki_text(m.group(1))
                 break
 
         if club:
