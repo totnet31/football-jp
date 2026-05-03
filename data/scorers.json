@@ -1,5 +1,5 @@
 {
-  "updated": "2026-05-03T22:40:11.045015+09:00",
+  "updated": "2026-05-03T23:07:55.315761+09:00",
   "competitions": {
     "39": {
       "name_ja": "プレミアリーグ",
@@ -1278,6 +1278,18 @@
           "playedMatches": 32
         },
         {
+          "player_id": 32056,
+          "player_name": "Borja Iglesias",
+          "nationality": "Spain",
+          "team_id": 558,
+          "team_ja": "セルタ",
+          "team_crest": "https://crests.football-data.org/558.png",
+          "goals": 14,
+          "assists": 1,
+          "penalties": 4,
+          "playedMatches": 33
+        },
+        {
           "player_id": 180137,
           "player_name": "Mikel Oyarzabal",
           "nationality": "Spain",
@@ -1300,18 +1312,6 @@
           "assists": 5,
           "penalties": 4,
           "playedMatches": 31
-        },
-        {
-          "player_id": 32056,
-          "player_name": "Borja Iglesias",
-          "nationality": "Spain",
-          "team_id": 558,
-          "team_ja": "セルタ",
-          "team_crest": "https://crests.football-data.org/558.png",
-          "goals": 13,
-          "assists": 1,
-          "penalties": 4,
-          "playedMatches": 33
         },
         {
           "player_id": 371,
@@ -1398,6 +1398,18 @@
           "playedMatches": 32
         },
         {
+          "player_id": 1760,
+          "player_name": "André Silva",
+          "nationality": "Portugal",
+          "team_id": 285,
+          "team_ja": "エルチェ",
+          "team_crest": "https://crests.football-data.org/285.png",
+          "goals": 10,
+          "assists": null,
+          "penalties": 3,
+          "playedMatches": 29
+        },
+        {
           "player_id": 150533,
           "player_name": "Alberto Moleiro",
           "nationality": "Spain",
@@ -1420,18 +1432,6 @@
           "assists": null,
           "penalties": 1,
           "playedMatches": 33
-        },
-        {
-          "player_id": 1760,
-          "player_name": "André Silva",
-          "nationality": "Portugal",
-          "team_id": 285,
-          "team_ja": "エルチェ",
-          "team_crest": "https://crests.football-data.org/285.png",
-          "goals": 9,
-          "assists": null,
-          "penalties": 2,
-          "playedMatches": 29
         },
         {
           "player_id": 160819,
@@ -3675,7 +3675,7 @@
           "goals": 15,
           "assists": 4,
           "penalties": 2,
-          "playedMatches": 25
+          "playedMatches": 26
         },
         {
           "player_id": 130173,
@@ -3759,7 +3759,7 @@
           "goals": 11,
           "assists": 3,
           "penalties": 3,
-          "playedMatches": 31
+          "playedMatches": 32
         },
         {
           "player_id": 151613,
@@ -3771,7 +3771,19 @@
           "goals": 11,
           "assists": 2,
           "penalties": null,
-          "playedMatches": 30
+          "playedMatches": 31
+        },
+        {
+          "player_id": 7574,
+          "player_name": "Kaj Sierhuis",
+          "nationality": "Netherlands",
+          "team_id": 1920,
+          "team_ja": "フォルトゥナ・シッタート",
+          "team_crest": "https://crests.football-data.org/1920.png",
+          "goals": 11,
+          "assists": null,
+          "penalties": null,
+          "playedMatches": 28
         },
         {
           "player_id": 21733,
@@ -3807,18 +3819,6 @@
           "goals": 10,
           "assists": 5,
           "penalties": null,
-          "playedMatches": 27
-        },
-        {
-          "player_id": 7574,
-          "player_name": "Kaj Sierhuis",
-          "nationality": "Netherlands",
-          "team_id": 1920,
-          "team_ja": "フォルトゥナ・シッタート",
-          "team_crest": "https://crests.football-data.org/1920.png",
-          "goals": 10,
-          "assists": null,
-          "penalties": null,
           "playedMatches": 28
         },
         {
@@ -3831,7 +3831,7 @@
           "goals": 9,
           "assists": 3,
           "penalties": null,
-          "playedMatches": 30
+          "playedMatches": 31
         },
         {
           "player_id": 188914,
@@ -3903,7 +3903,7 @@
           "goals": 8,
           "assists": 4,
           "penalties": null,
-          "playedMatches": 30
+          "playedMatches": 31
         },
         {
           "player_id": 244466,
@@ -3927,7 +3927,7 @@
           "goals": 8,
           "assists": null,
           "penalties": 6,
-          "playedMatches": 28
+          "playedMatches": 29
         },
         {
           "player_id": 80161,
@@ -4119,7 +4119,7 @@
           "goals": 6,
           "assists": 5,
           "penalties": null,
-          "playedMatches": 25
+          "playedMatches": 26
         },
         {
           "player_id": 178570,
@@ -4191,7 +4191,7 @@
           "goals": 6,
           "assists": 3,
           "penalties": null,
-          "playedMatches": 22
+          "playedMatches": 23
         },
         {
           "player_id": 145170,
