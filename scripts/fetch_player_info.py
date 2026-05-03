@@ -599,6 +599,80 @@ def extract_infobox(wikitext):
     return fields
 
 
+NATIONAL_TEAM_TRANSLATIONS = {
+    "Japan": {"ja": "日本代表（A代表）", "level": "A"},
+    "Japan U-23": {"ja": "U-23日本代表", "level": "U-23"},
+    "Japan U-22": {"ja": "U-22日本代表", "level": "U-22"},
+    "Japan U-21": {"ja": "U-21日本代表", "level": "U-21"},
+    "Japan U-20": {"ja": "U-20日本代表", "level": "U-20"},
+    "Japan U-19": {"ja": "U-19日本代表", "level": "U-19"},
+    "Japan U-18": {"ja": "U-18日本代表", "level": "U-18"},
+    "Japan U-17": {"ja": "U-17日本代表", "level": "U-17"},
+    "Japan U-16": {"ja": "U-16日本代表", "level": "U-16"},
+    "Japan U-15": {"ja": "U-15日本代表", "level": "U-15"},
+}
+
+
+def parse_national_team_history(wikitext):
+    # type: (str) -> list
+    """
+    infobox の nationalteam/nationalyears/nationalcaps/nationalgoals フィールドから
+    代表履歴を抽出する。
+    """
+    history = []
+    if not wikitext:
+        return history
+
+    fields = extract_infobox(wikitext)
+
+    for i in range(1, 11):
+        team_key = "nationalteam{}".format(i)
+        years_key = "nationalyears{}".format(i)
+        caps_key = "nationalcaps{}".format(i)
+        goals_key = "nationalgoals{}".format(i)
+
+        team_raw = fields.get(team_key, "")
+        if not team_raw:
+            break
+
+        team_clean = clean_wiki_text(team_raw).strip()
+        years_clean = clean_wiki_text(fields.get(years_key, "")).strip()
+        caps_raw = clean_wiki_text(fields.get(caps_key, "")).strip()
+        goals_raw = clean_wiki_text(fields.get(goals_key, "")).strip()
+
+        # Japan 系のチームのみ対象
+        if "Japan" not in team_clean:
+            continue
+
+        # caps/goals を数値に変換
+        try:
+            caps = int(re.sub(r'[^\d]', '', caps_raw)) if caps_raw and re.sub(r'[^\d]', '', caps_raw) else None
+        except ValueError:
+            caps = None
+        try:
+            goals = int(re.sub(r'[^\d]', '', goals_raw)) if goals_raw and re.sub(r'[^\d]', '', goals_raw) else None
+        except ValueError:
+            goals = None
+
+        # team_ja 変換
+        team_info = NATIONAL_TEAM_TRANSLATIONS.get(team_clean, {})
+        team_ja = team_info.get("ja", team_clean)
+
+        entry = {
+            "team": team_clean,
+            "team_ja": team_ja,
+            "years": years_clean,
+        }
+        if caps is not None:
+            entry["caps"] = caps
+        if goals is not None:
+            entry["goals"] = goals
+
+        history.append(entry)
+
+    return history
+
+
 def parse_career(wikitext):
     # type: (str) -> list
     """
@@ -912,6 +986,7 @@ def fetch_player_info(name_en, name_ja="", club_translations=None):
         "foot": None,
         "career": [],
         "career_ja": [],
+        "national_team_history": [],
         "twitter": None,
         "instagram": None,
         "official_url": None,
@@ -958,6 +1033,9 @@ def fetch_player_info(name_en, name_ja="", club_translations=None):
 
     # キャリア（英語版）
     info["career"] = parse_career(wikitext)
+
+    # 代表履歴
+    info["national_team_history"] = parse_national_team_history(wikitext)
 
     # SNS
     social = extract_social_links(wikitext)
@@ -1036,6 +1114,7 @@ def main():
         "foot": None,
         "career": [],
         "career_ja": [],
+        "national_team_history": [],
         "twitter": None,
         "instagram": None,
         "official_url": None,
