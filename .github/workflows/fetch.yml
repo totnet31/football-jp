@@ -84,6 +84,10 @@ jobs:
         run: python3 scripts/fetch_club_info.py
         continue-on-error: true
 
+      - name: 選手プロフィール情報取得（Wikipedia infobox）
+        run: python3 scripts/fetch_player_info.py
+        continue-on-error: true
+
       - name: 選手プロフィールページ生成
         run: python3 scripts/generate_player_pages.py
         continue-on-error: true

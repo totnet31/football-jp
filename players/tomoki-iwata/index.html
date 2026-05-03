@@ -223,6 +223,64 @@
       margin-top: 20px;
     }
     .site-footer a { color: #666; }
+    .profile-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13px;
+    }
+    .profile-table tr {
+      border-bottom: 1px solid var(--c-border, #e5e7eb);
+    }
+    .profile-table tr:last-child { border-bottom: none; }
+    .profile-label {
+      width: 100px;
+      padding: 7px 0;
+      color: #666;
+      font-size: 12px;
+      vertical-align: top;
+    }
+    .profile-value {
+      padding: 7px 0;
+      font-weight: 600;
+    }
+    .career-list {
+      font-size: 13px;
+    }
+    .career-row {
+      display: flex;
+      gap: 12px;
+      padding: 6px 0;
+      border-bottom: 1px solid var(--c-border, #e5e7eb);
+      align-items: baseline;
+    }
+    .career-row:last-child { border-bottom: none; }
+    .career-years {
+      min-width: 90px;
+      color: #888;
+      font-size: 12px;
+      flex-shrink: 0;
+    }
+    .career-club {
+      font-weight: 600;
+    }
+    .sns-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .sns-link {
+      display: inline-block;
+      padding: 6px 14px;
+      border-radius: 4px;
+      font-size: 13px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: opacity 0.15s;
+    }
+    .sns-link:hover { opacity: 0.8; }
+    .sns-twitter { background: #000; color: #fff; }
+    .sns-instagram { background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); color: #fff; }
+    .sns-official { background: #f0f1f5; color: #333; border: 1px solid #ccc; }
     @media (max-width: 600px) {
       .stats-grid { grid-template-columns: repeat(2, 1fr); }
       .match-header, .match-row {
@@ -274,6 +332,17 @@
 <div style="max-width: 860px; margin: 0 auto;">
 
   
+    <section class="player-section">
+      <h3>👤 プロフィール <a href="https://en.wikipedia.org/wiki/Tomoki_Iwata" target="_blank" rel="noopener" style="font-size:11px;color:#888;">Wikipedia →</a></h3>
+      <table class="profile-table">
+        <tr><td class="profile-label">身長 / 体重</td><td class="profile-value">178cm / —</td></tr>
+        <tr><td class="profile-label">生年月日</td><td class="profile-value">1997-04-07（29歳）</td></tr>
+        <tr><td class="profile-label">出身地</td><td class="profile-value">Usa, Ōita, Japan</td></tr>
+        <tr><td class="profile-label">利き足</td><td class="profile-value">—</td></tr>
+      </table>
+    </section>
+
+  
 
   
     <section class="player-section">
@@ -320,6 +389,22 @@
     <section class="player-section">
       <h3>⚽ 直近のゴール</h3>
       <p class="no-data">今シーズンまだゴールなし（または取得範囲外）。</p>
+    </section>
+
+  
+    <section class="player-section">
+      <h3>📋 キャリア</h3>
+      <div class="career-list">
+        <div class="career-row"><span class="career-years">?</span><span class="career-club">Yokkaichi Minami SSC (Youth)</span></div><div class="career-row"><span class="career-years">–2015</span><span class="career-club">Oita Trinita (Youth)</span></div><div class="career-row"><span class="career-years">2016–2020</span><span class="career-club">Oita Trinita</span></div><div class="career-row"><span class="career-years">2021–2022</span><span class="career-club">Yokohama F. Marinos</span></div><div class="career-row"><span class="career-years">2023</span><span class="career-club">→ Celtic (loan)</span></div><div class="career-row"><span class="career-years">2023–2024</span><span class="career-club">Celtic</span></div><div class="career-row"><span class="career-years">2024–</span><span class="career-club">Birmingham City</span></div>
+      </div>
+    </section>
+
+  
+    <section class="player-section">
+      <h3>🔗 SNS・公式リンク</h3>
+      <div class="sns-links">
+        <a class="sns-link sns-instagram" href="https://www.instagram.com/p/" target="_blank" rel="noopener">📷 @p</a><a class="sns-link sns-official" href="https://www.oita-trinita.co.jp/team/player/view/" target="_blank" rel="noopener">🌐 www.oita-trinita.co.jp</a>
+      </div>
     </section>
 
   
