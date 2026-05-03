@@ -1,5 +1,5 @@
 {
-  "updated": "2026-05-03T23:17:06.150211+09:00",
+  "updated": "2026-05-03T23:26:29.877056+09:00",
   "date_from": "2026-04-26",
   "date_to": "2026-05-17",
   "match_count": 311,
@@ -5166,7 +5166,7 @@
       "away_crest": "https://crests.football-data.org/675.png",
       "score": {
         "home": 1,
-        "away": 0
+        "away": 1
       },
       "japanese_players": [
         {
@@ -5208,7 +5208,7 @@
       "away_en": "Heracles",
       "away_crest": "https://crests.football-data.org/671.png",
       "score": {
-        "home": 1,
+        "home": 2,
         "away": 0
       },
       "japanese_players": [],
@@ -5336,7 +5336,7 @@
       "competition_category": "league",
       "competition_flag": "🇩🇪",
       "kickoff_jst": "2026-05-03T22:30:00+09:00",
-      "status": "IN_PLAY",
+      "status": "PAUSED",
       "stage": "REGULAR_SEASON",
       "matchday": 32,
       "home_id": 20,
@@ -5400,7 +5400,7 @@
       "competition_category": "league",
       "competition_flag": "🇪🇸",
       "kickoff_jst": "2026-05-03T23:15:00+09:00",
-      "status": "TIMED",
+      "status": "IN_PLAY",
       "stage": "REGULAR_SEASON",
       "matchday": 34,
       "home_id": 82,
@@ -5411,7 +5411,10 @@
       "away_ja": "ラージョ・バジェカーノ",
       "away_en": "Rayo Vallecano",
       "away_crest": "https://crests.football-data.org/87.png",
-      "score": null,
+      "score": {
+        "home": 0,
+        "away": 0
+      },
       "japanese_players": [],
       "broadcasters": [
         {
@@ -11064,6 +11067,6 @@
       ]
     }
   ],
-  "updated_yt_highlights": "2026-05-03T23:20:59.633251+09:00",
-  "updated_uefa_secondary": "2026-05-03T23:21:28.396789+09:00"
+  "updated_yt_highlights": "2026-05-03T23:30:05.068489+09:00",
+  "updated_uefa_secondary": "2026-05-03T23:30:52.268478+09:00"
 }
