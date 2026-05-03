@@ -678,14 +678,36 @@ def build_player_page(player: dict, slug: str, scorer_stats: dict,
         career_en = player_info.get("career", [])
         career = career_ja if career_ja else career_en
         if career:
+            # 並び順を整理：開始年でソート → 現在所属クラブ（years が "–" で終わるもの）を末尾に
+            def year_start(item):
+                y = item.get("years", "")
+                m = re.match(r"^(\d{4})", y.strip())
+                return int(m.group(1)) if m else 0
+
+            def is_current(item):
+                y = item.get("years", "").strip()
+                return y.endswith("–") or y.endswith("-") or y.endswith("—")
+
+            sorted_past = sorted([c for c in career if not is_current(c)], key=year_start)
+            current_clubs = [c for c in career if is_current(c)]
+            ordered_career = sorted_past + current_clubs
+
+            # 現在所属クラブを示すバッジ
+            current_club_badge = ""
+            if current_clubs:
+                latest = current_clubs[-1]
+                current_club_badge = f'<div class="career-current">🟢 現在所属：<strong>{esc(latest.get("club", ""))}</strong>（{esc(latest.get("years", ""))}）</div>'
+
             career_rows = ""
-            for item in career:
+            for item in ordered_career:
                 years = esc(item.get("years", ""))
                 club = esc(item.get("club", ""))
-                career_rows += f'<div class="career-row"><span class="career-years">{years}</span><span class="career-club">{club}</span></div>'
+                cur_class = " is-current" if is_current(item) else ""
+                career_rows += f'<div class="career-row{cur_class}"><span class="career-years">{years}</span><span class="career-club">{club}</span></div>'
             career_html = f"""
     <section class="player-section">
       <h3>📋 キャリア</h3>
+      {current_club_badge}
       <div class="career-list">
         {career_rows}
       </div>
