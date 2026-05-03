@@ -641,7 +641,10 @@ def build_player_page(player: dict, slug: str, scorer_stats: dict,
         height_cm = player_info.get("height_cm")
         weight_kg = player_info.get("weight_kg")
         birth_date = player_info.get("birth_date")
+        # 出身地：_ja フィールドがあれば優先
+        birth_place_ja = player_info.get("birth_place_ja", "")
         birth_place = player_info.get("birth_place", "")
+        display_place = birth_place_ja if birth_place_ja else birth_place
         foot = player_info.get("foot")
         wiki_url = player_info.get("wiki_url")
 
@@ -650,7 +653,7 @@ def build_player_page(player: dict, slug: str, scorer_stats: dict,
         age_str = calc_age(birth_date)
         birth_str = f"{esc(birth_date)}（{age_str}歳）" if birth_date and age_str else esc(birth_date or "—")
         foot_str = foot_ja(foot) if foot else "—"
-        place_str = esc(birth_place) if birth_place else "—"
+        place_str = esc(display_place) if display_place else "—"
 
         wiki_link = ""
         if wiki_url:
@@ -670,7 +673,10 @@ def build_player_page(player: dict, slug: str, scorer_stats: dict,
     # --- キャリアセクション ---
     career_html = ""
     if player_info:
-        career = player_info.get("career", [])
+        # career_ja があれば優先、なければ career（英語）にフォールバック
+        career_ja = player_info.get("career_ja", [])
+        career_en = player_info.get("career", [])
+        career = career_ja if career_ja else career_en
         if career:
             career_rows = ""
             for item in career:
