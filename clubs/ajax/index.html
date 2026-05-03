@@ -109,17 +109,18 @@
     .matches-list { font-size: 13px; }
     .match-header, .match-row {
       display: grid;
-      grid-template-columns: 150px 1fr 70px 80px 100px;
-      gap: 8px;
+      grid-template-columns: 120px 1fr 60px 120px 90px;
+      gap: 6px;
       padding: 8px 4px;
       border-bottom: 1px solid var(--c-border, #e5e7eb);
-      align-items: center;
+      align-items: start;
     }
     .match-header {
       font-size: 11px;
       font-weight: 700;
       color: #666;
       background: #f8f9fa;
+      align-items: center;
     }
     .match-row:last-child { border-bottom: none; }
     .match-result { font-weight: 700; text-align: center; }
@@ -127,10 +128,13 @@
     .match-result.lose { color: #c0392b; }
     .match-result.draw { color: #666; }
     .match-broadcast {
-      font-size: 11px;
-      color: #555;
-      text-align: center;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 4px;
+      align-items: flex-start;
     }
+    .match-date-day { display: block; font-size: 12px; }
+    .match-date-time { display: block; font-size: 11px; color: #555; }
     .home-away {
       display: inline-block;
       padding: 1px 5px;
@@ -160,7 +164,7 @@
     .site-footer a { color: #666; }
     @media (max-width: 600px) {
       .match-header, .match-row {
-        grid-template-columns: 110px 1fr 55px 55px;
+        grid-template-columns: 90px 1fr 50px 1fr;
         font-size: 12px;
       }
       .match-comp { display: none; }
@@ -246,28 +250,28 @@
         </div>
         
           <div class="match-row scheduled">
-            <div class="match-date">2026-05-17T21:30</div>
+            <div class="match-date"><span class="match-date-day">2026/05/17</span><span class="match-date-time">（日）21:30</span></div>
             <div class="match-opponent"><span class="home-away">A</span> vs ヘーレンフェーン</div>
             <div class="match-result">—</div>
             <div class="match-broadcast"><a class="bc-tag bc-unext" href="https://video.unext.jp/?utm_source=football-jp&amp;utm_medium=club_page&amp;utm_content=ajax&amp;utm_campaign=%E3%82%A8%E3%83%BC%E3%83%AB%E3%83%87%E3%82%A3%E3%83%93%E3%82%B8" target="_blank" rel="noopener" data-svc="U-NEXT" data-pagetype="club" data-pageid="ajax" onclick="trackAffClick(this)"><img class="bc-logo" src="/assets/broadcasters/unext.png" alt="" width="16" height="16">U-NEXT</a></div>
             <div class="match-comp">エールディビジ</div>
           </div>
           <div class="match-row scheduled">
-            <div class="match-date">2026-05-10T23:45</div>
+            <div class="match-date"><span class="match-date-day">2026/05/10</span><span class="match-date-time">（日）23:45</span></div>
             <div class="match-opponent"><span class="home-away">H</span> vs ユトレヒト</div>
             <div class="match-result">—</div>
             <div class="match-broadcast"><a class="bc-tag bc-unext" href="https://video.unext.jp/?utm_source=football-jp&amp;utm_medium=club_page&amp;utm_content=ajax&amp;utm_campaign=%E3%82%A8%E3%83%BC%E3%83%AB%E3%83%87%E3%82%A3%E3%83%93%E3%82%B8" target="_blank" rel="noopener" data-svc="U-NEXT" data-pagetype="club" data-pageid="ajax" onclick="trackAffClick(this)"><img class="bc-logo" src="/assets/broadcasters/unext.png" alt="" width="16" height="16">U-NEXT</a></div>
             <div class="match-comp">エールディビジ</div>
           </div>
           <div class="match-row">
-            <div class="match-date">2026-05-03T03:00</div>
+            <div class="match-date"><span class="match-date-day">2026/05/03</span><span class="match-date-time">（日）03:00</span></div>
             <div class="match-opponent"><span class="home-away">H</span> vs PSV</div>
             <div class="match-result draw">2 - 2</div>
             <div class="match-broadcast">—</div>
             <div class="match-comp">エールディビジ</div>
           </div>
           <div class="match-row">
-            <div class="match-date">2026-04-26T03:00</div>
+            <div class="match-date"><span class="match-date-day">2026/04/26</span><span class="match-date-time">（日）03:00</span></div>
             <div class="match-opponent"><span class="home-away">A</span> vs NACブレダ</div>
             <div class="match-result win">2 - 0</div>
             <div class="match-broadcast">—</div>

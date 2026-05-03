@@ -362,11 +362,21 @@ def build_club_page(club_info: dict, slug: str, standing: dict,
             date_display = ""
             if kickoff:
                 try:
+                    import re as _re
                     from datetime import datetime
-                    dt = datetime.fromisoformat(kickoff)
-                    date_display = dt.strftime("%m/%d(%a) %H:%M JST")
+                    # タイムゾーン部分（+09:00 や Z）を除去してローカル日時として扱う
+                    ko_str = _re.sub(r'[+-]\d{2}:\d{2}$', '', kickoff.replace("Z", ""))
+                    dt = datetime.strptime(ko_str[:16], "%Y-%m-%dT%H:%M")
+                    weekdays = ["月", "火", "水", "木", "金", "土", "日"]
+                    wd = weekdays[dt.weekday()]
+                    date_display = f'<span class="match-date-day">{dt.strftime("%Y/%m/%d")}</span><span class="match-date-time">（{wd}）{dt.strftime("%H:%M")}</span>'
                 except Exception:
-                    date_display = kickoff[:16]
+                    if "T" in kickoff:
+                        d, t = kickoff.split("T", 1)
+                        d_fmt = d.replace("-", "/")
+                        date_display = f'<span class="match-date-day">{d_fmt}</span><span class="match-date-time">{t[:5]}</span>'
+                    else:
+                        date_display = kickoff[:16]
 
             if status == "FINISHED" and score:
                 home_score = score.get("home", "")
@@ -382,7 +392,7 @@ def build_club_page(club_info: dict, slug: str, standing: dict,
                 home_away = "H" if is_home else "A"
                 match_rows += f"""
           <div class="match-row">
-            <div class="match-date">{esc(date_display)}</div>
+            <div class="match-date">{date_display}</div>
             <div class="match-opponent"><span class="home-away">{home_away}</span> vs {opponent}</div>
             <div class="match-result {result_class}">{esc(score_display)}</div>
             <div class="match-broadcast">—</div>
@@ -406,7 +416,7 @@ def build_club_page(club_info: dict, slug: str, standing: dict,
                     bc_tags = esc(" / ".join(bc_names))
                 match_rows += f"""
           <div class="match-row scheduled">
-            <div class="match-date">{esc(date_display)}</div>
+            <div class="match-date">{date_display}</div>
             <div class="match-opponent"><span class="home-away">{home_away}</span> vs {opponent}</div>
             <div class="match-result">—</div>
             <div class="match-broadcast">{bc_tags if bc_tags else "—"}</div>
@@ -545,17 +555,18 @@ def build_club_page(club_info: dict, slug: str, standing: dict,
     .matches-list {{ font-size: 13px; }}
     .match-header, .match-row {{
       display: grid;
-      grid-template-columns: 150px 1fr 70px 80px 100px;
-      gap: 8px;
+      grid-template-columns: 120px 1fr 60px 120px 90px;
+      gap: 6px;
       padding: 8px 4px;
       border-bottom: 1px solid var(--c-border, #e5e7eb);
-      align-items: center;
+      align-items: start;
     }}
     .match-header {{
       font-size: 11px;
       font-weight: 700;
       color: #666;
       background: #f8f9fa;
+      align-items: center;
     }}
     .match-row:last-child {{ border-bottom: none; }}
     .match-result {{ font-weight: 700; text-align: center; }}
@@ -563,10 +574,13 @@ def build_club_page(club_info: dict, slug: str, standing: dict,
     .match-result.lose {{ color: #c0392b; }}
     .match-result.draw {{ color: #666; }}
     .match-broadcast {{
-      font-size: 11px;
-      color: #555;
-      text-align: center;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 4px;
+      align-items: flex-start;
     }}
+    .match-date-day {{ display: block; font-size: 12px; }}
+    .match-date-time {{ display: block; font-size: 11px; color: #555; }}
     .home-away {{
       display: inline-block;
       padding: 1px 5px;
@@ -596,7 +610,7 @@ def build_club_page(club_info: dict, slug: str, standing: dict,
     .site-footer a {{ color: #666; }}
     @media (max-width: 600px) {{
       .match-header, .match-row {{
-        grid-template-columns: 110px 1fr 55px 55px;
+        grid-template-columns: 90px 1fr 50px 1fr;
         font-size: 12px;
       }}
       .match-comp {{ display: none; }}
@@ -699,14 +713,21 @@ def build_clubs_index(clubs: dict, club_crest_map: dict) -> str:
             else:
                 crest_html = '<span class="club-list-crest-placeholder">🏟️</span>'
 
+            # 選手名バッジ生成
+            player_badges = ""
+            for pl in club_info.get("players", []):
+                pl_name_ja = pl.get("name_ja", "")
+                if pl_name_ja:
+                    player_badges += f'<span class="jp-player-badge-club">🇯🇵 {esc(pl_name_ja)}</span>'
+
             cards_html += f"""
         <a class="club-card" href="/clubs/{esc(slug)}/">
           <div class="club-card-crest">{crest_html}</div>
           <div class="club-card-body">
             <div class="club-card-name-ja">{esc(club_info.get('club_ja',''))}</div>
             <div class="club-card-name-en">{esc(club_en)}</div>
-            <div class="club-card-meta">
-              <span class="jp-count">🇯🇵 {player_count}名</span>
+            <div class="club-japanese-players">
+              {player_badges}
             </div>
           </div>
         </a>"""
@@ -785,7 +806,7 @@ def build_clubs_index(clubs: dict, club_crest_map: dict) -> str:
     }}
     .club-card {{
       display: flex;
-      align-items: center;
+      align-items: flex-start;
       gap: 10px;
       background: #f8f9fa;
       border: 1px solid var(--c-border, #e5e7eb);
@@ -801,6 +822,24 @@ def build_clubs_index(clubs: dict, club_crest_map: dict) -> str:
     .club-card-name-ja {{ font-size: 14px; font-weight: 700; margin-bottom: 2px; }}
     .club-card-name-en {{ font-size: 11px; color: #666; margin-bottom: 4px; }}
     .jp-count {{ font-size: 11px; color: #555; }}
+    .club-japanese-players {{
+      display: flex;
+      flex-wrap: wrap;
+      gap: 4px;
+      margin-top: 4px;
+    }}
+    .jp-player-badge-club {{
+      display: inline-flex;
+      align-items: center;
+      font-size: 11px;
+      font-weight: 600;
+      padding: 2px 7px;
+      background: #fff0f0;
+      color: #c1304a;
+      border: 1px solid #f4c0c0;
+      border-radius: 4px;
+      white-space: nowrap;
+    }}
     .back-link {{
       display: block;
       padding: 12px 16px;

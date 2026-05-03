@@ -444,15 +444,27 @@ def build_player_page(player: dict, slug: str, scorer_stats: dict,
             club_id = player.get("club_id")
             is_home = home_id == club_id
 
-            # 日時表示
+            # 日時表示（yyyy/mm/dd 改行 (曜) HH:MM JST）
             date_display = ""
             if kickoff:
                 try:
+                    import re as _re
                     from datetime import datetime
-                    dt = datetime.fromisoformat(kickoff)
-                    date_display = dt.strftime("%m/%d(%a) %H:%M JST")
+                    # タイムゾーン部分（+09:00 や Z）を除去してローカル日時として扱う
+                    ko_str = _re.sub(r'[+-]\d{2}:\d{2}$', '', kickoff.replace("Z", ""))
+                    dt = datetime.strptime(ko_str[:16], "%Y-%m-%dT%H:%M")
+                    weekdays = ["月", "火", "水", "木", "金", "土", "日"]
+                    wd = weekdays[dt.weekday()]
+                    date_display = f'<span class="match-date-day">{dt.strftime("%Y/%m/%d")}</span><span class="match-date-time">（{wd}）{dt.strftime("%H:%M")}</span>'
                 except Exception:
-                    date_display = kickoff[:16]
+                    # フォールバック：ISO文字列を最低限分割
+                    if "T" in kickoff:
+                        d, t = kickoff.split("T", 1)
+                        # yyyy-mm-dd → yyyy/mm/dd
+                        d_fmt = d.replace("-", "/")
+                        date_display = f'<span class="match-date-day">{d_fmt}</span><span class="match-date-time">{t[:5]}</span>'
+                    else:
+                        date_display = kickoff[:16]
 
             # スコア表示
             if status == "FINISHED" and score:
@@ -469,7 +481,7 @@ def build_player_page(player: dict, slug: str, scorer_stats: dict,
                 home_away = "H" if is_home else "A"
                 match_rows += f"""
           <div class="match-row">
-            <div class="match-date">{esc(date_display)}</div>
+            <div class="match-date">{date_display}</div>
             <div class="match-opponent"><span class="home-away">{home_away}</span> vs {opponent}</div>
             <div class="match-result {result_class}">{esc(score_display)}</div>
             <div class="match-broadcast">—</div>
@@ -493,7 +505,7 @@ def build_player_page(player: dict, slug: str, scorer_stats: dict,
                     bc_tags = esc(" / ".join(bc_names))
                 match_rows += f"""
           <div class="match-row scheduled">
-            <div class="match-date">{esc(date_display)}</div>
+            <div class="match-date">{date_display}</div>
             <div class="match-opponent"><span class="home-away">{home_away}</span> vs {opponent}</div>
             <div class="match-result">—</div>
             <div class="match-broadcast">{bc_tags if bc_tags else "—"}</div>
@@ -545,7 +557,7 @@ def build_player_page(player: dict, slug: str, scorer_stats: dict,
                 minute_raw += f" ({goal_note})"
             goal_rows += f"""
           <div class="goal-row">
-            <div class="goal-date">{esc(date_display)}</div>
+            <div class="goal-date">{date_display}</div>
             <div class="goal-match">{esc(home_ja_g)} vs {esc(away_ja_g)}</div>
             <div class="goal-minute">{esc(minute_raw)}分</div>
             <div class="goal-comp">{esc(comp_ja_g)}</div>
@@ -674,17 +686,18 @@ def build_player_page(player: dict, slug: str, scorer_stats: dict,
     }}
     .match-header, .match-row {{
       display: grid;
-      grid-template-columns: 150px 1fr 70px 80px 100px;
-      gap: 8px;
+      grid-template-columns: 120px 1fr 60px 120px 90px;
+      gap: 6px;
       padding: 8px 4px;
       border-bottom: 1px solid var(--c-border, #e5e7eb);
-      align-items: center;
+      align-items: start;
     }}
     .match-header {{
       font-size: 11px;
       font-weight: 700;
       color: #666;
       background: #f8f9fa;
+      align-items: center;
     }}
     .match-row:last-child {{ border-bottom: none; }}
     .match-result {{
@@ -695,10 +708,13 @@ def build_player_page(player: dict, slug: str, scorer_stats: dict,
     .match-result.lose {{ color: #c0392b; }}
     .match-result.draw {{ color: #666; }}
     .match-broadcast {{
-      font-size: 11px;
-      color: #555;
-      text-align: center;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 4px;
+      align-items: flex-start;
     }}
+    .match-date-day {{ display: block; font-size: 12px; }}
+    .match-date-time {{ display: block; font-size: 11px; color: #555; }}
     .home-away {{
       display: inline-block;
       padding: 1px 5px;
@@ -760,7 +776,7 @@ def build_player_page(player: dict, slug: str, scorer_stats: dict,
     @media (max-width: 600px) {{
       .stats-grid {{ grid-template-columns: repeat(2, 1fr); }}
       .match-header, .match-row {{
-        grid-template-columns: 110px 1fr 55px 55px;
+        grid-template-columns: 90px 1fr 50px 1fr;
         font-size: 12px;
       }}
       .match-comp {{ display: none; }}

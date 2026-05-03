@@ -1189,5 +1189,33 @@ footer a { color: var(--text-sub); }
 }
 .footer-links a:hover { color: #0a4ea0; }
 
+/* footer-nav: サイト内ナビリンク */
+.footer-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 16px;
+  margin-top: 10px;
+  font-size: 0.85rem;
+}
+.footer-nav a {
+  color: #666;
+  text-decoration: underline;
+}
+.footer-nav a:hover { color: #0a4ea0; }
+
+/* footer-legal: プライバシーポリシー等の法的リンク */
+.footer-legal {
+  margin-top: 10px;
+  padding-top: 8px;
+  border-top: 1px solid var(--border, #e5e5e5);
+  font-size: 0.8rem;
+  color: #999;
+}
+.footer-legal a {
+  color: #999;
+  text-decoration: underline;
+}
+.footer-legal a:hover { color: #0a4ea0; }
+
 .legal-contact .at-mark { color: #c93434; font-weight: 600; }
 .legal-note { color: #888; font-size: 0.8rem; display: inline-block; margin-top: 4px; }

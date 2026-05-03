@@ -63,7 +63,7 @@
     }
     .club-card {
       display: flex;
-      align-items: center;
+      align-items: flex-start;
       gap: 10px;
       background: #f8f9fa;
       border: 1px solid var(--c-border, #e5e7eb);
@@ -79,6 +79,24 @@
     .club-card-name-ja { font-size: 14px; font-weight: 700; margin-bottom: 2px; }
     .club-card-name-en { font-size: 11px; color: #666; margin-bottom: 4px; }
     .jp-count { font-size: 11px; color: #555; }
+    .club-japanese-players {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 4px;
+      margin-top: 4px;
+    }
+    .jp-player-badge-club {
+      display: inline-flex;
+      align-items: center;
+      font-size: 11px;
+      font-weight: 600;
+      padding: 2px 7px;
+      background: #fff0f0;
+      color: #c1304a;
+      border: 1px solid #f4c0c0;
+      border-radius: 4px;
+      white-space: nowrap;
+    }
     .back-link {
       display: block;
       padding: 12px 16px;
@@ -117,8 +135,8 @@
           <div class="club-card-body">
             <div class="club-card-name-ja">リバプール</div>
             <div class="club-card-name-en">Liverpool</div>
-            <div class="club-card-meta">
-              <span class="jp-count">🇯🇵 1名</span>
+            <div class="club-japanese-players">
+              <span class="jp-player-badge-club">🇯🇵 遠藤航</span>
             </div>
           </div>
         </a>
@@ -127,8 +145,8 @@
           <div class="club-card-body">
             <div class="club-card-name-ja">ブライトン</div>
             <div class="club-card-name-en">Brighton &amp; Hove Albion</div>
-            <div class="club-card-meta">
-              <span class="jp-count">🇯🇵 1名</span>
+            <div class="club-japanese-players">
+              <span class="jp-player-badge-club">🇯🇵 三笘薫</span>
             </div>
           </div>
         </a>
@@ -137,8 +155,8 @@
           <div class="club-card-body">
             <div class="club-card-name-ja">クリスタル・パレス</div>
             <div class="club-card-name-en">Crystal Palace</div>
-            <div class="club-card-meta">
-              <span class="jp-count">🇯🇵 1名</span>
+            <div class="club-japanese-players">
+              <span class="jp-player-badge-club">🇯🇵 鎌田大地</span>
             </div>
           </div>
         </a>
@@ -147,8 +165,8 @@
           <div class="club-card-body">
             <div class="club-card-name-ja">リーズ・ユナイテッド</div>
             <div class="club-card-name-en">Leeds</div>
-            <div class="club-card-meta">
-              <span class="jp-count">🇯🇵 1名</span>
+            <div class="club-japanese-players">
+              <span class="jp-player-badge-club">🇯🇵 田中碧</span>
             </div>
           </div>
         </a>
@@ -157,8 +175,8 @@
           <div class="club-card-body">
             <div class="club-card-name-ja">トッテナム</div>
             <div class="club-card-name-en">Tottenham</div>
-            <div class="club-card-meta">
-              <span class="jp-count">🇯🇵 1名</span>
+            <div class="club-japanese-players">
+              <span class="jp-player-badge-club">🇯🇵 高井幸大</span>
             </div>
           </div>
         </a>
@@ -173,8 +191,8 @@
           <div class="club-card-body">
             <div class="club-card-name-ja">サウサンプトン</div>
             <div class="club-card-name-en">Southampton</div>
-            <div class="club-card-meta">
-              <span class="jp-count">🇯🇵 1名</span>
+            <div class="club-japanese-players">
+              <span class="jp-player-badge-club">🇯🇵 松木玖生</span>
             </div>
           </div>
         </a>
@@ -183,8 +201,8 @@
           <div class="club-card-body">
             <div class="club-card-name-ja">コヴェントリー</div>
             <div class="club-card-name-en">Coventry</div>
-            <div class="club-card-meta">
-              <span class="jp-count">🇯🇵 1名</span>
+            <div class="club-japanese-players">
+              <span class="jp-player-badge-club">🇯🇵 坂元達裕</span>
             </div>
           </div>
         </a>
@@ -193,8 +211,8 @@
           <div class="club-card-body">
             <div class="club-card-name-ja">ハル・シティ</div>
             <div class="club-card-name-en">Hull City</div>
-            <div class="club-card-meta">
-              <span class="jp-count">🇯🇵 1名</span>
+            <div class="club-japanese-players">
+              <span class="jp-player-badge-club">🇯🇵 平河悠</span>
             </div>
           </div>
         </a>
@@ -203,8 +221,8 @@
           <div class="club-card-body">
             <div class="club-card-name-ja">ブラックバーン</div>
             <div class="club-card-name-en">Blackburn</div>
-            <div class="club-card-meta">
-              <span class="jp-count">🇯🇵 2名</span>
+            <div class="club-japanese-players">
+              <span class="jp-player-badge-club">🇯🇵 大橋祐紀</span><span class="jp-player-badge-club">🇯🇵 森下龍矢</span>
             </div>
           </div>
         </a>
@@ -213,8 +231,8 @@
           <div class="club-card-body">
             <div class="club-card-name-ja">QPR</div>
             <div class="club-card-name-en">Queens Park Rangers</div>
-            <div class="club-card-meta">
-              <span class="jp-count">🇯🇵 1名</span>
+            <div class="club-japanese-players">
+              <span class="jp-player-badge-club">🇯🇵 斉藤光毅</span>
             </div>
           </div>
         </a>
@@ -223,8 +241,8 @@
           <div class="club-card-body">
             <div class="club-card-name-ja">ストーク・シティ</div>
             <div class="club-card-name-en">Stoke City</div>
-            <div class="club-card-meta">
-              <span class="jp-count">🇯🇵 1名</span>
+            <div class="club-japanese-players">
+              <span class="jp-player-badge-club">🇯🇵 瀬古樹</span>
             </div>
           </div>
         </a>
@@ -233,8 +251,8 @@
           <div class="club-card-body">
             <div class="club-card-name-ja">バーミンガム</div>
             <div class="club-card-name-en">Birmingham</div>
-            <div class="club-card-meta">
-              <span class="jp-count">🇯🇵 2名</span>
+            <div class="club-japanese-players">
+              <span class="jp-player-badge-club">🇯🇵 岩田智輝</span><span class="jp-player-badge-club">🇯🇵 古橋亨梧</span>
             </div>
           </div>
         </a>
@@ -249,8 +267,8 @@
           <div class="club-card-body">
             <div class="club-card-name-ja">バイエルン・ミュンヘン</div>
             <div class="club-card-name-en">Bayern München</div>
-            <div class="club-card-meta">
-              <span class="jp-count">🇯🇵 1名</span>
+            <div class="club-japanese-players">
+              <span class="jp-player-badge-club">🇯🇵 伊藤洋輝</span>
             </div>
           </div>
         </a>
@@ -259,8 +277,8 @@
           <div class="club-card-body">
             <div class="club-card-name-ja">フランクフルト</div>
             <div class="club-card-name-en">Eintracht Frankfurt</div>
-            <div class="club-card-meta">
-              <span class="jp-count">🇯🇵 3名</span>
+            <div class="club-japanese-players">
+              <span class="jp-player-badge-club">🇯🇵 堂安律</span><span class="jp-player-badge-club">🇯🇵 小杉啓太</span><span class="jp-player-badge-club">🇯🇵 神代慶人</span>
             </div>
           </div>
         </a>
@@ -269,8 +287,8 @@
           <div class="club-card-body">
             <div class="club-card-name-ja">フライブルク</div>
             <div class="club-card-name-en">SC Freiburg</div>
-            <div class="club-card-meta">
-              <span class="jp-count">🇯🇵 1名</span>
+            <div class="club-japanese-players">
+              <span class="jp-player-badge-club">🇯🇵 鈴木唯人</span>
             </div>
           </div>
         </a>
@@ -279,8 +297,8 @@
           <div class="club-card-body">
             <div class="club-card-name-ja">マインツ</div>
             <div class="club-card-name-en">Mainz 05</div>
-            <div class="club-card-meta">
-              <span class="jp-count">🇯🇵 2名</span>
+            <div class="club-japanese-players">
+              <span class="jp-player-badge-club">🇯🇵 佐野海舟</span><span class="jp-player-badge-club">🇯🇵 川﨑颯太</span>
             </div>
           </div>
         </a>
@@ -289,8 +307,8 @@
           <div class="club-card-body">
             <div class="club-card-name-ja">ブレーメン</div>
             <div class="club-card-name-en">Werder Bremen</div>
-            <div class="club-card-meta">
-              <span class="jp-count">🇯🇵 2名</span>
+            <div class="club-japanese-players">
+              <span class="jp-player-badge-club">🇯🇵 菅原由勢</span><span class="jp-player-badge-club">🇯🇵 長田澪</span>
             </div>
           </div>
         </a>
@@ -299,8 +317,8 @@
           <div class="club-card-body">
             <div class="club-card-name-ja">ボルシアMG</div>
             <div class="club-card-name-en">Borussia Mönchengladbach</div>
-            <div class="club-card-meta">
-              <span class="jp-count">🇯🇵 2名</span>
+            <div class="club-japanese-players">
+              <span class="jp-player-badge-club">🇯🇵 町野修斗</span><span class="jp-player-badge-club">🇯🇵 高井幸大（レンタル）</span>
             </div>
           </div>
         </a>
@@ -309,8 +327,8 @@
           <div class="club-card-body">
             <div class="club-card-name-ja">ヴォルフスブルク</div>
             <div class="club-card-name-en">VfL Wolfsburg</div>
-            <div class="club-card-meta">
-              <span class="jp-count">🇯🇵 1名</span>
+            <div class="club-japanese-players">
+              <span class="jp-player-badge-club">🇯🇵 塩貝健人</span>
             </div>
           </div>
         </a>
@@ -319,8 +337,8 @@
           <div class="club-card-body">
             <div class="club-card-name-ja">アウクスブルク</div>
             <div class="club-card-name-en">FC Augsburg</div>
-            <div class="club-card-meta">
-              <span class="jp-count">🇯🇵 1名</span>
+            <div class="club-japanese-players">
+              <span class="jp-player-badge-club">🇯🇵 小野田亮汰</span>
             </div>
           </div>
         </a>
@@ -329,8 +347,8 @@
           <div class="club-card-body">
             <div class="club-card-name-ja">ザンクト・パウリ</div>
             <div class="club-card-name-en">FC St. Pauli</div>
-            <div class="club-card-meta">
-              <span class="jp-count">🇯🇵 3名</span>
+            <div class="club-japanese-players">
+              <span class="jp-player-badge-club">🇯🇵 藤田譲瑠チマ</span><span class="jp-player-badge-club">🇯🇵 安藤智哉</span><span class="jp-player-badge-club">🇯🇵 原大智</span>
             </div>
           </div>
         </a>
@@ -339,8 +357,8 @@
           <div class="club-card-body">
             <div class="club-card-name-ja">ホッフェンハイム</div>
             <div class="club-card-name-en">TSG Hoffenheim</div>
-            <div class="club-card-meta">
-              <span class="jp-count">🇯🇵 1名</span>
+            <div class="club-japanese-players">
+              <span class="jp-player-badge-club">🇯🇵 町田浩樹</span>
             </div>
           </div>
         </a>
@@ -355,8 +373,8 @@
           <div class="club-card-body">
             <div class="club-card-name-ja">レアル・ソシエダ</div>
             <div class="club-card-name-en">Real Sociedad</div>
-            <div class="club-card-meta">
-              <span class="jp-count">🇯🇵 1名</span>
+            <div class="club-japanese-players">
+              <span class="jp-player-badge-club">🇯🇵 久保建英</span>
             </div>
           </div>
         </a>
@@ -365,8 +383,8 @@
           <div class="club-card-body">
             <div class="club-card-name-ja">マジョルカ</div>
             <div class="club-card-name-en">Mallorca</div>
-            <div class="club-card-meta">
-              <span class="jp-count">🇯🇵 1名</span>
+            <div class="club-japanese-players">
+              <span class="jp-player-badge-club">🇯🇵 浅野拓磨</span>
             </div>
           </div>
         </a>
@@ -381,8 +399,8 @@
           <div class="club-card-body">
             <div class="club-card-name-ja">パルマ</div>
             <div class="club-card-name-en">Parma</div>
-            <div class="club-card-meta">
-              <span class="jp-count">🇯🇵 1名</span>
+            <div class="club-japanese-players">
+              <span class="jp-player-badge-club">🇯🇵 鈴木彩艶</span>
             </div>
           </div>
         </a>
@@ -397,8 +415,8 @@
           <div class="club-card-body">
             <div class="club-card-name-ja">ASモナコ</div>
             <div class="club-card-name-en">Monaco</div>
-            <div class="club-card-meta">
-              <span class="jp-count">🇯🇵 1名</span>
+            <div class="club-japanese-players">
+              <span class="jp-player-badge-club">🇯🇵 南野拓実</span>
             </div>
           </div>
         </a>
@@ -407,8 +425,8 @@
           <div class="club-card-body">
             <div class="club-card-name-ja">ル・アーヴル</div>
             <div class="club-card-name-en">Le Havre</div>
-            <div class="club-card-meta">
-              <span class="jp-count">🇯🇵 1名</span>
+            <div class="club-japanese-players">
+              <span class="jp-player-badge-club">🇯🇵 瀬古歩夢</span>
             </div>
           </div>
         </a>
@@ -423,8 +441,8 @@
           <div class="club-card-body">
             <div class="club-card-name-ja">スタッド・ランス</div>
             <div class="club-card-name-en">Stade de Reims</div>
-            <div class="club-card-meta">
-              <span class="jp-count">🇯🇵 2名</span>
+            <div class="club-japanese-players">
+              <span class="jp-player-badge-club">🇯🇵 中村敬斗</span><span class="jp-player-badge-club">🇯🇵 関根大輝</span>
             </div>
           </div>
         </a>
@@ -439,8 +457,8 @@
           <div class="club-card-body">
             <div class="club-card-name-ja">アヤックス</div>
             <div class="club-card-name-en">Ajax</div>
-            <div class="club-card-meta">
-              <span class="jp-count">🇯🇵 2名</span>
+            <div class="club-japanese-players">
+              <span class="jp-player-badge-club">🇯🇵 板倉滉</span><span class="jp-player-badge-club">🇯🇵 冨安健洋</span>
             </div>
           </div>
         </a>
@@ -449,8 +467,8 @@
           <div class="club-card-body">
             <div class="club-card-name-ja">フェイエノールト</div>
             <div class="club-card-name-en">Feyenoord</div>
-            <div class="club-card-meta">
-              <span class="jp-count">🇯🇵 2名</span>
+            <div class="club-japanese-players">
+              <span class="jp-player-badge-club">🇯🇵 上田綺世</span><span class="jp-player-badge-club">🇯🇵 渡辺剛</span>
             </div>
           </div>
         </a>
@@ -459,8 +477,8 @@
           <div class="club-card-body">
             <div class="club-card-name-ja">AZアルクマール</div>
             <div class="club-card-name-en">AZ Alkmaar</div>
-            <div class="club-card-meta">
-              <span class="jp-count">🇯🇵 2名</span>
+            <div class="club-japanese-players">
+              <span class="jp-player-badge-club">🇯🇵 毎熊晟矢</span><span class="jp-player-badge-club">🇯🇵 市原吏音</span>
             </div>
           </div>
         </a>
@@ -469,8 +487,8 @@
           <div class="club-card-body">
             <div class="club-card-name-ja">NECナイメヘン</div>
             <div class="club-card-name-en">NEC Nijmegen</div>
-            <div class="club-card-meta">
-              <span class="jp-count">🇯🇵 2名</span>
+            <div class="club-japanese-players">
+              <span class="jp-player-badge-club">🇯🇵 小川航基</span><span class="jp-player-badge-club">🇯🇵 佐野航大</span>
             </div>
           </div>
         </a>
@@ -479,8 +497,8 @@
           <div class="club-card-body">
             <div class="club-card-name-ja">スパルタ・ロッテルダム</div>
             <div class="club-card-name-en">Sparta Rotterdam</div>
-            <div class="club-card-meta">
-              <span class="jp-count">🇯🇵 1名</span>
+            <div class="club-japanese-players">
+              <span class="jp-player-badge-club">🇯🇵 三戸舜介</span>
             </div>
           </div>
         </a>
@@ -495,8 +513,8 @@
           <div class="club-card-body">
             <div class="club-card-name-ja">ジル・ヴィセンテ</div>
             <div class="club-card-name-en">Gil Vicente</div>
-            <div class="club-card-meta">
-              <span class="jp-count">🇯🇵 1名</span>
+            <div class="club-japanese-players">
+              <span class="jp-player-badge-club">🇯🇵 藤本寛也</span>
             </div>
           </div>
         </a>
@@ -505,8 +523,8 @@
           <div class="club-card-body">
             <div class="club-card-name-ja">スポルティングCP</div>
             <div class="club-card-name-en">Sporting CP</div>
-            <div class="club-card-meta">
-              <span class="jp-count">🇯🇵 1名</span>
+            <div class="club-japanese-players">
+              <span class="jp-player-badge-club">🇯🇵 守田英正</span>
             </div>
           </div>
         </a>
@@ -521,8 +539,8 @@
           <div class="club-card-body">
             <div class="club-card-name-ja">ゲンク</div>
             <div class="club-card-name-en">Genk</div>
-            <div class="club-card-meta">
-              <span class="jp-count">🇯🇵 2名</span>
+            <div class="club-japanese-players">
+              <span class="jp-player-badge-club">🇯🇵 伊東純也</span><span class="jp-player-badge-club">🇯🇵 横山歩夢</span>
             </div>
           </div>
         </a>
@@ -531,8 +549,8 @@
           <div class="club-card-body">
             <div class="club-card-name-ja">アントワープ</div>
             <div class="club-card-name-en">Royal Antwerp</div>
-            <div class="club-card-meta">
-              <span class="jp-count">🇯🇵 2名</span>
+            <div class="club-japanese-players">
+              <span class="jp-player-badge-club">🇯🇵 綱島悠斗</span><span class="jp-player-badge-club">🇯🇵 野澤大志ブランドン</span>
             </div>
           </div>
         </a>
@@ -541,8 +559,8 @@
           <div class="club-card-body">
             <div class="club-card-name-ja">ヘント</div>
             <div class="club-card-name-en">Gent</div>
-            <div class="club-card-meta">
-              <span class="jp-count">🇯🇵 2名</span>
+            <div class="club-japanese-players">
+              <span class="jp-player-badge-club">🇯🇵 伊藤敦樹</span><span class="jp-player-badge-club">🇯🇵 橋岡大樹</span>
             </div>
           </div>
         </a>
@@ -551,8 +569,8 @@
           <div class="club-card-body">
             <div class="club-card-name-ja">ウェステルロー</div>
             <div class="club-card-name-en">Westerlo</div>
-            <div class="club-card-meta">
-              <span class="jp-count">🇯🇵 3名</span>
+            <div class="club-japanese-players">
+              <span class="jp-player-badge-club">🇯🇵 坂本一彩</span><span class="jp-player-badge-club">🇯🇵 木村誠二</span><span class="jp-player-badge-club">🇯🇵 斎藤俊輔</span>
             </div>
           </div>
         </a>
@@ -561,8 +579,8 @@
           <div class="club-card-body">
             <div class="club-card-name-ja">OHルーヴェン</div>
             <div class="club-card-name-en">OH Leuven</div>
-            <div class="club-card-meta">
-              <span class="jp-count">🇯🇵 2名</span>
+            <div class="club-japanese-players">
+              <span class="jp-player-badge-club">🇯🇵 明本考浩</span><span class="jp-player-badge-club">🇯🇵 大南拓磨</span>
             </div>
           </div>
         </a>
@@ -571,8 +589,8 @@
           <div class="club-card-body">
             <div class="club-card-name-ja">シント＝トロイデン</div>
             <div class="club-card-name-en">Sint-Truiden</div>
-            <div class="club-card-meta">
-              <span class="jp-count">🇯🇵 8名</span>
+            <div class="club-japanese-players">
+              <span class="jp-player-badge-club">🇯🇵 小久保玲央ブライアン</span><span class="jp-player-badge-club">🇯🇵 谷口彰悟</span><span class="jp-player-badge-club">🇯🇵 山本理仁</span><span class="jp-player-badge-club">🇯🇵 伊藤涼太郎</span><span class="jp-player-badge-club">🇯🇵 畑大雅</span><span class="jp-player-badge-club">🇯🇵 後藤啓介</span><span class="jp-player-badge-club">🇯🇵 松澤海斗</span><span class="jp-player-badge-club">🇯🇵 新川志音</span>
             </div>
           </div>
         </a>
