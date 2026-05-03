@@ -505,6 +505,57 @@ def build_jp_lookup(players):
     return out
 
 
+# matches.json のクラブ名略称 → Wikipedia での正式名の一部（normalize_team後）への展開
+_TEAM_ALIASES = {
+    "hsv": ["hamburger", "hamburger sv"],
+    "m gladbach": ["monchengladbach", "m gladbach", "gladbach"],
+    "brighton hove": ["brighton", "brighton hove albion"],
+    "brighton": ["brighton", "brighton hove albion"],
+    "man city": ["manchester city", "man city"],
+    "man united": ["manchester united", "man united"],
+    "qpr": ["queens park rangers", "qpr"],
+    "rb leipzig": ["leipzig", "rb leipzig"],
+    "go ahead": ["go ahead eagles", "go ahead"],
+    "nac": ["nac breda", "nac"],
+    "1 fc koln": ["cologne", "koln", "1 koln"],
+    "ac pisa": ["pisa"],
+    "sc freiburg": ["freiburg", "sc freiburg"],
+}
+
+
+def _team_variants(normalized_name):
+    """normalize_team 済みのチーム名からマッチ候補リストを返す（_ascii_fold 済み）"""
+    n = _ascii_fold(normalized_name)
+    variants = {n}
+    for key, alts in _TEAM_ALIASES.items():
+        if n == key or n.startswith(key) or key in n:
+            variants.update(alts)
+            break
+    # ASCII fold のみのバリアント
+    variants.add(_ascii_fold(n))
+    return variants
+
+
+def _teams_match(a_norm, b_norm):
+    """normalize_team 済みの2つのチーム名が同一チームかを判定"""
+    if not a_norm or not b_norm:
+        return False
+    # ASCII fold
+    a_ascii = _ascii_fold(a_norm)
+    b_ascii = _ascii_fold(b_norm)
+    # substring matching（どちらかが他方に含まれる）
+    if a_ascii in b_ascii or b_ascii in a_ascii:
+        return True
+    # エイリアスで展開して照合
+    a_variants = _team_variants(a_ascii)
+    b_variants = _team_variants(b_ascii)
+    for av in a_variants:
+        for bv in b_variants:
+            if av and bv and (av in bv or bv in av):
+                return True
+    return False
+
+
 def find_match(jp_match, wiki_box):
     """jp_match と wiki_box の date+対戦相手 を比較"""
     if jp_match["kickoff_jst"][:10] != wiki_box["date"]:
@@ -520,9 +571,9 @@ def find_match(jp_match, wiki_box):
     a = normalize_team(jp_match.get("away_en"))
     t1 = normalize_team(wiki_box["team1"])
     t2 = normalize_team(wiki_box["team2"])
-    if (h and t1 and (h in t1 or t1 in h) and a and t2 and (a in t2 or t2 in a)):
+    if _teams_match(h, t1) and _teams_match(a, t2):
         return True
-    if (h and t2 and (h in t2 or t2 in h) and a and t1 and (a in t1 or t1 in a)):
+    if _teams_match(h, t2) and _teams_match(a, t1):
         return True
     return False
 
@@ -558,17 +609,19 @@ def main():
     print(f"[INFO] 対象クラブ: {len(by_club)}")
 
     boxes_per_club = {}
+    # boxes が更新されたクラブの club_id セット（events_map の再計算に使う）
+    refreshed_club_ids = set()
+
     for cid, info in by_club.items():
         cen = info["name_en"]
-        # キャッシュチェック（boxes があれば再利用、title=None かつ boxes=[] はSKIP済みだが
-        # 今回の拡張でwikitableも対象になったためSKIP済みクラブも再試行する）
+        # キャッシュチェック: boxes が空でなければ再利用
         cached = pages_cache.get(str(cid), {})
         if cached.get("boxes"):
             boxes = cached["boxes"]
             print(f"  [CACHE] {cen}: {len(boxes)}試合")
             boxes_per_club[cid] = boxes
             continue
-        # SKIP済みクラブも再取得を試みる（wikitable対応拡張のため）
+        # boxes が空（title=None または boxes=[] でSKIP/失敗済み）の場合は再取得を試みる
         # ページタイトル候補を順に試す
         wt = None
         used_title = None
@@ -591,17 +644,40 @@ def main():
             pages_cache[str(cid)] = {"title": None, "boxes": []}
             continue
         boxes = parse_all_matches(wt, cen)
+        if boxes:
+            # 新規取得または再取得成功 → events_map の再計算が必要
+            refreshed_club_ids.add(cid)
         pages_cache[str(cid)] = {"title": used_title, "boxes": boxes}
         boxes_per_club[cid] = boxes
         print(f"  [WIKI] {cen} ({used_title}): {len(boxes)}試合")
         time.sleep(0.5)
 
+    # 再取得したクラブに関連する events_map エントリを削除して再計算させる
+    if refreshed_club_ids:
+        # 各試合の JP 選手のクラブが refreshed_club_ids に含まれる場合は events_map から削除
+        cleared = 0
+        for m in finished_jp:
+            mid = str(m["id"])
+            if mid not in events_map:
+                continue
+            jp_clubs = set()
+            for p in players:
+                for jp in m.get("japanese_players", []):
+                    if p.get("name_ja") == jp.get("name_ja") and p.get("club_id"):
+                        jp_clubs.add(p["club_id"])
+            if jp_clubs & refreshed_club_ids:
+                del events_map[mid]
+                cleared += 1
+        if cleared:
+            print(f"  [REFRESH] {cleared}試合のキャッシュをクリア（再計算対象）")
+
     # 各 finished_jp 試合に対して、関連クラブの boxes から日本人ゴール抽出
     found = 0
     for m in finished_jp:
         mid = str(m["id"])
-        if mid in events_map:
-            continue  # キャッシュ済み
+        # ゴールデータが確認できた試合はスキップ（空 [] はマッチング失敗の可能性があるため再計算）
+        if events_map.get(mid):
+            continue  # キャッシュ済み（ゴールデータあり）
         # この試合のJP選手のクラブ群
         jp_clubs = set()
         for p in players:
