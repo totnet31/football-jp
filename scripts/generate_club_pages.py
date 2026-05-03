@@ -300,7 +300,7 @@ def get_club_standing(club_info: dict, standings_comps: dict) -> dict:
 
 
 def get_club_recent_matches(club_info: dict, matches: list) -> list:
-    """クラブの直近試合を取得する（最大10件）。"""
+    """クラブの全試合を取得する（新しい順）。"""
     club_id = club_info.get("club_id")
     if not club_id:
         return []
@@ -310,7 +310,33 @@ def get_club_recent_matches(club_info: dict, matches: list) -> list:
         if m.get("home_id") == club_id or m.get("away_id") == club_id
     ]
     club_matches.sort(key=lambda x: x.get("kickoff_jst", ""), reverse=True)
-    return club_matches[:10]
+    return club_matches
+
+
+def get_club_highlights(club_info: dict, matches: list) -> list:
+    """クラブの試合に紐付いたYouTube動画を最大10本返す（新しい順）。"""
+    club_id = club_info.get("club_id")
+    if not club_id:
+        return []
+
+    videos = []
+    for m in sorted(matches, key=lambda x: x.get("kickoff_jst", ""), reverse=True):
+        if m.get("home_id") != club_id and m.get("away_id") != club_id:
+            continue
+        for h in m.get("highlights", []):
+            vid = h.get("video_id", "")
+            if not vid:
+                continue
+            videos.append({
+                "video_id": vid,
+                "url": h.get("url", f"https://www.youtube.com/watch?v={vid}"),
+                "title": h.get("title", ""),
+                "channel": h.get("broadcaster", ""),
+                "published": m.get("kickoff_jst", ""),
+            })
+            if len(videos) >= 10:
+                return videos
+    return videos
 
 
 def load_local_crests() -> dict:
@@ -377,7 +403,8 @@ def build_club_page(club_info: dict, slug: str, standing: dict,
                     recent_matches: list, crest_url: str,
                     player_slug_map: dict, services: dict = None,
                     club_news: list = None, opponent_records: list = None,
-                    club_info_extra: dict = None) -> str:
+                    club_info_extra: dict = None,
+                    highlights: list = None) -> str:
     club_ja = club_info.get("club_ja", "")
     club_en = club_info.get("club_en", "")
     league_ja = club_info.get("league_ja", "")
@@ -472,7 +499,7 @@ def build_club_page(club_info: dict, slug: str, standing: dict,
     matches_html = ""
     if recent_matches:
         match_rows = ""
-        for m in recent_matches:
+        for idx, m in enumerate(recent_matches):
             kickoff = m.get("kickoff_jst", "")
             status = m.get("status", "")
             home_ja = m.get("home_ja", "")
@@ -482,6 +509,7 @@ def build_club_page(club_info: dict, slug: str, standing: dict,
             home_id = m.get("home_id")
             club_id = club_info.get("club_id")
             is_home = home_id == club_id
+            extra_cls = " hidden-extra" if idx >= 10 else ""
 
             date_display = ""
             if kickoff:
@@ -516,7 +544,7 @@ def build_club_page(club_info: dict, slug: str, standing: dict,
                 venue_cls = "venue-home" if is_home else "venue-away"
                 venue_label = "H" if is_home else "A"
                 match_rows += f"""
-          <div class="match-row">
+          <div class="match-row{extra_cls}">
             <div class="match-date">{date_display}</div>
             <div class="match-venue"><span class="venue-badge {venue_cls}">{venue_label}</span></div>
             <div class="match-opponent">vs {opponent}</div>
@@ -542,7 +570,7 @@ def build_club_page(club_info: dict, slug: str, standing: dict,
                     bc_names = [b.get("name", "") for b in broadcasters_list[:2] if b.get("name")]
                     bc_tags = esc(" / ".join(bc_names))
                 match_rows += f"""
-          <div class="match-row scheduled">
+          <div class="match-row scheduled{extra_cls}">
             <div class="match-date">{date_display}</div>
             <div class="match-venue"><span class="venue-badge {venue_cls}">{venue_label}</span></div>
             <div class="match-opponent">vs {opponent}</div>
@@ -551,9 +579,18 @@ def build_club_page(club_info: dict, slug: str, standing: dict,
             <div class="match-comp">{esc(comp_ja)}</div>
           </div>"""
 
+        total_matches = len(recent_matches)
+        extra_count = max(0, total_matches - 10)
+        show_more_btn = ""
+        if extra_count > 0:
+            show_more_btn = f"""
+      <button class="show-more-matches" onclick="toggleMoreMatches(this)" data-count="{extra_count}" data-expanded="false">
+        もっと見る（残り {extra_count} 試合）
+      </button>"""
+
         matches_html = f"""
     <section class="club-section">
-      <h3>📅 直近の試合（最大10試合）</h3>
+      <h3>📅 直近の試合</h3>
       <div class="matches-list">
         <div class="match-header">
           <div class="match-date">日時（JST）</div>
@@ -564,13 +601,57 @@ def build_club_page(club_info: dict, slug: str, standing: dict,
           <div class="match-comp">大会</div>
         </div>
         {match_rows}
-      </div>
+      </div>{show_more_btn}
     </section>"""
     else:
         matches_html = """
     <section class="club-section">
       <h3>📅 直近の試合</h3>
       <p class="no-data">試合データを取得中です。</p>
+    </section>"""
+
+    # --- 関連ハイライト動画セクション ---
+    videos_html = ""
+    if highlights:
+        video_cards = ""
+        for v in highlights:
+            vid = v.get("video_id", "")
+            if not vid:
+                continue
+            thumb = f"https://i.ytimg.com/vi/{vid}/mqdefault.jpg"
+            url = v.get("url", f"https://www.youtube.com/watch?v={vid}")
+            title_v = v.get("title", "")
+            channel = v.get("channel", "")
+            pub = v.get("published", "")
+            pub_display = ""
+            if pub:
+                try:
+                    from datetime import datetime
+                    import re as _re
+                    ko_str = _re.sub(r'[+-]\d{2}:\d{2}$', '', pub.replace("Z", ""))
+                    dt = datetime.strptime(ko_str[:10], "%Y-%m-%d")
+                    pub_display = dt.strftime("%m/%d")
+                except Exception:
+                    pub_display = pub[:10]
+            meta_parts = []
+            if channel:
+                meta_parts.append(esc(channel))
+            if pub_display:
+                meta_parts.append(pub_display)
+            meta_str = " · ".join(meta_parts)
+            video_cards += f"""
+        <a href="{esc(url)}" target="_blank" rel="noopener" class="video-card">
+          <img src="{esc(thumb)}" alt="" loading="lazy">
+          <div class="video-title">{esc(title_v)}</div>
+          <div class="video-meta">{meta_str}</div>
+        </a>"""
+        if video_cards:
+            videos_html = f"""
+    <section class="club-section">
+      <h3>📺 関連ハイライト動画</h3>
+      <div class="video-grid">
+        {video_cards}
+      </div>
     </section>"""
 
     # --- クラブ基本情報セクション ---
@@ -883,12 +964,68 @@ def build_club_page(club_info: dict, slug: str, standing: dict,
       margin-top: 20px;
     }}
     .site-footer a {{ color: #666; }}
+    .match-row.hidden-extra {{ display: none; }}
+    .match-row.hidden-extra.shown {{ display: grid; }}
+    .show-more-matches {{
+      display: block;
+      width: 100%;
+      margin-top: 10px;
+      padding: 10px;
+      background: #f0f4ff;
+      border: 1px solid #aac6e8;
+      border-radius: 4px;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--c-accent, #0047ab);
+      cursor: pointer;
+      text-align: center;
+      transition: background 0.15s;
+    }}
+    .show-more-matches:hover {{ background: #dce8ff; }}
+    .video-grid {{
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+      gap: 12px;
+    }}
+    .video-card {{
+      display: block;
+      text-decoration: none;
+      color: var(--c-text, #111);
+      background: #f8f9fa;
+      border: 1px solid var(--c-border, #e5e7eb);
+      border-radius: 4px;
+      overflow: hidden;
+      transition: background 0.15s;
+    }}
+    .video-card:hover {{ background: #eef0f7; }}
+    .video-card img {{
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      object-fit: cover;
+      display: block;
+    }}
+    .video-title {{
+      font-size: 11px;
+      font-weight: 600;
+      padding: 6px 8px 2px;
+      line-height: 1.4;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }}
+    .video-meta {{
+      font-size: 10px;
+      color: #888;
+      padding: 0 8px 8px;
+    }}
     @media (max-width: 600px) {{
       .match-header, .match-row {{
         grid-template-columns: 80px 28px 1fr 45px;
         font-size: 12px;
       }}
       .match-broadcast, .match-comp {{ display: none; }}
+      .video-grid {{ grid-template-columns: repeat(2, 1fr); }}
     }}
   </style>
   <script type="application/ld+json">
@@ -920,6 +1057,8 @@ def build_club_page(club_info: dict, slug: str, standing: dict,
 
   {matches_html}
 
+  {videos_html}
+
   {opponent_html}
 
   {news_html}
@@ -936,6 +1075,19 @@ def build_club_page(club_info: dict, slug: str, standing: dict,
 </div>
 
 <script>
+function toggleMoreMatches(btn) {{
+  var list = btn.previousElementSibling;
+  list.querySelectorAll('.hidden-extra').forEach(function(r) {{
+    r.classList.toggle('shown');
+  }});
+  if (btn.dataset.expanded === 'true') {{
+    btn.textContent = '\u3082\u3063\u3068\u898b\u308b\uff08\u6b8b\u308a ' + btn.dataset.count + ' \u8a66\u5408\uff09';
+    btn.dataset.expanded = 'false';
+  }} else {{
+    btn.textContent = '\u9589\u3058\u308b';
+    btn.dataset.expanded = 'true';
+  }}
+}}
 function trackAffClick(el) {{
   if (typeof gtag === 'function') {{
     gtag('event', 'affiliate_click', {{
@@ -1212,12 +1364,14 @@ def main():
         club_news = get_club_news(club_info, news_items)
         opponent_records = get_opponent_records(club_info, matches)
         extra_info = club_info_data.get(club_en, {})
+        highlights = get_club_highlights(club_info, matches)
 
         # HTMLページ生成
         html = build_club_page(club_info, slug, standing, recent_matches, crest_url, player_slug_map,
                                services=services, club_news=club_news,
                                opponent_records=opponent_records,
-                               club_info_extra=extra_info if extra_info else None)
+                               club_info_extra=extra_info if extra_info else None,
+                               highlights=highlights)
 
         # 出力
         out_dir = OUTPUT_DIR / slug
