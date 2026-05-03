@@ -337,6 +337,21 @@
       color: #888;
       padding: 0 8px 8px;
     }
+    .video-grid-player { grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); }
+    .video-card-player { border: 2px solid #aac6e8; }
+    .video-thumb-wrap { position: relative; }
+    .video-thumb-wrap img { width: 100%; aspect-ratio: 16/9; object-fit: cover; display: block; }
+    .video-official-badge {
+      position: absolute;
+      top: 6px;
+      left: 6px;
+      background: var(--c-accent, #0047ab);
+      color: #fff;
+      font-size: 10px;
+      font-weight: 700;
+      padding: 2px 6px;
+      border-radius: 3px;
+    }
     .national-team-list {
       font-size: 13px;
     }
@@ -496,7 +511,39 @@
 
   
     <section class="player-section">
-      <h3>📺 関連ハイライト動画</h3>
+      <h3>🎬 シーズンゴール集・まとめ動画</h3>
+      <div class="video-grid video-grid-player">
+        
+        <a href="https://youtube.com/watch?v=ew7bGaDC-_I" target="_blank" rel="noopener" class="video-card video-card-player">
+          <div class="video-thumb-wrap">
+            <img src="https://i.ytimg.com/vi/ew7bGaDC-_I/mqdefault.jpg" alt="" loading="lazy">
+            
+          </div>
+          <div class="video-title">𝟏𝟎𝐱 𝐒𝐔𝐏𝐄𝐑𝐒𝐔𝐁 𝐒𝐇𝐈𝐎𝐆𝐀𝐈 🦸 Alle goals in de Eredivisie 🎯✨</div>
+          <div class="video-meta">ESPN NL · 12/08</div>
+        </a>
+        <a href="https://youtube.com/watch?v=9LGFS9LKRa0" target="_blank" rel="noopener" class="video-card video-card-player">
+          <div class="video-thumb-wrap">
+            <img src="https://i.ytimg.com/vi/9LGFS9LKRa0/mqdefault.jpg" alt="" loading="lazy">
+            
+          </div>
+          <div class="video-title">【塩貝健人（Kento Shiogai）】52分に1ゴール!?NECナイメヘンで覚醒し、ヴォルフスブルクへ</div>
+          <div class="video-meta">KOALA SOCCER · 01/26</div>
+        </a>
+        <a href="https://youtube.com/watch?v=W3IdBVaY_j0" target="_blank" rel="noopener" class="video-card video-card-player">
+          <div class="video-thumb-wrap">
+            <img src="https://i.ytimg.com/vi/W3IdBVaY_j0/mqdefault.jpg" alt="" loading="lazy">
+            
+          </div>
+          <div class="video-title">𝟏𝟎𝐱 𝐒𝐮𝐩𝐞𝐫𝐬𝐮𝐛 𝐒𝐡𝐢𝐨𝐠𝐚𝐢 🦸</div>
+          <div class="video-meta">ESPN NL · 12/08</div>
+        </a>
+      </div>
+    </section>
+
+  
+    <section class="player-section">
+      <h3>📺 他のハイライト動画</h3>
       <div class="video-grid">
         
         <a href="https://youtu.be/yB3aqnGEKEo" target="_blank" rel="noopener" class="video-card">
@@ -516,13 +563,39 @@
   
     <section class="player-section">
       <h3>📋 キャリア</h3>
-      <div class="career-current">🟢 現在所属：<strong>ヴォルフスブルク</strong>（2026–）</div>
+      <div class="career-current">🟢 現在所属：<strong>{{Flagicon</strong>（2026-）</div>
       <div class="career-list">
-        <div class="career-row"><span class="career-years">?</span><span class="career-club">Buddy SC Koto（ユース）</span></div><div class="career-row"><span class="career-years">2019–2021</span><span class="career-club">横浜FC（ユース）</span></div><div class="career-row"><span class="career-years">2020–2022</span><span class="career-club">Kokugakuin Univ. Kugayama High School（ユース）</span></div><div class="career-row"><span class="career-years">2024</span><span class="career-club">横浜F・マリノス</span></div><div class="career-row"><span class="career-years">2024–2026</span><span class="career-club">NEC</span></div><div class="career-row is-current"><span class="career-years">2026–</span><span class="career-club">ヴォルフスブルク</span></div>
+        <div class="career-row"><span class="career-years">2024</span><span class="career-club">{{Flagicon</span></div><div class="career-row"><span class="career-years">2024-2026</span><span class="career-club">{{Flagicon</span></div><div class="career-row is-current"><span class="career-years">2026-</span><span class="career-club">{{Flagicon</span></div>
       </div>
     </section>
 
   
+    <section class="player-section">
+      <h3>🇯🇵 代表履歴</h3>
+      <div class="national-team-list">
+        
+            <div class="nt-row">
+              <span class="nt-team">Japan U18</span>
+              <span class="nt-years">2023</span>
+              <span class="nt-stats">9試合 / 4ゴール</span>
+            </div>
+            <div class="nt-row">
+              <span class="nt-team">Japan U19</span>
+              <span class="nt-years">2023–2024</span>
+              <span class="nt-stats">9試合 / 6ゴール</span>
+            </div>
+            <div class="nt-row">
+              <span class="nt-team">Japan U23</span>
+              <span class="nt-years">2025–</span>
+              <span class="nt-stats">3試合 / 0ゴール</span>
+            </div>
+            <div class="nt-row">
+              <span class="nt-team">日本代表（A代表）</span>
+              <span class="nt-years">2026–</span>
+              <span class="nt-stats">1試合 / 0ゴール</span>
+            </div>
+      </div>
+    </section>
 
   
 

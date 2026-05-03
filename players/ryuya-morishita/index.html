@@ -337,6 +337,21 @@
       color: #888;
       padding: 0 8px 8px;
     }
+    .video-grid-player { grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); }
+    .video-card-player { border: 2px solid #aac6e8; }
+    .video-thumb-wrap { position: relative; }
+    .video-thumb-wrap img { width: 100%; aspect-ratio: 16/9; object-fit: cover; display: block; }
+    .video-official-badge {
+      position: absolute;
+      top: 6px;
+      left: 6px;
+      background: var(--c-accent, #0047ab);
+      color: #fff;
+      font-size: 10px;
+      font-weight: 700;
+      padding: 2px 6px;
+      border-radius: 3px;
+    }
     .national-team-list {
       font-size: 13px;
     }
@@ -430,7 +445,7 @@
       <table class="profile-table">
         <tr><td class="profile-label">身長 / 体重</td><td class="profile-value">168cm / —</td></tr>
         <tr><td class="profile-label">生年月日</td><td class="profile-value">1997-04-11（29歳）</td></tr>
-        <tr><td class="profile-label">出身地</td><td class="profile-value">静岡県掛川市</td></tr>
+        <tr><td class="profile-label">出身地</td><td class="profile-value">静岡県掛川市{{Cite news</td></tr>
         <tr><td class="profile-label">利き足</td><td class="profile-value">—</td></tr>
       </table>
     </section>
@@ -473,6 +488,8 @@
   
 
   
+
+  
     <section class="player-section">
       <h3>⚽ 直近のゴール</h3>
       <p class="no-data">今シーズンまだゴールなし（または取得範囲外）。</p>
@@ -481,13 +498,24 @@
   
     <section class="player-section">
       <h3>📋 キャリア</h3>
-      <div class="career-current">🟢 現在所属：<strong>ブラックバーン</strong>（2025–）</div>
+      <div class="career-current">🟢 現在所属：<strong>{{Flagicon</strong>（2025-）</div>
       <div class="career-list">
-        <div class="career-row"><span class="career-years">2004–2009</span><span class="career-club">Kakegawa JFC 01（ユース）</span></div><div class="career-row"><span class="career-years">2010–2015</span><span class="career-club">ジュビロ磐田（ユース）</span></div><div class="career-row"><span class="career-years">2020</span><span class="career-club">サガン鳥栖</span></div><div class="career-row"><span class="career-years">2021–2024</span><span class="career-club">名古屋グランパス</span></div><div class="career-row"><span class="career-years">2024</span><span class="career-club">→ レギア・ワルシャワ（ローン）</span></div><div class="career-row"><span class="career-years">2024–2025</span><span class="career-club">レギア・ワルシャワ</span></div><div class="career-row is-current"><span class="career-years">2025–</span><span class="career-club">ブラックバーン</span></div>
+        <div class="career-row"><span class="career-years">2020</span><span class="career-club">{{Flagicon</span></div><div class="career-row"><span class="career-years">2021-2024</span><span class="career-club">{{Flagicon</span></div><div class="career-row"><span class="career-years">2024</span><span class="career-club">→{{Flagicon</span></div><div class="career-row"><span class="career-years">2024-2025</span><span class="career-club">{{Flagicon</span></div><div class="career-row is-current"><span class="career-years">2025-</span><span class="career-club">{{Flagicon</span></div>
       </div>
     </section>
 
   
+    <section class="player-section">
+      <h3>🇯🇵 代表履歴</h3>
+      <div class="national-team-list">
+        
+            <div class="nt-row">
+              <span class="nt-team">日本代表（A代表）</span>
+              <span class="nt-years">2023–</span>
+              <span class="nt-stats">3試合 / 1ゴール</span>
+            </div>
+      </div>
+    </section>
 
   
 

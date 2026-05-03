@@ -337,6 +337,21 @@
       color: #888;
       padding: 0 8px 8px;
     }
+    .video-grid-player { grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); }
+    .video-card-player { border: 2px solid #aac6e8; }
+    .video-thumb-wrap { position: relative; }
+    .video-thumb-wrap img { width: 100%; aspect-ratio: 16/9; object-fit: cover; display: block; }
+    .video-official-badge {
+      position: absolute;
+      top: 6px;
+      left: 6px;
+      background: var(--c-accent, #0047ab);
+      color: #fff;
+      font-size: 10px;
+      font-weight: 700;
+      padding: 2px 6px;
+      border-radius: 3px;
+    }
     .national-team-list {
       font-size: 13px;
     }
@@ -479,6 +494,38 @@
     </section>
 
   
+    <section class="player-section">
+      <h3>🎬 シーズンゴール集・まとめ動画</h3>
+      <div class="video-grid video-grid-player">
+        
+        <a href="https://youtube.com/watch?v=KKFIw4dotGI" target="_blank" rel="noopener" class="video-card video-card-player">
+          <div class="video-thumb-wrap">
+            <img src="https://i.ytimg.com/vi/KKFIw4dotGI/mqdefault.jpg" alt="" loading="lazy">
+            
+          </div>
+          <div class="video-title">QPR Goal of the Season 2025/26 | WHO GETS YOUR VOTE?</div>
+          <div class="video-meta">QPR FC · 04/14</div>
+        </a>
+        <a href="https://youtube.com/watch?v=9gbJxTIFWqo" target="_blank" rel="noopener" class="video-card video-card-player">
+          <div class="video-thumb-wrap">
+            <img src="https://i.ytimg.com/vi/9gbJxTIFWqo/mqdefault.jpg" alt="" loading="lazy">
+            
+          </div>
+          <div class="video-title">Julien Stephan Queens Park Rangers - No Need To Compare Koki Saito to Kaoru Mitoma!</div>
+          <div class="video-meta">Jim Conlan Chats · 10/30</div>
+        </a>
+        <a href="https://youtube.com/watch?v=EmUnEhgtY-M" target="_blank" rel="noopener" class="video-card video-card-player">
+          <div class="video-thumb-wrap">
+            <img src="https://i.ytimg.com/vi/EmUnEhgtY-M/mqdefault.jpg" alt="" loading="lazy">
+            
+          </div>
+          <div class="video-title">THE BEST OF QPR CHANTS 2025 + LYRICS!</div>
+          <div class="video-meta">All About Rs · 12/27</div>
+        </a>
+      </div>
+    </section>
+
+  
 
   
     <section class="player-section">
@@ -489,13 +536,59 @@
   
     <section class="player-section">
       <h3>📋 キャリア</h3>
-      <div class="career-current">🟢 現在所属：<strong>QPR</strong>（2025–）</div>
+      <div class="career-current">🟢 現在所属：<strong>{{Flagicon</strong>（2025-）</div>
       <div class="career-list">
-        <div class="career-row"><span class="career-years">2008–2013</span><span class="career-club">Inukura SC（ユース）</span></div><div class="career-row"><span class="career-years">2014–2018</span><span class="career-club">横浜FC（ユース）</span></div><div class="career-row"><span class="career-years">2018–2020</span><span class="career-club">横浜FC</span></div><div class="career-row"><span class="career-years">2021–2025</span><span class="career-club">Lommel</span></div><div class="career-row"><span class="career-years">2022–2024</span><span class="career-club">→ スパルタ・ロッテルダム（ローン）</span></div><div class="career-row"><span class="career-years">2024–2025</span><span class="career-club">→ QPR（ローン）</span></div><div class="career-row is-current"><span class="career-years">2025–</span><span class="career-club">QPR</span></div>
+        <div class="career-row"><span class="career-years">2018-2020</span><span class="career-club">{{Flagicon</span></div><div class="career-row"><span class="career-years">2021-2025</span><span class="career-club">{{Flagicon</span></div><div class="career-row"><span class="career-years">2022-2024</span><span class="career-club">→{{Flagicon</span></div><div class="career-row"><span class="career-years">2024-2025</span><span class="career-club">→{{Flagicon</span></div><div class="career-row is-current"><span class="career-years">2025-</span><span class="career-club">{{Flagicon</span></div>
       </div>
     </section>
 
   
+    <section class="player-section">
+      <h3>🇯🇵 代表履歴</h3>
+      <div class="national-team-list">
+        
+            <div class="nt-row">
+              <span class="nt-team">Japan U16</span>
+              <span class="nt-years">2017</span>
+              <span class="nt-stats">7試合 / 7ゴール</span>
+            </div>
+            <div class="nt-row">
+              <span class="nt-team">Japan U17</span>
+              <span class="nt-years">2017–2018</span>
+              <span class="nt-stats">8試合 / 9ゴール</span>
+            </div>
+            <div class="nt-row">
+              <span class="nt-team">Japan U18</span>
+              <span class="nt-years">2018</span>
+              <span class="nt-stats">4試合 / 0ゴール</span>
+            </div>
+            <div class="nt-row">
+              <span class="nt-team">Japan U19</span>
+              <span class="nt-years">2018</span>
+              <span class="nt-stats">5試合 / 3ゴール</span>
+            </div>
+            <div class="nt-row">
+              <span class="nt-team">Japan U20</span>
+              <span class="nt-years">2019</span>
+              <span class="nt-stats">6試合 / 1ゴール</span>
+            </div>
+            <div class="nt-row">
+              <span class="nt-team">Japan U21</span>
+              <span class="nt-years">2022</span>
+              <span class="nt-stats">5試合 / 1ゴール</span>
+            </div>
+            <div class="nt-row">
+              <span class="nt-team">Japan U23</span>
+              <span class="nt-years">2022</span>
+              <span class="nt-stats">6試合 / 1ゴール</span>
+            </div>
+            <div class="nt-row">
+              <span class="nt-team">日本代表（A代表）</span>
+              <span class="nt-years">2025–</span>
+              <span class="nt-stats">1試合 / 0ゴール</span>
+            </div>
+      </div>
+    </section>
 
   
     <section class="player-section">

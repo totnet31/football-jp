@@ -337,6 +337,21 @@
       color: #888;
       padding: 0 8px 8px;
     }
+    .video-grid-player { grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); }
+    .video-card-player { border: 2px solid #aac6e8; }
+    .video-thumb-wrap { position: relative; }
+    .video-thumb-wrap img { width: 100%; aspect-ratio: 16/9; object-fit: cover; display: block; }
+    .video-official-badge {
+      position: absolute;
+      top: 6px;
+      left: 6px;
+      background: var(--c-accent, #0047ab);
+      color: #fff;
+      font-size: 10px;
+      font-weight: 700;
+      padding: 2px 6px;
+      border-radius: 3px;
+    }
     .national-team-list {
       font-size: 13px;
     }
@@ -442,7 +457,7 @@
       <h3>🏆 プレミアリーグ 現在順位</h3>
       <div class="standing-row">
         <span class="standing-pos">14位</span>
-        <span class="standing-detail">（20チーム中）　33試合　11勝10分12敗　43pt</span>
+        <span class="standing-detail">（20チーム中）　34試合　11勝11分12敗　44pt</span>
       </div>
     </section>
 
@@ -504,7 +519,39 @@
 
   
     <section class="player-section">
-      <h3>📺 関連ハイライト動画</h3>
+      <h3>🎬 シーズンゴール集・まとめ動画</h3>
+      <div class="video-grid video-grid-player">
+        
+        <a href="https://youtube.com/watch?v=h7ncsPr-HfI" target="_blank" rel="noopener" class="video-card video-card-player">
+          <div class="video-thumb-wrap">
+            <img src="https://i.ytimg.com/vi/h7ncsPr-HfI/mqdefault.jpg" alt="" loading="lazy">
+            
+          </div>
+          <div class="video-title">Shakhtar Donetsk 1-3 Crystal Palace | UEFA Conference League 25/26 Match Highlights</div>
+          <div class="video-meta">beIN SPORTS Asia · 04/30</div>
+        </a>
+        <a href="https://youtube.com/watch?v=b33wdHZ4BbQ" target="_blank" rel="noopener" class="video-card video-card-player">
+          <div class="video-thumb-wrap">
+            <img src="https://i.ytimg.com/vi/b33wdHZ4BbQ/mqdefault.jpg" alt="" loading="lazy">
+            
+          </div>
+          <div class="video-title">Daichi Kamada Goal | Shakhtar vs Crystal Palace 1-3 | Highlights and Goals | Conference League 26</div>
+          <div class="video-meta">Amazing Goal  7 · 04/30</div>
+        </a>
+        <a href="https://youtube.com/watch?v=AdGOt4LdNmY" target="_blank" rel="noopener" class="video-card video-card-player">
+          <div class="video-thumb-wrap">
+            <img src="https://i.ytimg.com/vi/AdGOt4LdNmY/mqdefault.jpg" alt="" loading="lazy">
+            
+          </div>
+          <div class="video-title">Daichi Kamada Goal | Shakhtar vs Crystal Palace 1-3 | Highlights and Goals | Conference League 2026</div>
+          <div class="video-meta">Amazing Goal  7 · 04/30</div>
+        </a>
+      </div>
+    </section>
+
+  
+    <section class="player-section">
+      <h3>📺 他のハイライト動画</h3>
       <div class="video-grid">
         
         <a href="https://youtu.be/CiB2sk3zOw4" target="_blank" rel="noopener" class="video-card">
@@ -524,9 +571,9 @@
   
     <section class="player-section">
       <h3>📋 キャリア</h3>
-      <div class="career-current">🟢 現在所属：<strong>クリスタル・パレス</strong>（2024–）</div>
+      <div class="career-current">🟢 現在所属：<strong>{{Flagicon</strong>（2024-）</div>
       <div class="career-list">
-        <div class="career-row"><span class="career-years">–2008</span><span class="career-club">Kids FC（ユース）</span></div><div class="career-row"><span class="career-years">2009–2011</span><span class="career-club">ガンバ大阪（ユース）</span></div><div class="career-row"><span class="career-years">2012–2014</span><span class="career-club">Higashiyama High School（ユース）</span></div><div class="career-row"><span class="career-years">2015–2017</span><span class="career-club">サガン鳥栖</span></div><div class="career-row"><span class="career-years">2015</span><span class="career-club">→ J.League U-22（ローン）</span></div><div class="career-row"><span class="career-years">2017–2023</span><span class="career-club">フランクフルト</span></div><div class="career-row"><span class="career-years">2018–2019</span><span class="career-club">→ シント＝トロイデン（ローン）</span></div><div class="career-row"><span class="career-years">2023–2024</span><span class="career-club">ラツィオ</span></div><div class="career-row is-current"><span class="career-years">2024–</span><span class="career-club">クリスタル・パレス</span></div>
+        <div class="career-row"><span class="career-years">2015-2017</span><span class="career-club">{{Flagicon</span></div><div class="career-row"><span class="career-years">2015</span><span class="career-club">→{{Flagicon</span></div><div class="career-row"><span class="career-years">2017-2023</span><span class="career-club">{{Flagicon</span></div><div class="career-row"><span class="career-years">2018-2019</span><span class="career-club">→{{Flagicon</span></div><div class="career-row"><span class="career-years">2023-2024</span><span class="career-club">{{Flagicon</span></div><div class="career-row is-current"><span class="career-years">2024-</span><span class="career-club">{{Flagicon</span></div>
       </div>
     </section>
 
@@ -536,19 +583,19 @@
       <div class="national-team-list">
         
             <div class="nt-row">
-              <span class="nt-team">U-20日本代表</span>
-              <span class="nt-years">2015–2017</span>
-              <span class="nt-stats">13試合 / 5ゴール</span>
+              <span class="nt-team">Japan U21</span>
+              <span class="nt-years">2016</span>
+              <span class="nt-stats">2試合 / 0ゴール</span>
             </div>
             <div class="nt-row">
-              <span class="nt-team">U-23日本代表</span>
-              <span class="nt-years">2018–2019</span>
-              <span class="nt-stats">9試合 / 4ゴール</span>
+              <span class="nt-team">Japan U23</span>
+              <span class="nt-years">2016</span>
+              <span class="nt-stats">4試合 / 0ゴール</span>
             </div>
             <div class="nt-row">
               <span class="nt-team">日本代表（A代表）</span>
               <span class="nt-years">2019–</span>
-              <span class="nt-stats">51試合 / 12ゴール</span>
+              <span class="nt-stats">49試合 / 12ゴール</span>
             </div>
       </div>
     </section>

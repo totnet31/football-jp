@@ -337,6 +337,21 @@
       color: #888;
       padding: 0 8px 8px;
     }
+    .video-grid-player { grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); }
+    .video-card-player { border: 2px solid #aac6e8; }
+    .video-thumb-wrap { position: relative; }
+    .video-thumb-wrap img { width: 100%; aspect-ratio: 16/9; object-fit: cover; display: block; }
+    .video-official-badge {
+      position: absolute;
+      top: 6px;
+      left: 6px;
+      background: var(--c-accent, #0047ab);
+      color: #fff;
+      font-size: 10px;
+      font-weight: 700;
+      padding: 2px 6px;
+      border-radius: 3px;
+    }
     .national-team-list {
       font-size: 13px;
     }
@@ -448,6 +463,8 @@
   
 
   
+
+  
     <section class="player-section">
       <h3>⚽ 直近のゴール</h3>
       <p class="no-data">今シーズンまだゴールなし（または取得範囲外）。</p>
@@ -456,9 +473,9 @@
   
     <section class="player-section">
       <h3>📋 キャリア</h3>
-      <div class="career-current">🟢 現在所属：<strong>シント＝トロイデン</strong>（2024–）</div>
+      <div class="career-current">🟢 現在所属：<strong>{{Flagicon</strong>（2024-）</div>
       <div class="career-list">
-        <div class="career-row"><span class="career-years">–2006</span><span class="career-club">Kumamoto United SC（ユース）</span></div><div class="career-row"><span class="career-years">2007–2009</span><span class="career-club">Ohzu High School（ユース）</span></div><div class="career-row"><span class="career-years">2014–2022</span><span class="career-club">川崎フロンターレ</span></div><div class="career-row"><span class="career-years">2023–2024</span><span class="career-club">Al-Rayyan</span></div><div class="career-row is-current"><span class="career-years">2024–</span><span class="career-club">シント＝トロイデン</span></div>
+        <div class="career-row"><span class="career-years">2014-2022</span><span class="career-club">{{Flagicon</span></div><div class="career-row"><span class="career-years">2023-2024</span><span class="career-club">{{Flagicon</span></div><div class="career-row is-current"><span class="career-years">2024-</span><span class="career-club">{{Flagicon</span></div>
       </div>
     </section>
 
@@ -468,14 +485,9 @@
       <div class="national-team-list">
         
             <div class="nt-row">
-              <span class="nt-team">U-22日本代表</span>
-              <span class="nt-years">2015–2016</span>
-              <span class="nt-stats">8試合 / 1ゴール</span>
-            </div>
-            <div class="nt-row">
               <span class="nt-team">日本代表（A代表）</span>
-              <span class="nt-years">2016–</span>
-              <span class="nt-stats">53試合 / 4ゴール</span>
+              <span class="nt-years">2015–</span>
+              <span class="nt-stats">36試合 / 1112026282026ゴール</span>
             </div>
       </div>
     </section>

@@ -337,6 +337,21 @@
       color: #888;
       padding: 0 8px 8px;
     }
+    .video-grid-player { grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); }
+    .video-card-player { border: 2px solid #aac6e8; }
+    .video-thumb-wrap { position: relative; }
+    .video-thumb-wrap img { width: 100%; aspect-ratio: 16/9; object-fit: cover; display: block; }
+    .video-official-badge {
+      position: absolute;
+      top: 6px;
+      left: 6px;
+      background: var(--c-accent, #0047ab);
+      color: #fff;
+      font-size: 10px;
+      font-weight: 700;
+      padding: 2px 6px;
+      border-radius: 3px;
+    }
     .national-team-list {
       font-size: 13px;
     }
@@ -446,6 +461,38 @@
     </section>
 
   
+    <section class="player-section">
+      <h3>🎬 シーズンゴール集・まとめ動画</h3>
+      <div class="video-grid video-grid-player">
+        
+        <a href="https://youtube.com/watch?v=KLq8ecUqa2o" target="_blank" rel="noopener" class="video-card video-card-player">
+          <div class="video-thumb-wrap">
+            <img src="https://i.ytimg.com/vi/KLq8ecUqa2o/mqdefault.jpg" alt="" loading="lazy">
+            
+          </div>
+          <div class="video-title">【中村敬斗がゴールを演出、関根大輝が途中出場｜バスティア×スタッド・ランス｜ハイライト】リーグドゥ第14節｜2025-26シーズン</div>
+          <div class="video-meta">DAZN Japan · 11/07</div>
+        </a>
+        <a href="https://youtube.com/watch?v=xLX-5SZ3zL4" target="_blank" rel="noopener" class="video-card video-card-player">
+          <div class="video-thumb-wrap">
+            <img src="https://i.ytimg.com/vi/xLX-5SZ3zL4/mqdefault.jpg" alt="" loading="lazy">
+            
+          </div>
+          <div class="video-title">【中村敬斗と関根大輝が先発出場｜スタッド・ランス×トロワ｜ハイライト】リーグドゥ第11節｜2025-26シーズン</div>
+          <div class="video-meta">DAZN Japan · 10/25</div>
+        </a>
+        <a href="https://youtube.com/watch?v=-kmH28_BFRs" target="_blank" rel="noopener" class="video-card video-card-player">
+          <div class="video-thumb-wrap">
+            <img src="https://i.ytimg.com/vi/-kmH28_BFRs/mqdefault.jpg" alt="" loading="lazy">
+            
+          </div>
+          <div class="video-title">Keito Nakamura 中村 敬斗 - Welcome to Beşiktaş? 2025 - Best Skills &amp;amp; Goals | HD</div>
+          <div class="video-meta">WIK7 · 08/20</div>
+        </a>
+      </div>
+    </section>
+
+  
 
   
     <section class="player-section">
@@ -456,9 +503,9 @@
   
     <section class="player-section">
       <h3>📋 キャリア</h3>
-      <div class="career-current">🟢 現在所属：<strong>スタッド・ランス</strong>（2023–）</div>
+      <div class="career-current">🟢 現在所属：<strong>{{Flagicon</strong>（2023-）</div>
       <div class="career-list">
-        <div class="career-row"><span class="career-years">?</span><span class="career-club">Kashiwa Eagles TOR&#39;82（ユース）</span></div><div class="career-row"><span class="career-years">?</span><span class="career-club">柏レイソル（ユース）</span></div><div class="career-row"><span class="career-years">?</span><span class="career-club">Konoyama SSS（ユース）</span></div><div class="career-row"><span class="career-years">2012–2017</span><span class="career-club">Mitsubishi Yowa（ユース）</span></div><div class="career-row"><span class="career-years">2018–2021</span><span class="career-club">ガンバ大阪</span></div><div class="career-row"><span class="career-years">2018–2019</span><span class="career-club">ガンバ大阪U-23</span></div><div class="career-row"><span class="career-years">2019–2020</span><span class="career-club">→ トウェンテ（ローン）</span></div><div class="career-row"><span class="career-years">2020-2021</span><span class="career-club">→ シント＝トロイデン（ローン）</span></div><div class="career-row"><span class="career-years">2021</span><span class="career-club">→ ユニオン・ヴェルス（ローン）</span></div><div class="career-row"><span class="career-years">2021–2023</span><span class="career-club">LASK</span></div><div class="career-row is-current"><span class="career-years">2023–</span><span class="career-club">スタッド・ランス</span></div>
+        <div class="career-row"><span class="career-years">2018-2021</span><span class="career-club">{{Flagicon</span></div><div class="career-row"><span class="career-years">2019-2020</span><span class="career-club">→ {{Flagicon</span></div><div class="career-row"><span class="career-years">2020</span><span class="career-club">→{{Flagicon</span></div><div class="career-row"><span class="career-years">2021</span><span class="career-club">→{{Flagicon</span></div><div class="career-row"><span class="career-years">2021-2023</span><span class="career-club">{{Flagicon</span></div><div class="career-row is-current"><span class="career-years">2023-</span><span class="career-club">{{Flagicon</span></div>
       </div>
     </section>
 
@@ -468,19 +515,24 @@
       <div class="national-team-list">
         
             <div class="nt-row">
-              <span class="nt-team">U-20日本代表</span>
-              <span class="nt-years">2022</span>
-              <span class="nt-stats">6試合 / 3ゴール</span>
+              <span class="nt-team">Japan U17</span>
+              <span class="nt-years">2017</span>
+              <span class="nt-stats">12試合 / 8ゴール</span>
             </div>
             <div class="nt-row">
-              <span class="nt-team">U-23日本代表</span>
-              <span class="nt-years">2023</span>
-              <span class="nt-stats">7試合 / 3ゴール</span>
+              <span class="nt-team">Japan U21</span>
+              <span class="nt-years">2018</span>
+              <span class="nt-stats">2試合 / 0ゴール</span>
+            </div>
+            <div class="nt-row">
+              <span class="nt-team">Japan U20</span>
+              <span class="nt-years">2019</span>
+              <span class="nt-stats">4試合 / 0ゴール</span>
             </div>
             <div class="nt-row">
               <span class="nt-team">日本代表（A代表）</span>
               <span class="nt-years">2023–</span>
-              <span class="nt-stats">24試合 / 6ゴール</span>
+              <span class="nt-stats">24試合 / 1022025312026ゴール</span>
             </div>
       </div>
     </section>

@@ -337,6 +337,21 @@
       color: #888;
       padding: 0 8px 8px;
     }
+    .video-grid-player { grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); }
+    .video-card-player { border: 2px solid #aac6e8; }
+    .video-thumb-wrap { position: relative; }
+    .video-thumb-wrap img { width: 100%; aspect-ratio: 16/9; object-fit: cover; display: block; }
+    .video-official-badge {
+      position: absolute;
+      top: 6px;
+      left: 6px;
+      background: var(--c-accent, #0047ab);
+      color: #fff;
+      font-size: 10px;
+      font-weight: 700;
+      padding: 2px 6px;
+      border-radius: 3px;
+    }
     .national-team-list {
       font-size: 13px;
     }
@@ -517,6 +532,38 @@
     </section>
 
   
+    <section class="player-section">
+      <h3>🎬 シーズンゴール集・まとめ動画</h3>
+      <div class="video-grid video-grid-player">
+        
+        <a href="https://youtube.com/watch?v=qEKjvKSHclE" target="_blank" rel="noopener" class="video-card video-card-player">
+          <div class="video-thumb-wrap">
+            <img src="https://i.ytimg.com/vi/qEKjvKSHclE/mqdefault.jpg" alt="" loading="lazy">
+            
+          </div>
+          <div class="video-title">OMHAAL! Koki Ogawa doet het op acrobatische wijze 🇯🇵👏</div>
+          <div class="video-meta">ESPN NL · 08/09</div>
+        </a>
+        <a href="https://youtube.com/watch?v=GgKx09ZXudY" target="_blank" rel="noopener" class="video-card video-card-player">
+          <div class="video-thumb-wrap">
+            <img src="https://i.ytimg.com/vi/GgKx09ZXudY/mqdefault.jpg" alt="" loading="lazy">
+            
+          </div>
+          <div class="video-title">ヨーロッパサッカー日本人選手ゴール集2025/26前半戦</div>
+          <div class="video-meta">VAR発動 · 01/15</div>
+        </a>
+        <a href="https://youtube.com/watch?v=xWdJc7Aok-8" target="_blank" rel="noopener" class="video-card video-card-player">
+          <div class="video-thumb-wrap">
+            <img src="https://i.ytimg.com/vi/xWdJc7Aok-8/mqdefault.jpg" alt="" loading="lazy">
+            
+          </div>
+          <div class="video-title">🅰️ Kodai Sano → ⚽ Koki Ogawa 🇯🇵🔗</div>
+          <div class="video-meta">ESPN NL · 02/17</div>
+        </a>
+      </div>
+    </section>
+
+  
 
   
     <section class="player-section">
@@ -527,9 +574,9 @@
   
     <section class="player-section">
       <h3>📋 キャリア</h3>
-      <div class="career-current">🟢 現在所属：<strong>NECナイメヘン</strong>（2024–）</div>
+      <div class="career-current">🟢 現在所属：<strong>{{Flagicon</strong>（2024-）</div>
       <div class="career-list">
-        <div class="career-row"><span class="career-years">?</span><span class="career-club">Yokohama Kohoku SC（ユース）</span></div><div class="career-row"><span class="career-years">?</span><span class="career-club">Mamedo FC（ユース）</span></div><div class="career-row"><span class="career-years">2013–2015</span><span class="career-club">Toko Gakuen High School（ユース）</span></div><div class="career-row"><span class="career-years">2016–2021</span><span class="career-club">ジュビロ磐田</span></div><div class="career-row"><span class="career-years">2019</span><span class="career-club">→ 水戸ホーリーホック（ローン）</span></div><div class="career-row"><span class="career-years">2022–2024</span><span class="career-club">横浜FC</span></div><div class="career-row"><span class="career-years">2023–2024</span><span class="career-club">→ NECナイメヘン（ローン）</span></div><div class="career-row is-current"><span class="career-years">2024–</span><span class="career-club">NECナイメヘン</span></div>
+        <div class="career-row"><span class="career-years">2016-2021</span><span class="career-club">{{Flagicon</span></div><div class="career-row"><span class="career-years">2019</span><span class="career-club">→{{Flagicon</span></div><div class="career-row"><span class="career-years">2022-2024</span><span class="career-club">{{Flagicon</span></div><div class="career-row"><span class="career-years">2023-2024</span><span class="career-club">→{{Flagicon</span></div><div class="career-row is-current"><span class="career-years">2024-</span><span class="career-club">{{Flagicon</span></div>
       </div>
     </section>
 
@@ -539,19 +586,29 @@
       <div class="national-team-list">
         
             <div class="nt-row">
-              <span class="nt-team">U-20日本代表</span>
-              <span class="nt-years">2019</span>
-              <span class="nt-stats">6試合 / 4ゴール</span>
+              <span class="nt-team">Japan U18</span>
+              <span class="nt-years"></span>
+              <span class="nt-stats">18試合 / 15ゴール</span>
             </div>
             <div class="nt-row">
-              <span class="nt-team">U-23日本代表</span>
-              <span class="nt-years">2021</span>
-              <span class="nt-stats">12試合 / 5ゴール</span>
+              <span class="nt-team">Japan U19</span>
+              <span class="nt-years">2015–2016</span>
+              <span class="nt-stats">15試合 / 7ゴール</span>
+            </div>
+            <div class="nt-row">
+              <span class="nt-team">Japan U20</span>
+              <span class="nt-years">2015–2017</span>
+              <span class="nt-stats">3試合 / 1ゴール</span>
+            </div>
+            <div class="nt-row">
+              <span class="nt-team">Japan U23</span>
+              <span class="nt-years">2020</span>
+              <span class="nt-stats">5試合 / 2ゴール</span>
             </div>
             <div class="nt-row">
               <span class="nt-team">日本代表（A代表）</span>
-              <span class="nt-years">2021–</span>
-              <span class="nt-stats">30試合 / 10ゴール</span>
+              <span class="nt-years">2019–</span>
+              <span class="nt-stats">13試合 / 101601122025182025ゴール</span>
             </div>
       </div>
     </section>

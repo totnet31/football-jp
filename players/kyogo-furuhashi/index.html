@@ -337,6 +337,21 @@
       color: #888;
       padding: 0 8px 8px;
     }
+    .video-grid-player { grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); }
+    .video-card-player { border: 2px solid #aac6e8; }
+    .video-thumb-wrap { position: relative; }
+    .video-thumb-wrap img { width: 100%; aspect-ratio: 16/9; object-fit: cover; display: block; }
+    .video-official-badge {
+      position: absolute;
+      top: 6px;
+      left: 6px;
+      background: var(--c-accent, #0047ab);
+      color: #fff;
+      font-size: 10px;
+      font-weight: 700;
+      padding: 2px 6px;
+      border-radius: 3px;
+    }
     .national-team-list {
       font-size: 13px;
     }
@@ -479,6 +494,38 @@
     </section>
 
   
+    <section class="player-section">
+      <h3>🎬 シーズンゴール集・まとめ動画</h3>
+      <div class="video-grid video-grid-player">
+        
+        <a href="https://youtube.com/watch?v=KgIg0P142oQ" target="_blank" rel="noopener" class="video-card video-card-player">
+          <div class="video-thumb-wrap">
+            <img src="https://i.ytimg.com/vi/KgIg0P142oQ/mqdefault.jpg" alt="" loading="lazy">
+            
+          </div>
+          <div class="video-title">Hibernian vs Celtic 1-2 Highlights Goals - Scottish Premiership 2025/26</div>
+          <div class="video-meta">Spartan · 05/03</div>
+        </a>
+        <a href="https://youtube.com/watch?v=DIX1jKKNroQ" target="_blank" rel="noopener" class="video-card video-card-player">
+          <div class="video-thumb-wrap">
+            <img src="https://i.ytimg.com/vi/DIX1jKKNroQ/mqdefault.jpg" alt="" loading="lazy">
+            
+          </div>
+          <div class="video-title">Hibernian v Celtic 1-2 Highlights Goals - Scottish Premiership 2025/26</div>
+          <div class="video-meta">FootballOne · 05/03</div>
+        </a>
+        <a href="https://youtube.com/watch?v=2uYhEh2PNk4" target="_blank" rel="noopener" class="video-card video-card-player">
+          <div class="video-thumb-wrap">
+            <img src="https://i.ytimg.com/vi/2uYhEh2PNk4/mqdefault.jpg" alt="" loading="lazy">
+            
+          </div>
+          <div class="video-title">Kyogo Furuhashi •Welcome to Birmingham City FC• 2025 | Highlights</div>
+          <div class="video-meta">Menino X · 07/05</div>
+        </a>
+      </div>
+    </section>
+
+  
 
   
     <section class="player-section">
@@ -489,9 +536,9 @@
   
     <section class="player-section">
       <h3>📋 キャリア</h3>
-      <div class="career-current">🟢 現在所属：<strong>バーミンガム</strong>（2025–）</div>
+      <div class="career-current">🟢 現在所属：<strong>{{Flagicon</strong>（2025-）</div>
       <div class="career-list">
-        <div class="career-row"><span class="career-years">?</span><span class="career-club">Sakuragaoka（ユース）</span></div><div class="career-row"><span class="career-years">?</span><span class="career-club">Athpegas Ikoma（ユース）</span></div><div class="career-row"><span class="career-years">2010–2012</span><span class="career-club">Kokoku High School（ユース）</span></div><div class="career-row"><span class="career-years">2017–2018</span><span class="career-club">Gifu</span></div><div class="career-row"><span class="career-years">2018–2021</span><span class="career-club">ヴィッセル神戸</span></div><div class="career-row"><span class="career-years">2021–2025</span><span class="career-club">セルティック</span></div><div class="career-row"><span class="career-years">2025</span><span class="career-club">Rennes</span></div><div class="career-row is-current"><span class="career-years">2025–</span><span class="career-club">バーミンガム</span></div>
+        <div class="career-row"><span class="career-years">2017-2018</span><span class="career-club">{{Flagicon</span></div><div class="career-row"><span class="career-years">2018-2021</span><span class="career-club">{{Flagicon</span></div><div class="career-row"><span class="career-years">2021-2025</span><span class="career-club">{{Flagicon</span></div><div class="career-row"><span class="career-years">2025</span><span class="career-club">{{Flagicon</span></div><div class="career-row is-current"><span class="career-years">2025-</span><span class="career-club">{{Flagicon</span></div>
       </div>
     </section>
 
@@ -501,14 +548,9 @@
       <div class="national-team-list">
         
             <div class="nt-row">
-              <span class="nt-team">U-22日本代表</span>
-              <span class="nt-years">2017–2019</span>
-              <span class="nt-stats">19試合 / 6ゴール</span>
-            </div>
-            <div class="nt-row">
               <span class="nt-team">日本代表（A代表）</span>
-              <span class="nt-years">2021–</span>
-              <span class="nt-stats">41試合 / 18ゴール</span>
+              <span class="nt-years">2019–</span>
+              <span class="nt-stats">23試合 / 552026252025ゴール</span>
             </div>
       </div>
     </section>

@@ -337,6 +337,21 @@
       color: #888;
       padding: 0 8px 8px;
     }
+    .video-grid-player { grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); }
+    .video-card-player { border: 2px solid #aac6e8; }
+    .video-thumb-wrap { position: relative; }
+    .video-thumb-wrap img { width: 100%; aspect-ratio: 16/9; object-fit: cover; display: block; }
+    .video-official-badge {
+      position: absolute;
+      top: 6px;
+      left: 6px;
+      background: var(--c-accent, #0047ab);
+      color: #fff;
+      font-size: 10px;
+      font-weight: 700;
+      padding: 2px 6px;
+      border-radius: 3px;
+    }
     .national-team-list {
       font-size: 13px;
     }
@@ -518,7 +533,39 @@
 
   
     <section class="player-section">
-      <h3>📺 関連ハイライト動画</h3>
+      <h3>🎬 シーズンゴール集・まとめ動画</h3>
+      <div class="video-grid video-grid-player">
+        
+        <a href="https://youtube.com/watch?v=OXHw7T03yrk" target="_blank" rel="noopener" class="video-card video-card-player">
+          <div class="video-thumb-wrap">
+            <img src="https://i.ytimg.com/vi/OXHw7T03yrk/mqdefault.jpg" alt="" loading="lazy">
+            
+          </div>
+          <div class="video-title">Doan’s Brilliant Solo Makes The Difference! | EINTRACHT FRANKFURT - MAINZ 05 | Highlights Bundesliga</div>
+          <div class="video-meta">Bundesliga · 11/09</div>
+        </a>
+        <a href="https://youtube.com/watch?v=-hdR_dY-p24" target="_blank" rel="noopener" class="video-card video-card-player">
+          <div class="video-thumb-wrap">
+            <img src="https://i.ytimg.com/vi/-hdR_dY-p24/mqdefault.jpg" alt="" loading="lazy">
+            
+          </div>
+          <div class="video-title">Ritsu Doan&amp;#39;s IMPRESSIVE debut! 🇯🇵😍</div>
+          <div class="video-meta">German Football · 08/18</div>
+        </a>
+        <a href="https://youtube.com/watch?v=vpZKiCZH11E" target="_blank" rel="noopener" class="video-card video-card-player">
+          <div class="video-thumb-wrap">
+            <img src="https://i.ytimg.com/vi/vpZKiCZH11E/mqdefault.jpg" alt="" loading="lazy">
+            
+          </div>
+          <div class="video-title">EINTRACHT FRANKFURT - MAINZ 05 | Highlights | Matchday 10 – Bundesliga 2025/26</div>
+          <div class="video-meta">Bundesliga · 11/09</div>
+        </a>
+      </div>
+    </section>
+
+  
+    <section class="player-section">
+      <h3>📺 他のハイライト動画</h3>
       <div class="video-grid">
         
         <a href="https://youtu.be/uzCiKEliU3I" target="_blank" rel="noopener" class="video-card">
@@ -535,7 +582,7 @@
       <div class="goals-list">
         
           <div class="goal-row">
-            <div class="goal-date">2026-04-25</div>
+            <div class="goal-date">04/25</div>
             <div class="goal-match">アウクスブルク vs フランクフルト</div>
             <div class="goal-minute">66分</div>
             <div class="goal-comp">ブンデスリーガ</div>
@@ -546,9 +593,9 @@
   
     <section class="player-section">
       <h3>📋 キャリア</h3>
-      <div class="career-current">🟢 現在所属：<strong>フランクフルト</strong>（2025–）</div>
+      <div class="career-current">🟢 現在所属：<strong>{{Flagicon</strong>（2025-）</div>
       <div class="career-list">
-        <div class="career-row"><span class="career-years">2005–2010</span><span class="career-club">Nishinomiya Soccer School（ユース）</span></div><div class="career-row"><span class="career-years">2011–2015</span><span class="career-club">ガンバ大阪（ユース）</span></div><div class="career-row"><span class="career-years">2015–2018</span><span class="career-club">ガンバ大阪</span></div><div class="career-row"><span class="career-years">2017–2018</span><span class="career-club">→ フローニンゲン（ローン）</span></div><div class="career-row"><span class="career-years">2018–2019</span><span class="career-club">フローニンゲン</span></div><div class="career-row"><span class="career-years">2019–2022</span><span class="career-club">PSVアイントホーフェン</span></div><div class="career-row"><span class="career-years">2020–2021</span><span class="career-club">→ ビーレフェルト（ローン）</span></div><div class="career-row"><span class="career-years">2022–2025</span><span class="career-club">フライブルク</span></div><div class="career-row is-current"><span class="career-years">2025–</span><span class="career-club">フランクフルト</span></div>
+        <div class="career-row"><span class="career-years">2015-2018</span><span class="career-club">{{Flagicon</span></div><div class="career-row"><span class="career-years">2016</span><span class="career-club">→{{Flagicon</span></div><div class="career-row"><span class="career-years">2017-2018</span><span class="career-club">→{{Flagicon</span></div><div class="career-row"><span class="career-years">2018-2019</span><span class="career-club">{{Flagicon</span></div><div class="career-row"><span class="career-years">2019-2022</span><span class="career-club">{{Flagicon</span></div><div class="career-row"><span class="career-years">2020-2021</span><span class="career-club">→{{Flagicon</span></div><div class="career-row"><span class="career-years">2022-2025</span><span class="career-club">{{Flagicon</span></div><div class="career-row is-current"><span class="career-years">2025-</span><span class="career-club">{{Flagicon</span></div>
       </div>
     </section>
 
@@ -558,24 +605,29 @@
       <div class="national-team-list">
         
             <div class="nt-row">
-              <span class="nt-team">U-16日本代表</span>
+              <span class="nt-team">Japan U16</span>
               <span class="nt-years">2014</span>
-              <span class="nt-stats">3試合 / 1ゴール</span>
+              <span class="nt-stats">4試合 / 1ゴール</span>
             </div>
             <div class="nt-row">
-              <span class="nt-team">U-20日本代表</span>
+              <span class="nt-team">Japan U19</span>
+              <span class="nt-years">2016</span>
+              <span class="nt-stats">19試合 / 5ゴール</span>
+            </div>
+            <div class="nt-row">
+              <span class="nt-team">Japan U20</span>
               <span class="nt-years">2017</span>
-              <span class="nt-stats">10試合 / 4ゴール</span>
+              <span class="nt-stats">5試合 / 3ゴール</span>
             </div>
             <div class="nt-row">
-              <span class="nt-team">U-23日本代表</span>
-              <span class="nt-years">2018–2021</span>
-              <span class="nt-stats">23試合 / 8ゴール</span>
+              <span class="nt-team">Japan U23</span>
+              <span class="nt-years">2019–2021</span>
+              <span class="nt-stats">11試合 / 6ゴール</span>
             </div>
             <div class="nt-row">
               <span class="nt-team">日本代表（A代表）</span>
               <span class="nt-years">2018–</span>
-              <span class="nt-stats">53試合 / 14ゴール</span>
+              <span class="nt-stats">64試合 / 11ゴール</span>
             </div>
       </div>
     </section>
