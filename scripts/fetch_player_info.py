@@ -938,20 +938,74 @@ def get_ja_wiki_infobox(name_ja):
     return ""
 
 
+def _extract_ja_field(wikitext, key):
+    """JA Wiki infobox から特定 key の値を抽出。
+    値は次のフィールド境界（'| 別キー =' 風）または改行まで。
+    {{...}} 内の '|' は無視（bracket counting）。"""
+    if not wikitext:
+        return None
+    pattern = r'\|\s*{}\s*=\s*'.format(re.escape(key))
+    m = re.search(pattern, wikitext)
+    if not m:
+        return None
+    start = m.end()
+    out = []
+    i = start
+    n = len(wikitext)
+    depth_brace = 0  # {{...}}
+    depth_bracket = 0  # [[...]]
+    while i < n:
+        ch = wikitext[i]
+        # テンプレ内では '|' 終端扱いしない
+        if wikitext[i:i+2] == '{{':
+            depth_brace += 1
+            out.append(wikitext[i:i+2])
+            i += 2
+            continue
+        if wikitext[i:i+2] == '}}':
+            depth_brace = max(0, depth_brace - 1)
+            out.append(wikitext[i:i+2])
+            i += 2
+            continue
+        if wikitext[i:i+2] == '[[':
+            depth_bracket += 1
+            out.append(wikitext[i:i+2])
+            i += 2
+            continue
+        if wikitext[i:i+2] == ']]':
+            depth_bracket = max(0, depth_bracket - 1)
+            out.append(wikitext[i:i+2])
+            i += 2
+            continue
+        # 終端判定：トップレベルで | が現れて、その後ろが「key =」風 → 終了
+        if depth_brace == 0 and depth_bracket == 0 and ch == '|':
+            # 残りに別フィールドが見えるか
+            rest = wikitext[i+1:i+50]
+            if re.match(r'\s*[\w\u3040-\u309f\u30a0-\u30ff\u4e00-\u9fff]+\s*=', rest):
+                break
+        if ch == '\n':
+            # 改行後がフィールド開始（| key =）なら終了
+            rest = wikitext[i+1:i+50]
+            if re.match(r'\s*\|\s*[\w\u3040-\u309f\u30a0-\u30ff\u4e00-\u9fff]+\s*=', rest):
+                break
+            # 改行後 }} で infobox 終了なら終了
+            if re.match(r'\s*\}\}', rest):
+                break
+        out.append(ch)
+        i += 1
+    raw = ''.join(out)
+    return clean_wiki_text(raw)
+
+
 def extract_ja_birth_place(ja_wikitext):
     # type: (str) -> Optional[str]
     """日本語Wikipedia wikitextから出身地を抽出する。"""
     if not ja_wikitext:
         return None
-
-    # |出身地 = や |生誕地 = を探す
-    # 行末まで貪欲にキャプチャ → bracket counting でテンプレ除去
     for key in ["出身地", "生誕地", "出生地", "birth_place", "birthplace"]:
-        m = re.search(r'\|\s*{}\s*=\s*([^\n]*)'.format(key), ja_wikitext)
-        if m:
-            val = clean_wiki_text(m.group(1))
-            if val:
-                return val
+        val = _extract_ja_field(ja_wikitext, key)
+        if val:
+            return val
     return None
 
 
@@ -962,9 +1016,6 @@ def extract_ja_career(ja_wikitext):
     if not ja_wikitext:
         return career
 
-    # 日本語版infoboxからクラブ情報を抽出
-    # |クラブ1 = や |年1 = など
-    # 行末まで貪欲にキャプチャ → bracket counting でテンプレ除去
     for i in range(1, 25):
         year_keys = ["年{}".format(i), "clb_years{}".format(i)]
         club_keys = ["クラブ{}".format(i), "clb{}".format(i)]
@@ -973,15 +1024,15 @@ def extract_ja_career(ja_wikitext):
         club = ""
 
         for yk in year_keys:
-            m = re.search(r'\|\s*{}\s*=\s*([^\n]*)'.format(yk), ja_wikitext)
-            if m:
-                years = clean_wiki_text(m.group(1))
+            v = _extract_ja_field(ja_wikitext, yk)
+            if v:
+                years = v
                 break
 
         for ck in club_keys:
-            m = re.search(r'\|\s*{}\s*=\s*([^\n]*)'.format(ck), ja_wikitext)
-            if m:
-                club = clean_wiki_text(m.group(1))
+            v = _extract_ja_field(ja_wikitext, ck)
+            if v:
+                club = v
                 break
 
         if club:
