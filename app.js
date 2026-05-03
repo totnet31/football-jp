@@ -26,6 +26,7 @@
   let jpPlayerNames = new Set();   // 日本人選手名（ローマ字）の集合（ハイライト用）
   let jpClubIds = new Set();       // 日本人選手が所属するクラブID
   let jpPlayersByClub = new Map(); // クラブID → 選手名(日本語)の配列
+  let jpPlayerSlugMap = new Map(); // name_ja → slug（選手ページリンク用）
   let dataRangeFrom = null;
   let dataRangeTo = null;
   const enabledLeagues = new Set();
@@ -108,6 +109,15 @@
         dataRangeTo = m.date_to;
       }
       if (players) {
+        // slug生成（Python側の make_slug と同じロジック）
+        const makeSlug = (nameEn) => {
+          let s = (nameEn || '').toLowerCase()
+            .replace(/'/g, '').replace(/\./g, '');
+          const rep = {'ä':'a','ö':'o','ü':'u','ñ':'n','é':'e','è':'e','ê':'e','ç':'c','ã':'a','á':'a','à':'a','ó':'o','ô':'o','ú':'u','í':'i','ï':'i','ō':'o','ū':'u'};
+          for (const [k, v] of Object.entries(rep)) s = s.split(k).join(v);
+          return s.replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+        };
+        const usedSlugs = {};
         for (const p of players.players || []) {
           if (p.name_en) jpPlayerNames.add(p.name_en.toLowerCase());
           if (p.club_id != null) {
@@ -115,6 +125,17 @@
             jpClubIds.add(cid);
             if (!jpPlayersByClub.has(cid)) jpPlayersByClub.set(cid, []);
             jpPlayersByClub.get(cid).push(p.name_ja);
+          }
+          // slug → name_ja マッピング（重複時は -2 付与）
+          if (p.name_en && p.name_ja) {
+            const base = makeSlug(p.name_en);
+            if (!usedSlugs[base]) {
+              usedSlugs[base] = 1;
+              jpPlayerSlugMap.set(p.name_ja, base);
+            } else {
+              usedSlugs[base]++;
+              jpPlayerSlugMap.set(p.name_ja, `${base}-${usedSlugs[base]}`);
+            }
           }
         }
       }
@@ -308,15 +329,26 @@
       // 日本人選手名：簡略化（3人以上は最初2人 + 残り人数を表示・(レンタル)等の補足は除去）
       let jpHtml = '';
       if (jp.length > 0) {
-        const cleaned = jp.map(p => String(p.name_ja || '').replace(/（[^）]*）/g, '').trim()).filter(Boolean);
+        const cleaned = jp.map(p => ({
+          nameJa: String(p.name_ja || '').replace(/（[^）]*）/g, '').trim(),
+          raw: String(p.name_ja || '').trim(),
+        })).filter(p => p.nameJa);
+        // 選手名をリンク化（slotがあれば /players/{slug}/ へ）
+        const makePlayerLink = (nameJa, raw) => {
+          const slug = jpPlayerSlugMap.get(raw) || jpPlayerSlugMap.get(nameJa);
+          if (slug) {
+            return `<a class="jp-player-link" href="/players/${escape(slug)}/" onclick="event.stopPropagation()" style="color:inherit;text-decoration:underline dotted;">${escape(nameJa)}</a>`;
+          }
+          return escape(nameJa);
+        };
         let label;
         if (cleaned.length <= 2) {
-          label = cleaned.join('・');
+          label = cleaned.map(p => makePlayerLink(p.nameJa, p.raw)).join('・');
         } else {
-          label = `${cleaned[0]}・${cleaned[1]} +${cleaned.length - 2}`;
+          label = `${makePlayerLink(cleaned[0].nameJa, cleaned[0].raw)}・${makePlayerLink(cleaned[1].nameJa, cleaned[1].raw)} +${cleaned.length - 2}`;
         }
-        const tip = cleaned.join('・');
-        jpHtml = `<span class="team-jp" title="${escape(tip)}">🇯🇵 ${escape(label)}</span>`;
+        const tip = cleaned.map(p => p.nameJa).join('・');
+        jpHtml = `<span class="team-jp" title="${escape(tip)}">🇯🇵 ${label}</span>`;
       }
       const crestHtml = crest ? `<img class="team-crest" src="${escape(crest)}" alt="" loading="lazy">` : '<span class="team-crest"></span>';
       const scoreHtml = scoreVal != null ? `<span class="team-score">${scoreVal}</span>` : '';

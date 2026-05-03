@@ -109,17 +109,18 @@
     .matches-list { font-size: 13px; }
     .match-header, .match-row {
       display: grid;
-      grid-template-columns: 150px 1fr 70px 80px 100px;
-      gap: 8px;
+      grid-template-columns: 110px 30px 1fr 60px 110px 80px;
+      gap: 6px;
       padding: 8px 4px;
       border-bottom: 1px solid var(--c-border, #e5e7eb);
-      align-items: center;
+      align-items: start;
     }
     .match-header {
       font-size: 11px;
       font-weight: 700;
       color: #666;
       background: #f8f9fa;
+      align-items: center;
     }
     .match-row:last-child { border-bottom: none; }
     .match-result { font-weight: 700; text-align: center; }
@@ -127,21 +128,77 @@
     .match-result.lose { color: #c0392b; }
     .match-result.draw { color: #666; }
     .match-broadcast {
-      font-size: 11px;
-      color: #555;
-      text-align: center;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 4px;
+      align-items: flex-start;
     }
-    .home-away {
+    .match-date-day { display: block; font-size: 12px; }
+    .match-date-time { display: block; font-size: 11px; color: #555; }
+    .venue-badge {
       display: inline-block;
-      padding: 1px 5px;
-      font-size: 10px;
+      width: 24px;
+      height: 24px;
+      line-height: 24px;
+      text-align: center;
+      border-radius: 4px;
       font-weight: 700;
-      background: #f0f0f0;
-      border-radius: 2px;
-      margin-right: 4px;
+      font-size: 12px;
     }
+    .venue-away { background: #fee; color: #c9302c; border: 1px solid #f5b7b1; }
+    .venue-home { background: #e7f0ff; color: #1e6cba; border: 1px solid #aac6e8; }
     .match-comp { font-size: 11px; color: #666; }
     .no-data { color: #888; font-size: 13px; padding: 8px 0; margin: 0; }
+    .club-info-table { width: 100%; border-collapse: collapse; font-size: 13px; }
+    .club-info-table th {
+      width: 100px;
+      text-align: left;
+      padding: 7px 8px;
+      color: #555;
+      font-weight: 600;
+      border-bottom: 1px solid var(--c-border, #e5e7eb);
+      background: #f8f9fa;
+    }
+    .club-info-table td {
+      padding: 7px 8px;
+      border-bottom: 1px solid var(--c-border, #e5e7eb);
+    }
+    .club-info-table tr:last-child th,
+    .club-info-table tr:last-child td { border-bottom: none; }
+    .club-info-table a { color: var(--c-accent, #0047ab); word-break: break-all; }
+    .news-list { font-size: 13px; }
+    .news-row {
+      display: grid;
+      grid-template-columns: 45px 1fr 70px;
+      gap: 8px;
+      padding: 8px 4px;
+      border-bottom: 1px solid var(--c-border, #e5e7eb);
+      align-items: start;
+    }
+    .news-row:last-child { border-bottom: none; }
+    .news-date { font-size: 11px; color: #888; padding-top: 2px; }
+    .news-title a { color: var(--c-text, #111); text-decoration: none; }
+    .news-title a:hover { color: var(--c-accent, #0047ab); text-decoration: underline; }
+    .news-source { font-size: 11px; color: #888; text-align: right; }
+    .opponent-records { font-size: 13px; }
+    .opp-header, .opp-row {
+      display: grid;
+      grid-template-columns: 1fr 70px 100px 80px;
+      gap: 6px;
+      padding: 8px 4px;
+      border-bottom: 1px solid var(--c-border, #e5e7eb);
+      align-items: center;
+    }
+    .opp-header {
+      font-size: 11px;
+      font-weight: 700;
+      color: #666;
+      background: #f8f9fa;
+    }
+    .opp-row:last-child { border-bottom: none; }
+    .opp-total { text-align: center; color: #555; }
+    .opp-wdl { font-weight: 600; }
+    .opp-goals { color: #555; }
     .back-link {
       display: block;
       padding: 12px 16px;
@@ -160,10 +217,10 @@
     .site-footer a { color: #666; }
     @media (max-width: 600px) {
       .match-header, .match-row {
-        grid-template-columns: 110px 1fr 55px 55px;
+        grid-template-columns: 80px 28px 1fr 45px;
         font-size: 12px;
       }
-      .match-comp { display: none; }
+      .match-broadcast, .match-comp { display: none; }
     }
   </style>
   <script type="application/ld+json">
@@ -201,6 +258,14 @@
 
   
     <section class="club-section">
+      <h3>ℹ️ クラブ基本情報</h3>
+      <table class="club-info-table">
+        <tr><th>創設年</th><td>1888</td></tr><tr><th>本拠地</th><td>Rotterdam, Netherlands</td></tr><tr><th>スタジアム</th><td>Het Kasteel</td></tr><tr><th>収容人数</th><td>11,026</td></tr><tr><th>監督</th><td>Maurice Steijn</td></tr><tr><th>公式サイト</th><td><a href="https://www.sparta-rotterdam.nl/" target="_blank" rel="noopener">https://www.sparta-rotterdam.nl/</a></td></tr>
+      </table>
+    </section>
+
+  
+    <section class="club-section">
       <h3>🏆 エールディビジ 現在順位</h3>
       <div class="standing-row">
         <span class="standing-pos">10位</span>
@@ -233,6 +298,7 @@
       <div class="matches-list">
         <div class="match-header">
           <div class="match-date">日時（JST）</div>
+          <div class="match-venue">場所</div>
           <div class="match-opponent">対戦相手</div>
           <div class="match-result">結果</div>
           <div class="match-broadcast">配信</div>
@@ -240,34 +306,59 @@
         </div>
         
           <div class="match-row scheduled">
-            <div class="match-date">2026-05-17T21:30</div>
-            <div class="match-opponent"><span class="home-away">H</span> vs エクセルシオール</div>
+            <div class="match-date"><span class="match-date-day">2026/05/17</span><span class="match-date-time">（日）21:30</span></div>
+            <div class="match-venue"><span class="venue-badge venue-home">H</span></div>
+            <div class="match-opponent">vs エクセルシオール</div>
             <div class="match-result">—</div>
-            <div class="match-broadcast">U-NEXT</div>
+            <div class="match-broadcast"><a class="bc-tag bc-unext" href="https://video.unext.jp/?utm_source=football-jp&amp;utm_medium=club_page&amp;utm_content=sparta-rotterdam&amp;utm_campaign=%E3%82%A8%E3%83%BC%E3%83%AB%E3%83%87%E3%82%A3%E3%83%93%E3%82%B8" target="_blank" rel="noopener" data-svc="U-NEXT" data-pagetype="club" data-pageid="sparta-rotterdam" onclick="trackAffClick(this)"><img class="bc-logo" src="/assets/broadcasters/unext.png" alt="" width="16" height="16">U-NEXT</a></div>
             <div class="match-comp">エールディビジ</div>
           </div>
           <div class="match-row scheduled">
-            <div class="match-date">2026-05-10T23:45</div>
-            <div class="match-opponent"><span class="home-away">A</span> vs トゥエンテ</div>
+            <div class="match-date"><span class="match-date-day">2026/05/10</span><span class="match-date-time">（日）23:45</span></div>
+            <div class="match-venue"><span class="venue-badge venue-away">A</span></div>
+            <div class="match-opponent">vs トゥエンテ</div>
             <div class="match-result">—</div>
-            <div class="match-broadcast">U-NEXT</div>
+            <div class="match-broadcast"><a class="bc-tag bc-unext" href="https://video.unext.jp/?utm_source=football-jp&amp;utm_medium=club_page&amp;utm_content=sparta-rotterdam&amp;utm_campaign=%E3%82%A8%E3%83%BC%E3%83%AB%E3%83%87%E3%82%A3%E3%83%93%E3%82%B8" target="_blank" rel="noopener" data-svc="U-NEXT" data-pagetype="club" data-pageid="sparta-rotterdam" onclick="trackAffClick(this)"><img class="bc-logo" src="/assets/broadcasters/unext.png" alt="" width="16" height="16">U-NEXT</a></div>
             <div class="match-comp">エールディビジ</div>
           </div>
           <div class="match-row scheduled">
-            <div class="match-date">2026-05-03T23:45</div>
-            <div class="match-opponent"><span class="home-away">H</span> vs ゴー・アヘッド</div>
+            <div class="match-date"><span class="match-date-day">2026/05/03</span><span class="match-date-time">（日）23:45</span></div>
+            <div class="match-venue"><span class="venue-badge venue-home">H</span></div>
+            <div class="match-opponent">vs ゴー・アヘッド</div>
             <div class="match-result">—</div>
-            <div class="match-broadcast">U-NEXT</div>
+            <div class="match-broadcast"><a class="bc-tag bc-unext" href="https://video.unext.jp/?utm_source=football-jp&amp;utm_medium=club_page&amp;utm_content=sparta-rotterdam&amp;utm_campaign=%E3%82%A8%E3%83%BC%E3%83%AB%E3%83%87%E3%82%A3%E3%83%93%E3%82%B8" target="_blank" rel="noopener" data-svc="U-NEXT" data-pagetype="club" data-pageid="sparta-rotterdam" onclick="trackAffClick(this)"><img class="bc-logo" src="/assets/broadcasters/unext.png" alt="" width="16" height="16">U-NEXT</a></div>
             <div class="match-comp">エールディビジ</div>
           </div>
       </div>
     </section>
 
+  
+
+  
+
   <footer class="site-footer">
     <p>データ提供: <a href="https://www.football-data.org/" target="_blank" rel="noopener">Football-Data.org</a></p>
-    <p><a href="/">football-jp トップへ</a> ／ <a href="/privacy.html">プライバシーポリシー</a></p>
+    <p class="footer-links">
+      <a href="/">football-jp トップへ</a> |
+      <a href="/players/">選手一覧</a> |
+      <a href="/clubs/">クラブ一覧</a> |
+      <a href="/privacy.html">プライバシーポリシー</a>
+    </p>
   </footer>
 </div>
+
+<script>
+function trackAffClick(el) {
+  if (typeof gtag === 'function') {
+    gtag('event', 'affiliate_click', {
+      service: el.dataset.svc,
+      page_type: el.dataset.pagetype,
+      page_id: el.dataset.pageid,
+      destination: el.href
+    });
+  }
+}
+</script>
 
 </body>
 </html>
