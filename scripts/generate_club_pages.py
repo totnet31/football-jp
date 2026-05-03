@@ -21,6 +21,7 @@ PLAYERS_JSON = REPO_ROOT / "data" / "players.json"
 MATCHES_JSON = REPO_ROOT / "data" / "matches.json"
 STANDINGS_JSON = REPO_ROOT / "data" / "standings.json"
 BROADCASTERS_JSON = REPO_ROOT / "data" / "broadcasters.json"
+CLUB_CRESTS_JSON = REPO_ROOT / "data" / "club_crests.json"
 OUTPUT_DIR = REPO_ROOT / "clubs"
 
 GA4_ID = "G-39G8CVXRW0"
@@ -139,8 +140,9 @@ def load_data():
         standings_raw = json.load(f)
     standings_comps = standings_raw.get("competitions", {})
     services = load_services()
+    local_crests = load_local_crests()
 
-    return players, matches, standings_comps, services
+    return players, matches, standings_comps, services, local_crests
 
 
 def build_clubs(players: list) -> dict:
@@ -213,16 +215,38 @@ def get_club_recent_matches(club_info: dict, matches: list) -> list:
     return club_matches[:10]
 
 
-def get_club_crest(club_info: dict, matches: list) -> str:
-    """matches.json からクラブ紋章URLを取得する。"""
+def load_local_crests() -> dict:
+    """data/club_crests.json からローカル保存済みのエンブレムマッピングを返す。
+    キーは club slug（例: 'genk'）、値は相対URL（例: '/assets/club_crests/genk.png'）"""
+    if not CLUB_CRESTS_JSON.exists():
+        return {}
+    with open(CLUB_CRESTS_JSON, encoding="utf-8") as f:
+        return json.load(f)
+
+
+def get_club_crest(club_info: dict, matches: list, local_crests: dict = None) -> str:
+    """クラブ紋章URLを取得する。
+    優先順位:
+    1. matches.json の crest URL（football-data.org 提供の Tier1 クラブ）
+    2. data/club_crests.json のローカル保存済みエンブレム（Tier2/3 クラブ）
+    3. 空文字列（取得できない場合）
+    """
     club_id = club_info.get("club_id")
-    if not club_id:
-        return ""
-    for m in matches:
-        if m.get("home_id") == club_id and m.get("home_crest"):
-            return m["home_crest"]
-        if m.get("away_id") == club_id and m.get("away_crest"):
-            return m["away_crest"]
+    if club_id:
+        for m in matches:
+            if m.get("home_id") == club_id and m.get("home_crest"):
+                return m["home_crest"]
+            if m.get("away_id") == club_id and m.get("away_crest"):
+                return m["away_crest"]
+
+    # Tier2/3: ローカル crests.json から slug で取得
+    if local_crests is not None:
+        club_en = club_info.get("club_en", "")
+        slug = make_slug(club_en)
+        local_url = local_crests.get(slug, "")
+        if local_url:
+            return local_url
+
     return ""
 
 
@@ -389,11 +413,13 @@ def build_club_page(club_info: dict, slug: str, standing: dict,
                     score_display = f"{away_score} - {home_score}"
                     opponent = esc(home_ja)
                     result_class = "win" if away_score > home_score else ("lose" if away_score < home_score else "draw")
-                home_away = "H" if is_home else "A"
+                venue_cls = "venue-home" if is_home else "venue-away"
+                venue_label = "H" if is_home else "A"
                 match_rows += f"""
           <div class="match-row">
             <div class="match-date">{date_display}</div>
-            <div class="match-opponent"><span class="home-away">{home_away}</span> vs {opponent}</div>
+            <div class="match-venue"><span class="venue-badge {venue_cls}">{venue_label}</span></div>
+            <div class="match-opponent">vs {opponent}</div>
             <div class="match-result {result_class}">{esc(score_display)}</div>
             <div class="match-broadcast">—</div>
             <div class="match-comp">{esc(comp_ja)}</div>
@@ -403,7 +429,8 @@ def build_club_page(club_info: dict, slug: str, standing: dict,
                     opponent = esc(away_ja)
                 else:
                     opponent = esc(home_ja)
-                home_away = "H" if is_home else "A"
+                venue_cls = "venue-home" if is_home else "venue-away"
+                venue_label = "H" if is_home else "A"
                 broadcasters_list = m.get("broadcasters", [])
                 league_ja_m = m.get("competition_ja", club_info.get("league_ja", ""))
                 bc_tags = ""
@@ -417,7 +444,8 @@ def build_club_page(club_info: dict, slug: str, standing: dict,
                 match_rows += f"""
           <div class="match-row scheduled">
             <div class="match-date">{date_display}</div>
-            <div class="match-opponent"><span class="home-away">{home_away}</span> vs {opponent}</div>
+            <div class="match-venue"><span class="venue-badge {venue_cls}">{venue_label}</span></div>
+            <div class="match-opponent">vs {opponent}</div>
             <div class="match-result">—</div>
             <div class="match-broadcast">{bc_tags if bc_tags else "—"}</div>
             <div class="match-comp">{esc(comp_ja)}</div>
@@ -429,6 +457,7 @@ def build_club_page(club_info: dict, slug: str, standing: dict,
       <div class="matches-list">
         <div class="match-header">
           <div class="match-date">日時（JST）</div>
+          <div class="match-venue">場所</div>
           <div class="match-opponent">対戦相手</div>
           <div class="match-result">結果</div>
           <div class="match-broadcast">配信</div>
@@ -555,7 +584,7 @@ def build_club_page(club_info: dict, slug: str, standing: dict,
     .matches-list {{ font-size: 13px; }}
     .match-header, .match-row {{
       display: grid;
-      grid-template-columns: 120px 1fr 60px 120px 90px;
+      grid-template-columns: 110px 30px 1fr 60px 110px 80px;
       gap: 6px;
       padding: 8px 4px;
       border-bottom: 1px solid var(--c-border, #e5e7eb);
@@ -581,15 +610,18 @@ def build_club_page(club_info: dict, slug: str, standing: dict,
     }}
     .match-date-day {{ display: block; font-size: 12px; }}
     .match-date-time {{ display: block; font-size: 11px; color: #555; }}
-    .home-away {{
+    .venue-badge {{
       display: inline-block;
-      padding: 1px 5px;
-      font-size: 10px;
+      width: 24px;
+      height: 24px;
+      line-height: 24px;
+      text-align: center;
+      border-radius: 4px;
       font-weight: 700;
-      background: #f0f0f0;
-      border-radius: 2px;
-      margin-right: 4px;
+      font-size: 12px;
     }}
+    .venue-away {{ background: #fee; color: #c9302c; border: 1px solid #f5b7b1; }}
+    .venue-home {{ background: #e7f0ff; color: #1e6cba; border: 1px solid #aac6e8; }}
     .match-comp {{ font-size: 11px; color: #666; }}
     .no-data {{ color: #888; font-size: 13px; padding: 8px 0; margin: 0; }}
     .back-link {{
@@ -610,10 +642,10 @@ def build_club_page(club_info: dict, slug: str, standing: dict,
     .site-footer a {{ color: #666; }}
     @media (max-width: 600px) {{
       .match-header, .match-row {{
-        grid-template-columns: 90px 1fr 50px 1fr;
+        grid-template-columns: 80px 28px 1fr 45px;
         font-size: 12px;
       }}
-      .match-comp {{ display: none; }}
+      .match-broadcast, .match-comp {{ display: none; }}
     }}
   </style>
   <script type="application/ld+json">
@@ -903,9 +935,10 @@ function trackAffClick(el) {{
 # ============================
 def main():
     print(f"データ読み込み中...")
-    players, matches, standings_comps, services = load_data()
+    players, matches, standings_comps, services, local_crests = load_data()
     print(f"  選手数: {len(players)}")
     print(f"  試合数: {len(matches)}")
+    print(f"  ローカルエンブレム: {len(local_crests)} クラブ")
 
     # クラブ集約
     clubs = build_clubs(players)
@@ -924,7 +957,7 @@ def main():
         # データ取得
         standing = get_club_standing(club_info, standings_comps)
         recent_matches = get_club_recent_matches(club_info, matches)
-        crest_url = get_club_crest(club_info, matches)
+        crest_url = get_club_crest(club_info, matches, local_crests)
 
         # HTMLページ生成
         html = build_club_page(club_info, slug, standing, recent_matches, crest_url, player_slug_map,
@@ -950,7 +983,7 @@ def main():
     # クラブ紋章マップ（一覧ページ用）
     club_crest_map = {}
     for club_en, club_info in clubs.items():
-        crest = get_club_crest(club_info, matches)
+        crest = get_club_crest(club_info, matches, local_crests)
         if crest:
             club_crest_map[club_en] = crest
 

@@ -109,7 +109,7 @@
     .matches-list { font-size: 13px; }
     .match-header, .match-row {
       display: grid;
-      grid-template-columns: 120px 1fr 60px 120px 90px;
+      grid-template-columns: 110px 30px 1fr 60px 110px 80px;
       gap: 6px;
       padding: 8px 4px;
       border-bottom: 1px solid var(--c-border, #e5e7eb);
@@ -135,15 +135,18 @@
     }
     .match-date-day { display: block; font-size: 12px; }
     .match-date-time { display: block; font-size: 11px; color: #555; }
-    .home-away {
+    .venue-badge {
       display: inline-block;
-      padding: 1px 5px;
-      font-size: 10px;
+      width: 24px;
+      height: 24px;
+      line-height: 24px;
+      text-align: center;
+      border-radius: 4px;
       font-weight: 700;
-      background: #f0f0f0;
-      border-radius: 2px;
-      margin-right: 4px;
+      font-size: 12px;
     }
+    .venue-away { background: #fee; color: #c9302c; border: 1px solid #f5b7b1; }
+    .venue-home { background: #e7f0ff; color: #1e6cba; border: 1px solid #aac6e8; }
     .match-comp { font-size: 11px; color: #666; }
     .no-data { color: #888; font-size: 13px; padding: 8px 0; margin: 0; }
     .back-link {
@@ -164,10 +167,10 @@
     .site-footer a { color: #666; }
     @media (max-width: 600px) {
       .match-header, .match-row {
-        grid-template-columns: 90px 1fr 50px 1fr;
+        grid-template-columns: 80px 28px 1fr 45px;
         font-size: 12px;
       }
-      .match-comp { display: none; }
+      .match-broadcast, .match-comp { display: none; }
     }
   </style>
   <script type="application/ld+json">
@@ -243,6 +246,7 @@
       <div class="matches-list">
         <div class="match-header">
           <div class="match-date">日時（JST）</div>
+          <div class="match-venue">場所</div>
           <div class="match-opponent">対戦相手</div>
           <div class="match-result">結果</div>
           <div class="match-broadcast">配信</div>
@@ -251,28 +255,32 @@
         
           <div class="match-row scheduled">
             <div class="match-date"><span class="match-date-day">2026/05/17</span><span class="match-date-time">（日）21:30</span></div>
-            <div class="match-opponent"><span class="home-away">H</span> vs NACブレダ</div>
+            <div class="match-venue"><span class="venue-badge venue-home">H</span></div>
+            <div class="match-opponent">vs NACブレダ</div>
             <div class="match-result">—</div>
             <div class="match-broadcast"><a class="bc-tag bc-unext" href="https://video.unext.jp/?utm_source=football-jp&amp;utm_medium=club_page&amp;utm_content=az-alkmaar&amp;utm_campaign=%E3%82%A8%E3%83%BC%E3%83%AB%E3%83%87%E3%82%A3%E3%83%93%E3%82%B8" target="_blank" rel="noopener" data-svc="U-NEXT" data-pagetype="club" data-pageid="az-alkmaar" onclick="trackAffClick(this)"><img class="bc-logo" src="/assets/broadcasters/unext.png" alt="" width="16" height="16">U-NEXT</a></div>
             <div class="match-comp">エールディビジ</div>
           </div>
           <div class="match-row scheduled">
             <div class="match-date"><span class="match-date-day">2026/05/10</span><span class="match-date-time">（日）23:45</span></div>
-            <div class="match-opponent"><span class="home-away">A</span> vs フェイエノールト</div>
+            <div class="match-venue"><span class="venue-badge venue-away">A</span></div>
+            <div class="match-opponent">vs フェイエノールト</div>
             <div class="match-result">—</div>
             <div class="match-broadcast"><a class="bc-tag bc-unext" href="https://video.unext.jp/?utm_source=football-jp&amp;utm_medium=club_page&amp;utm_content=az-alkmaar&amp;utm_campaign=%E3%82%A8%E3%83%BC%E3%83%AB%E3%83%87%E3%82%A3%E3%83%93%E3%82%B8" target="_blank" rel="noopener" data-svc="U-NEXT" data-pagetype="club" data-pageid="az-alkmaar" onclick="trackAffClick(this)"><img class="bc-logo" src="/assets/broadcasters/unext.png" alt="" width="16" height="16">U-NEXT</a></div>
             <div class="match-comp">エールディビジ</div>
           </div>
           <div class="match-row scheduled">
             <div class="match-date"><span class="match-date-day">2026/05/03</span><span class="match-date-time">（日）23:45</span></div>
-            <div class="match-opponent"><span class="home-away">H</span> vs トゥエンテ</div>
+            <div class="match-venue"><span class="venue-badge venue-home">H</span></div>
+            <div class="match-opponent">vs トゥエンテ</div>
             <div class="match-result">—</div>
             <div class="match-broadcast"><a class="bc-tag bc-unext" href="https://video.unext.jp/?utm_source=football-jp&amp;utm_medium=club_page&amp;utm_content=az-alkmaar&amp;utm_campaign=%E3%82%A8%E3%83%BC%E3%83%AB%E3%83%87%E3%82%A3%E3%83%93%E3%82%B8" target="_blank" rel="noopener" data-svc="U-NEXT" data-pagetype="club" data-pageid="az-alkmaar" onclick="trackAffClick(this)"><img class="bc-logo" src="/assets/broadcasters/unext.png" alt="" width="16" height="16">U-NEXT</a></div>
             <div class="match-comp">エールディビジ</div>
           </div>
           <div class="match-row">
             <div class="match-date"><span class="match-date-day">2026/04/24</span><span class="match-date-time">（金）01:45</span></div>
-            <div class="match-opponent"><span class="home-away">A</span> vs ゴー・アヘッド</div>
+            <div class="match-venue"><span class="venue-badge venue-away">A</span></div>
+            <div class="match-opponent">vs ゴー・アヘッド</div>
             <div class="match-result draw">0 - 0</div>
             <div class="match-broadcast">—</div>
             <div class="match-comp">エールディビジ</div>

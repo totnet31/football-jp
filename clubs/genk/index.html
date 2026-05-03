@@ -109,7 +109,7 @@
     .matches-list { font-size: 13px; }
     .match-header, .match-row {
       display: grid;
-      grid-template-columns: 120px 1fr 60px 120px 90px;
+      grid-template-columns: 110px 30px 1fr 60px 110px 80px;
       gap: 6px;
       padding: 8px 4px;
       border-bottom: 1px solid var(--c-border, #e5e7eb);
@@ -135,15 +135,18 @@
     }
     .match-date-day { display: block; font-size: 12px; }
     .match-date-time { display: block; font-size: 11px; color: #555; }
-    .home-away {
+    .venue-badge {
       display: inline-block;
-      padding: 1px 5px;
-      font-size: 10px;
+      width: 24px;
+      height: 24px;
+      line-height: 24px;
+      text-align: center;
+      border-radius: 4px;
       font-weight: 700;
-      background: #f0f0f0;
-      border-radius: 2px;
-      margin-right: 4px;
+      font-size: 12px;
     }
+    .venue-away { background: #fee; color: #c9302c; border: 1px solid #f5b7b1; }
+    .venue-home { background: #e7f0ff; color: #1e6cba; border: 1px solid #aac6e8; }
     .match-comp { font-size: 11px; color: #666; }
     .no-data { color: #888; font-size: 13px; padding: 8px 0; margin: 0; }
     .back-link {
@@ -164,10 +167,10 @@
     .site-footer a { color: #666; }
     @media (max-width: 600px) {
       .match-header, .match-row {
-        grid-template-columns: 90px 1fr 50px 1fr;
+        grid-template-columns: 80px 28px 1fr 45px;
         font-size: 12px;
       }
-      .match-comp { display: none; }
+      .match-broadcast, .match-comp { display: none; }
     }
   </style>
   <script type="application/ld+json">
@@ -181,7 +184,8 @@
   "memberOf": {
     "@type": "SportsOrganization",
     "name": "ジュピラー・プロ・リーグ"
-  }
+  },
+  "image": "/assets/club_crests/genk.png"
 }
   </script>
 </head>
@@ -191,7 +195,7 @@
 
 <div class="club-hero">
   <div class="crest-wrapper">
-    <span style="font-size:48px;">🏟️</span>
+    <img src="/assets/club_crests/genk.png" alt="Genk crest" class="club-crest" width="64" height="64" loading="lazy">
   </div>
   <div class="club-name-block">
     <h2>ゲンク</h2>

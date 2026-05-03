@@ -478,11 +478,13 @@ def build_player_page(player: dict, slug: str, scorer_stats: dict,
                     score_display = f"{away_score} - {home_score}"
                     opponent = esc(home_ja)
                     result_class = "win" if away_score > home_score else ("lose" if away_score < home_score else "draw")
-                home_away = "H" if is_home else "A"
+                venue_cls = "venue-home" if is_home else "venue-away"
+                venue_label = "H" if is_home else "A"
                 match_rows += f"""
           <div class="match-row">
             <div class="match-date">{date_display}</div>
-            <div class="match-opponent"><span class="home-away">{home_away}</span> vs {opponent}</div>
+            <div class="match-venue"><span class="venue-badge {venue_cls}">{venue_label}</span></div>
+            <div class="match-opponent">vs {opponent}</div>
             <div class="match-result {result_class}">{esc(score_display)}</div>
             <div class="match-broadcast">—</div>
             <div class="match-comp">{esc(comp_ja)}</div>
@@ -492,7 +494,8 @@ def build_player_page(player: dict, slug: str, scorer_stats: dict,
                     opponent = esc(away_ja)
                 else:
                     opponent = esc(home_ja)
-                home_away = "H" if is_home else "A"
+                venue_cls = "venue-home" if is_home else "venue-away"
+                venue_label = "H" if is_home else "A"
                 broadcasters_list = m.get("broadcasters", [])
                 league_ja_m = m.get("competition_ja", player.get("league_ja", ""))
                 bc_tags = ""
@@ -506,7 +509,8 @@ def build_player_page(player: dict, slug: str, scorer_stats: dict,
                 match_rows += f"""
           <div class="match-row scheduled">
             <div class="match-date">{date_display}</div>
-            <div class="match-opponent"><span class="home-away">{home_away}</span> vs {opponent}</div>
+            <div class="match-venue"><span class="venue-badge {venue_cls}">{venue_label}</span></div>
+            <div class="match-opponent">vs {opponent}</div>
             <div class="match-result">—</div>
             <div class="match-broadcast">{bc_tags if bc_tags else "—"}</div>
             <div class="match-comp">{esc(comp_ja)}</div>
@@ -518,6 +522,7 @@ def build_player_page(player: dict, slug: str, scorer_stats: dict,
       <div class="matches-list">
         <div class="match-header">
           <div class="match-date">日時（JST）</div>
+          <div class="match-venue">場所</div>
           <div class="match-opponent">対戦相手</div>
           <div class="match-result">結果</div>
           <div class="match-broadcast">配信</div>
@@ -686,7 +691,7 @@ def build_player_page(player: dict, slug: str, scorer_stats: dict,
     }}
     .match-header, .match-row {{
       display: grid;
-      grid-template-columns: 120px 1fr 60px 120px 90px;
+      grid-template-columns: 110px 30px 1fr 60px 110px 80px;
       gap: 6px;
       padding: 8px 4px;
       border-bottom: 1px solid var(--c-border, #e5e7eb);
@@ -715,15 +720,18 @@ def build_player_page(player: dict, slug: str, scorer_stats: dict,
     }}
     .match-date-day {{ display: block; font-size: 12px; }}
     .match-date-time {{ display: block; font-size: 11px; color: #555; }}
-    .home-away {{
+    .venue-badge {{
       display: inline-block;
-      padding: 1px 5px;
-      font-size: 10px;
+      width: 24px;
+      height: 24px;
+      line-height: 24px;
+      text-align: center;
+      border-radius: 4px;
       font-weight: 700;
-      background: #f0f0f0;
-      border-radius: 2px;
-      margin-right: 4px;
+      font-size: 12px;
     }}
+    .venue-away {{ background: #fee; color: #c9302c; border: 1px solid #f5b7b1; }}
+    .venue-home {{ background: #e7f0ff; color: #1e6cba; border: 1px solid #aac6e8; }}
     .match-comp {{ font-size: 11px; color: #666; }}
     .goals-list {{ font-size: 13px; }}
     .goal-row {{
@@ -776,10 +784,10 @@ def build_player_page(player: dict, slug: str, scorer_stats: dict,
     @media (max-width: 600px) {{
       .stats-grid {{ grid-template-columns: repeat(2, 1fr); }}
       .match-header, .match-row {{
-        grid-template-columns: 90px 1fr 50px 1fr;
+        grid-template-columns: 80px 28px 1fr 45px;
         font-size: 12px;
       }}
-      .match-comp {{ display: none; }}
+      .match-broadcast, .match-comp {{ display: none; }}
       .goal-row {{ grid-template-columns: 45px 1fr 60px; }}
       .goal-comp {{ display: none; }}
     }}

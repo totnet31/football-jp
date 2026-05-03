@@ -76,6 +76,10 @@ jobs:
         run: python3 scripts/fetch_wiki_player_stats.py
         continue-on-error: true
 
+      - name: クラブエンブレム取得（Tier2/Tier3 補完）
+        run: python3 scripts/fetch_club_crests.py
+        continue-on-error: true
+
       - name: スモークテスト（data整合性チェック）
         id: smoke
         run: python3 scripts/smoke_test.py
