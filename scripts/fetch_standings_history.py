@@ -20,6 +20,7 @@ import sys
 import time
 from pathlib import Path
 from urllib.request import Request, urlopen
+from urllib.parse import quote, urlencode
 from urllib.error import HTTPError, URLError
 from datetime import datetime, timezone, timedelta
 from html.parser import HTMLParser
@@ -90,7 +91,7 @@ def fetch_wikipedia_wikitext(title: str):
         "format": "json",
         "formatversion": "2",
     }
-    url = WIKIPEDIA_API + "?" + "&".join(f"{k}={v}" for k, v in params.items())
+    url = WIKIPEDIA_API + "?" + urlencode(params)
     req = Request(url, headers=HEADERS)
     try:
         with urlopen(req, timeout=30) as r:
@@ -112,7 +113,7 @@ def fetch_wikipedia_wikitext(title: str):
 
 def fetch_wikipedia_html(title: str):
     """Wikipedia の記事の HTML を取得する（パース補助用）"""
-    url = f"https://en.wikipedia.org/wiki/{title}"
+    url = f"https://en.wikipedia.org/wiki/{quote(title)}"
     req = Request(url, headers=HEADERS)
     try:
         with urlopen(req, timeout=30) as r:
