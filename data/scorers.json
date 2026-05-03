@@ -1,5 +1,5 @@
 {
-  "updated": "2026-05-03T22:30:29.377442+09:00",
+  "updated": "2026-05-03T22:40:11.045015+09:00",
   "competitions": {
     "39": {
       "name_ja": "プレミアリーグ",
@@ -102,6 +102,18 @@
           "playedMatches": 32
         },
         {
+          "player_id": 204241,
+          "player_name": "Eli Kroupi",
+          "nationality": "France",
+          "team_id": 1044,
+          "team_ja": "ボーンマス",
+          "team_crest": "https://crests.football-data.org/bournemouth.png",
+          "goals": 12,
+          "assists": null,
+          "penalties": 2,
+          "playedMatches": 35
+        },
+        {
           "player_id": 152454,
           "player_name": "Hugo Ekitike",
           "nationality": "France",
@@ -112,18 +124,6 @@
           "assists": 4,
           "penalties": null,
           "playedMatches": 29
-        },
-        {
-          "player_id": 204241,
-          "player_name": "Eli Kroupi",
-          "nationality": "France",
-          "team_id": 1044,
-          "team_ja": "ボーンマス",
-          "team_crest": "https://crests.football-data.org/bournemouth.png",
-          "goals": 11,
-          "assists": null,
-          "penalties": 1,
-          "playedMatches": 35
         },
         {
           "player_id": 4444,
@@ -3336,6 +3336,18 @@
           "playedMatches": 29
         },
         {
+          "player_id": 133190,
+          "player_name": "Issa Soumaré",
+          "nationality": "Senegal",
+          "team_id": 533,
+          "team_ja": "ル・アーヴル",
+          "team_crest": "https://crests.football-data.org/533.png",
+          "goals": 7,
+          "assists": 5,
+          "penalties": 1,
+          "playedMatches": 32
+        },
+        {
           "player_id": 723,
           "player_name": "Ludovic Ajorque",
           "nationality": "France",
@@ -3394,18 +3406,6 @@
           "assists": 6,
           "penalties": null,
           "playedMatches": 30
-        },
-        {
-          "player_id": 133190,
-          "player_name": "Issa Soumaré",
-          "nationality": "Senegal",
-          "team_id": 533,
-          "team_ja": "ル・アーヴル",
-          "team_crest": "https://crests.football-data.org/533.png",
-          "goals": 6,
-          "assists": 5,
-          "penalties": 1,
-          "playedMatches": 32
         },
         {
           "player_id": 119703,
@@ -4617,7 +4617,7 @@
           "goals": 6,
           "assists": null,
           "penalties": 2,
-          "playedMatches": 30
+          "playedMatches": 31
         },
         {
           "player_id": 242516,
@@ -4629,7 +4629,7 @@
           "goals": 6,
           "assists": null,
           "penalties": 2,
-          "playedMatches": 30
+          "playedMatches": 31
         },
         {
           "player_id": 79824,

@@ -1,5 +1,5 @@
 {
-  "updated": "2026-05-03T22:29:06.003693+09:00",
+  "updated": "2026-05-03T22:38:47.494638+09:00",
   "date_from": "2026-04-26",
   "date_to": "2026-05-17",
   "match_count": 311,
@@ -5240,7 +5240,7 @@
       "away_en": "Crystal Palace",
       "away_crest": "https://crests.football-data.org/354.png",
       "score": {
-        "home": 1,
+        "home": 2,
         "away": 0
       },
       "japanese_players": [
@@ -5310,7 +5310,7 @@
       "away_en": "Le Havre",
       "away_crest": "https://crests.football-data.org/533.png",
       "score": {
-        "home": 0,
+        "home": 1,
         "away": 0
       },
       "japanese_players": [
@@ -5336,7 +5336,7 @@
       "competition_category": "league",
       "competition_flag": "🇩🇪",
       "kickoff_jst": "2026-05-03T22:30:00+09:00",
-      "status": "TIMED",
+      "status": "IN_PLAY",
       "stage": "REGULAR_SEASON",
       "matchday": 32,
       "home_id": 20,
@@ -5347,7 +5347,10 @@
       "away_ja": "マインツ",
       "away_en": "Mainz",
       "away_crest": "https://crests.football-data.org/15.png",
-      "score": null,
+      "score": {
+        "home": 0,
+        "away": 0
+      },
       "japanese_players": [
         {
           "name_ja": "藤田譲瑠チマ",
@@ -11061,6 +11064,6 @@
       ]
     }
   ],
-  "updated_yt_highlights": "2026-05-03T22:32:41.226847+09:00",
-  "updated_uefa_secondary": "2026-05-03T22:33:26.193437+09:00"
+  "updated_yt_highlights": "2026-05-03T22:42:37.220767+09:00",
+  "updated_uefa_secondary": "2026-05-03T22:43:04.443525+09:00"
 }
