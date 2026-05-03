@@ -337,6 +337,42 @@
       color: #888;
       padding: 0 8px 8px;
     }
+    .national-team-list {
+      font-size: 13px;
+    }
+    .nt-row {
+      display: flex;
+      gap: 12px;
+      padding: 7px 0;
+      border-bottom: 1px solid var(--c-border, #e5e7eb);
+      align-items: baseline;
+      flex-wrap: wrap;
+    }
+    .nt-row:last-child { border-bottom: none; }
+    .nt-team {
+      font-weight: 700;
+      min-width: 140px;
+      flex-shrink: 0;
+    }
+    .nt-years {
+      color: #888;
+      font-size: 12px;
+      min-width: 70px;
+      flex-shrink: 0;
+    }
+    .nt-stats {
+      color: #444;
+      font-size: 12px;
+    }
+    .wc-history {
+      margin-top: 10px;
+      font-size: 13px;
+      color: #555;
+      padding: 6px 10px;
+      background: #fffbe6;
+      border-left: 3px solid #d4af37;
+      border-radius: 2px;
+    }
     @media (max-width: 600px) {
       .stats-grid { grid-template-columns: repeat(2, 1fr); }
       .match-header, .match-row {
@@ -420,11 +456,13 @@
   
     <section class="player-section">
       <h3>📋 キャリア</h3>
-      <div class="career-current">🟢 現在所属：<strong>{{flagicon</strong>（2026-）</div>
+      <div class="career-current">🟢 現在所属：<strong>シント＝トロイデン</strong>（2026–）</div>
       <div class="career-list">
-        <div class="career-row"><span class="career-years">2025</span><span class="career-club">{{flagicon</span></div><div class="career-row is-current"><span class="career-years">2026-</span><span class="career-club">{{flagicon</span></div>
+        <div class="career-row"><span class="career-years">–2025</span><span class="career-club">サガン鳥栖（ユース）</span></div><div class="career-row"><span class="career-years">2025</span><span class="career-club">サガン鳥栖</span></div><div class="career-row is-current"><span class="career-years">2026–</span><span class="career-club">シント＝トロイデン</span></div>
       </div>
     </section>
+
+  
 
   
 

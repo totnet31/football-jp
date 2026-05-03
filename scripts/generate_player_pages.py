@@ -794,6 +794,37 @@ def build_player_page(player: dict, slug: str, scorer_stats: dict,
       </div>
     </section>"""
 
+    # --- 代表履歴セクション ---
+    national_team_html = ""
+    if player_info:
+        nt_history = player_info.get("national_team_history", [])
+        if nt_history:
+            nt_rows = ""
+            for nt in nt_history:
+                team_ja = esc(nt.get("team_ja", nt.get("team", "")))
+                years = esc(nt.get("years", ""))
+                caps = nt.get("caps")
+                goals = nt.get("goals")
+                if caps is not None and goals is not None:
+                    stats_str = f"{caps}試合 / {goals}ゴール"
+                elif caps is not None:
+                    stats_str = f"{caps}試合"
+                else:
+                    stats_str = "—"
+                nt_rows += f"""
+            <div class="nt-row">
+              <span class="nt-team">{team_ja}</span>
+              <span class="nt-years">{years}</span>
+              <span class="nt-stats">{esc(stats_str)}</span>
+            </div>"""
+            national_team_html = f"""
+    <section class="player-section">
+      <h3>🇯🇵 代表履歴</h3>
+      <div class="national-team-list">
+        {nt_rows}
+      </div>
+    </section>"""
+
     # --- SNSセクション ---
     sns_html = ""
     if player_info:
@@ -1184,6 +1215,42 @@ def build_player_page(player: dict, slug: str, scorer_stats: dict,
       color: #888;
       padding: 0 8px 8px;
     }}
+    .national-team-list {{
+      font-size: 13px;
+    }}
+    .nt-row {{
+      display: flex;
+      gap: 12px;
+      padding: 7px 0;
+      border-bottom: 1px solid var(--c-border, #e5e7eb);
+      align-items: baseline;
+      flex-wrap: wrap;
+    }}
+    .nt-row:last-child {{ border-bottom: none; }}
+    .nt-team {{
+      font-weight: 700;
+      min-width: 140px;
+      flex-shrink: 0;
+    }}
+    .nt-years {{
+      color: #888;
+      font-size: 12px;
+      min-width: 70px;
+      flex-shrink: 0;
+    }}
+    .nt-stats {{
+      color: #444;
+      font-size: 12px;
+    }}
+    .wc-history {{
+      margin-top: 10px;
+      font-size: 13px;
+      color: #555;
+      padding: 6px 10px;
+      background: #fffbe6;
+      border-left: 3px solid #d4af37;
+      border-radius: 2px;
+    }}
     @media (max-width: 600px) {{
       .stats-grid {{ grid-template-columns: repeat(2, 1fr); }}
       .match-header, .match-row {{
@@ -1232,6 +1299,8 @@ def build_player_page(player: dict, slug: str, scorer_stats: dict,
   {goals_html}
 
   {career_html}
+
+  {national_team_html}
 
   {sns_html}
 

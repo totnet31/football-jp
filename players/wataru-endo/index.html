@@ -337,6 +337,42 @@
       color: #888;
       padding: 0 8px 8px;
     }
+    .national-team-list {
+      font-size: 13px;
+    }
+    .nt-row {
+      display: flex;
+      gap: 12px;
+      padding: 7px 0;
+      border-bottom: 1px solid var(--c-border, #e5e7eb);
+      align-items: baseline;
+      flex-wrap: wrap;
+    }
+    .nt-row:last-child { border-bottom: none; }
+    .nt-team {
+      font-weight: 700;
+      min-width: 140px;
+      flex-shrink: 0;
+    }
+    .nt-years {
+      color: #888;
+      font-size: 12px;
+      min-width: 70px;
+      flex-shrink: 0;
+    }
+    .nt-stats {
+      color: #444;
+      font-size: 12px;
+    }
+    .wc-history {
+      margin-top: 10px;
+      font-size: 13px;
+      color: #555;
+      padding: 6px 10px;
+      background: #fffbe6;
+      border-left: 3px solid #d4af37;
+      border-radius: 2px;
+    }
     @media (max-width: 600px) {
       .stats-grid { grid-template-columns: repeat(2, 1fr); }
       .match-header, .match-row {
@@ -480,9 +516,32 @@
   
     <section class="player-section">
       <h3>📋 キャリア</h3>
-      <div class="career-current">🟢 現在所属：<strong>{{Flagicon</strong>（2023-）</div>
+      <div class="career-current">🟢 現在所属：<strong>リバプール</strong>（2023–）</div>
       <div class="career-list">
-        <div class="career-row"><span class="career-years">2010-2015</span><span class="career-club">{{Flagicon</span></div><div class="career-row"><span class="career-years">2016-2018</span><span class="career-club">{{Flagicon</span></div><div class="career-row"><span class="career-years">2018-2020</span><span class="career-club">{{Flagicon</span></div><div class="career-row"><span class="career-years">2019-2020</span><span class="career-club">→{{Flagicon</span></div><div class="career-row"><span class="career-years">2020-2023</span><span class="career-club">{{Flagicon</span></div><div class="career-row is-current"><span class="career-years">2023-</span><span class="career-club">{{Flagicon</span></div>
+        <div class="career-row"><span class="career-years">1999–2004</span><span class="career-club">Minamitotsuka FC（ユース）</span></div><div class="career-row"><span class="career-years">2005–2007</span><span class="career-club">Minamitotsuka Junior High School（ユース）</span></div><div class="career-row"><span class="career-years">2008–2010</span><span class="career-club">湘南ベルマーレ（ユース）</span></div><div class="career-row"><span class="career-years">2010–2015</span><span class="career-club">湘南ベルマーレ</span></div><div class="career-row"><span class="career-years">2016–2018</span><span class="career-club">浦和レッズ</span></div><div class="career-row"><span class="career-years">2018–2020</span><span class="career-club">シント＝トロイデン</span></div><div class="career-row"><span class="career-years">2019–2020</span><span class="career-club">→ シュトゥットガルト（ローン）</span></div><div class="career-row"><span class="career-years">2020–2023</span><span class="career-club">シュトゥットガルト</span></div><div class="career-row is-current"><span class="career-years">2023–</span><span class="career-club">リバプール</span></div>
+      </div>
+    </section>
+
+  
+    <section class="player-section">
+      <h3>🇯🇵 代表履歴</h3>
+      <div class="national-team-list">
+        
+            <div class="nt-row">
+              <span class="nt-team">U-20日本代表</span>
+              <span class="nt-years">2013</span>
+              <span class="nt-stats">4試合 / 0ゴール</span>
+            </div>
+            <div class="nt-row">
+              <span class="nt-team">U-23日本代表</span>
+              <span class="nt-years">2015–2016</span>
+              <span class="nt-stats">8試合 / 0ゴール</span>
+            </div>
+            <div class="nt-row">
+              <span class="nt-team">日本代表（A代表）</span>
+              <span class="nt-years">2017–</span>
+              <span class="nt-stats">72試合 / 2ゴール</span>
+            </div>
       </div>
     </section>
 
