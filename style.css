@@ -1219,3 +1219,17 @@ footer a { color: var(--text-sub); }
 
 .legal-contact .at-mark { color: #c93434; font-weight: 600; }
 .legal-note { color: #888; font-size: 0.8rem; display: inline-block; margin-top: 4px; }
+
+/* career current club badge */
+.career-current {
+  background: #e8f5e9;
+  border: 1px solid #66bb6a;
+  border-radius: 4px;
+  padding: 8px 12px;
+  margin-bottom: 8px;
+  font-size: 0.95rem;
+  color: #2e7d32;
+}
+.career-current strong { font-weight: 700; }
+.career-row.is-current { background: #f0f9f1; }
+.career-row.is-current .career-club { font-weight: 700; }

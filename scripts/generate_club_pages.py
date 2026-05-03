@@ -778,9 +778,9 @@ def build_club_page(club_info: dict, slug: str, standing: dict,
       display: grid;
       grid-template-columns: 110px 30px 1fr 60px 110px 80px;
       gap: 6px;
-      padding: 8px 4px;
+      padding: 10px 4px;
       border-bottom: 1px solid var(--c-border, #e5e7eb);
-      align-items: start;
+      align-items: center;
     }}
     .match-header {{
       font-size: 11px;
@@ -798,7 +798,8 @@ def build_club_page(club_info: dict, slug: str, standing: dict,
       display: flex;
       flex-wrap: wrap;
       gap: 4px;
-      align-items: flex-start;
+      align-items: center;
+      justify-content: center;
     }}
     .match-date-day {{ display: block; font-size: 12px; }}
     .match-date-time {{ display: block; font-size: 11px; color: #555; }}

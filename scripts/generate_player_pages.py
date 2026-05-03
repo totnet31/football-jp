@@ -22,6 +22,7 @@ SCORERS_JSON = REPO_ROOT / "data" / "scorers.json"
 MATCH_EVENTS_JSON = REPO_ROOT / "data" / "match_events.json"
 STANDINGS_JSON = REPO_ROOT / "data" / "standings.json"
 PLAYER_STATS_JSON = REPO_ROOT / "data" / "player_stats.json"
+PLAYER_INFO_JSON = REPO_ROOT / "data" / "player_info.json"
 BROADCASTERS_JSON = REPO_ROOT / "data" / "broadcasters.json"
 OUTPUT_DIR = REPO_ROOT / "players"
 
@@ -189,10 +190,17 @@ def load_data():
         player_stats = ps_raw.get("stats", {})
         print(f"  player_stats.json: {len(player_stats)} 選手分")
 
+    # player_info.json（身長・体重・キャリア等、任意）
+    player_info = {}
+    if PLAYER_INFO_JSON.exists():
+        with open(PLAYER_INFO_JSON, encoding="utf-8") as f:
+            player_info = json.load(f)
+        print(f"  player_info.json: {len(player_info)} 選手分")
+
     services = load_services()
     print(f"  サービス数: {len(services)}")
 
-    return players, matches, matches_dict, scorers_comps, events, standings_comps, player_stats, services
+    return players, matches, matches_dict, scorers_comps, events, standings_comps, player_stats, services, player_info
 
 
 def get_player_wiki_stats(player: dict, player_stats: dict) -> dict:
@@ -356,10 +364,37 @@ def get_related_players(player: dict, all_players: list, slug_map: dict) -> list
     return related[:5]
 
 
+def calc_age(birth_date_str: str) -> str:
+    """生年月日文字列（YYYY-MM-DD）から年齢を計算する。"""
+    if not birth_date_str:
+        return ""
+    try:
+        from datetime import date
+        y, m, d = birth_date_str.split("-")
+        bd = date(int(y), int(m), int(d))
+        today = date.today()
+        age = today.year - bd.year - ((today.month, today.day) < (bd.month, bd.day))
+        return str(age)
+    except Exception:
+        return ""
+
+
+def foot_ja(foot: str) -> str:
+    """利き足を日本語に変換する。"""
+    if foot == "right":
+        return "右"
+    if foot == "left":
+        return "左"
+    if foot == "both":
+        return "両足"
+    return foot or ""
+
+
 def build_player_page(player: dict, slug: str, scorer_stats: dict,
                       goal_events: list, club_matches: list, standing: dict,
                       wiki_stats: dict = None, services: dict = None,
-                      related_players: list = None) -> str:
+                      related_players: list = None,
+                      player_info: dict = None) -> str:
     name_ja = player.get("name_ja", "")
     name_en = player.get("name_en", "")
     position = player.get("position", "")
@@ -600,6 +635,108 @@ def build_player_page(player: dict, slug: str, scorer_stats: dict,
       <p class="no-data">今シーズンまだゴールなし（または取得範囲外）。</p>
     </section>"""
 
+    # --- プロフィール情報セクション（身長・体重・年齢・利き足）---
+    profile_info_html = ""
+    if player_info:
+        height_cm = player_info.get("height_cm")
+        weight_kg = player_info.get("weight_kg")
+        birth_date = player_info.get("birth_date")
+        # 出身地：_ja フィールドがあれば優先
+        birth_place_ja = player_info.get("birth_place_ja", "")
+        birth_place = player_info.get("birth_place", "")
+        display_place = birth_place_ja if birth_place_ja else birth_place
+        foot = player_info.get("foot")
+        wiki_url = player_info.get("wiki_url")
+
+        height_str = f"{height_cm}cm" if height_cm else "—"
+        weight_str = f"{weight_kg}kg" if weight_kg else "—"
+        age_str = calc_age(birth_date)
+        birth_str = f"{esc(birth_date)}（{age_str}歳）" if birth_date and age_str else esc(birth_date or "—")
+        foot_str = foot_ja(foot) if foot else "—"
+        place_str = esc(display_place) if display_place else "—"
+
+        wiki_link = ""
+        if wiki_url:
+            wiki_link = f' <a href="{esc(wiki_url)}" target="_blank" rel="noopener" style="font-size:11px;color:#888;">Wikipedia →</a>'
+
+        profile_info_html = f"""
+    <section class="player-section">
+      <h3>👤 プロフィール{wiki_link}</h3>
+      <table class="profile-table">
+        <tr><td class="profile-label">身長 / 体重</td><td class="profile-value">{height_str} / {weight_str}</td></tr>
+        <tr><td class="profile-label">生年月日</td><td class="profile-value">{birth_str}</td></tr>
+        <tr><td class="profile-label">出身地</td><td class="profile-value">{place_str}</td></tr>
+        <tr><td class="profile-label">利き足</td><td class="profile-value">{foot_str}</td></tr>
+      </table>
+    </section>"""
+
+    # --- キャリアセクション ---
+    career_html = ""
+    if player_info:
+        # career_ja があれば優先、なければ career（英語）にフォールバック
+        career_ja = player_info.get("career_ja", [])
+        career_en = player_info.get("career", [])
+        career = career_ja if career_ja else career_en
+        if career:
+            # 並び順を整理：開始年でソート → 現在所属クラブ（years が "–" で終わるもの）を末尾に
+            def year_start(item):
+                y = item.get("years", "")
+                m = re.match(r"^(\d{4})", y.strip())
+                return int(m.group(1)) if m else 0
+
+            def is_current(item):
+                y = item.get("years", "").strip()
+                return y.endswith("–") or y.endswith("-") or y.endswith("—")
+
+            sorted_past = sorted([c for c in career if not is_current(c)], key=year_start)
+            current_clubs = [c for c in career if is_current(c)]
+            ordered_career = sorted_past + current_clubs
+
+            # 現在所属クラブを示すバッジ
+            current_club_badge = ""
+            if current_clubs:
+                latest = current_clubs[-1]
+                current_club_badge = f'<div class="career-current">🟢 現在所属：<strong>{esc(latest.get("club", ""))}</strong>（{esc(latest.get("years", ""))}）</div>'
+
+            career_rows = ""
+            for item in ordered_career:
+                years = esc(item.get("years", ""))
+                club = esc(item.get("club", ""))
+                cur_class = " is-current" if is_current(item) else ""
+                career_rows += f'<div class="career-row{cur_class}"><span class="career-years">{years}</span><span class="career-club">{club}</span></div>'
+            career_html = f"""
+    <section class="player-section">
+      <h3>📋 キャリア</h3>
+      {current_club_badge}
+      <div class="career-list">
+        {career_rows}
+      </div>
+    </section>"""
+
+    # --- SNSセクション ---
+    sns_html = ""
+    if player_info:
+        twitter = player_info.get("twitter")
+        instagram = player_info.get("instagram")
+        official_url = player_info.get("official_url")
+        sns_items = []
+        if twitter:
+            handle = twitter.lstrip("@")
+            sns_items.append(f'<a class="sns-link sns-twitter" href="https://x.com/{esc(handle)}" target="_blank" rel="noopener">𝕏 {esc(twitter)}</a>')
+        if instagram:
+            sns_items.append(f'<a class="sns-link sns-instagram" href="https://www.instagram.com/{esc(instagram)}/" target="_blank" rel="noopener">📷 @{esc(instagram)}</a>')
+        if official_url:
+            domain = official_url.replace("https://", "").replace("http://", "").split("/")[0]
+            sns_items.append(f'<a class="sns-link sns-official" href="{esc(official_url)}" target="_blank" rel="noopener">🌐 {esc(domain)}</a>')
+        if sns_items:
+            sns_html = f"""
+    <section class="player-section">
+      <h3>🔗 SNS・公式リンク</h3>
+      <div class="sns-links">
+        {"".join(sns_items)}
+      </div>
+    </section>"""
+
     # --- 関連選手セクション（同クラブ他日本人）---
     related_html = ""
     if related_players:
@@ -734,9 +871,9 @@ def build_player_page(player: dict, slug: str, scorer_stats: dict,
       display: grid;
       grid-template-columns: 110px 30px 1fr 60px 110px 80px;
       gap: 6px;
-      padding: 8px 4px;
+      padding: 10px 4px;
       border-bottom: 1px solid var(--c-border, #e5e7eb);
-      align-items: start;
+      align-items: center;
     }}
     .match-header {{
       font-size: 11px;
@@ -757,7 +894,8 @@ def build_player_page(player: dict, slug: str, scorer_stats: dict,
       display: flex;
       flex-wrap: wrap;
       gap: 4px;
-      align-items: flex-start;
+      align-items: center;
+      justify-content: center;
     }}
     .match-date-day {{ display: block; font-size: 12px; }}
     .match-date-time {{ display: block; font-size: 11px; color: #555; }}
@@ -852,6 +990,64 @@ def build_player_page(player: dict, slug: str, scorer_stats: dict,
       margin-top: 20px;
     }}
     .site-footer a {{ color: #666; }}
+    .profile-table {{
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13px;
+    }}
+    .profile-table tr {{
+      border-bottom: 1px solid var(--c-border, #e5e7eb);
+    }}
+    .profile-table tr:last-child {{ border-bottom: none; }}
+    .profile-label {{
+      width: 100px;
+      padding: 7px 0;
+      color: #666;
+      font-size: 12px;
+      vertical-align: top;
+    }}
+    .profile-value {{
+      padding: 7px 0;
+      font-weight: 600;
+    }}
+    .career-list {{
+      font-size: 13px;
+    }}
+    .career-row {{
+      display: flex;
+      gap: 12px;
+      padding: 6px 0;
+      border-bottom: 1px solid var(--c-border, #e5e7eb);
+      align-items: baseline;
+    }}
+    .career-row:last-child {{ border-bottom: none; }}
+    .career-years {{
+      min-width: 90px;
+      color: #888;
+      font-size: 12px;
+      flex-shrink: 0;
+    }}
+    .career-club {{
+      font-weight: 600;
+    }}
+    .sns-links {{
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }}
+    .sns-link {{
+      display: inline-block;
+      padding: 6px 14px;
+      border-radius: 4px;
+      font-size: 13px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: opacity 0.15s;
+    }}
+    .sns-link:hover {{ opacity: 0.8; }}
+    .sns-twitter {{ background: #000; color: #fff; }}
+    .sns-instagram {{ background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); color: #fff; }}
+    .sns-official {{ background: #f0f1f5; color: #333; border: 1px solid #ccc; }}
     @media (max-width: 600px) {{
       .stats-grid {{ grid-template-columns: repeat(2, 1fr); }}
       .match-header, .match-row {{
@@ -886,6 +1082,8 @@ def build_player_page(player: dict, slug: str, scorer_stats: dict,
 
 <div style="max-width: 860px; margin: 0 auto;">
 
+  {profile_info_html}
+
   {stats_html}
 
   {standing_html}
@@ -893,6 +1091,10 @@ def build_player_page(player: dict, slug: str, scorer_stats: dict,
   {matches_html}
 
   {goals_html}
+
+  {career_html}
+
+  {sns_html}
 
   {related_html}
 
@@ -1221,7 +1423,7 @@ function trackAffClick(el) {{
 # ============================
 def main():
     print(f"データ読み込み中...")
-    players, matches, matches_dict, scorers_comps, events, standings_comps, player_stats, services = load_data()
+    players, matches, matches_dict, scorers_comps, events, standings_comps, player_stats, services, player_info = load_data()
     print(f"  選手数: {len(players)}")
     print(f"  試合数: {len(matches)}")
 
@@ -1243,11 +1445,13 @@ def main():
         club_matches = get_club_matches(player, matches)
         standing = get_club_standing(player, standings_comps)
         related_players = get_related_players(player, players, slug_map)
+        pinfo = player_info.get(name_en)
 
         # HTMLページ生成
         html = build_player_page(player, slug, scorer_stats, goal_events, club_matches, standing,
                                  wiki_stats=wiki_stats, services=services,
-                                 related_players=related_players)
+                                 related_players=related_players,
+                                 player_info=pinfo)
 
         # 出力
         out_dir = OUTPUT_DIR / slug
