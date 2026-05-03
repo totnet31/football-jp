@@ -17,6 +17,7 @@ from xml.etree import ElementTree as ET
 # ============================
 REPO_ROOT = Path(__file__).parent.parent
 PROFILES_JSON = REPO_ROOT / "data" / "wc2026" / "country_profiles.json"
+PLAYERS_JSON = REPO_ROOT / "data" / "players.json"
 OUTPUT_FILE = REPO_ROOT / "sitemap.xml"
 
 BASE_URL = "https://football-jp.com"
@@ -80,7 +81,43 @@ def build_sitemap() -> str:
         path = f"/worldcup/countries/{slug}/"
         country_urls.append((path, "0.6", "weekly"))
 
-    all_urls = STATIC_URLS + sorted(country_urls, key=lambda x: x[0])
+    # players.json から選手ページ slug を取得
+    player_urls = []
+    club_urls = []
+    try:
+        with open(PLAYERS_JSON, encoding="utf-8") as f:
+            players_data = json.load(f)
+        players = players_data.get("players", [])
+
+        # 選手slug（重複対応）
+        used_slugs = {}
+        seen_clubs = {}
+        for p in players:
+            name_en = p.get("name_en", "")
+            base = make_slug(name_en)
+            if base not in used_slugs:
+                used_slugs[base] = 1
+                player_slug = base
+            else:
+                used_slugs[base] += 1
+                player_slug = f"{base}-{used_slugs[base]}"
+            player_urls.append((f"/players/{player_slug}/", "0.7", "weekly"))
+
+            # クラブslug（ユニーク）
+            club_en = p.get("club_en", "")
+            if club_en and club_en not in seen_clubs:
+                seen_clubs[club_en] = True
+                club_slug = make_slug(club_en)
+                club_urls.append((f"/clubs/{club_slug}/", "0.6", "weekly"))
+    except Exception as e:
+        print(f"[WARN] 選手/クラブデータ読み込みエラー: {e}")
+
+    all_urls = (
+        STATIC_URLS
+        + sorted(country_urls, key=lambda x: x[0])
+        + sorted(player_urls, key=lambda x: x[0])
+        + sorted(club_urls, key=lambda x: x[0])
+    )
 
     # XML 生成
     lines = ['<?xml version="1.0" encoding="UTF-8"?>']

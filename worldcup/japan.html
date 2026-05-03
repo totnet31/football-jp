@@ -65,6 +65,12 @@
     </div>
   </section>
 
+  <section class="wc-section">
+    <h2>🇯🇵 海外組 選手プロフィール一覧</h2>
+    <p style="font-size:13px; color:var(--wc-text-sub); margin-bottom:12px;">各選手の今シーズン成績・直近の試合・ゴール情報はプロフィールページで確認できます。</p>
+    <div id="playerProfileLinks" style="display:grid; grid-template-columns: repeat(auto-fill, minmax(180px,1fr)); gap:8px;"></div>
+  </section>
+
   <footer class="wc-footer">
     <p>データ提供: <a href="https://www.football-data.org/" target="_blank" rel="noopener">Football data provided by the Football-Data.org API</a></p>
     <p>このページは2026 FIFA W杯の期間限定特集です／<a href="../">football-jp トップへ</a></p>
@@ -182,6 +188,90 @@ function stageJa(stage, md) {
 function escapeHtml(s) {
   return String(s || '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 }
+
+// 選手プロフィールリンク生成
+(async () => {
+  const PLAYER_SLUGS = {
+    "遠藤航": "wataru-endo",
+    "三笘薫": "kaoru-mitoma",
+    "鎌田大地": "daichi-kamada",
+    "田中碧": "ao-tanaka",
+    "高井幸大": "kota-takai",
+    "松木玖生": "kuryu-matsuki",
+    "坂元達裕": "tatsuhiro-sakamoto",
+    "平河悠": "yu-hirakawa",
+    "大橋祐紀": "yuki-ohashi",
+    "森下龍矢": "ryuya-morishita",
+    "斉藤光毅": "koki-saito",
+    "瀬古樹": "itsuki-seko",
+    "岩田智輝": "tomoki-iwata",
+    "古橋亨梧": "kyogo-furuhashi",
+    "藤本寛也": "kanya-fujimoto",
+    "久保建英": "takefusa-kubo",
+    "浅野拓磨": "takuma-asano",
+    "伊藤洋輝": "hiroki-ito",
+    "堂安律": "ritsu-doan",
+    "鈴木唯人": "yuito-suzuki",
+    "佐野海舟": "kaishu-sano",
+    "菅原由勢": "yukinari-sugawara",
+    "町野修斗": "shuto-machino",
+    "藤田譲瑠チマ": "joel-chima-fujita",
+    "守田英正": "hidemasa-morita",
+    "南野拓実": "takumi-minamino",
+    "瀬古歩夢": "ayumu-seko",
+    "中村敬斗": "keito-nakamura",
+    "板倉滉": "ko-itakura",
+    "冨安健洋": "takehiro-tomiyasu",
+    "上田綺世": "ayase-ueda",
+    "毎熊晟矢": "seiya-maikuma",
+    "小川航基": "koki-ogawa",
+    "三戸舜介": "shunsuke-mito",
+    "伊東純也": "junya-ito",
+    "久保建英": "takefusa-kubo",
+    "塩貝健人": "kento-shiogai",
+    "堂安律": "ritsu-doan",
+    "伊藤敦樹": "atsuki-ito",
+    "橋岡大樹": "daiki-hashioka",
+    "谷口彰悟": "shogo-taniguchi",
+    "山本理仁": "riihito-yamamoto",
+    "畑大雅": "taiga-hata",
+    "後藤啓介": "keisuke-goto",
+    "鈴木彩艶": "zion-suzuki",
+    "町田浩樹": "hiroki-machida",
+    "佐野航大": "kodai-sano",
+    "渡辺剛": "ko-watanabe",
+    "市原吏音": "rion-ichihara",
+  };
+
+  const container = document.getElementById('playerProfileLinks');
+  if (!container) return;
+
+  try {
+    const res = await fetch('/data/players.json');
+    const data = await res.json();
+    const players = (data.players || []);
+    // W杯本選出に近い主要選手を表示（重複除去）
+    const seen = new Set();
+    const cards = players
+      .filter(p => {
+        if (seen.has(p.name_ja)) return false;
+        seen.add(p.name_ja);
+        return true;
+      })
+      .map(p => {
+        const slug = PLAYER_SLUGS[p.name_ja];
+        if (!slug) return '';
+        return `<a href="/players/${escapeHtml(slug)}/" style="display:block; background:#f8f9fa; border:1px solid #e5e7eb; padding:10px 12px; text-decoration:none; color:#111; border-radius:4px;">
+          <div style="font-size:14px; font-weight:700;">${escapeHtml(p.name_ja)}</div>
+          <div style="font-size:11px; color:#666; margin:2px 0;">${escapeHtml(p.name_en)}</div>
+          <div style="font-size:11px; color:#1565c0;">${escapeHtml(p.position)} ／ ${escapeHtml(p.club_ja)}</div>
+        </a>`;
+      }).filter(Boolean).join('');
+    container.innerHTML = cards || '<p style="font-size:13px;color:#888;">選手データを読み込み中...</p>';
+  } catch(e) {
+    container.innerHTML = '<p style="font-size:13px;color:#888;">選手データの読み込みに失敗しました。</p>';
+  }
+})();
 
 function injectMatchSchema(matches) {
   const old = document.getElementById('matchSchema');
