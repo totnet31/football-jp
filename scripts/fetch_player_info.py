@@ -528,20 +528,49 @@ def parse_birth_date(raw):
     return None
 
 
+def _strip_templates(text):
+    """ネスト・複数行を含むWikipediaテンプレート {{...}} を bracket counting で除去。"""
+    if not text or '{{' not in text:
+        return text
+    out = []
+    i = 0
+    depth = 0
+    n = len(text)
+    while i < n:
+        if text[i:i+2] == '{{':
+            depth += 1
+            i += 2
+        elif text[i:i+2] == '}}':
+            depth = max(0, depth - 1)
+            i += 2
+        elif depth > 0:
+            i += 1
+        else:
+            out.append(text[i])
+            i += 1
+    cleaned = ''.join(out)
+    # 未閉じ {{ がある場合（途中まで残ってる）は除去
+    cleaned = re.sub(r'\{\{[^{}]*$', '', cleaned, flags=re.DOTALL)
+    return cleaned
+
+
 def clean_wiki_text(text):
     # type: (str) -> str
     """wikitextから余計な記法を除去して平文にする。"""
     if not text:
         return ""
+    # <ref>...</ref> 除去（複数行対応）
+    text = re.sub(r'<ref[^>]*?>.*?</ref>', '', text, flags=re.DOTALL)
+    text = re.sub(r'<ref[^/]*?/>', '', text)
+    # {{template|...}} 除去（ネスト・複数行対応）
+    text = _strip_templates(text)
     # [[Link|Text]] → Text
     text = re.sub(r'\[\[(?:[^|\]]*\|)?([^\]]+)\]\]', r'\1', text)
-    # {{template|...}} の単純除去（ネスト非対応）
-    text = re.sub(r'\{\{[^}]*\}\}', '', text)
     # ''bold'' or '''bold'''
     text = re.sub(r"'{2,3}", '', text)
     # HTMLタグ除去
     text = re.sub(r'<[^>]+>', '', text)
-    return text.strip()
+    return text.strip().rstrip('|').strip()
 
 
 def extract_infobox(wikitext):
