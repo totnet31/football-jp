@@ -1,6 +1,56 @@
 {
   "updated": "2026-04-29",
   "note": "放送権は年単位で変動します。url は将来アフィリエイトリンクを入れる用（現在は公式URL）。",
+  "services": {
+    "U-NEXT": {
+      "name": "U-NEXT",
+      "logo": "unext.png",
+      "color": "#000000",
+      "url": "https://video.unext.jp/",
+      "affiliate_url": null,
+      "ga4_label": "U-NEXT"
+    },
+    "DAZN": {
+      "name": "DAZN",
+      "logo": "dazn.png",
+      "color": "#FFD700",
+      "url": "https://www.dazn.com/ja-JP/",
+      "affiliate_url": null,
+      "ga4_label": "DAZN"
+    },
+    "WOWOW": {
+      "name": "WOWOW",
+      "logo": "wowow.png",
+      "color": "#d40000",
+      "url": "https://www.wowow.co.jp/",
+      "affiliate_url": null,
+      "ga4_label": "WOWOW"
+    },
+    "ABEMA": {
+      "name": "ABEMA",
+      "logo": "abema.png",
+      "color": "#00c2ff",
+      "url": "https://abema.tv/",
+      "affiliate_url": null,
+      "ga4_label": "ABEMA"
+    },
+    "Lemino": {
+      "name": "Lemino",
+      "logo": "lemino.png",
+      "color": "#e60012",
+      "url": "https://lemino.docomo.ne.jp/",
+      "affiliate_url": null,
+      "ga4_label": "Lemino"
+    },
+    "BS10": {
+      "name": "BS10",
+      "logo": "bs10.png",
+      "color": "#003087",
+      "url": "https://www.bs10.jp/",
+      "affiliate_url": null,
+      "ga4_label": "BS10"
+    }
+  },
   "broadcasters": {
     "39":  [{"name": "U-NEXT", "type": "exclusive", "url": "https://www.unext.jp/", "note": "〜2030-31"}],
     "40":  [{"name": "DAZN",   "type": "exclusive", "url": "https://www.dazn.com/ja-JP/", "note": "〜2027-28"}],
