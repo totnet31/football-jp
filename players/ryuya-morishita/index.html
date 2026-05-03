@@ -337,6 +337,21 @@
       color: #888;
       padding: 0 8px 8px;
     }
+    .video-grid-player { grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); }
+    .video-card-player { border: 2px solid #aac6e8; }
+    .video-thumb-wrap { position: relative; }
+    .video-thumb-wrap img { width: 100%; aspect-ratio: 16/9; object-fit: cover; display: block; }
+    .video-official-badge {
+      position: absolute;
+      top: 6px;
+      left: 6px;
+      background: var(--c-accent, #0047ab);
+      color: #fff;
+      font-size: 10px;
+      font-weight: 700;
+      padding: 2px 6px;
+      border-radius: 3px;
+    }
     .national-team-list {
       font-size: 13px;
     }
@@ -469,6 +484,8 @@
           </div>
       </div>
     </section>
+
+  
 
   
 
