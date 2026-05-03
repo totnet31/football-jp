@@ -836,9 +836,10 @@ def build_player_page(player: dict, slug: str, scorer_stats: dict,
                 y = item.get("years", "").strip()
                 return y.endswith("–") or y.endswith("-") or y.endswith("—")
 
-            sorted_past = sorted([c for c in career if not is_current(c)], key=year_start)
+            sorted_past = sorted([c for c in career if not is_current(c)], key=year_start, reverse=True)
             current_clubs = [c for c in career if is_current(c)]
-            ordered_career = sorted_past + current_clubs
+            # 新しい順：現在所属 → 過去（新→古）
+            ordered_career = current_clubs + sorted_past
 
             # 現在所属クラブを示すバッジ
             current_club_badge = ""
