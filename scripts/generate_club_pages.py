@@ -22,6 +22,8 @@ MATCHES_JSON = REPO_ROOT / "data" / "matches.json"
 STANDINGS_JSON = REPO_ROOT / "data" / "standings.json"
 BROADCASTERS_JSON = REPO_ROOT / "data" / "broadcasters.json"
 CLUB_CRESTS_JSON = REPO_ROOT / "data" / "club_crests.json"
+NEWS_JSON = REPO_ROOT / "data" / "news.json"
+CLUB_INFO_JSON = REPO_ROOT / "data" / "club_info.json"
 OUTPUT_DIR = REPO_ROOT / "clubs"
 
 GA4_ID = "G-39G8CVXRW0"
@@ -142,7 +144,103 @@ def load_data():
     services = load_services()
     local_crests = load_local_crests()
 
-    return players, matches, standings_comps, services, local_crests
+    # ニュース
+    news_items = []
+    if NEWS_JSON.exists():
+        with open(NEWS_JSON, encoding="utf-8") as f:
+            news_raw = json.load(f)
+        news_items = news_raw.get("items", [])
+
+    # クラブ基本情報（あれば）
+    club_info_data = {}
+    if CLUB_INFO_JSON.exists():
+        with open(CLUB_INFO_JSON, encoding="utf-8") as f:
+            club_info_data = json.load(f)
+
+    return players, matches, standings_comps, services, local_crests, news_items, club_info_data
+
+
+def get_club_news(club_info: dict, news_items: list) -> list:
+    """クラブ名でニュースをフィルタリングして最新5件返す。"""
+    club_ja = club_info.get("club_ja", "")
+    club_en = club_info.get("club_en", "")
+
+    matched = []
+    for item in news_items:
+        title = item.get("title", "")
+        desc = item.get("description", "")
+        # クラブ名が記事タイトルか説明に含まれるかチェック
+        text = title + " " + desc
+        if club_ja and club_ja in text:
+            matched.append(item)
+        elif club_en and club_en.lower() in text.lower():
+            matched.append(item)
+
+    # published でソート（新しい順）
+    matched.sort(key=lambda x: x.get("published", ""), reverse=True)
+    # 重複除去
+    seen = set()
+    unique = []
+    for item in matched:
+        key = item.get("link", item.get("title", ""))
+        if key not in seen:
+            seen.add(key)
+            unique.append(item)
+    return unique[:5]
+
+
+def get_opponent_records(club_info: dict, matches: list) -> list:
+    """対戦相手別の成績を集計して上位10件返す。"""
+    club_id = club_info.get("club_id")
+    if not club_id:
+        return []
+
+    records = {}  # opponent_ja -> {w, d, l, gf, ga}
+
+    for m in matches:
+        home_id = m.get("home_id")
+        away_id = m.get("away_id")
+        status = m.get("status", "")
+        score = m.get("score", {})
+
+        if status != "FINISHED" or not score:
+            continue
+
+        home_score = score.get("home")
+        away_score = score.get("away")
+        if home_score is None or away_score is None:
+            continue
+
+        if home_id == club_id:
+            opponent = m.get("away_ja", m.get("away_en", ""))
+            gf, ga = home_score, away_score
+        elif away_id == club_id:
+            opponent = m.get("home_ja", m.get("home_en", ""))
+            gf, ga = away_score, home_score
+        else:
+            continue
+
+        if not opponent:
+            continue
+        if opponent not in records:
+            records[opponent] = {"w": 0, "d": 0, "l": 0, "gf": 0, "ga": 0}
+        r = records[opponent]
+        if gf > ga:
+            r["w"] += 1
+        elif gf < ga:
+            r["l"] += 1
+        else:
+            r["d"] += 1
+        r["gf"] += gf
+        r["ga"] += ga
+
+    # 試合数の多い順にソート
+    sorted_records = sorted(
+        records.items(),
+        key=lambda x: x[1]["w"] + x[1]["d"] + x[1]["l"],
+        reverse=True
+    )
+    return sorted_records[:10]
 
 
 def build_clubs(players: list) -> dict:
@@ -277,7 +375,9 @@ def get_player_slugs(players: list) -> dict:
 # ============================
 def build_club_page(club_info: dict, slug: str, standing: dict,
                     recent_matches: list, crest_url: str,
-                    player_slug_map: dict, services: dict = None) -> str:
+                    player_slug_map: dict, services: dict = None,
+                    club_news: list = None, opponent_records: list = None,
+                    club_info_extra: dict = None) -> str:
     club_ja = club_info.get("club_ja", "")
     club_en = club_info.get("club_en", "")
     league_ja = club_info.get("league_ja", "")
@@ -473,6 +573,98 @@ def build_club_page(club_info: dict, slug: str, standing: dict,
       <p class="no-data">試合データを取得中です。</p>
     </section>"""
 
+    # --- クラブ基本情報セクション ---
+    club_basic_html = ""
+    if club_info_extra:
+        rows = ""
+        if club_info_extra.get("founded"):
+            rows += f'<tr><th>創設年</th><td>{esc(club_info_extra["founded"])}</td></tr>'
+        if club_info_extra.get("city") or club_info_extra.get("country"):
+            city = club_info_extra.get("city", "")
+            country = club_info_extra.get("country", "")
+            loc = ", ".join(filter(None, [city, country]))
+            rows += f'<tr><th>本拠地</th><td>{esc(loc)}</td></tr>'
+        if club_info_extra.get("stadium"):
+            rows += f'<tr><th>スタジアム</th><td>{esc(club_info_extra["stadium"])}</td></tr>'
+        if club_info_extra.get("capacity"):
+            rows += f'<tr><th>収容人数</th><td>{esc(club_info_extra["capacity"])}</td></tr>'
+        if club_info_extra.get("manager"):
+            rows += f'<tr><th>監督</th><td>{esc(club_info_extra["manager"])}</td></tr>'
+        if club_info_extra.get("chairman"):
+            rows += f'<tr><th>会長</th><td>{esc(club_info_extra["chairman"])}</td></tr>'
+        if club_info_extra.get("website"):
+            rows += f'<tr><th>公式サイト</th><td><a href="{esc(club_info_extra["website"])}" target="_blank" rel="noopener">{esc(club_info_extra["website"])}</a></td></tr>'
+        if rows:
+            club_basic_html = f"""
+    <section class="club-section">
+      <h3>ℹ️ クラブ基本情報</h3>
+      <table class="club-info-table">
+        {rows}
+      </table>
+    </section>"""
+
+    # --- クラブ関連ニュースセクション ---
+    news_html = ""
+    if club_news:
+        news_rows = ""
+        for item in club_news:
+            title_n = item.get("title", "")
+            link_n = item.get("link", "#")
+            pub = item.get("published", "")
+            source = item.get("source", "")
+            pub_display = ""
+            if pub:
+                try:
+                    from datetime import datetime
+                    dt = datetime.fromisoformat(pub)
+                    pub_display = dt.strftime("%m/%d")
+                except Exception:
+                    pub_display = pub[:10]
+            news_rows += f"""
+          <div class="news-row">
+            <div class="news-date">{esc(pub_display)}</div>
+            <div class="news-title"><a href="{esc(link_n)}" target="_blank" rel="noopener">{esc(title_n)}</a></div>
+            <div class="news-source">{esc(source)}</div>
+          </div>"""
+        news_html = f"""
+    <section class="club-section">
+      <h3>📰 クラブ関連ニュース</h3>
+      <div class="news-list">
+        {news_rows}
+      </div>
+    </section>"""
+
+    # --- 対戦相手別成績セクション ---
+    opponent_html = ""
+    if opponent_records:
+        opp_rows = ""
+        for opp_name, rec in opponent_records:
+            total = rec["w"] + rec["d"] + rec["l"]
+            gf = rec["gf"]
+            ga = rec["ga"]
+            wdl = f'{rec["w"]}勝{rec["d"]}分{rec["l"]}敗'
+            goals = f'{gf}得{ga}失'
+            opp_rows += f"""
+          <div class="opp-row">
+            <div class="opp-name">{esc(opp_name)}</div>
+            <div class="opp-total">{esc(str(total))}試合</div>
+            <div class="opp-wdl">{esc(wdl)}</div>
+            <div class="opp-goals">{esc(goals)}</div>
+          </div>"""
+        opponent_html = f"""
+    <section class="club-section">
+      <h3>📊 対戦相手別成績（上位{len(opponent_records)}チーム）</h3>
+      <div class="opponent-records">
+        <div class="opp-header">
+          <div class="opp-name">対戦相手</div>
+          <div class="opp-total">試合数</div>
+          <div class="opp-wdl">成績</div>
+          <div class="opp-goals">得失点</div>
+        </div>
+        {opp_rows}
+      </div>
+    </section>"""
+
     return f"""<!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -624,6 +816,56 @@ def build_club_page(club_info: dict, slug: str, standing: dict,
     .venue-home {{ background: #e7f0ff; color: #1e6cba; border: 1px solid #aac6e8; }}
     .match-comp {{ font-size: 11px; color: #666; }}
     .no-data {{ color: #888; font-size: 13px; padding: 8px 0; margin: 0; }}
+    .club-info-table {{ width: 100%; border-collapse: collapse; font-size: 13px; }}
+    .club-info-table th {{
+      width: 100px;
+      text-align: left;
+      padding: 7px 8px;
+      color: #555;
+      font-weight: 600;
+      border-bottom: 1px solid var(--c-border, #e5e7eb);
+      background: #f8f9fa;
+    }}
+    .club-info-table td {{
+      padding: 7px 8px;
+      border-bottom: 1px solid var(--c-border, #e5e7eb);
+    }}
+    .club-info-table tr:last-child th,
+    .club-info-table tr:last-child td {{ border-bottom: none; }}
+    .club-info-table a {{ color: var(--c-accent, #0047ab); word-break: break-all; }}
+    .news-list {{ font-size: 13px; }}
+    .news-row {{
+      display: grid;
+      grid-template-columns: 45px 1fr 70px;
+      gap: 8px;
+      padding: 8px 4px;
+      border-bottom: 1px solid var(--c-border, #e5e7eb);
+      align-items: start;
+    }}
+    .news-row:last-child {{ border-bottom: none; }}
+    .news-date {{ font-size: 11px; color: #888; padding-top: 2px; }}
+    .news-title a {{ color: var(--c-text, #111); text-decoration: none; }}
+    .news-title a:hover {{ color: var(--c-accent, #0047ab); text-decoration: underline; }}
+    .news-source {{ font-size: 11px; color: #888; text-align: right; }}
+    .opponent-records {{ font-size: 13px; }}
+    .opp-header, .opp-row {{
+      display: grid;
+      grid-template-columns: 1fr 70px 100px 80px;
+      gap: 6px;
+      padding: 8px 4px;
+      border-bottom: 1px solid var(--c-border, #e5e7eb);
+      align-items: center;
+    }}
+    .opp-header {{
+      font-size: 11px;
+      font-weight: 700;
+      color: #666;
+      background: #f8f9fa;
+    }}
+    .opp-row:last-child {{ border-bottom: none; }}
+    .opp-total {{ text-align: center; color: #555; }}
+    .opp-wdl {{ font-weight: 600; }}
+    .opp-goals {{ color: #555; }}
     .back-link {{
       display: block;
       padding: 12px 16px;
@@ -669,11 +911,17 @@ def build_club_page(club_info: dict, slug: str, standing: dict,
 
 <div style="max-width: 860px; margin: 0 auto;">
 
+  {club_basic_html}
+
   {standing_html}
 
   {players_html}
 
   {matches_html}
+
+  {opponent_html}
+
+  {news_html}
 
   <footer class="site-footer">
     <p>データ提供: <a href="https://www.football-data.org/" target="_blank" rel="noopener">Football-Data.org</a></p>
@@ -935,10 +1183,12 @@ function trackAffClick(el) {{
 # ============================
 def main():
     print(f"データ読み込み中...")
-    players, matches, standings_comps, services, local_crests = load_data()
+    players, matches, standings_comps, services, local_crests, news_items, club_info_data = load_data()
     print(f"  選手数: {len(players)}")
     print(f"  試合数: {len(matches)}")
     print(f"  ローカルエンブレム: {len(local_crests)} クラブ")
+    print(f"  ニュース件数: {len(news_items)}")
+    print(f"  クラブ基本情報: {len(club_info_data)} クラブ")
 
     # クラブ集約
     clubs = build_clubs(players)
@@ -958,10 +1208,15 @@ def main():
         standing = get_club_standing(club_info, standings_comps)
         recent_matches = get_club_recent_matches(club_info, matches)
         crest_url = get_club_crest(club_info, matches, local_crests)
+        club_news = get_club_news(club_info, news_items)
+        opponent_records = get_opponent_records(club_info, matches)
+        extra_info = club_info_data.get(club_en, {})
 
         # HTMLページ生成
         html = build_club_page(club_info, slug, standing, recent_matches, crest_url, player_slug_map,
-                               services=services)
+                               services=services, club_news=club_news,
+                               opponent_records=opponent_records,
+                               club_info_extra=extra_info if extra_info else None)
 
         # 出力
         out_dir = OUTPUT_DIR / slug

@@ -338,9 +338,28 @@ def get_club_standing(player: dict, standings_comps: dict) -> dict:
 # ============================
 # 個別ページHTML生成
 # ============================
+def get_related_players(player: dict, all_players: list, slug_map: dict) -> list:
+    """同じ club_id の他の日本人選手を最大5名返す。"""
+    club_id = player.get("club_id")
+    name_en = player.get("name_en", "")
+    if not club_id:
+        return []
+    related = []
+    for i, p in enumerate(all_players):
+        if p.get("club_id") == club_id and p.get("name_en") != name_en:
+            related.append({
+                "name_ja": p.get("name_ja", ""),
+                "name_en": p.get("name_en", ""),
+                "position": p.get("position", ""),
+                "slug": slug_map.get(i, make_slug(p.get("name_en", ""))),
+            })
+    return related[:5]
+
+
 def build_player_page(player: dict, slug: str, scorer_stats: dict,
                       goal_events: list, club_matches: list, standing: dict,
-                      wiki_stats: dict = None, services: dict = None) -> str:
+                      wiki_stats: dict = None, services: dict = None,
+                      related_players: list = None) -> str:
     name_ja = player.get("name_ja", "")
     name_en = player.get("name_en", "")
     position = player.get("position", "")
@@ -581,6 +600,28 @@ def build_player_page(player: dict, slug: str, scorer_stats: dict,
       <p class="no-data">今シーズンまだゴールなし（または取得範囲外）。</p>
     </section>"""
 
+    # --- 関連選手セクション（同クラブ他日本人）---
+    related_html = ""
+    if related_players:
+        cards_html = ""
+        for rp in related_players:
+            cards_html += f"""
+          <a class="related-player-card" href="/players/{esc(rp['slug'])}/">
+            <span class="related-player-flag">🇯🇵</span>
+            <div class="related-player-info">
+              <div class="related-player-name-ja">{esc(rp['name_ja'])}</div>
+              <div class="related-player-name-en">{esc(rp['name_en'])}</div>
+              <div class="related-player-pos">{esc(rp['position'])}</div>
+            </div>
+          </a>"""
+        related_html = f"""
+    <section class="player-section">
+      <h3>🏟️ 同クラブの日本人選手</h3>
+      <div class="related-players-grid">
+        {cards_html}
+      </div>
+    </section>"""
+
     # note がある場合
     note_html = ""
     if note:
@@ -765,6 +806,36 @@ def build_player_page(player: dict, slug: str, scorer_stats: dict,
       font-size: 12px;
       margin: 8px 0 0;
     }}
+    .related-players-grid {{
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+      gap: 8px;
+    }}
+    .related-player-card {{
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+      background: #f8f9fa;
+      border: 1px solid var(--c-border, #e5e7eb);
+      border-radius: 4px;
+      padding: 10px 12px;
+      text-decoration: none;
+      color: var(--c-text, #111);
+      transition: background 0.15s;
+    }}
+    .related-player-card:hover {{ background: #eef0f7; }}
+    .related-player-flag {{ font-size: 18px; line-height: 1; padding-top: 1px; flex-shrink: 0; }}
+    .related-player-name-ja {{ font-size: 13px; font-weight: 700; margin-bottom: 2px; }}
+    .related-player-name-en {{ font-size: 10px; color: #666; margin-bottom: 3px; }}
+    .related-player-pos {{
+      display: inline-block;
+      padding: 1px 5px;
+      font-size: 10px;
+      font-weight: 700;
+      background: #e6f0fa;
+      color: #1565c0;
+      border-radius: 3px;
+    }}
     .back-link {{
       display: block;
       padding: 12px 16px;
@@ -822,6 +893,8 @@ def build_player_page(player: dict, slug: str, scorer_stats: dict,
   {matches_html}
 
   {goals_html}
+
+  {related_html}
 
   <div class="player-section">
     <h3>🔗 関連リンク</h3>
@@ -1169,10 +1242,12 @@ def main():
         goal_events = get_player_goals(player, events, matches_dict)
         club_matches = get_club_matches(player, matches)
         standing = get_club_standing(player, standings_comps)
+        related_players = get_related_players(player, players, slug_map)
 
         # HTMLページ生成
         html = build_player_page(player, slug, scorer_stats, goal_events, club_matches, standing,
-                                 wiki_stats=wiki_stats, services=services)
+                                 wiki_stats=wiki_stats, services=services,
+                                 related_players=related_players)
 
         # 出力
         out_dir = OUTPUT_DIR / slug

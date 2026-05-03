@@ -80,6 +80,18 @@ jobs:
         run: python3 scripts/fetch_club_crests.py
         continue-on-error: true
 
+      - name: クラブ基本情報取得（Wikipedia infobox）
+        run: python3 scripts/fetch_club_info.py
+        continue-on-error: true
+
+      - name: 選手プロフィールページ生成
+        run: python3 scripts/generate_player_pages.py
+        continue-on-error: true
+
+      - name: クラブページ生成
+        run: python3 scripts/generate_club_pages.py
+        continue-on-error: true
+
       - name: スモークテスト（data整合性チェック）
         id: smoke
         run: python3 scripts/smoke_test.py
@@ -87,7 +99,7 @@ jobs:
       - name: developにデータ変更を保存
         id: commit_data
         run: |
-          git add data/
+          git add data/ players/ clubs/
           if git diff --cached --quiet; then
             echo "no_change=true" >> $GITHUB_OUTPUT
             echo "データ変更なし"
@@ -97,18 +109,18 @@ jobs:
             echo "no_change=false" >> $GITHUB_OUTPUT
           fi
 
-      - name: スモークOKならmainにマージ（dataフォルダのみ）
+      - name: スモークOKならmainにマージ（data・pages）
         if: steps.commit_data.outputs.no_change != 'true'
         run: |
           # main に切替
           git checkout main
           git pull origin main
-          # develop の data/ 配下だけを main に反映（develop に未マージのコード変更を本番化しない）
-          git checkout develop -- data/
+          # develop の data/ players/ clubs/ を main に反映
+          git checkout develop -- data/ players/ clubs/
           if git diff --cached --quiet && [ -z "$(git status --porcelain)" ]; then
-            echo "main 側に data 変更が無いためスキップ"
+            echo "main 側に変更が無いためスキップ"
           else
-            git add data/
+            git add data/ players/ clubs/
             git diff --cached --quiet || git commit -m "data: $(TZ=Asia/Tokyo date '+%Y-%m-%d') 自動更新（develop→main）"
             git push origin main
           fi

@@ -177,6 +177,36 @@
       font-size: 12px;
       margin: 8px 0 0;
     }
+    .related-players-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+      gap: 8px;
+    }
+    .related-player-card {
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+      background: #f8f9fa;
+      border: 1px solid var(--c-border, #e5e7eb);
+      border-radius: 4px;
+      padding: 10px 12px;
+      text-decoration: none;
+      color: var(--c-text, #111);
+      transition: background 0.15s;
+    }
+    .related-player-card:hover { background: #eef0f7; }
+    .related-player-flag { font-size: 18px; line-height: 1; padding-top: 1px; flex-shrink: 0; }
+    .related-player-name-ja { font-size: 13px; font-weight: 700; margin-bottom: 2px; }
+    .related-player-name-en { font-size: 10px; color: #666; margin-bottom: 3px; }
+    .related-player-pos {
+      display: inline-block;
+      padding: 1px 5px;
+      font-size: 10px;
+      font-weight: 700;
+      background: #e6f0fa;
+      color: #1565c0;
+      border-radius: 3px;
+    }
     .back-link {
       display: block;
       padding: 12px 16px;
@@ -306,6 +336,22 @@
     <section class="player-section">
       <h3>⚽ 直近のゴール</h3>
       <p class="no-data">今シーズンまだゴールなし（または取得範囲外）。</p>
+    </section>
+
+  
+    <section class="player-section">
+      <h3>🏟️ 同クラブの日本人選手</h3>
+      <div class="related-players-grid">
+        
+          <a class="related-player-card" href="/players/koki-ogawa/">
+            <span class="related-player-flag">🇯🇵</span>
+            <div class="related-player-info">
+              <div class="related-player-name-ja">小川航基</div>
+              <div class="related-player-name-en">Koki Ogawa</div>
+              <div class="related-player-pos">FW</div>
+            </div>
+          </a>
+      </div>
     </section>
 
   <div class="player-section">
