@@ -282,6 +282,61 @@
     .sns-twitter { background: #000; color: #fff; }
     .sns-instagram { background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); color: #fff; }
     .sns-official { background: #f0f1f5; color: #333; border: 1px solid #ccc; }
+    .match-row.hidden-extra { display: none; }
+    .match-row.hidden-extra.shown { display: grid; }
+    .show-more-matches {
+      display: block;
+      width: 100%;
+      margin-top: 10px;
+      padding: 10px;
+      background: #f0f4ff;
+      border: 1px solid #aac6e8;
+      border-radius: 4px;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--c-accent, #0047ab);
+      cursor: pointer;
+      text-align: center;
+      transition: background 0.15s;
+    }
+    .show-more-matches:hover { background: #dce8ff; }
+    .video-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+      gap: 12px;
+    }
+    .video-card {
+      display: block;
+      text-decoration: none;
+      color: var(--c-text, #111);
+      background: #f8f9fa;
+      border: 1px solid var(--c-border, #e5e7eb);
+      border-radius: 4px;
+      overflow: hidden;
+      transition: background 0.15s;
+    }
+    .video-card:hover { background: #eef0f7; }
+    .video-card img {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      object-fit: cover;
+      display: block;
+    }
+    .video-title {
+      font-size: 11px;
+      font-weight: 600;
+      padding: 6px 8px 2px;
+      line-height: 1.4;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+    .video-meta {
+      font-size: 10px;
+      color: #888;
+      padding: 0 8px 8px;
+    }
     @media (max-width: 600px) {
       .stats-grid { grid-template-columns: repeat(2, 1fr); }
       .match-header, .match-row {
@@ -291,6 +346,7 @@
       .match-broadcast, .match-comp { display: none; }
       .goal-row { grid-template-columns: 45px 1fr 60px; }
       .goal-comp { display: none; }
+      .video-grid { grid-template-columns: repeat(2, 1fr); }
     }
   </style>
   <script type="application/ld+json">
@@ -356,7 +412,7 @@
 
   
     <section class="player-section">
-      <h3>📅 直近の試合（最大10試合）</h3>
+      <h3>📅 直近の試合</h3>
       <div class="matches-list">
         <div class="match-header">
           <div class="match-date">日時（JST）</div>
@@ -385,6 +441,8 @@
           </div>
       </div>
     </section>
+
+  
 
   
     <section class="player-section">
@@ -432,6 +490,19 @@
 </div>
 
 <script>
+function toggleMoreMatches(btn) {
+  var list = btn.previousElementSibling;
+  list.querySelectorAll('.hidden-extra').forEach(function(r) {
+    r.classList.toggle('shown');
+  });
+  if (btn.dataset.expanded === 'true') {
+    btn.textContent = 'もっと見る（残り ' + btn.dataset.count + ' 試合）';
+    btn.dataset.expanded = 'false';
+  } else {
+    btn.textContent = '閉じる';
+    btn.dataset.expanded = 'true';
+  }
+}
 function trackAffClick(el) {
   if (typeof gtag === 'function') {
     gtag('event', 'affiliate_click', {
