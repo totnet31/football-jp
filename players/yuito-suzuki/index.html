@@ -103,7 +103,7 @@
     }
     .match-header, .match-row {
       display: grid;
-      grid-template-columns: 160px 1fr 80px 100px;
+      grid-template-columns: 150px 1fr 70px 80px 100px;
       gap: 8px;
       padding: 8px 4px;
       border-bottom: 1px solid var(--c-border, #e5e7eb);
@@ -116,17 +116,17 @@
       background: #f8f9fa;
     }
     .match-row:last-child { border-bottom: none; }
-    .match-score {
+    .match-result {
       font-weight: 700;
       text-align: center;
     }
-    .match-score.win { color: #1a7a3a; }
-    .match-score.lose { color: #c0392b; }
-    .match-score.draw { color: #666; }
-    .match-row.scheduled .match-score {
+    .match-result.win { color: #1a7a3a; }
+    .match-result.lose { color: #c0392b; }
+    .match-result.draw { color: #666; }
+    .match-broadcast {
       font-size: 11px;
-      font-weight: normal;
-      color: #666;
+      color: #555;
+      text-align: center;
     }
     .home-away {
       display: inline-block;
@@ -157,6 +157,12 @@
       padding: 8px 0;
       margin: 0;
     }
+    .stats-source {
+      font-size: 11px;
+      color: #999;
+      margin-top: 6px;
+      text-align: right;
+    }
     .player-note {
       background: #fff8e1;
       border-left: 3px solid #d4af37;
@@ -183,7 +189,7 @@
     @media (max-width: 600px) {
       .stats-grid { grid-template-columns: repeat(2, 1fr); }
       .match-header, .match-row {
-        grid-template-columns: 120px 1fr 60px;
+        grid-template-columns: 110px 1fr 55px 55px;
         font-size: 12px;
       }
       .match-comp { display: none; }
@@ -248,32 +254,37 @@
         <div class="match-header">
           <div class="match-date">日時（JST）</div>
           <div class="match-opponent">対戦相手</div>
-          <div class="match-score">スコア/配信</div>
+          <div class="match-result">結果</div>
+          <div class="match-broadcast">配信</div>
           <div class="match-comp">大会</div>
         </div>
         
           <div class="match-row scheduled">
             <div class="match-date">2026-05-16T22:30</div>
             <div class="match-opponent"><span class="home-away">H</span> vs RBライプツィヒ</div>
-            <div class="match-score">DAZN / ABEMA</div>
+            <div class="match-result">—</div>
+            <div class="match-broadcast">DAZN / ABEMA</div>
             <div class="match-comp">ブンデスリーガ</div>
           </div>
           <div class="match-row scheduled">
             <div class="match-date">2026-05-10T22:30</div>
             <div class="match-opponent"><span class="home-away">A</span> vs ハンブルガー</div>
-            <div class="match-score">DAZN / ABEMA</div>
+            <div class="match-result">—</div>
+            <div class="match-broadcast">DAZN / ABEMA</div>
             <div class="match-comp">ブンデスリーガ</div>
           </div>
           <div class="match-row scheduled">
             <div class="match-date">2026-05-04T02:30</div>
             <div class="match-opponent"><span class="home-away">H</span> vs ヴォルフスブルク</div>
-            <div class="match-score">DAZN / ABEMA</div>
+            <div class="match-result">—</div>
+            <div class="match-broadcast">DAZN / ABEMA</div>
             <div class="match-comp">ブンデスリーガ</div>
           </div>
           <div class="match-row">
             <div class="match-date">2026-04-27T00:30</div>
             <div class="match-opponent"><span class="home-away">A</span> vs ドルトムント</div>
-            <div class="match-score lose">0 - 4</div>
+            <div class="match-result lose">0 - 4</div>
+            <div class="match-broadcast">—</div>
             <div class="match-comp">ブンデスリーガ</div>
           </div>
       </div>

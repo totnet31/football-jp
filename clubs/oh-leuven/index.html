@@ -109,7 +109,7 @@
     .matches-list { font-size: 13px; }
     .match-header, .match-row {
       display: grid;
-      grid-template-columns: 160px 1fr 80px 100px;
+      grid-template-columns: 150px 1fr 70px 80px 100px;
       gap: 8px;
       padding: 8px 4px;
       border-bottom: 1px solid var(--c-border, #e5e7eb);
@@ -122,14 +122,14 @@
       background: #f8f9fa;
     }
     .match-row:last-child { border-bottom: none; }
-    .match-score { font-weight: 700; text-align: center; }
-    .match-score.win { color: #1a7a3a; }
-    .match-score.lose { color: #c0392b; }
-    .match-score.draw { color: #666; }
-    .match-row.scheduled .match-score {
+    .match-result { font-weight: 700; text-align: center; }
+    .match-result.win { color: #1a7a3a; }
+    .match-result.lose { color: #c0392b; }
+    .match-result.draw { color: #666; }
+    .match-broadcast {
       font-size: 11px;
-      font-weight: normal;
-      color: #666;
+      color: #555;
+      text-align: center;
     }
     .home-away {
       display: inline-block;
@@ -160,7 +160,7 @@
     .site-footer a { color: #666; }
     @media (max-width: 600px) {
       .match-header, .match-row {
-        grid-template-columns: 120px 1fr 60px;
+        grid-template-columns: 110px 1fr 55px 55px;
         font-size: 12px;
       }
       .match-comp { display: none; }

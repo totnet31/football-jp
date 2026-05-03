@@ -323,7 +323,8 @@ def build_club_page(club_info: dict, slug: str, standing: dict,
           <div class="match-row">
             <div class="match-date">{esc(date_display)}</div>
             <div class="match-opponent"><span class="home-away">{home_away}</span> vs {opponent}</div>
-            <div class="match-score {result_class}">{esc(score_display)}</div>
+            <div class="match-result {result_class}">{esc(score_display)}</div>
+            <div class="match-broadcast">—</div>
             <div class="match-comp">{esc(comp_ja)}</div>
           </div>"""
             else:
@@ -341,7 +342,8 @@ def build_club_page(club_info: dict, slug: str, standing: dict,
           <div class="match-row scheduled">
             <div class="match-date">{esc(date_display)}</div>
             <div class="match-opponent"><span class="home-away">{home_away}</span> vs {opponent}</div>
-            <div class="match-score">{esc(bc_str) if bc_str else "—"}</div>
+            <div class="match-result">—</div>
+            <div class="match-broadcast">{esc(bc_str) if bc_str else "—"}</div>
             <div class="match-comp">{esc(comp_ja)}</div>
           </div>"""
 
@@ -352,7 +354,8 @@ def build_club_page(club_info: dict, slug: str, standing: dict,
         <div class="match-header">
           <div class="match-date">日時（JST）</div>
           <div class="match-opponent">対戦相手</div>
-          <div class="match-score">スコア/配信</div>
+          <div class="match-result">結果</div>
+          <div class="match-broadcast">配信</div>
           <div class="match-comp">大会</div>
         </div>
         {match_rows}
@@ -476,7 +479,7 @@ def build_club_page(club_info: dict, slug: str, standing: dict,
     .matches-list {{ font-size: 13px; }}
     .match-header, .match-row {{
       display: grid;
-      grid-template-columns: 160px 1fr 80px 100px;
+      grid-template-columns: 150px 1fr 70px 80px 100px;
       gap: 8px;
       padding: 8px 4px;
       border-bottom: 1px solid var(--c-border, #e5e7eb);
@@ -489,14 +492,14 @@ def build_club_page(club_info: dict, slug: str, standing: dict,
       background: #f8f9fa;
     }}
     .match-row:last-child {{ border-bottom: none; }}
-    .match-score {{ font-weight: 700; text-align: center; }}
-    .match-score.win {{ color: #1a7a3a; }}
-    .match-score.lose {{ color: #c0392b; }}
-    .match-score.draw {{ color: #666; }}
-    .match-row.scheduled .match-score {{
+    .match-result {{ font-weight: 700; text-align: center; }}
+    .match-result.win {{ color: #1a7a3a; }}
+    .match-result.lose {{ color: #c0392b; }}
+    .match-result.draw {{ color: #666; }}
+    .match-broadcast {{
       font-size: 11px;
-      font-weight: normal;
-      color: #666;
+      color: #555;
+      text-align: center;
     }}
     .home-away {{
       display: inline-block;
@@ -527,7 +530,7 @@ def build_club_page(club_info: dict, slug: str, standing: dict,
     .site-footer a {{ color: #666; }}
     @media (max-width: 600px) {{
       .match-header, .match-row {{
-        grid-template-columns: 120px 1fr 60px;
+        grid-template-columns: 110px 1fr 55px 55px;
         font-size: 12px;
       }}
       .match-comp {{ display: none; }}

@@ -109,7 +109,7 @@
     .matches-list { font-size: 13px; }
     .match-header, .match-row {
       display: grid;
-      grid-template-columns: 160px 1fr 80px 100px;
+      grid-template-columns: 150px 1fr 70px 80px 100px;
       gap: 8px;
       padding: 8px 4px;
       border-bottom: 1px solid var(--c-border, #e5e7eb);
@@ -122,14 +122,14 @@
       background: #f8f9fa;
     }
     .match-row:last-child { border-bottom: none; }
-    .match-score { font-weight: 700; text-align: center; }
-    .match-score.win { color: #1a7a3a; }
-    .match-score.lose { color: #c0392b; }
-    .match-score.draw { color: #666; }
-    .match-row.scheduled .match-score {
+    .match-result { font-weight: 700; text-align: center; }
+    .match-result.win { color: #1a7a3a; }
+    .match-result.lose { color: #c0392b; }
+    .match-result.draw { color: #666; }
+    .match-broadcast {
       font-size: 11px;
-      font-weight: normal;
-      color: #666;
+      color: #555;
+      text-align: center;
     }
     .home-away {
       display: inline-block;
@@ -160,7 +160,7 @@
     .site-footer a { color: #666; }
     @media (max-width: 600px) {
       .match-header, .match-row {
-        grid-template-columns: 120px 1fr 60px;
+        grid-template-columns: 110px 1fr 55px 55px;
         font-size: 12px;
       }
       .match-comp { display: none; }
@@ -234,44 +234,51 @@
         <div class="match-header">
           <div class="match-date">日時（JST）</div>
           <div class="match-opponent">対戦相手</div>
-          <div class="match-score">スコア/配信</div>
+          <div class="match-result">結果</div>
+          <div class="match-broadcast">配信</div>
           <div class="match-comp">大会</div>
         </div>
         
           <div class="match-row scheduled">
             <div class="match-date">2026-05-16T22:30</div>
             <div class="match-opponent"><span class="home-away">H</span> vs ケルン</div>
-            <div class="match-score">DAZN / ABEMA</div>
+            <div class="match-result">—</div>
+            <div class="match-broadcast">DAZN / ABEMA</div>
             <div class="match-comp">ブンデスリーガ</div>
           </div>
           <div class="match-row scheduled">
             <div class="match-date">2026-05-10T01:30</div>
             <div class="match-opponent"><span class="home-away">A</span> vs ヴォルフスブルク</div>
-            <div class="match-score">DAZN / ABEMA</div>
+            <div class="match-result">—</div>
+            <div class="match-broadcast">DAZN / ABEMA</div>
             <div class="match-comp">ブンデスリーガ</div>
           </div>
           <div class="match-row scheduled">
             <div class="match-date">2026-05-07T04:00</div>
             <div class="match-opponent"><span class="home-away">H</span> vs PSG</div>
-            <div class="match-score">WOWOW / Lemino</div>
+            <div class="match-result">—</div>
+            <div class="match-broadcast">WOWOW / Lemino</div>
             <div class="match-comp">UEFAチャンピオンズリーグ</div>
           </div>
           <div class="match-row">
             <div class="match-date">2026-05-02T22:30</div>
             <div class="match-opponent"><span class="home-away">H</span> vs ハイデンハイム</div>
-            <div class="match-score draw">3 - 3</div>
+            <div class="match-result draw">3 - 3</div>
+            <div class="match-broadcast">—</div>
             <div class="match-comp">ブンデスリーガ</div>
           </div>
           <div class="match-row">
             <div class="match-date">2026-04-29T04:00</div>
             <div class="match-opponent"><span class="home-away">A</span> vs PSG</div>
-            <div class="match-score lose">4 - 5</div>
+            <div class="match-result lose">4 - 5</div>
+            <div class="match-broadcast">—</div>
             <div class="match-comp">UEFAチャンピオンズリーグ</div>
           </div>
           <div class="match-row">
             <div class="match-date">2026-04-25T22:30</div>
             <div class="match-opponent"><span class="home-away">A</span> vs マインツ</div>
-            <div class="match-score win">4 - 3</div>
+            <div class="match-result win">4 - 3</div>
+            <div class="match-broadcast">—</div>
             <div class="match-comp">ブンデスリーガ</div>
           </div>
       </div>

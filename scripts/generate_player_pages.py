@@ -21,6 +21,7 @@ MATCHES_JSON = REPO_ROOT / "data" / "matches.json"
 SCORERS_JSON = REPO_ROOT / "data" / "scorers.json"
 MATCH_EVENTS_JSON = REPO_ROOT / "data" / "match_events.json"
 STANDINGS_JSON = REPO_ROOT / "data" / "standings.json"
+PLAYER_STATS_JSON = REPO_ROOT / "data" / "player_stats.json"
 OUTPUT_DIR = REPO_ROOT / "players"
 
 GA4_ID = "G-39G8CVXRW0"
@@ -105,7 +106,32 @@ def load_data():
         standings_raw = json.load(f)
     standings_comps = standings_raw.get("competitions", {})
 
-    return players, matches, matches_dict, scorers_comps, events, standings_comps
+    # player_stats.json（Wikipedia統計、任意）
+    player_stats = {}
+    if PLAYER_STATS_JSON.exists():
+        with open(PLAYER_STATS_JSON, encoding="utf-8") as f:
+            ps_raw = json.load(f)
+        player_stats = ps_raw.get("stats", {})
+        print(f"  player_stats.json: {len(player_stats)} 選手分")
+
+    return players, matches, matches_dict, scorers_comps, events, standings_comps, player_stats
+
+
+def get_player_wiki_stats(player: dict, player_stats: dict) -> dict:
+    """player_stats.json（Wikipediaソース）から選手統計を取得する。"""
+    name_en = player.get("name_en", "")
+    if not name_en:
+        return {}
+    entry = player_stats.get(name_en)
+    if entry:
+        return {
+            "goals": entry.get("goals", 0),
+            "assists": entry.get("assists", 0),
+            "penalties": 0,
+            "played": entry.get("apps", 0),
+            "source": "wikipedia",
+        }
+    return {}
 
 
 def get_player_scorer_stats(player: dict, scorers_comps: dict) -> dict:
@@ -235,7 +261,8 @@ def get_club_standing(player: dict, standings_comps: dict) -> dict:
 # 個別ページHTML生成
 # ============================
 def build_player_page(player: dict, slug: str, scorer_stats: dict,
-                      goal_events: list, club_matches: list, standing: dict) -> str:
+                      goal_events: list, club_matches: list, standing: dict,
+                      wiki_stats: dict = None) -> str:
     name_ja = player.get("name_ja", "")
     name_en = player.get("name_en", "")
     position = player.get("position", "")
@@ -269,29 +296,38 @@ def build_player_page(player: dict, slug: str, scorer_stats: dict,
     schema_ld = json.dumps(schema_person, ensure_ascii=False, indent=2)
 
     # --- 統計セクション ---
+    # wiki_stats を優先、なければ scorer_stats (football-data API top50) を使用
+    active_stats = wiki_stats if wiki_stats else scorer_stats
+    stats_source_note = ""
+    if wiki_stats:
+        stats_source_note = '<div class="stats-source">出典: Wikipedia</div>'
+    elif scorer_stats:
+        stats_source_note = '<div class="stats-source">出典: Football-Data.org</div>'
+
     stats_html = ""
-    if scorer_stats:
+    if active_stats:
         stats_html = f"""
     <section class="player-section">
       <h3>📊 今シーズン成績</h3>
       <div class="stats-grid">
         <div class="stat-card">
           <div class="stat-label">出場試合</div>
-          <div class="stat-value">{esc(str(scorer_stats.get('played', '—')))}</div>
+          <div class="stat-value">{esc(str(active_stats.get('played', '—')))}</div>
         </div>
         <div class="stat-card">
           <div class="stat-label">ゴール</div>
-          <div class="stat-value">{esc(str(scorer_stats.get('goals', '—')))}</div>
+          <div class="stat-value">{esc(str(active_stats.get('goals', '—')))}</div>
         </div>
         <div class="stat-card">
           <div class="stat-label">アシスト</div>
-          <div class="stat-value">{esc(str(scorer_stats.get('assists', '—')))}</div>
+          <div class="stat-value">{esc(str(active_stats.get('assists', '—')))}</div>
         </div>
         <div class="stat-card">
           <div class="stat-label">PK</div>
-          <div class="stat-value">{esc(str(scorer_stats.get('penalties', '—')))}</div>
+          <div class="stat-value">{esc(str(active_stats.get('penalties', '—')))}</div>
         </div>
       </div>
+      {stats_source_note}
     </section>"""
 
     # --- 順位セクション ---
@@ -357,7 +393,8 @@ def build_player_page(player: dict, slug: str, scorer_stats: dict,
           <div class="match-row">
             <div class="match-date">{esc(date_display)}</div>
             <div class="match-opponent"><span class="home-away">{home_away}</span> vs {opponent}</div>
-            <div class="match-score {result_class}">{esc(score_display)}</div>
+            <div class="match-result {result_class}">{esc(score_display)}</div>
+            <div class="match-broadcast">—</div>
             <div class="match-comp">{esc(comp_ja)}</div>
           </div>"""
             else:
@@ -375,7 +412,8 @@ def build_player_page(player: dict, slug: str, scorer_stats: dict,
           <div class="match-row scheduled">
             <div class="match-date">{esc(date_display)}</div>
             <div class="match-opponent"><span class="home-away">{home_away}</span> vs {opponent}</div>
-            <div class="match-score">{esc(bc_str) if bc_str else "—"}</div>
+            <div class="match-result">—</div>
+            <div class="match-broadcast">{esc(bc_str) if bc_str else "—"}</div>
             <div class="match-comp">{esc(comp_ja)}</div>
           </div>"""
 
@@ -386,7 +424,8 @@ def build_player_page(player: dict, slug: str, scorer_stats: dict,
         <div class="match-header">
           <div class="match-date">日時（JST）</div>
           <div class="match-opponent">対戦相手</div>
-          <div class="match-score">スコア/配信</div>
+          <div class="match-result">結果</div>
+          <div class="match-broadcast">配信</div>
           <div class="match-comp">大会</div>
         </div>
         {match_rows}
@@ -552,7 +591,7 @@ def build_player_page(player: dict, slug: str, scorer_stats: dict,
     }}
     .match-header, .match-row {{
       display: grid;
-      grid-template-columns: 160px 1fr 80px 100px;
+      grid-template-columns: 150px 1fr 70px 80px 100px;
       gap: 8px;
       padding: 8px 4px;
       border-bottom: 1px solid var(--c-border, #e5e7eb);
@@ -565,17 +604,17 @@ def build_player_page(player: dict, slug: str, scorer_stats: dict,
       background: #f8f9fa;
     }}
     .match-row:last-child {{ border-bottom: none; }}
-    .match-score {{
+    .match-result {{
       font-weight: 700;
       text-align: center;
     }}
-    .match-score.win {{ color: #1a7a3a; }}
-    .match-score.lose {{ color: #c0392b; }}
-    .match-score.draw {{ color: #666; }}
-    .match-row.scheduled .match-score {{
+    .match-result.win {{ color: #1a7a3a; }}
+    .match-result.lose {{ color: #c0392b; }}
+    .match-result.draw {{ color: #666; }}
+    .match-broadcast {{
       font-size: 11px;
-      font-weight: normal;
-      color: #666;
+      color: #555;
+      text-align: center;
     }}
     .home-away {{
       display: inline-block;
@@ -606,6 +645,12 @@ def build_player_page(player: dict, slug: str, scorer_stats: dict,
       padding: 8px 0;
       margin: 0;
     }}
+    .stats-source {{
+      font-size: 11px;
+      color: #999;
+      margin-top: 6px;
+      text-align: right;
+    }}
     .player-note {{
       background: #fff8e1;
       border-left: 3px solid #d4af37;
@@ -632,7 +677,7 @@ def build_player_page(player: dict, slug: str, scorer_stats: dict,
     @media (max-width: 600px) {{
       .stats-grid {{ grid-template-columns: repeat(2, 1fr); }}
       .match-header, .match-row {{
-        grid-template-columns: 120px 1fr 60px;
+        grid-template-columns: 110px 1fr 55px 55px;
         font-size: 12px;
       }}
       .match-comp {{ display: none; }}
@@ -696,7 +741,7 @@ def build_player_page(player: dict, slug: str, scorer_stats: dict,
 # ============================
 def main():
     print(f"データ読み込み中...")
-    players, matches, matches_dict, scorers_comps, events, standings_comps = load_data()
+    players, matches, matches_dict, scorers_comps, events, standings_comps, player_stats = load_data()
     print(f"  選手数: {len(players)}")
     print(f"  試合数: {len(matches)}")
 
@@ -712,13 +757,15 @@ def main():
         name_en = player.get("name_en", "")
 
         # 統計データ取得
+        wiki_stats = get_player_wiki_stats(player, player_stats)
         scorer_stats = get_player_scorer_stats(player, scorers_comps)
         goal_events = get_player_goals(player, events, matches_dict)
         club_matches = get_club_matches(player, matches)
         standing = get_club_standing(player, standings_comps)
 
         # HTMLページ生成
-        html = build_player_page(player, slug, scorer_stats, goal_events, club_matches, standing)
+        html = build_player_page(player, slug, scorer_stats, goal_events, club_matches, standing,
+                                 wiki_stats=wiki_stats)
 
         # 出力
         out_dir = OUTPUT_DIR / slug
