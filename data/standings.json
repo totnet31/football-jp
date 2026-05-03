@@ -1,5 +1,5 @@
 {
-  "updated": "2026-05-03T18:00:49.016233+09:00",
+  "updated": "2026-05-03T20:31:38.710470+09:00",
   "competitions": {
     "39": {
       "name_ja": "プレミアリーグ",
@@ -1414,6 +1414,21 @@
             },
             {
               "position": 8,
+              "team_id": 103,
+              "team_ja": "ボローニャ",
+              "team_crest": "https://crests.football-data.org/103.png",
+              "playedGames": 35,
+              "won": 14,
+              "draw": 7,
+              "lost": 14,
+              "points": 49,
+              "goalsFor": 42,
+              "goalsAgainst": 41,
+              "goalDifference": 1,
+              "form": null
+            },
+            {
+              "position": 9,
               "team_id": 110,
               "team_ja": "ラツィオ",
               "team_crest": "https://crests.football-data.org/110.png",
@@ -1425,21 +1440,6 @@
               "goalsFor": 37,
               "goalsAgainst": 33,
               "goalDifference": 4,
-              "form": null
-            },
-            {
-              "position": 9,
-              "team_id": 103,
-              "team_ja": "ボローニャ",
-              "team_crest": "https://crests.football-data.org/103.png",
-              "playedGames": 34,
-              "won": 14,
-              "draw": 6,
-              "lost": 14,
-              "points": 48,
-              "goalsFor": 42,
-              "goalsAgainst": 41,
-              "goalDifference": 1,
               "form": null
             },
             {
@@ -1537,11 +1537,11 @@
               "team_id": 104,
               "team_ja": "カリアリ",
               "team_crest": "https://crests.football-data.org/104.png",
-              "playedGames": 34,
+              "playedGames": 35,
               "won": 9,
-              "draw": 9,
+              "draw": 10,
               "lost": 16,
-              "points": 36,
+              "points": 37,
               "goalsFor": 36,
               "goalsAgainst": 49,
               "goalDifference": -13,
@@ -1986,6 +1986,21 @@
             },
             {
               "position": 6,
+              "team_id": 673,
+              "team_ja": "ヘーレンフェーン",
+              "team_crest": "https://crests.football-data.org/673.png",
+              "playedGames": 32,
+              "won": 14,
+              "draw": 8,
+              "lost": 10,
+              "points": 50,
+              "goalsFor": 56,
+              "goalsAgainst": 51,
+              "goalDifference": 5,
+              "form": null
+            },
+            {
+              "position": 7,
               "team_id": 682,
               "team_ja": "AZ",
               "team_crest": "https://crests.football-data.org/682.png",
@@ -2000,7 +2015,7 @@
               "form": null
             },
             {
-              "position": 7,
+              "position": 8,
               "team_id": 676,
               "team_ja": "ユトレヒト",
               "team_crest": "https://crests.football-data.org/676.png",
@@ -2012,21 +2027,6 @@
               "goalsFor": 51,
               "goalsAgainst": 41,
               "goalDifference": 10,
-              "form": null
-            },
-            {
-              "position": 8,
-              "team_id": 673,
-              "team_ja": "ヘーレンフェーン",
-              "team_crest": "https://crests.football-data.org/673.png",
-              "playedGames": 31,
-              "won": 13,
-              "draw": 8,
-              "lost": 10,
-              "points": 47,
-              "goalsFor": 55,
-              "goalsAgainst": 51,
-              "goalDifference": 4,
               "form": null
             },
             {
@@ -2139,14 +2139,14 @@
               "team_id": 1919,
               "team_ja": "フォレンダム",
               "team_crest": "https://crests.football-data.org/1919.png",
-              "playedGames": 31,
+              "playedGames": 32,
               "won": 8,
               "draw": 7,
-              "lost": 16,
+              "lost": 17,
               "points": 31,
               "goalsFor": 33,
-              "goalsAgainst": 50,
-              "goalDifference": -17,
+              "goalsAgainst": 51,
+              "goalDifference": -18,
               "form": null
             },
             {

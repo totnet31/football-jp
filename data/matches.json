@@ -1,5 +1,5 @@
 {
-  "updated": "2026-05-03T18:00:49.005607+09:00",
+  "updated": "2026-05-03T20:31:38.700192+09:00",
   "date_from": "2026-04-26",
   "date_to": "2026-05-17",
   "match_count": 311,
@@ -5052,7 +5052,7 @@
       "competition_category": "league",
       "competition_flag": "🇳🇱",
       "kickoff_jst": "2026-05-03T19:15:00+09:00",
-      "status": "TIMED",
+      "status": "IN_PLAY",
       "stage": "REGULAR_SEASON",
       "matchday": 32,
       "home_id": 1919,
@@ -5063,7 +5063,10 @@
       "away_ja": "ヘーレンフェーン",
       "away_en": "Heerenveen",
       "away_crest": "https://crests.football-data.org/673.png",
-      "score": null,
+      "score": {
+        "home": 0,
+        "away": 1
+      },
       "japanese_players": [],
       "broadcasters": [
         {
@@ -5081,7 +5084,7 @@
       "competition_category": "league",
       "competition_flag": "🇮🇹",
       "kickoff_jst": "2026-05-03T19:30:00+09:00",
-      "status": "TIMED",
+      "status": "PAUSED",
       "stage": "REGULAR_SEASON",
       "matchday": 35,
       "home_id": 103,
@@ -5092,7 +5095,10 @@
       "away_ja": "カリアリ",
       "away_en": "Cagliari",
       "away_crest": "https://crests.football-data.org/104.png",
-      "score": null,
+      "score": {
+        "home": 0,
+        "away": 0
+      },
       "japanese_players": [],
       "broadcasters": [
         {
@@ -11037,6 +11043,6 @@
       ]
     }
   ],
-  "updated_yt_highlights": "2026-05-03T18:04:37.187668+09:00",
-  "updated_uefa_secondary": "2026-05-03T18:04:52.633235+09:00"
+  "updated_yt_highlights": "2026-05-03T20:35:24.020462+09:00",
+  "updated_uefa_secondary": "2026-05-03T20:35:38.973970+09:00"
 }
