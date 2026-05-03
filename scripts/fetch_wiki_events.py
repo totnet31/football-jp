@@ -131,8 +131,23 @@ def search_season_page(club_en):
 
 
 def parse_date(s):
-    """'16 August 2025' → 'YYYY-MM-DD'"""
+    """日付文字列 → 'YYYY-MM-DD'
+
+    対応形式:
+      '16 August 2025'            → '2025-08-16'
+      '{{Start date|2025|7|6|...}}' → '2025-07-06'
+      '{{dts|format=dmy|2025|8|23}}' → '2025-08-23' （wikitable用、_parse_dts と同じ）
+    """
     s = s.strip()
+    # {{Start date|YYYY|M|D|...}} 形式
+    m = re.search(r"\{\{[Ss]tart\s*date\s*\|(\d{4})\|(\d{1,2})\|(\d{1,2})", s)
+    if m:
+        return f"{int(m.group(1)):04d}-{int(m.group(2)):02d}-{int(m.group(3)):02d}"
+    # {{dts|...|YYYY|M|D}} 形式
+    m = re.search(r"\{\{dts[^}]*\|(\d{4})\|(\d{1,2})\|(\d{1,2})", s)
+    if m:
+        return f"{int(m.group(1)):04d}-{int(m.group(2)):02d}-{int(m.group(3)):02d}"
+    # 'DD Month YYYY' プレーンテキスト形式
     m = re.match(r"(\d{1,2})\s+([A-Za-z]+)\s+(\d{4})", s)
     if not m:
         return None
@@ -223,6 +238,194 @@ def parse_minute(raw):
     return base + extra
 
 
+def has_match_data(wt):
+    """wikitextが試合データ（ゴール情報）を含むか判定"""
+    if not wt:
+        return False
+    wt_lower = wt.lower()
+    # 既存テンプレ（football box collapsible / football box）
+    if "football box collapsible" in wt_lower:
+        return True
+    if "{{football box" in wt_lower:
+        return True
+    # Fb rs / football box small 系
+    if "{{fb rs" in wt_lower:
+        return True
+    if "{{football box small" in wt_lower:
+        return True
+    # 通常 wikitable で試合結果がある場合
+    # "scorers" 列ヘッダーが含まれていれば採用
+    if "wikitable" in wt_lower and "scorer" in wt_lower:
+        return True
+    return False
+
+
+def _normalize_header(h):
+    """wikitableヘッダーセルを正規化して小文字の純テキストに"""
+    # scope="col"| や class="..."| などを除去
+    if "|" in h:
+        h = h.split("|")[-1]
+    # {{...}} テンプレートを除去
+    h = re.sub(r"\{\{[^}]+\}\}", "", h)
+    # <br/> を空白に
+    h = re.sub(r"<br\s*/?>", " ", h, flags=re.IGNORECASE)
+    return h.strip().lower()
+
+
+def _parse_dts(s):
+    """{{dts|format=dmy|2025|8|23}} → '2025-08-23'"""
+    m = re.search(r"\{\{dts[^}]*\|(\d{4})\|(\d{1,2})\|(\d{1,2})", s)
+    if m:
+        return f"{int(m.group(1)):04d}-{int(m.group(2)):02d}-{int(m.group(3)):02d}"
+    return None
+
+
+def _parse_date_cell(s):
+    """wikitableの日付セルをパース（dts形式 or プレーンテキスト）"""
+    return _parse_dts(s) or parse_date(strip_wiki_link(s))
+
+
+def _parse_scorers_cell(cell_text):
+    """Scorersセルから [(wiki_target, display, minute_raw, note)] を抽出
+
+    対応形式:
+      [[Jay Stansfield|Stansfield]] 55'
+      [[Paik Seung-ho|Paik]] 40'
+      Amoura 42'
+      [[Stansfield]] 90' (pen.)
+      [[Stansfield]] 90' pen., [[Dykes]] 90+8'
+    """
+    out = []
+    pattern = (
+        r"(?:"
+        r"\[\[([^\]\|]+)(?:\|([^\]]+))?\]\]"   # [[wiki|display]] or [[wiki]]
+        r"|([A-ZÁÉÍÓÚÀÈÌÒÙÄÖÜ\u00C0-\u024F][A-Za-záéíóúàèìòùÀ-ÖØ-öø-ÿĀ-ž'\.\-]{1,30}"
+        r"(?:\s+[A-Za-záéíóúàèìòùÀ-ÖØ-öø-ÿĀ-ž'\.\-]{1,30}){0,3}?)"  # plain text name
+        r")"
+        r"\s+(\d{1,3}(?:\+\d+)?)['\u2019]"   # MIN'
+    )
+    for m in re.finditer(pattern, cell_text):
+        wiki_target = m.group(1)
+        display = m.group(2) or m.group(1) or m.group(3)
+        minute_raw = m.group(4)
+        if not (display and minute_raw):
+            continue
+        # pen./og チェック（直後の括弧内）
+        rest = cell_text[m.end():]
+        note_m = re.match(r"\s*\(?\s*([^,\)]{0,25}?(?:pen|og)[^,\)]{0,25}?)\s*\)?", rest, re.IGNORECASE)
+        note = note_m.group(1).strip().lower() if note_m else ""
+        out.append({
+            "wiki_target": wiki_target,
+            "display": display.strip(),
+            "minute_raw": minute_raw,
+            "note": note,
+        })
+    return out
+
+
+def parse_wikitable_matches(wikitext, club_en):
+    """wikitable形式の試合結果テーブルをパースしてboxes互換形式で返す
+
+    wikitableは「クラブ視点」で Opponent/Venue/Scorers が1列にまとまっている。
+    boxes 互換形式に変換する際は:
+      - team1 = club_en（このクラブ）
+      - team2 = opponent
+      - goals1/goals2 は両方空にして、scorers に全ゴール情報を格納
+      ただし find_match() が team1/team2 で照合するので venue (H/A) を使って
+      team1/team2 を適切に設定する。
+    """
+    out = []
+    # match details を含む wikitable を対象（Scorers列が必須）
+    for table_m in re.finditer(r"\{\|[^\n]*wikitable(.*?)\n\|\}", wikitext, re.DOTALL):
+        table_text = table_m.group(0)
+
+        # ヘッダー行を特定（!で始まる行）
+        # Birmingham式: !scope=col|Date\n!scope=col|...（1列1行）
+        # Bundesliga式: !Round!!Date!!Time!!... （||区切り1行）
+        single_headers = re.findall(r"^!([^!\n]+)", table_text, re.MULTILINE)
+        inline_header = re.search(r"^!(.+)", table_text, re.MULTILINE)
+        if inline_header and "!!" in inline_header.group(1):
+            raw_headers = re.split(r"!!", inline_header.group(1))
+        else:
+            raw_headers = single_headers
+
+        if not raw_headers:
+            continue
+
+        norm_headers = [_normalize_header(h) for h in raw_headers]
+
+        # 必要列のインデックスを特定
+        scorers_col = date_col = opponent_col = venue_col = None
+        for i, h in enumerate(norm_headers):
+            if "scorer" in h:
+                scorers_col = i
+            elif h == "date":
+                date_col = i
+            elif "opponent" in h:
+                opponent_col = i
+            elif h == "venue":
+                venue_col = i
+
+        # Scorers・Date・Opponent がないテーブルはスキップ
+        if scorers_col is None or date_col is None or opponent_col is None:
+            continue
+
+        # データ行: |- の直後に続く | で始まる行（次の |- か |} まで）
+        # 各データ行は通常1行に全セルが || で区切られて入っている
+        for row_m in re.finditer(r"\|-[^\n]*\n(\|[^\n]+)", table_text):
+            row_text = row_m.group(1).strip()
+            # || で分割（先頭の | を除去）
+            cells = re.split(r"\|\|", row_text)
+            cells[0] = re.sub(r"^\|", "", cells[0]).strip()
+            cells = [c.strip() for c in cells]
+
+            max_col = max(c for c in [scorers_col, date_col, opponent_col, venue_col] if c is not None)
+            if len(cells) <= max_col:
+                continue
+
+            date = _parse_date_cell(cells[date_col])
+            if not date:
+                continue
+
+            opponent = strip_wiki_link(cells[opponent_col])
+            venue_raw = strip_wiki_link(cells[venue_col]).strip().lower() if venue_col is not None else "h"
+
+            # H/Away に基づいてチーム順を決定
+            # venue が "h", "home", St Andrew's (H) 等 → club が team1（ホーム）
+            is_home = ("home" in venue_raw or venue_raw == "h" or
+                       (venue_raw.endswith("(h)")) or
+                       re.search(r"\bh\b", venue_raw) is not None)
+
+            if is_home:
+                team1, team2 = club_en, opponent
+                goals1_raw = goals2_raw = []  # wikitableは分離不可
+            else:
+                team1, team2 = opponent, club_en
+                goals1_raw = goals2_raw = []
+
+            scorers = _parse_scorers_cell(cells[scorers_col])
+            # goals1/goals2 の代わりに scorers を team1/team2 どちら側かわからないため
+            # 両方に全員を入れる（find_match後に日本人選手照合で絞る）
+            # ただしside情報は "unknown" とする
+            scorer_entries = [{
+                "wiki_target": s["wiki_target"],
+                "display": s["display"],
+                "goals": [{"minute_raw": s["minute_raw"], "note": s["note"]}],
+            } for s in scorers]
+
+            out.append({
+                "date": date,
+                "team1": team1,
+                "team2": team2,
+                "score": "",
+                "round": "",
+                "goals1": scorer_entries,  # wikitableは両チーム混在→goals1に全員
+                "goals2": [],
+                "_wikitable": True,        # wikitable由来フラグ
+            })
+    return out
+
+
 def parse_match_boxes(wikitext):
     """{{football box collapsible}} と {{football box}} 両方を抽出"""
     # collapsible版（メイン）
@@ -253,6 +456,20 @@ def parse_match_boxes(wikitext):
     return out
 
 
+def parse_all_matches(wikitext, club_en):
+    """football box collapsible / wikitable の両方から試合データを統合して返す"""
+    boxes = parse_match_boxes(wikitext)
+    wikitable_boxes = parse_wikitable_matches(wikitext, club_en)
+    # 重複排除：同じ date+team1+team2 のものは football box collapsible 優先
+    existing_keys = {(b["date"], b["team1"], b["team2"]) for b in boxes}
+    for wb in wikitable_boxes:
+        key = (wb["date"], wb["team1"], wb["team2"])
+        if key not in existing_keys:
+            boxes.append(wb)
+            existing_keys.add(key)
+    return boxes
+
+
 def normalize_team(name):
     if not name:
         return ""
@@ -262,21 +479,29 @@ def normalize_team(name):
     return s
 
 
+def _ascii_fold(s):
+    """Unicode の発音符号つき文字をASCII近似に変換（例: ō→o, ā→a）"""
+    import unicodedata
+    return unicodedata.normalize("NFKD", s).encode("ascii", "ignore").decode("ascii")
+
+
 def build_jp_lookup(players):
-    """name_en + wiki_target_guess → name_ja のマップ"""
+    """name_en + wiki_target_guess → name_ja のマップ
+
+    Unicode正規化バリアントも登録（例: 'Dōan' → 'Doan' → '堂安律'）
+    """
     out = {}
     for p in players:
         nen = p.get("name_en")
         nja = p.get("name_ja")
         if not (nen and nja):
             continue
-        # 完全一致用：苗字（最後の単語）も登録
-        out[nen.lower()] = nja
-        last = nen.split()[-1].lower() if nen else ""
-        if last:
-            out.setdefault(last, nja)
-        # wiki targetの推測 (e.g., "Kaoru Mitoma" → "Kaoru Mitoma")
-        out.setdefault(nen, nja)
+        for key in [nen, nen.lower(), _ascii_fold(nen), _ascii_fold(nen).lower()]:
+            out.setdefault(key, nja)
+        # 苗字（最後の単語）も登録
+        last = nen.split()[-1]
+        for key in [last, last.lower(), _ascii_fold(last), _ascii_fold(last).lower()]:
+            out.setdefault(key, nja)
     return out
 
 
@@ -335,34 +560,37 @@ def main():
     boxes_per_club = {}
     for cid, info in by_club.items():
         cen = info["name_en"]
-        # キャッシュチェック
-        if str(cid) in pages_cache and pages_cache[str(cid)].get("boxes"):
-            boxes = pages_cache[str(cid)]["boxes"]
+        # キャッシュチェック（boxes があれば再利用、title=None かつ boxes=[] はSKIP済みだが
+        # 今回の拡張でwikitableも対象になったためSKIP済みクラブも再試行する）
+        cached = pages_cache.get(str(cid), {})
+        if cached.get("boxes"):
+            boxes = cached["boxes"]
             print(f"  [CACHE] {cen}: {len(boxes)}試合")
             boxes_per_club[cid] = boxes
             continue
+        # SKIP済みクラブも再取得を試みる（wikitable対応拡張のため）
         # ページタイトル候補を順に試す
         wt = None
         used_title = None
         for title in candidate_pages(cen, cid):
             wt = fetch_wikitext(title)
-            if wt and "football box collapsible" in wt.lower():
+            if wt and has_match_data(wt):
                 used_title = title
                 break
             time.sleep(0.4)
         # フォールバック：opensearch
         if not used_title:
-            found = search_season_page(cen)
-            if found:
-                wt2 = fetch_wikitext(found)
-                if wt2 and "football box collapsible" in wt2.lower():
+            found_title = search_season_page(cen)
+            if found_title:
+                wt2 = fetch_wikitext(found_title)
+                if wt2 and has_match_data(wt2):
                     wt = wt2
-                    used_title = found
+                    used_title = found_title
         if not wt or not used_title:
             print(f"  [SKIP] {cen}: シーズンページ見つからず")
             pages_cache[str(cid)] = {"title": None, "boxes": []}
             continue
-        boxes = parse_match_boxes(wt)
+        boxes = parse_all_matches(wt, cen)
         pages_cache[str(cid)] = {"title": used_title, "boxes": boxes}
         boxes_per_club[cid] = boxes
         print(f"  [WIKI] {cen} ({used_title}): {len(boxes)}試合")
@@ -390,30 +618,43 @@ def main():
                 if not find_match(m, box):
                     continue
                 matched = True
-                # team1 = home相当 と仮定
-                h_norm = normalize_team(m.get("home_en"))
-                t1_norm = normalize_team(box["team1"])
-                home_is_team1 = (h_norm in t1_norm or t1_norm in h_norm) if (h_norm and t1_norm) else True
+                is_wikitable = box.get("_wikitable", False)
+
+                if is_wikitable:
+                    # wikitableはgoals1に全ゴール情報が混在（side不明）
+                    side_pairs = [("unknown", box["goals1"])]
+                else:
+                    # football box collapsible: team1=home相当
+                    h_norm = normalize_team(m.get("home_en"))
+                    t1_norm = normalize_team(box["team1"])
+                    home_is_team1 = (h_norm in t1_norm or t1_norm in h_norm) if (h_norm and t1_norm) else True
+                    side_pairs = [
+                        ("home" if home_is_team1 else "away", box["goals1"]),
+                        ("away" if home_is_team1 else "home", box["goals2"]),
+                    ]
+
                 # 各 goals ブロックから全得点を保存（日本人にはフラグ付与）
-                for side, gblock in [
-                    ("home" if home_is_team1 else "away", box["goals1"]),
-                    ("away" if home_is_team1 else "home", box["goals2"]),
-                ]:
+                for side, gblock in side_pairs:
                     for entry in gblock:
                         candidates = [entry.get("display", ""), entry.get("wiki_target") or ""]
                         ja = None
                         for c in candidates:
                             if not c:
                                 continue
-                            if c.lower() in jp_lookup:
-                                ja = jp_lookup[c.lower()]
+                            # 通常照合 + ASCII折りたたみ照合（ō→o 等のアクセント対応）
+                            for key in [c, c.lower(), _ascii_fold(c), _ascii_fold(c).lower()]:
+                                if key in jp_lookup:
+                                    ja = jp_lookup[key]
+                                    break
+                            if ja:
                                 break
-                            if c in jp_lookup:
-                                ja = jp_lookup[c]
-                                break
-                            last = c.split()[-1].lower() if c else ""
-                            if last and last in jp_lookup:
-                                ja = jp_lookup[last]
+                            # 苗字のみ照合
+                            last = c.split()[-1]
+                            for key in [last, last.lower(), _ascii_fold(last), _ascii_fold(last).lower()]:
+                                if key in jp_lookup:
+                                    ja = jp_lookup[key]
+                                    break
+                            if ja:
                                 break
                         for g in entry["goals"]:
                             minute = parse_minute(g["minute_raw"])
