@@ -24,6 +24,7 @@ STANDINGS_JSON = REPO_ROOT / "data" / "standings.json"
 PLAYER_STATS_JSON = REPO_ROOT / "data" / "player_stats.json"
 PLAYER_INFO_JSON = REPO_ROOT / "data" / "player_info.json"
 BROADCASTERS_JSON = REPO_ROOT / "data" / "broadcasters.json"
+PLAYER_VIDEOS_JSON = REPO_ROOT / "data" / "player_videos.json"
 OUTPUT_DIR = REPO_ROOT / "players"
 
 GA4_ID = "G-39G8CVXRW0"
@@ -197,10 +198,21 @@ def load_data():
             player_info = json.load(f)
         print(f"  player_info.json: {len(player_info)} 選手分")
 
+    # player_videos.json（選手別ゴール集動画、任意）
+    player_videos = {}
+    if PLAYER_VIDEOS_JSON.exists():
+        try:
+            with open(PLAYER_VIDEOS_JSON, encoding="utf-8") as f:
+                pv_raw = json.load(f)
+            player_videos = pv_raw.get("players", {})
+            print(f"  player_videos.json: {len(player_videos)} 選手分")
+        except Exception:
+            pass
+
     services = load_services()
     print(f"  サービス数: {len(services)}")
 
-    return players, matches, matches_dict, scorers_comps, events, standings_comps, player_stats, services, player_info
+    return players, matches, matches_dict, scorers_comps, events, standings_comps, player_stats, services, player_info, player_videos
 
 
 def get_player_wiki_stats(player: dict, player_stats: dict) -> dict:
@@ -421,7 +433,8 @@ def build_player_page(player: dict, slug: str, scorer_stats: dict,
                       wiki_stats: dict = None, services: dict = None,
                       related_players: list = None,
                       player_info: dict = None,
-                      highlights: list = None) -> str:
+                      highlights: list = None,
+                      player_videos: list = None) -> str:
     name_ja = player.get("name_ja", "")
     name_en = player.get("name_en", "")
     position = player.get("position", "")
@@ -672,7 +685,58 @@ def build_player_page(player: dict, slug: str, scorer_stats: dict,
       <p class="no-data">今シーズンまだゴールなし（または取得範囲外）。</p>
     </section>"""
 
-    # --- 関連ハイライト動画セクション ---
+    # --- 選手別ゴール集動画セクション（優先） ---
+    player_videos_html = ""
+    if player_videos:
+        pv_cards = ""
+        for v in player_videos:
+            vid = v.get("video_id", "")
+            if not vid:
+                continue
+            thumb = f"https://i.ytimg.com/vi/{vid}/mqdefault.jpg"
+            vurl = v.get("url", f"https://www.youtube.com/watch?v={vid}")
+            title_v = v.get("title", "")
+            channel = v.get("channel", "")
+            pub = v.get("published", "")
+            pub_display = ""
+            if pub:
+                try:
+                    from datetime import datetime
+                    import re as _re
+                    ko_str = _re.sub(r'[+-]\d{2}:\d{2}$', '', pub.replace("Z", ""))
+                    dt = datetime.strptime(ko_str[:10], "%Y-%m-%d")
+                    pub_display = dt.strftime("%m/%d")
+                except Exception:
+                    pub_display = pub[:10]
+            meta_parts = []
+            if channel:
+                meta_parts.append(esc(channel))
+            if pub_display:
+                meta_parts.append(pub_display)
+            # 公式チャンネルバッジ
+            official_badge = ""
+            if v.get("is_official"):
+                official_badge = '<span class="video-official-badge">公式</span>'
+            meta_str = " · ".join(meta_parts)
+            pv_cards += f"""
+        <a href="{esc(vurl)}" target="_blank" rel="noopener" class="video-card video-card-player">
+          <div class="video-thumb-wrap">
+            <img src="{esc(thumb)}" alt="" loading="lazy">
+            {official_badge}
+          </div>
+          <div class="video-title">{esc(title_v)}</div>
+          <div class="video-meta">{meta_str}</div>
+        </a>"""
+        if pv_cards:
+            player_videos_html = f"""
+    <section class="player-section">
+      <h3>🎬 シーズンゴール集・まとめ動画</h3>
+      <div class="video-grid video-grid-player">
+        {pv_cards}
+      </div>
+    </section>"""
+
+    # --- 関連ハイライト動画セクション（試合単位・下に表示） ---
     videos_html = ""
     if highlights:
         video_cards = ""
@@ -708,9 +772,12 @@ def build_player_page(player: dict, slug: str, scorer_stats: dict,
           <div class="video-meta">{meta_str}</div>
         </a>"""
         if video_cards:
+            # 選手別動画がある場合は「他のハイライト動画」として表示
+            section_title = "他のハイライト動画" if player_videos else "📺 関連ハイライト動画"
+            section_icon = "📺"
             videos_html = f"""
     <section class="player-section">
-      <h3>📺 関連ハイライト動画</h3>
+      <h3>{section_icon} {section_title}</h3>
       <div class="video-grid">
         {video_cards}
       </div>
@@ -1215,6 +1282,21 @@ def build_player_page(player: dict, slug: str, scorer_stats: dict,
       color: #888;
       padding: 0 8px 8px;
     }}
+    .video-grid-player {{ grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); }}
+    .video-card-player {{ border: 2px solid #aac6e8; }}
+    .video-thumb-wrap {{ position: relative; }}
+    .video-thumb-wrap img {{ width: 100%; aspect-ratio: 16/9; object-fit: cover; display: block; }}
+    .video-official-badge {{
+      position: absolute;
+      top: 6px;
+      left: 6px;
+      background: var(--c-accent, #0047ab);
+      color: #fff;
+      font-size: 10px;
+      font-weight: 700;
+      padding: 2px 6px;
+      border-radius: 3px;
+    }}
     .national-team-list {{
       font-size: 13px;
     }}
@@ -1293,6 +1375,8 @@ def build_player_page(player: dict, slug: str, scorer_stats: dict,
   {standing_html}
 
   {matches_html}
+
+  {player_videos_html}
 
   {videos_html}
 
@@ -1644,7 +1728,7 @@ function trackAffClick(el) {{
 # ============================
 def main():
     print(f"データ読み込み中...")
-    players, matches, matches_dict, scorers_comps, events, standings_comps, player_stats, services, player_info = load_data()
+    players, matches, matches_dict, scorers_comps, events, standings_comps, player_stats, services, player_info, player_videos_data = load_data()
     print(f"  選手数: {len(players)}")
     print(f"  試合数: {len(matches)}")
 
@@ -1668,13 +1752,17 @@ def main():
         related_players = get_related_players(player, players, slug_map)
         pinfo = player_info.get(name_en)
         highlights = get_club_highlights(player, matches)
+        # 選手別ゴール集動画（player_videos.json）
+        pv_entry = player_videos_data.get(name_en, {})
+        player_vids = pv_entry.get("videos", []) if pv_entry else []
 
         # HTMLページ生成
         html = build_player_page(player, slug, scorer_stats, goal_events, club_matches, standing,
                                  wiki_stats=wiki_stats, services=services,
                                  related_players=related_players,
                                  player_info=pinfo,
-                                 highlights=highlights)
+                                 highlights=highlights,
+                                 player_videos=player_vids if player_vids else None)
 
         # 出力
         out_dir = OUTPUT_DIR / slug

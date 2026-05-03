@@ -64,6 +64,22 @@ jobs:
           fi
         continue-on-error: true
 
+      - name: 選手別ゴール集動画取得（YouTube Search API）
+        env:
+          YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
+        run: |
+          if [ -n "$YOUTUBE_API_KEY" ]; then
+            echo "YOUTUBE_API_KEY=$YOUTUBE_API_KEY" >> .env
+            python3 scripts/fetch_player_videos.py
+          else
+            echo "YOUTUBE_API_KEY secret 未設定のためスキップ"
+          fi
+        continue-on-error: true
+
+      - name: 節ごとの順位推移取得（Wikipedia）
+        run: python3 scripts/fetch_standings_history.py
+        continue-on-error: true
+
       - name: 日本人選手ニュース取得（RSS集約）
         run: python3 scripts/fetch_news.py
         continue-on-error: true

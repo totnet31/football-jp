@@ -24,6 +24,7 @@ BROADCASTERS_JSON = REPO_ROOT / "data" / "broadcasters.json"
 CLUB_CRESTS_JSON = REPO_ROOT / "data" / "club_crests.json"
 NEWS_JSON = REPO_ROOT / "data" / "news.json"
 CLUB_INFO_JSON = REPO_ROOT / "data" / "club_info.json"
+STANDINGS_HISTORY_JSON = REPO_ROOT / "data" / "standings_history.json"
 OUTPUT_DIR = REPO_ROOT / "clubs"
 
 GA4_ID = "G-39G8CVXRW0"
@@ -157,7 +158,18 @@ def load_data():
         with open(CLUB_INFO_JSON, encoding="utf-8") as f:
             club_info_data = json.load(f)
 
-    return players, matches, standings_comps, services, local_crests, news_items, club_info_data
+    # 節別順位履歴（あれば）
+    standings_history = {}
+    if STANDINGS_HISTORY_JSON.exists():
+        try:
+            with open(STANDINGS_HISTORY_JSON, encoding="utf-8") as f:
+                sh_raw = json.load(f)
+            standings_history = sh_raw.get("competitions", {})
+            print(f"  standings_history.json: {len(standings_history)} リーグ分")
+        except Exception:
+            pass
+
+    return players, matches, standings_comps, services, local_crests, news_items, club_info_data, standings_history
 
 
 def get_club_news(club_info: dict, news_items: list) -> list:
@@ -399,12 +411,59 @@ def get_player_slugs(players: list) -> dict:
 # ============================
 # 個別クラブページHTML生成
 # ============================
+def get_club_positions_history(club_info: dict, standings_history: dict):
+    """standings_history.json から該当クラブの節別順位データを取得する"""
+    comp_id = str(club_info.get("competition_id") or "")
+    club_en = club_info.get("club_en", "")
+    club_ja = club_info.get("club_ja", "")
+
+    if not comp_id or comp_id not in standings_history:
+        return None
+
+    comp_data = standings_history[comp_id]
+    positions_map = comp_data.get("positions", {})
+
+    # クラブ名でマッチング（完全一致 → 部分一致）
+    matched_positions = None
+    matched_club = None
+
+    # 完全一致
+    for name, vals in positions_map.items():
+        if name == club_en or name == club_ja:
+            matched_positions = vals
+            matched_club = name
+            break
+
+    # 部分一致（前方一致または後方一致）
+    if not matched_positions:
+        club_en_lower = club_en.lower()
+        for name, vals in positions_map.items():
+            name_lower = name.lower()
+            if (club_en_lower in name_lower or name_lower in club_en_lower) and len(name) >= 4:
+                matched_positions = vals
+                matched_club = name
+                break
+
+    if not matched_positions:
+        return None
+
+    return {
+        "positions": matched_positions,
+        "matched_club": matched_club,
+        "league_name": comp_data.get("name", ""),
+        "league_name_ja": comp_data.get("name_ja", ""),
+        "current_matchday": comp_data.get("current_matchday", 0),
+        "total_matchdays": comp_data.get("matchdays", 38),
+    }
+
+
 def build_club_page(club_info: dict, slug: str, standing: dict,
                     recent_matches: list, crest_url: str,
                     player_slug_map: dict, services: dict = None,
                     club_news: list = None, opponent_records: list = None,
                     club_info_extra: dict = None,
-                    highlights: list = None) -> str:
+                    highlights: list = None,
+                    standings_history_data: dict = None) -> str:
     club_ja = club_info.get("club_ja", "")
     club_en = club_info.get("club_en", "")
     league_ja = club_info.get("league_ja", "")
@@ -715,6 +774,98 @@ def build_club_page(club_info: dict, slug: str, standing: dict,
       </div>
     </section>"""
 
+    # --- 順位推移グラフセクション ---
+    standings_chart_html = ""
+    if standings_history_data:
+        pos_list = standings_history_data.get("positions", [])
+        current_md = standings_history_data.get("current_matchday", 0)
+        total_md = standings_history_data.get("total_matchdays", 38)
+        league_name_ja = standings_history_data.get("league_name_ja", league_ja)
+
+        # 有効なデータポイントのみ使用（Noneを除く）
+        valid_pos = [p for p in pos_list[:current_md] if p is not None]
+
+        if valid_pos:
+            # JavaScript 用データ（JSON形式）
+            labels = list(range(1, len(valid_pos) + 1))
+            labels_json = json.dumps(labels)
+            data_json = json.dumps(valid_pos)
+            max_pos = max(valid_pos) + 1
+            # 1位が上になるようにY軸を反転: max は最下位チーム数+1
+            y_max = max(max_pos, 21)
+
+            # ユニークなcanvas ID（クラブslugから生成）
+            canvas_id = f"standings-chart-{slug}"
+
+            standings_chart_html = f"""
+    <section class="club-section">
+      <h3>📈 順位推移（2025-26シーズン）</h3>
+      <p class="chart-subtitle">第1節〜第{len(valid_pos)}節（{esc(league_name_ja)}）</p>
+      <div class="standings-chart-container">
+        <canvas id="{canvas_id}" width="600" height="300"></canvas>
+      </div>
+      <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+      <script>
+      (function() {{
+        var ctx = document.getElementById('{canvas_id}');
+        if (!ctx) return;
+        var chart = new Chart(ctx, {{
+          type: 'line',
+          data: {{
+            labels: {labels_json},
+            datasets: [{{
+              label: '{esc(club_ja)}',
+              data: {data_json},
+              borderColor: '#0047ab',
+              backgroundColor: 'rgba(0,71,171,0.08)',
+              borderWidth: 2,
+              pointRadius: 3,
+              pointHoverRadius: 6,
+              pointBackgroundColor: '#0047ab',
+              tension: 0.1,
+              fill: false,
+            }}]
+          }},
+          options: {{
+            responsive: true,
+            maintainAspectRatio: true,
+            plugins: {{
+              legend: {{ display: false }},
+              tooltip: {{
+                callbacks: {{
+                  title: function(items) {{
+                    return '第' + items[0].label + '節';
+                  }},
+                  label: function(item) {{
+                    return item.dataset.label + '：' + item.parsed.y + '位';
+                  }}
+                }}
+              }}
+            }},
+            scales: {{
+              x: {{
+                title: {{ display: true, text: '節', font: {{ size: 11 }} }},
+                ticks: {{ font: {{ size: 10 }} }}
+              }},
+              y: {{
+                reverse: true,
+                min: 1,
+                max: {y_max},
+                ticks: {{
+                  stepSize: 1,
+                  font: {{ size: 10 }},
+                  callback: function(v) {{ return v + '位'; }}
+                }},
+                title: {{ display: true, text: '順位', font: {{ size: 11 }} }},
+                grid: {{ color: 'rgba(0,0,0,0.06)' }}
+              }}
+            }}
+          }}
+        }});
+      }})();
+      </script>
+    </section>"""
+
     # --- 対戦相手別成績セクション ---
     opponent_html = ""
     if opponent_records:
@@ -898,6 +1049,8 @@ def build_club_page(club_info: dict, slug: str, standing: dict,
     .venue-home {{ background: #e7f0ff; color: #1e6cba; border: 1px solid #aac6e8; }}
     .match-comp {{ font-size: 11px; color: #666; }}
     .no-data {{ color: #888; font-size: 13px; padding: 8px 0; margin: 0; }}
+    .chart-subtitle {{ font-size: 12px; color: #888; margin: -8px 0 10px; }}
+    .standings-chart-container {{ position: relative; width: 100%; max-width: 640px; }}
     .club-info-table {{ width: 100%; border-collapse: collapse; font-size: 13px; }}
     .club-info-table th {{
       width: 100px;
@@ -1052,6 +1205,8 @@ def build_club_page(club_info: dict, slug: str, standing: dict,
   {club_basic_html}
 
   {standing_html}
+
+  {standings_chart_html}
 
   {players_html}
 
@@ -1336,7 +1491,7 @@ function trackAffClick(el) {{
 # ============================
 def main():
     print(f"データ読み込み中...")
-    players, matches, standings_comps, services, local_crests, news_items, club_info_data = load_data()
+    players, matches, standings_comps, services, local_crests, news_items, club_info_data, standings_history = load_data()
     print(f"  選手数: {len(players)}")
     print(f"  試合数: {len(matches)}")
     print(f"  ローカルエンブレム: {len(local_crests)} クラブ")
@@ -1365,13 +1520,16 @@ def main():
         opponent_records = get_opponent_records(club_info, matches)
         extra_info = club_info_data.get(club_en, {})
         highlights = get_club_highlights(club_info, matches)
+        # 節別順位履歴
+        sh_data = get_club_positions_history(club_info, standings_history)
 
         # HTMLページ生成
         html = build_club_page(club_info, slug, standing, recent_matches, crest_url, player_slug_map,
                                services=services, club_news=club_news,
                                opponent_records=opponent_records,
                                club_info_extra=extra_info if extra_info else None,
-                               highlights=highlights)
+                               highlights=highlights,
+                               standings_history_data=sh_data)
 
         # 出力
         out_dir = OUTPUT_DIR / slug
