@@ -263,14 +263,14 @@
             <div class="match-date">2026-05-16T22:30</div>
             <div class="match-opponent"><span class="home-away">A</span> vs ウニオン・ベルリン</div>
             <div class="match-result">—</div>
-            <div class="match-broadcast">DAZN / ABEMA</div>
+            <div class="match-broadcast"><a class="bc-tag bc-dazn" href="https://www.dazn.com/ja-JP/?utm_source=football-jp&amp;utm_medium=player_page&amp;utm_content=ryota-onoda&amp;utm_campaign=%E3%83%96%E3%83%B3%E3%83%87%E3%82%B9%E3%83%AA%E3%83%BC%E3%82%AC" target="_blank" rel="noopener" data-svc="DAZN" data-pagetype="player" data-pageid="ryota-onoda" onclick="trackAffClick(this)"><img class="bc-logo" src="/assets/broadcasters/dazn.png" alt="" width="16" height="16">DAZN</a> <a class="bc-tag bc-abema" href="https://abema.tv/?utm_source=football-jp&amp;utm_medium=player_page&amp;utm_content=ryota-onoda&amp;utm_campaign=%E3%83%96%E3%83%B3%E3%83%87%E3%82%B9%E3%83%AA%E3%83%BC%E3%82%AC" target="_blank" rel="noopener" data-svc="ABEMA" data-pagetype="player" data-pageid="ryota-onoda" onclick="trackAffClick(this)"><img class="bc-logo" src="/assets/broadcasters/abema.png" alt="" width="16" height="16">ABEMA</a></div>
             <div class="match-comp">ブンデスリーガ</div>
           </div>
           <div class="match-row scheduled">
             <div class="match-date">2026-05-09T22:30</div>
             <div class="match-opponent"><span class="home-away">H</span> vs ボルシアMG</div>
             <div class="match-result">—</div>
-            <div class="match-broadcast">DAZN / ABEMA</div>
+            <div class="match-broadcast"><a class="bc-tag bc-dazn" href="https://www.dazn.com/ja-JP/?utm_source=football-jp&amp;utm_medium=player_page&amp;utm_content=ryota-onoda&amp;utm_campaign=%E3%83%96%E3%83%B3%E3%83%87%E3%82%B9%E3%83%AA%E3%83%BC%E3%82%AC" target="_blank" rel="noopener" data-svc="DAZN" data-pagetype="player" data-pageid="ryota-onoda" onclick="trackAffClick(this)"><img class="bc-logo" src="/assets/broadcasters/dazn.png" alt="" width="16" height="16">DAZN</a> <a class="bc-tag bc-abema" href="https://abema.tv/?utm_source=football-jp&amp;utm_medium=player_page&amp;utm_content=ryota-onoda&amp;utm_campaign=%E3%83%96%E3%83%B3%E3%83%87%E3%82%B9%E3%83%AA%E3%83%BC%E3%82%AC" target="_blank" rel="noopener" data-svc="ABEMA" data-pagetype="player" data-pageid="ryota-onoda" onclick="trackAffClick(this)"><img class="bc-logo" src="/assets/broadcasters/abema.png" alt="" width="16" height="16">ABEMA</a></div>
             <div class="match-comp">ブンデスリーガ</div>
           </div>
           <div class="match-row">
@@ -307,9 +307,27 @@
 
   <footer class="site-footer">
     <p>データ提供: <a href="https://www.football-data.org/" target="_blank" rel="noopener">Football-Data.org</a></p>
-    <p><a href="/">football-jp トップへ</a> ／ <a href="/privacy.html">プライバシーポリシー</a></p>
+    <p class="footer-links">
+      <a href="/">football-jp トップへ</a> |
+      <a href="/players/">選手一覧</a> |
+      <a href="/clubs/">クラブ一覧</a> |
+      <a href="/privacy.html">プライバシーポリシー</a>
+    </p>
   </footer>
 </div>
+
+<script>
+function trackAffClick(el) {
+  if (typeof gtag === 'function') {
+    gtag('event', 'affiliate_click', {
+      service: el.dataset.svc,
+      page_type: el.dataset.pagetype,
+      page_id: el.dataset.pageid,
+      destination: el.href
+    });
+  }
+}
+</script>
 
 </body>
 </html>

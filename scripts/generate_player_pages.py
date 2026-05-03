@@ -22,11 +22,86 @@ SCORERS_JSON = REPO_ROOT / "data" / "scorers.json"
 MATCH_EVENTS_JSON = REPO_ROOT / "data" / "match_events.json"
 STANDINGS_JSON = REPO_ROOT / "data" / "standings.json"
 PLAYER_STATS_JSON = REPO_ROOT / "data" / "player_stats.json"
+BROADCASTERS_JSON = REPO_ROOT / "data" / "broadcasters.json"
 OUTPUT_DIR = REPO_ROOT / "players"
 
 GA4_ID = "G-39G8CVXRW0"
 SITE_NAME = "football-jp"
 SITE_URL = "https://football-jp.com"
+
+
+# ============================
+# broadcaster サービスマップ
+# ============================
+def load_services() -> dict:
+    """broadcasters.json の services セクションを返す。"""
+    if not BROADCASTERS_JSON.exists():
+        return {}
+    with open(BROADCASTERS_JSON, encoding="utf-8") as f:
+        data = json.load(f)
+    return data.get("services", {})
+
+
+def bc_brand_class(name: str) -> str:
+    """サービス名 → CSS クラス名変換。"""
+    n = (name or "").lower()
+    if "wowow" in n:
+        return "bc-wowow"
+    if "dazn" in n:
+        return "bc-dazn"
+    if "lemino" in n:
+        return "bc-lemino"
+    if "abema" in n:
+        return "bc-abema"
+    if "u-next" in n or "unext" in n:
+        return "bc-unext"
+    if "bs10" in n:
+        return "bc-bs10"
+    return "bc-default"
+
+
+def build_utm_url(base_url: str, page_type: str, page_id: str, league: str = "") -> str:
+    """UTMパラメータ付きURLを返す。"""
+    from urllib.parse import urlparse, urlencode, parse_qs, urlunparse
+    if not base_url:
+        return ""
+    params = {
+        "utm_source": "football-jp",
+        "utm_medium": f"{page_type}_page",
+        "utm_content": page_id,
+    }
+    if league:
+        params["utm_campaign"] = league
+    sep = "&" if "?" in base_url else "?"
+    return base_url + sep + urlencode(params)
+
+
+def build_bc_tag(broadcaster: dict, services: dict, page_type: str, page_id: str, league: str = "") -> str:
+    """配信サービス bc-tag HTML を生成する。"""
+    name = broadcaster.get("name", "")
+    svc = services.get(name, {})
+    # affiliate_url があればそれを、なければ url を使用
+    base_url = svc.get("affiliate_url") or svc.get("url") or broadcaster.get("url") or ""
+    if not base_url:
+        # url が無い場合はテキストのみ
+        brand_cls = bc_brand_class(name)
+        return f'<span class="bc-tag {esc(brand_cls)}">{esc(name)}</span>'
+
+    utm_url = build_utm_url(base_url, page_type, page_id, league)
+    brand_cls = bc_brand_class(name)
+    logo_file = svc.get("logo", "")
+    logo_html = ""
+    if logo_file:
+        logo_html = f'<img class="bc-logo" src="/assets/broadcasters/{esc(logo_file)}" alt="" width="16" height="16">'
+
+    return (
+        f'<a class="bc-tag {esc(brand_cls)}" href="{esc(utm_url)}" '
+        f'target="_blank" rel="noopener" '
+        f'data-svc="{esc(name)}" data-pagetype="{esc(page_type)}" data-pageid="{esc(page_id)}" '
+        f'onclick="trackAffClick(this)">'
+        f'{logo_html}{esc(name)}'
+        f'</a>'
+    )
 
 
 # ============================
@@ -114,7 +189,10 @@ def load_data():
         player_stats = ps_raw.get("stats", {})
         print(f"  player_stats.json: {len(player_stats)} 選手分")
 
-    return players, matches, matches_dict, scorers_comps, events, standings_comps, player_stats
+    services = load_services()
+    print(f"  サービス数: {len(services)}")
+
+    return players, matches, matches_dict, scorers_comps, events, standings_comps, player_stats, services
 
 
 def get_player_wiki_stats(player: dict, player_stats: dict) -> dict:
@@ -262,7 +340,7 @@ def get_club_standing(player: dict, standings_comps: dict) -> dict:
 # ============================
 def build_player_page(player: dict, slug: str, scorer_stats: dict,
                       goal_events: list, club_matches: list, standing: dict,
-                      wiki_stats: dict = None) -> str:
+                      wiki_stats: dict = None, services: dict = None) -> str:
     name_ja = player.get("name_ja", "")
     name_en = player.get("name_en", "")
     position = player.get("position", "")
@@ -403,17 +481,22 @@ def build_player_page(player: dict, slug: str, scorer_stats: dict,
                 else:
                     opponent = esc(home_ja)
                 home_away = "H" if is_home else "A"
-                broadcasters = m.get("broadcasters", [])
-                bc_str = ""
-                if broadcasters:
-                    bc_names = [b.get("name", "") for b in broadcasters[:2] if b.get("name")]
-                    bc_str = " / ".join(bc_names)
+                broadcasters_list = m.get("broadcasters", [])
+                league_ja_m = m.get("competition_ja", player.get("league_ja", ""))
+                bc_tags = ""
+                if broadcasters_list and services is not None:
+                    tags = [build_bc_tag(b, services, "player", slug, league_ja_m)
+                            for b in broadcasters_list[:2] if b.get("name")]
+                    bc_tags = " ".join(tags)
+                elif broadcasters_list:
+                    bc_names = [b.get("name", "") for b in broadcasters_list[:2] if b.get("name")]
+                    bc_tags = esc(" / ".join(bc_names))
                 match_rows += f"""
           <div class="match-row scheduled">
             <div class="match-date">{esc(date_display)}</div>
             <div class="match-opponent"><span class="home-away">{home_away}</span> vs {opponent}</div>
             <div class="match-result">—</div>
-            <div class="match-broadcast">{esc(bc_str) if bc_str else "—"}</div>
+            <div class="match-broadcast">{bc_tags if bc_tags else "—"}</div>
             <div class="match-comp">{esc(comp_ja)}</div>
           </div>"""
 
@@ -727,9 +810,309 @@ def build_player_page(player: dict, slug: str, scorer_stats: dict,
 
   <footer class="site-footer">
     <p>データ提供: <a href="https://www.football-data.org/" target="_blank" rel="noopener">Football-Data.org</a></p>
-    <p><a href="/">football-jp トップへ</a> ／ <a href="/privacy.html">プライバシーポリシー</a></p>
+    <p class="footer-links">
+      <a href="/">football-jp トップへ</a> |
+      <a href="/players/">選手一覧</a> |
+      <a href="/clubs/">クラブ一覧</a> |
+      <a href="/privacy.html">プライバシーポリシー</a>
+    </p>
   </footer>
 </div>
+
+<script>
+function trackAffClick(el) {{
+  if (typeof gtag === 'function') {{
+    gtag('event', 'affiliate_click', {{
+      service: el.dataset.svc,
+      page_type: el.dataset.pagetype,
+      page_id: el.dataset.pageid,
+      destination: el.href
+    }});
+  }}
+}}
+</script>
+
+</body>
+</html>
+"""
+
+
+# ============================
+# 一覧ページHTML生成
+# ============================
+def build_players_index(players: list, slug_map: dict) -> str:
+    """選手一覧ページ（/players/index.html）を生成する。"""
+    title = "日本人サッカー選手 一覧 海外組68名｜football-jp"
+    desc = "プレミア・ラ・リーガ・ブンデス等で活躍する日本人選手68名の一覧。各選手のプロフィール・統計・最近の試合へ。"
+    canonical = f"{SITE_URL}/players/"
+
+    # ポジション正規化（GK/DF/MF/FW の4分類）
+    def pos_category(pos: str) -> str:
+        p = pos.upper()
+        if "GK" in p:
+            return "GK"
+        if p.startswith("DF") or p.endswith("DF"):
+            return "DF"
+        if p.startswith("FW") or p.endswith("FW"):
+            return "FW"
+        if "MF" in p:
+            return "MF"
+        return "他"
+
+    # リーグ別にグループ化
+    LEAGUE_ORDER = [
+        "プレミアリーグ", "チャンピオンシップ",
+        "ブンデスリーガ", "ラ・リーガ",
+        "セリエA", "リーグ・アン", "リーグ・ドゥ",
+        "エールディビジ", "プリメイラ・リーガ", "ジュピラー・プロ・リーグ",
+    ]
+    groups: dict = {}
+    for i, p in enumerate(players):
+        league = p.get("league_ja", "その他")
+        if league not in groups:
+            groups[league] = []
+        groups[league].append((i, p))
+
+    # リーグ順でソート
+    sorted_leagues = sorted(
+        groups.keys(),
+        key=lambda l: LEAGUE_ORDER.index(l) if l in LEAGUE_ORDER else 99
+    )
+
+    sections_html = ""
+    for league in sorted_leagues:
+        league_players = groups[league]
+        cards_html = ""
+        for i, p in league_players:
+            slug = slug_map[i]
+            pos_cat = pos_category(p.get("position", ""))
+            cards_html += f"""
+        <a class="player-card" href="/players/{esc(slug)}/"
+           data-pos="{esc(pos_cat)}">
+          <span class="player-card-flag">🇯🇵</span>
+          <div class="player-card-body">
+            <div class="player-card-name-ja">{esc(p.get('name_ja',''))}</div>
+            <div class="player-card-name-en">{esc(p.get('name_en',''))}</div>
+            <div class="player-card-meta">
+              <span class="pos-badge pos-{esc(pos_cat.lower())}">{esc(pos_cat)}</span>
+              <span class="club-name">{esc(p.get('club_ja',''))}</span>
+            </div>
+          </div>
+        </a>"""
+
+        sections_html += f"""
+      <section class="league-section">
+        <h2 class="league-heading">{esc(league)}</h2>
+        <div class="player-grid">
+          {cards_html}
+        </div>
+      </section>"""
+
+    return f"""<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{esc(title)}</title>
+  <meta name="description" content="{esc(desc)}">
+  <link rel="canonical" href="{canonical}">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="{canonical}">
+  <meta property="og:title" content="{esc(title)}">
+  <meta property="og:description" content="{esc(desc)}">
+  <meta property="og:site_name" content="{esc(SITE_NAME)}">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id={GA4_ID}"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){{dataLayer.push(arguments);}}
+    gtag("js", new Date());
+    gtag("config", "{GA4_ID}");
+  </script>
+  <link rel="icon" href="/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/logos/favicon-32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/logos/favicon-180.png">
+  <link rel="stylesheet" href="/style.css">
+  <style>
+    .index-hero {{
+      background: #fff;
+      border-bottom: 1px solid var(--c-border, #e5e7eb);
+      padding: 20px 16px 16px;
+      margin-bottom: 0;
+    }}
+    .index-hero h1 {{
+      margin: 0 0 6px;
+      font-size: 22px;
+      font-weight: 800;
+    }}
+    .index-hero p {{
+      margin: 0;
+      font-size: 13px;
+      color: #555;
+    }}
+    .filter-bar {{
+      display: flex;
+      gap: 6px;
+      flex-wrap: wrap;
+      padding: 10px 16px;
+      background: #f8f9fa;
+      border-bottom: 1px solid var(--c-border, #e5e7eb);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }}
+    .filter-btn {{
+      padding: 4px 12px;
+      font-size: 12px;
+      font-weight: 600;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      background: #fff;
+      cursor: pointer;
+      transition: background 0.15s;
+    }}
+    .filter-btn.active, .filter-btn:hover {{
+      background: var(--c-accent, #0047ab);
+      color: #fff;
+      border-color: var(--c-accent, #0047ab);
+    }}
+    .league-section {{
+      padding: 14px 16px 4px;
+      border-bottom: 1px solid var(--c-border, #e5e7eb);
+      background: #fff;
+      margin-bottom: 1px;
+    }}
+    .league-section.hidden {{ display: none; }}
+    .league-heading {{
+      font-size: 13px;
+      font-weight: 700;
+      color: #444;
+      margin: 0 0 10px;
+      padding-left: 8px;
+      border-left: 3px solid var(--c-accent, #0047ab);
+    }}
+    .player-grid {{
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+      gap: 8px;
+      margin-bottom: 10px;
+    }}
+    .player-card {{
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+      background: #f8f9fa;
+      border: 1px solid var(--c-border, #e5e7eb);
+      border-radius: 4px;
+      padding: 10px 12px;
+      text-decoration: none;
+      color: var(--c-text, #111);
+      transition: background 0.15s;
+    }}
+    .player-card:hover {{ background: #eef0f7; }}
+    .player-card.hidden {{ display: none; }}
+    .player-card-flag {{ font-size: 18px; line-height: 1; padding-top: 1px; }}
+    .player-card-name-ja {{ font-size: 14px; font-weight: 700; margin-bottom: 2px; }}
+    .player-card-name-en {{ font-size: 11px; color: #666; margin-bottom: 4px; }}
+    .player-card-meta {{ display: flex; align-items: center; gap: 6px; }}
+    .pos-badge {{
+      display: inline-block;
+      padding: 1px 5px;
+      font-size: 10px;
+      font-weight: 700;
+      border-radius: 3px;
+      background: #e6f0fa;
+      color: #1565c0;
+    }}
+    .pos-gk {{ background: #fff3e0; color: #e65100; }}
+    .pos-df {{ background: #e8f5e9; color: #2e7d32; }}
+    .pos-mf {{ background: #e6f0fa; color: #1565c0; }}
+    .pos-fw {{ background: #fce4ec; color: #c62828; }}
+    .club-name {{ font-size: 11px; color: #555; }}
+    .back-link {{
+      display: block;
+      padding: 12px 16px;
+      font-size: 13px;
+      color: var(--c-text, #111);
+      text-decoration: none;
+      border-bottom: 1px solid var(--c-border, #e5e7eb);
+    }}
+    .site-footer {{
+      padding: 20px 16px;
+      font-size: 12px;
+      color: #666;
+      border-top: 1px solid var(--c-border, #e5e7eb);
+      margin-top: 20px;
+    }}
+    .site-footer a {{ color: #666; }}
+  </style>
+</head>
+<body>
+
+<a class="back-link" href="/">← football-jp トップへ</a>
+
+<div class="index-hero">
+  <h1>🇯🇵 日本人選手 一覧</h1>
+  <p>海外リーグで活躍する日本人選手 {len(players)} 名</p>
+</div>
+
+<div class="filter-bar" id="filterBar">
+  <button class="filter-btn active" data-filter="all" onclick="filterPlayers('all', this)">すべて</button>
+  <button class="filter-btn" data-filter="GK" onclick="filterPlayers('GK', this)">GK</button>
+  <button class="filter-btn" data-filter="DF" onclick="filterPlayers('DF', this)">DF</button>
+  <button class="filter-btn" data-filter="MF" onclick="filterPlayers('MF', this)">MF</button>
+  <button class="filter-btn" data-filter="FW" onclick="filterPlayers('FW', this)">FW</button>
+</div>
+
+<div style="max-width: 900px; margin: 0 auto;">
+  {sections_html}
+
+  <footer class="site-footer">
+    <p>データ提供: <a href="https://www.football-data.org/" target="_blank" rel="noopener">Football-Data.org</a></p>
+    <p class="footer-links">
+      <a href="/">football-jp トップへ</a> |
+      <a href="/clubs/">クラブ一覧（41）</a> |
+      <a href="/privacy.html">プライバシーポリシー</a>
+    </p>
+  </footer>
+</div>
+
+<script>
+function filterPlayers(pos, btn) {{
+  // ボタン状態更新
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+
+  // カード表示切替
+  document.querySelectorAll('.player-card').forEach(card => {{
+    if (pos === 'all' || card.dataset.pos === pos) {{
+      card.classList.remove('hidden');
+    }} else {{
+      card.classList.add('hidden');
+    }}
+  }});
+
+  // 全カード非表示のセクションを隠す
+  document.querySelectorAll('.league-section').forEach(sec => {{
+    const visible = [...sec.querySelectorAll('.player-card')].some(c => !c.classList.contains('hidden'));
+    sec.classList.toggle('hidden', !visible);
+  }});
+}}
+</script>
+<script>
+function trackAffClick(el) {{
+  if (typeof gtag === 'function') {{
+    gtag('event', 'affiliate_click', {{
+      service: el.dataset.svc,
+      page_type: el.dataset.pagetype,
+      page_id: el.dataset.pageid,
+      destination: el.href
+    }});
+  }}
+}}
+</script>
 
 </body>
 </html>
@@ -741,7 +1124,7 @@ def build_player_page(player: dict, slug: str, scorer_stats: dict,
 # ============================
 def main():
     print(f"データ読み込み中...")
-    players, matches, matches_dict, scorers_comps, events, standings_comps, player_stats = load_data()
+    players, matches, matches_dict, scorers_comps, events, standings_comps, player_stats, services = load_data()
     print(f"  選手数: {len(players)}")
     print(f"  試合数: {len(matches)}")
 
@@ -765,7 +1148,7 @@ def main():
 
         # HTMLページ生成
         html = build_player_page(player, slug, scorer_stats, goal_events, club_matches, standing,
-                                 wiki_stats=wiki_stats)
+                                 wiki_stats=wiki_stats, services=services)
 
         # 出力
         out_dir = OUTPUT_DIR / slug
@@ -784,6 +1167,14 @@ def main():
     print("\n生成済みslug一覧:")
     for name_ja, name_en, slug, size in generated:
         print(f"  {name_ja:12s} → /players/{slug}/")
+
+    # 一覧ページ生成
+    print("\n一覧ページ生成中...")
+    index_html = build_players_index(players, slug_map)
+    index_path = OUTPUT_DIR / "index.html"
+    with open(index_path, "w", encoding="utf-8") as f:
+        f.write(index_html)
+    print(f"  ✅ /players/index.html → {index_path.stat().st_size:,} bytes")
 
     print("\n完了！")
     return slug_map
