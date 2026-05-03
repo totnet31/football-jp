@@ -1,5 +1,5 @@
 {
-  "updated": "2026-05-03T23:07:55.315761+09:00",
+  "updated": "2026-05-03T23:18:29.324927+09:00",
   "competitions": {
     "39": {
       "name_ja": "プレミアリーグ",
@@ -2790,6 +2790,18 @@
           "playedMatches": 33
         },
         {
+          "player_id": 8822,
+          "player_name": "Armand Lauriente",
+          "nationality": "France",
+          "team_id": 471,
+          "team_ja": "サッスオーロ",
+          "team_crest": "https://crests.football-data.org/471.png",
+          "goals": 6,
+          "assists": 10,
+          "penalties": null,
+          "playedMatches": 35
+        },
+        {
           "player_id": 172183,
           "player_name": "Ismael Kone",
           "nationality": "Canada",
@@ -2920,18 +2932,6 @@
           "assists": 3,
           "penalties": null,
           "playedMatches": 29
-        },
-        {
-          "player_id": 8822,
-          "player_name": "Armand Lauriente",
-          "nationality": "France",
-          "team_id": 471,
-          "team_ja": "サッスオーロ",
-          "team_crest": "https://crests.football-data.org/471.png",
-          "goals": 5,
-          "assists": 10,
-          "penalties": null,
-          "playedMatches": 35
         },
         {
           "player_id": 2017,
