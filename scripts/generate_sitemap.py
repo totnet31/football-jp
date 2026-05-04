@@ -57,6 +57,13 @@ STATIC_URLS = [
     ("/worldcup/bracket.html",      "0.7", "weekly"),
     ("/worldcup/rules.html",        "0.5", "monthly"),
     ("/worldcup/countries.html",    "0.7", "weekly"),
+    # English pages (Phase 1)
+    ("/en/",                        "0.9", "daily"),
+    ("/en/results/",                "0.8", "daily"),
+    ("/en/calendar/",               "0.7", "daily"),
+    ("/en/standings/",              "0.7", "daily"),
+    ("/en/players/",                "0.8", "weekly"),
+    ("/en/clubs/",                  "0.7", "weekly"),
 ]
 
 
