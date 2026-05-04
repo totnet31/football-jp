@@ -1,20 +1,20 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>海外サッカー 順位表・得点ランキング｜日本人選手｜football-jp</title>
-  <meta name="description" content="プレミア・ラ・リーガ・セリエA・ブンデス・リーグ1・エールディビジ等の順位表＋得点・アシストランキング上位50名を毎朝更新。日本人選手の活躍を一目で。">
-  <link rel="canonical" href="https://football-jp.com/standings/">
-  <link rel="alternate" hreflang="ja" href="https://football-jp.com/standings/">
-  <link rel="alternate" hreflang="en" href="https://football-jp.com/en/standings/">
-  <link rel="alternate" hreflang="x-default" href="https://football-jp.com/standings/">
+  <title>Japanese Soccer Players Abroad — Match Schedule | football-jp</title>
+  <meta name="description" content="Match schedules of Japanese players in Premier League, La Liga, Serie A, Bundesliga, etc., displayed in JST. Highlights, scorers, and stream platforms.">
+  <link rel="canonical" href="https://football-jp.com/en/">
+  <link rel="alternate" hreflang="ja" href="https://football-jp.com/">
+  <link rel="alternate" hreflang="en" href="https://football-jp.com/en/">
+  <link rel="alternate" hreflang="x-default" href="https://football-jp.com/">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://football-jp.com/standings/">
-  <meta property="og:title" content="海外サッカー 順位表・得点ランキング｜football-jp">
-  <meta property="og:description" content="プレミア・ラ・リーガ・セリエA・ブンデス等の順位表と得点・アシストランキング。">
+  <meta property="og:url" content="https://football-jp.com/en/">
+  <meta property="og:title" content="Japanese Soccer Players Abroad — Match Schedule | football-jp">
+  <meta property="og:description" content="Match schedules of Japanese players in Premier League, La Liga, Serie A, Bundesliga, etc., displayed in JST.">
   <meta property="og:site_name" content="football-jp">
-  <meta property="og:locale" content="ja_JP">
+  <meta property="og:locale" content="en_US">
   <meta name="twitter:card" content="summary_large_image">
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-39G8CVXRW0"></script>
@@ -23,6 +23,7 @@
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
     gtag('config', 'G-39G8CVXRW0');
+    gtag('event', 'page_view', { language: 'en' });
   </script>
   <link rel="stylesheet" href="/style.css">
   <link rel="icon" href="/favicon.ico">
@@ -35,9 +36,9 @@
   "@context": "https://schema.org",
   "@type": "WebSite",
   "name": "football-jp",
-  "alternateName": "海外サッカー 日本人選手 試合スケジュール",
-  "url": "https://football-jp.com/",
-  "inLanguage": "ja-JP",
+  "alternateName": "Japanese Soccer Players Abroad — Match Schedule",
+  "url": "https://football-jp.com/en/",
+  "inLanguage": "en",
   "publisher": {
     "@type": "Organization",
     "name": "football-jp",
@@ -46,9 +47,9 @@
 }
   </script>
 </head>
-<body data-view="ranking">
+<body data-view="schedule">
   <header>
-    <h1><a href="/" style="color:inherit;text-decoration:none;"><img src="/assets/logos/logo-header.png" alt="football-jp" class="header-logo"> 海外サッカー 順位表・得点ランキング</a></h1>
+    <h1><img src="/assets/logos/logo-header.png" alt="football-jp" class="header-logo"> Japanese Soccer Players Abroad — Match Schedule</h1>
     <p class="updated" id="updated"></p>
     <p class="period" id="period"></p>
   </header>
@@ -57,32 +58,32 @@
     <div class="wc-promo-grid">
       <div class="trophy">🏆</div>
       <div class="text">
-        <div class="title">2026 FIFA ワールドカップ 特集</div>
-        <div class="sub">日本はGroup F（オランダ・スウェーデン・チュニジア）／全104試合・48か国を日本時間で</div>
+        <div class="title">2026 FIFA World Cup Special</div>
+        <div class="sub">Japan in Group F (Netherlands / Sweden / Tunisia) — All 104 matches & 48 nations in JST</div>
       </div>
       <div class="countdown-block">
         <div class="countdown" id="wcDays">—</div>
-        <div class="countdown-label">日本初戦まで</div>
+        <div class="countdown-label">days to Japan's first match</div>
       </div>
     </div>
   </a>
 
   <nav class="view-tabs">
-    <a class="view-tab" href="/" data-view="schedule">
+    <a class="view-tab active" href="/en/" data-view="schedule">
       <svg class="vt-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
         <circle cx="12" cy="12" r="9"/>
         <path d="M12 7v5l3.5 2"/>
       </svg>
-      <span>予定を見る</span>
+      <span>Schedule</span>
     </a>
-    <a class="view-tab" href="/results/" data-view="results">
+    <a class="view-tab" href="/en/results/" data-view="results">
       <svg class="vt-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
         <circle cx="12" cy="12" r="9"/>
         <path d="M8 12.5l3 3 5-6"/>
       </svg>
-      <span>結果を見る</span>
+      <span>Results</span>
     </a>
-    <a class="view-tab" href="/calendar/" data-view="calendar">
+    <a class="view-tab" href="/en/calendar/" data-view="calendar">
       <svg class="vt-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
         <rect x="3.5" y="5" width="17" height="15.5" rx="1.5"/>
         <path d="M3.5 10h17"/>
@@ -93,26 +94,26 @@
         <circle cx="8" cy="17.5" r="0.9" fill="currentColor" stroke="none"/>
         <circle cx="12" cy="17.5" r="0.9" fill="currentColor" stroke="none"/>
       </svg>
-      <span>カレンダー</span>
+      <span>Calendar</span>
     </a>
-    <a class="view-tab active" href="/standings/" data-view="ranking">
+    <a class="view-tab" href="/en/standings/" data-view="ranking">
       <svg class="vt-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
         <path d="M4 20h16"/>
         <path d="M7 20v-5"/>
         <path d="M12 20v-9"/>
         <path d="M17 20v-13"/>
       </svg>
-      <span>順位・ランキング</span>
+      <span>Standings &amp; Rankings</span>
     </a>
   </nav>
 
   <section class="filters" id="matchFilters">
     <label class="toggle">
       <input type="checkbox" id="onlyJp">
-      <span>🇯🇵 日本人選手の試合のみ</span>
+      <span>🇯🇵 Japanese players only</span>
     </label>
     <details class="league-filter">
-      <summary>リーグで絞り込み</summary>
+      <summary>Filter by league</summary>
       <div id="leagueChecks"></div>
     </details>
   </section>
@@ -121,15 +122,15 @@
     <details class="news-section" id="newsSection" hidden>
       <summary class="news-section-title">
         <span class="news-icon">📰</span>
-        <span class="news-label">日本人選手 海外サッカーニュース</span>
+        <span class="news-label">Japanese Players — Overseas Soccer News</span>
         <span class="news-count" id="newsCount"></span>
         <span class="news-toggle-arrow" aria-hidden="true">▼</span>
       </summary>
       <div id="newsList" class="news-list"></div>
-      <p class="news-source-note">出典：サッカーキング・Football Channel・Footballista・THE WORLD・ゲキサカ・Football Zone 各公式RSS／毎朝7時更新</p>
+      <p class="news-source-note">Source: Soccer King, Football Channel, Footballista, THE WORLD, Geki Saka, Football Zone (official RSS / updated every morning at 7 JST)</p>
     </details>
 
-    <div id="scheduleView" class="view hidden"></div>
+    <div id="scheduleView" class="view"></div>
     <div id="resultsView" class="view hidden"></div>
 
     <div id="calendarView" class="view hidden">
@@ -137,26 +138,26 @@
         <button id="calPrev">←</button>
         <span id="calMonthLabel"></span>
         <button id="calNext">→</button>
-        <button id="calToday">今月</button>
+        <button id="calToday">This month</button>
       </div>
       <div id="calGrid" class="cal-grid"></div>
       <div id="calDayDetail" class="cal-day-detail"></div>
     </div>
 
-    <div id="rankingView" class="view">
+    <div id="rankingView" class="view hidden">
       <div class="rank-controls">
         <label>
-          リーグ:
+          League:
           <select id="rankLeague"></select>
         </label>
       </div>
-      <h2 class="rank-section-title">順位表</h2>
+      <h2 class="rank-section-title">Standings</h2>
       <div id="standingsContent"></div>
-      <h2 class="rank-section-title">得点・アシストランキング（上位50名）</h2>
+      <h2 class="rank-section-title">Goals &amp; Assists Ranking (Top 50)</h2>
       <div class="rank-controls">
-        <span>並び替え:</span>
-        <button class="sort-btn active" data-sort="goals">ゴール</button>
-        <button class="sort-btn" data-sort="assists">アシスト</button>
+        <span>Sort by:</span>
+        <button class="sort-btn active" data-sort="goals">Goals</button>
+        <button class="sort-btn" data-sort="assists">Assists</button>
         <button class="sort-btn" data-sort="ga">G+A</button>
       </div>
       <div id="scorersContent"></div>
@@ -164,30 +165,31 @@
   </main>
 
   <footer>
-    <p>データ提供: <a href="https://www.football-data.org/" target="_blank" rel="noopener">football-data.org</a></p>
-    <p>放送情報は2026-04-29時点。シーズンによって変動します。</p>
+    <p>Data provided by <a href="https://www.football-data.org/" target="_blank" rel="noopener">football-data.org</a></p>
+    <p>Broadcast info as of 2026-04-29. Subject to change by season.</p>
     <nav class="footer-nav">
-      <a href="/players/">日本人選手一覧（68名）</a>
-      <a href="/clubs/">クラブ一覧（41）</a>
+      <a href="/en/players/">Japanese Players List (68)</a>
+      <a href="/en/clubs/">Clubs List (41)</a>
     </nav>
     <p class="footer-legal">
-      <a href="/privacy.html">プライバシーポリシー</a>
+      <a href="/privacy.html">Privacy Policy</a>
       &nbsp;|&nbsp;
-      <a href="/en/standings/">🇺🇸 English</a>
+      <a href="/">🇯🇵 日本語</a>
     </p>
   </footer>
 
   <script src="/app.js"></script>
   <script>
+  // World Cup Japan first match countdown (Netherlands vs Japan: 2026-06-15 05:00 JST)
   (function() {
     const target = new Date('2026-06-15T05:00:00+09:00').getTime();
     const el = document.getElementById('wcDays');
     if (!el) return;
     function tick() {
       const diff = target - Date.now();
-      if (diff <= 0) { el.textContent = '開幕'; return; }
+      if (diff <= 0) { el.textContent = 'Kick off!'; return; }
       const days = Math.ceil(diff / 86400000);
-      el.innerHTML = `<span class="num">${days}</span><span class="unit">日</span>`;
+      el.innerHTML = `<span class="num">${days}</span><span class="unit">d</span>`;
     }
     tick();
     setInterval(tick, 60000);
