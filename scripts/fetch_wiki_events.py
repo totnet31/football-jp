@@ -520,6 +520,8 @@ _TEAM_ALIASES = {
     "1 fc koln": ["cologne", "koln", "1 koln"],
     "ac pisa": ["pisa"],
     "sc freiburg": ["freiburg", "sc freiburg"],
+    "psg": ["paris saint germain", "psg"],
+    "preston ne": ["preston north end", "preston ne"],
 }
 
 
