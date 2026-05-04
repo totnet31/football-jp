@@ -44,6 +44,7 @@
   let jpClubIds = new Set();       // 日本人選手が所属するクラブID
   let jpPlayersByClub = new Map(); // クラブID → 選手名(日本語)の配列
   let jpPlayerSlugMap = new Map(); // name_ja → slug（選手ページリンク用）
+  let jpPlayerEnMap = new Map(); // name_ja → name_en（英語表示用・苗字のみ）
   let dataRangeFrom = null;
   let dataRangeTo = null;
   const enabledLeagues = new Set();
@@ -166,6 +167,10 @@
               usedSlugs[base]++;
               jpPlayerSlugMap.set(p.name_ja, `${base}-${usedSlugs[base]}`);
             }
+            // name_ja → name_en（苗字のみ、英語badge用）
+            const parts = (p.name_en || '').trim().split(/\s+/);
+            const lastName = parts.length > 1 ? parts[parts.length - 1] : (parts[0] || p.name_en);
+            jpPlayerEnMap.set(p.name_ja, lastName);
           }
         }
       }
@@ -365,25 +370,31 @@
       // 日本人選手名：簡略化（3人以上は最初2人 + 残り人数を表示・(レンタル)等の補足は除去）
       let jpHtml = '';
       if (jp.length > 0) {
-        const cleaned = jp.map(p => ({
-          nameJa: String(p.name_ja || '').replace(/（[^）]*）/g, '').trim(),
-          raw: String(p.name_ja || '').trim(),
-        })).filter(p => p.nameJa);
+        const cleaned = jp.map(p => {
+          const raw = String(p.name_ja || '').trim();
+          const nameJa = raw.replace(/（[^）]*）/g, '').trim();
+          // 英語モード：苗字のみ（jpPlayerEnMap から取得）
+          const nameEn = jpPlayerEnMap.get(raw) || jpPlayerEnMap.get(nameJa) || '';
+          const display = IS_EN && nameEn ? nameEn : nameJa;
+          return { nameJa, raw, display };
+        }).filter(p => p.nameJa);
         // 選手名をリンク化（slotがあれば /players/{slug}/ へ）
-        const makePlayerLink = (nameJa, raw) => {
-          const slug = jpPlayerSlugMap.get(raw) || jpPlayerSlugMap.get(nameJa);
+        const playerHref = IS_EN ? (slug) => `/en/players/${slug}/` : (slug) => `/players/${slug}/`;
+        const makePlayerLink = (display, raw) => {
+          const slug = jpPlayerSlugMap.get(raw) || jpPlayerSlugMap.get(display);
           if (slug) {
-            return `<a class="jp-player-link" href="/players/${escape(slug)}/" onclick="event.stopPropagation()" style="color:inherit;text-decoration:underline dotted;">${escape(nameJa)}</a>`;
+            return `<a class="jp-player-link" href="${playerHref(escape(slug))}" onclick="event.stopPropagation()" style="color:inherit;text-decoration:underline dotted;">${escape(display)}</a>`;
           }
-          return escape(nameJa);
+          return escape(display);
         };
+        const sep = IS_EN ? ', ' : '・';
         let label;
         if (cleaned.length <= 2) {
-          label = cleaned.map(p => makePlayerLink(p.nameJa, p.raw)).join('・');
+          label = cleaned.map(p => makePlayerLink(p.display, p.raw)).join(sep);
         } else {
-          label = `${makePlayerLink(cleaned[0].nameJa, cleaned[0].raw)}・${makePlayerLink(cleaned[1].nameJa, cleaned[1].raw)} +${cleaned.length - 2}`;
+          label = `${makePlayerLink(cleaned[0].display, cleaned[0].raw)}${sep}${makePlayerLink(cleaned[1].display, cleaned[1].raw)} +${cleaned.length - 2}`;
         }
-        const tip = cleaned.map(p => p.nameJa).join('・');
+        const tip = cleaned.map(p => p.display).join(sep);
         jpHtml = `<span class="team-jp" title="${escape(tip)}">🇯🇵 ${label}</span>`;
       }
       const crestHtml = crest ? `<img class="team-crest" src="${escape(crest)}" alt="" loading="lazy">` : '<span class="team-crest"></span>';
