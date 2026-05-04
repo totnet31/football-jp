@@ -125,7 +125,15 @@ jobs:
             echo "データ変更なし"
           else
             git commit -m "data: $(TZ=Asia/Tokyo date '+%Y-%m-%d') 自動更新"
-            git push origin develop
+            # 並行 push を考慮して、最大3回 pull --rebase + push でリトライ
+            for i in 1 2 3; do
+              if git push origin develop; then
+                break
+              fi
+              echo "push 失敗、pull --rebase してリトライ ($i/3)"
+              git pull --rebase origin develop
+              sleep 2
+            done
             echo "no_change=false" >> $GITHUB_OUTPUT
           fi
 
