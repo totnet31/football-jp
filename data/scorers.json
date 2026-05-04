@@ -1,5 +1,5 @@
 {
-  "updated": "2026-05-04T19:36:12.927809+09:00",
+  "updated": "2026-05-05T01:18:34.923885+09:00",
   "competitions": {
     "39": {
       "name_ja": "プレミアリーグ",
@@ -48,10 +48,10 @@
           "team_id": 61,
           "team_ja": "チェルシー",
           "team_crest": "https://crests.football-data.org/61.png",
-          "goals": 14,
+          "goals": 15,
           "assists": 5,
           "penalties": null,
-          "playedMatches": 32
+          "playedMatches": 33
         },
         {
           "player_id": 8279,
@@ -85,9 +85,9 @@
           "team_ja": "ノッティンガム・フォレスト",
           "team_crest": "https://crests.football-data.org/351.png",
           "goals": 13,
-          "assists": 4,
+          "assists": 5,
           "penalties": 1,
-          "playedMatches": 34
+          "playedMatches": 35
         },
         {
           "player_id": 7839,
@@ -219,7 +219,7 @@
           "goals": 9,
           "assists": 1,
           "penalties": 5,
-          "playedMatches": 23
+          "playedMatches": 24
         },
         {
           "player_id": 3231,
@@ -291,7 +291,7 @@
           "goals": 8,
           "assists": 3,
           "penalties": 2,
-          "playedMatches": 32
+          "playedMatches": 33
         },
         {
           "player_id": 3257,
@@ -582,6 +582,18 @@
           "playedMatches": 27
         },
         {
+          "player_id": 256339,
+          "player_name": "Igor Jesus",
+          "nationality": "Brazil",
+          "team_id": 351,
+          "team_ja": "ノッティンガム・フォレスト",
+          "team_crest": "https://crests.football-data.org/351.png",
+          "goals": 6,
+          "assists": 5,
+          "penalties": 1,
+          "playedMatches": 34
+        },
+        {
           "player_id": 19334,
           "player_name": "Florian Wirtz",
           "nationality": "Germany",
@@ -592,18 +604,6 @@
           "assists": 3,
           "penalties": null,
           "playedMatches": 31
-        },
-        {
-          "player_id": 171995,
-          "player_name": "Thierno Barry",
-          "nationality": "France",
-          "team_id": 62,
-          "team_ja": "エヴァートン",
-          "team_crest": "https://crests.football-data.org/62.png",
-          "goals": 6,
-          "assists": 1,
-          "penalties": null,
-          "playedMatches": 34
         }
       ]
     },
@@ -2691,7 +2691,7 @@
           "goals": 7,
           "assists": 2,
           "penalties": 2,
-          "playedMatches": 33
+          "playedMatches": 34
         },
         {
           "player_id": 170891,
@@ -2967,7 +2967,7 @@
           "goals": 5,
           "assists": 2,
           "penalties": null,
-          "playedMatches": 26
+          "playedMatches": 27
         },
         {
           "player_id": 3851,

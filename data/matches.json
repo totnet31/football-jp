@@ -1,8 +1,8 @@
 {
-  "updated": "2026-05-04T19:34:50.950901+09:00",
-  "date_from": "2026-04-27",
-  "date_to": "2026-05-18",
-  "match_count": 312,
+  "updated": "2026-05-05T01:17:10.264906+09:00",
+  "date_from": "2026-04-28",
+  "date_to": "2026-05-19",
+  "match_count": 314,
   "_note": "累積保持モード：フェッチ窓外の過去試合データはそのまま保持される。",
   "matches": [
     {
@@ -5208,7 +5208,7 @@
       "away_en": "Heracles",
       "away_crest": "https://crests.football-data.org/671.png",
       "score": {
-        "home": 2,
+        "home": 1,
         "away": 0
       },
       "japanese_players": [],
@@ -6045,7 +6045,7 @@
       "competition_category": "league",
       "competition_flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
       "kickoff_jst": "2026-05-04T23:00:00+09:00",
-      "status": "TIMED",
+      "status": "FINISHED",
       "stage": "REGULAR_SEASON",
       "matchday": 35,
       "home_id": 61,
@@ -6056,7 +6056,10 @@
       "away_ja": "ノッティンガム・フォレスト",
       "away_en": "Nottingham",
       "away_crest": "https://crests.football-data.org/351.png",
-      "score": null,
+      "score": {
+        "home": 1,
+        "away": 3
+      },
       "japanese_players": [],
       "broadcasters": [
         {
@@ -11145,8 +11148,72 @@
           "note": "〜2030-31"
         }
       ]
+    },
+    {
+      "id": 538145,
+      "competition_id": 39,
+      "competition_ja": "プレミアリーグ",
+      "competition_category": "league",
+      "competition_flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+      "kickoff_jst": "2026-05-20T03:30:00+09:00",
+      "status": "TIMED",
+      "stage": "REGULAR_SEASON",
+      "matchday": 37,
+      "home_id": 1044,
+      "home_ja": "ボーンマス",
+      "home_en": "Bournemouth",
+      "home_crest": "https://crests.football-data.org/bournemouth.png",
+      "away_id": 65,
+      "away_ja": "マンチェスター・シティ",
+      "away_en": "Man City",
+      "away_crest": "https://crests.football-data.org/65.png",
+      "score": null,
+      "japanese_players": [],
+      "broadcasters": [
+        {
+          "name": "U-NEXT",
+          "type": "exclusive",
+          "url": "https://www.unext.jp/",
+          "note": "〜2030-31"
+        }
+      ]
+    },
+    {
+      "id": 538149,
+      "competition_id": 39,
+      "competition_ja": "プレミアリーグ",
+      "competition_category": "league",
+      "competition_flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+      "kickoff_jst": "2026-05-20T04:15:00+09:00",
+      "status": "TIMED",
+      "stage": "REGULAR_SEASON",
+      "matchday": 37,
+      "home_id": 61,
+      "home_ja": "チェルシー",
+      "home_en": "Chelsea",
+      "home_crest": "https://crests.football-data.org/61.png",
+      "away_id": 73,
+      "away_ja": "トッテナム",
+      "away_en": "Tottenham",
+      "away_crest": "https://crests.football-data.org/73.png",
+      "score": null,
+      "japanese_players": [
+        {
+          "name_ja": "高井幸大",
+          "position": "DF",
+          "side": "away"
+        }
+      ],
+      "broadcasters": [
+        {
+          "name": "U-NEXT",
+          "type": "exclusive",
+          "url": "https://www.unext.jp/",
+          "note": "〜2030-31"
+        }
+      ]
     }
   ],
-  "updated_yt_highlights": "2026-05-04T19:38:33.823976+09:00",
-  "updated_uefa_secondary": "2026-05-04T19:39:00.415067+09:00"
+  "updated_yt_highlights": "2026-05-05T01:21:00.400323+09:00",
+  "updated_uefa_secondary": "2026-05-05T01:21:31.783726+09:00"
 }
