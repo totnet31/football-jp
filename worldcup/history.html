@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>歴代W杯の歴史と記録 | football-jp</title>
+  <meta name="description" content="1930年から2022年までの歴代FIFAワールドカップ全22大会の歴史・記録。優勝国ランキング・大会一覧・歴代得点王・番狂わせ・日本代表の軌跡をまとめて掲載。">
+  <link rel="canonical" href="https://football-jp.com/worldcup/history.html">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://football-jp.com/worldcup/history.html">
+  <meta property="og:title" content="歴代W杯の歴史と記録 | football-jp">
+  <meta property="og:description" content="1930年から2022年まで全22大会の歴代FIFAワールドカップ記録。優勝国・大会一覧・得点王・番狂わせ・日本代表の全W杯成績。">
+  <meta property="og:site_name" content="football-jp">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-39G8CVXRW0"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag("js", new Date());
+    gtag("config", "G-39G8CVXRW0");
+  </script>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* === History page specific styles === */
+    .hist-toc {
+      background: #f0f1f5;
+      padding: 14px 18px;
+      margin-bottom: 20px;
+      font-size: 13px;
+      line-height: 1.9;
+    }
+    .hist-toc a {
+      color: var(--c-text);
+      text-decoration: none;
+      margin-right: 14px;
+      border-bottom: 1px dotted var(--c-border-strong);
+    }
+    .hist-toc a:hover {
+      color: var(--c-accent);
+      border-bottom-color: var(--c-accent);
+      text-decoration: none;
+    }
+
+    /* 優勝国ランキング */
+    .title-rank-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 8px;
+      margin-top: 4px;
+    }
+    .title-rank-card {
+      background: #fff;
+      border: 1px solid var(--c-border);
+      padding: 12px 14px;
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+    }
+    .title-rank-num {
+      font-size: 22px;
+      font-weight: 800;
+      color: var(--c-accent);
+      min-width: 28px;
+      line-height: 1.2;
+      font-feature-settings: "tnum";
+    }
+    .title-rank-num.gold { color: #d4af37; }
+    .title-rank-num.silver { color: #888; }
+    .title-rank-content { flex: 1; min-width: 0; }
+    .title-rank-country {
+      font-size: 15px;
+      font-weight: 700;
+      margin-bottom: 2px;
+    }
+    .title-rank-count {
+      font-size: 12px;
+      color: var(--c-text-sub);
+      margin-bottom: 4px;
+    }
+    .title-rank-years {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 4px;
+    }
+    .year-badge {
+      font-size: 11px;
+      background: var(--c-bg-subtle);
+      border: 1px solid var(--c-border);
+      padding: 1px 7px;
+      color: var(--c-text-sub);
+      font-feature-settings: "tnum";
+    }
+    .year-badge.champion {
+      background: #fff8e1;
+      border-color: #d4af37;
+      color: #7a5c00;
+    }
+
+    /* 大会一覧テーブル */
+    .hist-table-wrap {
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      margin-top: 4px;
+    }
+    .hist-table {
+      width: 100%;
+      min-width: 680px;
+      border-collapse: collapse;
+      background: #fff;
+      border: 1px solid var(--c-border);
+      font-size: 13px;
+    }
+    .hist-table th {
+      background: var(--c-bg-subtle);
+      padding: 8px 10px;
+      text-align: left;
+      font-weight: 600;
+      font-size: 11px;
+      letter-spacing: 0.04em;
+      color: var(--c-text-sub);
+      border-bottom: 1px solid var(--c-border-strong);
+      white-space: nowrap;
+    }
+    .hist-table td {
+      padding: 8px 10px;
+      border-bottom: 1px solid var(--c-border);
+      font-size: 12.5px;
+      vertical-align: top;
+      line-height: 1.5;
+    }
+    .hist-table tr:last-child td { border-bottom: none; }
+    .hist-table tr:hover { background: var(--c-bg-subtle); }
+    .hist-table tr.japan-row {
+      background: #fff5f7;
+    }
+    .hist-table tr.japan-row:hover { background: #ffeef1; }
+    .hist-table .yr { font-weight: 700; font-feature-settings: "tnum"; white-space: nowrap; }
+    .hist-table .score-cell {
+      font-weight: 600;
+      font-feature-settings: "tnum";
+      white-space: nowrap;
+      color: var(--c-navy);
+    }
+    .japan-badge {
+      display: inline-block;
+      background: var(--c-japan);
+      color: #fff;
+      font-size: 10px;
+      padding: 1px 5px;
+      font-weight: 700;
+      margin-left: 4px;
+      vertical-align: middle;
+    }
+
+    /* 得点王 */
+    .scorer-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .scorer-list li {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 12px;
+      border-bottom: 1px solid var(--c-border);
+      background: #fff;
+    }
+    .scorer-list li:last-child { border-bottom: none; border: 1px solid var(--c-border); }
+    .scorer-list li:not(:last-child) { border: 1px solid var(--c-border); border-bottom: none; }
+    .scorer-rank {
+      font-size: 18px;
+      font-weight: 800;
+      color: var(--c-accent);
+      min-width: 28px;
+      text-align: center;
+      font-feature-settings: "tnum";
+    }
+    .scorer-rank.r1 { color: #d4af37; }
+    .scorer-info { flex: 1; }
+    .scorer-name { font-size: 14px; font-weight: 700; }
+    .scorer-country { font-size: 12px; color: var(--c-text-sub); margin-top: 1px; }
+    .scorer-goals {
+      font-size: 22px;
+      font-weight: 800;
+      color: var(--c-navy);
+      font-feature-settings: "tnum";
+    }
+    .scorer-goals-unit { font-size: 11px; color: var(--c-text-sub); font-weight: 400; }
+
+    /* 番狂わせカード */
+    .upset-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 10px;
+      margin-top: 4px;
+    }
+    .upset-card {
+      background: #fff;
+      border: 1px solid var(--c-border);
+      border-left: 4px solid var(--c-accent);
+      padding: 14px 16px;
+    }
+    .upset-header {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 8px;
+    }
+    .upset-year {
+      font-size: 11px;
+      background: var(--c-bg-subtle);
+      border: 1px solid var(--c-border);
+      padding: 2px 8px;
+      color: var(--c-text-sub);
+      font-feature-settings: "tnum";
+      white-space: nowrap;
+    }
+    .upset-score {
+      font-size: 15px;
+      font-weight: 800;
+      color: var(--c-accent);
+      font-feature-settings: "tnum";
+    }
+    .upset-teams {
+      font-size: 13px;
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+    .upset-note {
+      font-size: 12px;
+      color: var(--c-text-sub);
+      line-height: 1.6;
+    }
+
+    /* 日本史 */
+    .japan-hist-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 8px;
+      margin-top: 4px;
+    }
+    .japan-hist-card {
+      background: #fff;
+      border: 1px solid var(--c-border);
+      border-left: 4px solid var(--c-japan);
+      padding: 12px 14px;
+    }
+    .japan-hist-year {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--c-japan);
+      margin-bottom: 2px;
+      font-feature-settings: "tnum";
+    }
+    .japan-hist-host {
+      font-size: 11px;
+      color: var(--c-text-sub);
+      margin-bottom: 6px;
+    }
+    .japan-hist-result {
+      display: inline-block;
+      font-size: 12px;
+      font-weight: 700;
+      padding: 2px 8px;
+      margin-bottom: 6px;
+    }
+    .japan-hist-result.best16 { background: #fff8e1; color: #7a5c00; border: 1px solid #d4af37; }
+    .japan-hist-result.gs { background: #f5f5f5; color: #555; border: 1px solid #ccc; }
+    .japan-hist-record {
+      font-size: 11px;
+      color: var(--c-text-sub);
+      margin-bottom: 4px;
+      font-feature-settings: "tnum";
+    }
+    .japan-hist-summary {
+      font-size: 12.5px;
+      line-height: 1.6;
+      color: var(--c-text);
+    }
+
+    /* 記録カード */
+    .records-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 8px;
+      margin-top: 4px;
+    }
+    .record-card {
+      background: #fff;
+      border: 1px solid var(--c-border);
+      padding: 14px 16px;
+    }
+    .record-title {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--c-navy);
+      margin-bottom: 6px;
+      padding-bottom: 6px;
+      border-bottom: 1px solid var(--c-border);
+    }
+    .record-detail {
+      font-size: 12.5px;
+      line-height: 1.65;
+      color: var(--c-text);
+    }
+
+    .source-note {
+      font-size: 11px;
+      color: var(--c-text-sub);
+      margin-top: 12px;
+      font-style: italic;
+    }
+
+    @media (max-width: 600px) {
+      .title-rank-grid { grid-template-columns: 1fr; }
+      .upset-grid { grid-template-columns: 1fr; }
+      .japan-hist-grid { grid-template-columns: 1fr; }
+      .records-grid { grid-template-columns: 1fr; }
+      .hist-toc { font-size: 12px; }
+    }
+  </style>
+</head>
+<body class="wc-page">
+
+<header class="wc-header">
+  <a href="../" class="wc-back-link">⚽ football-jp トップへ</a>
+  <h1>🏆 歴代FIFAワールドカップ 歴史と記録</h1>
+  <p class="wc-tagline">1930年〜2022年 全22大会の記録・統計・名場面</p>
+</header>
+
+<div class="wc-container">
+
+  <nav class="wc-nav" id="wcNav"></nav>
+  <script src="wc-nav.js"></script>
+  <script>document.getElementById('wcNav').innerHTML = wcRenderNav('history');</script>
+
+  <div class="hist-toc">
+    <strong>目次：</strong>
+    <a href="#titles">優勝国ランキング</a>
+    <a href="#tournaments">大会一覧</a>
+    <a href="#scorers">歴代得点王</a>
+    <a href="#upsets">番狂わせ・名場面</a>
+    <a href="#japan">日本代表の軌跡</a>
+    <a href="#records">記録・トリビア</a>
+  </div>
+
+  <!-- 1. 優勝国ランキング -->
+  <section id="titles" class="wc-section">
+    <h2>🏆 歴代優勝国ランキング</h2>
+    <div id="titlesGrid" class="title-rank-grid"></div>
+    <p class="source-note">※ ドイツは1954・1974・1990年大会時の「西ドイツ」を含む。2022年までの全22大会が対象。</p>
+  </section>
+
+  <!-- 2. 大会一覧 -->
+  <section id="tournaments" class="wc-section">
+    <h2>📋 歴代大会一覧（1930〜2022）</h2>
+    <div class="hist-table-wrap">
+      <table class="hist-table" id="tournamentsTable">
+        <thead>
+          <tr>
+            <th>年</th>
+            <th>開催国</th>
+            <th>優勝</th>
+            <th>準優勝</th>
+            <th>決勝スコア</th>
+            <th>得点王</th>
+            <th>出場国</th>
+          </tr>
+        </thead>
+        <tbody id="tournamentsBody"></tbody>
+      </table>
+    </div>
+    <p class="source-note">※ 1950年大会は決勝戦なし（最終ラウンドリーグ戦形式）のためスコア欄は「—」。<br>
+    ※ 日本出場大会（1998〜）は行をハイライト表示。</p>
+  </section>
+
+  <!-- 3. 歴代得点王ランキング -->
+  <section id="scorers" class="wc-section">
+    <h2>⚽ 歴代通算得点ランキング（個人）</h2>
+    <ul class="scorer-list" id="scorersList"></ul>
+    <div style="margin-top: 16px;">
+      <h3 style="font-size: 13px; font-weight: 700; margin: 0 0 8px; color: var(--c-text-sub);">1大会最多得点ランキング</h3>
+      <div class="hist-table-wrap">
+        <table class="hist-table" id="singleTournamentTable">
+          <thead>
+            <tr><th>順位</th><th>選手名</th><th>国</th><th>得点</th><th>大会年</th><th>備考</th></tr>
+          </thead>
+          <tbody id="singleTournamentBody"></tbody>
+        </table>
+      </div>
+    </div>
+    <p class="source-note">出典: Wikipedia / FIFA公式記録（2022年大会終了時点）</p>
+  </section>
+
+  <!-- 4. 番狂わせ・名場面 -->
+  <section id="upsets" class="wc-section">
+    <h2>😲 番狂わせ・名場面</h2>
+    <div class="upset-grid" id="upsetGrid"></div>
+  </section>
+
+  <!-- 5. 日本代表のW杯史 -->
+  <section id="japan" class="wc-section">
+    <h2>🇯🇵 日本代表のW杯全成績（1998〜2022）</h2>
+    <div class="japan-hist-grid" id="japanHistGrid"></div>
+    <p class="source-note">※ 2026年大会（日本はGroup F）は別途 <a href="./japan.html">日本代表ページ</a> で詳細を掲載。</p>
+  </section>
+
+  <!-- 6. 記録・トリビア -->
+  <section id="records" class="wc-section">
+    <h2>📊 興味深い記録・トリビア</h2>
+    <div class="records-grid" id="recordsGrid"></div>
+    <div style="margin-top: 14px;">
+      <h3 style="font-size: 13px; font-weight: 700; margin: 0 0 8px; color: var(--c-text-sub);">最多出場国</h3>
+      <div class="hist-table-wrap">
+        <table class="hist-table" id="appearancesTable">
+          <thead>
+            <tr><th>国名</th><th>出場回数</th><th>備考</th></tr>
+          </thead>
+          <tbody id="appearancesBody"></tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <footer class="wc-footer">
+    <p>データ提供: <a href="https://www.football-data.org/" target="_blank" rel="noopener">Football data provided by the Football-Data.org API</a></p>
+    <p>歴史データ出典: Wikipedia / FIFA（2022年大会終了時点）／<a href="../">football-jp トップへ</a></p>
+    <p class="footer-links"><a href="../privacy.html">プライバシーポリシー</a></p>
+  </footer>
+</div>
+
+<script>
+(async () => {
+  let data;
+  try {
+    const res = await fetch('../data/wc2026/wc_history.json');
+    data = await res.json();
+  } catch(e) {
+    console.error('wc_history.json の読み込みに失敗しました', e);
+    return;
+  }
+
+  const { tournaments, all_time_records } = data;
+  const esc = s => String(s || '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+
+  // --- 1. 優勝国ランキング ---
+  const rankColors = ['gold', 'silver', '', '', ''];
+  const titlesGrid = document.getElementById('titlesGrid');
+  if (titlesGrid) {
+    titlesGrid.innerHTML = all_time_records.most_titles.map((t, i) => {
+      const numClass = i === 0 ? 'title-rank-num gold' : i === 1 ? 'title-rank-num silver' : 'title-rank-num';
+      const yearsHtml = t.years.map(y => `<span class="year-badge champion">${y}</span>`).join('');
+      return `<div class="title-rank-card">
+        <div class="${numClass}">${t.titles}</div>
+        <div class="title-rank-content">
+          <div class="title-rank-country">${esc(t.country)}</div>
+          <div class="title-rank-count">${t.titles}回優勝</div>
+          <div class="title-rank-years">${yearsHtml}</div>
+        </div>
+      </div>`;
+    }).join('');
+  }
+
+  // --- 2. 大会一覧 ---
+  const jpYears = new Set(all_time_records.japan_history.map(j => j.year));
+  const tournamentsBody = document.getElementById('tournamentsBody');
+  if (tournamentsBody) {
+    tournamentsBody.innerHTML = tournaments.map(t => {
+      const isJp = jpYears.has(t.year);
+      const rowCls = isJp ? ' class="japan-row"' : '';
+      const jpBadge = isJp ? '<span class="japan-badge">JPN</span>' : '';
+      const finalScore = t.final_score ? `<span class="score-cell">${esc(t.final_score)}</span>` : '<span style="color:var(--c-text-sub)">—</span>';
+      const scorer = t.top_scorer ? `${esc(t.top_scorer)}<br><span style="font-size:11px;color:var(--c-text-sub)">${esc(t.top_scorer_country)} ${t.top_scorer_goals}点</span>` : '<span style="color:var(--c-text-sub)">—</span>';
+      return `<tr${rowCls}>
+        <td class="yr">${t.year}${jpBadge}</td>
+        <td>${esc(t.host)}</td>
+        <td style="font-weight:600;">${esc(t.champion)}</td>
+        <td>${esc(t.runner_up)}</td>
+        <td>${finalScore}</td>
+        <td>${scorer}</td>
+        <td style="text-align:right;font-feature-settings:'tnum'">${t.teams}</td>
+      </tr>`;
+    }).join('');
+  }
+
+  // --- 3. 歴代通算得点王 ---
+  const scorersList = document.getElementById('scorersList');
+  if (scorersList) {
+    scorersList.innerHTML = all_time_records.top_goal_scorers_alltime.map((s, i) => {
+      const rankCls = i === 0 ? 'scorer-rank r1' : 'scorer-rank';
+      return `<li>
+        <div class="${rankCls}">${i + 1}</div>
+        <div class="scorer-info">
+          <div class="scorer-name">${esc(s.player)}</div>
+          <div class="scorer-country">${esc(s.country)}（${s.tournaments}大会出場）</div>
+        </div>
+        <div>
+          <span class="scorer-goals">${s.goals}</span>
+          <span class="scorer-goals-unit"> 点</span>
+        </div>
+      </li>`;
+    }).join('');
+  }
+
+  // 1大会最多得点
+  const singleTournamentBody = document.getElementById('singleTournamentBody');
+  if (singleTournamentBody) {
+    singleTournamentBody.innerHTML = all_time_records.single_tournament_top_scorers.map((s, i) => {
+      return `<tr>
+        <td style="font-weight:700;text-align:center">${i + 1}</td>
+        <td style="font-weight:600">${esc(s.player)}</td>
+        <td>${esc(s.country)}</td>
+        <td style="font-weight:700;text-align:right;font-feature-settings:'tnum'">${s.goals}</td>
+        <td style="text-align:right;font-feature-settings:'tnum'">${s.year}</td>
+        <td style="font-size:11px;color:var(--c-text-sub)">${esc(s.note || '')}</td>
+      </tr>`;
+    }).join('');
+  }
+
+  // --- 4. 番狂わせ ---
+  const upsetGrid = document.getElementById('upsetGrid');
+  if (upsetGrid) {
+    upsetGrid.innerHTML = all_time_records.biggest_upset.map(u => {
+      return `<div class="upset-card">
+        <div class="upset-header">
+          <span class="upset-year">${u.year}年</span>
+          <span class="upset-score">${esc(u.score)}</span>
+        </div>
+        <div class="upset-teams">${esc(u.winner)} が ${esc(u.loser)} を撃破</div>
+        <div class="upset-note">${esc(u.note)}</div>
+      </div>`;
+    }).join('');
+  }
+
+  // --- 5. 日本代表の軌跡 ---
+  const japanHistGrid = document.getElementById('japanHistGrid');
+  if (japanHistGrid) {
+    japanHistGrid.innerHTML = all_time_records.japan_history.map(j => {
+      const resultCls = j.result === 'ベスト16' ? 'japan-hist-result best16' : 'japan-hist-result gs';
+      return `<div class="japan-hist-card">
+        <div class="japan-hist-year">🇯🇵 ${j.year}年大会</div>
+        <div class="japan-hist-host">開催国：${esc(j.host)}</div>
+        <span class="${resultCls}">${esc(j.result)}</span>
+        <div class="japan-hist-record">${esc(j.record || '')}</div>
+        <div class="japan-hist-summary">${esc(j.summary)}</div>
+      </div>`;
+    }).join('');
+  }
+
+  // --- 6. 記録・トリビア ---
+  const recordsGrid = document.getElementById('recordsGrid');
+  if (recordsGrid) {
+    recordsGrid.innerHTML = all_time_records.interesting_records.map(r => {
+      return `<div class="record-card">
+        <div class="record-title">${esc(r.title)}</div>
+        <div class="record-detail">${esc(r.detail)}</div>
+      </div>`;
+    }).join('');
+  }
+
+  // 最多出場国
+  const appearancesBody = document.getElementById('appearancesBody');
+  if (appearancesBody) {
+    appearancesBody.innerHTML = all_time_records.most_appearances_team.map(a => {
+      return `<tr>
+        <td style="font-weight:600">${esc(a.country)}</td>
+        <td style="font-weight:700;text-align:right;font-feature-settings:'tnum'">${a.count}回</td>
+        <td style="font-size:12px;color:var(--c-text-sub)">${esc(a.note || '')}</td>
+      </tr>`;
+    }).join('');
+  }
+
+})();
+</script>
+
+</body>
+</html>
