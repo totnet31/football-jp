@@ -17,7 +17,24 @@
   const viewTabs = document.querySelectorAll('.view-tab');
   const sortBtns = document.querySelectorAll('.sort-btn');
 
-  const WEEKDAY = ['日', '月', '火', '水', '木', '金', '土'];
+  // 言語判定（/en/ パスなら英語表示モード）
+  const IS_EN = document.documentElement.lang === 'en' || location.pathname.startsWith('/en/');
+  const COMP_EN = {
+    'プレミアリーグ': 'Premier League',
+    'チャンピオンシップ': 'Championship',
+    'ラ・リーガ': 'La Liga',
+    'セリエA': 'Serie A',
+    'ブンデスリーガ': 'Bundesliga',
+    'リーグ・アン': 'Ligue 1',
+    'エールディビジ': 'Eredivisie',
+    'プリメイラ・リーガ': 'Primeira Liga',
+    'UEFAチャンピオンズリーグ': 'UEFA Champions League',
+    'UEFAヨーロッパリーグ': 'UEFA Europa League',
+    'UEFAカンファレンスリーグ': 'UEFA Conference League',
+  };
+  const WEEKDAY_EN = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+
+  const WEEKDAY = IS_EN ? WEEKDAY_EN : ['日', '月', '火', '水', '木', '金', '土'];
 
   let allMatches = [];
   let standingsData = null;
@@ -53,6 +70,9 @@
   function fmtDateHeading(key) {
     const [y, m, d] = key.split('-').map(Number);
     const date = new Date(y, m-1, d);
+    if (IS_EN) {
+      return `${y}/${String(m).padStart(2,'0')}/${String(d).padStart(2,'0')} (${WEEKDAY[date.getDay()]})`;
+    }
     return `${y}年${m}月${d}日（${WEEKDAY[date.getDay()]}）`;
   }
 
@@ -93,6 +113,16 @@
       ]);
       renderNews(news);
       allMatches = m.matches || [];
+      // 英語モード時：表示用フィールドを英語に切替（_ja を _en で上書き）
+      if (IS_EN) {
+        for (const x of allMatches) {
+          if (x.home_en) x.home_ja = x.home_en;
+          if (x.away_en) x.away_ja = x.away_en;
+          if (x.competition_ja && COMP_EN[x.competition_ja]) {
+            x.competition_ja = COMP_EN[x.competition_ja];
+          }
+        }
+      }
       standingsData = s;
       scorersData = sc;
       matchEvents = (evts && evts.events) ? evts.events : {};
@@ -140,8 +170,13 @@
         }
       }
       const updated = fmtUpdated(m.updated);
-      updatedEl.textContent = `更新: ${updated} / ${m.match_count}試合`;
-      periodEl.textContent = `データ期間: ${fmtDateShort(dataRangeFrom)} 〜 ${fmtDateShort(dataRangeTo)}`;
+      if (IS_EN) {
+        updatedEl.textContent = `Updated: ${updated} / ${m.match_count} matches`;
+        periodEl.textContent = `Data period: ${fmtDateShort(dataRangeFrom)} - ${fmtDateShort(dataRangeTo)}`;
+      } else {
+        updatedEl.textContent = `更新: ${updated} / ${m.match_count}試合`;
+        periodEl.textContent = `データ期間: ${fmtDateShort(dataRangeFrom)} 〜 ${fmtDateShort(dataRangeTo)}`;
+      }
       buildLeagueChecks();
       buildRankLeagueOptions();
       initCalCursor();
@@ -204,7 +239,8 @@
       const meta = standingsData.competitions[id];
       const opt = document.createElement('option');
       opt.value = id;
-      opt.textContent = `${meta.flag || ''} ${meta.name_ja}`;
+      const leagueName = (IS_EN && COMP_EN[meta.name_ja]) ? COMP_EN[meta.name_ja] : meta.name_ja;
+      opt.textContent = `${meta.flag || ''} ${leagueName}`;
       rankLeagueEl.appendChild(opt);
     }
     if (ids.length > 0) {
@@ -264,7 +300,7 @@
     const html = [];
     for (const [key, ms] of groups) {
       const isToday = key === today;
-      html.push(`<h2 class="date-heading${isToday ? ' today' : ''}">${fmtDateHeading(key)}${isToday ? ' ・ 今日' : ''}</h2>`);
+      html.push(`<h2 class="date-heading${isToday ? ' today' : ''}">${fmtDateHeading(key)}${isToday ? (IS_EN ? ' · Today' : ' ・ 今日') : ''}</h2>`);
       for (const m of ms) html.push(renderMatch(m, isToday));
     }
     scheduleEl.innerHTML = html.join('');
@@ -287,7 +323,7 @@
     const html = [];
     for (const [key, ms] of groups) {
       const isToday = key === today;
-      html.push(`<h2 class="date-heading${isToday ? ' today' : ''}">${fmtDateHeading(key)}${isToday ? ' ・ 今日' : ''}</h2>`);
+      html.push(`<h2 class="date-heading${isToday ? ' today' : ''}">${fmtDateHeading(key)}${isToday ? (IS_EN ? ' · Today' : ' ・ 今日') : ''}</h2>`);
       for (const m of ms) html.push(renderMatch(m, isToday));
     }
     resultsEl.innerHTML = html.join('');
