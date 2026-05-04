@@ -22,6 +22,10 @@ PWA_META = """\
 
 SW_SCRIPT = '  <script src="/sw-register.js" defer></script>'
 
+PUSH_SCRIPTS = """\
+  <script src="/push-client.js" defer></script>
+  <script src="/push-ui.js" defer></script>"""
+
 SKIP_FILES = {
     os.path.join(ROOT, "assets", "logos", "preview.html"),
 }
@@ -59,6 +63,14 @@ def inject_file(path):
     if not has_sw:
         if '</body>' in content:
             content = content.replace('</body>', SW_SCRIPT + '\n</body>', 1)
+            modified = True
+
+    # Check if push scripts already present
+    has_push = '/push-client.js' in content
+
+    if not has_push:
+        if '</body>' in content:
+            content = content.replace('</body>', PUSH_SCRIPTS + '\n</body>', 1)
             modified = True
 
     if modified:

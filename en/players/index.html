@@ -153,9 +153,10 @@
 
 <a class="back-link" href="/en/">← football-jp Home</a>
 
-<div class="index-hero">
+<div class="index-hero" style="position:relative;">
   <h1>🇯🇵 Japanese Soccer Players Abroad — 68 Names</h1>
   <p>All Japanese players active in overseas leagues — 68 players</p>
+  <button onclick="openPushModal()" title="Notification Settings" style="position:absolute;top:0;right:0;background:none;border:1px solid #334155;border-radius:8px;color:#94a3b8;font-size:20px;padding:6px 10px;cursor:pointer;" aria-label="Notification Settings">🔔</button>
 </div>
 
 <div class="filter-bar" id="filterBar">
@@ -1021,5 +1022,7 @@ function trackAffClick(el) {
 </script>
 
   <script src="/sw-register.js" defer></script>
+  <script src="/push-client.js" defer></script>
+  <script src="/push-ui.js" defer></script>
 </body>
 </html>

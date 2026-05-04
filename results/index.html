@@ -54,9 +54,14 @@
 </head>
 <body data-view="results">
   <header>
-    <h1><a href="/" style="color:inherit;text-decoration:none;"><img src="/assets/logos/logo-header.png" alt="football-jp" class="header-logo"> 海外サッカー 日本人選手 試合結果</a></h1>
-    <p class="updated" id="updated"></p>
-    <p class="period" id="period"></p>
+    <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:8px;">
+      <div>
+        <h1><a href="/" style="color:inherit;text-decoration:none;"><img src="/assets/logos/logo-header.png" alt="football-jp" class="header-logo"> 海外サッカー 日本人選手 試合結果</a></h1>
+        <p class="updated" id="updated"></p>
+        <p class="period" id="period"></p>
+      </div>
+      <button onclick="openPushModal()" title="通知設定" style="background:none;border:1px solid #334155;border-radius:8px;color:#94a3b8;font-size:20px;padding:6px 10px;cursor:pointer;flex-shrink:0;margin-top:4px;" aria-label="通知設定">🔔</button>
+    </div>
   </header>
 
   <a href="/worldcup/" class="wc-promo">
@@ -200,5 +205,7 @@
   })();
   </script>
   <script src="/sw-register.js" defer></script>
+  <script src="/push-client.js" defer></script>
+  <script src="/push-ui.js" defer></script>
 </body>
 </html>
