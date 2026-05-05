@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gent - Japanese Players, Fixtures &amp; Standings | football-jp</title>
+  <meta name="description" content="Gent (Jupiler Pro League) Japanese players, fixtures, and league standings in Japan Standard Time.">
+  <link rel="canonical" href="https://football-jp.com/en/clubs/gent/">
+  <link rel="alternate" hreflang="ja" href="https://football-jp.com/clubs/gent/">
+  <link rel="alternate" hreflang="en" href="https://football-jp.com/en/clubs/gent/">
+  <link rel="alternate" hreflang="x-default" href="https://football-jp.com/clubs/gent/">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://football-jp.com/en/clubs/gent/">
+  <meta property="og:title" content="Gent - Japanese Players, Fixtures &amp; Standings | football-jp">
+  <meta property="og:description" content="Gent (Jupiler Pro League) Japanese players, fixtures, and league standings in Japan Standard Time.">
+  <meta property="og:site_name" content="football-jp">
+  <meta property="og:locale" content="en_US">
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-39G8CVXRW0"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag("js", new Date());
+    gtag("config", "G-39G8CVXRW0");
+    gtag("event", "page_view", { language: "en" });
+  </script>
+  <link rel="icon" href="/favicon.ico">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/logos/favicon-16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/logos/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="48x48" href="/assets/logos/favicon-48.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/logos/favicon-180.png">
+  <link rel="stylesheet" href="/style.css">
+  <style>
+    .club-hero {
+      background: #ffffff; border-bottom: 1px solid var(--c-border, #e5e7eb);
+      padding: 20px 16px 18px; margin-bottom: 18px;
+      display: flex; align-items: center; gap: 16px;
+    }
+    .club-crest { width: 64px; height: 64px; object-fit: contain; flex-shrink: 0; }
+    .club-name-block h2 { margin: 0 0 4px; font-size: 24px; font-weight: 800; }
+    .club-name-en { font-size: 13px; color: #666; margin: 0 0 4px; }
+    .club-league-tag {
+      display: inline-block; padding: 2px 8px; font-size: 11px;
+      background: #f0f1f5; border-radius: 3px;
+    }
+    .lang-switch {
+      display: inline-block; margin-left: 8px; font-size: 12px;
+      color: #666; text-decoration: none;
+    }
+    .lang-switch:hover { color: var(--c-accent, #0047ab); text-decoration: underline; }
+    .club-section {
+      background: #fff; padding: 18px 16px; margin-bottom: 1px;
+      border-bottom: 1px solid var(--c-border, #e5e7eb);
+    }
+    .club-section h3 {
+      margin: 0 0 14px; font-size: 14px; font-weight: 700;
+      letter-spacing: 0.06em; padding-left: 10px;
+      border-left: 4px solid var(--c-accent, #0047ab); color: var(--c-text, #111);
+    }
+    .standing-row { font-size: 14px; padding: 8px 0; }
+    .standing-pos { font-size: 24px; font-weight: 800; margin-right: 12px; }
+    .standing-detail { color: #444; }
+    .players-grid {
+      display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 8px;
+    }
+    .player-link-card {
+      display: block; background: #f8f9fa; border: 1px solid var(--c-border, #e5e7eb);
+      padding: 12px 14px; text-decoration: none; color: var(--c-text, #111);
+      border-radius: 4px; transition: background 0.15s;
+    }
+    .player-link-card:hover { background: #eef0f7; }
+    .player-name-ja { font-size: 15px; font-weight: 700; margin-bottom: 2px; }
+    .player-name-en { font-size: 11px; color: #666; margin-bottom: 4px; }
+    .player-pos {
+      display: inline-block; padding: 1px 6px; font-size: 11px; font-weight: 700;
+      background: #e6f0fa; color: #1565c0; border-radius: 3px;
+    }
+    .player-note-small { font-size: 11px; color: #888; margin-top: 4px; }
+    .matches-list { font-size: 13px; }
+    .match-header, .match-row {
+      display: grid;
+      grid-template-columns: 110px 30px 1fr 60px 110px 80px;
+      gap: 6px; padding: 10px 4px;
+      border-bottom: 1px solid var(--c-border, #e5e7eb); align-items: center;
+    }
+    .match-header {
+      font-size: 11px; font-weight: 700; color: #666; background: #f8f9fa;
+    }
+    .match-row:last-child { border-bottom: none; }
+    .match-result { font-weight: 700; text-align: center; }
+    .match-result.win { color: #1a7a3a; }
+    .match-result.lose { color: #c0392b; }
+    .match-result.draw { color: #666; }
+    .match-broadcast { display: flex; flex-wrap: wrap; gap: 4px; align-items: center; justify-content: center; }
+    .match-date-day { display: block; font-size: 12px; }
+    .match-date-time { display: block; font-size: 11px; color: #555; }
+    .venue-badge {
+      display: inline-block; width: 24px; height: 24px; line-height: 24px;
+      text-align: center; border-radius: 4px; font-weight: 700; font-size: 12px;
+    }
+    .venue-away { background: #fee; color: #c9302c; border: 1px solid #f5b7b1; }
+    .venue-home { background: #e7f0ff; color: #1e6cba; border: 1px solid #aac6e8; }
+    .match-comp { font-size: 11px; color: #666; }
+    .no-data { color: #888; font-size: 13px; padding: 8px 0; margin: 0; }
+    .chart-subtitle { font-size: 12px; color: #888; margin: -8px 0 10px; }
+    .standings-chart-container { position: relative; width: 100%; max-width: 640px; }
+    .club-info-table { width: 100%; border-collapse: collapse; font-size: 13px; }
+    .club-info-table th {
+      width: 120px; text-align: left; padding: 7px 8px; color: #555;
+      font-weight: 600; border-bottom: 1px solid var(--c-border, #e5e7eb); background: #f8f9fa;
+    }
+    .club-info-table td { padding: 7px 8px; border-bottom: 1px solid var(--c-border, #e5e7eb); }
+    .club-info-table tr:last-child th, .club-info-table tr:last-child td { border-bottom: none; }
+    .club-info-table a { color: var(--c-accent, #0047ab); word-break: break-all; }
+    .news-list { font-size: 13px; }
+    .news-row {
+      display: grid; grid-template-columns: 45px 1fr 70px; gap: 8px;
+      padding: 8px 4px; border-bottom: 1px solid var(--c-border, #e5e7eb); align-items: start;
+    }
+    .news-row:last-child { border-bottom: none; }
+    .news-date { font-size: 11px; color: #888; padding-top: 2px; }
+    .news-title a { color: var(--c-text, #111); text-decoration: none; }
+    .news-title a:hover { color: var(--c-accent, #0047ab); text-decoration: underline; }
+    .news-source { font-size: 11px; color: #888; text-align: right; }
+    .opponent-records { font-size: 13px; }
+    .opp-header, .opp-row {
+      display: grid; grid-template-columns: 1fr 80px 110px 100px; gap: 6px;
+      padding: 8px 4px; border-bottom: 1px solid var(--c-border, #e5e7eb); align-items: center;
+    }
+    .opp-header { font-size: 11px; font-weight: 700; color: #666; background: #f8f9fa; }
+    .opp-row:last-child { border-bottom: none; }
+    .opp-total { text-align: center; color: #555; }
+    .opp-wdl { font-weight: 600; }
+    .opp-goals { color: #555; }
+    .back-link {
+      display: block; padding: 12px 16px; font-size: 13px;
+      color: var(--c-text, #111); text-decoration: none;
+      border-bottom: 1px solid var(--c-border, #e5e7eb);
+    }
+    .site-footer {
+      padding: 20px 16px; font-size: 12px; color: #666;
+      border-top: 1px solid var(--c-border, #e5e7eb); margin-top: 20px;
+    }
+    .site-footer a { color: #666; }
+    .match-row.hidden-extra { display: none; }
+    .match-row.hidden-extra.shown { display: grid; }
+    .show-more-matches {
+      display: block; width: 100%; margin-top: 10px; padding: 10px;
+      background: #f0f4ff; border: 1px solid #aac6e8; border-radius: 4px;
+      font-size: 13px; font-weight: 600; color: var(--c-accent, #0047ab);
+      cursor: pointer; text-align: center; transition: background 0.15s;
+    }
+    .show-more-matches:hover { background: #dce8ff; }
+    .video-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 12px; }
+    .video-card {
+      display: block; text-decoration: none; color: var(--c-text, #111);
+      background: #f8f9fa; border: 1px solid var(--c-border, #e5e7eb);
+      border-radius: 4px; overflow: hidden; transition: background 0.15s;
+    }
+    .video-card:hover { background: #eef0f7; }
+    .video-card img { width: 100%; aspect-ratio: 16/9; object-fit: cover; display: block; }
+    .video-title {
+      font-size: 11px; font-weight: 600; padding: 6px 8px 2px; line-height: 1.4;
+      display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;
+    }
+    .video-meta { font-size: 10px; color: #888; padding: 0 8px 8px; }
+    @media (max-width: 600px) {
+      .match-header, .match-row { grid-template-columns: 80px 28px 1fr 45px; font-size: 12px; }
+      .match-broadcast, .match-comp { display: none; }
+      .video-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+  </style>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SportsTeam",
+  "name": "Gent",
+  "alternateName": "ヘント",
+  "sport": "Football",
+  "url": "https://football-jp.com/en/clubs/gent/",
+  "memberOf": {
+    "@type": "SportsOrganization",
+    "name": "Jupiler Pro League"
+  },
+  "image": "/assets/club_crests/gent.svg"
+}
+  </script>
+</head>
+<body>
+
+<a class="back-link" href="/en/">← football-jp (English)</a>
+
+<div class="club-hero">
+  <div class="crest-wrapper">
+    <img src="/assets/club_crests/gent.svg" alt="Gent crest" class="club-crest" width="64" height="64" loading="lazy">
+  </div>
+  <div class="club-name-block">
+    <h2>Gent</h2>
+    <p class="club-name-en">ヘント</p>
+    <span class="club-league-tag">🏆 Jupiler Pro League</span>
+    <br>
+    <a href="https://football-jp.com/clubs/gent/" class="lang-switch">🇯🇵 日本語ページ</a>
+  </div>
+</div>
+
+<div style="max-width: 860px; margin: 0 auto;">
+
+  
+    <section class="club-section">
+      <h3>ℹ️ Club Info</h3>
+      <table class="club-info-table">
+        <tr><th>Founded</th><td>1900</td></tr><tr><th>Location</th><td>Ghent, Belgium</td></tr><tr><th>Stadium</th><td>Ghelamco Arena</td></tr><tr><th>Capacity</th><td>20,000</td></tr><tr><th>Manager</th><td>Wouter Vrancken</td></tr><tr><th>Website</th><td><a href="https://www.kaagent.be/" target="_blank" rel="noopener">https://www.kaagent.be/</a></td></tr>
+      </table>
+    </section>
+
+  
+    <section class="club-section">
+      <h3>🏆 Jupiler Pro League Standings</h3>
+      <p class="no-data">Standings data not available for this league.</p>
+    </section>
+
+  
+
+  
+    <section class="club-section">
+      <h3>🇯🇵 Japanese Players (2)</h3>
+      <div class="players-grid">
+        
+        <a class="player-link-card" href="/en/players/atsuki-ito/">
+          <div class="player-name-ja">Atsuki Ito</div>
+          <div class="player-name-en">伊藤敦樹</div>
+          <div class="player-pos">Midfielder</div>
+          <div class="player-note-small">ベルギーは無料プラン対象外</div>
+        </a>
+        <a class="player-link-card" href="/en/players/daiki-hashioka/">
+          <div class="player-name-ja">Daiki Hashioka</div>
+          <div class="player-name-en">橋岡大樹</div>
+          <div class="player-pos">Defender</div>
+          <div class="player-note-small">ベルギーは無料プラン対象外</div>
+        </a>
+      </div>
+    </section>
+
+  
+    <section class="club-section">
+      <h3>📅 Recent Matches</h3>
+      <p class="no-data">Match data is being fetched.</p>
+    </section>
+
+  
+
+  
+
+  
+
+  <footer class="site-footer">
+    <p>Data: <a href="https://www.football-data.org/" target="_blank" rel="noopener">Football-Data.org</a></p>
+    <p class="footer-links">
+      <a href="/en/">football-jp (English)</a> |
+      <a href="/en/players/">Players</a> |
+      <a href="/en/clubs/">Clubs</a> |
+      <a href="/privacy.html">Privacy Policy</a> |
+      <a href="https://football-jp.com/clubs/gent/">🇯🇵 Japanese</a>
+    </p>
+  </footer>
+</div>
+
+<script>
+function toggleMoreMatches(btn) {
+  var list = btn.previousElementSibling;
+  list.querySelectorAll('.hidden-extra').forEach(function(r) {
+    r.classList.toggle('shown');
+  });
+  if (btn.dataset.expanded === 'true') {
+    btn.textContent = 'Show more (' + btn.dataset.count + ' remaining)';
+    btn.dataset.expanded = 'false';
+  } else {
+    btn.textContent = 'Close';
+    btn.dataset.expanded = 'true';
+  }
+}
+</script>
+
+</body>
+</html>
