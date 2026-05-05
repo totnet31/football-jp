@@ -2,7 +2,7 @@
 """
 PWA meta tags, Service Worker registration, and Search injection script.
 Injects PWA meta into <head> and SW/push/search scripts before </body>.
-Also adds 🔍 search button next to the existing 🔔 notification button.
+Also adds SVG search button next to the existing SVG notification button.
 Skips files that already have manifest link.
 Skips assets/logos/preview.html (not a real page).
 """
@@ -45,38 +45,70 @@ def find_html_files(root):
                 result.append(os.path.join(dirpath, fname))
     return sorted(result)
 
+SEARCH_SVG = (
+    '<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" '
+    'stroke-width="1.8" stroke="currentColor" width="20" height="20" aria-hidden="true">'
+    '<path stroke-linecap="round" stroke-linejoin="round" '
+    'd="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />'
+    '</svg>'
+)
+
+BELL_SVG = (
+    '<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" '
+    'stroke-width="1.8" stroke="currentColor" width="20" height="20" aria-hidden="true">'
+    '<path stroke-linecap="round" stroke-linejoin="round" '
+    'd="M14.857 17.082a23.848 23.848 0 0 0 5.454-1.31A8.967 8.967 0 0 1 18 9.75V9A6 6 0 0 0 6 9v.75'
+    'a8.967 8.967 0 0 1-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 0 1-5.714 0'
+    'm5.714 0a3 3 0 1 1-5.714 0" />'
+    '</svg>'
+)
+
+
 def inject_search_button(content, filepath):
     """
-    🔔ボタンの隣に🔍ボタンを追加する。
+    通知ボタンの隣に検索ボタン（SVGアイコン）を追加する。
     英語版かどうかでaria-labelを切り替える。
-    既にfjSearchBtnがあればスキップ。
+    既にfjSearchBtnまたはfjHeaderBtnがあればスキップ。
     """
-    if 'fjSearchBtn' in content or 'openSearchModal' in content:
+    if 'fjSearchBtn' in content or 'fjHeaderBtn' in content or 'openSearchModal' in content:
         return content, False
 
     is_en = '/en/' in filepath.replace(ROOT, '')
 
-    search_btn_ja = '<button class="fjSearchBtn" onclick="openSearchModal()" title="検索 (Cmd+K)" aria-label="検索">🔍</button>'
-    search_btn_en = '<button class="fjSearchBtn" onclick="openSearchModal()" title="Search (Cmd+K)" aria-label="Search">🔍</button>'
-    search_btn = search_btn_en if is_en else search_btn_ja
+    if is_en:
+        search_btn = (
+            f'<button class="fjHeaderBtn" onclick="openSearchModal()" '
+            f'title="Search (Cmd+K)" aria-label="Search">{SEARCH_SVG}</button>'
+        )
+        push_replacement = (
+            f'<button class="fjHeaderBtn" onclick="openPushModal()" '
+            f'title="Notifications" aria-label="Notifications">{BELL_SVG}</button>'
+        )
+    else:
+        search_btn = (
+            f'<button class="fjHeaderBtn" onclick="openSearchModal()" '
+            f'title="検索 (Cmd+K)" aria-label="検索">{SEARCH_SVG}</button>'
+        )
+        push_replacement = (
+            f'<button class="fjHeaderBtn" onclick="openPushModal()" '
+            f'title="通知設定" aria-label="通知設定">{BELL_SVG}</button>'
+        )
 
-    # 🔔通知ボタンを見つけてその隣（前）に追加
-    # パターン1: onclick="openPushModal()" を含むボタン
-    # 🔍を🔔の前に置く（視覚的に左）
+    # 通知ボタンを見つけてその隣（前）に検索ボタンを追加
+    # 同時に通知ボタン自体も SVG 版に置き換える
     push_btn_pattern = re.compile(
-        r'(<button[^>]+onclick="openPushModal\(\)"[^>]*>🔔</button>)',
+        r'<button\s+[^>]*onclick="openPushModal\(\)"[^>]*>\s*🔔\s*</button>',
         re.DOTALL
     )
     m = push_btn_pattern.search(content)
     if m:
-        new_content = content[:m.start()] + search_btn + '\n      ' + m.group(0) + content[m.end():]
+        new_content = (
+            content[:m.start()]
+            + search_btn + '\n      '
+            + push_replacement
+            + content[m.end():]
+        )
         return new_content, True
-
-    # パターン2: ヘッダー内に追加（フォールバック：</header>の直前）
-    if '</header>' in content:
-        # ヘッダーに通知ボタンがないページへのフォールバックは実施しない
-        # （デザインが壊れる可能性があるため）
-        pass
 
     return content, False
 
