@@ -288,8 +288,72 @@
     else if (currentView === 'ranking') renderRanking();
   }
 
+  // ===== お気に入り選手セクション =====
+  function renderFavSection() {
+    const favSectionId = 'favMatchesSection';
+    let favEl = document.getElementById(favSectionId);
+    const favs = (window.fjFavorites ? window.fjFavorites.list() : []);
+
+    if (favs.length === 0) {
+      if (favEl) favEl.remove();
+      return;
+    }
+
+    // お気に入り選手のname_jaを収集
+    const favNames = new Set();
+    for (const [nameJa, slug] of jpPlayerSlugMap.entries()) {
+      if (favs.includes(slug)) favNames.add(nameJa);
+    }
+
+    // お気に入り選手が出場する試合をフィルタ（未終了・直近結果）
+    const now = new Date();
+    const cutoff = new Date(now.getTime() - 3 * 24 * 60 * 60 * 1000); // 3日前まで
+    const favMatches = allMatches.filter(m => {
+      if (!enabledLeagues.has(m.competition_id)) return false;
+      if (m.home_ja === '未定' && m.away_ja === '未定') return false;
+      const kickoff = new Date(m.kickoff_jst);
+      if (m.status === 'FINISHED' && kickoff < cutoff) return false;
+      const jp = m.japanese_players || [];
+      return jp.some(p => {
+        const raw = String(p.name_ja || '').trim();
+        const clean = raw.replace(/（[^）]*）/g, '').trim();
+        return favNames.has(raw) || favNames.has(clean);
+      });
+    });
+
+    if (favMatches.length === 0) {
+      if (favEl) favEl.remove();
+      return;
+    }
+
+    // セクションをスケジュールビューの直前に挿入
+    if (!favEl) {
+      favEl = document.createElement('div');
+      favEl.id = favSectionId;
+      favEl.className = 'fav-section';
+      scheduleEl.parentNode.insertBefore(favEl, scheduleEl);
+    }
+
+    const title = IS_EN ? '⭐ Favorite Players\' Matches' : '⭐ お気に入り選手の試合';
+    const today = todayKey();
+    const groups = new Map();
+    for (const m of favMatches) {
+      const k = dateKey(m.kickoff_jst);
+      if (!groups.has(k)) groups.set(k, []);
+      groups.get(k).push(m);
+    }
+    const html = [`<h2>${title}</h2>`];
+    for (const [key, ms] of groups) {
+      const isToday = key === today;
+      html.push(`<h2 class="date-heading${isToday ? ' today' : ''}" style="font-size:14px;">${fmtDateHeading(key)}${isToday ? (IS_EN ? ' · Today' : ' ・ 今日') : ''}</h2>`);
+      for (const m of ms) html.push(renderMatch(m, isToday));
+    }
+    favEl.innerHTML = html.join('');
+  }
+
   // ===== Schedule view =====
   function renderSchedule() {
+    renderFavSection();
     const matches = filtered().filter(m => m.status !== 'FINISHED');
     if (matches.length === 0) {
       scheduleEl.innerHTML = `<p class="empty">予定されている試合はありません。<br>フィルタ条件を変更してください。</p>`;

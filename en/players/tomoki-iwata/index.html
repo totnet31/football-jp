@@ -283,7 +283,7 @@
 
 <div class="player-hero">
   <div class="name-block">
-    <h2>🇯🇵 Tomoki Iwata</h2>
+    <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;"><h2 style="margin:0;">🇯🇵 Tomoki Iwata</h2><button class="fav-btn" data-slug="tomoki-iwata" onclick="fjFavorites.toggle('tomoki-iwata'); refreshFavBtn(this);" title="Add to favorites" aria-label="Favorite"><span class="fav-star">☆</span></button></div>
     <p class="name-en">岩田智輝</p>
     <div class="player-meta">
       <span class="player-meta-tag">⚽ Defender</span>
@@ -505,5 +505,6 @@ function trackAffClick(el) {
 }
 </script>
 
+<script src="/favorites.js" defer></script>
 </body>
 </html>

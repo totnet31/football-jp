@@ -1356,7 +1356,10 @@ def build_player_page(player: dict, slug: str, scorer_stats: dict,
 
 <div class="player-hero">
   <div class="name-block">
-    <h2>🇯🇵 {esc(name_ja)}</h2>
+    <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;">
+      <h2 style="margin:0;">🇯🇵 {esc(name_ja)}</h2>
+      <button class="fav-btn" data-slug="{slug}" onclick="fjFavorites.toggle('{slug}'); refreshFavBtn(this);" title="お気に入りに追加" aria-label="お気に入り"><span class="fav-star">☆</span></button>
+    </div>
     <p class="name-en">{esc(name_en)}</p>
     <div class="player-meta">
       <span class="player-meta-tag">⚽ {esc(position)}</span>
@@ -1436,6 +1439,7 @@ function trackAffClick(el) {{
   }}
 }}
 </script>
+<script src="/favorites.js" defer></script>
 
 </body>
 </html>
@@ -1492,18 +1496,21 @@ def build_players_index(players: list, slug_map: dict) -> str:
             slug = slug_map[i]
             pos_cat = pos_category(p.get("position", ""))
             cards_html += f"""
-        <a class="player-card" href="/players/{esc(slug)}/"
-           data-pos="{esc(pos_cat)}">
-          <span class="player-card-flag">🇯🇵</span>
-          <div class="player-card-body">
-            <div class="player-card-name-ja">{esc(p.get('name_ja',''))}</div>
-            <div class="player-card-name-en">{esc(p.get('name_en',''))}</div>
-            <div class="player-card-meta">
-              <span class="pos-badge pos-{esc(pos_cat.lower())}">{esc(pos_cat)}</span>
-              <span class="club-name">{esc(p.get('club_ja',''))}</span>
+        <div class="player-card-fav-wrap" data-pos="{esc(pos_cat)}" data-slug="{esc(slug)}">
+          <a class="player-card" href="/players/{esc(slug)}/"
+             data-pos="{esc(pos_cat)}" style="flex:1;">
+            <span class="player-card-flag">🇯🇵</span>
+            <div class="player-card-body">
+              <div class="player-card-name-ja">{esc(p.get('name_ja',''))}</div>
+              <div class="player-card-name-en">{esc(p.get('name_en',''))}</div>
+              <div class="player-card-meta">
+                <span class="pos-badge pos-{esc(pos_cat.lower())}">{esc(pos_cat)}</span>
+                <span class="club-name">{esc(p.get('club_ja',''))}</span>
+              </div>
             </div>
-          </div>
-        </a>"""
+          </a>
+          <button class="fav-btn" data-slug="{esc(slug)}" onclick="fjFavorites.toggle('{esc(slug)}'); refreshFavBtn(this); applyFavFilter();" title="お気に入りに追加" aria-label="お気に入り"><span class="fav-star">☆</span></button>
+        </div>"""
 
         sections_html += f"""
       <section class="league-section">
@@ -1669,6 +1676,10 @@ def build_players_index(players: list, slug_map: dict) -> str:
   <button class="filter-btn" data-filter="DF" onclick="filterPlayers('DF', this)">DF</button>
   <button class="filter-btn" data-filter="MF" onclick="filterPlayers('MF', this)">MF</button>
   <button class="filter-btn" data-filter="FW" onclick="filterPlayers('FW', this)">FW</button>
+  <label class="fav-filter-label" style="font-size:12px;font-weight:600;display:flex;align-items:center;gap:4px;cursor:pointer;margin-left:4px;">
+    <input type="checkbox" id="onlyFav" onchange="applyFavFilter()">
+    ⭐ お気に入りのみ
+  </label>
 </div>
 
 <div style="max-width: 900px; margin: 0 auto;">
@@ -1685,26 +1696,39 @@ def build_players_index(players: list, slug_map: dict) -> str:
 </div>
 
 <script>
+var _currentPosFilter = 'all';
+
 function filterPlayers(pos, btn) {{
+  _currentPosFilter = pos;
   // ボタン状態更新
   document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
   btn.classList.add('active');
+  applyFavFilter();
+}}
 
-  // カード表示切替
-  document.querySelectorAll('.player-card').forEach(card => {{
-    if (pos === 'all' || card.dataset.pos === pos) {{
-      card.classList.remove('hidden');
-    }} else {{
-      card.classList.add('hidden');
-    }}
+function applyFavFilter() {{
+  var onlyFav = document.getElementById('onlyFav') && document.getElementById('onlyFav').checked;
+  var favs = (window.fjFavorites ? window.fjFavorites.list() : []);
+
+  document.querySelectorAll('.player-card-fav-wrap').forEach(wrap => {{
+    var pos = wrap.dataset.pos;
+    var slug = wrap.dataset.slug;
+    var posOk = (_currentPosFilter === 'all' || pos === _currentPosFilter);
+    var favOk = !onlyFav || favs.includes(slug);
+    wrap.classList.toggle('hidden', !(posOk && favOk));
   }});
 
-  // 全カード非表示のセクションを隠す
+  // 全ラップ非表示のセクションを隠す
   document.querySelectorAll('.league-section').forEach(sec => {{
-    const visible = [...sec.querySelectorAll('.player-card')].some(c => !c.classList.contains('hidden'));
+    const visible = [...sec.querySelectorAll('.player-card-fav-wrap')].some(c => !c.classList.contains('hidden'));
     sec.classList.toggle('hidden', !visible);
   }});
 }}
+
+// お気に入り変更時に一覧を再フィルタ
+document.addEventListener('fj-favorites-changed', function() {{
+  applyFavFilter();
+}});
 </script>
 <script>
 function trackAffClick(el) {{
@@ -1718,6 +1742,7 @@ function trackAffClick(el) {{
   }}
 }}
 </script>
+<script src="/favorites.js" defer></script>
 
 </body>
 </html>

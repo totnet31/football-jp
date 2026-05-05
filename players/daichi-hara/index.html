@@ -429,7 +429,7 @@
 
 <div class="player-hero">
   <div class="name-block">
-    <h2>🇯🇵 原大智</h2>
+    <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;"><h2 style="margin:0;">🇯🇵 原大智</h2><button class="fav-btn" data-slug="daichi-hara" onclick="fjFavorites.toggle('daichi-hara'); refreshFavBtn(this);" title="お気に入りに追加" aria-label="お気に入り"><span class="fav-star">☆</span></button></div>
     <p class="name-en">Daichi Hara</p>
     <div class="player-meta">
       <span class="player-meta-tag">⚽ FW</span>
@@ -637,5 +637,6 @@ function trackAffClick(el) {
 }
 </script>
 
+<script src="/favorites.js" defer></script>
 </body>
 </html>

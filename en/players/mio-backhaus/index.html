@@ -283,7 +283,7 @@
 
 <div class="player-hero">
   <div class="name-block">
-    <h2>🇯🇵 Mio Backhaus</h2>
+    <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;"><h2 style="margin:0;">🇯🇵 Mio Backhaus</h2><button class="fav-btn" data-slug="mio-backhaus" onclick="fjFavorites.toggle('mio-backhaus'); refreshFavBtn(this);" title="Add to favorites" aria-label="Favorite"><span class="fav-star">☆</span></button></div>
     <p class="name-en">長田澪</p>
     <div class="player-meta">
       <span class="player-meta-tag">⚽ Goalkeeper</span>
@@ -517,5 +517,6 @@ function trackAffClick(el) {
 }
 </script>
 
+<script src="/favorites.js" defer></script>
 </body>
 </html>
