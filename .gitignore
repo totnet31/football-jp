@@ -1,5 +1,9 @@
 .env
 .env.local
+*.json.key
+*-key.json
+service-account*.json
+stalwart-cable-*.json
 __pycache__/
 *.pyc
 .DS_Store
