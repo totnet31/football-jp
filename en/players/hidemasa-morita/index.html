@@ -283,7 +283,10 @@
 
 <div class="player-hero">
   <div class="name-block">
-    <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;"><h2 style="margin:0;">🇯🇵 Hidemasa Morita</h2><button class="fav-btn" data-slug="hidemasa-morita" onclick="fjFavorites.toggle('hidemasa-morita'); refreshFavBtn(this);" title="Add to favorites" aria-label="Favorite"><span class="fav-star">☆</span></button></div>
+    <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;">
+      <h2 style="margin:0;">🇯🇵 Hidemasa Morita</h2>
+      <button class="fav-btn" data-slug="hidemasa-morita" onclick="fjFavorites.toggle('hidemasa-morita'); refreshFavBtn(this);" title="Add to favorites" aria-label="Favorite"><span class="fav-star">☆</span></button>
+    </div>
     <p class="name-en">守田英正</p>
     <div class="player-meta">
       <span class="player-meta-tag">⚽ Midfielder</span>
@@ -304,23 +307,45 @@
       <h3>👤 Profile <a href="https://en.wikipedia.org/wiki/Hidemasa_Morita" target="_blank" rel="noopener" style="font-size:11px;color:#888;">Wikipedia →</a></h3>
       <table class="profile-table">
         <tr><td class="profile-label">Height / Weight</td><td class="profile-value">177 cm / —</td></tr>
-        <tr><td class="profile-label">Date of Birth</td><td class="profile-value">—</td></tr>
+        <tr><td class="profile-label">Date of Birth</td><td class="profile-value">1995-05-10 (age 30)</td></tr>
         <tr><td class="profile-label">Birthplace</td><td class="profile-value">Takatsuki, Osaka, Japan</td></tr>
         <tr><td class="profile-label">Foot</td><td class="profile-value">—</td></tr>
       </table>
     </section>
 
   
+    <section class="player-section">
+      <h3>📊 Season Stats</h3>
+      <div class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-label">Apps</div>
+          <div class="stat-value">29</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-label">Goals</div>
+          <div class="stat-value">1</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-label">Assists</div>
+          <div class="stat-value">0</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-label">Pens</div>
+          <div class="stat-value">0</div>
+        </div>
+      </div>
+      <div class="stats-source">Source: Wikipedia</div>
+    </section>
 
   
     <section class="player-section">
       <h3>🏆 Primeira Liga Current Standings</h3>
       <div class="standing-row">
-        <span class="standing-pos">3</span>
+        <span class="standing-pos">2</span>
         <span class="standing-detail">
-          (of 18)&nbsp;&nbsp;31 played&nbsp;
-          22W 7D 2L&nbsp;
-          73 pts
+          (of 18)&nbsp;&nbsp;32 played&nbsp;
+          23W 7D 2L&nbsp;
+          76 pts
         </span>
       </div>
     </section>
@@ -354,11 +379,11 @@
             <div class="match-broadcast">—</div>
             <div class="match-comp">Primeira Liga</div>
           </div>
-          <div class="match-row scheduled">
+          <div class="match-row">
             <div class="match-date"><span class="match-date-day">2026/05/05</span><span class="match-date-time">(Tue) 04:15</span></div>
             <div class="match-venue"><span class="venue-badge venue-home">H</span></div>
             <div class="match-opponent">vs Vitória SC</div>
-            <div class="match-result">—</div>
+            <div class="match-result win">5 - 1</div>
             <div class="match-broadcast">—</div>
             <div class="match-comp">Primeira Liga</div>
           </div>
@@ -504,7 +529,7 @@ function trackAffClick(el) {
   }
 }
 </script>
-
 <script src="/favorites.js" defer></script>
+
 </body>
 </html>
