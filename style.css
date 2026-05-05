@@ -1197,6 +1197,7 @@ footer a { color: var(--text-sub); }
 .footer-nav {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   gap: 6px 16px;
   margin-top: 10px;
   font-size: 0.85rem;
