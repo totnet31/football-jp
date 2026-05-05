@@ -398,6 +398,9 @@
         </table>
       </div>
     </div>
+    <div style="margin-top: 14px;">
+      <a href="./history/scorers/" style="display:inline-block;padding:9px 16px;background:var(--c-accent);color:#fff;text-decoration:none;font-size:13px;font-weight:700;">→ 歴代得点王ランキング詳細を見る（TOP20）</a>
+    </div>
     <p class="source-note">出典: Wikipedia / FIFA公式記録（2022年大会終了時点）</p>
   </section>
 
@@ -454,15 +457,29 @@
 
   // --- 1. 優勝国ランキング ---
   const rankColors = ['gold', 'silver', '', '', ''];
+  const COUNTRY_SLUG_MAP = {
+    'ブラジル': 'brazil',
+    'ドイツ': 'germany',
+    'イタリア': 'italy',
+    'アルゼンチン': 'argentina',
+    'フランス': 'france',
+    'ウルグアイ': 'uruguay',
+    'イングランド': 'england',
+    'スペイン': 'spain',
+  };
   const titlesGrid = document.getElementById('titlesGrid');
   if (titlesGrid) {
     titlesGrid.innerHTML = all_time_records.most_titles.map((t, i) => {
       const numClass = i === 0 ? 'title-rank-num gold' : i === 1 ? 'title-rank-num silver' : 'title-rank-num';
       const yearsHtml = t.years.map(y => `<span class="year-badge champion">${y}</span>`).join('');
+      const slug = COUNTRY_SLUG_MAP[t.country];
+      const countryHtml = slug
+        ? `<a href="./history/countries/${slug}/" style="color:inherit;text-decoration:none;border-bottom:1px dotted var(--c-border-strong);">${esc(t.country)}</a>`
+        : esc(t.country);
       return `<div class="title-rank-card">
         <div class="${numClass}">${t.titles}</div>
         <div class="title-rank-content">
-          <div class="title-rank-country">${esc(t.country)}</div>
+          <div class="title-rank-country">${countryHtml}</div>
           <div class="title-rank-count">${t.titles}回優勝</div>
           <div class="title-rank-years">${yearsHtml}</div>
         </div>

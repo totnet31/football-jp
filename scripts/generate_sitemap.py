@@ -83,6 +83,31 @@ STATIC_URLS = [
     ("/en/worldcup/history/2014/",  "0.6", "monthly"),
     ("/en/worldcup/history/2018/",  "0.6", "monthly"),
     ("/en/worldcup/history/2022/",  "0.6", "monthly"),
+    # 歴代得点王ランキングページ
+    ("/worldcup/history/scorers/",      "0.7", "monthly"),
+    ("/en/worldcup/history/scorers/",   "0.6", "monthly"),
+    # 国別出場履歴ページ（日本語）
+    ("/worldcup/history/countries/brazil/",       "0.7", "monthly"),
+    ("/worldcup/history/countries/germany/",      "0.7", "monthly"),
+    ("/worldcup/history/countries/italy/",        "0.7", "monthly"),
+    ("/worldcup/history/countries/argentina/",    "0.7", "monthly"),
+    ("/worldcup/history/countries/france/",       "0.7", "monthly"),
+    ("/worldcup/history/countries/uruguay/",      "0.6", "monthly"),
+    ("/worldcup/history/countries/england/",      "0.7", "monthly"),
+    ("/worldcup/history/countries/spain/",        "0.7", "monthly"),
+    ("/worldcup/history/countries/japan/",        "0.8", "monthly"),
+    ("/worldcup/history/countries/netherlands/",  "0.6", "monthly"),
+    # 国別出場履歴ページ（英語）
+    ("/en/worldcup/history/countries/brazil/",       "0.6", "monthly"),
+    ("/en/worldcup/history/countries/germany/",      "0.6", "monthly"),
+    ("/en/worldcup/history/countries/italy/",        "0.6", "monthly"),
+    ("/en/worldcup/history/countries/argentina/",    "0.6", "monthly"),
+    ("/en/worldcup/history/countries/france/",       "0.6", "monthly"),
+    ("/en/worldcup/history/countries/uruguay/",      "0.5", "monthly"),
+    ("/en/worldcup/history/countries/england/",      "0.6", "monthly"),
+    ("/en/worldcup/history/countries/spain/",        "0.6", "monthly"),
+    ("/en/worldcup/history/countries/japan/",        "0.7", "monthly"),
+    ("/en/worldcup/history/countries/netherlands/",  "0.5", "monthly"),
 ]
 
 
