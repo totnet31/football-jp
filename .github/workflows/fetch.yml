@@ -100,6 +100,10 @@ jobs:
         run: python3 scripts/fetch_club_crests.py
         continue-on-error: true
 
+      - name: ベルギー1部リーグ クラブエンブレム取得
+        run: python3 scripts/fetch_belgium_crests.py
+        continue-on-error: true
+
       - name: クラブ基本情報取得（Wikipedia infobox）
         run: python3 scripts/fetch_club_info.py
         continue-on-error: true
