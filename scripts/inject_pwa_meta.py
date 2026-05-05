@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 """
-PWA meta tags and Service Worker registration injection script.
-Injects PWA meta into <head> and SW register script before </body>.
+PWA meta tags, Service Worker registration, and Search injection script.
+Injects PWA meta into <head> and SW/push/search scripts before </body>.
+Also adds 🔍 search button next to the existing 🔔 notification button.
 Skips files that already have manifest link.
 Skips assets/logos/preview.html (not a real page).
 """
@@ -26,6 +27,10 @@ PUSH_SCRIPTS = """\
   <script src="/push-client.js" defer></script>
   <script src="/push-ui.js" defer></script>"""
 
+SEARCH_SCRIPTS = """\
+  <script src="/search.js" defer></script>
+  <script src="/search-ui.js" defer></script>"""
+
 SKIP_FILES = {
     os.path.join(ROOT, "assets", "logos", "preview.html"),
 }
@@ -40,6 +45,41 @@ def find_html_files(root):
                 result.append(os.path.join(dirpath, fname))
     return sorted(result)
 
+def inject_search_button(content, filepath):
+    """
+    🔔ボタンの隣に🔍ボタンを追加する。
+    英語版かどうかでaria-labelを切り替える。
+    既にfjSearchBtnがあればスキップ。
+    """
+    if 'fjSearchBtn' in content or 'openSearchModal' in content:
+        return content, False
+
+    is_en = '/en/' in filepath.replace(ROOT, '')
+
+    search_btn_ja = '<button class="fjSearchBtn" onclick="openSearchModal()" title="検索 (Cmd+K)" aria-label="検索">🔍</button>'
+    search_btn_en = '<button class="fjSearchBtn" onclick="openSearchModal()" title="Search (Cmd+K)" aria-label="Search">🔍</button>'
+    search_btn = search_btn_en if is_en else search_btn_ja
+
+    # 🔔通知ボタンを見つけてその隣（前）に追加
+    # パターン1: onclick="openPushModal()" を含むボタン
+    # 🔍を🔔の前に置く（視覚的に左）
+    push_btn_pattern = re.compile(
+        r'(<button[^>]+onclick="openPushModal\(\)"[^>]*>🔔</button>)',
+        re.DOTALL
+    )
+    m = push_btn_pattern.search(content)
+    if m:
+        new_content = content[:m.start()] + search_btn + '\n      ' + m.group(0) + content[m.end():]
+        return new_content, True
+
+    # パターン2: ヘッダー内に追加（フォールバック：</header>の直前）
+    if '</header>' in content:
+        # ヘッダーに通知ボタンがないページへのフォールバックは実施しない
+        # （デザインが壊れる可能性があるため）
+        pass
+
+    return content, False
+
 def inject_file(path):
     with open(path, 'r', encoding='utf-8') as f:
         content = f.read()
@@ -51,8 +91,6 @@ def inject_file(path):
 
     # Inject PWA meta into <head> if not present
     if not has_manifest:
-        # Find insertion point: after existing apple-touch-icon or before </head>
-        # Insert right before </head>
         if '</head>' in content:
             content = content.replace('</head>', PWA_META + '\n</head>', 1)
             modified = True
@@ -72,6 +110,19 @@ def inject_file(path):
         if '</body>' in content:
             content = content.replace('</body>', PUSH_SCRIPTS + '\n</body>', 1)
             modified = True
+
+    # Check if search scripts already present
+    has_search = '/search.js' in content
+
+    if not has_search:
+        if '</body>' in content:
+            content = content.replace('</body>', SEARCH_SCRIPTS + '\n</body>', 1)
+            modified = True
+
+    # Inject 🔍 search button next to 🔔
+    content, btn_modified = inject_search_button(content, path)
+    if btn_modified:
+        modified = True
 
     if modified:
         with open(path, 'w', encoding='utf-8') as f:
@@ -93,7 +144,7 @@ def main():
             print(f"  OK: {os.path.relpath(path, ROOT)}")
             processed += 1
         else:
-            print(f"  SKIP (already has PWA): {os.path.relpath(path, ROOT)}")
+            print(f"  SKIP (already up-to-date): {os.path.relpath(path, ROOT)}")
             skipped += 1
 
     print(f"\nDone. Updated: {processed}, Skipped: {skipped}, Total: {len(html_files)}")
