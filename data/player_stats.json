@@ -1,5 +1,5 @@
 {
-  "updated": "2026-05-05T17:31:17+09:00",
+  "updated": "2026-05-05T20:03:07+09:00",
   "note": "Wikipediaの各クラブシーズンページから取得。Efsテンプレート形式とwikitable形式の両方に対応。league_apps/league_goalsがリーグ戦、total_apps/total_goalsが全大会合計。",
   "total_players": 25,
   "stats": {
@@ -162,7 +162,7 @@
     "Ritsu Doan": {
       "apps": 29,
       "goals": 5,
-      "assists": 4,
+      "assists": 0,
       "total_apps": 38,
       "total_goals": 7,
       "club": "Eintracht Frankfurt",
@@ -276,6 +276,20 @@
       "wiki_page": "2025–26 Sporting CP season",
       "wiki_format": "efs"
     },
+    "Kento Shiogai": {
+      "apps": 16,
+      "goals": 7,
+      "assists": 0,
+      "total_apps": 16,
+      "total_goals": 7,
+      "club": "NEC",
+      "club_ja": "ヴォルフスブルク",
+      "name_ja": "塩貝健人",
+      "source": "wikipedia_cached",
+      "competition_id": 88,
+      "competition_name": "comp_88",
+      "note": "リーグ戦のみ（scorers経由）"
+    },
     "Ayase Ueda": {
       "apps": 30,
       "goals": 25,
@@ -285,7 +299,7 @@
       "club": "フェイエノールト",
       "club_ja": "フェイエノールト",
       "name_ja": "上田綺世",
-      "source": "scorers.json",
+      "source": "wikipedia_cached",
       "competition_id": 88,
       "competition_name": "comp_88",
       "note": "リーグ戦のみ（scorers経由）"
@@ -299,21 +313,7 @@
       "club": "NEC",
       "club_ja": "NECナイメヘン",
       "name_ja": "小川航基",
-      "source": "scorers.json",
-      "competition_id": 88,
-      "competition_name": "comp_88",
-      "note": "リーグ戦のみ（scorers経由）"
-    },
-    "Kento Shiogai": {
-      "apps": 16,
-      "goals": 7,
-      "assists": 0,
-      "total_apps": 16,
-      "total_goals": 7,
-      "club": "NEC",
-      "club_ja": "ヴォルフスブルク",
-      "name_ja": "塩貝健人",
-      "source": "scorers.json",
+      "source": "wikipedia_cached",
       "competition_id": 88,
       "competition_name": "comp_88",
       "note": "リーグ戦のみ（scorers経由）"
@@ -327,7 +327,7 @@
       "club": "スパルタ・ロッテルダム",
       "club_ja": "スパルタ・ロッテルダム",
       "name_ja": "三戸舜介",
-      "source": "scorers.json",
+      "source": "wikipedia_cached",
       "competition_id": 88,
       "competition_name": "comp_88",
       "note": "リーグ戦のみ（scorers経由）"
