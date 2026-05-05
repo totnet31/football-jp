@@ -58,6 +58,15 @@ STATIC_URLS = [
     ("/worldcup/bracket.html",      "0.7", "weekly"),
     ("/worldcup/rules.html",        "0.5", "monthly"),
     ("/worldcup/countries.html",    "0.7", "weekly"),
+    ("/worldcup/history.html",      "0.8", "monthly"),
+    # W杯歴代詳細ページ（日本出場7大会）
+    ("/worldcup/history/1998/",     "0.7", "monthly"),
+    ("/worldcup/history/2002/",     "0.7", "monthly"),
+    ("/worldcup/history/2006/",     "0.7", "monthly"),
+    ("/worldcup/history/2010/",     "0.7", "monthly"),
+    ("/worldcup/history/2014/",     "0.7", "monthly"),
+    ("/worldcup/history/2018/",     "0.7", "monthly"),
+    ("/worldcup/history/2022/",     "0.7", "monthly"),
     # English pages (Phase 1)
     ("/en/",                        "0.9", "daily"),
     ("/en/results/",                "0.8", "daily"),
@@ -66,6 +75,14 @@ STATIC_URLS = [
     ("/en/players/",                "0.8", "weekly"),
     ("/en/clubs/",                  "0.7", "weekly"),
     ("/en/leagues/",                "0.7", "weekly"),
+    # English W杯歴代詳細ページ
+    ("/en/worldcup/history/1998/",  "0.6", "monthly"),
+    ("/en/worldcup/history/2002/",  "0.6", "monthly"),
+    ("/en/worldcup/history/2006/",  "0.6", "monthly"),
+    ("/en/worldcup/history/2010/",  "0.6", "monthly"),
+    ("/en/worldcup/history/2014/",  "0.6", "monthly"),
+    ("/en/worldcup/history/2018/",  "0.6", "monthly"),
+    ("/en/worldcup/history/2022/",  "0.6", "monthly"),
 ]
 
 

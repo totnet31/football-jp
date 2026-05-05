@@ -472,16 +472,22 @@
 
   // --- 2. 大会一覧 ---
   const jpYears = new Set(all_time_records.japan_history.map(j => j.year));
+  // 詳細ページがある大会（日本出場7大会）
+  const detailYears = new Set([1998, 2002, 2006, 2010, 2014, 2018, 2022]);
   const tournamentsBody = document.getElementById('tournamentsBody');
   if (tournamentsBody) {
     tournamentsBody.innerHTML = tournaments.map(t => {
       const isJp = jpYears.has(t.year);
+      const hasDetail = detailYears.has(t.year);
       const rowCls = isJp ? ' class="japan-row"' : '';
       const jpBadge = isJp ? '<span class="japan-badge">JPN</span>' : '';
       const finalScore = t.final_score ? `<span class="score-cell">${esc(t.final_score)}</span>` : '<span style="color:var(--c-text-sub)">—</span>';
       const scorer = t.top_scorer ? `${esc(t.top_scorer)}<br><span style="font-size:11px;color:var(--c-text-sub)">${esc(t.top_scorer_country)} ${t.top_scorer_goals}点</span>` : '<span style="color:var(--c-text-sub)">—</span>';
+      const yearCell = hasDetail
+        ? `<a href="./history/${t.year}/" style="font-weight:700;color:var(--c-accent);text-decoration:none;" title="${t.year}大会の詳細">${t.year}${jpBadge}</a>`
+        : `${t.year}${jpBadge}`;
       return `<tr${rowCls}>
-        <td class="yr">${t.year}${jpBadge}</td>
+        <td class="yr">${yearCell}</td>
         <td>${esc(t.host)}</td>
         <td style="font-weight:600;">${esc(t.champion)}</td>
         <td>${esc(t.runner_up)}</td>
