@@ -217,6 +217,14 @@ header h1 {
   flex-wrap: wrap;
   gap: 12px;
   align-items: center;
+  justify-content: center;
+}
+
+/* ヘッダーボタン群（検索・通知をまとめる） */
+.fjHeaderBtns {
+  display: flex;
+  gap: 6px;
+  flex-shrink: 0;
 }
 
 .filters.hidden { display: none; }
