@@ -76,6 +76,10 @@ jobs:
           fi
         continue-on-error: true
 
+      - name: ベルギー1部リーグ順位取得（Wikipedia）
+        run: python3 scripts/fetch_belgium_standings.py
+        continue-on-error: true
+
       - name: 節ごとの順位推移取得（Wikipedia）
         run: python3 scripts/fetch_standings_history.py
         continue-on-error: true
