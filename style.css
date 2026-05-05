@@ -352,7 +352,11 @@ main {
   min-width: 0;
 }
 
-.team-name { flex-shrink: 0; }
+.team-name {
+  min-width: 0;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
 
 .team-jp {
   display: inline-flex;
