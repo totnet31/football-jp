@@ -472,8 +472,12 @@
 
   // --- 2. 大会一覧 ---
   const jpYears = new Set(all_time_records.japan_history.map(j => j.year));
-  // 詳細ページがある大会（日本出場7大会）
-  const detailYears = new Set([1998, 2002, 2006, 2010, 2014, 2018, 2022]);
+  // 詳細ページがある大会（全22大会）
+  const detailYears = new Set([
+    1930, 1934, 1938, 1950, 1954, 1958, 1962, 1966,
+    1970, 1974, 1978, 1982, 1986, 1990, 1994,
+    1998, 2002, 2006, 2010, 2014, 2018, 2022
+  ]);
   const tournamentsBody = document.getElementById('tournamentsBody');
   if (tournamentsBody) {
     tournamentsBody.innerHTML = tournaments.map(t => {
