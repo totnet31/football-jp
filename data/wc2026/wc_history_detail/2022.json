@@ -1,0 +1,1699 @@
+{
+  "year": 2022,
+  "host": "カタール",
+  "host_en": "Qatar",
+  "japan_group": "E",
+  "groups": [
+    {
+      "group_id": "A",
+      "name_ja": "グループA",
+      "table": [
+        {
+          "position": 1,
+          "team_en": "Netherlands",
+          "team_ja": "オランダ",
+          "played": 3,
+          "won": 2,
+          "drawn": 1,
+          "lost": 0,
+          "goals_for": 5,
+          "goals_against": 1,
+          "points": 7
+        },
+        {
+          "position": 2,
+          "team_en": "Senegal",
+          "team_ja": "セネガル",
+          "played": 3,
+          "won": 2,
+          "drawn": 0,
+          "lost": 1,
+          "goals_for": 5,
+          "goals_against": 4,
+          "points": 6
+        },
+        {
+          "position": 3,
+          "team_en": "Ecuador",
+          "team_ja": "エクアドル",
+          "played": 3,
+          "won": 1,
+          "drawn": 1,
+          "lost": 1,
+          "goals_for": 4,
+          "goals_against": 3,
+          "points": 4
+        },
+        {
+          "position": 4,
+          "team_en": "Qatar",
+          "team_ja": "カタール",
+          "played": 3,
+          "won": 0,
+          "drawn": 0,
+          "lost": 3,
+          "goals_for": 1,
+          "goals_against": 7,
+          "points": 0
+        }
+      ],
+      "matches": [
+        {
+          "date": "2022-11-20",
+          "home_en": "Qatar",
+          "home_ja": "カタール",
+          "away_en": "Ecuador",
+          "away_ja": "エクアドル",
+          "home_score": 0,
+          "away_score": 2,
+          "scorers": [
+            {
+              "player": "Valencia",
+              "team": "Ecuador",
+              "minute": "31"
+            }
+          ]
+        },
+        {
+          "date": "2022-11-21",
+          "home_en": "Senegal",
+          "home_ja": "セネガル",
+          "away_en": "Netherlands",
+          "away_ja": "オランダ",
+          "home_score": 0,
+          "away_score": 2,
+          "scorers": [
+            {
+              "player": "Gakpo",
+              "team": "Netherlands",
+              "minute": "84"
+            },
+            {
+              "player": "Klaassen",
+              "team": "Netherlands",
+              "minute": "90+9"
+            }
+          ]
+        },
+        {
+          "date": "2022-11-25",
+          "home_en": "Qatar",
+          "home_ja": "カタール",
+          "away_en": "Senegal",
+          "away_ja": "セネガル",
+          "home_score": 1,
+          "away_score": 3,
+          "scorers": [
+            {
+              "player": "Muntari",
+              "team": "Qatar",
+              "minute": "78"
+            },
+            {
+              "player": "Dia",
+              "team": "Senegal",
+              "minute": "41"
+            },
+            {
+              "player": "Diédhiou",
+              "team": "Senegal",
+              "minute": "48"
+            },
+            {
+              "player": "B. Dieng",
+              "team": "Senegal",
+              "minute": "84"
+            }
+          ]
+        },
+        {
+          "date": "2022-11-25",
+          "home_en": "Netherlands",
+          "home_ja": "オランダ",
+          "away_en": "Ecuador",
+          "away_ja": "エクアドル",
+          "home_score": 1,
+          "away_score": 1,
+          "scorers": [
+            {
+              "player": "Gakpo",
+              "team": "Netherlands",
+              "minute": "6"
+            },
+            {
+              "player": "Valencia",
+              "team": "Ecuador",
+              "minute": "49"
+            }
+          ]
+        },
+        {
+          "date": "2022-11-29",
+          "home_en": "Ecuador",
+          "home_ja": "エクアドル",
+          "away_en": "Senegal",
+          "away_ja": "セネガル",
+          "home_score": 1,
+          "away_score": 2,
+          "scorers": [
+            {
+              "player": "Caicedo",
+              "team": "Ecuador",
+              "minute": "67"
+            },
+            {
+              "player": "Koulibaly",
+              "team": "Senegal",
+              "minute": "70"
+            }
+          ]
+        },
+        {
+          "date": "2022-11-29",
+          "home_en": "Netherlands",
+          "home_ja": "オランダ",
+          "away_en": "Qatar",
+          "away_ja": "カタール",
+          "home_score": 2,
+          "away_score": 0,
+          "scorers": [
+            {
+              "player": "Gakpo",
+              "team": "Netherlands",
+              "minute": "26"
+            },
+            {
+              "player": "F. de Jong",
+              "team": "Netherlands",
+              "minute": "49"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "group_id": "B",
+      "name_ja": "グループB",
+      "table": [
+        {
+          "position": 1,
+          "team_en": "England",
+          "team_ja": "イングランド",
+          "played": 3,
+          "won": 2,
+          "drawn": 1,
+          "lost": 0,
+          "goals_for": 9,
+          "goals_against": 2,
+          "points": 7
+        },
+        {
+          "position": 2,
+          "team_en": "United States",
+          "team_ja": "アメリカ合衆国",
+          "played": 3,
+          "won": 1,
+          "drawn": 2,
+          "lost": 0,
+          "goals_for": 2,
+          "goals_against": 1,
+          "points": 5
+        },
+        {
+          "position": 3,
+          "team_en": "Iran",
+          "team_ja": "イラン",
+          "played": 3,
+          "won": 1,
+          "drawn": 0,
+          "lost": 2,
+          "goals_for": 4,
+          "goals_against": 7,
+          "points": 3
+        },
+        {
+          "position": 4,
+          "team_en": "Wales",
+          "team_ja": "ウェールズ",
+          "played": 3,
+          "won": 0,
+          "drawn": 1,
+          "lost": 2,
+          "goals_for": 1,
+          "goals_against": 6,
+          "points": 1
+        }
+      ],
+      "matches": [
+        {
+          "date": "2022-11-21",
+          "home_en": "England",
+          "home_ja": "イングランド",
+          "away_en": "Iran",
+          "away_ja": "イラン",
+          "home_score": 6,
+          "away_score": 2,
+          "scorers": [
+            {
+              "player": "Bellingham",
+              "team": "England",
+              "minute": "35"
+            },
+            {
+              "player": "Saka",
+              "team": "England",
+              "minute": "62"
+            },
+            {
+              "player": "Sterling",
+              "team": "England",
+              "minute": "45+1"
+            },
+            {
+              "player": "Rashford",
+              "team": "England",
+              "minute": "71"
+            },
+            {
+              "player": "Grealish",
+              "team": "England",
+              "minute": "90"
+            }
+          ]
+        },
+        {
+          "date": "2022-11-21",
+          "home_en": "United States",
+          "home_ja": "アメリカ合衆国",
+          "away_en": "Wales",
+          "away_ja": "ウェールズ",
+          "home_score": 1,
+          "away_score": 1,
+          "scorers": [
+            {
+              "player": "Weah",
+              "team": "United States",
+              "minute": "36"
+            }
+          ]
+        },
+        {
+          "date": "2022-11-25",
+          "home_en": "Wales",
+          "home_ja": "ウェールズ",
+          "away_en": "Iran",
+          "away_ja": "イラン",
+          "home_score": 0,
+          "away_score": 2,
+          "scorers": [
+            {
+              "player": "Cheshmi",
+              "team": "Iran",
+              "minute": "90+8"
+            },
+            {
+              "player": "Rezaeian",
+              "team": "Iran",
+              "minute": "90+11"
+            }
+          ]
+        },
+        {
+          "date": "2022-11-25",
+          "home_en": "England",
+          "home_ja": "イングランド",
+          "away_en": "United States",
+          "away_ja": "アメリカ合衆国",
+          "home_score": 0,
+          "away_score": 0,
+          "scorers": []
+        },
+        {
+          "date": "2022-11-29",
+          "home_en": "Wales",
+          "home_ja": "ウェールズ",
+          "away_en": "England",
+          "away_ja": "イングランド",
+          "home_score": 0,
+          "away_score": 3,
+          "scorers": [
+            {
+              "player": "Rashford",
+              "team": "England",
+              "minute": "68"
+            },
+            {
+              "player": "Foden",
+              "team": "England",
+              "minute": "51"
+            }
+          ]
+        },
+        {
+          "date": "2022-11-29",
+          "home_en": "Iran",
+          "home_ja": "イラン",
+          "away_en": "United States",
+          "away_ja": "アメリカ合衆国",
+          "home_score": 0,
+          "away_score": 1,
+          "scorers": [
+            {
+              "player": "Pulisic",
+              "team": "United States",
+              "minute": "38"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "group_id": "C",
+      "name_ja": "グループC",
+      "table": [
+        {
+          "position": 1,
+          "team_en": "Argentina",
+          "team_ja": "アルゼンチン",
+          "played": 3,
+          "won": 2,
+          "drawn": 0,
+          "lost": 1,
+          "goals_for": 5,
+          "goals_against": 2,
+          "points": 6
+        },
+        {
+          "position": 2,
+          "team_en": "Poland",
+          "team_ja": "ポーランド",
+          "played": 3,
+          "won": 1,
+          "drawn": 1,
+          "lost": 1,
+          "goals_for": 2,
+          "goals_against": 2,
+          "points": 4
+        },
+        {
+          "position": 3,
+          "team_en": "Mexico",
+          "team_ja": "メキシコ",
+          "played": 3,
+          "won": 1,
+          "drawn": 1,
+          "lost": 1,
+          "goals_for": 2,
+          "goals_against": 3,
+          "points": 4
+        },
+        {
+          "position": 4,
+          "team_en": "Saudi Arabia",
+          "team_ja": "サウジアラビア",
+          "played": 3,
+          "won": 1,
+          "drawn": 0,
+          "lost": 2,
+          "goals_for": 3,
+          "goals_against": 5,
+          "points": 3
+        }
+      ],
+      "matches": [
+        {
+          "date": "2022-11-22",
+          "home_en": "Argentina",
+          "home_ja": "アルゼンチン",
+          "away_en": "KSA",
+          "away_ja": "KSA",
+          "home_score": 1,
+          "away_score": 2,
+          "scorers": [
+            {
+              "player": "Al-Shehri",
+              "team": "KSA",
+              "minute": "48"
+            },
+            {
+              "player": "S. Al-Dawsari",
+              "team": "KSA",
+              "minute": "53"
+            }
+          ]
+        },
+        {
+          "date": "2022-11-22",
+          "home_en": "Mexico",
+          "home_ja": "メキシコ",
+          "away_en": "Poland",
+          "away_ja": "ポーランド",
+          "home_score": 0,
+          "away_score": 0,
+          "scorers": []
+        },
+        {
+          "date": "2022-11-26",
+          "home_en": "Poland",
+          "home_ja": "ポーランド",
+          "away_en": "KSA",
+          "away_ja": "KSA",
+          "home_score": 2,
+          "away_score": 0,
+          "scorers": [
+            {
+              "player": "Zieliński",
+              "team": "Poland",
+              "minute": "39"
+            },
+            {
+              "player": "Lewandowski",
+              "team": "Poland",
+              "minute": "82"
+            }
+          ]
+        },
+        {
+          "date": "2022-11-26",
+          "home_en": "Argentina",
+          "home_ja": "アルゼンチン",
+          "away_en": "Mexico",
+          "away_ja": "メキシコ",
+          "home_score": 2,
+          "away_score": 0,
+          "scorers": [
+            {
+              "player": "Messi",
+              "team": "Argentina",
+              "minute": "64"
+            },
+            {
+              "player": "Fernández",
+              "team": "Argentina",
+              "minute": "87"
+            }
+          ]
+        },
+        {
+          "date": "2022-11-30",
+          "home_en": "Poland",
+          "home_ja": "ポーランド",
+          "away_en": "Argentina",
+          "away_ja": "アルゼンチン",
+          "home_score": 0,
+          "away_score": 2,
+          "scorers": [
+            {
+              "player": "Mac Allister",
+              "team": "Argentina",
+              "minute": "46"
+            },
+            {
+              "player": "Alvarez",
+              "team": "Argentina",
+              "minute": "67"
+            }
+          ]
+        },
+        {
+          "date": "2022-11-30",
+          "home_en": "KSA",
+          "home_ja": "KSA",
+          "away_en": "Mexico",
+          "away_ja": "メキシコ",
+          "home_score": 1,
+          "away_score": 2,
+          "scorers": [
+            {
+              "player": "S. Al-Dawsari",
+              "team": "KSA",
+              "minute": "90+5"
+            },
+            {
+              "player": "Martín",
+              "team": "Mexico",
+              "minute": "47"
+            },
+            {
+              "player": "Chávez",
+              "team": "Mexico",
+              "minute": "52"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "group_id": "D",
+      "name_ja": "グループD",
+      "table": [
+        {
+          "position": 1,
+          "team_en": "France",
+          "team_ja": "フランス",
+          "played": 3,
+          "won": 2,
+          "drawn": 0,
+          "lost": 1,
+          "goals_for": 6,
+          "goals_against": 3,
+          "points": 6
+        },
+        {
+          "position": 2,
+          "team_en": "Australia",
+          "team_ja": "オーストラリア",
+          "played": 3,
+          "won": 2,
+          "drawn": 0,
+          "lost": 1,
+          "goals_for": 3,
+          "goals_against": 4,
+          "points": 6
+        },
+        {
+          "position": 3,
+          "team_en": "Tunisia",
+          "team_ja": "チュニジア",
+          "played": 3,
+          "won": 1,
+          "drawn": 1,
+          "lost": 1,
+          "goals_for": 1,
+          "goals_against": 1,
+          "points": 4
+        },
+        {
+          "position": 4,
+          "team_en": "Denmark",
+          "team_ja": "デンマーク",
+          "played": 3,
+          "won": 0,
+          "drawn": 1,
+          "lost": 2,
+          "goals_for": 1,
+          "goals_against": 3,
+          "points": 1
+        }
+      ],
+      "matches": [
+        {
+          "date": "2022-11-22",
+          "home_en": "Denmark",
+          "home_ja": "デンマーク",
+          "away_en": "Tunisia",
+          "away_ja": "チュニジア",
+          "home_score": 0,
+          "away_score": 0,
+          "scorers": []
+        },
+        {
+          "date": "2022-11-22",
+          "home_en": "France",
+          "home_ja": "フランス",
+          "away_en": "Australia",
+          "away_ja": "オーストラリア",
+          "home_score": 4,
+          "away_score": 1,
+          "scorers": [
+            {
+              "player": "Rabiot",
+              "team": "France",
+              "minute": "27"
+            },
+            {
+              "player": "Giroud",
+              "team": "France",
+              "minute": "71"
+            },
+            {
+              "player": "Mbappé",
+              "team": "France",
+              "minute": "68"
+            },
+            {
+              "player": "Goodwin",
+              "team": "Australia",
+              "minute": "9"
+            }
+          ]
+        },
+        {
+          "date": "2022-11-26",
+          "home_en": "Tunisia",
+          "home_ja": "チュニジア",
+          "away_en": "Australia",
+          "away_ja": "オーストラリア",
+          "home_score": 0,
+          "away_score": 1,
+          "scorers": [
+            {
+              "player": "Duke",
+              "team": "Australia",
+              "minute": "23"
+            }
+          ]
+        },
+        {
+          "date": "2022-11-26",
+          "home_en": "France",
+          "home_ja": "フランス",
+          "away_en": "Denmark",
+          "away_ja": "デンマーク",
+          "home_score": 2,
+          "away_score": 1,
+          "scorers": [
+            {
+              "player": "Mbappé",
+              "team": "France",
+              "minute": "86"
+            },
+            {
+              "player": "A. Christensen",
+              "team": "Denmark",
+              "minute": "68"
+            }
+          ]
+        },
+        {
+          "date": "2022-11-30",
+          "home_en": "Australia",
+          "home_ja": "オーストラリア",
+          "away_en": "Denmark",
+          "away_ja": "デンマーク",
+          "home_score": 1,
+          "away_score": 0,
+          "scorers": [
+            {
+              "player": "Leckie",
+              "team": "Australia",
+              "minute": "60"
+            }
+          ]
+        },
+        {
+          "date": "2022-11-30",
+          "home_en": "Tunisia",
+          "home_ja": "チュニジア",
+          "away_en": "France",
+          "away_ja": "フランス",
+          "home_score": 1,
+          "away_score": 0,
+          "scorers": [
+            {
+              "player": "Khazri",
+              "team": "Tunisia",
+              "minute": "58"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "group_id": "E",
+      "name_ja": "グループE",
+      "table": [
+        {
+          "position": 1,
+          "team_en": "Japan",
+          "team_ja": "日本",
+          "played": 3,
+          "won": 2,
+          "drawn": 0,
+          "lost": 1,
+          "goals_for": 4,
+          "goals_against": 3,
+          "points": 6
+        },
+        {
+          "position": 2,
+          "team_en": "Spain",
+          "team_ja": "スペイン",
+          "played": 3,
+          "won": 1,
+          "drawn": 1,
+          "lost": 1,
+          "goals_for": 9,
+          "goals_against": 3,
+          "points": 4
+        },
+        {
+          "position": 3,
+          "team_en": "Germany",
+          "team_ja": "ドイツ",
+          "played": 3,
+          "won": 1,
+          "drawn": 1,
+          "lost": 1,
+          "goals_for": 6,
+          "goals_against": 5,
+          "points": 4
+        },
+        {
+          "position": 4,
+          "team_en": "Costa Rica",
+          "team_ja": "コスタリカ",
+          "played": 3,
+          "won": 1,
+          "drawn": 0,
+          "lost": 2,
+          "goals_for": 3,
+          "goals_against": 11,
+          "points": 3
+        }
+      ],
+      "matches": [
+        {
+          "date": "2022-11-23",
+          "home_en": "Germany",
+          "home_ja": "ドイツ",
+          "away_en": "Japan",
+          "away_ja": "日本",
+          "home_score": 1,
+          "away_score": 2,
+          "scorers": [
+            {
+              "player": "Dōan",
+              "team": "Japan",
+              "minute": "75"
+            },
+            {
+              "player": "Asano",
+              "team": "Japan",
+              "minute": "83"
+            }
+          ]
+        },
+        {
+          "date": "2022-11-23",
+          "home_en": "SPA",
+          "home_ja": "SPA",
+          "away_en": "Costa Rica",
+          "away_ja": "コスタリカ",
+          "home_score": 7,
+          "away_score": 0,
+          "scorers": [
+            {
+              "player": "Olmo",
+              "team": "SPA",
+              "minute": "11"
+            },
+            {
+              "player": "Asensio",
+              "team": "SPA",
+              "minute": "21"
+            },
+            {
+              "player": "F. Torres",
+              "team": "SPA",
+              "minute": "54"
+            },
+            {
+              "player": "Gavi",
+              "team": "SPA",
+              "minute": "74"
+            },
+            {
+              "player": "Soler",
+              "team": "SPA",
+              "minute": "90"
+            },
+            {
+              "player": "Morata",
+              "team": "SPA",
+              "minute": "90+2"
+            }
+          ]
+        },
+        {
+          "date": "2022-11-27",
+          "home_en": "Japan",
+          "home_ja": "日本",
+          "away_en": "Costa Rica",
+          "away_ja": "コスタリカ",
+          "home_score": 0,
+          "away_score": 1,
+          "scorers": [
+            {
+              "player": "Fuller",
+              "team": "Costa Rica",
+              "minute": "81"
+            }
+          ]
+        },
+        {
+          "date": "2022-11-27",
+          "home_en": "SPA",
+          "home_ja": "SPA",
+          "away_en": "Germany",
+          "away_ja": "ドイツ",
+          "home_score": 1,
+          "away_score": 1,
+          "scorers": [
+            {
+              "player": "Morata",
+              "team": "SPA",
+              "minute": "62"
+            },
+            {
+              "player": "Füllkrug",
+              "team": "Germany",
+              "minute": "83"
+            }
+          ]
+        },
+        {
+          "date": "2022-12-01",
+          "home_en": "Japan",
+          "home_ja": "日本",
+          "away_en": "SPA",
+          "away_ja": "SPA",
+          "home_score": 2,
+          "away_score": 1,
+          "scorers": [
+            {
+              "player": "Dōan",
+              "team": "Japan",
+              "minute": "48"
+            },
+            {
+              "player": "Tanaka",
+              "team": "Japan",
+              "minute": "51"
+            },
+            {
+              "player": "Morata",
+              "team": "SPA",
+              "minute": "11"
+            }
+          ]
+        },
+        {
+          "date": "2022-12-01",
+          "home_en": "Costa Rica",
+          "home_ja": "コスタリカ",
+          "away_en": "Germany",
+          "away_ja": "ドイツ",
+          "home_score": 2,
+          "away_score": 4,
+          "scorers": [
+            {
+              "player": "Tejeda",
+              "team": "Costa Rica",
+              "minute": "58"
+            },
+            {
+              "player": "Vargas",
+              "team": "Costa Rica",
+              "minute": "70"
+            },
+            {
+              "player": "Gnabry",
+              "team": "Germany",
+              "minute": "10"
+            },
+            {
+              "player": "Havertz",
+              "team": "Germany",
+              "minute": "85"
+            },
+            {
+              "player": "Füllkrug",
+              "team": "Germany",
+              "minute": "89"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "group_id": "F",
+      "name_ja": "グループF",
+      "table": [
+        {
+          "position": 1,
+          "team_en": "Morocco",
+          "team_ja": "モロッコ",
+          "played": 3,
+          "won": 2,
+          "drawn": 1,
+          "lost": 0,
+          "goals_for": 4,
+          "goals_against": 1,
+          "points": 7
+        },
+        {
+          "position": 2,
+          "team_en": "Croatia",
+          "team_ja": "クロアチア",
+          "played": 3,
+          "won": 1,
+          "drawn": 2,
+          "lost": 0,
+          "goals_for": 4,
+          "goals_against": 1,
+          "points": 5
+        },
+        {
+          "position": 3,
+          "team_en": "Belgium",
+          "team_ja": "ベルギー",
+          "played": 3,
+          "won": 1,
+          "drawn": 1,
+          "lost": 1,
+          "goals_for": 1,
+          "goals_against": 2,
+          "points": 4
+        },
+        {
+          "position": 4,
+          "team_en": "Canada",
+          "team_ja": "カナダ",
+          "played": 3,
+          "won": 0,
+          "drawn": 0,
+          "lost": 3,
+          "goals_for": 2,
+          "goals_against": 7,
+          "points": 0
+        }
+      ],
+      "matches": [
+        {
+          "date": "2022-11-23",
+          "home_en": "Morocco",
+          "home_ja": "モロッコ",
+          "away_en": "Croatia",
+          "away_ja": "クロアチア",
+          "home_score": 0,
+          "away_score": 0,
+          "scorers": []
+        },
+        {
+          "date": "2022-11-23",
+          "home_en": "Belgium",
+          "home_ja": "ベルギー",
+          "away_en": "Canada",
+          "away_ja": "カナダ",
+          "home_score": 1,
+          "away_score": 0,
+          "scorers": [
+            {
+              "player": "Batshuayi",
+              "team": "Belgium",
+              "minute": "44"
+            }
+          ]
+        },
+        {
+          "date": "2022-11-27",
+          "home_en": "Belgium",
+          "home_ja": "ベルギー",
+          "away_en": "Morocco",
+          "away_ja": "モロッコ",
+          "home_score": 0,
+          "away_score": 2,
+          "scorers": [
+            {
+              "player": "Saïss",
+              "team": "Morocco",
+              "minute": "73"
+            },
+            {
+              "player": "Aboukhlal",
+              "team": "Morocco",
+              "minute": "90+2"
+            }
+          ]
+        },
+        {
+          "date": "2022-11-27",
+          "home_en": "Croatia",
+          "home_ja": "クロアチア",
+          "away_en": "Canada",
+          "away_ja": "カナダ",
+          "home_score": 4,
+          "away_score": 1,
+          "scorers": [
+            {
+              "player": "Kramarić",
+              "team": "Croatia",
+              "minute": "70"
+            },
+            {
+              "player": "Livaja",
+              "team": "Croatia",
+              "minute": "44"
+            },
+            {
+              "player": "Majer",
+              "team": "Croatia",
+              "minute": "90+4"
+            },
+            {
+              "player": "Davies",
+              "team": "Canada",
+              "minute": "2"
+            }
+          ]
+        },
+        {
+          "date": "2022-12-01",
+          "home_en": "Croatia",
+          "home_ja": "クロアチア",
+          "away_en": "Belgium",
+          "away_ja": "ベルギー",
+          "home_score": 0,
+          "away_score": 0,
+          "scorers": []
+        },
+        {
+          "date": "2022-12-01",
+          "home_en": "Canada",
+          "home_ja": "カナダ",
+          "away_en": "Morocco",
+          "away_ja": "モロッコ",
+          "home_score": 1,
+          "away_score": 2,
+          "scorers": [
+            {
+              "player": "Ziyech",
+              "team": "Morocco",
+              "minute": "4"
+            },
+            {
+              "player": "En-Nesyri",
+              "team": "Morocco",
+              "minute": "23"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "group_id": "G",
+      "name_ja": "グループG",
+      "table": [
+        {
+          "position": 1,
+          "team_en": "Brazil",
+          "team_ja": "ブラジル",
+          "played": 3,
+          "won": 2,
+          "drawn": 0,
+          "lost": 1,
+          "goals_for": 3,
+          "goals_against": 1,
+          "points": 6
+        },
+        {
+          "position": 2,
+          "team_en": "Switzerland",
+          "team_ja": "スイス",
+          "played": 3,
+          "won": 2,
+          "drawn": 0,
+          "lost": 1,
+          "goals_for": 4,
+          "goals_against": 3,
+          "points": 6
+        },
+        {
+          "position": 3,
+          "team_en": "Cameroon",
+          "team_ja": "カメルーン",
+          "played": 3,
+          "won": 1,
+          "drawn": 1,
+          "lost": 1,
+          "goals_for": 4,
+          "goals_against": 4,
+          "points": 4
+        },
+        {
+          "position": 4,
+          "team_en": "Serbia",
+          "team_ja": "セルビア",
+          "played": 3,
+          "won": 0,
+          "drawn": 1,
+          "lost": 2,
+          "goals_for": 5,
+          "goals_against": 8,
+          "points": 1
+        }
+      ],
+      "matches": [
+        {
+          "date": "2022-11-24",
+          "home_en": "Switzerland",
+          "home_ja": "スイス",
+          "away_en": "Cameroon",
+          "away_ja": "カメルーン",
+          "home_score": 1,
+          "away_score": 0,
+          "scorers": [
+            {
+              "player": "Embolo",
+              "team": "Switzerland",
+              "minute": "48"
+            }
+          ]
+        },
+        {
+          "date": "2022-11-24",
+          "home_en": "Brazil",
+          "home_ja": "ブラジル",
+          "away_en": "Serbia",
+          "away_ja": "セルビア",
+          "home_score": 2,
+          "away_score": 0,
+          "scorers": [
+            {
+              "player": "Richarlison",
+              "team": "Brazil",
+              "minute": "73"
+            }
+          ]
+        },
+        {
+          "date": "2022-11-28",
+          "home_en": "Cameroon",
+          "home_ja": "カメルーン",
+          "away_en": "Serbia",
+          "away_ja": "セルビア",
+          "home_score": 3,
+          "away_score": 3,
+          "scorers": [
+            {
+              "player": "Castelletto",
+              "team": "Cameroon",
+              "minute": "29"
+            },
+            {
+              "player": "Aboubakar",
+              "team": "Cameroon",
+              "minute": "63"
+            },
+            {
+              "player": "Choupo-Moting",
+              "team": "Cameroon",
+              "minute": "66"
+            },
+            {
+              "player": "Pavlović",
+              "team": "Serbia",
+              "minute": "45+1"
+            },
+            {
+              "player": "S. Milinković-Savić",
+              "team": "Serbia",
+              "minute": "45+3"
+            },
+            {
+              "player": "A. Mitrović",
+              "team": "Serbia",
+              "minute": "53"
+            }
+          ]
+        },
+        {
+          "date": "2022-11-28",
+          "home_en": "Brazil",
+          "home_ja": "ブラジル",
+          "away_en": "Switzerland",
+          "away_ja": "スイス",
+          "home_score": 1,
+          "away_score": 0,
+          "scorers": [
+            {
+              "player": "Casemiro",
+              "team": "Brazil",
+              "minute": "83"
+            }
+          ]
+        },
+        {
+          "date": "2022-12-02",
+          "home_en": "Serbia",
+          "home_ja": "セルビア",
+          "away_en": "Switzerland",
+          "away_ja": "スイス",
+          "home_score": 2,
+          "away_score": 3,
+          "scorers": [
+            {
+              "player": "A. Mitrović",
+              "team": "Serbia",
+              "minute": "26"
+            },
+            {
+              "player": "Vlahović",
+              "team": "Serbia",
+              "minute": "35"
+            },
+            {
+              "player": "Shaqiri",
+              "team": "Switzerland",
+              "minute": "20"
+            },
+            {
+              "player": "Embolo",
+              "team": "Switzerland",
+              "minute": "44"
+            },
+            {
+              "player": "Freuler",
+              "team": "Switzerland",
+              "minute": "48"
+            }
+          ]
+        },
+        {
+          "date": "2022-12-02",
+          "home_en": "Cameroon",
+          "home_ja": "カメルーン",
+          "away_en": "Brazil",
+          "away_ja": "ブラジル",
+          "home_score": 1,
+          "away_score": 0,
+          "scorers": [
+            {
+              "player": "Aboubakar",
+              "team": "Cameroon",
+              "minute": "90+2"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "group_id": "H",
+      "name_ja": "グループH",
+      "table": [
+        {
+          "position": 1,
+          "team_en": "Portugal",
+          "team_ja": "ポルトガル",
+          "played": 3,
+          "won": 2,
+          "drawn": 0,
+          "lost": 1,
+          "goals_for": 6,
+          "goals_against": 4,
+          "points": 6
+        },
+        {
+          "position": 2,
+          "team_en": "South Korea",
+          "team_ja": "韓国",
+          "played": 3,
+          "won": 1,
+          "drawn": 1,
+          "lost": 1,
+          "goals_for": 4,
+          "goals_against": 4,
+          "points": 4
+        },
+        {
+          "position": 3,
+          "team_en": "Uruguay",
+          "team_ja": "ウルグアイ",
+          "played": 3,
+          "won": 1,
+          "drawn": 1,
+          "lost": 1,
+          "goals_for": 2,
+          "goals_against": 2,
+          "points": 4
+        },
+        {
+          "position": 4,
+          "team_en": "Ghana",
+          "team_ja": "ガーナ",
+          "played": 3,
+          "won": 1,
+          "drawn": 0,
+          "lost": 2,
+          "goals_for": 5,
+          "goals_against": 7,
+          "points": 3
+        }
+      ],
+      "matches": [
+        {
+          "date": "2022-11-24",
+          "home_en": "Uruguay",
+          "home_ja": "ウルグアイ",
+          "away_en": "South Korea",
+          "away_ja": "韓国",
+          "home_score": 0,
+          "away_score": 0,
+          "scorers": []
+        },
+        {
+          "date": "2022-11-24",
+          "home_en": "Portugal",
+          "home_ja": "ポルトガル",
+          "away_en": "Ghana",
+          "away_ja": "ガーナ",
+          "home_score": 3,
+          "away_score": 2,
+          "scorers": [
+            {
+              "player": "Félix",
+              "team": "Portugal",
+              "minute": "78"
+            },
+            {
+              "player": "Leão",
+              "team": "Portugal",
+              "minute": "80"
+            },
+            {
+              "player": "A. Ayew",
+              "team": "Ghana",
+              "minute": "73"
+            },
+            {
+              "player": "Bukari",
+              "team": "Ghana",
+              "minute": "89"
+            }
+          ]
+        },
+        {
+          "date": "2022-11-28",
+          "home_en": "South Korea",
+          "home_ja": "韓国",
+          "away_en": "Ghana",
+          "away_ja": "ガーナ",
+          "home_score": 2,
+          "away_score": 3,
+          "scorers": [
+            {
+              "player": "Cho Gue-sung",
+              "team": "South Korea",
+              "minute": "61"
+            },
+            {
+              "player": "Salisu",
+              "team": "Ghana",
+              "minute": "24"
+            },
+            {
+              "player": "Kudus",
+              "team": "Ghana",
+              "minute": "68"
+            }
+          ]
+        },
+        {
+          "date": "2022-11-28",
+          "home_en": "Portugal",
+          "home_ja": "ポルトガル",
+          "away_en": "Uruguay",
+          "away_ja": "ウルグアイ",
+          "home_score": 2,
+          "away_score": 0,
+          "scorers": []
+        },
+        {
+          "date": "2022-12-02",
+          "home_en": "Ghana",
+          "home_ja": "ガーナ",
+          "away_en": "Uruguay",
+          "away_ja": "ウルグアイ",
+          "home_score": 0,
+          "away_score": 2,
+          "scorers": [
+            {
+              "player": "De Arrascaeta",
+              "team": "Uruguay",
+              "minute": "32"
+            }
+          ]
+        },
+        {
+          "date": "2022-12-02",
+          "home_en": "South Korea",
+          "home_ja": "韓国",
+          "away_en": "Portugal",
+          "away_ja": "ポルトガル",
+          "home_score": 2,
+          "away_score": 1,
+          "scorers": [
+            {
+              "player": "Kim Young-gwon",
+              "team": "South Korea",
+              "minute": "27"
+            },
+            {
+              "player": "Hwang Hee-chan",
+              "team": "South Korea",
+              "minute": "90+1"
+            },
+            {
+              "player": "Horta",
+              "team": "Portugal",
+              "minute": "5"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "knockout": {
+    "round_of_16": [
+      {
+        "date": "2022-12-03",
+        "home_en": "Netherlands",
+        "home_ja": "オランダ",
+        "away_en": "United States",
+        "away_ja": "アメリカ合衆国",
+        "home_score": 3,
+        "away_score": 1,
+        "et": false,
+        "pk_score": null
+      },
+      {
+        "date": "2022-12-03",
+        "home_en": "Argentina",
+        "home_ja": "アルゼンチン",
+        "away_en": "Australia",
+        "away_ja": "オーストラリア",
+        "home_score": 2,
+        "away_score": 1,
+        "et": false,
+        "pk_score": null
+      },
+      {
+        "date": "2022-12-04",
+        "home_en": "France",
+        "home_ja": "フランス",
+        "away_en": "Poland",
+        "away_ja": "ポーランド",
+        "home_score": 3,
+        "away_score": 1,
+        "et": false,
+        "pk_score": null
+      },
+      {
+        "date": "2022-12-04",
+        "home_en": "England",
+        "home_ja": "イングランド",
+        "away_en": "Senegal",
+        "away_ja": "セネガル",
+        "home_score": 3,
+        "away_score": 0,
+        "et": false,
+        "pk_score": null
+      },
+      {
+        "date": "2022-12-05",
+        "home_en": "Japan",
+        "home_ja": "日本",
+        "away_en": "Croatia",
+        "away_ja": "クロアチア",
+        "home_score": 1,
+        "away_score": 1,
+        "et": false,
+        "pk_score": null
+      },
+      {
+        "date": "2022-12-05",
+        "home_en": "Brazil",
+        "home_ja": "ブラジル",
+        "away_en": "South Korea",
+        "away_ja": "韓国",
+        "home_score": 4,
+        "away_score": 1,
+        "et": false,
+        "pk_score": null
+      },
+      {
+        "date": "2022-12-06",
+        "home_en": "Morocco",
+        "home_ja": "モロッコ",
+        "away_en": "Spain",
+        "away_ja": "スペイン",
+        "home_score": 0,
+        "away_score": 0,
+        "et": false,
+        "pk_score": null
+      },
+      {
+        "date": "2022-12-06",
+        "home_en": "Portugal",
+        "home_ja": "ポルトガル",
+        "away_en": "Switzerland",
+        "away_ja": "スイス",
+        "home_score": 6,
+        "away_score": 1,
+        "et": false,
+        "pk_score": null
+      }
+    ],
+    "quarter_finals": [
+      {
+        "date": "2022-12-09",
+        "home_en": "Croatia",
+        "home_ja": "クロアチア",
+        "away_en": "Brazil",
+        "away_ja": "ブラジル",
+        "home_score": 1,
+        "away_score": 1,
+        "et": false,
+        "pk_score": null
+      },
+      {
+        "date": "2022-12-10",
+        "home_en": "Morocco",
+        "home_ja": "モロッコ",
+        "away_en": "Portugal",
+        "away_ja": "ポルトガル",
+        "home_score": 1,
+        "away_score": 0,
+        "et": false,
+        "pk_score": null
+      },
+      {
+        "date": "2022-12-10",
+        "home_en": "England",
+        "home_ja": "イングランド",
+        "away_en": "France",
+        "away_ja": "フランス",
+        "home_score": 1,
+        "away_score": 2,
+        "et": false,
+        "pk_score": null
+      }
+    ],
+    "semi_finals": [
+      {
+        "date": "2022-12-13",
+        "home_en": "Argentina",
+        "home_ja": "アルゼンチン",
+        "away_en": "Croatia",
+        "away_ja": "クロアチア",
+        "home_score": 3,
+        "away_score": 0,
+        "et": false,
+        "pk_score": null
+      },
+      {
+        "date": "2022-12-14",
+        "home_en": "France",
+        "home_ja": "フランス",
+        "away_en": "Morocco",
+        "away_ja": "モロッコ",
+        "home_score": 2,
+        "away_score": 0,
+        "et": false,
+        "pk_score": null
+      }
+    ],
+    "third_place": [
+      {
+        "date": "2022-12-17",
+        "home_en": "Croatia",
+        "home_ja": "クロアチア",
+        "away_en": "Morocco",
+        "away_ja": "モロッコ",
+        "home_score": 2,
+        "away_score": 1,
+        "et": false,
+        "pk_score": null
+      }
+    ],
+    "final": {
+      "home_en": "Argentina",
+      "home_ja": "アルゼンチン",
+      "away_en": "France",
+      "away_ja": "フランス",
+      "home_score": 3,
+      "away_score": 3,
+      "et": true,
+      "pk_score": "4-2"
+    }
+  },
+  "japan_matches": [
+    {
+      "date": "2022-11-23",
+      "stage": "GS-1",
+      "home_en": "Germany",
+      "home_ja": "ドイツ",
+      "away_en": "Japan",
+      "away_ja": "日本",
+      "home_score": 1,
+      "away_score": 2,
+      "japan_scorers": [
+        "堂安律 75'",
+        "浅野拓磨 83'"
+      ]
+    },
+    {
+      "date": "2022-11-27",
+      "stage": "GS-2",
+      "home_en": "Japan",
+      "home_ja": "日本",
+      "away_en": "Costa Rica",
+      "away_ja": "コスタリカ",
+      "home_score": 0,
+      "away_score": 1,
+      "japan_scorers": []
+    },
+    {
+      "date": "2022-12-01",
+      "stage": "GS-3",
+      "home_en": "Spain",
+      "home_ja": "スペイン",
+      "away_en": "Japan",
+      "away_ja": "日本",
+      "home_score": 1,
+      "away_score": 2,
+      "japan_scorers": [
+        "堂安律 48'",
+        "田中碧 51'"
+      ]
+    },
+    {
+      "date": "2022-12-05",
+      "stage": "R16",
+      "home_en": "Japan",
+      "home_ja": "日本",
+      "away_en": "Croatia",
+      "away_ja": "クロアチア",
+      "home_score": 1,
+      "away_score": 1,
+      "japan_scorers": [
+        "前田大然 43'"
+      ],
+      "pk_score": "1-3",
+      "note": "PK戦でクロアチアが勝利"
+    }
+  ],
+  "_source": "Wikipedia",
+  "_updated": "2026-05-05"
+}

@@ -1,0 +1,1662 @@
+{
+  "year": 2006,
+  "host": "ドイツ",
+  "host_en": "Germany",
+  "japan_group": "F",
+  "groups": [
+    {
+      "group_id": "A",
+      "name_ja": "グループA",
+      "table": [
+        {
+          "position": 1,
+          "team_en": "Germany",
+          "team_ja": "ドイツ",
+          "played": 3,
+          "won": 3,
+          "drawn": 0,
+          "lost": 0,
+          "goals_for": 8,
+          "goals_against": 2,
+          "points": 9
+        },
+        {
+          "position": 2,
+          "team_en": "Ecuador",
+          "team_ja": "エクアドル",
+          "played": 3,
+          "won": 2,
+          "drawn": 0,
+          "lost": 1,
+          "goals_for": 5,
+          "goals_against": 3,
+          "points": 6
+        },
+        {
+          "position": 3,
+          "team_en": "Poland",
+          "team_ja": "ポーランド",
+          "played": 3,
+          "won": 1,
+          "drawn": 0,
+          "lost": 2,
+          "goals_for": 2,
+          "goals_against": 4,
+          "points": 3
+        },
+        {
+          "position": 4,
+          "team_en": "Costa Rica",
+          "team_ja": "コスタリカ",
+          "played": 3,
+          "won": 0,
+          "drawn": 0,
+          "lost": 3,
+          "goals_for": 3,
+          "goals_against": 9,
+          "points": 0
+        }
+      ],
+      "matches": [
+        {
+          "date": "2006-06-09",
+          "home_en": "Germany",
+          "home_ja": "ドイツ",
+          "away_en": "Costa Rica",
+          "away_ja": "コスタリカ",
+          "home_score": 4,
+          "away_score": 2,
+          "scorers": [
+            {
+              "player": "Lahm",
+              "team": "Germany",
+              "minute": "6"
+            },
+            {
+              "player": "Klose",
+              "team": "Germany",
+              "minute": "61"
+            },
+            {
+              "player": "Frings",
+              "team": "Germany",
+              "minute": "87"
+            },
+            {
+              "player": "Wanchope",
+              "team": "Costa Rica",
+              "minute": "73"
+            }
+          ]
+        },
+        {
+          "date": "2006-06-09",
+          "home_en": "Poland",
+          "home_ja": "ポーランド",
+          "away_en": "",
+          "away_ja": "",
+          "home_score": 0,
+          "away_score": 2,
+          "scorers": [
+            {
+              "player": "C. Tenorio",
+              "team": "",
+              "minute": "24"
+            },
+            {
+              "player": "Delgado",
+              "team": "",
+              "minute": "80"
+            }
+          ]
+        },
+        {
+          "date": "2006-06-14",
+          "home_en": "Germany",
+          "home_ja": "ドイツ",
+          "away_en": "Poland",
+          "away_ja": "ポーランド",
+          "home_score": 1,
+          "away_score": 0,
+          "scorers": [
+            {
+              "player": "Neuville",
+              "team": "Germany",
+              "minute": "90+1"
+            }
+          ]
+        },
+        {
+          "date": "2006-06-15",
+          "home_en": "",
+          "home_ja": "",
+          "away_en": "Costa Rica",
+          "away_ja": "コスタリカ",
+          "home_score": 3,
+          "away_score": 0,
+          "scorers": [
+            {
+              "player": "C. Tenorio",
+              "team": "",
+              "minute": "8"
+            },
+            {
+              "player": "Delgado",
+              "team": "",
+              "minute": "54"
+            },
+            {
+              "player": "Kaviedes",
+              "team": "",
+              "minute": "90+2"
+            }
+          ]
+        },
+        {
+          "date": "2006-06-20",
+          "home_en": "",
+          "home_ja": "",
+          "away_en": "Germany",
+          "away_ja": "ドイツ",
+          "home_score": 0,
+          "away_score": 3,
+          "scorers": [
+            {
+              "player": "Klose",
+              "team": "Germany",
+              "minute": "44"
+            },
+            {
+              "player": "Podolski",
+              "team": "Germany",
+              "minute": "57"
+            }
+          ]
+        },
+        {
+          "date": "2006-06-20",
+          "home_en": "Costa Rica",
+          "home_ja": "コスタリカ",
+          "away_en": "Poland",
+          "away_ja": "ポーランド",
+          "home_score": 1,
+          "away_score": 2,
+          "scorers": [
+            {
+              "player": "Gómez",
+              "team": "Costa Rica",
+              "minute": "25"
+            },
+            {
+              "player": "Bosacki",
+              "team": "Poland",
+              "minute": "65"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "group_id": "B",
+      "name_ja": "グループB",
+      "table": [
+        {
+          "position": 1,
+          "team_en": "England",
+          "team_ja": "イングランド",
+          "played": 3,
+          "won": 2,
+          "drawn": 1,
+          "lost": 0,
+          "goals_for": 5,
+          "goals_against": 2,
+          "points": 7
+        },
+        {
+          "position": 2,
+          "team_en": "Sweden",
+          "team_ja": "スウェーデン",
+          "played": 3,
+          "won": 1,
+          "drawn": 2,
+          "lost": 0,
+          "goals_for": 3,
+          "goals_against": 2,
+          "points": 5
+        },
+        {
+          "position": 3,
+          "team_en": "Paraguay",
+          "team_ja": "パラグアイ",
+          "played": 3,
+          "won": 1,
+          "drawn": 0,
+          "lost": 2,
+          "goals_for": 2,
+          "goals_against": 2,
+          "points": 3
+        },
+        {
+          "position": 4,
+          "team_en": "Trinidad and Tobago",
+          "team_ja": "トリニダード・トバゴ",
+          "played": 3,
+          "won": 0,
+          "drawn": 1,
+          "lost": 2,
+          "goals_for": 0,
+          "goals_against": 4,
+          "points": 1
+        }
+      ],
+      "matches": [
+        {
+          "date": "2006-06-10",
+          "home_en": "England",
+          "home_ja": "イングランド",
+          "away_en": "",
+          "away_ja": "",
+          "home_score": 1,
+          "away_score": 0,
+          "scorers": []
+        },
+        {
+          "date": "2006-06-10",
+          "home_en": "Trinidad and Tobago",
+          "home_ja": "トリニダード・トバゴ",
+          "away_en": "Sweden",
+          "away_ja": "スウェーデン",
+          "home_score": 0,
+          "away_score": 0,
+          "scorers": []
+        },
+        {
+          "date": "2006-06-15",
+          "home_en": "England",
+          "home_ja": "イングランド",
+          "away_en": "Trinidad and Tobago",
+          "away_ja": "トリニダード・トバゴ",
+          "home_score": 2,
+          "away_score": 0,
+          "scorers": [
+            {
+              "player": "Crouch",
+              "team": "England",
+              "minute": "83"
+            },
+            {
+              "player": "Gerrard",
+              "team": "England",
+              "minute": "90+1"
+            }
+          ]
+        },
+        {
+          "date": "2006-06-15",
+          "home_en": "Sweden",
+          "home_ja": "スウェーデン",
+          "away_en": "",
+          "away_ja": "",
+          "home_score": 1,
+          "away_score": 0,
+          "scorers": [
+            {
+              "player": "Ljungberg",
+              "team": "Sweden",
+              "minute": "89"
+            }
+          ]
+        },
+        {
+          "date": "2006-06-20",
+          "home_en": "Sweden",
+          "home_ja": "スウェーデン",
+          "away_en": "England",
+          "away_ja": "イングランド",
+          "home_score": 2,
+          "away_score": 2,
+          "scorers": [
+            {
+              "player": "Allbäck",
+              "team": "Sweden",
+              "minute": "51"
+            },
+            {
+              "player": "Larsson",
+              "team": "Sweden",
+              "minute": "90"
+            },
+            {
+              "player": "J. Cole",
+              "team": "England",
+              "minute": "34"
+            },
+            {
+              "player": "Gerrard",
+              "team": "England",
+              "minute": "85"
+            }
+          ]
+        },
+        {
+          "date": "2006-06-20",
+          "home_en": "",
+          "home_ja": "",
+          "away_en": "Trinidad and Tobago",
+          "away_ja": "トリニダード・トバゴ",
+          "home_score": 2,
+          "away_score": 0,
+          "scorers": [
+            {
+              "player": "Cuevas",
+              "team": "",
+              "minute": "86"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "group_id": "C",
+      "name_ja": "グループC",
+      "table": [
+        {
+          "position": 1,
+          "team_en": "Argentina",
+          "team_ja": "アルゼンチン",
+          "played": 3,
+          "won": 2,
+          "drawn": 1,
+          "lost": 0,
+          "goals_for": 8,
+          "goals_against": 1,
+          "points": 7
+        },
+        {
+          "position": 2,
+          "team_en": "Netherlands",
+          "team_ja": "オランダ",
+          "played": 3,
+          "won": 2,
+          "drawn": 1,
+          "lost": 0,
+          "goals_for": 3,
+          "goals_against": 1,
+          "points": 7
+        },
+        {
+          "position": 3,
+          "team_en": "Ivory Coast",
+          "team_ja": "コートジボワール",
+          "played": 3,
+          "won": 1,
+          "drawn": 0,
+          "lost": 2,
+          "goals_for": 5,
+          "goals_against": 6,
+          "points": 3
+        },
+        {
+          "position": 4,
+          "team_en": "SCG",
+          "team_ja": "SCG",
+          "played": 3,
+          "won": 0,
+          "drawn": 0,
+          "lost": 3,
+          "goals_for": 2,
+          "goals_against": 10,
+          "points": 0
+        }
+      ],
+      "matches": [
+        {
+          "date": "2006-06-10",
+          "home_en": "",
+          "home_ja": "",
+          "away_en": "Ivory Coast",
+          "away_ja": "コートジボワール",
+          "home_score": 2,
+          "away_score": 1,
+          "scorers": [
+            {
+              "player": "Crespo",
+              "team": "",
+              "minute": "24"
+            },
+            {
+              "player": "Saviola",
+              "team": "",
+              "minute": "38"
+            },
+            {
+              "player": "Drogba",
+              "team": "Ivory Coast",
+              "minute": "82"
+            }
+          ]
+        },
+        {
+          "date": "2006-06-11",
+          "home_en": "SCG",
+          "home_ja": "SCG",
+          "away_en": "Netherlands",
+          "away_ja": "オランダ",
+          "home_score": 0,
+          "away_score": 1,
+          "scorers": [
+            {
+              "player": "Robben",
+              "team": "Netherlands",
+              "minute": "18"
+            }
+          ]
+        },
+        {
+          "date": "2006-06-16",
+          "home_en": "",
+          "home_ja": "",
+          "away_en": "SCG",
+          "away_ja": "SCG",
+          "home_score": 6,
+          "away_score": 0,
+          "scorers": [
+            {
+              "player": "Rodríguez",
+              "team": "",
+              "minute": "41"
+            },
+            {
+              "player": "Cambiasso",
+              "team": "",
+              "minute": "31"
+            },
+            {
+              "player": "Crespo",
+              "team": "",
+              "minute": "78"
+            },
+            {
+              "player": "Tevez",
+              "team": "",
+              "minute": "84"
+            },
+            {
+              "player": "Messi",
+              "team": "",
+              "minute": "88"
+            }
+          ]
+        },
+        {
+          "date": "2006-06-16",
+          "home_en": "Netherlands",
+          "home_ja": "オランダ",
+          "away_en": "Ivory Coast",
+          "away_ja": "コートジボワール",
+          "home_score": 2,
+          "away_score": 1,
+          "scorers": [
+            {
+              "player": "Van Persie",
+              "team": "Netherlands",
+              "minute": "23"
+            },
+            {
+              "player": "Van Nistelrooy",
+              "team": "Netherlands",
+              "minute": "27"
+            },
+            {
+              "player": "B. Koné",
+              "team": "Ivory Coast",
+              "minute": "38"
+            }
+          ]
+        },
+        {
+          "date": "2006-06-21",
+          "home_en": "Netherlands",
+          "home_ja": "オランダ",
+          "away_en": "",
+          "away_ja": "",
+          "home_score": 0,
+          "away_score": 0,
+          "scorers": []
+        },
+        {
+          "date": "2006-06-21",
+          "home_en": "Ivory Coast",
+          "home_ja": "コートジボワール",
+          "away_en": "SCG",
+          "away_ja": "SCG",
+          "home_score": 3,
+          "away_score": 2,
+          "scorers": [
+            {
+              "player": "Dindane",
+              "team": "Ivory Coast",
+              "minute": "67"
+            },
+            {
+              "player": "Žigić",
+              "team": "SCG",
+              "minute": "10"
+            },
+            {
+              "player": "Ilić",
+              "team": "SCG",
+              "minute": "20"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "group_id": "D",
+      "name_ja": "グループD",
+      "table": [
+        {
+          "position": 1,
+          "team_en": "Portugal",
+          "team_ja": "ポルトガル",
+          "played": 3,
+          "won": 3,
+          "drawn": 0,
+          "lost": 0,
+          "goals_for": 5,
+          "goals_against": 1,
+          "points": 9
+        },
+        {
+          "position": 2,
+          "team_en": "Mexico",
+          "team_ja": "メキシコ",
+          "played": 3,
+          "won": 1,
+          "drawn": 1,
+          "lost": 1,
+          "goals_for": 4,
+          "goals_against": 3,
+          "points": 4
+        },
+        {
+          "position": 3,
+          "team_en": "Angola",
+          "team_ja": "アンゴラ",
+          "played": 3,
+          "won": 0,
+          "drawn": 2,
+          "lost": 1,
+          "goals_for": 1,
+          "goals_against": 2,
+          "points": 2
+        },
+        {
+          "position": 4,
+          "team_en": "Iran",
+          "team_ja": "イラン",
+          "played": 3,
+          "won": 0,
+          "drawn": 1,
+          "lost": 2,
+          "goals_for": 2,
+          "goals_against": 6,
+          "points": 1
+        }
+      ],
+      "matches": [
+        {
+          "date": "2006-06-11",
+          "home_en": "Mexico",
+          "home_ja": "メキシコ",
+          "away_en": "Iran",
+          "away_ja": "イラン",
+          "home_score": 3,
+          "away_score": 1,
+          "scorers": [
+            {
+              "player": "Bravo",
+              "team": "Mexico",
+              "minute": "76"
+            },
+            {
+              "player": "Sinha",
+              "team": "Mexico",
+              "minute": "79"
+            },
+            {
+              "player": "Golmohammadi",
+              "team": "Iran",
+              "minute": "36"
+            }
+          ]
+        },
+        {
+          "date": "2006-06-11",
+          "home_en": "Angola",
+          "home_ja": "アンゴラ",
+          "away_en": "Portugal",
+          "away_ja": "ポルトガル",
+          "home_score": 0,
+          "away_score": 1,
+          "scorers": [
+            {
+              "player": "Pauleta",
+              "team": "Portugal",
+              "minute": "4"
+            }
+          ]
+        },
+        {
+          "date": "2006-06-16",
+          "home_en": "Mexico",
+          "home_ja": "メキシコ",
+          "away_en": "Angola",
+          "away_ja": "アンゴラ",
+          "home_score": 0,
+          "away_score": 0,
+          "scorers": []
+        },
+        {
+          "date": "2006-06-17",
+          "home_en": "Portugal",
+          "home_ja": "ポルトガル",
+          "away_en": "Iran",
+          "away_ja": "イラン",
+          "home_score": 2,
+          "away_score": 0,
+          "scorers": [
+            {
+              "player": "Deco",
+              "team": "Portugal",
+              "minute": "63"
+            }
+          ]
+        },
+        {
+          "date": "2006-06-21",
+          "home_en": "Portugal",
+          "home_ja": "ポルトガル",
+          "away_en": "Mexico",
+          "away_ja": "メキシコ",
+          "home_score": 2,
+          "away_score": 1,
+          "scorers": [
+            {
+              "player": "Maniche",
+              "team": "Portugal",
+              "minute": "6"
+            },
+            {
+              "player": "Fonseca",
+              "team": "Mexico",
+              "minute": "29"
+            }
+          ]
+        },
+        {
+          "date": "2006-06-21",
+          "home_en": "Iran",
+          "home_ja": "イラン",
+          "away_en": "Angola",
+          "away_ja": "アンゴラ",
+          "home_score": 1,
+          "away_score": 1,
+          "scorers": [
+            {
+              "player": "Bakhtiarizadeh",
+              "team": "Iran",
+              "minute": "75"
+            },
+            {
+              "player": "Flávio",
+              "team": "Angola",
+              "minute": "60"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "group_id": "E",
+      "name_ja": "グループE",
+      "table": [
+        {
+          "position": 1,
+          "team_en": "Italy",
+          "team_ja": "イタリア",
+          "played": 3,
+          "won": 2,
+          "drawn": 1,
+          "lost": 0,
+          "goals_for": 5,
+          "goals_against": 1,
+          "points": 7
+        },
+        {
+          "position": 2,
+          "team_en": "Ghana",
+          "team_ja": "ガーナ",
+          "played": 3,
+          "won": 2,
+          "drawn": 0,
+          "lost": 1,
+          "goals_for": 4,
+          "goals_against": 3,
+          "points": 6
+        },
+        {
+          "position": 3,
+          "team_en": "Czech Republic",
+          "team_ja": "チェコ",
+          "played": 3,
+          "won": 1,
+          "drawn": 0,
+          "lost": 2,
+          "goals_for": 3,
+          "goals_against": 4,
+          "points": 3
+        },
+        {
+          "position": 4,
+          "team_en": "United States",
+          "team_ja": "アメリカ合衆国",
+          "played": 3,
+          "won": 0,
+          "drawn": 1,
+          "lost": 2,
+          "goals_for": 2,
+          "goals_against": 6,
+          "points": 1
+        }
+      ],
+      "matches": [
+        {
+          "date": "2006-06-12",
+          "home_en": "",
+          "home_ja": "",
+          "away_en": "Czech Republic",
+          "away_ja": "チェコ",
+          "home_score": 0,
+          "away_score": 3,
+          "scorers": [
+            {
+              "player": "Koller",
+              "team": "Czech Republic",
+              "minute": "5"
+            },
+            {
+              "player": "Rosický",
+              "team": "Czech Republic",
+              "minute": "76"
+            }
+          ]
+        },
+        {
+          "date": "2006-06-12",
+          "home_en": "",
+          "home_ja": "",
+          "away_en": "Ghana",
+          "away_ja": "ガーナ",
+          "home_score": 2,
+          "away_score": 0,
+          "scorers": [
+            {
+              "player": "Pirlo",
+              "team": "",
+              "minute": "40"
+            },
+            {
+              "player": "Iaquinta",
+              "team": "",
+              "minute": "83"
+            }
+          ]
+        },
+        {
+          "date": "2006-06-17",
+          "home_en": "Czech Republic",
+          "home_ja": "チェコ",
+          "away_en": "Ghana",
+          "away_ja": "ガーナ",
+          "home_score": 0,
+          "away_score": 2,
+          "scorers": [
+            {
+              "player": "Gyan",
+              "team": "Ghana",
+              "minute": "2"
+            },
+            {
+              "player": "Muntari",
+              "team": "Ghana",
+              "minute": "82"
+            }
+          ]
+        },
+        {
+          "date": "2006-06-17",
+          "home_en": "",
+          "home_ja": "",
+          "away_en": "",
+          "away_ja": "",
+          "home_score": 1,
+          "away_score": 1,
+          "scorers": [
+            {
+              "player": "Gilardino",
+              "team": "",
+              "minute": "22"
+            }
+          ]
+        },
+        {
+          "date": "2006-06-22",
+          "home_en": "Czech Republic",
+          "home_ja": "チェコ",
+          "away_en": "",
+          "away_ja": "",
+          "home_score": 0,
+          "away_score": 2,
+          "scorers": [
+            {
+              "player": "Materazzi",
+              "team": "",
+              "minute": "26"
+            },
+            {
+              "player": "Inzaghi",
+              "team": "",
+              "minute": "87"
+            }
+          ]
+        },
+        {
+          "date": "2006-06-22",
+          "home_en": "Ghana",
+          "home_ja": "ガーナ",
+          "away_en": "",
+          "away_ja": "",
+          "home_score": 2,
+          "away_score": 1,
+          "scorers": [
+            {
+              "player": "Draman",
+              "team": "Ghana",
+              "minute": "22"
+            },
+            {
+              "player": "Dempsey",
+              "team": "",
+              "minute": "43"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "group_id": "F",
+      "name_ja": "グループF",
+      "table": [
+        {
+          "position": 1,
+          "team_en": "Brazil",
+          "team_ja": "ブラジル",
+          "played": 3,
+          "won": 3,
+          "drawn": 0,
+          "lost": 0,
+          "goals_for": 7,
+          "goals_against": 1,
+          "points": 9
+        },
+        {
+          "position": 2,
+          "team_en": "Australia",
+          "team_ja": "オーストラリア",
+          "played": 3,
+          "won": 1,
+          "drawn": 1,
+          "lost": 1,
+          "goals_for": 5,
+          "goals_against": 5,
+          "points": 4
+        },
+        {
+          "position": 3,
+          "team_en": "Croatia",
+          "team_ja": "クロアチア",
+          "played": 3,
+          "won": 0,
+          "drawn": 2,
+          "lost": 1,
+          "goals_for": 2,
+          "goals_against": 3,
+          "points": 2
+        },
+        {
+          "position": 4,
+          "team_en": "Japan",
+          "team_ja": "日本",
+          "played": 3,
+          "won": 0,
+          "drawn": 1,
+          "lost": 2,
+          "goals_for": 2,
+          "goals_against": 7,
+          "points": 1
+        }
+      ],
+      "matches": [
+        {
+          "date": "2006-06-12",
+          "home_en": "Australia",
+          "home_ja": "オーストラリア",
+          "away_en": "Japan",
+          "away_ja": "日本",
+          "home_score": 3,
+          "away_score": 1,
+          "scorers": [
+            {
+              "player": "Cahill",
+              "team": "Australia",
+              "minute": "89"
+            },
+            {
+              "player": "Aloisi",
+              "team": "Australia",
+              "minute": "90+2"
+            },
+            {
+              "player": "Nakamura",
+              "team": "Japan",
+              "minute": "26"
+            }
+          ]
+        },
+        {
+          "date": "2006-06-13",
+          "home_en": "Brazil",
+          "home_ja": "ブラジル",
+          "away_en": "Croatia",
+          "away_ja": "クロアチア",
+          "home_score": 1,
+          "away_score": 0,
+          "scorers": [
+            {
+              "player": "Kaká",
+              "team": "Brazil",
+              "minute": "44"
+            }
+          ]
+        },
+        {
+          "date": "2006-06-18",
+          "home_en": "Japan",
+          "home_ja": "日本",
+          "away_en": "Croatia",
+          "away_ja": "クロアチア",
+          "home_score": 0,
+          "away_score": 0,
+          "scorers": []
+        },
+        {
+          "date": "2006-06-18",
+          "home_en": "Brazil",
+          "home_ja": "ブラジル",
+          "away_en": "Australia",
+          "away_ja": "オーストラリア",
+          "home_score": 2,
+          "away_score": 0,
+          "scorers": [
+            {
+              "player": "Adriano",
+              "team": "Brazil",
+              "minute": "49"
+            },
+            {
+              "player": "Fred",
+              "team": "Brazil",
+              "minute": "90"
+            }
+          ]
+        },
+        {
+          "date": "2006-06-22",
+          "home_en": "Japan",
+          "home_ja": "日本",
+          "away_en": "Brazil",
+          "away_ja": "ブラジル",
+          "home_score": 1,
+          "away_score": 4,
+          "scorers": [
+            {
+              "player": "Tamada",
+              "team": "Japan",
+              "minute": "34"
+            },
+            {
+              "player": "Ronaldo",
+              "team": "Brazil",
+              "minute": "81"
+            },
+            {
+              "player": "Juninho",
+              "team": "Brazil",
+              "minute": "53"
+            },
+            {
+              "player": "Gilberto",
+              "team": "Brazil",
+              "minute": "59"
+            }
+          ]
+        },
+        {
+          "date": "2006-06-22",
+          "home_en": "Croatia",
+          "home_ja": "クロアチア",
+          "away_en": "Australia",
+          "away_ja": "オーストラリア",
+          "home_score": 2,
+          "away_score": 2,
+          "scorers": [
+            {
+              "player": "Srna",
+              "team": "Croatia",
+              "minute": "2"
+            },
+            {
+              "player": "N. Kovač",
+              "team": "Croatia",
+              "minute": "56"
+            },
+            {
+              "player": "Kewell",
+              "team": "Australia",
+              "minute": "79"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "group_id": "G",
+      "name_ja": "グループG",
+      "table": [
+        {
+          "position": 1,
+          "team_en": "Switzerland",
+          "team_ja": "スイス",
+          "played": 3,
+          "won": 2,
+          "drawn": 1,
+          "lost": 0,
+          "goals_for": 4,
+          "goals_against": 0,
+          "points": 7
+        },
+        {
+          "position": 2,
+          "team_en": "France",
+          "team_ja": "フランス",
+          "played": 3,
+          "won": 1,
+          "drawn": 2,
+          "lost": 0,
+          "goals_for": 3,
+          "goals_against": 1,
+          "points": 5
+        },
+        {
+          "position": 3,
+          "team_en": "South Korea",
+          "team_ja": "韓国",
+          "played": 3,
+          "won": 1,
+          "drawn": 1,
+          "lost": 1,
+          "goals_for": 3,
+          "goals_against": 4,
+          "points": 4
+        },
+        {
+          "position": 4,
+          "team_en": "Togo",
+          "team_ja": "トーゴ",
+          "played": 3,
+          "won": 0,
+          "drawn": 0,
+          "lost": 3,
+          "goals_for": 1,
+          "goals_against": 6,
+          "points": 0
+        }
+      ],
+      "matches": [
+        {
+          "date": "2006-06-13",
+          "home_en": "",
+          "home_ja": "",
+          "away_en": "Togo",
+          "away_ja": "トーゴ",
+          "home_score": 2,
+          "away_score": 1,
+          "scorers": [
+            {
+              "player": "Lee Chun-soo",
+              "team": "",
+              "minute": "54"
+            },
+            {
+              "player": "Ahn Jung-hwan",
+              "team": "",
+              "minute": "72"
+            },
+            {
+              "player": "Kader",
+              "team": "Togo",
+              "minute": "31"
+            }
+          ]
+        },
+        {
+          "date": "2006-06-13",
+          "home_en": "",
+          "home_ja": "",
+          "away_en": "Switzerland",
+          "away_ja": "スイス",
+          "home_score": 0,
+          "away_score": 0,
+          "scorers": []
+        },
+        {
+          "date": "2006-06-18",
+          "home_en": "",
+          "home_ja": "",
+          "away_en": "",
+          "away_ja": "",
+          "home_score": 1,
+          "away_score": 1,
+          "scorers": [
+            {
+              "player": "Henry",
+              "team": "",
+              "minute": "9"
+            },
+            {
+              "player": "Park Ji-sung",
+              "team": "",
+              "minute": "81"
+            }
+          ]
+        },
+        {
+          "date": "2006-06-19",
+          "home_en": "Togo",
+          "home_ja": "トーゴ",
+          "away_en": "Switzerland",
+          "away_ja": "スイス",
+          "home_score": 0,
+          "away_score": 2,
+          "scorers": [
+            {
+              "player": "Frei",
+              "team": "Switzerland",
+              "minute": "16"
+            },
+            {
+              "player": "Barnetta",
+              "team": "Switzerland",
+              "minute": "88"
+            }
+          ]
+        },
+        {
+          "date": "2006-06-23",
+          "home_en": "Togo",
+          "home_ja": "トーゴ",
+          "away_en": "",
+          "away_ja": "",
+          "home_score": 0,
+          "away_score": 2,
+          "scorers": [
+            {
+              "player": "Vieira",
+              "team": "",
+              "minute": "55"
+            },
+            {
+              "player": "Henry",
+              "team": "",
+              "minute": "61"
+            }
+          ]
+        },
+        {
+          "date": "2006-06-23",
+          "home_en": "Switzerland",
+          "home_ja": "スイス",
+          "away_en": "",
+          "away_ja": "",
+          "home_score": 2,
+          "away_score": 0,
+          "scorers": [
+            {
+              "player": "Senderos",
+              "team": "Switzerland",
+              "minute": "23"
+            },
+            {
+              "player": "Frei",
+              "team": "Switzerland",
+              "minute": "77"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "group_id": "H",
+      "name_ja": "グループH",
+      "table": [
+        {
+          "position": 1,
+          "team_en": "Spain",
+          "team_ja": "スペイン",
+          "played": 3,
+          "won": 3,
+          "drawn": 0,
+          "lost": 0,
+          "goals_for": 8,
+          "goals_against": 1,
+          "points": 9
+        },
+        {
+          "position": 2,
+          "team_en": "Ukraine",
+          "team_ja": "ウクライナ",
+          "played": 3,
+          "won": 2,
+          "drawn": 0,
+          "lost": 1,
+          "goals_for": 5,
+          "goals_against": 4,
+          "points": 6
+        },
+        {
+          "position": 3,
+          "team_en": "Tunisia",
+          "team_ja": "チュニジア",
+          "played": 3,
+          "won": 0,
+          "drawn": 1,
+          "lost": 2,
+          "goals_for": 3,
+          "goals_against": 6,
+          "points": 1
+        },
+        {
+          "position": 4,
+          "team_en": "KSA",
+          "team_ja": "KSA",
+          "played": 3,
+          "won": 0,
+          "drawn": 1,
+          "lost": 2,
+          "goals_for": 2,
+          "goals_against": 7,
+          "points": 1
+        }
+      ],
+      "matches": [
+        {
+          "date": "2006-06-14",
+          "home_en": "Spain",
+          "home_ja": "スペイン",
+          "away_en": "",
+          "away_ja": "",
+          "home_score": 4,
+          "away_score": 0,
+          "scorers": [
+            {
+              "player": "Alonso",
+              "team": "Spain",
+              "minute": "13"
+            },
+            {
+              "player": "Torres",
+              "team": "Spain",
+              "minute": "81"
+            }
+          ]
+        },
+        {
+          "date": "2006-06-14",
+          "home_en": "Tunisia",
+          "home_ja": "チュニジア",
+          "away_en": "KSA",
+          "away_ja": "KSA",
+          "home_score": 2,
+          "away_score": 2,
+          "scorers": [
+            {
+              "player": "Jaziri",
+              "team": "Tunisia",
+              "minute": "23"
+            },
+            {
+              "player": "Jaïdi",
+              "team": "Tunisia",
+              "minute": "90+2"
+            },
+            {
+              "player": "Al-Qahtani",
+              "team": "KSA",
+              "minute": "57"
+            },
+            {
+              "player": "Al-Jaber",
+              "team": "KSA",
+              "minute": "84"
+            }
+          ]
+        },
+        {
+          "date": "2006-06-19",
+          "home_en": "KSA",
+          "home_ja": "KSA",
+          "away_en": "",
+          "away_ja": "",
+          "home_score": 0,
+          "away_score": 4,
+          "scorers": [
+            {
+              "player": "Rusol",
+              "team": "",
+              "minute": "4"
+            },
+            {
+              "player": "Rebrov",
+              "team": "",
+              "minute": "36"
+            },
+            {
+              "player": "Shevchenko",
+              "team": "",
+              "minute": "46"
+            },
+            {
+              "player": "Kalynychenko",
+              "team": "",
+              "minute": "84"
+            }
+          ]
+        },
+        {
+          "date": "2006-06-19",
+          "home_en": "Spain",
+          "home_ja": "スペイン",
+          "away_en": "Tunisia",
+          "away_ja": "チュニジア",
+          "home_score": 3,
+          "away_score": 1,
+          "scorers": [
+            {
+              "player": "Raúl",
+              "team": "Spain",
+              "minute": "71"
+            },
+            {
+              "player": "Mnari",
+              "team": "Tunisia",
+              "minute": "8"
+            }
+          ]
+        },
+        {
+          "date": "2006-06-23",
+          "home_en": "KSA",
+          "home_ja": "KSA",
+          "away_en": "Spain",
+          "away_ja": "スペイン",
+          "home_score": 0,
+          "away_score": 1,
+          "scorers": [
+            {
+              "player": "Juanito",
+              "team": "Spain",
+              "minute": "36"
+            }
+          ]
+        },
+        {
+          "date": "2006-06-23",
+          "home_en": "",
+          "home_ja": "",
+          "away_en": "Tunisia",
+          "away_ja": "チュニジア",
+          "home_score": 1,
+          "away_score": 0,
+          "scorers": []
+        }
+      ]
+    }
+  ],
+  "knockout": {
+    "round_of_16": [
+      {
+        "date": "2006-06-24",
+        "home_en": "Germany",
+        "home_ja": "ドイツ",
+        "away_en": "Sweden",
+        "away_ja": "スウェーデン",
+        "home_score": 2,
+        "away_score": 0,
+        "et": false,
+        "pk_score": null
+      },
+      {
+        "date": "2006-06-24",
+        "home_en": "Argentina",
+        "home_ja": "アルゼンチン",
+        "away_en": "Mexico",
+        "away_ja": "メキシコ",
+        "home_score": 2,
+        "away_score": 1,
+        "et": false,
+        "pk_score": null
+      },
+      {
+        "date": "2006-06-25",
+        "home_en": "England",
+        "home_ja": "イングランド",
+        "away_en": "Ecuador",
+        "away_ja": "エクアドル",
+        "home_score": 1,
+        "away_score": 0,
+        "et": false,
+        "pk_score": null
+      },
+      {
+        "date": "2006-06-26",
+        "home_en": "Italy",
+        "home_ja": "イタリア",
+        "away_en": "Australia",
+        "away_ja": "オーストラリア",
+        "home_score": 1,
+        "away_score": 0,
+        "et": false,
+        "pk_score": null
+      },
+      {
+        "date": "2006-06-26",
+        "home_en": "Switzerland",
+        "home_ja": "スイス",
+        "away_en": "Ukraine",
+        "away_ja": "ウクライナ",
+        "home_score": 0,
+        "away_score": 0,
+        "et": false,
+        "pk_score": null
+      },
+      {
+        "date": "2006-06-27",
+        "home_en": "Brazil",
+        "home_ja": "ブラジル",
+        "away_en": "Ghana",
+        "away_ja": "ガーナ",
+        "home_score": 3,
+        "away_score": 0,
+        "et": false,
+        "pk_score": null
+      },
+      {
+        "date": "2006-06-27",
+        "home_en": "Spain",
+        "home_ja": "スペイン",
+        "away_en": "France",
+        "away_ja": "フランス",
+        "home_score": 1,
+        "away_score": 3,
+        "et": false,
+        "pk_score": null
+      }
+    ],
+    "quarter_finals": [
+      {
+        "date": "2006-06-30",
+        "home_en": "Germany",
+        "home_ja": "ドイツ",
+        "away_en": "Argentina",
+        "away_ja": "アルゼンチン",
+        "home_score": 1,
+        "away_score": 1,
+        "et": false,
+        "pk_score": null
+      },
+      {
+        "date": "2006-06-30",
+        "home_en": "Italy",
+        "home_ja": "イタリア",
+        "away_en": "Ukraine",
+        "away_ja": "ウクライナ",
+        "home_score": 3,
+        "away_score": 0,
+        "et": false,
+        "pk_score": null
+      },
+      {
+        "date": "2006-07-01",
+        "home_en": "England",
+        "home_ja": "イングランド",
+        "away_en": "Portugal",
+        "away_ja": "ポルトガル",
+        "home_score": 0,
+        "away_score": 0,
+        "et": false,
+        "pk_score": null
+      },
+      {
+        "date": "2006-07-01",
+        "home_en": "Brazil",
+        "home_ja": "ブラジル",
+        "away_en": "France",
+        "away_ja": "フランス",
+        "home_score": 0,
+        "away_score": 1,
+        "et": false,
+        "pk_score": null
+      }
+    ],
+    "semi_finals": [
+      {
+        "date": "2006-07-04",
+        "home_en": "Germany",
+        "home_ja": "ドイツ",
+        "away_en": "Italy",
+        "away_ja": "イタリア",
+        "home_score": 0,
+        "away_score": 2,
+        "et": false,
+        "pk_score": null
+      },
+      {
+        "date": "2006-07-05",
+        "home_en": "Portugal",
+        "home_ja": "ポルトガル",
+        "away_en": "France",
+        "away_ja": "フランス",
+        "home_score": 0,
+        "away_score": 1,
+        "et": false,
+        "pk_score": null
+      }
+    ],
+    "third_place": [
+      {
+        "date": "2006-07-08",
+        "home_en": "Germany",
+        "home_ja": "ドイツ",
+        "away_en": "Portugal",
+        "away_ja": "ポルトガル",
+        "home_score": 3,
+        "away_score": 1,
+        "et": false,
+        "pk_score": null
+      }
+    ],
+    "final": {
+      "home_en": "Italy",
+      "home_ja": "イタリア",
+      "away_en": "France",
+      "away_ja": "フランス",
+      "home_score": 1,
+      "away_score": 1,
+      "et": true,
+      "pk_score": "5-3"
+    }
+  },
+  "japan_matches": [
+    {
+      "date": "2006-06-12",
+      "stage": "GS-1",
+      "home_en": "Australia",
+      "home_ja": "オーストラリア",
+      "away_en": "Japan",
+      "away_ja": "日本",
+      "home_score": 3,
+      "away_score": 1,
+      "japan_scorers": [
+        "中村俊輔 26'"
+      ]
+    },
+    {
+      "date": "2006-06-18",
+      "stage": "GS-2",
+      "home_en": "Japan",
+      "home_ja": "日本",
+      "away_en": "Croatia",
+      "away_ja": "クロアチア",
+      "home_score": 0,
+      "away_score": 0,
+      "japan_scorers": []
+    },
+    {
+      "date": "2006-06-22",
+      "stage": "GS-3",
+      "home_en": "Brazil",
+      "home_ja": "ブラジル",
+      "away_en": "Japan",
+      "away_ja": "日本",
+      "home_score": 4,
+      "away_score": 1,
+      "japan_scorers": [
+        "玉田圭司 34'"
+      ]
+    }
+  ],
+  "_source": "Wikipedia",
+  "_updated": "2026-05-05"
+}

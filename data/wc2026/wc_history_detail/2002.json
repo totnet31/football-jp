@@ -1,0 +1,1737 @@
+{
+  "year": 2002,
+  "host": "日本・韓国",
+  "host_en": "Japan / South Korea",
+  "japan_group": "H",
+  "groups": [
+    {
+      "group_id": "A",
+      "name_ja": "グループA",
+      "table": [
+        {
+          "position": 1,
+          "team_en": "Denmark",
+          "team_ja": "デンマーク",
+          "played": 3,
+          "won": 2,
+          "drawn": 1,
+          "lost": 0,
+          "goals_for": 5,
+          "goals_against": 2,
+          "points": 7
+        },
+        {
+          "position": 2,
+          "team_en": "Senegal",
+          "team_ja": "セネガル",
+          "played": 3,
+          "won": 1,
+          "drawn": 2,
+          "lost": 0,
+          "goals_for": 5,
+          "goals_against": 4,
+          "points": 5
+        },
+        {
+          "position": 3,
+          "team_en": "Uruguay",
+          "team_ja": "ウルグアイ",
+          "played": 3,
+          "won": 0,
+          "drawn": 2,
+          "lost": 1,
+          "goals_for": 4,
+          "goals_against": 5,
+          "points": 2
+        },
+        {
+          "position": 4,
+          "team_en": "France",
+          "team_ja": "フランス",
+          "played": 3,
+          "won": 0,
+          "drawn": 1,
+          "lost": 2,
+          "goals_for": 0,
+          "goals_against": 3,
+          "points": 1
+        }
+      ],
+      "matches": [
+        {
+          "date": "2002-05-31",
+          "home_en": "",
+          "home_ja": "",
+          "away_en": "Senegal",
+          "away_ja": "セネガル",
+          "home_score": 0,
+          "away_score": 1,
+          "scorers": [
+            {
+              "player": "Bouba Diop",
+              "team": "Senegal",
+              "minute": "30"
+            }
+          ]
+        },
+        {
+          "date": "2002-06-01",
+          "home_en": "Uruguay",
+          "home_ja": "ウルグアイ",
+          "away_en": "Denmark",
+          "away_ja": "デンマーク",
+          "home_score": 1,
+          "away_score": 2,
+          "scorers": [
+            {
+              "player": "Rodríguez",
+              "team": "Uruguay",
+              "minute": "47"
+            },
+            {
+              "player": "Tomasson",
+              "team": "Denmark",
+              "minute": "83"
+            }
+          ]
+        },
+        {
+          "date": "2002-06-06",
+          "home_en": "Denmark",
+          "home_ja": "デンマーク",
+          "away_en": "Senegal",
+          "away_ja": "セネガル",
+          "home_score": 1,
+          "away_score": 1,
+          "scorers": [
+            {
+              "player": "Diao",
+              "team": "Senegal",
+              "minute": "52"
+            }
+          ]
+        },
+        {
+          "date": "2002-06-06",
+          "home_en": "",
+          "home_ja": "",
+          "away_en": "Uruguay",
+          "away_ja": "ウルグアイ",
+          "home_score": 0,
+          "away_score": 0,
+          "scorers": []
+        },
+        {
+          "date": "2002-06-11",
+          "home_en": "Denmark",
+          "home_ja": "デンマーク",
+          "away_en": "",
+          "away_ja": "",
+          "home_score": 2,
+          "away_score": 0,
+          "scorers": [
+            {
+              "player": "Rommedahl",
+              "team": "Denmark",
+              "minute": "22"
+            },
+            {
+              "player": "Tomasson",
+              "team": "Denmark",
+              "minute": "67"
+            }
+          ]
+        },
+        {
+          "date": "2002-06-11",
+          "home_en": "Senegal",
+          "home_ja": "セネガル",
+          "away_en": "Uruguay",
+          "away_ja": "ウルグアイ",
+          "home_score": 3,
+          "away_score": 3,
+          "scorers": [
+            {
+              "player": "Bouba Diop",
+              "team": "Senegal",
+              "minute": "38"
+            },
+            {
+              "player": "Morales",
+              "team": "Uruguay",
+              "minute": "46"
+            },
+            {
+              "player": "Forlán",
+              "team": "Uruguay",
+              "minute": "69"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "group_id": "B",
+      "name_ja": "グループB",
+      "table": [
+        {
+          "position": 1,
+          "team_en": "Spain",
+          "team_ja": "スペイン",
+          "played": 3,
+          "won": 3,
+          "drawn": 0,
+          "lost": 0,
+          "goals_for": 9,
+          "goals_against": 4,
+          "points": 9
+        },
+        {
+          "position": 2,
+          "team_en": "Paraguay",
+          "team_ja": "パラグアイ",
+          "played": 3,
+          "won": 1,
+          "drawn": 1,
+          "lost": 1,
+          "goals_for": 6,
+          "goals_against": 6,
+          "points": 4
+        },
+        {
+          "position": 3,
+          "team_en": "South Africa",
+          "team_ja": "南アフリカ",
+          "played": 3,
+          "won": 1,
+          "drawn": 1,
+          "lost": 1,
+          "goals_for": 5,
+          "goals_against": 5,
+          "points": 4
+        },
+        {
+          "position": 4,
+          "team_en": "Slovenia",
+          "team_ja": "スロベニア",
+          "played": 3,
+          "won": 0,
+          "drawn": 0,
+          "lost": 3,
+          "goals_for": 2,
+          "goals_against": 7,
+          "points": 0
+        }
+      ],
+      "matches": [
+        {
+          "date": "2002-06-02",
+          "home_en": "",
+          "home_ja": "",
+          "away_en": "South Africa",
+          "away_ja": "南アフリカ",
+          "home_score": 2,
+          "away_score": 2,
+          "scorers": [
+            {
+              "player": "Santa Cruz",
+              "team": "",
+              "minute": "39"
+            },
+            {
+              "player": "Arce",
+              "team": "",
+              "minute": "55"
+            },
+            {
+              "player": "T. Mokoena",
+              "team": "South Africa",
+              "minute": "63"
+            }
+          ]
+        },
+        {
+          "date": "2002-06-02",
+          "home_en": "Spain",
+          "home_ja": "スペイン",
+          "away_en": "Slovenia",
+          "away_ja": "スロベニア",
+          "home_score": 3,
+          "away_score": 1,
+          "scorers": [
+            {
+              "player": "Raúl",
+              "team": "Spain",
+              "minute": "44"
+            },
+            {
+              "player": "Valerón",
+              "team": "Spain",
+              "minute": "74"
+            },
+            {
+              "player": "Cimirotič",
+              "team": "Slovenia",
+              "minute": "82"
+            }
+          ]
+        },
+        {
+          "date": "2002-06-07",
+          "home_en": "Spain",
+          "home_ja": "スペイン",
+          "away_en": "",
+          "away_ja": "",
+          "home_score": 3,
+          "away_score": 1,
+          "scorers": [
+            {
+              "player": "Morientes",
+              "team": "Spain",
+              "minute": "69"
+            }
+          ]
+        },
+        {
+          "date": "2002-06-08",
+          "home_en": "South Africa",
+          "home_ja": "南アフリカ",
+          "away_en": "Slovenia",
+          "away_ja": "スロベニア",
+          "home_score": 1,
+          "away_score": 0,
+          "scorers": [
+            {
+              "player": "Nomvethe",
+              "team": "South Africa",
+              "minute": "4"
+            }
+          ]
+        },
+        {
+          "date": "2002-06-12",
+          "home_en": "South Africa",
+          "home_ja": "南アフリカ",
+          "away_en": "Spain",
+          "away_ja": "スペイン",
+          "home_score": 2,
+          "away_score": 3,
+          "scorers": [
+            {
+              "player": "McCarthy",
+              "team": "South Africa",
+              "minute": "31"
+            },
+            {
+              "player": "Radebe",
+              "team": "South Africa",
+              "minute": "53"
+            },
+            {
+              "player": "Raúl",
+              "team": "Spain",
+              "minute": "56"
+            },
+            {
+              "player": "Mendieta",
+              "team": "Spain",
+              "minute": "45+1"
+            }
+          ]
+        },
+        {
+          "date": "2002-06-12",
+          "home_en": "Slovenia",
+          "home_ja": "スロベニア",
+          "away_en": "",
+          "away_ja": "",
+          "home_score": 1,
+          "away_score": 3,
+          "scorers": [
+            {
+              "player": "Ačimovič",
+              "team": "Slovenia",
+              "minute": "45+1"
+            },
+            {
+              "player": "Cuevas",
+              "team": "",
+              "minute": "84"
+            },
+            {
+              "player": "Campos",
+              "team": "",
+              "minute": "73"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "group_id": "C",
+      "name_ja": "グループC",
+      "table": [
+        {
+          "position": 1,
+          "team_en": "Brazil",
+          "team_ja": "ブラジル",
+          "played": 3,
+          "won": 3,
+          "drawn": 0,
+          "lost": 0,
+          "goals_for": 11,
+          "goals_against": 3,
+          "points": 9
+        },
+        {
+          "position": 2,
+          "team_en": "Turkey",
+          "team_ja": "トルコ",
+          "played": 3,
+          "won": 1,
+          "drawn": 1,
+          "lost": 1,
+          "goals_for": 5,
+          "goals_against": 3,
+          "points": 4
+        },
+        {
+          "position": 3,
+          "team_en": "Costa Rica",
+          "team_ja": "コスタリカ",
+          "played": 3,
+          "won": 1,
+          "drawn": 1,
+          "lost": 1,
+          "goals_for": 5,
+          "goals_against": 6,
+          "points": 4
+        },
+        {
+          "position": 4,
+          "team_en": "China",
+          "team_ja": "中国",
+          "played": 3,
+          "won": 0,
+          "drawn": 0,
+          "lost": 3,
+          "goals_for": 0,
+          "goals_against": 9,
+          "points": 0
+        }
+      ],
+      "matches": [
+        {
+          "date": "2002-06-03",
+          "home_en": "Brazil",
+          "home_ja": "ブラジル",
+          "away_en": "Turkey",
+          "away_ja": "トルコ",
+          "home_score": 2,
+          "away_score": 1,
+          "scorers": [
+            {
+              "player": "Ronaldo",
+              "team": "Brazil",
+              "minute": "50"
+            },
+            {
+              "player": "Şaş",
+              "team": "Turkey",
+              "minute": "45+2"
+            }
+          ]
+        },
+        {
+          "date": "2002-06-04",
+          "home_en": "China",
+          "home_ja": "中国",
+          "away_en": "Costa Rica",
+          "away_ja": "コスタリカ",
+          "home_score": 0,
+          "away_score": 2,
+          "scorers": [
+            {
+              "player": "Gómez",
+              "team": "Costa Rica",
+              "minute": "61"
+            },
+            {
+              "player": "Wright",
+              "team": "Costa Rica",
+              "minute": "65"
+            }
+          ]
+        },
+        {
+          "date": "2002-06-08",
+          "home_en": "Brazil",
+          "home_ja": "ブラジル",
+          "away_en": "China",
+          "away_ja": "中国",
+          "home_score": 4,
+          "away_score": 0,
+          "scorers": [
+            {
+              "player": "Roberto Carlos",
+              "team": "Brazil",
+              "minute": "15"
+            },
+            {
+              "player": "Rivaldo",
+              "team": "Brazil",
+              "minute": "32"
+            },
+            {
+              "player": "Ronaldo",
+              "team": "Brazil",
+              "minute": "55"
+            }
+          ]
+        },
+        {
+          "date": "2002-06-09",
+          "home_en": "Costa Rica",
+          "home_ja": "コスタリカ",
+          "away_en": "Turkey",
+          "away_ja": "トルコ",
+          "home_score": 1,
+          "away_score": 1,
+          "scorers": [
+            {
+              "player": "Parks",
+              "team": "Costa Rica",
+              "minute": "86"
+            },
+            {
+              "player": "Belözoğlu",
+              "team": "Turkey",
+              "minute": "56"
+            }
+          ]
+        },
+        {
+          "date": "2002-06-13",
+          "home_en": "Costa Rica",
+          "home_ja": "コスタリカ",
+          "away_en": "Brazil",
+          "away_ja": "ブラジル",
+          "home_score": 2,
+          "away_score": 5,
+          "scorers": [
+            {
+              "player": "Wanchope",
+              "team": "Costa Rica",
+              "minute": "39"
+            },
+            {
+              "player": "Gómez",
+              "team": "Costa Rica",
+              "minute": "56"
+            },
+            {
+              "player": "Ronaldo",
+              "team": "Brazil",
+              "minute": "13"
+            },
+            {
+              "player": "Edmílson",
+              "team": "Brazil",
+              "minute": "38"
+            },
+            {
+              "player": "Rivaldo",
+              "team": "Brazil",
+              "minute": "62"
+            },
+            {
+              "player": "Júnior",
+              "team": "Brazil",
+              "minute": "64"
+            }
+          ]
+        },
+        {
+          "date": "2002-06-13",
+          "home_en": "Turkey",
+          "home_ja": "トルコ",
+          "away_en": "China",
+          "away_ja": "中国",
+          "home_score": 3,
+          "away_score": 0,
+          "scorers": [
+            {
+              "player": "Şaş",
+              "team": "Turkey",
+              "minute": "6"
+            },
+            {
+              "player": "Korkmaz",
+              "team": "Turkey",
+              "minute": "9"
+            },
+            {
+              "player": "Davala",
+              "team": "Turkey",
+              "minute": "85"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "group_id": "D",
+      "name_ja": "グループD",
+      "table": [
+        {
+          "position": 1,
+          "team_en": "South Korea",
+          "team_ja": "韓国",
+          "played": 3,
+          "won": 2,
+          "drawn": 1,
+          "lost": 0,
+          "goals_for": 4,
+          "goals_against": 1,
+          "points": 7
+        },
+        {
+          "position": 2,
+          "team_en": "United States",
+          "team_ja": "アメリカ合衆国",
+          "played": 3,
+          "won": 1,
+          "drawn": 1,
+          "lost": 1,
+          "goals_for": 5,
+          "goals_against": 6,
+          "points": 4
+        },
+        {
+          "position": 3,
+          "team_en": "Portugal",
+          "team_ja": "ポルトガル",
+          "played": 3,
+          "won": 1,
+          "drawn": 0,
+          "lost": 2,
+          "goals_for": 6,
+          "goals_against": 4,
+          "points": 3
+        },
+        {
+          "position": 4,
+          "team_en": "Poland",
+          "team_ja": "ポーランド",
+          "played": 3,
+          "won": 1,
+          "drawn": 0,
+          "lost": 2,
+          "goals_for": 3,
+          "goals_against": 7,
+          "points": 3
+        }
+      ],
+      "matches": [
+        {
+          "date": "2002-06-04",
+          "home_en": "",
+          "home_ja": "",
+          "away_en": "Poland",
+          "away_ja": "ポーランド",
+          "home_score": 2,
+          "away_score": 0,
+          "scorers": [
+            {
+              "player": "Hwang Sun-hong",
+              "team": "",
+              "minute": "26"
+            },
+            {
+              "player": "Yoo Sang-chul",
+              "team": "",
+              "minute": "53"
+            }
+          ]
+        },
+        {
+          "date": "2002-06-05",
+          "home_en": "",
+          "home_ja": "",
+          "away_en": "Portugal",
+          "away_ja": "ポルトガル",
+          "home_score": 3,
+          "away_score": 2,
+          "scorers": [
+            {
+              "player": "O'Brien",
+              "team": "",
+              "minute": "4"
+            },
+            {
+              "player": "McBride",
+              "team": "",
+              "minute": "36"
+            },
+            {
+              "player": "Beto",
+              "team": "Portugal",
+              "minute": "39"
+            }
+          ]
+        },
+        {
+          "date": "2002-06-10",
+          "home_en": "",
+          "home_ja": "",
+          "away_en": "",
+          "away_ja": "",
+          "home_score": 1,
+          "away_score": 1,
+          "scorers": [
+            {
+              "player": "Ahn Jung-hwan",
+              "team": "",
+              "minute": "78"
+            },
+            {
+              "player": "Mathis",
+              "team": "",
+              "minute": "24"
+            }
+          ]
+        },
+        {
+          "date": "2002-06-10",
+          "home_en": "Portugal",
+          "home_ja": "ポルトガル",
+          "away_en": "Poland",
+          "away_ja": "ポーランド",
+          "home_score": 4,
+          "away_score": 0,
+          "scorers": [
+            {
+              "player": "Pauleta",
+              "team": "Portugal",
+              "minute": "77"
+            },
+            {
+              "player": "Rui Costa",
+              "team": "Portugal",
+              "minute": "88"
+            }
+          ]
+        },
+        {
+          "date": "2002-06-14",
+          "home_en": "Portugal",
+          "home_ja": "ポルトガル",
+          "away_en": "",
+          "away_ja": "",
+          "home_score": 0,
+          "away_score": 1,
+          "scorers": [
+            {
+              "player": "Park Ji-sung",
+              "team": "",
+              "minute": "70"
+            }
+          ]
+        },
+        {
+          "date": "2002-06-14",
+          "home_en": "Poland",
+          "home_ja": "ポーランド",
+          "away_en": "",
+          "away_ja": "",
+          "home_score": 3,
+          "away_score": 1,
+          "scorers": [
+            {
+              "player": "Olisadebe",
+              "team": "Poland",
+              "minute": "3"
+            },
+            {
+              "player": "Kryszałowicz",
+              "team": "Poland",
+              "minute": "5"
+            },
+            {
+              "player": "Żewłakow",
+              "team": "Poland",
+              "minute": "66"
+            },
+            {
+              "player": "Donovan",
+              "team": "",
+              "minute": "83"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "group_id": "E",
+      "name_ja": "グループE",
+      "table": [
+        {
+          "position": 1,
+          "team_en": "Germany",
+          "team_ja": "ドイツ",
+          "played": 3,
+          "won": 2,
+          "drawn": 1,
+          "lost": 0,
+          "goals_for": 11,
+          "goals_against": 1,
+          "points": 7
+        },
+        {
+          "position": 2,
+          "team_en": "IRL",
+          "team_ja": "IRL",
+          "played": 3,
+          "won": 1,
+          "drawn": 2,
+          "lost": 0,
+          "goals_for": 5,
+          "goals_against": 2,
+          "points": 5
+        },
+        {
+          "position": 3,
+          "team_en": "Cameroon",
+          "team_ja": "カメルーン",
+          "played": 3,
+          "won": 1,
+          "drawn": 1,
+          "lost": 1,
+          "goals_for": 2,
+          "goals_against": 3,
+          "points": 4
+        },
+        {
+          "position": 4,
+          "team_en": "KSA",
+          "team_ja": "KSA",
+          "played": 3,
+          "won": 0,
+          "drawn": 0,
+          "lost": 3,
+          "goals_for": 0,
+          "goals_against": 12,
+          "points": 0
+        }
+      ],
+      "matches": [
+        {
+          "date": "2002-06-01",
+          "home_en": "IRL",
+          "home_ja": "IRL",
+          "away_en": "Cameroon",
+          "away_ja": "カメルーン",
+          "home_score": 1,
+          "away_score": 1,
+          "scorers": [
+            {
+              "player": "Holland",
+              "team": "IRL",
+              "minute": "52"
+            },
+            {
+              "player": "M'Boma",
+              "team": "Cameroon",
+              "minute": "39"
+            }
+          ]
+        },
+        {
+          "date": "2002-06-01",
+          "home_en": "Germany",
+          "home_ja": "ドイツ",
+          "away_en": "KSA",
+          "away_ja": "KSA",
+          "home_score": 8,
+          "away_score": 0,
+          "scorers": [
+            {
+              "player": "Klose",
+              "team": "Germany",
+              "minute": "70"
+            },
+            {
+              "player": "Ballack",
+              "team": "Germany",
+              "minute": "40"
+            },
+            {
+              "player": "Jancker",
+              "team": "Germany",
+              "minute": "45+1"
+            },
+            {
+              "player": "Linke",
+              "team": "Germany",
+              "minute": "73"
+            },
+            {
+              "player": "Bierhoff",
+              "team": "Germany",
+              "minute": "84"
+            },
+            {
+              "player": "Schneider",
+              "team": "Germany",
+              "minute": "90+1"
+            }
+          ]
+        },
+        {
+          "date": "2002-06-05",
+          "home_en": "Germany",
+          "home_ja": "ドイツ",
+          "away_en": "IRL",
+          "away_ja": "IRL",
+          "home_score": 1,
+          "away_score": 1,
+          "scorers": [
+            {
+              "player": "Klose",
+              "team": "Germany",
+              "minute": "19"
+            },
+            {
+              "player": "Robbie Keane",
+              "team": "IRL",
+              "minute": "90+2"
+            }
+          ]
+        },
+        {
+          "date": "2002-06-06",
+          "home_en": "Cameroon",
+          "home_ja": "カメルーン",
+          "away_en": "KSA",
+          "away_ja": "KSA",
+          "home_score": 1,
+          "away_score": 0,
+          "scorers": [
+            {
+              "player": "Eto'o",
+              "team": "Cameroon",
+              "minute": "66"
+            }
+          ]
+        },
+        {
+          "date": "2002-06-11",
+          "home_en": "Cameroon",
+          "home_ja": "カメルーン",
+          "away_en": "Germany",
+          "away_ja": "ドイツ",
+          "home_score": 0,
+          "away_score": 2,
+          "scorers": [
+            {
+              "player": "Bode",
+              "team": "Germany",
+              "minute": "50"
+            },
+            {
+              "player": "Klose",
+              "team": "Germany",
+              "minute": "79"
+            }
+          ]
+        },
+        {
+          "date": "2002-06-11",
+          "home_en": "KSA",
+          "home_ja": "KSA",
+          "away_en": "IRL",
+          "away_ja": "IRL",
+          "home_score": 0,
+          "away_score": 3,
+          "scorers": [
+            {
+              "player": "Robbie Keane",
+              "team": "IRL",
+              "minute": "7"
+            },
+            {
+              "player": "Breen",
+              "team": "IRL",
+              "minute": "61"
+            },
+            {
+              "player": "Duff",
+              "team": "IRL",
+              "minute": "87"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "group_id": "F",
+      "name_ja": "グループF",
+      "table": [
+        {
+          "position": 1,
+          "team_en": "Sweden",
+          "team_ja": "スウェーデン",
+          "played": 3,
+          "won": 1,
+          "drawn": 2,
+          "lost": 0,
+          "goals_for": 4,
+          "goals_against": 3,
+          "points": 5
+        },
+        {
+          "position": 2,
+          "team_en": "England",
+          "team_ja": "イングランド",
+          "played": 3,
+          "won": 1,
+          "drawn": 2,
+          "lost": 0,
+          "goals_for": 2,
+          "goals_against": 1,
+          "points": 5
+        },
+        {
+          "position": 3,
+          "team_en": "Argentina",
+          "team_ja": "アルゼンチン",
+          "played": 3,
+          "won": 1,
+          "drawn": 1,
+          "lost": 1,
+          "goals_for": 2,
+          "goals_against": 2,
+          "points": 4
+        },
+        {
+          "position": 4,
+          "team_en": "Nigeria",
+          "team_ja": "ナイジェリア",
+          "played": 3,
+          "won": 0,
+          "drawn": 1,
+          "lost": 2,
+          "goals_for": 1,
+          "goals_against": 3,
+          "points": 1
+        }
+      ],
+      "matches": [
+        {
+          "date": "2002-06-02",
+          "home_en": "",
+          "home_ja": "",
+          "away_en": "Nigeria",
+          "away_ja": "ナイジェリア",
+          "home_score": 1,
+          "away_score": 0,
+          "scorers": [
+            {
+              "player": "Batistuta",
+              "team": "",
+              "minute": "63"
+            }
+          ]
+        },
+        {
+          "date": "2002-06-02",
+          "home_en": "England",
+          "home_ja": "イングランド",
+          "away_en": "Sweden",
+          "away_ja": "スウェーデン",
+          "home_score": 1,
+          "away_score": 1,
+          "scorers": [
+            {
+              "player": "Campbell",
+              "team": "England",
+              "minute": "24"
+            },
+            {
+              "player": "Alexandersson",
+              "team": "Sweden",
+              "minute": "59"
+            }
+          ]
+        },
+        {
+          "date": "2002-06-07",
+          "home_en": "Sweden",
+          "home_ja": "スウェーデン",
+          "away_en": "Nigeria",
+          "away_ja": "ナイジェリア",
+          "home_score": 2,
+          "away_score": 1,
+          "scorers": [
+            {
+              "player": "Aghahowa",
+              "team": "Nigeria",
+              "minute": "27"
+            }
+          ]
+        },
+        {
+          "date": "2002-06-07",
+          "home_en": "",
+          "home_ja": "",
+          "away_en": "England",
+          "away_ja": "イングランド",
+          "home_score": 0,
+          "away_score": 1,
+          "scorers": []
+        },
+        {
+          "date": "2002-06-12",
+          "home_en": "Sweden",
+          "home_ja": "スウェーデン",
+          "away_en": "",
+          "away_ja": "",
+          "home_score": 1,
+          "away_score": 1,
+          "scorers": [
+            {
+              "player": "A. Svensson",
+              "team": "Sweden",
+              "minute": "59"
+            },
+            {
+              "player": "Crespo",
+              "team": "",
+              "minute": "88"
+            }
+          ]
+        },
+        {
+          "date": "2002-06-12",
+          "home_en": "Nigeria",
+          "home_ja": "ナイジェリア",
+          "away_en": "England",
+          "away_ja": "イングランド",
+          "home_score": 0,
+          "away_score": 0,
+          "scorers": []
+        }
+      ]
+    },
+    {
+      "group_id": "G",
+      "name_ja": "グループG",
+      "table": [
+        {
+          "position": 1,
+          "team_en": "Mexico",
+          "team_ja": "メキシコ",
+          "played": 3,
+          "won": 2,
+          "drawn": 1,
+          "lost": 0,
+          "goals_for": 4,
+          "goals_against": 2,
+          "points": 7
+        },
+        {
+          "position": 2,
+          "team_en": "Italy",
+          "team_ja": "イタリア",
+          "played": 3,
+          "won": 1,
+          "drawn": 1,
+          "lost": 1,
+          "goals_for": 4,
+          "goals_against": 3,
+          "points": 4
+        },
+        {
+          "position": 3,
+          "team_en": "Croatia",
+          "team_ja": "クロアチア",
+          "played": 3,
+          "won": 1,
+          "drawn": 0,
+          "lost": 2,
+          "goals_for": 2,
+          "goals_against": 3,
+          "points": 3
+        },
+        {
+          "position": 4,
+          "team_en": "Ecuador",
+          "team_ja": "エクアドル",
+          "played": 3,
+          "won": 1,
+          "drawn": 0,
+          "lost": 2,
+          "goals_for": 2,
+          "goals_against": 4,
+          "points": 3
+        }
+      ],
+      "matches": [
+        {
+          "date": "2002-06-03",
+          "home_en": "Croatia",
+          "home_ja": "クロアチア",
+          "away_en": "Mexico",
+          "away_ja": "メキシコ",
+          "home_score": 0,
+          "away_score": 1,
+          "scorers": []
+        },
+        {
+          "date": "2002-06-03",
+          "home_en": "Italy",
+          "home_ja": "イタリア",
+          "away_en": "",
+          "away_ja": "",
+          "home_score": 2,
+          "away_score": 0,
+          "scorers": [
+            {
+              "player": "Vieri",
+              "team": "Italy",
+              "minute": "27"
+            }
+          ]
+        },
+        {
+          "date": "2002-06-08",
+          "home_en": "Italy",
+          "home_ja": "イタリア",
+          "away_en": "Croatia",
+          "away_ja": "クロアチア",
+          "home_score": 1,
+          "away_score": 2,
+          "scorers": [
+            {
+              "player": "Vieri",
+              "team": "Italy",
+              "minute": "55"
+            },
+            {
+              "player": "Olić",
+              "team": "Croatia",
+              "minute": "73"
+            },
+            {
+              "player": "Rapaić",
+              "team": "Croatia",
+              "minute": "76"
+            }
+          ]
+        },
+        {
+          "date": "2002-06-09",
+          "home_en": "Mexico",
+          "home_ja": "メキシコ",
+          "away_en": "",
+          "away_ja": "",
+          "home_score": 2,
+          "away_score": 1,
+          "scorers": [
+            {
+              "player": "Borgetti",
+              "team": "Mexico",
+              "minute": "28"
+            },
+            {
+              "player": "Torrado",
+              "team": "Mexico",
+              "minute": "57"
+            },
+            {
+              "player": "Delgado",
+              "team": "",
+              "minute": "5"
+            }
+          ]
+        },
+        {
+          "date": "2002-06-13",
+          "home_en": "Mexico",
+          "home_ja": "メキシコ",
+          "away_en": "Italy",
+          "away_ja": "イタリア",
+          "home_score": 1,
+          "away_score": 1,
+          "scorers": [
+            {
+              "player": "Borgetti",
+              "team": "Mexico",
+              "minute": "34"
+            },
+            {
+              "player": "Del Piero",
+              "team": "Italy",
+              "minute": "85"
+            }
+          ]
+        },
+        {
+          "date": "2002-06-13",
+          "home_en": "",
+          "home_ja": "",
+          "away_en": "Croatia",
+          "away_ja": "クロアチア",
+          "home_score": 1,
+          "away_score": 0,
+          "scorers": [
+            {
+              "player": "Méndez",
+              "team": "",
+              "minute": "48"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "group_id": "H",
+      "name_ja": "グループH",
+      "table": [
+        {
+          "position": 1,
+          "team_en": "Japan",
+          "team_ja": "日本",
+          "played": 3,
+          "won": 2,
+          "drawn": 1,
+          "lost": 0,
+          "goals_for": 5,
+          "goals_against": 2,
+          "points": 7
+        },
+        {
+          "position": 2,
+          "team_en": "Belgium",
+          "team_ja": "ベルギー",
+          "played": 3,
+          "won": 1,
+          "drawn": 2,
+          "lost": 0,
+          "goals_for": 6,
+          "goals_against": 5,
+          "points": 5
+        },
+        {
+          "position": 3,
+          "team_en": "Russia",
+          "team_ja": "ロシア",
+          "played": 3,
+          "won": 1,
+          "drawn": 0,
+          "lost": 2,
+          "goals_for": 4,
+          "goals_against": 4,
+          "points": 3
+        },
+        {
+          "position": 4,
+          "team_en": "Tunisia",
+          "team_ja": "チュニジア",
+          "played": 3,
+          "won": 0,
+          "drawn": 1,
+          "lost": 2,
+          "goals_for": 1,
+          "goals_against": 5,
+          "points": 1
+        }
+      ],
+      "matches": [
+        {
+          "date": "2002-06-04",
+          "home_en": "Japan",
+          "home_ja": "日本",
+          "away_en": "Belgium",
+          "away_ja": "ベルギー",
+          "home_score": 2,
+          "away_score": 2,
+          "scorers": [
+            {
+              "player": "Suzuki",
+              "team": "Japan",
+              "minute": "59"
+            },
+            {
+              "player": "Inamoto",
+              "team": "Japan",
+              "minute": "67"
+            },
+            {
+              "player": "Wilmots",
+              "team": "Belgium",
+              "minute": "57"
+            },
+            {
+              "player": "Van der Heyden",
+              "team": "Belgium",
+              "minute": "75"
+            }
+          ]
+        },
+        {
+          "date": "2002-06-05",
+          "home_en": "Russia",
+          "home_ja": "ロシア",
+          "away_en": "Tunisia",
+          "away_ja": "チュニジア",
+          "home_score": 2,
+          "away_score": 0,
+          "scorers": [
+            {
+              "player": "Titov",
+              "team": "Russia",
+              "minute": "59"
+            }
+          ]
+        },
+        {
+          "date": "2002-06-09",
+          "home_en": "Japan",
+          "home_ja": "日本",
+          "away_en": "Russia",
+          "away_ja": "ロシア",
+          "home_score": 1,
+          "away_score": 0,
+          "scorers": [
+            {
+              "player": "Inamoto",
+              "team": "Japan",
+              "minute": "51"
+            }
+          ]
+        },
+        {
+          "date": "2002-06-10",
+          "home_en": "Tunisia",
+          "home_ja": "チュニジア",
+          "away_en": "Belgium",
+          "away_ja": "ベルギー",
+          "home_score": 1,
+          "away_score": 1,
+          "scorers": [
+            {
+              "player": "Bouzaiene",
+              "team": "Tunisia",
+              "minute": "17"
+            },
+            {
+              "player": "Wilmots",
+              "team": "Belgium",
+              "minute": "13"
+            }
+          ]
+        },
+        {
+          "date": "2002-06-14",
+          "home_en": "Tunisia",
+          "home_ja": "チュニジア",
+          "away_en": "Japan",
+          "away_ja": "日本",
+          "home_score": 0,
+          "away_score": 2,
+          "scorers": [
+            {
+              "player": "Morishima",
+              "team": "Japan",
+              "minute": "48"
+            },
+            {
+              "player": "H. Nakata",
+              "team": "Japan",
+              "minute": "75"
+            }
+          ]
+        },
+        {
+          "date": "2002-06-14",
+          "home_en": "Belgium",
+          "home_ja": "ベルギー",
+          "away_en": "Russia",
+          "away_ja": "ロシア",
+          "home_score": 3,
+          "away_score": 2,
+          "scorers": [
+            {
+              "player": "Walem",
+              "team": "Belgium",
+              "minute": "7"
+            },
+            {
+              "player": "Sonck",
+              "team": "Belgium",
+              "minute": "78"
+            },
+            {
+              "player": "Wilmots",
+              "team": "Belgium",
+              "minute": "82"
+            },
+            {
+              "player": "Beschastnykh",
+              "team": "Russia",
+              "minute": "52"
+            },
+            {
+              "player": "Sychev",
+              "team": "Russia",
+              "minute": "88"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "knockout": {
+    "round_of_16": [
+      {
+        "date": "2002-06-15",
+        "home_en": "Germany",
+        "home_ja": "ドイツ",
+        "away_en": "Paraguay",
+        "away_ja": "パラグアイ",
+        "home_score": 1,
+        "away_score": 0,
+        "et": false,
+        "pk_score": null
+      },
+      {
+        "date": "2002-06-15",
+        "home_en": "Denmark",
+        "home_ja": "デンマーク",
+        "away_en": "England",
+        "away_ja": "イングランド",
+        "home_score": 0,
+        "away_score": 3,
+        "et": false,
+        "pk_score": null
+      },
+      {
+        "date": "2002-06-16",
+        "home_en": "Sweden",
+        "home_ja": "スウェーデン",
+        "away_en": "Senegal",
+        "away_ja": "セネガル",
+        "home_score": 1,
+        "away_score": 2,
+        "et": false,
+        "pk_score": null
+      },
+      {
+        "date": "2002-06-16",
+        "home_en": "Spain",
+        "home_ja": "スペイン",
+        "away_en": "IRL",
+        "away_ja": "IRL",
+        "home_score": 1,
+        "away_score": 1,
+        "et": false,
+        "pk_score": null
+      },
+      {
+        "date": "2002-06-17",
+        "home_en": "Mexico",
+        "home_ja": "メキシコ",
+        "away_en": "United States",
+        "away_ja": "アメリカ合衆国",
+        "home_score": 0,
+        "away_score": 2,
+        "et": false,
+        "pk_score": null
+      },
+      {
+        "date": "2002-06-17",
+        "home_en": "Brazil",
+        "home_ja": "ブラジル",
+        "away_en": "Belgium",
+        "away_ja": "ベルギー",
+        "home_score": 2,
+        "away_score": 0,
+        "et": false,
+        "pk_score": null
+      },
+      {
+        "date": "2002-06-18",
+        "home_en": "Japan",
+        "home_ja": "日本",
+        "away_en": "Turkey",
+        "away_ja": "トルコ",
+        "home_score": 0,
+        "away_score": 1,
+        "et": false,
+        "pk_score": null
+      },
+      {
+        "date": "2002-06-18",
+        "home_en": "South Korea",
+        "home_ja": "韓国",
+        "away_en": "Italy",
+        "away_ja": "イタリア",
+        "home_score": 2,
+        "away_score": 1,
+        "et": false,
+        "pk_score": null
+      }
+    ],
+    "quarter_finals": [
+      {
+        "date": "2002-06-21",
+        "home_en": "England",
+        "home_ja": "イングランド",
+        "away_en": "Brazil",
+        "away_ja": "ブラジル",
+        "home_score": 1,
+        "away_score": 2,
+        "et": false,
+        "pk_score": null
+      },
+      {
+        "date": "2002-06-21",
+        "home_en": "Germany",
+        "home_ja": "ドイツ",
+        "away_en": "United States",
+        "away_ja": "アメリカ合衆国",
+        "home_score": 1,
+        "away_score": 0,
+        "et": false,
+        "pk_score": null
+      },
+      {
+        "date": "2002-06-22",
+        "home_en": "Spain",
+        "home_ja": "スペイン",
+        "away_en": "South Korea",
+        "away_ja": "韓国",
+        "home_score": 0,
+        "away_score": 0,
+        "et": false,
+        "pk_score": null
+      },
+      {
+        "date": "2002-06-22",
+        "home_en": "Senegal",
+        "home_ja": "セネガル",
+        "away_en": "Turkey",
+        "away_ja": "トルコ",
+        "home_score": 0,
+        "away_score": 1,
+        "et": false,
+        "pk_score": null
+      }
+    ],
+    "semi_finals": [
+      {
+        "date": "2002-06-25",
+        "home_en": "Germany",
+        "home_ja": "ドイツ",
+        "away_en": "South Korea",
+        "away_ja": "韓国",
+        "home_score": 1,
+        "away_score": 0,
+        "et": false,
+        "pk_score": null
+      },
+      {
+        "date": "2002-06-26",
+        "home_en": "Brazil",
+        "home_ja": "ブラジル",
+        "away_en": "Turkey",
+        "away_ja": "トルコ",
+        "home_score": 1,
+        "away_score": 0,
+        "et": false,
+        "pk_score": null
+      }
+    ],
+    "third_place": [
+      {
+        "date": "2002-06-29",
+        "home_en": "South Korea",
+        "home_ja": "韓国",
+        "away_en": "Turkey",
+        "away_ja": "トルコ",
+        "home_score": 2,
+        "away_score": 3,
+        "et": false,
+        "pk_score": null
+      }
+    ],
+    "final": {
+      "date": "2002-06-30",
+      "home_en": "Germany",
+      "home_ja": "ドイツ",
+      "away_en": "Brazil",
+      "away_ja": "ブラジル",
+      "home_score": 0,
+      "away_score": 2,
+      "et": false,
+      "pk_score": null
+    }
+  },
+  "japan_matches": [
+    {
+      "date": "2002-06-04",
+      "stage": "GS-1",
+      "home_en": "Japan",
+      "home_ja": "日本",
+      "away_en": "Belgium",
+      "away_ja": "ベルギー",
+      "home_score": 2,
+      "away_score": 2,
+      "japan_scorers": [
+        "鈴木隆行 59'",
+        "稲本潤一 67'"
+      ]
+    },
+    {
+      "date": "2002-06-09",
+      "stage": "GS-2",
+      "home_en": "Japan",
+      "home_ja": "日本",
+      "away_en": "Russia",
+      "away_ja": "ロシア",
+      "home_score": 1,
+      "away_score": 0,
+      "japan_scorers": [
+        "稲本潤一 51'"
+      ]
+    },
+    {
+      "date": "2002-06-14",
+      "stage": "GS-3",
+      "home_en": "Japan",
+      "home_ja": "日本",
+      "away_en": "Tunisia",
+      "away_ja": "チュニジア",
+      "home_score": 2,
+      "away_score": 0,
+      "japan_scorers": [
+        "森島寛晃 48'",
+        "中田浩二 75'"
+      ]
+    },
+    {
+      "date": "2002-06-18",
+      "stage": "R16",
+      "home_en": "Japan",
+      "home_ja": "日本",
+      "away_en": "Turkey",
+      "away_ja": "トルコ",
+      "home_score": 0,
+      "away_score": 1,
+      "japan_scorers": []
+    }
+  ],
+  "_source": "Wikipedia",
+  "_updated": "2026-05-05"
+}

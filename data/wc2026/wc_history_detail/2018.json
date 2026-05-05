@@ -1,0 +1,1657 @@
+{
+  "year": 2018,
+  "host": "ロシア",
+  "host_en": "Russia",
+  "japan_group": "H",
+  "groups": [
+    {
+      "group_id": "A",
+      "name_ja": "グループA",
+      "table": [
+        {
+          "position": 1,
+          "team_en": "Uruguay",
+          "team_ja": "ウルグアイ",
+          "played": 3,
+          "won": 3,
+          "drawn": 0,
+          "lost": 0,
+          "goals_for": 5,
+          "goals_against": 0,
+          "points": 9
+        },
+        {
+          "position": 2,
+          "team_en": "Russia",
+          "team_ja": "ロシア",
+          "played": 3,
+          "won": 2,
+          "drawn": 0,
+          "lost": 1,
+          "goals_for": 8,
+          "goals_against": 4,
+          "points": 6
+        },
+        {
+          "position": 3,
+          "team_en": "KSA",
+          "team_ja": "KSA",
+          "played": 3,
+          "won": 1,
+          "drawn": 0,
+          "lost": 2,
+          "goals_for": 2,
+          "goals_against": 7,
+          "points": 3
+        },
+        {
+          "position": 4,
+          "team_en": "Egypt",
+          "team_ja": "エジプト",
+          "played": 3,
+          "won": 0,
+          "drawn": 0,
+          "lost": 3,
+          "goals_for": 2,
+          "goals_against": 6,
+          "points": 0
+        }
+      ],
+      "matches": [
+        {
+          "date": "2018-06-14",
+          "home_en": "Russia",
+          "home_ja": "ロシア",
+          "away_en": "KSA",
+          "away_ja": "KSA",
+          "home_score": 5,
+          "away_score": 0,
+          "scorers": [
+            {
+              "player": "Gazinsky",
+              "team": "Russia",
+              "minute": "12"
+            },
+            {
+              "player": "Cheryshev",
+              "team": "Russia",
+              "minute": "90+1"
+            },
+            {
+              "player": "Dzyuba",
+              "team": "Russia",
+              "minute": "71"
+            },
+            {
+              "player": "Golovin",
+              "team": "Russia",
+              "minute": "90+4"
+            }
+          ]
+        },
+        {
+          "date": "2018-06-15",
+          "home_en": "Egypt",
+          "home_ja": "エジプト",
+          "away_en": "Uruguay",
+          "away_ja": "ウルグアイ",
+          "home_score": 0,
+          "away_score": 1,
+          "scorers": [
+            {
+              "player": "Giménez",
+              "team": "Uruguay",
+              "minute": "89"
+            }
+          ]
+        },
+        {
+          "date": "2018-06-19",
+          "home_en": "Russia",
+          "home_ja": "ロシア",
+          "away_en": "Egypt",
+          "away_ja": "エジプト",
+          "home_score": 3,
+          "away_score": 1,
+          "scorers": [
+            {
+              "player": "Cheryshev",
+              "team": "Russia",
+              "minute": "59"
+            },
+            {
+              "player": "Dzyuba",
+              "team": "Russia",
+              "minute": "62"
+            }
+          ]
+        },
+        {
+          "date": "2018-06-20",
+          "home_en": "Uruguay",
+          "home_ja": "ウルグアイ",
+          "away_en": "KSA",
+          "away_ja": "KSA",
+          "home_score": 1,
+          "away_score": 0,
+          "scorers": [
+            {
+              "player": "Suárez",
+              "team": "Uruguay",
+              "minute": "23"
+            }
+          ]
+        },
+        {
+          "date": "2018-06-25",
+          "home_en": "Uruguay",
+          "home_ja": "ウルグアイ",
+          "away_en": "Russia",
+          "away_ja": "ロシア",
+          "home_score": 3,
+          "away_score": 0,
+          "scorers": [
+            {
+              "player": "Suárez",
+              "team": "Uruguay",
+              "minute": "10"
+            },
+            {
+              "player": "Cavani",
+              "team": "Uruguay",
+              "minute": "90"
+            }
+          ]
+        },
+        {
+          "date": "2018-06-25",
+          "home_en": "KSA",
+          "home_ja": "KSA",
+          "away_en": "Egypt",
+          "away_ja": "エジプト",
+          "home_score": 2,
+          "away_score": 1,
+          "scorers": [
+            {
+              "player": "Al-Dawsari",
+              "team": "KSA",
+              "minute": "90+5"
+            },
+            {
+              "player": "Salah",
+              "team": "Egypt",
+              "minute": "22"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "group_id": "B",
+      "name_ja": "グループB",
+      "table": [
+        {
+          "position": 1,
+          "team_en": "Spain",
+          "team_ja": "スペイン",
+          "played": 3,
+          "won": 1,
+          "drawn": 2,
+          "lost": 0,
+          "goals_for": 6,
+          "goals_against": 5,
+          "points": 5
+        },
+        {
+          "position": 2,
+          "team_en": "Portugal",
+          "team_ja": "ポルトガル",
+          "played": 3,
+          "won": 1,
+          "drawn": 2,
+          "lost": 0,
+          "goals_for": 5,
+          "goals_against": 4,
+          "points": 5
+        },
+        {
+          "position": 3,
+          "team_en": "Iran",
+          "team_ja": "イラン",
+          "played": 3,
+          "won": 1,
+          "drawn": 1,
+          "lost": 1,
+          "goals_for": 2,
+          "goals_against": 2,
+          "points": 4
+        },
+        {
+          "position": 4,
+          "team_en": "Morocco",
+          "team_ja": "モロッコ",
+          "played": 3,
+          "won": 0,
+          "drawn": 1,
+          "lost": 2,
+          "goals_for": 2,
+          "goals_against": 4,
+          "points": 1
+        }
+      ],
+      "matches": [
+        {
+          "date": "2018-06-15",
+          "home_en": "Morocco",
+          "home_ja": "モロッコ",
+          "away_en": "Iran",
+          "away_ja": "イラン",
+          "home_score": 0,
+          "away_score": 1,
+          "scorers": []
+        },
+        {
+          "date": "2018-06-15",
+          "home_en": "Portugal",
+          "home_ja": "ポルトガル",
+          "away_en": "Spain",
+          "away_ja": "スペイン",
+          "home_score": 3,
+          "away_score": 3,
+          "scorers": [
+            {
+              "player": "Ronaldo",
+              "team": "Portugal",
+              "minute": "88"
+            },
+            {
+              "player": "Costa",
+              "team": "Spain",
+              "minute": "55"
+            },
+            {
+              "player": "Nacho",
+              "team": "Spain",
+              "minute": "58"
+            }
+          ]
+        },
+        {
+          "date": "2018-06-20",
+          "home_en": "Portugal",
+          "home_ja": "ポルトガル",
+          "away_en": "Morocco",
+          "away_ja": "モロッコ",
+          "home_score": 1,
+          "away_score": 0,
+          "scorers": [
+            {
+              "player": "Ronaldo",
+              "team": "Portugal",
+              "minute": "4"
+            }
+          ]
+        },
+        {
+          "date": "2018-06-20",
+          "home_en": "Iran",
+          "home_ja": "イラン",
+          "away_en": "Spain",
+          "away_ja": "スペイン",
+          "home_score": 0,
+          "away_score": 1,
+          "scorers": [
+            {
+              "player": "Costa",
+              "team": "Spain",
+              "minute": "54"
+            }
+          ]
+        },
+        {
+          "date": "2018-06-25",
+          "home_en": "Iran",
+          "home_ja": "イラン",
+          "away_en": "Portugal",
+          "away_ja": "ポルトガル",
+          "home_score": 1,
+          "away_score": 1,
+          "scorers": [
+            {
+              "player": "Quaresma",
+              "team": "Portugal",
+              "minute": "45"
+            }
+          ]
+        },
+        {
+          "date": "2018-06-25",
+          "home_en": "Spain",
+          "home_ja": "スペイン",
+          "away_en": "Morocco",
+          "away_ja": "モロッコ",
+          "home_score": 2,
+          "away_score": 2,
+          "scorers": [
+            {
+              "player": "Isco",
+              "team": "Spain",
+              "minute": "19"
+            },
+            {
+              "player": "Aspas",
+              "team": "Spain",
+              "minute": "90+1"
+            },
+            {
+              "player": "Boutaïb",
+              "team": "Morocco",
+              "minute": "14"
+            },
+            {
+              "player": "En-Nesyri",
+              "team": "Morocco",
+              "minute": "81"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "group_id": "C",
+      "name_ja": "グループC",
+      "table": [
+        {
+          "position": 1,
+          "team_en": "France",
+          "team_ja": "フランス",
+          "played": 3,
+          "won": 2,
+          "drawn": 1,
+          "lost": 0,
+          "goals_for": 3,
+          "goals_against": 1,
+          "points": 7
+        },
+        {
+          "position": 2,
+          "team_en": "Denmark",
+          "team_ja": "デンマーク",
+          "played": 3,
+          "won": 1,
+          "drawn": 2,
+          "lost": 0,
+          "goals_for": 2,
+          "goals_against": 1,
+          "points": 5
+        },
+        {
+          "position": 3,
+          "team_en": "Peru",
+          "team_ja": "ペルー",
+          "played": 3,
+          "won": 1,
+          "drawn": 0,
+          "lost": 2,
+          "goals_for": 2,
+          "goals_against": 2,
+          "points": 3
+        },
+        {
+          "position": 4,
+          "team_en": "Australia",
+          "team_ja": "オーストラリア",
+          "played": 3,
+          "won": 0,
+          "drawn": 1,
+          "lost": 2,
+          "goals_for": 2,
+          "goals_against": 5,
+          "points": 1
+        }
+      ],
+      "matches": [
+        {
+          "date": "2018-06-16",
+          "home_en": "",
+          "home_ja": "",
+          "away_en": "Australia",
+          "away_ja": "オーストラリア",
+          "home_score": 2,
+          "away_score": 1,
+          "scorers": []
+        },
+        {
+          "date": "2018-06-16",
+          "home_en": "Peru",
+          "home_ja": "ペルー",
+          "away_en": "Denmark",
+          "away_ja": "デンマーク",
+          "home_score": 0,
+          "away_score": 1,
+          "scorers": [
+            {
+              "player": "Poulsen",
+              "team": "Denmark",
+              "minute": "59"
+            }
+          ]
+        },
+        {
+          "date": "2018-06-21",
+          "home_en": "Denmark",
+          "home_ja": "デンマーク",
+          "away_en": "Australia",
+          "away_ja": "オーストラリア",
+          "home_score": 1,
+          "away_score": 1,
+          "scorers": [
+            {
+              "player": "Eriksen",
+              "team": "Denmark",
+              "minute": "7"
+            }
+          ]
+        },
+        {
+          "date": "2018-06-21",
+          "home_en": "",
+          "home_ja": "",
+          "away_en": "Peru",
+          "away_ja": "ペルー",
+          "home_score": 1,
+          "away_score": 0,
+          "scorers": [
+            {
+              "player": "Mbappé",
+              "team": "",
+              "minute": "34"
+            }
+          ]
+        },
+        {
+          "date": "2018-06-26",
+          "home_en": "Denmark",
+          "home_ja": "デンマーク",
+          "away_en": "",
+          "away_ja": "",
+          "home_score": 0,
+          "away_score": 0,
+          "scorers": []
+        },
+        {
+          "date": "2018-06-26",
+          "home_en": "Australia",
+          "home_ja": "オーストラリア",
+          "away_en": "Peru",
+          "away_ja": "ペルー",
+          "home_score": 0,
+          "away_score": 2,
+          "scorers": [
+            {
+              "player": "Carrillo",
+              "team": "Peru",
+              "minute": "18"
+            },
+            {
+              "player": "Guerrero",
+              "team": "Peru",
+              "minute": "50"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "group_id": "D",
+      "name_ja": "グループD",
+      "table": [
+        {
+          "position": 1,
+          "team_en": "Croatia",
+          "team_ja": "クロアチア",
+          "played": 3,
+          "won": 3,
+          "drawn": 0,
+          "lost": 0,
+          "goals_for": 7,
+          "goals_against": 1,
+          "points": 9
+        },
+        {
+          "position": 2,
+          "team_en": "Argentina",
+          "team_ja": "アルゼンチン",
+          "played": 3,
+          "won": 1,
+          "drawn": 1,
+          "lost": 1,
+          "goals_for": 3,
+          "goals_against": 5,
+          "points": 4
+        },
+        {
+          "position": 3,
+          "team_en": "Nigeria",
+          "team_ja": "ナイジェリア",
+          "played": 3,
+          "won": 1,
+          "drawn": 0,
+          "lost": 2,
+          "goals_for": 3,
+          "goals_against": 4,
+          "points": 3
+        },
+        {
+          "position": 4,
+          "team_en": "Iceland",
+          "team_ja": "アイスランド",
+          "played": 3,
+          "won": 0,
+          "drawn": 1,
+          "lost": 2,
+          "goals_for": 2,
+          "goals_against": 5,
+          "points": 1
+        }
+      ],
+      "matches": [
+        {
+          "date": "2018-06-16",
+          "home_en": "Argentina",
+          "home_ja": "アルゼンチン",
+          "away_en": "Iceland",
+          "away_ja": "アイスランド",
+          "home_score": 1,
+          "away_score": 1,
+          "scorers": [
+            {
+              "player": "Agüero",
+              "team": "Argentina",
+              "minute": "19"
+            },
+            {
+              "player": "Finnbogason",
+              "team": "Iceland",
+              "minute": "23"
+            }
+          ]
+        },
+        {
+          "date": "2018-06-16",
+          "home_en": "Croatia",
+          "home_ja": "クロアチア",
+          "away_en": "Nigeria",
+          "away_ja": "ナイジェリア",
+          "home_score": 2,
+          "away_score": 0,
+          "scorers": []
+        },
+        {
+          "date": "2018-06-21",
+          "home_en": "Argentina",
+          "home_ja": "アルゼンチン",
+          "away_en": "Croatia",
+          "away_ja": "クロアチア",
+          "home_score": 0,
+          "away_score": 3,
+          "scorers": [
+            {
+              "player": "Rebić",
+              "team": "Croatia",
+              "minute": "53"
+            },
+            {
+              "player": "Modrić",
+              "team": "Croatia",
+              "minute": "80"
+            },
+            {
+              "player": "Rakitić",
+              "team": "Croatia",
+              "minute": "90+1"
+            }
+          ]
+        },
+        {
+          "date": "2018-06-22",
+          "home_en": "Nigeria",
+          "home_ja": "ナイジェリア",
+          "away_en": "Iceland",
+          "away_ja": "アイスランド",
+          "home_score": 2,
+          "away_score": 0,
+          "scorers": [
+            {
+              "player": "Musa",
+              "team": "Nigeria",
+              "minute": "75"
+            }
+          ]
+        },
+        {
+          "date": "2018-06-26",
+          "home_en": "Nigeria",
+          "home_ja": "ナイジェリア",
+          "away_en": "Argentina",
+          "away_ja": "アルゼンチン",
+          "home_score": 1,
+          "away_score": 2,
+          "scorers": [
+            {
+              "player": "Messi",
+              "team": "Argentina",
+              "minute": "14"
+            },
+            {
+              "player": "Rojo",
+              "team": "Argentina",
+              "minute": "86"
+            }
+          ]
+        },
+        {
+          "date": "2018-06-26",
+          "home_en": "Iceland",
+          "home_ja": "アイスランド",
+          "away_en": "Croatia",
+          "away_ja": "クロアチア",
+          "home_score": 1,
+          "away_score": 2,
+          "scorers": [
+            {
+              "player": "Badelj",
+              "team": "Croatia",
+              "minute": "53"
+            },
+            {
+              "player": "Perišić",
+              "team": "Croatia",
+              "minute": "90"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "group_id": "E",
+      "name_ja": "グループE",
+      "table": [
+        {
+          "position": 1,
+          "team_en": "Brazil",
+          "team_ja": "ブラジル",
+          "played": 3,
+          "won": 2,
+          "drawn": 1,
+          "lost": 0,
+          "goals_for": 5,
+          "goals_against": 1,
+          "points": 7
+        },
+        {
+          "position": 2,
+          "team_en": "Switzerland",
+          "team_ja": "スイス",
+          "played": 3,
+          "won": 1,
+          "drawn": 2,
+          "lost": 0,
+          "goals_for": 5,
+          "goals_against": 4,
+          "points": 5
+        },
+        {
+          "position": 3,
+          "team_en": "Serbia",
+          "team_ja": "セルビア",
+          "played": 3,
+          "won": 1,
+          "drawn": 0,
+          "lost": 2,
+          "goals_for": 2,
+          "goals_against": 4,
+          "points": 3
+        },
+        {
+          "position": 4,
+          "team_en": "Costa Rica",
+          "team_ja": "コスタリカ",
+          "played": 3,
+          "won": 0,
+          "drawn": 1,
+          "lost": 2,
+          "goals_for": 2,
+          "goals_against": 5,
+          "points": 1
+        }
+      ],
+      "matches": [
+        {
+          "date": "2018-06-17",
+          "home_en": "Costa Rica",
+          "home_ja": "コスタリカ",
+          "away_en": "Serbia",
+          "away_ja": "セルビア",
+          "home_score": 0,
+          "away_score": 1,
+          "scorers": [
+            {
+              "player": "Kolarov",
+              "team": "Serbia",
+              "minute": "56"
+            }
+          ]
+        },
+        {
+          "date": "2018-06-17",
+          "home_en": "Brazil",
+          "home_ja": "ブラジル",
+          "away_en": "Switzerland",
+          "away_ja": "スイス",
+          "home_score": 1,
+          "away_score": 1,
+          "scorers": [
+            {
+              "player": "Coutinho",
+              "team": "Brazil",
+              "minute": "20"
+            },
+            {
+              "player": "Zuber",
+              "team": "Switzerland",
+              "minute": "50"
+            }
+          ]
+        },
+        {
+          "date": "2018-06-22",
+          "home_en": "Brazil",
+          "home_ja": "ブラジル",
+          "away_en": "Costa Rica",
+          "away_ja": "コスタリカ",
+          "home_score": 2,
+          "away_score": 0,
+          "scorers": [
+            {
+              "player": "Coutinho",
+              "team": "Brazil",
+              "minute": "90+1"
+            },
+            {
+              "player": "Neymar",
+              "team": "Brazil",
+              "minute": "90+7"
+            }
+          ]
+        },
+        {
+          "date": "2018-06-22",
+          "home_en": "Serbia",
+          "home_ja": "セルビア",
+          "away_en": "Switzerland",
+          "away_ja": "スイス",
+          "home_score": 1,
+          "away_score": 2,
+          "scorers": [
+            {
+              "player": "Mitrović",
+              "team": "Serbia",
+              "minute": "5"
+            },
+            {
+              "player": "Xhaka",
+              "team": "Switzerland",
+              "minute": "52"
+            },
+            {
+              "player": "Shaqiri",
+              "team": "Switzerland",
+              "minute": "90"
+            }
+          ]
+        },
+        {
+          "date": "2018-06-27",
+          "home_en": "Serbia",
+          "home_ja": "セルビア",
+          "away_en": "Brazil",
+          "away_ja": "ブラジル",
+          "home_score": 0,
+          "away_score": 2,
+          "scorers": [
+            {
+              "player": "Paulinho",
+              "team": "Brazil",
+              "minute": "36"
+            },
+            {
+              "player": "Thiago Silva",
+              "team": "Brazil",
+              "minute": "68"
+            }
+          ]
+        },
+        {
+          "date": "2018-06-27",
+          "home_en": "Switzerland",
+          "home_ja": "スイス",
+          "away_en": "Costa Rica",
+          "away_ja": "コスタリカ",
+          "home_score": 2,
+          "away_score": 2,
+          "scorers": [
+            {
+              "player": "Džemaili",
+              "team": "Switzerland",
+              "minute": "31"
+            },
+            {
+              "player": "Drmić",
+              "team": "Switzerland",
+              "minute": "88"
+            },
+            {
+              "player": "Waston",
+              "team": "Costa Rica",
+              "minute": "56"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "group_id": "F",
+      "name_ja": "グループF",
+      "table": [
+        {
+          "position": 1,
+          "team_en": "Sweden",
+          "team_ja": "スウェーデン",
+          "played": 3,
+          "won": 2,
+          "drawn": 0,
+          "lost": 1,
+          "goals_for": 5,
+          "goals_against": 2,
+          "points": 6
+        },
+        {
+          "position": 2,
+          "team_en": "Mexico",
+          "team_ja": "メキシコ",
+          "played": 3,
+          "won": 2,
+          "drawn": 0,
+          "lost": 1,
+          "goals_for": 3,
+          "goals_against": 4,
+          "points": 6
+        },
+        {
+          "position": 3,
+          "team_en": "South Korea",
+          "team_ja": "韓国",
+          "played": 3,
+          "won": 1,
+          "drawn": 0,
+          "lost": 2,
+          "goals_for": 3,
+          "goals_against": 3,
+          "points": 3
+        },
+        {
+          "position": 4,
+          "team_en": "Germany",
+          "team_ja": "ドイツ",
+          "played": 3,
+          "won": 1,
+          "drawn": 0,
+          "lost": 2,
+          "goals_for": 2,
+          "goals_against": 4,
+          "points": 3
+        }
+      ],
+      "matches": [
+        {
+          "date": "2018-06-17",
+          "home_en": "Germany",
+          "home_ja": "ドイツ",
+          "away_en": "Mexico",
+          "away_ja": "メキシコ",
+          "home_score": 0,
+          "away_score": 1,
+          "scorers": [
+            {
+              "player": "Lozano",
+              "team": "Mexico",
+              "minute": "35"
+            }
+          ]
+        },
+        {
+          "date": "2018-06-18",
+          "home_en": "Sweden",
+          "home_ja": "スウェーデン",
+          "away_en": "South Korea",
+          "away_ja": "韓国",
+          "home_score": 1,
+          "away_score": 0,
+          "scorers": []
+        },
+        {
+          "date": "2018-06-23",
+          "home_en": "South Korea",
+          "home_ja": "韓国",
+          "away_en": "Mexico",
+          "away_ja": "メキシコ",
+          "home_score": 1,
+          "away_score": 2,
+          "scorers": [
+            {
+              "player": "Son Heung-min",
+              "team": "South Korea",
+              "minute": "90+3"
+            },
+            {
+              "player": "Hernández",
+              "team": "Mexico",
+              "minute": "66"
+            }
+          ]
+        },
+        {
+          "date": "2018-06-23",
+          "home_en": "Germany",
+          "home_ja": "ドイツ",
+          "away_en": "Sweden",
+          "away_ja": "スウェーデン",
+          "home_score": 2,
+          "away_score": 1,
+          "scorers": [
+            {
+              "player": "Reus",
+              "team": "Germany",
+              "minute": "48"
+            },
+            {
+              "player": "Kroos",
+              "team": "Germany",
+              "minute": "90+5"
+            },
+            {
+              "player": "Toivonen",
+              "team": "Sweden",
+              "minute": "32"
+            }
+          ]
+        },
+        {
+          "date": "2018-06-27",
+          "home_en": "South Korea",
+          "home_ja": "韓国",
+          "away_en": "Germany",
+          "away_ja": "ドイツ",
+          "home_score": 2,
+          "away_score": 0,
+          "scorers": [
+            {
+              "player": "Kim Young-gwon",
+              "team": "South Korea",
+              "minute": "90+2"
+            },
+            {
+              "player": "Son Heung-min",
+              "team": "South Korea",
+              "minute": "90+6"
+            }
+          ]
+        },
+        {
+          "date": "2018-06-27",
+          "home_en": "Mexico",
+          "home_ja": "メキシコ",
+          "away_en": "Sweden",
+          "away_ja": "スウェーデン",
+          "home_score": 0,
+          "away_score": 3,
+          "scorers": [
+            {
+              "player": "Augustinsson",
+              "team": "Sweden",
+              "minute": "50"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "group_id": "G",
+      "name_ja": "グループG",
+      "table": [
+        {
+          "position": 1,
+          "team_en": "Belgium",
+          "team_ja": "ベルギー",
+          "played": 3,
+          "won": 3,
+          "drawn": 0,
+          "lost": 0,
+          "goals_for": 9,
+          "goals_against": 2,
+          "points": 9
+        },
+        {
+          "position": 2,
+          "team_en": "England",
+          "team_ja": "イングランド",
+          "played": 3,
+          "won": 2,
+          "drawn": 0,
+          "lost": 1,
+          "goals_for": 8,
+          "goals_against": 3,
+          "points": 6
+        },
+        {
+          "position": 3,
+          "team_en": "Tunisia",
+          "team_ja": "チュニジア",
+          "played": 3,
+          "won": 1,
+          "drawn": 0,
+          "lost": 2,
+          "goals_for": 5,
+          "goals_against": 8,
+          "points": 3
+        },
+        {
+          "position": 4,
+          "team_en": "Panama",
+          "team_ja": "パナマ",
+          "played": 3,
+          "won": 0,
+          "drawn": 0,
+          "lost": 3,
+          "goals_for": 2,
+          "goals_against": 11,
+          "points": 0
+        }
+      ],
+      "matches": [
+        {
+          "date": "2018-06-18",
+          "home_en": "Belgium",
+          "home_ja": "ベルギー",
+          "away_en": "Panama",
+          "away_ja": "パナマ",
+          "home_score": 3,
+          "away_score": 0,
+          "scorers": [
+            {
+              "player": "Mertens",
+              "team": "Belgium",
+              "minute": "47"
+            },
+            {
+              "player": "Lukaku",
+              "team": "Belgium",
+              "minute": "75"
+            }
+          ]
+        },
+        {
+          "date": "2018-06-18",
+          "home_en": "Tunisia",
+          "home_ja": "チュニジア",
+          "away_en": "England",
+          "away_ja": "イングランド",
+          "home_score": 1,
+          "away_score": 2,
+          "scorers": [
+            {
+              "player": "Kane",
+              "team": "England",
+              "minute": "90+1"
+            }
+          ]
+        },
+        {
+          "date": "2018-06-23",
+          "home_en": "Belgium",
+          "home_ja": "ベルギー",
+          "away_en": "Tunisia",
+          "away_ja": "チュニジア",
+          "home_score": 5,
+          "away_score": 2,
+          "scorers": [
+            {
+              "player": "E. Hazard",
+              "team": "Belgium",
+              "minute": "51"
+            },
+            {
+              "player": "Lukaku",
+              "team": "Belgium",
+              "minute": "45+3"
+            },
+            {
+              "player": "Batshuayi",
+              "team": "Belgium",
+              "minute": "90"
+            },
+            {
+              "player": "Bronn",
+              "team": "Tunisia",
+              "minute": "18"
+            },
+            {
+              "player": "Khazri",
+              "team": "Tunisia",
+              "minute": "90+3"
+            }
+          ]
+        },
+        {
+          "date": "2018-06-24",
+          "home_en": "England",
+          "home_ja": "イングランド",
+          "away_en": "Panama",
+          "away_ja": "パナマ",
+          "home_score": 6,
+          "away_score": 1,
+          "scorers": [
+            {
+              "player": "Stones",
+              "team": "England",
+              "minute": "40"
+            },
+            {
+              "player": "Kane",
+              "team": "England",
+              "minute": "62"
+            },
+            {
+              "player": "Lingard",
+              "team": "England",
+              "minute": "36"
+            },
+            {
+              "player": "Baloy",
+              "team": "Panama",
+              "minute": "78"
+            }
+          ]
+        },
+        {
+          "date": "2018-06-28",
+          "home_en": "England",
+          "home_ja": "イングランド",
+          "away_en": "Belgium",
+          "away_ja": "ベルギー",
+          "home_score": 0,
+          "away_score": 1,
+          "scorers": [
+            {
+              "player": "Januzaj",
+              "team": "Belgium",
+              "minute": "51"
+            }
+          ]
+        },
+        {
+          "date": "2018-06-28",
+          "home_en": "Panama",
+          "home_ja": "パナマ",
+          "away_en": "Tunisia",
+          "away_ja": "チュニジア",
+          "home_score": 1,
+          "away_score": 2,
+          "scorers": [
+            {
+              "player": "F. Ben Youssef",
+              "team": "Tunisia",
+              "minute": "51"
+            },
+            {
+              "player": "Khazri",
+              "team": "Tunisia",
+              "minute": "66"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "group_id": "H",
+      "name_ja": "グループH",
+      "table": [
+        {
+          "position": 1,
+          "team_en": "Colombia",
+          "team_ja": "コロンビア",
+          "played": 3,
+          "won": 2,
+          "drawn": 0,
+          "lost": 1,
+          "goals_for": 5,
+          "goals_against": 2,
+          "points": 6
+        },
+        {
+          "position": 2,
+          "team_en": "Japan",
+          "team_ja": "日本",
+          "played": 3,
+          "won": 1,
+          "drawn": 1,
+          "lost": 1,
+          "goals_for": 4,
+          "goals_against": 4,
+          "points": 4
+        },
+        {
+          "position": 3,
+          "team_en": "Senegal",
+          "team_ja": "セネガル",
+          "played": 3,
+          "won": 1,
+          "drawn": 1,
+          "lost": 1,
+          "goals_for": 4,
+          "goals_against": 4,
+          "points": 4
+        },
+        {
+          "position": 4,
+          "team_en": "Poland",
+          "team_ja": "ポーランド",
+          "played": 3,
+          "won": 1,
+          "drawn": 0,
+          "lost": 2,
+          "goals_for": 2,
+          "goals_against": 5,
+          "points": 3
+        }
+      ],
+      "matches": [
+        {
+          "date": "2018-06-19",
+          "home_en": "Colombia",
+          "home_ja": "コロンビア",
+          "away_en": "Japan",
+          "away_ja": "日本",
+          "home_score": 1,
+          "away_score": 2,
+          "scorers": [
+            {
+              "player": "Quintero",
+              "team": "Colombia",
+              "minute": "39"
+            },
+            {
+              "player": "Osako",
+              "team": "Japan",
+              "minute": "73"
+            }
+          ]
+        },
+        {
+          "date": "2018-06-19",
+          "home_en": "Poland",
+          "home_ja": "ポーランド",
+          "away_en": "Senegal",
+          "away_ja": "セネガル",
+          "home_score": 1,
+          "away_score": 2,
+          "scorers": [
+            {
+              "player": "Krychowiak",
+              "team": "Poland",
+              "minute": "86"
+            },
+            {
+              "player": "Niang",
+              "team": "Senegal",
+              "minute": "60"
+            }
+          ]
+        },
+        {
+          "date": "2018-06-24",
+          "home_en": "Japan",
+          "home_ja": "日本",
+          "away_en": "Senegal",
+          "away_ja": "セネガル",
+          "home_score": 2,
+          "away_score": 2,
+          "scorers": [
+            {
+              "player": "Inui",
+              "team": "Japan",
+              "minute": "34"
+            },
+            {
+              "player": "Honda",
+              "team": "Japan",
+              "minute": "78"
+            },
+            {
+              "player": "Mané",
+              "team": "Senegal",
+              "minute": "11"
+            },
+            {
+              "player": "Wagué",
+              "team": "Senegal",
+              "minute": "71"
+            }
+          ]
+        },
+        {
+          "date": "2018-06-24",
+          "home_en": "Poland",
+          "home_ja": "ポーランド",
+          "away_en": "Colombia",
+          "away_ja": "コロンビア",
+          "home_score": 0,
+          "away_score": 3,
+          "scorers": [
+            {
+              "player": "Mina",
+              "team": "Colombia",
+              "minute": "40"
+            },
+            {
+              "player": "Falcao",
+              "team": "Colombia",
+              "minute": "70"
+            },
+            {
+              "player": "Ju. Cuadrado",
+              "team": "Colombia",
+              "minute": "75"
+            }
+          ]
+        },
+        {
+          "date": "2018-06-28",
+          "home_en": "Japan",
+          "home_ja": "日本",
+          "away_en": "Poland",
+          "away_ja": "ポーランド",
+          "home_score": 0,
+          "away_score": 1,
+          "scorers": [
+            {
+              "player": "Bednarek",
+              "team": "Poland",
+              "minute": "59"
+            }
+          ]
+        },
+        {
+          "date": "2018-06-28",
+          "home_en": "Senegal",
+          "home_ja": "セネガル",
+          "away_en": "Colombia",
+          "away_ja": "コロンビア",
+          "home_score": 0,
+          "away_score": 1,
+          "scorers": [
+            {
+              "player": "Mina",
+              "team": "Colombia",
+              "minute": "74"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "knockout": {
+    "round_of_16": [
+      {
+        "date": "2018-06-30",
+        "home_en": "France",
+        "home_ja": "フランス",
+        "away_en": "Argentina",
+        "away_ja": "アルゼンチン",
+        "home_score": 4,
+        "away_score": 3,
+        "et": false,
+        "pk_score": null
+      },
+      {
+        "date": "2018-06-30",
+        "home_en": "Uruguay",
+        "home_ja": "ウルグアイ",
+        "away_en": "Portugal",
+        "away_ja": "ポルトガル",
+        "home_score": 2,
+        "away_score": 1,
+        "et": false,
+        "pk_score": null
+      },
+      {
+        "date": "2018-07-01",
+        "home_en": "Spain",
+        "home_ja": "スペイン",
+        "away_en": "Russia",
+        "away_ja": "ロシア",
+        "home_score": 1,
+        "away_score": 1,
+        "et": false,
+        "pk_score": null
+      },
+      {
+        "date": "2018-07-01",
+        "home_en": "Croatia",
+        "home_ja": "クロアチア",
+        "away_en": "Denmark",
+        "away_ja": "デンマーク",
+        "home_score": 1,
+        "away_score": 1,
+        "et": false,
+        "pk_score": null
+      },
+      {
+        "date": "2018-07-02",
+        "home_en": "Brazil",
+        "home_ja": "ブラジル",
+        "away_en": "Mexico",
+        "away_ja": "メキシコ",
+        "home_score": 2,
+        "away_score": 0,
+        "et": false,
+        "pk_score": null
+      },
+      {
+        "date": "2018-07-02",
+        "home_en": "Belgium",
+        "home_ja": "ベルギー",
+        "away_en": "Japan",
+        "away_ja": "日本",
+        "home_score": 3,
+        "away_score": 2,
+        "et": false,
+        "pk_score": null
+      },
+      {
+        "date": "2018-07-03",
+        "home_en": "Sweden",
+        "home_ja": "スウェーデン",
+        "away_en": "Switzerland",
+        "away_ja": "スイス",
+        "home_score": 1,
+        "away_score": 0,
+        "et": false,
+        "pk_score": null
+      },
+      {
+        "date": "2018-07-03",
+        "home_en": "Colombia",
+        "home_ja": "コロンビア",
+        "away_en": "England",
+        "away_ja": "イングランド",
+        "home_score": 1,
+        "away_score": 1,
+        "et": false,
+        "pk_score": null
+      }
+    ],
+    "quarter_finals": [
+      {
+        "date": "2018-07-06",
+        "home_en": "Uruguay",
+        "home_ja": "ウルグアイ",
+        "away_en": "France",
+        "away_ja": "フランス",
+        "home_score": 0,
+        "away_score": 2,
+        "et": false,
+        "pk_score": null
+      },
+      {
+        "date": "2018-07-06",
+        "home_en": "Brazil",
+        "home_ja": "ブラジル",
+        "away_en": "Belgium",
+        "away_ja": "ベルギー",
+        "home_score": 1,
+        "away_score": 2,
+        "et": false,
+        "pk_score": null
+      },
+      {
+        "date": "2018-07-07",
+        "home_en": "Sweden",
+        "home_ja": "スウェーデン",
+        "away_en": "England",
+        "away_ja": "イングランド",
+        "home_score": 0,
+        "away_score": 2,
+        "et": false,
+        "pk_score": null
+      },
+      {
+        "date": "2018-07-07",
+        "home_en": "Russia",
+        "home_ja": "ロシア",
+        "away_en": "Croatia",
+        "away_ja": "クロアチア",
+        "home_score": 2,
+        "away_score": 2,
+        "et": false,
+        "pk_score": null
+      }
+    ],
+    "semi_finals": [
+      {
+        "date": "2018-07-10",
+        "home_en": "France",
+        "home_ja": "フランス",
+        "away_en": "Belgium",
+        "away_ja": "ベルギー",
+        "home_score": 1,
+        "away_score": 0,
+        "et": false,
+        "pk_score": null
+      },
+      {
+        "date": "2018-07-11",
+        "home_en": "Croatia",
+        "home_ja": "クロアチア",
+        "away_en": "England",
+        "away_ja": "イングランド",
+        "home_score": 2,
+        "away_score": 1,
+        "et": false,
+        "pk_score": null
+      }
+    ],
+    "third_place": [
+      {
+        "date": "2018-07-14",
+        "home_en": "Belgium",
+        "home_ja": "ベルギー",
+        "away_en": "England",
+        "away_ja": "イングランド",
+        "home_score": 2,
+        "away_score": 0,
+        "et": false,
+        "pk_score": null
+      }
+    ],
+    "final": {
+      "home_en": "France",
+      "home_ja": "フランス",
+      "away_en": "Croatia",
+      "away_ja": "クロアチア",
+      "home_score": 4,
+      "away_score": 2,
+      "et": false,
+      "pk_score": null
+    }
+  },
+  "japan_matches": [
+    {
+      "date": "2018-06-19",
+      "stage": "GS-1",
+      "home_en": "Japan",
+      "home_ja": "日本",
+      "away_en": "Colombia",
+      "away_ja": "コロンビア",
+      "home_score": 2,
+      "away_score": 1,
+      "japan_scorers": [
+        "香川真司 6'(PK)",
+        "大迫勇也 73'"
+      ]
+    },
+    {
+      "date": "2018-06-24",
+      "stage": "GS-2",
+      "home_en": "Senegal",
+      "home_ja": "セネガル",
+      "away_en": "Japan",
+      "away_ja": "日本",
+      "home_score": 2,
+      "away_score": 2,
+      "japan_scorers": [
+        "乾貴士 34'",
+        "本田圭佑 78'"
+      ]
+    },
+    {
+      "date": "2018-06-28",
+      "stage": "GS-3",
+      "home_en": "Japan",
+      "home_ja": "日本",
+      "away_en": "Poland",
+      "away_ja": "ポーランド",
+      "home_score": 0,
+      "away_score": 1,
+      "japan_scorers": []
+    },
+    {
+      "date": "2018-07-02",
+      "stage": "R16",
+      "home_en": "Belgium",
+      "home_ja": "ベルギー",
+      "away_en": "Japan",
+      "away_ja": "日本",
+      "home_score": 3,
+      "away_score": 2,
+      "japan_scorers": [
+        "原口元気 48'",
+        "乾貴士 52'"
+      ],
+      "note": "ロストフの悲劇。2-0から逆転負け"
+    }
+  ],
+  "_source": "Wikipedia",
+  "_updated": "2026-05-05"
+}
