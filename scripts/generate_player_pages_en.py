@@ -1106,7 +1106,10 @@ def build_player_page_en(player: dict, slug: str, scorer_stats: dict,
 
 <div class="player-hero">
   <div class="name-block">
-    <h2>🇯🇵 {esc(name_en)}</h2>
+    <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;">
+      <h2 style="margin:0;">🇯🇵 {esc(name_en)}</h2>
+      <button class="fav-btn" data-slug="{slug}" onclick="fjFavorites.toggle('{slug}'); refreshFavBtn(this);" title="Add to favorites" aria-label="Favorite"><span class="fav-star">☆</span></button>
+    </div>
     <p class="name-en">{esc(name_ja)}</p>
     <div class="player-meta">
       <span class="player-meta-tag">⚽ {esc(position_en)}</span>
@@ -1190,6 +1193,7 @@ function trackAffClick(el) {{
   }}
 }}
 </script>
+<script src="/favorites.js" defer></script>
 
 </body>
 </html>

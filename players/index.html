@@ -154,6 +154,10 @@
   <button class="filter-btn" data-filter="DF" onclick="filterPlayers('DF', this)">DF</button>
   <button class="filter-btn" data-filter="MF" onclick="filterPlayers('MF', this)">MF</button>
   <button class="filter-btn" data-filter="FW" onclick="filterPlayers('FW', this)">FW</button>
+  <label class="fav-filter-label" style="font-size:12px;font-weight:600;display:flex;align-items:center;gap:4px;cursor:pointer;margin-left:4px;">
+    <input type="checkbox" id="onlyFav" onchange="applyFavFilter()">
+    ⭐ お気に入りのみ
+  </label>
 </div>
 
 <div style="max-width: 900px; margin: 0 auto;">
@@ -162,7 +166,8 @@
         <h2 class="league-heading">プレミアリーグ</h2>
         <div class="player-grid">
           
-        <a class="player-card" href="/players/wataru-endo/"
+        <div class="player-card-fav-wrap" data-pos="DF" data-slug="wataru-endo">
+          <a class="player-card" href="/players/wataru-endo/"
            data-pos="DF">
           <span class="player-card-flag">🇯🇵</span>
           <div class="player-card-body">
@@ -174,7 +179,10 @@
             </div>
           </div>
         </a>
-        <a class="player-card" href="/players/kaoru-mitoma/"
+          <button class="fav-btn" data-slug="wataru-endo" onclick="fjFavorites.toggle('wataru-endo'); refreshFavBtn(this); applyFavFilter();" title="お気に入りに追加" aria-label="お気に入り"><span class="fav-star">☆</span></button>
+        </div>
+        <div class="player-card-fav-wrap" data-pos="MF" data-slug="kaoru-mitoma">
+          <a class="player-card" href="/players/kaoru-mitoma/"
            data-pos="MF">
           <span class="player-card-flag">🇯🇵</span>
           <div class="player-card-body">
@@ -186,7 +194,10 @@
             </div>
           </div>
         </a>
-        <a class="player-card" href="/players/daichi-kamada/"
+          <button class="fav-btn" data-slug="kaoru-mitoma" onclick="fjFavorites.toggle('kaoru-mitoma'); refreshFavBtn(this); applyFavFilter();" title="お気に入りに追加" aria-label="お気に入り"><span class="fav-star">☆</span></button>
+        </div>
+        <div class="player-card-fav-wrap" data-pos="MF" data-slug="daichi-kamada">
+          <a class="player-card" href="/players/daichi-kamada/"
            data-pos="MF">
           <span class="player-card-flag">🇯🇵</span>
           <div class="player-card-body">
@@ -198,7 +209,10 @@
             </div>
           </div>
         </a>
-        <a class="player-card" href="/players/ao-tanaka/"
+          <button class="fav-btn" data-slug="daichi-kamada" onclick="fjFavorites.toggle('daichi-kamada'); refreshFavBtn(this); applyFavFilter();" title="お気に入りに追加" aria-label="お気に入り"><span class="fav-star">☆</span></button>
+        </div>
+        <div class="player-card-fav-wrap" data-pos="MF" data-slug="ao-tanaka">
+          <a class="player-card" href="/players/ao-tanaka/"
            data-pos="MF">
           <span class="player-card-flag">🇯🇵</span>
           <div class="player-card-body">
@@ -210,7 +224,10 @@
             </div>
           </div>
         </a>
-        <a class="player-card" href="/players/kota-takai/"
+          <button class="fav-btn" data-slug="ao-tanaka" onclick="fjFavorites.toggle('ao-tanaka'); refreshFavBtn(this); applyFavFilter();" title="お気に入りに追加" aria-label="お気に入り"><span class="fav-star">☆</span></button>
+        </div>
+        <div class="player-card-fav-wrap" data-pos="DF" data-slug="kota-takai">
+          <a class="player-card" href="/players/kota-takai/"
            data-pos="DF">
           <span class="player-card-flag">🇯🇵</span>
           <div class="player-card-body">
@@ -222,13 +239,16 @@
             </div>
           </div>
         </a>
+          <button class="fav-btn" data-slug="kota-takai" onclick="fjFavorites.toggle('kota-takai'); refreshFavBtn(this); applyFavFilter();" title="お気に入りに追加" aria-label="お気に入り"><span class="fav-star">☆</span></button>
+        </div>
         </div>
       </section>
       <section class="league-section">
         <h2 class="league-heading">チャンピオンシップ</h2>
         <div class="player-grid">
           
-        <a class="player-card" href="/players/kuryu-matsuki/"
+        <div class="player-card-fav-wrap" data-pos="FW" data-slug="kuryu-matsuki">
+          <a class="player-card" href="/players/kuryu-matsuki/"
            data-pos="FW">
           <span class="player-card-flag">🇯🇵</span>
           <div class="player-card-body">
@@ -240,7 +260,10 @@
             </div>
           </div>
         </a>
-        <a class="player-card" href="/players/tatsuhiro-sakamoto/"
+          <button class="fav-btn" data-slug="kuryu-matsuki" onclick="fjFavorites.toggle('kuryu-matsuki'); refreshFavBtn(this); applyFavFilter();" title="お気に入りに追加" aria-label="お気に入り"><span class="fav-star">☆</span></button>
+        </div>
+        <div class="player-card-fav-wrap" data-pos="MF" data-slug="tatsuhiro-sakamoto">
+          <a class="player-card" href="/players/tatsuhiro-sakamoto/"
            data-pos="MF">
           <span class="player-card-flag">🇯🇵</span>
           <div class="player-card-body">
@@ -252,7 +275,10 @@
             </div>
           </div>
         </a>
-        <a class="player-card" href="/players/yu-hirakawa/"
+          <button class="fav-btn" data-slug="tatsuhiro-sakamoto" onclick="fjFavorites.toggle('tatsuhiro-sakamoto'); refreshFavBtn(this); applyFavFilter();" title="お気に入りに追加" aria-label="お気に入り"><span class="fav-star">☆</span></button>
+        </div>
+        <div class="player-card-fav-wrap" data-pos="FW" data-slug="yu-hirakawa">
+          <a class="player-card" href="/players/yu-hirakawa/"
            data-pos="FW">
           <span class="player-card-flag">🇯🇵</span>
           <div class="player-card-body">
@@ -264,7 +290,10 @@
             </div>
           </div>
         </a>
-        <a class="player-card" href="/players/yuki-ohashi/"
+          <button class="fav-btn" data-slug="yu-hirakawa" onclick="fjFavorites.toggle('yu-hirakawa'); refreshFavBtn(this); applyFavFilter();" title="お気に入りに追加" aria-label="お気に入り"><span class="fav-star">☆</span></button>
+        </div>
+        <div class="player-card-fav-wrap" data-pos="FW" data-slug="yuki-ohashi">
+          <a class="player-card" href="/players/yuki-ohashi/"
            data-pos="FW">
           <span class="player-card-flag">🇯🇵</span>
           <div class="player-card-body">
@@ -276,7 +305,10 @@
             </div>
           </div>
         </a>
-        <a class="player-card" href="/players/ryuya-morishita/"
+          <button class="fav-btn" data-slug="yuki-ohashi" onclick="fjFavorites.toggle('yuki-ohashi'); refreshFavBtn(this); applyFavFilter();" title="お気に入りに追加" aria-label="お気に入り"><span class="fav-star">☆</span></button>
+        </div>
+        <div class="player-card-fav-wrap" data-pos="FW" data-slug="ryuya-morishita">
+          <a class="player-card" href="/players/ryuya-morishita/"
            data-pos="FW">
           <span class="player-card-flag">🇯🇵</span>
           <div class="player-card-body">
@@ -288,7 +320,10 @@
             </div>
           </div>
         </a>
-        <a class="player-card" href="/players/koki-saito/"
+          <button class="fav-btn" data-slug="ryuya-morishita" onclick="fjFavorites.toggle('ryuya-morishita'); refreshFavBtn(this); applyFavFilter();" title="お気に入りに追加" aria-label="お気に入り"><span class="fav-star">☆</span></button>
+        </div>
+        <div class="player-card-fav-wrap" data-pos="MF" data-slug="koki-saito">
+          <a class="player-card" href="/players/koki-saito/"
            data-pos="MF">
           <span class="player-card-flag">🇯🇵</span>
           <div class="player-card-body">
@@ -300,7 +335,10 @@
             </div>
           </div>
         </a>
-        <a class="player-card" href="/players/itsuki-seko/"
+          <button class="fav-btn" data-slug="koki-saito" onclick="fjFavorites.toggle('koki-saito'); refreshFavBtn(this); applyFavFilter();" title="お気に入りに追加" aria-label="お気に入り"><span class="fav-star">☆</span></button>
+        </div>
+        <div class="player-card-fav-wrap" data-pos="MF" data-slug="itsuki-seko">
+          <a class="player-card" href="/players/itsuki-seko/"
            data-pos="MF">
           <span class="player-card-flag">🇯🇵</span>
           <div class="player-card-body">
@@ -312,7 +350,10 @@
             </div>
           </div>
         </a>
-        <a class="player-card" href="/players/tomoki-iwata/"
+          <button class="fav-btn" data-slug="itsuki-seko" onclick="fjFavorites.toggle('itsuki-seko'); refreshFavBtn(this); applyFavFilter();" title="お気に入りに追加" aria-label="お気に入り"><span class="fav-star">☆</span></button>
+        </div>
+        <div class="player-card-fav-wrap" data-pos="DF" data-slug="tomoki-iwata">
+          <a class="player-card" href="/players/tomoki-iwata/"
            data-pos="DF">
           <span class="player-card-flag">🇯🇵</span>
           <div class="player-card-body">
@@ -324,7 +365,10 @@
             </div>
           </div>
         </a>
-        <a class="player-card" href="/players/kyogo-furuhashi/"
+          <button class="fav-btn" data-slug="tomoki-iwata" onclick="fjFavorites.toggle('tomoki-iwata'); refreshFavBtn(this); applyFavFilter();" title="お気に入りに追加" aria-label="お気に入り"><span class="fav-star">☆</span></button>
+        </div>
+        <div class="player-card-fav-wrap" data-pos="FW" data-slug="kyogo-furuhashi">
+          <a class="player-card" href="/players/kyogo-furuhashi/"
            data-pos="FW">
           <span class="player-card-flag">🇯🇵</span>
           <div class="player-card-body">
@@ -336,13 +380,16 @@
             </div>
           </div>
         </a>
+          <button class="fav-btn" data-slug="kyogo-furuhashi" onclick="fjFavorites.toggle('kyogo-furuhashi'); refreshFavBtn(this); applyFavFilter();" title="お気に入りに追加" aria-label="お気に入り"><span class="fav-star">☆</span></button>
+        </div>
         </div>
       </section>
       <section class="league-section">
         <h2 class="league-heading">ブンデスリーガ</h2>
         <div class="player-grid">
           
-        <a class="player-card" href="/players/hiroki-ito/"
+        <div class="player-card-fav-wrap" data-pos="DF" data-slug="hiroki-ito">
+          <a class="player-card" href="/players/hiroki-ito/"
            data-pos="DF">
           <span class="player-card-flag">🇯🇵</span>
           <div class="player-card-body">
@@ -354,7 +401,10 @@
             </div>
           </div>
         </a>
-        <a class="player-card" href="/players/ritsu-doan/"
+          <button class="fav-btn" data-slug="hiroki-ito" onclick="fjFavorites.toggle('hiroki-ito'); refreshFavBtn(this); applyFavFilter();" title="お気に入りに追加" aria-label="お気に入り"><span class="fav-star">☆</span></button>
+        </div>
+        <div class="player-card-fav-wrap" data-pos="FW" data-slug="ritsu-doan">
+          <a class="player-card" href="/players/ritsu-doan/"
            data-pos="FW">
           <span class="player-card-flag">🇯🇵</span>
           <div class="player-card-body">
@@ -366,7 +416,10 @@
             </div>
           </div>
         </a>
-        <a class="player-card" href="/players/keita-kosugi/"
+          <button class="fav-btn" data-slug="ritsu-doan" onclick="fjFavorites.toggle('ritsu-doan'); refreshFavBtn(this); applyFavFilter();" title="お気に入りに追加" aria-label="お気に入り"><span class="fav-star">☆</span></button>
+        </div>
+        <div class="player-card-fav-wrap" data-pos="DF" data-slug="keita-kosugi">
+          <a class="player-card" href="/players/keita-kosugi/"
            data-pos="DF">
           <span class="player-card-flag">🇯🇵</span>
           <div class="player-card-body">
@@ -378,7 +431,10 @@
             </div>
           </div>
         </a>
-        <a class="player-card" href="/players/yoshito-kamishiro/"
+          <button class="fav-btn" data-slug="keita-kosugi" onclick="fjFavorites.toggle('keita-kosugi'); refreshFavBtn(this); applyFavFilter();" title="お気に入りに追加" aria-label="お気に入り"><span class="fav-star">☆</span></button>
+        </div>
+        <div class="player-card-fav-wrap" data-pos="FW" data-slug="yoshito-kamishiro">
+          <a class="player-card" href="/players/yoshito-kamishiro/"
            data-pos="FW">
           <span class="player-card-flag">🇯🇵</span>
           <div class="player-card-body">
@@ -390,7 +446,10 @@
             </div>
           </div>
         </a>
-        <a class="player-card" href="/players/yuito-suzuki/"
+          <button class="fav-btn" data-slug="yoshito-kamishiro" onclick="fjFavorites.toggle('yoshito-kamishiro'); refreshFavBtn(this); applyFavFilter();" title="お気に入りに追加" aria-label="お気に入り"><span class="fav-star">☆</span></button>
+        </div>
+        <div class="player-card-fav-wrap" data-pos="FW" data-slug="yuito-suzuki">
+          <a class="player-card" href="/players/yuito-suzuki/"
            data-pos="FW">
           <span class="player-card-flag">🇯🇵</span>
           <div class="player-card-body">
@@ -402,7 +461,10 @@
             </div>
           </div>
         </a>
-        <a class="player-card" href="/players/kaishu-sano/"
+          <button class="fav-btn" data-slug="yuito-suzuki" onclick="fjFavorites.toggle('yuito-suzuki'); refreshFavBtn(this); applyFavFilter();" title="お気に入りに追加" aria-label="お気に入り"><span class="fav-star">☆</span></button>
+        </div>
+        <div class="player-card-fav-wrap" data-pos="MF" data-slug="kaishu-sano">
+          <a class="player-card" href="/players/kaishu-sano/"
            data-pos="MF">
           <span class="player-card-flag">🇯🇵</span>
           <div class="player-card-body">
@@ -414,7 +476,10 @@
             </div>
           </div>
         </a>
-        <a class="player-card" href="/players/sota-kawasaki/"
+          <button class="fav-btn" data-slug="kaishu-sano" onclick="fjFavorites.toggle('kaishu-sano'); refreshFavBtn(this); applyFavFilter();" title="お気に入りに追加" aria-label="お気に入り"><span class="fav-star">☆</span></button>
+        </div>
+        <div class="player-card-fav-wrap" data-pos="MF" data-slug="sota-kawasaki">
+          <a class="player-card" href="/players/sota-kawasaki/"
            data-pos="MF">
           <span class="player-card-flag">🇯🇵</span>
           <div class="player-card-body">
@@ -426,7 +491,10 @@
             </div>
           </div>
         </a>
-        <a class="player-card" href="/players/yukinari-sugawara/"
+          <button class="fav-btn" data-slug="sota-kawasaki" onclick="fjFavorites.toggle('sota-kawasaki'); refreshFavBtn(this); applyFavFilter();" title="お気に入りに追加" aria-label="お気に入り"><span class="fav-star">☆</span></button>
+        </div>
+        <div class="player-card-fav-wrap" data-pos="DF" data-slug="yukinari-sugawara">
+          <a class="player-card" href="/players/yukinari-sugawara/"
            data-pos="DF">
           <span class="player-card-flag">🇯🇵</span>
           <div class="player-card-body">
@@ -438,7 +506,10 @@
             </div>
           </div>
         </a>
-        <a class="player-card" href="/players/mio-backhaus/"
+          <button class="fav-btn" data-slug="yukinari-sugawara" onclick="fjFavorites.toggle('yukinari-sugawara'); refreshFavBtn(this); applyFavFilter();" title="お気に入りに追加" aria-label="お気に入り"><span class="fav-star">☆</span></button>
+        </div>
+        <div class="player-card-fav-wrap" data-pos="GK" data-slug="mio-backhaus">
+          <a class="player-card" href="/players/mio-backhaus/"
            data-pos="GK">
           <span class="player-card-flag">🇯🇵</span>
           <div class="player-card-body">
@@ -450,7 +521,10 @@
             </div>
           </div>
         </a>
-        <a class="player-card" href="/players/shuto-machino/"
+          <button class="fav-btn" data-slug="mio-backhaus" onclick="fjFavorites.toggle('mio-backhaus'); refreshFavBtn(this); applyFavFilter();" title="お気に入りに追加" aria-label="お気に入り"><span class="fav-star">☆</span></button>
+        </div>
+        <div class="player-card-fav-wrap" data-pos="FW" data-slug="shuto-machino">
+          <a class="player-card" href="/players/shuto-machino/"
            data-pos="FW">
           <span class="player-card-flag">🇯🇵</span>
           <div class="player-card-body">
@@ -462,7 +536,10 @@
             </div>
           </div>
         </a>
-        <a class="player-card" href="/players/kota-takai-2/"
+          <button class="fav-btn" data-slug="shuto-machino" onclick="fjFavorites.toggle('shuto-machino'); refreshFavBtn(this); applyFavFilter();" title="お気に入りに追加" aria-label="お気に入り"><span class="fav-star">☆</span></button>
+        </div>
+        <div class="player-card-fav-wrap" data-pos="DF" data-slug="kota-takai-2">
+          <a class="player-card" href="/players/kota-takai-2/"
            data-pos="DF">
           <span class="player-card-flag">🇯🇵</span>
           <div class="player-card-body">
@@ -474,7 +551,10 @@
             </div>
           </div>
         </a>
-        <a class="player-card" href="/players/kento-shiogai/"
+          <button class="fav-btn" data-slug="kota-takai-2" onclick="fjFavorites.toggle('kota-takai-2'); refreshFavBtn(this); applyFavFilter();" title="お気に入りに追加" aria-label="お気に入り"><span class="fav-star">☆</span></button>
+        </div>
+        <div class="player-card-fav-wrap" data-pos="FW" data-slug="kento-shiogai">
+          <a class="player-card" href="/players/kento-shiogai/"
            data-pos="FW">
           <span class="player-card-flag">🇯🇵</span>
           <div class="player-card-body">
@@ -486,7 +566,10 @@
             </div>
           </div>
         </a>
-        <a class="player-card" href="/players/ryota-onoda/"
+          <button class="fav-btn" data-slug="kento-shiogai" onclick="fjFavorites.toggle('kento-shiogai'); refreshFavBtn(this); applyFavFilter();" title="お気に入りに追加" aria-label="お気に入り"><span class="fav-star">☆</span></button>
+        </div>
+        <div class="player-card-fav-wrap" data-pos="FW" data-slug="ryota-onoda">
+          <a class="player-card" href="/players/ryota-onoda/"
            data-pos="FW">
           <span class="player-card-flag">🇯🇵</span>
           <div class="player-card-body">
@@ -498,7 +581,10 @@
             </div>
           </div>
         </a>
-        <a class="player-card" href="/players/joel-chima-fujita/"
+          <button class="fav-btn" data-slug="ryota-onoda" onclick="fjFavorites.toggle('ryota-onoda'); refreshFavBtn(this); applyFavFilter();" title="お気に入りに追加" aria-label="お気に入り"><span class="fav-star">☆</span></button>
+        </div>
+        <div class="player-card-fav-wrap" data-pos="MF" data-slug="joel-chima-fujita">
+          <a class="player-card" href="/players/joel-chima-fujita/"
            data-pos="MF">
           <span class="player-card-flag">🇯🇵</span>
           <div class="player-card-body">
@@ -510,7 +596,10 @@
             </div>
           </div>
         </a>
-        <a class="player-card" href="/players/tomoya-ando/"
+          <button class="fav-btn" data-slug="joel-chima-fujita" onclick="fjFavorites.toggle('joel-chima-fujita'); refreshFavBtn(this); applyFavFilter();" title="お気に入りに追加" aria-label="お気に入り"><span class="fav-star">☆</span></button>
+        </div>
+        <div class="player-card-fav-wrap" data-pos="DF" data-slug="tomoya-ando">
+          <a class="player-card" href="/players/tomoya-ando/"
            data-pos="DF">
           <span class="player-card-flag">🇯🇵</span>
           <div class="player-card-body">
@@ -522,7 +611,10 @@
             </div>
           </div>
         </a>
-        <a class="player-card" href="/players/daichi-hara/"
+          <button class="fav-btn" data-slug="tomoya-ando" onclick="fjFavorites.toggle('tomoya-ando'); refreshFavBtn(this); applyFavFilter();" title="お気に入りに追加" aria-label="お気に入り"><span class="fav-star">☆</span></button>
+        </div>
+        <div class="player-card-fav-wrap" data-pos="FW" data-slug="daichi-hara">
+          <a class="player-card" href="/players/daichi-hara/"
            data-pos="FW">
           <span class="player-card-flag">🇯🇵</span>
           <div class="player-card-body">
@@ -534,7 +626,10 @@
             </div>
           </div>
         </a>
-        <a class="player-card" href="/players/hiroki-machida/"
+          <button class="fav-btn" data-slug="daichi-hara" onclick="fjFavorites.toggle('daichi-hara'); refreshFavBtn(this); applyFavFilter();" title="お気に入りに追加" aria-label="お気に入り"><span class="fav-star">☆</span></button>
+        </div>
+        <div class="player-card-fav-wrap" data-pos="DF" data-slug="hiroki-machida">
+          <a class="player-card" href="/players/hiroki-machida/"
            data-pos="DF">
           <span class="player-card-flag">🇯🇵</span>
           <div class="player-card-body">
@@ -546,13 +641,16 @@
             </div>
           </div>
         </a>
+          <button class="fav-btn" data-slug="hiroki-machida" onclick="fjFavorites.toggle('hiroki-machida'); refreshFavBtn(this); applyFavFilter();" title="お気に入りに追加" aria-label="お気に入り"><span class="fav-star">☆</span></button>
+        </div>
         </div>
       </section>
       <section class="league-section">
         <h2 class="league-heading">ラ・リーガ</h2>
         <div class="player-grid">
           
-        <a class="player-card" href="/players/takefusa-kubo/"
+        <div class="player-card-fav-wrap" data-pos="FW" data-slug="takefusa-kubo">
+          <a class="player-card" href="/players/takefusa-kubo/"
            data-pos="FW">
           <span class="player-card-flag">🇯🇵</span>
           <div class="player-card-body">
@@ -564,7 +662,10 @@
             </div>
           </div>
         </a>
-        <a class="player-card" href="/players/takuma-asano/"
+          <button class="fav-btn" data-slug="takefusa-kubo" onclick="fjFavorites.toggle('takefusa-kubo'); refreshFavBtn(this); applyFavFilter();" title="お気に入りに追加" aria-label="お気に入り"><span class="fav-star">☆</span></button>
+        </div>
+        <div class="player-card-fav-wrap" data-pos="FW" data-slug="takuma-asano">
+          <a class="player-card" href="/players/takuma-asano/"
            data-pos="FW">
           <span class="player-card-flag">🇯🇵</span>
           <div class="player-card-body">
@@ -576,13 +677,16 @@
             </div>
           </div>
         </a>
+          <button class="fav-btn" data-slug="takuma-asano" onclick="fjFavorites.toggle('takuma-asano'); refreshFavBtn(this); applyFavFilter();" title="お気に入りに追加" aria-label="お気に入り"><span class="fav-star">☆</span></button>
+        </div>
         </div>
       </section>
       <section class="league-section">
         <h2 class="league-heading">セリエA</h2>
         <div class="player-grid">
           
-        <a class="player-card" href="/players/zion-suzuki/"
+        <div class="player-card-fav-wrap" data-pos="GK" data-slug="zion-suzuki">
+          <a class="player-card" href="/players/zion-suzuki/"
            data-pos="GK">
           <span class="player-card-flag">🇯🇵</span>
           <div class="player-card-body">
@@ -594,13 +698,16 @@
             </div>
           </div>
         </a>
+          <button class="fav-btn" data-slug="zion-suzuki" onclick="fjFavorites.toggle('zion-suzuki'); refreshFavBtn(this); applyFavFilter();" title="お気に入りに追加" aria-label="お気に入り"><span class="fav-star">☆</span></button>
+        </div>
         </div>
       </section>
       <section class="league-section">
         <h2 class="league-heading">リーグ・アン</h2>
         <div class="player-grid">
           
-        <a class="player-card" href="/players/takumi-minamino/"
+        <div class="player-card-fav-wrap" data-pos="FW" data-slug="takumi-minamino">
+          <a class="player-card" href="/players/takumi-minamino/"
            data-pos="FW">
           <span class="player-card-flag">🇯🇵</span>
           <div class="player-card-body">
@@ -612,7 +719,10 @@
             </div>
           </div>
         </a>
-        <a class="player-card" href="/players/ayumu-seko/"
+          <button class="fav-btn" data-slug="takumi-minamino" onclick="fjFavorites.toggle('takumi-minamino'); refreshFavBtn(this); applyFavFilter();" title="お気に入りに追加" aria-label="お気に入り"><span class="fav-star">☆</span></button>
+        </div>
+        <div class="player-card-fav-wrap" data-pos="DF" data-slug="ayumu-seko">
+          <a class="player-card" href="/players/ayumu-seko/"
            data-pos="DF">
           <span class="player-card-flag">🇯🇵</span>
           <div class="player-card-body">
@@ -624,13 +734,16 @@
             </div>
           </div>
         </a>
+          <button class="fav-btn" data-slug="ayumu-seko" onclick="fjFavorites.toggle('ayumu-seko'); refreshFavBtn(this); applyFavFilter();" title="お気に入りに追加" aria-label="お気に入り"><span class="fav-star">☆</span></button>
+        </div>
         </div>
       </section>
       <section class="league-section">
         <h2 class="league-heading">リーグ・ドゥ</h2>
         <div class="player-grid">
           
-        <a class="player-card" href="/players/keito-nakamura/"
+        <div class="player-card-fav-wrap" data-pos="MF" data-slug="keito-nakamura">
+          <a class="player-card" href="/players/keito-nakamura/"
            data-pos="MF">
           <span class="player-card-flag">🇯🇵</span>
           <div class="player-card-body">
@@ -642,7 +755,10 @@
             </div>
           </div>
         </a>
-        <a class="player-card" href="/players/daiki-sekine/"
+          <button class="fav-btn" data-slug="keito-nakamura" onclick="fjFavorites.toggle('keito-nakamura'); refreshFavBtn(this); applyFavFilter();" title="お気に入りに追加" aria-label="お気に入り"><span class="fav-star">☆</span></button>
+        </div>
+        <div class="player-card-fav-wrap" data-pos="DF" data-slug="daiki-sekine">
+          <a class="player-card" href="/players/daiki-sekine/"
            data-pos="DF">
           <span class="player-card-flag">🇯🇵</span>
           <div class="player-card-body">
@@ -654,13 +770,16 @@
             </div>
           </div>
         </a>
+          <button class="fav-btn" data-slug="daiki-sekine" onclick="fjFavorites.toggle('daiki-sekine'); refreshFavBtn(this); applyFavFilter();" title="お気に入りに追加" aria-label="お気に入り"><span class="fav-star">☆</span></button>
+        </div>
         </div>
       </section>
       <section class="league-section">
         <h2 class="league-heading">エールディビジ</h2>
         <div class="player-grid">
           
-        <a class="player-card" href="/players/ko-itakura/"
+        <div class="player-card-fav-wrap" data-pos="DF" data-slug="ko-itakura">
+          <a class="player-card" href="/players/ko-itakura/"
            data-pos="DF">
           <span class="player-card-flag">🇯🇵</span>
           <div class="player-card-body">
@@ -672,7 +791,10 @@
             </div>
           </div>
         </a>
-        <a class="player-card" href="/players/takehiro-tomiyasu/"
+          <button class="fav-btn" data-slug="ko-itakura" onclick="fjFavorites.toggle('ko-itakura'); refreshFavBtn(this); applyFavFilter();" title="お気に入りに追加" aria-label="お気に入り"><span class="fav-star">☆</span></button>
+        </div>
+        <div class="player-card-fav-wrap" data-pos="DF" data-slug="takehiro-tomiyasu">
+          <a class="player-card" href="/players/takehiro-tomiyasu/"
            data-pos="DF">
           <span class="player-card-flag">🇯🇵</span>
           <div class="player-card-body">
@@ -684,7 +806,10 @@
             </div>
           </div>
         </a>
-        <a class="player-card" href="/players/ayase-ueda/"
+          <button class="fav-btn" data-slug="takehiro-tomiyasu" onclick="fjFavorites.toggle('takehiro-tomiyasu'); refreshFavBtn(this); applyFavFilter();" title="お気に入りに追加" aria-label="お気に入り"><span class="fav-star">☆</span></button>
+        </div>
+        <div class="player-card-fav-wrap" data-pos="FW" data-slug="ayase-ueda">
+          <a class="player-card" href="/players/ayase-ueda/"
            data-pos="FW">
           <span class="player-card-flag">🇯🇵</span>
           <div class="player-card-body">
@@ -696,7 +821,10 @@
             </div>
           </div>
         </a>
-        <a class="player-card" href="/players/ko-watanabe/"
+          <button class="fav-btn" data-slug="ayase-ueda" onclick="fjFavorites.toggle('ayase-ueda'); refreshFavBtn(this); applyFavFilter();" title="お気に入りに追加" aria-label="お気に入り"><span class="fav-star">☆</span></button>
+        </div>
+        <div class="player-card-fav-wrap" data-pos="DF" data-slug="ko-watanabe">
+          <a class="player-card" href="/players/ko-watanabe/"
            data-pos="DF">
           <span class="player-card-flag">🇯🇵</span>
           <div class="player-card-body">
@@ -708,7 +836,10 @@
             </div>
           </div>
         </a>
-        <a class="player-card" href="/players/seiya-maikuma/"
+          <button class="fav-btn" data-slug="ko-watanabe" onclick="fjFavorites.toggle('ko-watanabe'); refreshFavBtn(this); applyFavFilter();" title="お気に入りに追加" aria-label="お気に入り"><span class="fav-star">☆</span></button>
+        </div>
+        <div class="player-card-fav-wrap" data-pos="DF" data-slug="seiya-maikuma">
+          <a class="player-card" href="/players/seiya-maikuma/"
            data-pos="DF">
           <span class="player-card-flag">🇯🇵</span>
           <div class="player-card-body">
@@ -720,7 +851,10 @@
             </div>
           </div>
         </a>
-        <a class="player-card" href="/players/rion-ichihara/"
+          <button class="fav-btn" data-slug="seiya-maikuma" onclick="fjFavorites.toggle('seiya-maikuma'); refreshFavBtn(this); applyFavFilter();" title="お気に入りに追加" aria-label="お気に入り"><span class="fav-star">☆</span></button>
+        </div>
+        <div class="player-card-fav-wrap" data-pos="DF" data-slug="rion-ichihara">
+          <a class="player-card" href="/players/rion-ichihara/"
            data-pos="DF">
           <span class="player-card-flag">🇯🇵</span>
           <div class="player-card-body">
@@ -732,7 +866,10 @@
             </div>
           </div>
         </a>
-        <a class="player-card" href="/players/koki-ogawa/"
+          <button class="fav-btn" data-slug="rion-ichihara" onclick="fjFavorites.toggle('rion-ichihara'); refreshFavBtn(this); applyFavFilter();" title="お気に入りに追加" aria-label="お気に入り"><span class="fav-star">☆</span></button>
+        </div>
+        <div class="player-card-fav-wrap" data-pos="FW" data-slug="koki-ogawa">
+          <a class="player-card" href="/players/koki-ogawa/"
            data-pos="FW">
           <span class="player-card-flag">🇯🇵</span>
           <div class="player-card-body">
@@ -744,7 +881,10 @@
             </div>
           </div>
         </a>
-        <a class="player-card" href="/players/kodai-sano/"
+          <button class="fav-btn" data-slug="koki-ogawa" onclick="fjFavorites.toggle('koki-ogawa'); refreshFavBtn(this); applyFavFilter();" title="お気に入りに追加" aria-label="お気に入り"><span class="fav-star">☆</span></button>
+        </div>
+        <div class="player-card-fav-wrap" data-pos="MF" data-slug="kodai-sano">
+          <a class="player-card" href="/players/kodai-sano/"
            data-pos="MF">
           <span class="player-card-flag">🇯🇵</span>
           <div class="player-card-body">
@@ -756,7 +896,10 @@
             </div>
           </div>
         </a>
-        <a class="player-card" href="/players/shunsuke-mito/"
+          <button class="fav-btn" data-slug="kodai-sano" onclick="fjFavorites.toggle('kodai-sano'); refreshFavBtn(this); applyFavFilter();" title="お気に入りに追加" aria-label="お気に入り"><span class="fav-star">☆</span></button>
+        </div>
+        <div class="player-card-fav-wrap" data-pos="FW" data-slug="shunsuke-mito">
+          <a class="player-card" href="/players/shunsuke-mito/"
            data-pos="FW">
           <span class="player-card-flag">🇯🇵</span>
           <div class="player-card-body">
@@ -768,13 +911,16 @@
             </div>
           </div>
         </a>
+          <button class="fav-btn" data-slug="shunsuke-mito" onclick="fjFavorites.toggle('shunsuke-mito'); refreshFavBtn(this); applyFavFilter();" title="お気に入りに追加" aria-label="お気に入り"><span class="fav-star">☆</span></button>
+        </div>
         </div>
       </section>
       <section class="league-section">
         <h2 class="league-heading">プリメイラ・リーガ</h2>
         <div class="player-grid">
           
-        <a class="player-card" href="/players/kanya-fujimoto/"
+        <div class="player-card-fav-wrap" data-pos="MF" data-slug="kanya-fujimoto">
+          <a class="player-card" href="/players/kanya-fujimoto/"
            data-pos="MF">
           <span class="player-card-flag">🇯🇵</span>
           <div class="player-card-body">
@@ -786,7 +932,10 @@
             </div>
           </div>
         </a>
-        <a class="player-card" href="/players/hidemasa-morita/"
+          <button class="fav-btn" data-slug="kanya-fujimoto" onclick="fjFavorites.toggle('kanya-fujimoto'); refreshFavBtn(this); applyFavFilter();" title="お気に入りに追加" aria-label="お気に入り"><span class="fav-star">☆</span></button>
+        </div>
+        <div class="player-card-fav-wrap" data-pos="MF" data-slug="hidemasa-morita">
+          <a class="player-card" href="/players/hidemasa-morita/"
            data-pos="MF">
           <span class="player-card-flag">🇯🇵</span>
           <div class="player-card-body">
@@ -798,13 +947,16 @@
             </div>
           </div>
         </a>
+          <button class="fav-btn" data-slug="hidemasa-morita" onclick="fjFavorites.toggle('hidemasa-morita'); refreshFavBtn(this); applyFavFilter();" title="お気に入りに追加" aria-label="お気に入り"><span class="fav-star">☆</span></button>
+        </div>
         </div>
       </section>
       <section class="league-section">
         <h2 class="league-heading">ジュピラー・プロ・リーグ</h2>
         <div class="player-grid">
           
-        <a class="player-card" href="/players/junya-ito/"
+        <div class="player-card-fav-wrap" data-pos="FW" data-slug="junya-ito">
+          <a class="player-card" href="/players/junya-ito/"
            data-pos="FW">
           <span class="player-card-flag">🇯🇵</span>
           <div class="player-card-body">
@@ -816,7 +968,10 @@
             </div>
           </div>
         </a>
-        <a class="player-card" href="/players/ayumu-yokoyama/"
+          <button class="fav-btn" data-slug="junya-ito" onclick="fjFavorites.toggle('junya-ito'); refreshFavBtn(this); applyFavFilter();" title="お気に入りに追加" aria-label="お気に入り"><span class="fav-star">☆</span></button>
+        </div>
+        <div class="player-card-fav-wrap" data-pos="MF" data-slug="ayumu-yokoyama">
+          <a class="player-card" href="/players/ayumu-yokoyama/"
            data-pos="MF">
           <span class="player-card-flag">🇯🇵</span>
           <div class="player-card-body">
@@ -828,7 +983,10 @@
             </div>
           </div>
         </a>
-        <a class="player-card" href="/players/yuto-tsunashima/"
+          <button class="fav-btn" data-slug="ayumu-yokoyama" onclick="fjFavorites.toggle('ayumu-yokoyama'); refreshFavBtn(this); applyFavFilter();" title="お気に入りに追加" aria-label="お気に入り"><span class="fav-star">☆</span></button>
+        </div>
+        <div class="player-card-fav-wrap" data-pos="MF" data-slug="yuto-tsunashima">
+          <a class="player-card" href="/players/yuto-tsunashima/"
            data-pos="MF">
           <span class="player-card-flag">🇯🇵</span>
           <div class="player-card-body">
@@ -840,7 +998,10 @@
             </div>
           </div>
         </a>
-        <a class="player-card" href="/players/taishi-brandon-nozawa/"
+          <button class="fav-btn" data-slug="yuto-tsunashima" onclick="fjFavorites.toggle('yuto-tsunashima'); refreshFavBtn(this); applyFavFilter();" title="お気に入りに追加" aria-label="お気に入り"><span class="fav-star">☆</span></button>
+        </div>
+        <div class="player-card-fav-wrap" data-pos="GK" data-slug="taishi-brandon-nozawa">
+          <a class="player-card" href="/players/taishi-brandon-nozawa/"
            data-pos="GK">
           <span class="player-card-flag">🇯🇵</span>
           <div class="player-card-body">
@@ -852,7 +1013,10 @@
             </div>
           </div>
         </a>
-        <a class="player-card" href="/players/atsuki-ito/"
+          <button class="fav-btn" data-slug="taishi-brandon-nozawa" onclick="fjFavorites.toggle('taishi-brandon-nozawa'); refreshFavBtn(this); applyFavFilter();" title="お気に入りに追加" aria-label="お気に入り"><span class="fav-star">☆</span></button>
+        </div>
+        <div class="player-card-fav-wrap" data-pos="MF" data-slug="atsuki-ito">
+          <a class="player-card" href="/players/atsuki-ito/"
            data-pos="MF">
           <span class="player-card-flag">🇯🇵</span>
           <div class="player-card-body">
@@ -864,7 +1028,10 @@
             </div>
           </div>
         </a>
-        <a class="player-card" href="/players/daiki-hashioka/"
+          <button class="fav-btn" data-slug="atsuki-ito" onclick="fjFavorites.toggle('atsuki-ito'); refreshFavBtn(this); applyFavFilter();" title="お気に入りに追加" aria-label="お気に入り"><span class="fav-star">☆</span></button>
+        </div>
+        <div class="player-card-fav-wrap" data-pos="DF" data-slug="daiki-hashioka">
+          <a class="player-card" href="/players/daiki-hashioka/"
            data-pos="DF">
           <span class="player-card-flag">🇯🇵</span>
           <div class="player-card-body">
@@ -876,7 +1043,10 @@
             </div>
           </div>
         </a>
-        <a class="player-card" href="/players/issei-sakamoto/"
+          <button class="fav-btn" data-slug="daiki-hashioka" onclick="fjFavorites.toggle('daiki-hashioka'); refreshFavBtn(this); applyFavFilter();" title="お気に入りに追加" aria-label="お気に入り"><span class="fav-star">☆</span></button>
+        </div>
+        <div class="player-card-fav-wrap" data-pos="FW" data-slug="issei-sakamoto">
+          <a class="player-card" href="/players/issei-sakamoto/"
            data-pos="FW">
           <span class="player-card-flag">🇯🇵</span>
           <div class="player-card-body">
@@ -888,7 +1058,10 @@
             </div>
           </div>
         </a>
-        <a class="player-card" href="/players/seiji-kimura/"
+          <button class="fav-btn" data-slug="issei-sakamoto" onclick="fjFavorites.toggle('issei-sakamoto'); refreshFavBtn(this); applyFavFilter();" title="お気に入りに追加" aria-label="お気に入り"><span class="fav-star">☆</span></button>
+        </div>
+        <div class="player-card-fav-wrap" data-pos="DF" data-slug="seiji-kimura">
+          <a class="player-card" href="/players/seiji-kimura/"
            data-pos="DF">
           <span class="player-card-flag">🇯🇵</span>
           <div class="player-card-body">
@@ -900,7 +1073,10 @@
             </div>
           </div>
         </a>
-        <a class="player-card" href="/players/shunsuke-saito/"
+          <button class="fav-btn" data-slug="seiji-kimura" onclick="fjFavorites.toggle('seiji-kimura'); refreshFavBtn(this); applyFavFilter();" title="お気に入りに追加" aria-label="お気に入り"><span class="fav-star">☆</span></button>
+        </div>
+        <div class="player-card-fav-wrap" data-pos="MF" data-slug="shunsuke-saito">
+          <a class="player-card" href="/players/shunsuke-saito/"
            data-pos="MF">
           <span class="player-card-flag">🇯🇵</span>
           <div class="player-card-body">
@@ -912,7 +1088,10 @@
             </div>
           </div>
         </a>
-        <a class="player-card" href="/players/takahiro-akimoto/"
+          <button class="fav-btn" data-slug="shunsuke-saito" onclick="fjFavorites.toggle('shunsuke-saito'); refreshFavBtn(this); applyFavFilter();" title="お気に入りに追加" aria-label="お気に入り"><span class="fav-star">☆</span></button>
+        </div>
+        <div class="player-card-fav-wrap" data-pos="DF" data-slug="takahiro-akimoto">
+          <a class="player-card" href="/players/takahiro-akimoto/"
            data-pos="DF">
           <span class="player-card-flag">🇯🇵</span>
           <div class="player-card-body">
@@ -924,7 +1103,10 @@
             </div>
           </div>
         </a>
-        <a class="player-card" href="/players/takuma-ominami/"
+          <button class="fav-btn" data-slug="takahiro-akimoto" onclick="fjFavorites.toggle('takahiro-akimoto'); refreshFavBtn(this); applyFavFilter();" title="お気に入りに追加" aria-label="お気に入り"><span class="fav-star">☆</span></button>
+        </div>
+        <div class="player-card-fav-wrap" data-pos="DF" data-slug="takuma-ominami">
+          <a class="player-card" href="/players/takuma-ominami/"
            data-pos="DF">
           <span class="player-card-flag">🇯🇵</span>
           <div class="player-card-body">
@@ -936,7 +1118,10 @@
             </div>
           </div>
         </a>
-        <a class="player-card" href="/players/leo-kokubo/"
+          <button class="fav-btn" data-slug="takuma-ominami" onclick="fjFavorites.toggle('takuma-ominami'); refreshFavBtn(this); applyFavFilter();" title="お気に入りに追加" aria-label="お気に入り"><span class="fav-star">☆</span></button>
+        </div>
+        <div class="player-card-fav-wrap" data-pos="GK" data-slug="leo-kokubo">
+          <a class="player-card" href="/players/leo-kokubo/"
            data-pos="GK">
           <span class="player-card-flag">🇯🇵</span>
           <div class="player-card-body">
@@ -948,7 +1133,10 @@
             </div>
           </div>
         </a>
-        <a class="player-card" href="/players/shogo-taniguchi/"
+          <button class="fav-btn" data-slug="leo-kokubo" onclick="fjFavorites.toggle('leo-kokubo'); refreshFavBtn(this); applyFavFilter();" title="お気に入りに追加" aria-label="お気に入り"><span class="fav-star">☆</span></button>
+        </div>
+        <div class="player-card-fav-wrap" data-pos="DF" data-slug="shogo-taniguchi">
+          <a class="player-card" href="/players/shogo-taniguchi/"
            data-pos="DF">
           <span class="player-card-flag">🇯🇵</span>
           <div class="player-card-body">
@@ -960,7 +1148,10 @@
             </div>
           </div>
         </a>
-        <a class="player-card" href="/players/riihito-yamamoto/"
+          <button class="fav-btn" data-slug="shogo-taniguchi" onclick="fjFavorites.toggle('shogo-taniguchi'); refreshFavBtn(this); applyFavFilter();" title="お気に入りに追加" aria-label="お気に入り"><span class="fav-star">☆</span></button>
+        </div>
+        <div class="player-card-fav-wrap" data-pos="MF" data-slug="riihito-yamamoto">
+          <a class="player-card" href="/players/riihito-yamamoto/"
            data-pos="MF">
           <span class="player-card-flag">🇯🇵</span>
           <div class="player-card-body">
@@ -972,7 +1163,10 @@
             </div>
           </div>
         </a>
-        <a class="player-card" href="/players/ryotaro-ito/"
+          <button class="fav-btn" data-slug="riihito-yamamoto" onclick="fjFavorites.toggle('riihito-yamamoto'); refreshFavBtn(this); applyFavFilter();" title="お気に入りに追加" aria-label="お気に入り"><span class="fav-star">☆</span></button>
+        </div>
+        <div class="player-card-fav-wrap" data-pos="FW" data-slug="ryotaro-ito">
+          <a class="player-card" href="/players/ryotaro-ito/"
            data-pos="FW">
           <span class="player-card-flag">🇯🇵</span>
           <div class="player-card-body">
@@ -984,7 +1178,10 @@
             </div>
           </div>
         </a>
-        <a class="player-card" href="/players/taiga-hata/"
+          <button class="fav-btn" data-slug="ryotaro-ito" onclick="fjFavorites.toggle('ryotaro-ito'); refreshFavBtn(this); applyFavFilter();" title="お気に入りに追加" aria-label="お気に入り"><span class="fav-star">☆</span></button>
+        </div>
+        <div class="player-card-fav-wrap" data-pos="DF" data-slug="taiga-hata">
+          <a class="player-card" href="/players/taiga-hata/"
            data-pos="DF">
           <span class="player-card-flag">🇯🇵</span>
           <div class="player-card-body">
@@ -996,7 +1193,10 @@
             </div>
           </div>
         </a>
-        <a class="player-card" href="/players/keisuke-goto/"
+          <button class="fav-btn" data-slug="taiga-hata" onclick="fjFavorites.toggle('taiga-hata'); refreshFavBtn(this); applyFavFilter();" title="お気に入りに追加" aria-label="お気に入り"><span class="fav-star">☆</span></button>
+        </div>
+        <div class="player-card-fav-wrap" data-pos="FW" data-slug="keisuke-goto">
+          <a class="player-card" href="/players/keisuke-goto/"
            data-pos="FW">
           <span class="player-card-flag">🇯🇵</span>
           <div class="player-card-body">
@@ -1008,7 +1208,10 @@
             </div>
           </div>
         </a>
-        <a class="player-card" href="/players/kaito-matsuzawa/"
+          <button class="fav-btn" data-slug="keisuke-goto" onclick="fjFavorites.toggle('keisuke-goto'); refreshFavBtn(this); applyFavFilter();" title="お気に入りに追加" aria-label="お気に入り"><span class="fav-star">☆</span></button>
+        </div>
+        <div class="player-card-fav-wrap" data-pos="FW" data-slug="kaito-matsuzawa">
+          <a class="player-card" href="/players/kaito-matsuzawa/"
            data-pos="FW">
           <span class="player-card-flag">🇯🇵</span>
           <div class="player-card-body">
@@ -1020,7 +1223,10 @@
             </div>
           </div>
         </a>
-        <a class="player-card" href="/players/shion-shinkawa/"
+          <button class="fav-btn" data-slug="kaito-matsuzawa" onclick="fjFavorites.toggle('kaito-matsuzawa'); refreshFavBtn(this); applyFavFilter();" title="お気に入りに追加" aria-label="お気に入り"><span class="fav-star">☆</span></button>
+        </div>
+        <div class="player-card-fav-wrap" data-pos="FW" data-slug="shion-shinkawa">
+          <a class="player-card" href="/players/shion-shinkawa/"
            data-pos="FW">
           <span class="player-card-flag">🇯🇵</span>
           <div class="player-card-body">
@@ -1032,6 +1238,8 @@
             </div>
           </div>
         </a>
+          <button class="fav-btn" data-slug="shion-shinkawa" onclick="fjFavorites.toggle('shion-shinkawa'); refreshFavBtn(this); applyFavFilter();" title="お気に入りに追加" aria-label="お気に入り"><span class="fav-star">☆</span></button>
+        </div>
         </div>
       </section>
 
@@ -1046,26 +1254,36 @@
 </div>
 
 <script>
+var _currentPosFilter = 'all';
+
 function filterPlayers(pos, btn) {
-  // ボタン状態更新
+  _currentPosFilter = pos;
   document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
   btn.classList.add('active');
+  applyFavFilter();
+}
 
-  // カード表示切替
-  document.querySelectorAll('.player-card').forEach(card => {
-    if (pos === 'all' || card.dataset.pos === pos) {
-      card.classList.remove('hidden');
-    } else {
-      card.classList.add('hidden');
-    }
+function applyFavFilter() {
+  var onlyFav = document.getElementById('onlyFav') && document.getElementById('onlyFav').checked;
+  var favs = (window.fjFavorites ? window.fjFavorites.list() : []);
+
+  document.querySelectorAll('.player-card-fav-wrap').forEach(function(wrap) {
+    var pos = wrap.dataset.pos;
+    var slug = wrap.dataset.slug;
+    var posOk = (_currentPosFilter === 'all' || pos === _currentPosFilter);
+    var favOk = !onlyFav || favs.includes(slug);
+    wrap.classList.toggle('hidden', !(posOk && favOk));
   });
 
-  // 全カード非表示のセクションを隠す
-  document.querySelectorAll('.league-section').forEach(sec => {
-    const visible = [...sec.querySelectorAll('.player-card')].some(c => !c.classList.contains('hidden'));
+  document.querySelectorAll('.league-section').forEach(function(sec) {
+    var visible = [...sec.querySelectorAll('.player-card-fav-wrap')].some(function(c) { return !c.classList.contains('hidden'); });
     sec.classList.toggle('hidden', !visible);
   });
 }
+
+document.addEventListener('fj-favorites-changed', function() {
+  applyFavFilter();
+});
 </script>
 <script>
 function trackAffClick(el) {
@@ -1080,5 +1298,6 @@ function trackAffClick(el) {
 }
 </script>
 
+<script src="/favorites.js" defer></script>
 </body>
 </html>

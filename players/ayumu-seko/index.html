@@ -429,7 +429,7 @@
 
 <div class="player-hero">
   <div class="name-block">
-    <h2>🇯🇵 瀬古歩夢</h2>
+    <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;"><h2 style="margin:0;">🇯🇵 瀬古歩夢</h2><button class="fav-btn" data-slug="ayumu-seko" onclick="fjFavorites.toggle('ayumu-seko'); refreshFavBtn(this);" title="お気に入りに追加" aria-label="お気に入り"><span class="fav-star">☆</span></button></div>
     <p class="name-en">Ayumu Seko</p>
     <div class="player-meta">
       <span class="player-meta-tag">⚽ DF</span>
@@ -630,5 +630,6 @@ function trackAffClick(el) {
 }
 </script>
 
+<script src="/favorites.js" defer></script>
 </body>
 </html>

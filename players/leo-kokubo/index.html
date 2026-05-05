@@ -429,7 +429,7 @@
 
 <div class="player-hero">
   <div class="name-block">
-    <h2>🇯🇵 小久保玲央ブライアン</h2>
+    <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;"><h2 style="margin:0;">🇯🇵 小久保玲央ブライアン</h2><button class="fav-btn" data-slug="leo-kokubo" onclick="fjFavorites.toggle('leo-kokubo'); refreshFavBtn(this);" title="お気に入りに追加" aria-label="お気に入り"><span class="fav-star">☆</span></button></div>
     <p class="name-en">Leo Kokubo</p>
     <div class="player-meta">
       <span class="player-meta-tag">⚽ GK</span>
@@ -561,5 +561,6 @@ function trackAffClick(el) {
 }
 </script>
 
+<script src="/favorites.js" defer></script>
 </body>
 </html>

@@ -429,7 +429,7 @@
 
 <div class="player-hero">
   <div class="name-block">
-    <h2>🇯🇵 野澤大志ブランドン</h2>
+    <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;"><h2 style="margin:0;">🇯🇵 野澤大志ブランドン</h2><button class="fav-btn" data-slug="taishi-brandon-nozawa" onclick="fjFavorites.toggle('taishi-brandon-nozawa'); refreshFavBtn(this);" title="お気に入りに追加" aria-label="お気に入り"><span class="fav-star">☆</span></button></div>
     <p class="name-en">Taishi Brandon Nozawa</p>
     <div class="player-meta">
       <span class="player-meta-tag">⚽ GK</span>
@@ -587,5 +587,6 @@ function trackAffClick(el) {
 }
 </script>
 
+<script src="/favorites.js" defer></script>
 </body>
 </html>
