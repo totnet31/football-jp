@@ -283,7 +283,10 @@
 
 <div class="player-hero">
   <div class="name-block">
-    <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;"><h2 style="margin:0;">🇯🇵 Kota Takai</h2><button class="fav-btn" data-slug="kota-takai" onclick="fjFavorites.toggle('kota-takai'); refreshFavBtn(this);" title="Add to favorites" aria-label="Favorite"><span class="fav-star">☆</span></button></div>
+    <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;">
+      <h2 style="margin:0;">🇯🇵 Kota Takai</h2>
+      <button class="fav-btn" data-slug="kota-takai" onclick="fjFavorites.toggle('kota-takai'); refreshFavBtn(this);" title="Add to favorites" aria-label="Favorite"><span class="fav-star">☆</span></button>
+    </div>
     <p class="name-en">高井幸大</p>
     <div class="player-meta">
       <span class="player-meta-tag">⚽ Defender</span>
@@ -338,6 +341,14 @@
           <div class="match-comp">Competition</div>
         </div>
         
+          <div class="match-row scheduled">
+            <div class="match-date"><span class="match-date-day">2026/05/20</span><span class="match-date-time">(Wed) 04:15</span></div>
+            <div class="match-venue"><span class="venue-badge venue-away">A</span></div>
+            <div class="match-opponent">vs Chelsea</div>
+            <div class="match-result">—</div>
+            <div class="match-broadcast">—</div>
+            <div class="match-comp">Premier League</div>
+          </div>
           <div class="match-row scheduled">
             <div class="match-date"><span class="match-date-day">2026/05/12</span><span class="match-date-time">(Tue) 04:00</span></div>
             <div class="match-venue"><span class="venue-badge venue-home">H</span></div>
@@ -509,7 +520,7 @@ function trackAffClick(el) {
   }
 }
 </script>
-
 <script src="/favorites.js" defer></script>
+
 </body>
 </html>

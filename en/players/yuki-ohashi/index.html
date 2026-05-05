@@ -283,7 +283,10 @@
 
 <div class="player-hero">
   <div class="name-block">
-    <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;"><h2 style="margin:0;">🇯🇵 Yuki Ohashi</h2><button class="fav-btn" data-slug="yuki-ohashi" onclick="fjFavorites.toggle('yuki-ohashi'); refreshFavBtn(this);" title="Add to favorites" aria-label="Favorite"><span class="fav-star">☆</span></button></div>
+    <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;">
+      <h2 style="margin:0;">🇯🇵 Yuki Ohashi</h2>
+      <button class="fav-btn" data-slug="yuki-ohashi" onclick="fjFavorites.toggle('yuki-ohashi'); refreshFavBtn(this);" title="Add to favorites" aria-label="Favorite"><span class="fav-star">☆</span></button>
+    </div>
     <p class="name-en">大橋祐紀</p>
     <div class="player-meta">
       <span class="player-meta-tag">⚽ Forward</span>
@@ -324,14 +327,14 @@
         </div>
         <div class="stat-card">
           <div class="stat-label">Assists</div>
-          <div class="stat-value">None</div>
+          <div class="stat-value">0</div>
         </div>
         <div class="stat-card">
           <div class="stat-label">Pens</div>
-          <div class="stat-value">1</div>
+          <div class="stat-value">0</div>
         </div>
       </div>
-      <div class="stats-source">Source: Football-Data.org</div>
+      <div class="stats-source">Source: Wikipedia</div>
     </section>
 
   
@@ -497,7 +500,7 @@ function trackAffClick(el) {
   }
 }
 </script>
-
 <script src="/favorites.js" defer></script>
+
 </body>
 </html>
