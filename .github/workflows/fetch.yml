@@ -127,20 +127,57 @@ jobs:
       - name: developにデータ変更を保存
         id: commit_data
         run: |
-          git add data/ players/ clubs/
+          git add data/ players/ clubs/ leagues/ en/ sitemap.xml 2>/dev/null || true
           if git diff --cached --quiet; then
             echo "no_change=true" >> $GITHUB_OUTPUT
             echo "データ変更なし"
           else
             git commit -m "data: $(TZ=Asia/Tokyo date '+%Y-%m-%d') 自動更新"
-            # 並行 push を考慮して、最大3回 pull --rebase + push でリトライ
-            for i in 1 2 3; do
+            # 並行 push を考慮して最大5回リトライ。衝突時はファイル種別ごとに自動解決
+            for i in 1 2 3 4 5; do
               if git push origin develop; then
+                echo "push 成功（試行 $i/5）"
                 break
               fi
-              echo "push 失敗、pull --rebase してリトライ ($i/3)"
-              git pull --rebase origin develop
-              sleep 2
+              echo "push 失敗、リモート取り込み試行 ($i/5)"
+              git fetch origin develop
+
+              # マージを試行（自動マージできるかチェック）
+              if git merge origin/develop --no-edit; then
+                echo "クリーンマージ成功"
+              else
+                echo "コンフリクト検出、ファイル種別ごとに自動解決"
+                # コンフリクトファイルをリストアップ、種別で解決方針を分岐
+                for f in $(git diff --name-only --diff-filter=U); do
+                  case "$f" in
+                    data/*.json|data/*/*.json|data/*/*/*.json)
+                      # データファイル：ours（workflow側の最新データ）を採用
+                      git checkout --ours -- "$f"
+                      echo "  data採用(ours): $f"
+                      ;;
+                    *)
+                      # HTML・コード：theirs（リモート＝最新の手動push）を採用
+                      git checkout --theirs -- "$f"
+                      echo "  コード採用(theirs): $f"
+                      ;;
+                  esac
+                  git add "$f"
+                done
+                # マージコミット作成
+                git commit --no-edit -m "merge: 自動衝突解決（data:ours / code:theirs）" || git commit -m "merge: 自動衝突解決"
+                echo "コンフリクト解決後、ページ再生成"
+                # マージで取り込まれた他のコード変更にも HTML を整合させるため再生成
+                python3 scripts/generate_player_pages.py 2>/dev/null || true
+                python3 scripts/generate_player_pages_en.py 2>/dev/null || true
+                python3 scripts/generate_club_pages.py 2>/dev/null || true
+                python3 scripts/generate_club_pages_en.py 2>/dev/null || true
+                python3 scripts/generate_league_pages.py 2>/dev/null || true
+                python3 scripts/generate_league_pages_en.py 2>/dev/null || true
+                python3 scripts/generate_sitemap.py 2>/dev/null || true
+                git add players/ clubs/ leagues/ en/ sitemap.xml 2>/dev/null || true
+                git diff --cached --quiet || git commit -m "rebuild: マージ後のページ再生成" || true
+              fi
+              sleep 5
             done
             echo "no_change=false" >> $GITHUB_OUTPUT
           fi
@@ -151,14 +188,39 @@ jobs:
           # main に切替
           git checkout main
           git pull origin main
-          # develop の data/ players/ clubs/ を main に反映
-          git checkout develop -- data/ players/ clubs/
+          # develop の data/ players/ clubs/ leagues/ en/ sitemap.xml を main に反映
+          git checkout develop -- data/ players/ clubs/ leagues/ en/ sitemap.xml 2>/dev/null || true
           if git diff --cached --quiet && [ -z "$(git status --porcelain)" ]; then
             echo "main 側に変更が無いためスキップ"
           else
-            git add data/ players/ clubs/
+            git add data/ players/ clubs/ leagues/ en/ sitemap.xml 2>/dev/null || true
             git diff --cached --quiet || git commit -m "data: $(TZ=Asia/Tokyo date '+%Y-%m-%d') 自動更新（develop→main）"
-            git push origin main
+            # main push もリトライ＋衝突解決対応
+            for i in 1 2 3 4 5; do
+              if git push origin main; then
+                echo "main push 成功（試行 $i/5）"
+                break
+              fi
+              echo "main push 失敗、リモート取り込み試行 ($i/5)"
+              git fetch origin main
+              if git merge origin/main --no-edit; then
+                echo "クリーンマージ成功"
+              else
+                for f in $(git diff --name-only --diff-filter=U); do
+                  case "$f" in
+                    data/*.json|data/*/*.json|data/*/*/*.json)
+                      git checkout --ours -- "$f"
+                      ;;
+                    *)
+                      git checkout --theirs -- "$f"
+                      ;;
+                  esac
+                  git add "$f"
+                done
+                git commit --no-edit -m "merge: 自動衝突解決（data:ours / code:theirs）" || git commit -m "merge: 自動衝突解決"
+              fi
+              sleep 5
+            done
           fi
 
       - name: 失敗時にDiscordへ通知
