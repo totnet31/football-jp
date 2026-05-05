@@ -1,0 +1,1653 @@
+{
+  "year": 1998,
+  "host": "フランス",
+  "host_en": "France",
+  "japan_group": "H",
+  "groups": [
+    {
+      "group_id": "A",
+      "name_ja": "グループA",
+      "table": [
+        {
+          "position": 1,
+          "team_en": "Brazil",
+          "team_ja": "ブラジル",
+          "played": 3,
+          "won": 2,
+          "drawn": 0,
+          "lost": 1,
+          "goals_for": 6,
+          "goals_against": 3,
+          "points": 6
+        },
+        {
+          "position": 2,
+          "team_en": "Norway",
+          "team_ja": "ノルウェー",
+          "played": 3,
+          "won": 1,
+          "drawn": 2,
+          "lost": 0,
+          "goals_for": 5,
+          "goals_against": 4,
+          "points": 5
+        },
+        {
+          "position": 3,
+          "team_en": "Morocco",
+          "team_ja": "モロッコ",
+          "played": 3,
+          "won": 1,
+          "drawn": 1,
+          "lost": 1,
+          "goals_for": 5,
+          "goals_against": 5,
+          "points": 4
+        },
+        {
+          "position": 4,
+          "team_en": "Scotland",
+          "team_ja": "スコットランド",
+          "played": 3,
+          "won": 0,
+          "drawn": 1,
+          "lost": 2,
+          "goals_for": 2,
+          "goals_against": 6,
+          "points": 1
+        }
+      ],
+      "matches": [
+        {
+          "date": "1998-06-10",
+          "home_en": "Brazil",
+          "home_ja": "ブラジル",
+          "away_en": "Scotland",
+          "away_ja": "スコットランド",
+          "home_score": 2,
+          "away_score": 1,
+          "scorers": [
+            {
+              "player": "César Sampaio",
+              "team": "Brazil",
+              "minute": "5"
+            }
+          ]
+        },
+        {
+          "date": "1998-06-10",
+          "home_en": "Morocco",
+          "home_ja": "モロッコ",
+          "away_en": "Norway",
+          "away_ja": "ノルウェー",
+          "home_score": 2,
+          "away_score": 2,
+          "scorers": [
+            {
+              "player": "Hadji",
+              "team": "Morocco",
+              "minute": "37"
+            },
+            {
+              "player": "Hadda",
+              "team": "Morocco",
+              "minute": "60"
+            },
+            {
+              "player": "Eggen",
+              "team": "Norway",
+              "minute": "61"
+            }
+          ]
+        },
+        {
+          "date": "1998-06-16",
+          "home_en": "Scotland",
+          "home_ja": "スコットランド",
+          "away_en": "Norway",
+          "away_ja": "ノルウェー",
+          "home_score": 1,
+          "away_score": 1,
+          "scorers": [
+            {
+              "player": "Burley",
+              "team": "Scotland",
+              "minute": "66"
+            },
+            {
+              "player": "H. Flo",
+              "team": "Norway",
+              "minute": "46"
+            }
+          ]
+        },
+        {
+          "date": "1998-06-16",
+          "home_en": "Brazil",
+          "home_ja": "ブラジル",
+          "away_en": "Morocco",
+          "away_ja": "モロッコ",
+          "home_score": 3,
+          "away_score": 0,
+          "scorers": [
+            {
+              "player": "Ronaldo",
+              "team": "Brazil",
+              "minute": "9"
+            },
+            {
+              "player": "Rivaldo",
+              "team": "Brazil",
+              "minute": "45+2"
+            },
+            {
+              "player": "Bebeto",
+              "team": "Brazil",
+              "minute": "50"
+            }
+          ]
+        },
+        {
+          "date": "1998-06-23",
+          "home_en": "Scotland",
+          "home_ja": "スコットランド",
+          "away_en": "Morocco",
+          "away_ja": "モロッコ",
+          "home_score": 0,
+          "away_score": 3,
+          "scorers": [
+            {
+              "player": "Bassir",
+              "team": "Morocco",
+              "minute": "85"
+            },
+            {
+              "player": "Hadda",
+              "team": "Morocco",
+              "minute": "46"
+            }
+          ]
+        },
+        {
+          "date": "1998-06-23",
+          "home_en": "Brazil",
+          "home_ja": "ブラジル",
+          "away_en": "Norway",
+          "away_ja": "ノルウェー",
+          "home_score": 1,
+          "away_score": 2,
+          "scorers": [
+            {
+              "player": "Bebeto",
+              "team": "Brazil",
+              "minute": "78"
+            },
+            {
+              "player": "T. A. Flo",
+              "team": "Norway",
+              "minute": "83"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "group_id": "B",
+      "name_ja": "グループB",
+      "table": [
+        {
+          "position": 1,
+          "team_en": "Italy",
+          "team_ja": "イタリア",
+          "played": 3,
+          "won": 2,
+          "drawn": 1,
+          "lost": 0,
+          "goals_for": 7,
+          "goals_against": 3,
+          "points": 7
+        },
+        {
+          "position": 2,
+          "team_en": "Chile",
+          "team_ja": "チリ",
+          "played": 3,
+          "won": 0,
+          "drawn": 3,
+          "lost": 0,
+          "goals_for": 4,
+          "goals_against": 4,
+          "points": 3
+        },
+        {
+          "position": 3,
+          "team_en": "Austria",
+          "team_ja": "オーストリア",
+          "played": 3,
+          "won": 0,
+          "drawn": 2,
+          "lost": 1,
+          "goals_for": 3,
+          "goals_against": 4,
+          "points": 2
+        },
+        {
+          "position": 4,
+          "team_en": "Cameroon",
+          "team_ja": "カメルーン",
+          "played": 3,
+          "won": 0,
+          "drawn": 2,
+          "lost": 1,
+          "goals_for": 2,
+          "goals_against": 5,
+          "points": 2
+        }
+      ],
+      "matches": [
+        {
+          "date": "1998-06-11",
+          "home_en": "",
+          "home_ja": "",
+          "away_en": "Chile",
+          "away_ja": "チリ",
+          "home_score": 2,
+          "away_score": 2,
+          "scorers": [
+            {
+              "player": "Vieri",
+              "team": "",
+              "minute": "10"
+            },
+            {
+              "player": "Salas",
+              "team": "Chile",
+              "minute": "50"
+            }
+          ]
+        },
+        {
+          "date": "1998-06-11",
+          "home_en": "Cameroon",
+          "home_ja": "カメルーン",
+          "away_en": "Austria",
+          "away_ja": "オーストリア",
+          "home_score": 1,
+          "away_score": 1,
+          "scorers": [
+            {
+              "player": "Njanka",
+              "team": "Cameroon",
+              "minute": "77"
+            },
+            {
+              "player": "Polster",
+              "team": "Austria",
+              "minute": "90+1"
+            }
+          ]
+        },
+        {
+          "date": "1998-06-17",
+          "home_en": "Chile",
+          "home_ja": "チリ",
+          "away_en": "Austria",
+          "away_ja": "オーストリア",
+          "home_score": 1,
+          "away_score": 1,
+          "scorers": [
+            {
+              "player": "Salas",
+              "team": "Chile",
+              "minute": "70"
+            },
+            {
+              "player": "Vastić",
+              "team": "Austria",
+              "minute": "90+2"
+            }
+          ]
+        },
+        {
+          "date": "1998-06-17",
+          "home_en": "",
+          "home_ja": "",
+          "away_en": "Cameroon",
+          "away_ja": "カメルーン",
+          "home_score": 3,
+          "away_score": 0,
+          "scorers": [
+            {
+              "player": "Di Biagio",
+              "team": "",
+              "minute": "7"
+            },
+            {
+              "player": "Vieri",
+              "team": "",
+              "minute": "89"
+            }
+          ]
+        },
+        {
+          "date": "1998-06-23",
+          "home_en": "",
+          "home_ja": "",
+          "away_en": "Austria",
+          "away_ja": "オーストリア",
+          "home_score": 2,
+          "away_score": 1,
+          "scorers": [
+            {
+              "player": "Vieri",
+              "team": "",
+              "minute": "48"
+            },
+            {
+              "player": "R. Baggio",
+              "team": "",
+              "minute": "90"
+            }
+          ]
+        },
+        {
+          "date": "1998-06-23",
+          "home_en": "Chile",
+          "home_ja": "チリ",
+          "away_en": "Cameroon",
+          "away_ja": "カメルーン",
+          "home_score": 1,
+          "away_score": 1,
+          "scorers": [
+            {
+              "player": "Sierra",
+              "team": "Chile",
+              "minute": "20"
+            },
+            {
+              "player": "Mboma",
+              "team": "Cameroon",
+              "minute": "56"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "group_id": "C",
+      "name_ja": "グループC",
+      "table": [
+        {
+          "position": 1,
+          "team_en": "France",
+          "team_ja": "フランス",
+          "played": 3,
+          "won": 3,
+          "drawn": 0,
+          "lost": 0,
+          "goals_for": 9,
+          "goals_against": 1,
+          "points": 9
+        },
+        {
+          "position": 2,
+          "team_en": "Denmark",
+          "team_ja": "デンマーク",
+          "played": 3,
+          "won": 1,
+          "drawn": 1,
+          "lost": 1,
+          "goals_for": 3,
+          "goals_against": 3,
+          "points": 4
+        },
+        {
+          "position": 3,
+          "team_en": "South Africa",
+          "team_ja": "南アフリカ",
+          "played": 3,
+          "won": 0,
+          "drawn": 2,
+          "lost": 1,
+          "goals_for": 3,
+          "goals_against": 6,
+          "points": 2
+        },
+        {
+          "position": 4,
+          "team_en": "KSA",
+          "team_ja": "KSA",
+          "played": 3,
+          "won": 0,
+          "drawn": 1,
+          "lost": 2,
+          "goals_for": 2,
+          "goals_against": 7,
+          "points": 1
+        }
+      ],
+      "matches": [
+        {
+          "date": "1998-06-12",
+          "home_en": "KSA",
+          "home_ja": "KSA",
+          "away_en": "Denmark",
+          "away_ja": "デンマーク",
+          "home_score": 0,
+          "away_score": 1,
+          "scorers": [
+            {
+              "player": "Rieper",
+              "team": "Denmark",
+              "minute": "69"
+            }
+          ]
+        },
+        {
+          "date": "1998-06-12",
+          "home_en": "",
+          "home_ja": "",
+          "away_en": "",
+          "away_ja": "",
+          "home_score": 3,
+          "away_score": 0,
+          "scorers": [
+            {
+              "player": "Dugarry",
+              "team": "",
+              "minute": "36"
+            },
+            {
+              "player": "Henry",
+              "team": "",
+              "minute": "90+2"
+            }
+          ]
+        },
+        {
+          "date": "1998-06-18",
+          "home_en": "South Africa",
+          "home_ja": "南アフリカ",
+          "away_en": "Denmark",
+          "away_ja": "デンマーク",
+          "home_score": 1,
+          "away_score": 1,
+          "scorers": [
+            {
+              "player": "McCarthy",
+              "team": "South Africa",
+              "minute": "51"
+            },
+            {
+              "player": "Nielsen",
+              "team": "Denmark",
+              "minute": "12"
+            }
+          ]
+        },
+        {
+          "date": "1998-06-18",
+          "home_en": "",
+          "home_ja": "",
+          "away_en": "KSA",
+          "away_ja": "KSA",
+          "home_score": 4,
+          "away_score": 0,
+          "scorers": [
+            {
+              "player": "Henry",
+              "team": "",
+              "minute": "78"
+            },
+            {
+              "player": "Trezeguet",
+              "team": "",
+              "minute": "68"
+            },
+            {
+              "player": "Lizarazu",
+              "team": "",
+              "minute": "85"
+            }
+          ]
+        },
+        {
+          "date": "1998-06-24",
+          "home_en": "",
+          "home_ja": "",
+          "away_en": "Denmark",
+          "away_ja": "デンマーク",
+          "home_score": 2,
+          "away_score": 1,
+          "scorers": [
+            {
+              "player": "Petit",
+              "team": "",
+              "minute": "56"
+            }
+          ]
+        },
+        {
+          "date": "1998-06-24",
+          "home_en": "South Africa",
+          "home_ja": "南アフリカ",
+          "away_en": "KSA",
+          "away_ja": "KSA",
+          "home_score": 2,
+          "away_score": 2,
+          "scorers": []
+        }
+      ]
+    },
+    {
+      "group_id": "D",
+      "name_ja": "グループD",
+      "table": [
+        {
+          "position": 1,
+          "team_en": "Nigeria",
+          "team_ja": "ナイジェリア",
+          "played": 3,
+          "won": 2,
+          "drawn": 0,
+          "lost": 1,
+          "goals_for": 5,
+          "goals_against": 5,
+          "points": 6
+        },
+        {
+          "position": 2,
+          "team_en": "Paraguay",
+          "team_ja": "パラグアイ",
+          "played": 3,
+          "won": 1,
+          "drawn": 2,
+          "lost": 0,
+          "goals_for": 3,
+          "goals_against": 1,
+          "points": 5
+        },
+        {
+          "position": 3,
+          "team_en": "Spain",
+          "team_ja": "スペイン",
+          "played": 3,
+          "won": 1,
+          "drawn": 1,
+          "lost": 1,
+          "goals_for": 8,
+          "goals_against": 4,
+          "points": 4
+        },
+        {
+          "position": 4,
+          "team_en": "Bulgaria",
+          "team_ja": "ブルガリア",
+          "played": 3,
+          "won": 0,
+          "drawn": 1,
+          "lost": 2,
+          "goals_for": 1,
+          "goals_against": 7,
+          "points": 1
+        }
+      ],
+      "matches": [
+        {
+          "date": "1998-06-12",
+          "home_en": "",
+          "home_ja": "",
+          "away_en": "Bulgaria",
+          "away_ja": "ブルガリア",
+          "home_score": 0,
+          "away_score": 0,
+          "scorers": []
+        },
+        {
+          "date": "1998-06-13",
+          "home_en": "Spain",
+          "home_ja": "スペイン",
+          "away_en": "Nigeria",
+          "away_ja": "ナイジェリア",
+          "home_score": 2,
+          "away_score": 3,
+          "scorers": [
+            {
+              "player": "Hierro",
+              "team": "Spain",
+              "minute": "21"
+            },
+            {
+              "player": "Raúl",
+              "team": "Spain",
+              "minute": "47"
+            },
+            {
+              "player": "Adepoju",
+              "team": "Nigeria",
+              "minute": "24"
+            },
+            {
+              "player": "Oliseh",
+              "team": "Nigeria",
+              "minute": "78"
+            }
+          ]
+        },
+        {
+          "date": "1998-06-19",
+          "home_en": "Nigeria",
+          "home_ja": "ナイジェリア",
+          "away_en": "Bulgaria",
+          "away_ja": "ブルガリア",
+          "home_score": 1,
+          "away_score": 0,
+          "scorers": [
+            {
+              "player": "Ikpeba",
+              "team": "Nigeria",
+              "minute": "28"
+            }
+          ]
+        },
+        {
+          "date": "1998-06-19",
+          "home_en": "Spain",
+          "home_ja": "スペイン",
+          "away_en": "",
+          "away_ja": "",
+          "home_score": 0,
+          "away_score": 0,
+          "scorers": []
+        },
+        {
+          "date": "1998-06-24",
+          "home_en": "Nigeria",
+          "home_ja": "ナイジェリア",
+          "away_en": "",
+          "away_ja": "",
+          "home_score": 1,
+          "away_score": 3,
+          "scorers": [
+            {
+              "player": "Oruma",
+              "team": "Nigeria",
+              "minute": "11"
+            },
+            {
+              "player": "Ayala",
+              "team": "",
+              "minute": "1"
+            },
+            {
+              "player": "Benítez",
+              "team": "",
+              "minute": "58"
+            },
+            {
+              "player": "Cardozo",
+              "team": "",
+              "minute": "86"
+            }
+          ]
+        },
+        {
+          "date": "1998-06-24",
+          "home_en": "Spain",
+          "home_ja": "スペイン",
+          "away_en": "Bulgaria",
+          "away_ja": "ブルガリア",
+          "home_score": 6,
+          "away_score": 1,
+          "scorers": [
+            {
+              "player": "Luis Enrique",
+              "team": "Spain",
+              "minute": "18"
+            },
+            {
+              "player": "Morientes",
+              "team": "Spain",
+              "minute": "81"
+            },
+            {
+              "player": "Kiko",
+              "team": "Spain",
+              "minute": "90+4"
+            },
+            {
+              "player": "Kostadinov",
+              "team": "Bulgaria",
+              "minute": "58"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "group_id": "E",
+      "name_ja": "グループE",
+      "table": [
+        {
+          "position": 1,
+          "team_en": "Netherlands",
+          "team_ja": "オランダ",
+          "played": 3,
+          "won": 1,
+          "drawn": 2,
+          "lost": 0,
+          "goals_for": 7,
+          "goals_against": 2,
+          "points": 5
+        },
+        {
+          "position": 2,
+          "team_en": "Mexico",
+          "team_ja": "メキシコ",
+          "played": 3,
+          "won": 1,
+          "drawn": 2,
+          "lost": 0,
+          "goals_for": 7,
+          "goals_against": 5,
+          "points": 5
+        },
+        {
+          "position": 3,
+          "team_en": "Belgium",
+          "team_ja": "ベルギー",
+          "played": 3,
+          "won": 0,
+          "drawn": 3,
+          "lost": 0,
+          "goals_for": 3,
+          "goals_against": 3,
+          "points": 3
+        },
+        {
+          "position": 4,
+          "team_en": "South Korea",
+          "team_ja": "韓国",
+          "played": 3,
+          "won": 0,
+          "drawn": 1,
+          "lost": 2,
+          "goals_for": 2,
+          "goals_against": 9,
+          "points": 1
+        }
+      ],
+      "matches": [
+        {
+          "date": "1998-06-13",
+          "home_en": "",
+          "home_ja": "",
+          "away_en": "Mexico",
+          "away_ja": "メキシコ",
+          "home_score": 1,
+          "away_score": 3,
+          "scorers": [
+            {
+              "player": "Ha Seok-ju",
+              "team": "",
+              "minute": "27"
+            },
+            {
+              "player": "Peláez",
+              "team": "Mexico",
+              "minute": "50"
+            },
+            {
+              "player": "Hernández",
+              "team": "Mexico",
+              "minute": "84"
+            }
+          ]
+        },
+        {
+          "date": "1998-06-13",
+          "home_en": "Netherlands",
+          "home_ja": "オランダ",
+          "away_en": "Belgium",
+          "away_ja": "ベルギー",
+          "home_score": 0,
+          "away_score": 0,
+          "scorers": []
+        },
+        {
+          "date": "1998-06-20",
+          "home_en": "Belgium",
+          "home_ja": "ベルギー",
+          "away_en": "Mexico",
+          "away_ja": "メキシコ",
+          "home_score": 2,
+          "away_score": 2,
+          "scorers": [
+            {
+              "player": "Wilmots",
+              "team": "Belgium",
+              "minute": "47"
+            },
+            {
+              "player": "Blanco",
+              "team": "Mexico",
+              "minute": "62"
+            }
+          ]
+        },
+        {
+          "date": "1998-06-20",
+          "home_en": "Netherlands",
+          "home_ja": "オランダ",
+          "away_en": "",
+          "away_ja": "",
+          "home_score": 5,
+          "away_score": 0,
+          "scorers": [
+            {
+              "player": "Cocu",
+              "team": "Netherlands",
+              "minute": "37"
+            },
+            {
+              "player": "Overmars",
+              "team": "Netherlands",
+              "minute": "41"
+            },
+            {
+              "player": "Bergkamp",
+              "team": "Netherlands",
+              "minute": "71"
+            },
+            {
+              "player": "Van Hooijdonk",
+              "team": "Netherlands",
+              "minute": "80"
+            },
+            {
+              "player": "R. de Boer",
+              "team": "Netherlands",
+              "minute": "83"
+            }
+          ]
+        },
+        {
+          "date": "1998-06-25",
+          "home_en": "Netherlands",
+          "home_ja": "オランダ",
+          "away_en": "Mexico",
+          "away_ja": "メキシコ",
+          "home_score": 2,
+          "away_score": 2,
+          "scorers": [
+            {
+              "player": "Cocu",
+              "team": "Netherlands",
+              "minute": "4"
+            },
+            {
+              "player": "R. de Boer",
+              "team": "Netherlands",
+              "minute": "18"
+            },
+            {
+              "player": "Peláez",
+              "team": "Mexico",
+              "minute": "75"
+            },
+            {
+              "player": "Hernández",
+              "team": "Mexico",
+              "minute": "90+4"
+            }
+          ]
+        },
+        {
+          "date": "1998-06-25",
+          "home_en": "Belgium",
+          "home_ja": "ベルギー",
+          "away_en": "",
+          "away_ja": "",
+          "home_score": 1,
+          "away_score": 1,
+          "scorers": [
+            {
+              "player": "Nilis",
+              "team": "Belgium",
+              "minute": "7"
+            },
+            {
+              "player": "Yoo Sang-chul",
+              "team": "",
+              "minute": "72"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "group_id": "F",
+      "name_ja": "グループF",
+      "table": [
+        {
+          "position": 1,
+          "team_en": "Germany",
+          "team_ja": "ドイツ",
+          "played": 3,
+          "won": 2,
+          "drawn": 1,
+          "lost": 0,
+          "goals_for": 6,
+          "goals_against": 2,
+          "points": 7
+        },
+        {
+          "position": 2,
+          "team_en": "YUG",
+          "team_ja": "YUG",
+          "played": 3,
+          "won": 2,
+          "drawn": 1,
+          "lost": 0,
+          "goals_for": 4,
+          "goals_against": 2,
+          "points": 7
+        },
+        {
+          "position": 3,
+          "team_en": "Iran",
+          "team_ja": "イラン",
+          "played": 3,
+          "won": 1,
+          "drawn": 0,
+          "lost": 2,
+          "goals_for": 2,
+          "goals_against": 4,
+          "points": 3
+        },
+        {
+          "position": 4,
+          "team_en": "United States",
+          "team_ja": "アメリカ合衆国",
+          "played": 3,
+          "won": 0,
+          "drawn": 0,
+          "lost": 3,
+          "goals_for": 1,
+          "goals_against": 5,
+          "points": 0
+        }
+      ],
+      "matches": [
+        {
+          "date": "1998-06-14",
+          "home_en": "",
+          "home_ja": "",
+          "away_en": "Iran",
+          "away_ja": "イラン",
+          "home_score": 1,
+          "away_score": 0,
+          "scorers": [
+            {
+              "player": "Mihajlović",
+              "team": "",
+              "minute": "73"
+            }
+          ]
+        },
+        {
+          "date": "1998-06-15",
+          "home_en": "Germany",
+          "home_ja": "ドイツ",
+          "away_en": "",
+          "away_ja": "",
+          "home_score": 2,
+          "away_score": 0,
+          "scorers": [
+            {
+              "player": "Möller",
+              "team": "Germany",
+              "minute": "9"
+            },
+            {
+              "player": "Klinsmann",
+              "team": "Germany",
+              "minute": "65"
+            }
+          ]
+        },
+        {
+          "date": "1998-06-21",
+          "home_en": "Germany",
+          "home_ja": "ドイツ",
+          "away_en": "",
+          "away_ja": "",
+          "home_score": 2,
+          "away_score": 2,
+          "scorers": [
+            {
+              "player": "Bierhoff",
+              "team": "Germany",
+              "minute": "78"
+            },
+            {
+              "player": "Mijatović",
+              "team": "",
+              "minute": "13"
+            },
+            {
+              "player": "Stojković",
+              "team": "",
+              "minute": "52"
+            }
+          ]
+        },
+        {
+          "date": "1998-06-25",
+          "home_en": "Germany",
+          "home_ja": "ドイツ",
+          "away_en": "Iran",
+          "away_ja": "イラン",
+          "home_score": 2,
+          "away_score": 0,
+          "scorers": [
+            {
+              "player": "Bierhoff",
+              "team": "Germany",
+              "minute": "50"
+            },
+            {
+              "player": "Klinsmann",
+              "team": "Germany",
+              "minute": "57"
+            }
+          ]
+        },
+        {
+          "date": "1998-06-25",
+          "home_en": "",
+          "home_ja": "",
+          "away_en": "",
+          "away_ja": "",
+          "home_score": 0,
+          "away_score": 1,
+          "scorers": [
+            {
+              "player": "Komljenović",
+              "team": "",
+              "minute": "4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "group_id": "G",
+      "name_ja": "グループG",
+      "table": [
+        {
+          "position": 1,
+          "team_en": "Romania",
+          "team_ja": "ルーマニア",
+          "played": 3,
+          "won": 2,
+          "drawn": 1,
+          "lost": 0,
+          "goals_for": 4,
+          "goals_against": 2,
+          "points": 7
+        },
+        {
+          "position": 2,
+          "team_en": "England",
+          "team_ja": "イングランド",
+          "played": 3,
+          "won": 2,
+          "drawn": 0,
+          "lost": 1,
+          "goals_for": 5,
+          "goals_against": 2,
+          "points": 6
+        },
+        {
+          "position": 3,
+          "team_en": "Colombia",
+          "team_ja": "コロンビア",
+          "played": 3,
+          "won": 1,
+          "drawn": 0,
+          "lost": 2,
+          "goals_for": 1,
+          "goals_against": 3,
+          "points": 3
+        },
+        {
+          "position": 4,
+          "team_en": "Tunisia",
+          "team_ja": "チュニジア",
+          "played": 3,
+          "won": 0,
+          "drawn": 1,
+          "lost": 2,
+          "goals_for": 1,
+          "goals_against": 4,
+          "points": 1
+        }
+      ],
+      "matches": [
+        {
+          "date": "1998-06-15",
+          "home_en": "England",
+          "home_ja": "イングランド",
+          "away_en": "",
+          "away_ja": "",
+          "home_score": 2,
+          "away_score": 0,
+          "scorers": [
+            {
+              "player": "Shearer",
+              "team": "England",
+              "minute": "42"
+            },
+            {
+              "player": "Scholes",
+              "team": "England",
+              "minute": "89"
+            }
+          ]
+        },
+        {
+          "date": "1998-06-15",
+          "home_en": "Romania",
+          "home_ja": "ルーマニア",
+          "away_en": "Colombia",
+          "away_ja": "コロンビア",
+          "home_score": 1,
+          "away_score": 0,
+          "scorers": [
+            {
+              "player": "Ilie",
+              "team": "Romania",
+              "minute": "45+1"
+            }
+          ]
+        },
+        {
+          "date": "1998-06-22",
+          "home_en": "Colombia",
+          "home_ja": "コロンビア",
+          "away_en": "",
+          "away_ja": "",
+          "home_score": 1,
+          "away_score": 0,
+          "scorers": [
+            {
+              "player": "Preciado",
+              "team": "Colombia",
+              "minute": "83"
+            }
+          ]
+        },
+        {
+          "date": "1998-06-22",
+          "home_en": "Romania",
+          "home_ja": "ルーマニア",
+          "away_en": "England",
+          "away_ja": "イングランド",
+          "home_score": 2,
+          "away_score": 1,
+          "scorers": [
+            {
+              "player": "Moldovan",
+              "team": "Romania",
+              "minute": "46"
+            },
+            {
+              "player": "Petrescu",
+              "team": "Romania",
+              "minute": "90"
+            },
+            {
+              "player": "Owen",
+              "team": "England",
+              "minute": "81"
+            }
+          ]
+        },
+        {
+          "date": "1998-06-26",
+          "home_en": "Colombia",
+          "home_ja": "コロンビア",
+          "away_en": "England",
+          "away_ja": "イングランド",
+          "home_score": 0,
+          "away_score": 2,
+          "scorers": [
+            {
+              "player": "Anderton",
+              "team": "England",
+              "minute": "20"
+            },
+            {
+              "player": "Beckham",
+              "team": "England",
+              "minute": "29"
+            }
+          ]
+        },
+        {
+          "date": "1998-06-26",
+          "home_en": "Romania",
+          "home_ja": "ルーマニア",
+          "away_en": "",
+          "away_ja": "",
+          "home_score": 1,
+          "away_score": 1,
+          "scorers": [
+            {
+              "player": "Moldovan",
+              "team": "Romania",
+              "minute": "71"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "group_id": "H",
+      "name_ja": "グループH",
+      "table": [
+        {
+          "position": 1,
+          "team_en": "Argentina",
+          "team_ja": "アルゼンチン",
+          "played": 3,
+          "won": 3,
+          "drawn": 0,
+          "lost": 0,
+          "goals_for": 7,
+          "goals_against": 0,
+          "points": 9
+        },
+        {
+          "position": 2,
+          "team_en": "Croatia",
+          "team_ja": "クロアチア",
+          "played": 3,
+          "won": 2,
+          "drawn": 0,
+          "lost": 1,
+          "goals_for": 4,
+          "goals_against": 2,
+          "points": 6
+        },
+        {
+          "position": 3,
+          "team_en": "Jamaica",
+          "team_ja": "ジャマイカ",
+          "played": 3,
+          "won": 1,
+          "drawn": 0,
+          "lost": 2,
+          "goals_for": 3,
+          "goals_against": 9,
+          "points": 3
+        },
+        {
+          "position": 4,
+          "team_en": "Japan",
+          "team_ja": "日本",
+          "played": 3,
+          "won": 0,
+          "drawn": 0,
+          "lost": 3,
+          "goals_for": 1,
+          "goals_against": 4,
+          "points": 0
+        }
+      ],
+      "matches": [
+        {
+          "date": "1998-06-14",
+          "home_en": "",
+          "home_ja": "",
+          "away_en": "Japan",
+          "away_ja": "日本",
+          "home_score": 1,
+          "away_score": 0,
+          "scorers": [
+            {
+              "player": "Batistuta",
+              "team": "",
+              "minute": "28"
+            }
+          ]
+        },
+        {
+          "date": "1998-06-14",
+          "home_en": "Jamaica",
+          "home_ja": "ジャマイカ",
+          "away_en": "Croatia",
+          "away_ja": "クロアチア",
+          "home_score": 1,
+          "away_score": 3,
+          "scorers": [
+            {
+              "player": "Earle",
+              "team": "Jamaica",
+              "minute": "45"
+            },
+            {
+              "player": "Stanić",
+              "team": "Croatia",
+              "minute": "27"
+            },
+            {
+              "player": "Prosinečki",
+              "team": "Croatia",
+              "minute": "53"
+            },
+            {
+              "player": "Šuker",
+              "team": "Croatia",
+              "minute": "69"
+            }
+          ]
+        },
+        {
+          "date": "1998-06-20",
+          "home_en": "Japan",
+          "home_ja": "日本",
+          "away_en": "Croatia",
+          "away_ja": "クロアチア",
+          "home_score": 0,
+          "away_score": 1,
+          "scorers": [
+            {
+              "player": "Šuker",
+              "team": "Croatia",
+              "minute": "77"
+            }
+          ]
+        },
+        {
+          "date": "1998-06-21",
+          "home_en": "",
+          "home_ja": "",
+          "away_en": "Jamaica",
+          "away_ja": "ジャマイカ",
+          "home_score": 5,
+          "away_score": 0,
+          "scorers": [
+            {
+              "player": "Ortega",
+              "team": "",
+              "minute": "55"
+            }
+          ]
+        },
+        {
+          "date": "1998-06-26",
+          "home_en": "",
+          "home_ja": "",
+          "away_en": "Croatia",
+          "away_ja": "クロアチア",
+          "home_score": 1,
+          "away_score": 0,
+          "scorers": [
+            {
+              "player": "Pineda",
+              "team": "",
+              "minute": "36"
+            }
+          ]
+        },
+        {
+          "date": "1998-06-26",
+          "home_en": "Japan",
+          "home_ja": "日本",
+          "away_en": "Jamaica",
+          "away_ja": "ジャマイカ",
+          "home_score": 1,
+          "away_score": 2,
+          "scorers": [
+            {
+              "player": "Nakayama",
+              "team": "Japan",
+              "minute": "74"
+            },
+            {
+              "player": "Whitmore",
+              "team": "Jamaica",
+              "minute": "54"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "knockout": {
+    "round_of_16": [
+      {
+        "date": "1998-06-27",
+        "home_en": "Italy",
+        "home_ja": "イタリア",
+        "away_en": "Norway",
+        "away_ja": "ノルウェー",
+        "home_score": 1,
+        "away_score": 0,
+        "et": false,
+        "pk_score": null
+      },
+      {
+        "date": "1998-06-27",
+        "home_en": "Brazil",
+        "home_ja": "ブラジル",
+        "away_en": "Chile",
+        "away_ja": "チリ",
+        "home_score": 4,
+        "away_score": 1,
+        "et": false,
+        "pk_score": null
+      },
+      {
+        "date": "1998-06-28",
+        "home_en": "France",
+        "home_ja": "フランス",
+        "away_en": "Paraguay",
+        "away_ja": "パラグアイ",
+        "home_score": 1,
+        "away_score": 0,
+        "et": false,
+        "pk_score": null
+      },
+      {
+        "date": "1998-06-28",
+        "home_en": "Nigeria",
+        "home_ja": "ナイジェリア",
+        "away_en": "Denmark",
+        "away_ja": "デンマーク",
+        "home_score": 1,
+        "away_score": 4,
+        "et": false,
+        "pk_score": null
+      },
+      {
+        "date": "1998-06-29",
+        "home_en": "Germany",
+        "home_ja": "ドイツ",
+        "away_en": "Mexico",
+        "away_ja": "メキシコ",
+        "home_score": 2,
+        "away_score": 1,
+        "et": false,
+        "pk_score": null
+      },
+      {
+        "date": "1998-06-29",
+        "home_en": "Netherlands",
+        "home_ja": "オランダ",
+        "away_en": "FR",
+        "away_ja": "FR",
+        "home_score": 2,
+        "away_score": 1,
+        "et": false,
+        "pk_score": null
+      },
+      {
+        "date": "1998-06-30",
+        "home_en": "ROU",
+        "home_ja": "ROU",
+        "away_en": "Croatia",
+        "away_ja": "クロアチア",
+        "home_score": 0,
+        "away_score": 1,
+        "et": false,
+        "pk_score": null
+      },
+      {
+        "date": "1998-06-30",
+        "home_en": "Argentina",
+        "home_ja": "アルゼンチン",
+        "away_en": "England",
+        "away_ja": "イングランド",
+        "home_score": 2,
+        "away_score": 2,
+        "et": false,
+        "pk_score": null
+      }
+    ],
+    "quarter_finals": [
+      {
+        "date": "1998-07-03",
+        "home_en": "Italy",
+        "home_ja": "イタリア",
+        "away_en": "France",
+        "away_ja": "フランス",
+        "home_score": 0,
+        "away_score": 0,
+        "et": false,
+        "pk_score": null
+      },
+      {
+        "date": "1998-07-03",
+        "home_en": "Brazil",
+        "home_ja": "ブラジル",
+        "away_en": "Denmark",
+        "away_ja": "デンマーク",
+        "home_score": 3,
+        "away_score": 2,
+        "et": false,
+        "pk_score": null
+      },
+      {
+        "date": "1998-07-04",
+        "home_en": "Netherlands",
+        "home_ja": "オランダ",
+        "away_en": "Argentina",
+        "away_ja": "アルゼンチン",
+        "home_score": 2,
+        "away_score": 1,
+        "et": false,
+        "pk_score": null
+      },
+      {
+        "date": "1998-07-04",
+        "home_en": "Germany",
+        "home_ja": "ドイツ",
+        "away_en": "Croatia",
+        "away_ja": "クロアチア",
+        "home_score": 0,
+        "away_score": 3,
+        "et": false,
+        "pk_score": null
+      }
+    ],
+    "semi_finals": [
+      {
+        "date": "1998-07-07",
+        "home_en": "Brazil",
+        "home_ja": "ブラジル",
+        "away_en": "Netherlands",
+        "away_ja": "オランダ",
+        "home_score": 1,
+        "away_score": 1,
+        "et": false,
+        "pk_score": null
+      },
+      {
+        "date": "1998-07-08",
+        "home_en": "France",
+        "home_ja": "フランス",
+        "away_en": "Croatia",
+        "away_ja": "クロアチア",
+        "home_score": 2,
+        "away_score": 1,
+        "et": false,
+        "pk_score": null
+      }
+    ],
+    "third_place": [
+      {
+        "date": "1998-07-11",
+        "home_en": "Netherlands",
+        "home_ja": "オランダ",
+        "away_en": "Croatia",
+        "away_ja": "クロアチア",
+        "home_score": 1,
+        "away_score": 2,
+        "et": false,
+        "pk_score": null
+      }
+    ],
+    "final": {
+      "home_en": "Brazil",
+      "home_ja": "ブラジル",
+      "away_en": "France",
+      "away_ja": "フランス",
+      "home_score": 0,
+      "away_score": 3,
+      "et": false,
+      "pk_score": null
+    }
+  },
+  "japan_matches": [
+    {
+      "date": "1998-06-14",
+      "stage": "GS-1",
+      "home_en": "Argentina",
+      "home_ja": "アルゼンチン",
+      "away_en": "Japan",
+      "away_ja": "日本",
+      "home_score": 1,
+      "away_score": 0,
+      "japan_scorers": []
+    },
+    {
+      "date": "1998-06-20",
+      "stage": "GS-2",
+      "home_en": "Japan",
+      "home_ja": "日本",
+      "away_en": "Croatia",
+      "away_ja": "クロアチア",
+      "home_score": 0,
+      "away_score": 1,
+      "japan_scorers": []
+    },
+    {
+      "date": "1998-06-26",
+      "stage": "GS-3",
+      "home_en": "Japan",
+      "home_ja": "日本",
+      "away_en": "Jamaica",
+      "away_ja": "ジャマイカ",
+      "home_score": 1,
+      "away_score": 2,
+      "japan_scorers": [
+        "中山雅史 74'"
+      ]
+    }
+  ],
+  "_source": "Wikipedia",
+  "_updated": "2026-05-05"
+}

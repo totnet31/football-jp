@@ -1,0 +1,1745 @@
+{
+  "year": 2014,
+  "host": "ブラジル",
+  "host_en": "Brazil",
+  "japan_group": "C",
+  "groups": [
+    {
+      "group_id": "A",
+      "name_ja": "グループA",
+      "table": [
+        {
+          "position": 1,
+          "team_en": "Brazil",
+          "team_ja": "ブラジル",
+          "played": 3,
+          "won": 2,
+          "drawn": 1,
+          "lost": 0,
+          "goals_for": 7,
+          "goals_against": 2,
+          "points": 7
+        },
+        {
+          "position": 2,
+          "team_en": "Mexico",
+          "team_ja": "メキシコ",
+          "played": 3,
+          "won": 2,
+          "drawn": 1,
+          "lost": 0,
+          "goals_for": 4,
+          "goals_against": 1,
+          "points": 7
+        },
+        {
+          "position": 3,
+          "team_en": "Croatia",
+          "team_ja": "クロアチア",
+          "played": 3,
+          "won": 1,
+          "drawn": 0,
+          "lost": 2,
+          "goals_for": 6,
+          "goals_against": 6,
+          "points": 3
+        },
+        {
+          "position": 4,
+          "team_en": "Cameroon",
+          "team_ja": "カメルーン",
+          "played": 3,
+          "won": 0,
+          "drawn": 0,
+          "lost": 3,
+          "goals_for": 1,
+          "goals_against": 9,
+          "points": 0
+        }
+      ],
+      "matches": [
+        {
+          "date": "2014-06-12",
+          "home_en": "Brazil",
+          "home_ja": "ブラジル",
+          "away_en": "Croatia",
+          "away_ja": "クロアチア",
+          "home_score": 3,
+          "away_score": 1,
+          "scorers": [
+            {
+              "player": "Oscar",
+              "team": "Brazil",
+              "minute": "90+1"
+            }
+          ]
+        },
+        {
+          "date": "2014-06-13",
+          "home_en": "Mexico",
+          "home_ja": "メキシコ",
+          "away_en": "Cameroon",
+          "away_ja": "カメルーン",
+          "home_score": 1,
+          "away_score": 0,
+          "scorers": [
+            {
+              "player": "Peralta",
+              "team": "Mexico",
+              "minute": "61"
+            }
+          ]
+        },
+        {
+          "date": "2014-06-17",
+          "home_en": "Brazil",
+          "home_ja": "ブラジル",
+          "away_en": "Mexico",
+          "away_ja": "メキシコ",
+          "home_score": 0,
+          "away_score": 0,
+          "scorers": []
+        },
+        {
+          "date": "2014-06-18",
+          "home_en": "Cameroon",
+          "home_ja": "カメルーン",
+          "away_en": "Croatia",
+          "away_ja": "クロアチア",
+          "home_score": 0,
+          "away_score": 4,
+          "scorers": [
+            {
+              "player": "Olić",
+              "team": "Croatia",
+              "minute": "11"
+            },
+            {
+              "player": "Perišić",
+              "team": "Croatia",
+              "minute": "48"
+            },
+            {
+              "player": "Mandžukić",
+              "team": "Croatia",
+              "minute": "73"
+            }
+          ]
+        },
+        {
+          "date": "2014-06-23",
+          "home_en": "Cameroon",
+          "home_ja": "カメルーン",
+          "away_en": "Brazil",
+          "away_ja": "ブラジル",
+          "home_score": 1,
+          "away_score": 4,
+          "scorers": [
+            {
+              "player": "Matip",
+              "team": "Cameroon",
+              "minute": "26"
+            },
+            {
+              "player": "Neymar",
+              "team": "Brazil",
+              "minute": "35"
+            },
+            {
+              "player": "Fred",
+              "team": "Brazil",
+              "minute": "49"
+            },
+            {
+              "player": "Fernandinho",
+              "team": "Brazil",
+              "minute": "84"
+            }
+          ]
+        },
+        {
+          "date": "2014-06-23",
+          "home_en": "Croatia",
+          "home_ja": "クロアチア",
+          "away_en": "Mexico",
+          "away_ja": "メキシコ",
+          "home_score": 1,
+          "away_score": 3,
+          "scorers": [
+            {
+              "player": "Perišić",
+              "team": "Croatia",
+              "minute": "87"
+            },
+            {
+              "player": "Márquez",
+              "team": "Mexico",
+              "minute": "72"
+            },
+            {
+              "player": "Guardado",
+              "team": "Mexico",
+              "minute": "75"
+            },
+            {
+              "player": "Hernández",
+              "team": "Mexico",
+              "minute": "82"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "group_id": "B",
+      "name_ja": "グループB",
+      "table": [
+        {
+          "position": 1,
+          "team_en": "Netherlands",
+          "team_ja": "オランダ",
+          "played": 3,
+          "won": 3,
+          "drawn": 0,
+          "lost": 0,
+          "goals_for": 10,
+          "goals_against": 3,
+          "points": 9
+        },
+        {
+          "position": 2,
+          "team_en": "Chile",
+          "team_ja": "チリ",
+          "played": 3,
+          "won": 2,
+          "drawn": 0,
+          "lost": 1,
+          "goals_for": 5,
+          "goals_against": 3,
+          "points": 6
+        },
+        {
+          "position": 3,
+          "team_en": "Spain",
+          "team_ja": "スペイン",
+          "played": 3,
+          "won": 1,
+          "drawn": 0,
+          "lost": 2,
+          "goals_for": 4,
+          "goals_against": 7,
+          "points": 3
+        },
+        {
+          "position": 4,
+          "team_en": "Australia",
+          "team_ja": "オーストラリア",
+          "played": 3,
+          "won": 0,
+          "drawn": 0,
+          "lost": 3,
+          "goals_for": 3,
+          "goals_against": 9,
+          "points": 0
+        }
+      ],
+      "matches": [
+        {
+          "date": "2014-06-13",
+          "home_en": "Spain",
+          "home_ja": "スペイン",
+          "away_en": "Netherlands",
+          "away_ja": "オランダ",
+          "home_score": 1,
+          "away_score": 5,
+          "scorers": [
+            {
+              "player": "Van Persie",
+              "team": "Netherlands",
+              "minute": "72"
+            },
+            {
+              "player": "Robben",
+              "team": "Netherlands",
+              "minute": "80"
+            },
+            {
+              "player": "De Vrij",
+              "team": "Netherlands",
+              "minute": "64"
+            }
+          ]
+        },
+        {
+          "date": "2014-06-13",
+          "home_en": "Chile",
+          "home_ja": "チリ",
+          "away_en": "Australia",
+          "away_ja": "オーストラリア",
+          "home_score": 3,
+          "away_score": 1,
+          "scorers": [
+            {
+              "player": "Sánchez",
+              "team": "Chile",
+              "minute": "12"
+            },
+            {
+              "player": "Valdivia",
+              "team": "Chile",
+              "minute": "14"
+            },
+            {
+              "player": "Beausejour",
+              "team": "Chile",
+              "minute": "90+2"
+            },
+            {
+              "player": "Cahill",
+              "team": "Australia",
+              "minute": "35"
+            }
+          ]
+        },
+        {
+          "date": "2014-06-18",
+          "home_en": "Australia",
+          "home_ja": "オーストラリア",
+          "away_en": "Netherlands",
+          "away_ja": "オランダ",
+          "home_score": 2,
+          "away_score": 3,
+          "scorers": [
+            {
+              "player": "Cahill",
+              "team": "Australia",
+              "minute": "21"
+            },
+            {
+              "player": "Robben",
+              "team": "Netherlands",
+              "minute": "20"
+            },
+            {
+              "player": "Van Persie",
+              "team": "Netherlands",
+              "minute": "58"
+            },
+            {
+              "player": "Depay",
+              "team": "Netherlands",
+              "minute": "68"
+            }
+          ]
+        },
+        {
+          "date": "2014-06-18",
+          "home_en": "Spain",
+          "home_ja": "スペイン",
+          "away_en": "Chile",
+          "away_ja": "チリ",
+          "home_score": 0,
+          "away_score": 2,
+          "scorers": [
+            {
+              "player": "Vargas",
+              "team": "Chile",
+              "minute": "20"
+            },
+            {
+              "player": "Aránguiz",
+              "team": "Chile",
+              "minute": "43"
+            }
+          ]
+        },
+        {
+          "date": "2014-06-23",
+          "home_en": "Australia",
+          "home_ja": "オーストラリア",
+          "away_en": "Spain",
+          "away_ja": "スペイン",
+          "home_score": 0,
+          "away_score": 3,
+          "scorers": [
+            {
+              "player": "Villa",
+              "team": "Spain",
+              "minute": "36"
+            },
+            {
+              "player": "Torres",
+              "team": "Spain",
+              "minute": "69"
+            },
+            {
+              "player": "Mata",
+              "team": "Spain",
+              "minute": "82"
+            }
+          ]
+        },
+        {
+          "date": "2014-06-23",
+          "home_en": "Netherlands",
+          "home_ja": "オランダ",
+          "away_en": "Chile",
+          "away_ja": "チリ",
+          "home_score": 2,
+          "away_score": 0,
+          "scorers": [
+            {
+              "player": "Fer",
+              "team": "Netherlands",
+              "minute": "77"
+            },
+            {
+              "player": "Depay",
+              "team": "Netherlands",
+              "minute": "90+2"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "group_id": "C",
+      "name_ja": "グループC",
+      "table": [
+        {
+          "position": 1,
+          "team_en": "Colombia",
+          "team_ja": "コロンビア",
+          "played": 3,
+          "won": 3,
+          "drawn": 0,
+          "lost": 0,
+          "goals_for": 9,
+          "goals_against": 2,
+          "points": 9
+        },
+        {
+          "position": 2,
+          "team_en": "Greece",
+          "team_ja": "ギリシャ",
+          "played": 3,
+          "won": 1,
+          "drawn": 1,
+          "lost": 1,
+          "goals_for": 2,
+          "goals_against": 4,
+          "points": 4
+        },
+        {
+          "position": 3,
+          "team_en": "Ivory Coast",
+          "team_ja": "コートジボワール",
+          "played": 3,
+          "won": 1,
+          "drawn": 0,
+          "lost": 2,
+          "goals_for": 4,
+          "goals_against": 5,
+          "points": 3
+        },
+        {
+          "position": 4,
+          "team_en": "Japan",
+          "team_ja": "日本",
+          "played": 3,
+          "won": 0,
+          "drawn": 1,
+          "lost": 2,
+          "goals_for": 2,
+          "goals_against": 6,
+          "points": 1
+        }
+      ],
+      "matches": [
+        {
+          "date": "2014-06-14",
+          "home_en": "Colombia",
+          "home_ja": "コロンビア",
+          "away_en": "Greece",
+          "away_ja": "ギリシャ",
+          "home_score": 3,
+          "away_score": 0,
+          "scorers": [
+            {
+              "player": "Armero",
+              "team": "Colombia",
+              "minute": "5"
+            },
+            {
+              "player": "Gutiérrez",
+              "team": "Colombia",
+              "minute": "58"
+            },
+            {
+              "player": "Rodríguez",
+              "team": "Colombia",
+              "minute": "90+3"
+            }
+          ]
+        },
+        {
+          "date": "2014-06-14",
+          "home_en": "Ivory Coast",
+          "home_ja": "コートジボワール",
+          "away_en": "Japan",
+          "away_ja": "日本",
+          "home_score": 2,
+          "away_score": 1,
+          "scorers": [
+            {
+              "player": "Bony",
+              "team": "Ivory Coast",
+              "minute": "64"
+            },
+            {
+              "player": "Gervinho",
+              "team": "Ivory Coast",
+              "minute": "66"
+            },
+            {
+              "player": "Honda",
+              "team": "Japan",
+              "minute": "16"
+            }
+          ]
+        },
+        {
+          "date": "2014-06-19",
+          "home_en": "Colombia",
+          "home_ja": "コロンビア",
+          "away_en": "Ivory Coast",
+          "away_ja": "コートジボワール",
+          "home_score": 2,
+          "away_score": 1,
+          "scorers": [
+            {
+              "player": "Rodríguez",
+              "team": "Colombia",
+              "minute": "64"
+            },
+            {
+              "player": "Quintero",
+              "team": "Colombia",
+              "minute": "70"
+            },
+            {
+              "player": "Gervinho",
+              "team": "Ivory Coast",
+              "minute": "73"
+            }
+          ]
+        },
+        {
+          "date": "2014-06-19",
+          "home_en": "Japan",
+          "home_ja": "日本",
+          "away_en": "Greece",
+          "away_ja": "ギリシャ",
+          "home_score": 0,
+          "away_score": 0,
+          "scorers": []
+        },
+        {
+          "date": "2014-06-24",
+          "home_en": "Japan",
+          "home_ja": "日本",
+          "away_en": "Colombia",
+          "away_ja": "コロンビア",
+          "home_score": 1,
+          "away_score": 4,
+          "scorers": [
+            {
+              "player": "Okazaki",
+              "team": "Japan",
+              "minute": "45+1"
+            },
+            {
+              "player": "Martínez",
+              "team": "Colombia",
+              "minute": "82"
+            },
+            {
+              "player": "Rodríguez",
+              "team": "Colombia",
+              "minute": "90"
+            }
+          ]
+        },
+        {
+          "date": "2014-06-24",
+          "home_en": "Greece",
+          "home_ja": "ギリシャ",
+          "away_en": "Ivory Coast",
+          "away_ja": "コートジボワール",
+          "home_score": 2,
+          "away_score": 1,
+          "scorers": [
+            {
+              "player": "Samaris",
+              "team": "Greece",
+              "minute": "42"
+            },
+            {
+              "player": "Bony",
+              "team": "Ivory Coast",
+              "minute": "74"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "group_id": "D",
+      "name_ja": "グループD",
+      "table": [
+        {
+          "position": 1,
+          "team_en": "Costa Rica",
+          "team_ja": "コスタリカ",
+          "played": 3,
+          "won": 2,
+          "drawn": 1,
+          "lost": 0,
+          "goals_for": 4,
+          "goals_against": 1,
+          "points": 7
+        },
+        {
+          "position": 2,
+          "team_en": "Uruguay",
+          "team_ja": "ウルグアイ",
+          "played": 3,
+          "won": 2,
+          "drawn": 0,
+          "lost": 1,
+          "goals_for": 4,
+          "goals_against": 4,
+          "points": 6
+        },
+        {
+          "position": 3,
+          "team_en": "Italy",
+          "team_ja": "イタリア",
+          "played": 3,
+          "won": 1,
+          "drawn": 0,
+          "lost": 2,
+          "goals_for": 2,
+          "goals_against": 3,
+          "points": 3
+        },
+        {
+          "position": 4,
+          "team_en": "England",
+          "team_ja": "イングランド",
+          "played": 3,
+          "won": 0,
+          "drawn": 1,
+          "lost": 2,
+          "goals_for": 2,
+          "goals_against": 4,
+          "points": 1
+        }
+      ],
+      "matches": [
+        {
+          "date": "2014-06-14",
+          "home_en": "Uruguay",
+          "home_ja": "ウルグアイ",
+          "away_en": "Costa Rica",
+          "away_ja": "コスタリカ",
+          "home_score": 1,
+          "away_score": 3,
+          "scorers": [
+            {
+              "player": "Campbell",
+              "team": "Costa Rica",
+              "minute": "54"
+            },
+            {
+              "player": "Duarte",
+              "team": "Costa Rica",
+              "minute": "57"
+            },
+            {
+              "player": "Ureña",
+              "team": "Costa Rica",
+              "minute": "84"
+            }
+          ]
+        },
+        {
+          "date": "2014-06-14",
+          "home_en": "England",
+          "home_ja": "イングランド",
+          "away_en": "Italy",
+          "away_ja": "イタリア",
+          "home_score": 1,
+          "away_score": 2,
+          "scorers": [
+            {
+              "player": "Sturridge",
+              "team": "England",
+              "minute": "37"
+            },
+            {
+              "player": "Marchisio",
+              "team": "Italy",
+              "minute": "35"
+            },
+            {
+              "player": "Balotelli",
+              "team": "Italy",
+              "minute": "50"
+            }
+          ]
+        },
+        {
+          "date": "2014-06-19",
+          "home_en": "Uruguay",
+          "home_ja": "ウルグアイ",
+          "away_en": "England",
+          "away_ja": "イングランド",
+          "home_score": 2,
+          "away_score": 1,
+          "scorers": [
+            {
+              "player": "Suárez",
+              "team": "Uruguay",
+              "minute": "85"
+            },
+            {
+              "player": "Rooney",
+              "team": "England",
+              "minute": "75"
+            }
+          ]
+        },
+        {
+          "date": "2014-06-20",
+          "home_en": "Italy",
+          "home_ja": "イタリア",
+          "away_en": "Costa Rica",
+          "away_ja": "コスタリカ",
+          "home_score": 0,
+          "away_score": 1,
+          "scorers": [
+            {
+              "player": "Ruiz",
+              "team": "Costa Rica",
+              "minute": "44"
+            }
+          ]
+        },
+        {
+          "date": "2014-06-24",
+          "home_en": "Italy",
+          "home_ja": "イタリア",
+          "away_en": "Uruguay",
+          "away_ja": "ウルグアイ",
+          "home_score": 0,
+          "away_score": 1,
+          "scorers": [
+            {
+              "player": "Godín",
+              "team": "Uruguay",
+              "minute": "81"
+            }
+          ]
+        },
+        {
+          "date": "2014-06-24",
+          "home_en": "Costa Rica",
+          "home_ja": "コスタリカ",
+          "away_en": "England",
+          "away_ja": "イングランド",
+          "home_score": 0,
+          "away_score": 0,
+          "scorers": []
+        }
+      ]
+    },
+    {
+      "group_id": "E",
+      "name_ja": "グループE",
+      "table": [
+        {
+          "position": 1,
+          "team_en": "France",
+          "team_ja": "フランス",
+          "played": 3,
+          "won": 2,
+          "drawn": 1,
+          "lost": 0,
+          "goals_for": 8,
+          "goals_against": 2,
+          "points": 7
+        },
+        {
+          "position": 2,
+          "team_en": "Switzerland",
+          "team_ja": "スイス",
+          "played": 3,
+          "won": 2,
+          "drawn": 0,
+          "lost": 1,
+          "goals_for": 7,
+          "goals_against": 6,
+          "points": 6
+        },
+        {
+          "position": 3,
+          "team_en": "Ecuador",
+          "team_ja": "エクアドル",
+          "played": 3,
+          "won": 1,
+          "drawn": 1,
+          "lost": 1,
+          "goals_for": 3,
+          "goals_against": 3,
+          "points": 4
+        },
+        {
+          "position": 4,
+          "team_en": "Honduras",
+          "team_ja": "ホンジュラス",
+          "played": 3,
+          "won": 0,
+          "drawn": 0,
+          "lost": 3,
+          "goals_for": 1,
+          "goals_against": 8,
+          "points": 0
+        }
+      ],
+      "matches": [
+        {
+          "date": "2014-06-15",
+          "home_en": "Switzerland",
+          "home_ja": "スイス",
+          "away_en": "Ecuador",
+          "away_ja": "エクアドル",
+          "home_score": 2,
+          "away_score": 1,
+          "scorers": [
+            {
+              "player": "Mehmedi",
+              "team": "Switzerland",
+              "minute": "48"
+            },
+            {
+              "player": "Seferovic",
+              "team": "Switzerland",
+              "minute": "90+3"
+            },
+            {
+              "player": "E. Valencia",
+              "team": "Ecuador",
+              "minute": "22"
+            }
+          ]
+        },
+        {
+          "date": "2014-06-15",
+          "home_en": "",
+          "home_ja": "",
+          "away_en": "",
+          "away_ja": "",
+          "home_score": 3,
+          "away_score": 0,
+          "scorers": [
+            {
+              "player": "Benzema",
+              "team": "",
+              "minute": "72"
+            }
+          ]
+        },
+        {
+          "date": "2014-06-20",
+          "home_en": "Switzerland",
+          "home_ja": "スイス",
+          "away_en": "",
+          "away_ja": "",
+          "home_score": 2,
+          "away_score": 5,
+          "scorers": [
+            {
+              "player": "Džemaili",
+              "team": "Switzerland",
+              "minute": "81"
+            },
+            {
+              "player": "Xhaka",
+              "team": "Switzerland",
+              "minute": "87"
+            },
+            {
+              "player": "Giroud",
+              "team": "",
+              "minute": "17"
+            },
+            {
+              "player": "Matuidi",
+              "team": "",
+              "minute": "18"
+            },
+            {
+              "player": "Valbuena",
+              "team": "",
+              "minute": "40"
+            },
+            {
+              "player": "Benzema",
+              "team": "",
+              "minute": "67"
+            },
+            {
+              "player": "Sissoko",
+              "team": "",
+              "minute": "73"
+            }
+          ]
+        },
+        {
+          "date": "2014-06-20",
+          "home_en": "",
+          "home_ja": "",
+          "away_en": "Ecuador",
+          "away_ja": "エクアドル",
+          "home_score": 1,
+          "away_score": 2,
+          "scorers": [
+            {
+              "player": "Costly",
+              "team": "",
+              "minute": "31"
+            },
+            {
+              "player": "E. Valencia",
+              "team": "Ecuador",
+              "minute": "65"
+            }
+          ]
+        },
+        {
+          "date": "2014-06-25",
+          "home_en": "",
+          "home_ja": "",
+          "away_en": "Switzerland",
+          "away_ja": "スイス",
+          "home_score": 0,
+          "away_score": 3,
+          "scorers": [
+            {
+              "player": "Shaqiri",
+              "team": "Switzerland",
+              "minute": "71"
+            }
+          ]
+        },
+        {
+          "date": "2014-06-25",
+          "home_en": "Ecuador",
+          "home_ja": "エクアドル",
+          "away_en": "",
+          "away_ja": "",
+          "home_score": 0,
+          "away_score": 0,
+          "scorers": []
+        }
+      ]
+    },
+    {
+      "group_id": "F",
+      "name_ja": "グループF",
+      "table": [
+        {
+          "position": 1,
+          "team_en": "Argentina",
+          "team_ja": "アルゼンチン",
+          "played": 3,
+          "won": 3,
+          "drawn": 0,
+          "lost": 0,
+          "goals_for": 6,
+          "goals_against": 3,
+          "points": 9
+        },
+        {
+          "position": 2,
+          "team_en": "Nigeria",
+          "team_ja": "ナイジェリア",
+          "played": 3,
+          "won": 1,
+          "drawn": 1,
+          "lost": 1,
+          "goals_for": 3,
+          "goals_against": 3,
+          "points": 4
+        },
+        {
+          "position": 3,
+          "team_en": "Bosnia and Herzegovina",
+          "team_ja": "ボスニア・ヘルツェゴビナ",
+          "played": 3,
+          "won": 1,
+          "drawn": 0,
+          "lost": 2,
+          "goals_for": 4,
+          "goals_against": 4,
+          "points": 3
+        },
+        {
+          "position": 4,
+          "team_en": "Iran",
+          "team_ja": "イラン",
+          "played": 3,
+          "won": 0,
+          "drawn": 1,
+          "lost": 2,
+          "goals_for": 1,
+          "goals_against": 4,
+          "points": 1
+        }
+      ],
+      "matches": [
+        {
+          "date": "2014-06-15",
+          "home_en": "Argentina",
+          "home_ja": "アルゼンチン",
+          "away_en": "Bosnia and Herzegovina",
+          "away_ja": "ボスニア・ヘルツェゴビナ",
+          "home_score": 2,
+          "away_score": 1,
+          "scorers": [
+            {
+              "player": "Messi",
+              "team": "Argentina",
+              "minute": "65"
+            },
+            {
+              "player": "Ibišević",
+              "team": "Bosnia and Herzegovina",
+              "minute": "85"
+            }
+          ]
+        },
+        {
+          "date": "2014-06-16",
+          "home_en": "Iran",
+          "home_ja": "イラン",
+          "away_en": "Nigeria",
+          "away_ja": "ナイジェリア",
+          "home_score": 0,
+          "away_score": 0,
+          "scorers": []
+        },
+        {
+          "date": "2014-06-21",
+          "home_en": "Argentina",
+          "home_ja": "アルゼンチン",
+          "away_en": "Iran",
+          "away_ja": "イラン",
+          "home_score": 1,
+          "away_score": 0,
+          "scorers": [
+            {
+              "player": "Messi",
+              "team": "Argentina",
+              "minute": "90+1"
+            }
+          ]
+        },
+        {
+          "date": "2014-06-21",
+          "home_en": "Nigeria",
+          "home_ja": "ナイジェリア",
+          "away_en": "Bosnia and Herzegovina",
+          "away_ja": "ボスニア・ヘルツェゴビナ",
+          "home_score": 1,
+          "away_score": 0,
+          "scorers": [
+            {
+              "player": "Odemwingie",
+              "team": "Nigeria",
+              "minute": "29"
+            }
+          ]
+        },
+        {
+          "date": "2014-06-25",
+          "home_en": "Nigeria",
+          "home_ja": "ナイジェリア",
+          "away_en": "Argentina",
+          "away_ja": "アルゼンチン",
+          "home_score": 2,
+          "away_score": 3,
+          "scorers": [
+            {
+              "player": "Musa",
+              "team": "Nigeria",
+              "minute": "47"
+            },
+            {
+              "player": "Messi",
+              "team": "Argentina",
+              "minute": "45+1"
+            },
+            {
+              "player": "Rojo",
+              "team": "Argentina",
+              "minute": "50"
+            }
+          ]
+        },
+        {
+          "date": "2014-06-25",
+          "home_en": "Bosnia and Herzegovina",
+          "home_ja": "ボスニア・ヘルツェゴビナ",
+          "away_en": "Iran",
+          "away_ja": "イラン",
+          "home_score": 3,
+          "away_score": 1,
+          "scorers": [
+            {
+              "player": "Džeko",
+              "team": "Bosnia and Herzegovina",
+              "minute": "23"
+            },
+            {
+              "player": "Pjanić",
+              "team": "Bosnia and Herzegovina",
+              "minute": "59"
+            },
+            {
+              "player": "Vršajević",
+              "team": "Bosnia and Herzegovina",
+              "minute": "83"
+            },
+            {
+              "player": "Ghoochannejhad",
+              "team": "Iran",
+              "minute": "82"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "group_id": "G",
+      "name_ja": "グループG",
+      "table": [
+        {
+          "position": 1,
+          "team_en": "Germany",
+          "team_ja": "ドイツ",
+          "played": 3,
+          "won": 2,
+          "drawn": 1,
+          "lost": 0,
+          "goals_for": 7,
+          "goals_against": 2,
+          "points": 7
+        },
+        {
+          "position": 2,
+          "team_en": "United States",
+          "team_ja": "アメリカ合衆国",
+          "played": 3,
+          "won": 1,
+          "drawn": 1,
+          "lost": 1,
+          "goals_for": 4,
+          "goals_against": 4,
+          "points": 4
+        },
+        {
+          "position": 3,
+          "team_en": "Portugal",
+          "team_ja": "ポルトガル",
+          "played": 3,
+          "won": 1,
+          "drawn": 1,
+          "lost": 1,
+          "goals_for": 4,
+          "goals_against": 7,
+          "points": 4
+        },
+        {
+          "position": 4,
+          "team_en": "Ghana",
+          "team_ja": "ガーナ",
+          "played": 3,
+          "won": 0,
+          "drawn": 1,
+          "lost": 2,
+          "goals_for": 4,
+          "goals_against": 6,
+          "points": 1
+        }
+      ],
+      "matches": [
+        {
+          "date": "2014-06-16",
+          "home_en": "Germany",
+          "home_ja": "ドイツ",
+          "away_en": "Portugal",
+          "away_ja": "ポルトガル",
+          "home_score": 4,
+          "away_score": 0,
+          "scorers": [
+            {
+              "player": "Müller",
+              "team": "Germany",
+              "minute": "78"
+            },
+            {
+              "player": "Hummels",
+              "team": "Germany",
+              "minute": "32"
+            }
+          ]
+        },
+        {
+          "date": "2014-06-16",
+          "home_en": "Ghana",
+          "home_ja": "ガーナ",
+          "away_en": "United States",
+          "away_ja": "アメリカ合衆国",
+          "home_score": 1,
+          "away_score": 2,
+          "scorers": [
+            {
+              "player": "A. Ayew",
+              "team": "Ghana",
+              "minute": "82"
+            },
+            {
+              "player": "Dempsey",
+              "team": "United States",
+              "minute": "1"
+            },
+            {
+              "player": "Brooks",
+              "team": "United States",
+              "minute": "86"
+            }
+          ]
+        },
+        {
+          "date": "2014-06-21",
+          "home_en": "Germany",
+          "home_ja": "ドイツ",
+          "away_en": "Ghana",
+          "away_ja": "ガーナ",
+          "home_score": 2,
+          "away_score": 2,
+          "scorers": [
+            {
+              "player": "Götze",
+              "team": "Germany",
+              "minute": "51"
+            },
+            {
+              "player": "Klose",
+              "team": "Germany",
+              "minute": "71"
+            },
+            {
+              "player": "A. Ayew",
+              "team": "Ghana",
+              "minute": "54"
+            },
+            {
+              "player": "Gyan",
+              "team": "Ghana",
+              "minute": "63"
+            }
+          ]
+        },
+        {
+          "date": "2014-06-22",
+          "home_en": "United States",
+          "home_ja": "アメリカ合衆国",
+          "away_en": "Portugal",
+          "away_ja": "ポルトガル",
+          "home_score": 2,
+          "away_score": 2,
+          "scorers": [
+            {
+              "player": "Jones",
+              "team": "United States",
+              "minute": "64"
+            },
+            {
+              "player": "Dempsey",
+              "team": "United States",
+              "minute": "81"
+            },
+            {
+              "player": "Nani",
+              "team": "Portugal",
+              "minute": "5"
+            },
+            {
+              "player": "Varela",
+              "team": "Portugal",
+              "minute": "90+5"
+            }
+          ]
+        },
+        {
+          "date": "2014-06-26",
+          "home_en": "United States",
+          "home_ja": "アメリカ合衆国",
+          "away_en": "Germany",
+          "away_ja": "ドイツ",
+          "home_score": 0,
+          "away_score": 1,
+          "scorers": [
+            {
+              "player": "Müller",
+              "team": "Germany",
+              "minute": "55"
+            }
+          ]
+        },
+        {
+          "date": "2014-06-26",
+          "home_en": "Portugal",
+          "home_ja": "ポルトガル",
+          "away_en": "Ghana",
+          "away_ja": "ガーナ",
+          "home_score": 2,
+          "away_score": 1,
+          "scorers": [
+            {
+              "player": "Ronaldo",
+              "team": "Portugal",
+              "minute": "80"
+            },
+            {
+              "player": "Gyan",
+              "team": "Ghana",
+              "minute": "57"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "group_id": "H",
+      "name_ja": "グループH",
+      "table": [
+        {
+          "position": 1,
+          "team_en": "Belgium",
+          "team_ja": "ベルギー",
+          "played": 3,
+          "won": 3,
+          "drawn": 0,
+          "lost": 0,
+          "goals_for": 4,
+          "goals_against": 1,
+          "points": 9
+        },
+        {
+          "position": 2,
+          "team_en": "Algeria",
+          "team_ja": "アルジェリア",
+          "played": 3,
+          "won": 1,
+          "drawn": 1,
+          "lost": 1,
+          "goals_for": 6,
+          "goals_against": 5,
+          "points": 4
+        },
+        {
+          "position": 3,
+          "team_en": "Russia",
+          "team_ja": "ロシア",
+          "played": 3,
+          "won": 0,
+          "drawn": 2,
+          "lost": 1,
+          "goals_for": 2,
+          "goals_against": 3,
+          "points": 2
+        },
+        {
+          "position": 4,
+          "team_en": "South Korea",
+          "team_ja": "韓国",
+          "played": 3,
+          "won": 0,
+          "drawn": 1,
+          "lost": 2,
+          "goals_for": 3,
+          "goals_against": 6,
+          "points": 1
+        }
+      ],
+      "matches": [
+        {
+          "date": "2014-06-17",
+          "home_en": "Belgium",
+          "home_ja": "ベルギー",
+          "away_en": "Algeria",
+          "away_ja": "アルジェリア",
+          "home_score": 2,
+          "away_score": 1,
+          "scorers": [
+            {
+              "player": "Fellaini",
+              "team": "Belgium",
+              "minute": "70"
+            },
+            {
+              "player": "Mertens",
+              "team": "Belgium",
+              "minute": "80"
+            }
+          ]
+        },
+        {
+          "date": "2014-06-17",
+          "home_en": "Russia",
+          "home_ja": "ロシア",
+          "away_en": "South Korea",
+          "away_ja": "韓国",
+          "home_score": 1,
+          "away_score": 1,
+          "scorers": [
+            {
+              "player": "Kerzhakov",
+              "team": "Russia",
+              "minute": "74"
+            },
+            {
+              "player": "Lee Keun-ho",
+              "team": "South Korea",
+              "minute": "68"
+            }
+          ]
+        },
+        {
+          "date": "2014-06-22",
+          "home_en": "Belgium",
+          "home_ja": "ベルギー",
+          "away_en": "Russia",
+          "away_ja": "ロシア",
+          "home_score": 1,
+          "away_score": 0,
+          "scorers": [
+            {
+              "player": "Origi",
+              "team": "Belgium",
+              "minute": "88"
+            }
+          ]
+        },
+        {
+          "date": "2014-06-22",
+          "home_en": "South Korea",
+          "home_ja": "韓国",
+          "away_en": "Algeria",
+          "away_ja": "アルジェリア",
+          "home_score": 2,
+          "away_score": 4,
+          "scorers": [
+            {
+              "player": "Son Heung-min",
+              "team": "South Korea",
+              "minute": "50"
+            },
+            {
+              "player": "Koo Ja-cheol",
+              "team": "South Korea",
+              "minute": "72"
+            },
+            {
+              "player": "Slimani",
+              "team": "Algeria",
+              "minute": "26"
+            },
+            {
+              "player": "Halliche",
+              "team": "Algeria",
+              "minute": "28"
+            },
+            {
+              "player": "Djabou",
+              "team": "Algeria",
+              "minute": "38"
+            },
+            {
+              "player": "Brahimi",
+              "team": "Algeria",
+              "minute": "62"
+            }
+          ]
+        },
+        {
+          "date": "2014-06-26",
+          "home_en": "South Korea",
+          "home_ja": "韓国",
+          "away_en": "Belgium",
+          "away_ja": "ベルギー",
+          "home_score": 0,
+          "away_score": 1,
+          "scorers": [
+            {
+              "player": "Vertonghen",
+              "team": "Belgium",
+              "minute": "78"
+            }
+          ]
+        },
+        {
+          "date": "2014-06-26",
+          "home_en": "Algeria",
+          "home_ja": "アルジェリア",
+          "away_en": "Russia",
+          "away_ja": "ロシア",
+          "home_score": 1,
+          "away_score": 1,
+          "scorers": [
+            {
+              "player": "Slimani",
+              "team": "Algeria",
+              "minute": "60"
+            },
+            {
+              "player": "Kokorin",
+              "team": "Russia",
+              "minute": "6"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "knockout": {
+    "round_of_16": [
+      {
+        "date": "2014-06-28",
+        "home_en": "Brazil",
+        "home_ja": "ブラジル",
+        "away_en": "Chile",
+        "away_ja": "チリ",
+        "home_score": 1,
+        "away_score": 1,
+        "et": false,
+        "pk_score": "1988-1985"
+      },
+      {
+        "date": "2014-06-28",
+        "home_en": "Colombia",
+        "home_ja": "コロンビア",
+        "away_en": "Uruguay",
+        "away_ja": "ウルグアイ",
+        "home_score": 2,
+        "away_score": 0,
+        "et": false,
+        "pk_score": null
+      },
+      {
+        "date": "2014-06-29",
+        "home_en": "Netherlands",
+        "home_ja": "オランダ",
+        "away_en": "Mexico",
+        "away_ja": "メキシコ",
+        "home_score": 2,
+        "away_score": 1,
+        "et": false,
+        "pk_score": null
+      },
+      {
+        "date": "2014-06-29",
+        "home_en": "Costa Rica",
+        "home_ja": "コスタリカ",
+        "away_en": "Greece",
+        "away_ja": "ギリシャ",
+        "home_score": 1,
+        "away_score": 1,
+        "et": false,
+        "pk_score": null
+      },
+      {
+        "date": "2014-06-30",
+        "home_en": "France",
+        "home_ja": "フランス",
+        "away_en": "Nigeria",
+        "away_ja": "ナイジェリア",
+        "home_score": 2,
+        "away_score": 0,
+        "et": false,
+        "pk_score": null
+      },
+      {
+        "date": "2014-06-30",
+        "home_en": "Germany",
+        "home_ja": "ドイツ",
+        "away_en": "Algeria",
+        "away_ja": "アルジェリア",
+        "home_score": 2,
+        "away_score": 1,
+        "et": false,
+        "pk_score": null
+      },
+      {
+        "date": "2014-07-01",
+        "home_en": "Argentina",
+        "home_ja": "アルゼンチン",
+        "away_en": "Switzerland",
+        "away_ja": "スイス",
+        "home_score": 1,
+        "away_score": 0,
+        "et": false,
+        "pk_score": null
+      },
+      {
+        "date": "2014-07-01",
+        "home_en": "Belgium",
+        "home_ja": "ベルギー",
+        "away_en": "United States",
+        "away_ja": "アメリカ合衆国",
+        "home_score": 2,
+        "away_score": 1,
+        "et": false,
+        "pk_score": null
+      }
+    ],
+    "quarter_finals": [
+      {
+        "date": "2014-07-04",
+        "home_en": "France",
+        "home_ja": "フランス",
+        "away_en": "Germany",
+        "away_ja": "ドイツ",
+        "home_score": 0,
+        "away_score": 1,
+        "et": false,
+        "pk_score": null
+      },
+      {
+        "date": "2014-07-04",
+        "home_en": "Brazil",
+        "home_ja": "ブラジル",
+        "away_en": "Colombia",
+        "away_ja": "コロンビア",
+        "home_score": 2,
+        "away_score": 1,
+        "et": false,
+        "pk_score": null
+      },
+      {
+        "date": "2014-07-05",
+        "home_en": "Argentina",
+        "home_ja": "アルゼンチン",
+        "away_en": "Belgium",
+        "away_ja": "ベルギー",
+        "home_score": 1,
+        "away_score": 0,
+        "et": false,
+        "pk_score": null
+      },
+      {
+        "date": "2014-07-05",
+        "home_en": "Netherlands",
+        "home_ja": "オランダ",
+        "away_en": "Costa Rica",
+        "away_ja": "コスタリカ",
+        "home_score": 0,
+        "away_score": 0,
+        "et": false,
+        "pk_score": null
+      }
+    ],
+    "semi_finals": [
+      {
+        "date": "2014-07-09",
+        "home_en": "Netherlands",
+        "home_ja": "オランダ",
+        "away_en": "Argentina",
+        "away_ja": "アルゼンチン",
+        "home_score": 0,
+        "away_score": 0,
+        "et": false,
+        "pk_score": null
+      }
+    ],
+    "third_place": [
+      {
+        "date": "2014-07-12",
+        "home_en": "Brazil",
+        "home_ja": "ブラジル",
+        "away_en": "Netherlands",
+        "away_ja": "オランダ",
+        "home_score": 0,
+        "away_score": 3,
+        "et": false,
+        "pk_score": null
+      }
+    ],
+    "final": {
+      "date": "2014-07-13",
+      "home_en": "Germany",
+      "home_ja": "ドイツ",
+      "away_en": "Argentina",
+      "away_ja": "アルゼンチン",
+      "home_score": 1,
+      "away_score": 0,
+      "et": false,
+      "pk_score": null
+    }
+  },
+  "japan_matches": [
+    {
+      "date": "2014-06-14",
+      "stage": "GS-1",
+      "home_en": "Japan",
+      "home_ja": "日本",
+      "away_en": "Ivory Coast",
+      "away_ja": "コートジボワール",
+      "home_score": 1,
+      "away_score": 2,
+      "japan_scorers": [
+        "本田圭佑 16'"
+      ]
+    },
+    {
+      "date": "2014-06-19",
+      "stage": "GS-2",
+      "home_en": "Japan",
+      "home_ja": "日本",
+      "away_en": "Greece",
+      "away_ja": "ギリシャ",
+      "home_score": 0,
+      "away_score": 0,
+      "japan_scorers": []
+    },
+    {
+      "date": "2014-06-24",
+      "stage": "GS-3",
+      "home_en": "Colombia",
+      "home_ja": "コロンビア",
+      "away_en": "Japan",
+      "away_ja": "日本",
+      "home_score": 4,
+      "away_score": 1,
+      "japan_scorers": [
+        "岡崎慎司 45+1'"
+      ]
+    }
+  ],
+  "_source": "Wikipedia",
+  "_updated": "2026-05-05"
+}
