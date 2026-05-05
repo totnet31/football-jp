@@ -1307,3 +1307,396 @@ footer a { color: var(--text-sub); }
   font-size: 13px;
   flex-shrink: 0;
 }
+
+/* ============================
+   リーグハブページ（leagues/）
+   ============================ */
+
+/* ヒーローセクション */
+.league-hero {
+  background: linear-gradient(135deg, #0b1220 0%, #1e293b 100%);
+  padding: 24px 16px 20px;
+  margin-bottom: 0;
+  border-bottom: 1px solid #334155;
+}
+.league-hero-inner {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  max-width: 800px;
+}
+.league-flag-big {
+  font-size: 48px;
+  line-height: 1;
+  flex-shrink: 0;
+}
+.league-name-ja {
+  margin: 0 0 2px;
+  font-size: 24px;
+  font-weight: 800;
+  color: #f1f5f9;
+}
+.league-name-en {
+  margin: 0 0 6px;
+  font-size: 14px;
+  color: #94a3b8;
+}
+.league-summary {
+  margin: 0;
+  font-size: 14px;
+  color: #cbd5e1;
+}
+.league-summary strong {
+  color: #38bdf8;
+}
+
+/* セクション共通 */
+.league-section {
+  padding: 18px 16px;
+  border-bottom: 1px solid #e5e7eb;
+}
+.section-title {
+  font-size: 16px;
+  font-weight: 700;
+  margin: 0 0 12px;
+  color: #1e293b;
+  padding-bottom: 6px;
+  border-bottom: 2px solid #38bdf8;
+  display: inline-block;
+}
+.section-note {
+  font-size: 12px;
+  color: #64748b;
+  margin: -6px 0 10px;
+}
+
+/* クラブグループ */
+.club-group {
+  margin-bottom: 18px;
+}
+.club-group-name {
+  font-size: 14px;
+  font-weight: 700;
+  margin: 0 0 8px;
+  color: #334155;
+}
+.club-link {
+  color: #2563eb;
+  text-decoration: none;
+}
+.club-link:hover {
+  text-decoration: underline;
+}
+
+/* 選手カードグリッド */
+.player-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 10px;
+}
+.player-card-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+.player-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  padding: 12px;
+  transition: box-shadow 0.15s, border-color 0.15s;
+  cursor: pointer;
+}
+.player-card:hover {
+  box-shadow: 0 2px 12px rgba(0,0,0,0.1);
+  border-color: #38bdf8;
+}
+.player-avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  font-weight: 800;
+  color: #fff;
+  flex-shrink: 0;
+}
+.player-card-info {
+  flex: 1;
+  min-width: 0;
+}
+.player-card-name-ja {
+  font-size: 15px;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 1px;
+}
+.player-card-name-en {
+  font-size: 12px;
+  color: #64748b;
+  margin-bottom: 4px;
+}
+.player-card-meta {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+.player-pos-tag {
+  font-size: 11px;
+  font-weight: 700;
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+.player-club-link {
+  font-size: 12px;
+  color: #2563eb;
+  text-decoration: none;
+}
+.player-club-link:hover {
+  text-decoration: underline;
+}
+.player-card-stats {
+  display: flex;
+  gap: 6px;
+  margin-top: 6px;
+  flex-wrap: wrap;
+}
+.stat-item {
+  font-size: 11px;
+  background: #f1f5f9;
+  border-radius: 4px;
+  padding: 2px 6px;
+  color: #475569;
+}
+.stat-goal {
+  background: #fef9c3;
+  color: #92400e;
+}
+.stat-assist {
+  background: #ecfdf5;
+  color: #065f46;
+}
+
+/* 順位テーブル */
+.league-standings-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+.league-standings-table th,
+.league-standings-table td {
+  padding: 7px 8px;
+  text-align: center;
+  border-bottom: 1px solid #e5e7eb;
+}
+.league-standings-table .team-cell {
+  text-align: left;
+  font-weight: 600;
+}
+.league-standings-table .pos-cell {
+  font-weight: 700;
+  color: #64748b;
+  width: 32px;
+}
+.league-standings-table .pts-cell {
+  font-weight: 700;
+  color: #1e293b;
+}
+.jp-club-row {
+  background: #eff6ff;
+}
+.jp-badge {
+  font-size: 12px;
+  margin-left: 4px;
+}
+.table-scroll {
+  overflow-x: auto;
+}
+
+/* 試合カード */
+.match-cards-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.match-card {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  padding: 12px 14px;
+}
+.match-header {
+  margin-bottom: 6px;
+}
+.match-date {
+  font-size: 12px;
+  color: #64748b;
+}
+.match-body {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+.match-team {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex: 1;
+}
+.match-team.away {
+  justify-content: flex-end;
+  flex-direction: row-reverse;
+}
+.match-crest {
+  object-fit: contain;
+  flex-shrink: 0;
+}
+.match-score {
+  background: #1e293b;
+  color: #f1f5f9;
+  padding: 3px 12px;
+  border-radius: 6px;
+  font-size: 15px;
+  font-weight: 800;
+  white-space: nowrap;
+}
+.match-vs {
+  color: #94a3b8;
+  font-size: 13px;
+  padding: 3px 8px;
+}
+.jp-players-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  margin-bottom: 6px;
+}
+.jp-player-badge {
+  font-size: 11px;
+  background: #dbeafe;
+  color: #1d4ed8;
+  border-radius: 4px;
+  padding: 2px 6px;
+}
+.bc-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+/* 関連リンク */
+.related-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.related-links li a {
+  color: #2563eb;
+  font-size: 14px;
+  text-decoration: none;
+}
+.related-links li a:hover {
+  text-decoration: underline;
+}
+
+/* リーグ一覧（leagues/index.html）*/
+.league-index-hero {
+  padding: 20px 16px 16px;
+  background: linear-gradient(135deg, #0b1220 0%, #1e293b 100%);
+  border-bottom: 1px solid #334155;
+}
+.league-index-hero h2 {
+  margin: 0 0 4px;
+  font-size: 22px;
+  font-weight: 800;
+  color: #f1f5f9;
+}
+.league-index-hero p {
+  margin: 0;
+  font-size: 13px;
+  color: #94a3b8;
+}
+.league-index-grid-section {
+  padding: 16px;
+}
+.league-index-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 12px;
+}
+.league-card {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 14px 16px;
+  text-decoration: none;
+  color: inherit;
+  transition: box-shadow 0.15s, border-color 0.15s;
+}
+.league-card:hover {
+  box-shadow: 0 3px 14px rgba(0,0,0,0.1);
+  border-color: #38bdf8;
+}
+.league-card-flag {
+  font-size: 36px;
+  flex-shrink: 0;
+  line-height: 1;
+}
+.league-card-body {
+  flex: 1;
+  min-width: 0;
+}
+.league-card-name-ja {
+  font-size: 15px;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 2px;
+}
+.league-card-name-en {
+  font-size: 12px;
+  color: #64748b;
+  margin-bottom: 6px;
+}
+.league-card-meta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.league-player-count {
+  font-size: 12px;
+  color: #475569;
+}
+.league-player-count strong {
+  color: #2563eb;
+}
+.league-club-count {
+  font-size: 12px;
+  color: #94a3b8;
+}
+
+/* 汎用 */
+.link-more {
+  font-size: 13px;
+  color: #2563eb;
+  text-decoration: none;
+}
+.link-more:hover {
+  text-decoration: underline;
+}

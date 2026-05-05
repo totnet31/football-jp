@@ -50,6 +50,7 @@ STATIC_URLS = [
     ("/results/",                   "0.9", "daily"),
     ("/calendar/",                  "0.8", "daily"),
     ("/standings/",                 "0.8", "daily"),
+    ("/leagues/",                   "0.8", "weekly"),
     ("/privacy.html",               "0.3", "yearly"),
     ("/worldcup/",                  "0.9", "daily"),
     ("/worldcup/japan.html",        "0.9", "daily"),
@@ -64,6 +65,7 @@ STATIC_URLS = [
     ("/en/standings/",              "0.7", "daily"),
     ("/en/players/",                "0.8", "weekly"),
     ("/en/clubs/",                  "0.7", "weekly"),
+    ("/en/leagues/",                "0.7", "weekly"),
 ]
 
 
@@ -123,13 +125,33 @@ def build_sitemap() -> str:
     en_player_urls = [(f"/en{path}", "0.6", "weekly") for path, _, _ in player_urls]
     en_club_urls = [(f"/en{path}", "0.5", "weekly") for path, _, _ in club_urls]
 
+    # リーグページ（leagues/{slug}/ および en/leagues/{slug}/）
+    league_urls = []
+    try:
+        import sys as _sys
+        _scripts_dir = str(Path(__file__).parent)
+        if _scripts_dir not in _sys.path:
+            _sys.path.insert(0, _scripts_dir)
+        from generate_league_pages import LEAGUE_SLUG_MAP, group_players_by_league
+        league_groups = group_players_by_league(players)
+        for league_ja, lg_players in league_groups.items():
+            slug = LEAGUE_SLUG_MAP.get(league_ja)
+            if slug:
+                league_urls.append((f"/leagues/{slug}/", "0.7", "weekly"))
+    except Exception as e:
+        print(f"[WARN] リーグURLの取得エラー: {e}")
+
+    en_league_urls = [(f"/en{path}", "0.6", "weekly") for path, _, _ in league_urls]
+
     all_urls = (
         STATIC_URLS
         + sorted(country_urls, key=lambda x: x[0])
         + sorted(player_urls, key=lambda x: x[0])
         + sorted(club_urls, key=lambda x: x[0])
+        + sorted(league_urls, key=lambda x: x[0])
         + sorted(en_player_urls, key=lambda x: x[0])
         + sorted(en_club_urls, key=lambda x: x[0])
+        + sorted(en_league_urls, key=lambda x: x[0])
     )
 
     # XML 生成
