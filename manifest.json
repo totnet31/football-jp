@@ -1,0 +1,22 @@
+{
+  "name": "football-jp - 日本人海外サッカー選手応援",
+  "short_name": "football-jp",
+  "description": "日本人海外サッカー選手の試合・配信情報を毎日更新",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#0b1220",
+  "theme_color": "#0b1220",
+  "lang": "ja",
+  "icons": [
+    {"src": "/assets/logos/favicon-192.png", "sizes": "192x192", "type": "image/png"},
+    {"src": "/assets/logos/favicon-512.png", "sizes": "512x512", "type": "image/png"},
+    {"src": "/assets/logos/maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable"}
+  ],
+  "shortcuts": [
+    {"name": "今日の試合", "short_name": "試合", "url": "/", "icons": [{"src": "/assets/logos/favicon-192.png", "sizes": "192x192"}]},
+    {"name": "結果", "short_name": "結果", "url": "/results/", "icons": [{"src": "/assets/logos/favicon-192.png", "sizes": "192x192"}]},
+    {"name": "順位", "short_name": "順位", "url": "/standings/", "icons": [{"src": "/assets/logos/favicon-192.png", "sizes": "192x192"}]}
+  ]
+}

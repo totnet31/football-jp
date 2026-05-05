@@ -37,13 +37,20 @@
   }
 }
   </script>
+  <link rel="manifest" href="/manifest.json">
+  <meta name="theme-color" content="#0b1220">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="football-jp">
+  <link rel="apple-touch-icon" href="/assets/logos/favicon-180.png">
 </head>
 <body class="wc-page">
 
-<header class="wc-header">
+<header class="wc-header" style="position:relative;">
   <a href="../" class="wc-back-link">⚽ 海外サッカー 日本人選手スケジュールへ</a>
   <h1>🏆 FIFA ワールドカップ 2026 日本時間ガイド</h1>
   <p class="wc-tagline">2026/6/11 開幕（北米3か国共催）／日本はGroup F：オランダ・スウェーデン・チュニジア</p>
+  <button onclick="openPushModal()" title="通知設定" style="position:absolute;top:8px;right:8px;background:none;border:1px solid #334155;border-radius:8px;color:#94a3b8;font-size:20px;padding:6px 10px;cursor:pointer;" aria-label="通知設定">🔔</button>
 </header>
 
 <div class="wc-container">
@@ -236,5 +243,8 @@ function escapeHtml(s) {
 }
 </script>
 
+  <script src="/sw-register.js" defer></script>
+  <script src="/push-client.js" defer></script>
+  <script src="/push-ui.js" defer></script>
 </body>
 </html>

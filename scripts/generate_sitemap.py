@@ -119,11 +119,17 @@ def build_sitemap() -> str:
     except Exception as e:
         print(f"[WARN] 選手/クラブデータ読み込みエラー: {e}")
 
+    # 英語版選手・クラブページ
+    en_player_urls = [(f"/en{path}", "0.6", "weekly") for path, _, _ in player_urls]
+    en_club_urls = [(f"/en{path}", "0.5", "weekly") for path, _, _ in club_urls]
+
     all_urls = (
         STATIC_URLS
         + sorted(country_urls, key=lambda x: x[0])
         + sorted(player_urls, key=lambda x: x[0])
         + sorted(club_urls, key=lambda x: x[0])
+        + sorted(en_player_urls, key=lambda x: x[0])
+        + sorted(en_club_urls, key=lambda x: x[0])
     )
 
     # XML 生成
