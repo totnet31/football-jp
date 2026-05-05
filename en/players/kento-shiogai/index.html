@@ -276,12 +276,6 @@
   }
 }
   </script>
-  <link rel="manifest" href="/manifest.json">
-  <meta name="theme-color" content="#0b1220">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  <meta name="apple-mobile-web-app-title" content="football-jp">
-  <link rel="apple-touch-icon" href="/assets/logos/favicon-180.png">
 </head>
 <body>
 
@@ -320,6 +314,28 @@
     </section>
 
   
+    <section class="player-section">
+      <h3>📊 Season Stats</h3>
+      <div class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-label">Apps</div>
+          <div class="stat-value">16</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-label">Goals</div>
+          <div class="stat-value">7</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-label">Assists</div>
+          <div class="stat-value">0</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-label">Pens</div>
+          <div class="stat-value">0</div>
+        </div>
+      </div>
+      <div class="stats-source">Source: Wikipedia</div>
+    </section>
 
   
     <section class="player-section">
@@ -522,10 +538,5 @@ function trackAffClick(el) {
 </script>
 <script src="/favorites.js" defer></script>
 
-  <script src="/sw-register.js" defer></script>
-  <script src="/push-client.js" defer></script>
-  <script src="/push-ui.js" defer></script>
-  <script src="/search.js" defer></script>
-  <script src="/search-ui.js" defer></script>
 </body>
 </html>

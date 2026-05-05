@@ -1900,7 +1900,7 @@ footer a { color: var(--text-sub); }
   flex-shrink: 0;
 }
 
-/* 検索ボタン（ヘッダー） */
+/* 検索ボタン（ヘッダー） - 後方互換エイリアス */
 .fjSearchBtn {
   background: none;
   border: 1px solid #334155;
@@ -1916,4 +1916,37 @@ footer a { color: var(--text-sub); }
 .fjSearchBtn:hover {
   color: #e2e8f0;
   border-color: #60a5fa;
+}
+
+/* ヘッダーボタン統一クラス（SVGアイコン対応） */
+.fjHeaderBtn {
+  background: none;
+  border: 1px solid #334155;
+  border-radius: 8px;
+  color: #94a3b8;
+  padding: 8px 10px;
+  cursor: pointer;
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.15s ease;
+  margin-top: 4px;
+}
+.fjHeaderBtn:hover {
+  color: #f1f5f9;
+  border-color: #64748b;
+  background: rgba(255,255,255,0.04);
+}
+.fjHeaderBtn:active {
+  transform: scale(0.96);
+}
+.fjHeaderBtn svg {
+  width: 20px;
+  height: 20px;
+  display: block;
+}
+@media (max-width: 600px) {
+  .fjHeaderBtn { padding: 6px 8px; }
+  .fjHeaderBtn svg { width: 18px; height: 18px; }
 }
