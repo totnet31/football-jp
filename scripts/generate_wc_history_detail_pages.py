@@ -16,8 +16,212 @@ from datetime import datetime, timezone, timedelta
 ROOT = Path(__file__).resolve().parent.parent
 DATA = ROOT / "data" / "wc2026" / "wc_history_detail"
 
-TARGET_YEARS = [1998, 2002, 2006, 2010, 2014, 2018, 2022]
+TARGET_YEARS = [
+    1930, 1934, 1938, 1950, 1954, 1958, 1962, 1966,
+    1970, 1974, 1978, 1982, 1986, 1990, 1994,
+    1998, 2002, 2006, 2010, 2014, 2018, 2022,
+]
 JST = timezone(timedelta(hours=9))
+
+# Phase B: 1930-1994 の大会メタ情報
+WC_EXTRA_PHASE_B = {
+    1930: {
+        "champion": "ウルグアイ", "champion_en": "Uruguay",
+        "runner_up": "アルゼンチン", "runner_up_en": "Argentina",
+        "third": "アメリカ合衆国",
+        "final_score": "4-2",
+        "top_scorer": "ギジェルモ・スタービレ", "top_scorer_country": "アルゼンチン", "top_scorer_goals": 8,
+        "teams": 13, "matches": 18, "total_goals": 70,
+        "host": "ウルグアイ", "host_en": "Uruguay",
+        "japan_result": "不参加",
+        "highlight": "第1回大会。13カ国参加。決勝でウルグアイがアルゼンチンに逆転勝利。得点王はスタービレ（8点）。",
+        "period_ja": "1930年7月13日〜7月30日",
+        "mvp": None, "mvp_ja": None,
+    },
+    1934: {
+        "champion": "イタリア", "champion_en": "Italy",
+        "runner_up": "チェコスロバキア", "runner_up_en": "Czechoslovakia",
+        "third": "ドイツ",
+        "final_score": "2-1（延長）",
+        "top_scorer": "オルダジフ・ネイエドリー", "top_scorer_country": "チェコスロバキア", "top_scorer_goals": 5,
+        "teams": 16, "matches": 17, "total_goals": 70,
+        "host": "イタリア", "host_en": "Italy",
+        "japan_result": "不参加",
+        "highlight": "初のヨーロッパ開催。イタリア初優勝。完全ノックアウト方式。ムッソリーニ政権下での開催。",
+        "period_ja": "1934年5月27日〜6月10日",
+        "mvp": None, "mvp_ja": None,
+    },
+    1938: {
+        "champion": "イタリア", "champion_en": "Italy",
+        "runner_up": "ハンガリー", "runner_up_en": "Hungary",
+        "third": "ブラジル",
+        "final_score": "4-2",
+        "top_scorer": "レオニダス", "top_scorer_country": "ブラジル", "top_scorer_goals": 7,
+        "teams": 15, "matches": 18, "total_goals": 84,
+        "host": "フランス", "host_en": "France",
+        "japan_result": "棄権",
+        "highlight": "イタリア連覇。日本（当時・日本代表）が参加権を得るも棄権。ブラジルのレオニダスが得点王7点。",
+        "period_ja": "1938年6月4日〜6月19日",
+        "mvp": None, "mvp_ja": None,
+    },
+    1950: {
+        "champion": "ウルグアイ", "champion_en": "Uruguay",
+        "runner_up": "ブラジル", "runner_up_en": "Brazil",
+        "third": "スウェーデン",
+        "final_score": "2-1（最終ラウンドリーグ戦）",
+        "top_scorer": "アデミール", "top_scorer_country": "ブラジル", "top_scorer_goals": 9,
+        "teams": 13, "matches": 22, "total_goals": 88,
+        "host": "ブラジル", "host_en": "Brazil",
+        "japan_result": "不参加",
+        "highlight": "マラカナンの悲劇。決勝ラウンドはリーグ戦方式。ブラジル優勝確実視も最終戦でウルグアイに敗れる。観客約17万人。",
+        "period_ja": "1950年6月24日〜7月16日",
+        "mvp": None, "mvp_ja": None,
+        "special_note": "決勝戦なし（最終ラウンドリーグ戦）",
+    },
+    1954: {
+        "champion": "西ドイツ", "champion_en": "West Germany",
+        "runner_up": "ハンガリー", "runner_up_en": "Hungary",
+        "third": "オーストリア",
+        "final_score": "3-2",
+        "top_scorer": "サンドール・コチシュ", "top_scorer_country": "ハンガリー", "top_scorer_goals": 11,
+        "teams": 16, "matches": 26, "total_goals": 140,
+        "host": "スイス", "host_en": "Switzerland",
+        "japan_result": "不参加",
+        "highlight": "ベルンの奇跡。圧倒的優勝候補ハンガリーをグループ戦で破った西ドイツが決勝で再び逆転優勝。コチシュが11点（大会記録）。",
+        "period_ja": "1954年6月16日〜7月4日",
+        "mvp": None, "mvp_ja": None,
+    },
+    1958: {
+        "champion": "ブラジル", "champion_en": "Brazil",
+        "runner_up": "スウェーデン", "runner_up_en": "Sweden",
+        "third": "フランス",
+        "final_score": "5-2",
+        "top_scorer": "ジュスト・フォンテーヌ", "top_scorer_country": "フランス", "top_scorer_goals": 13,
+        "teams": 16, "matches": 35, "total_goals": 126,
+        "host": "スウェーデン", "host_en": "Sweden",
+        "japan_result": "不参加",
+        "highlight": "ペレ17歳で初出場、伝説の始まり。ブラジル初優勝。フォンテーヌが1大会13点（歴代最多）の記録。",
+        "period_ja": "1958年6月8日〜6月29日",
+        "mvp": None, "mvp_ja": None,
+    },
+    1962: {
+        "champion": "ブラジル", "champion_en": "Brazil",
+        "runner_up": "チェコスロバキア", "runner_up_en": "Czechoslovakia",
+        "third": "チリ",
+        "final_score": "3-1",
+        "top_scorer": "（6名同点）", "top_scorer_country": "複数国", "top_scorer_goals": 4,
+        "teams": 16, "matches": 32, "total_goals": 89,
+        "host": "チリ", "host_en": "Chile",
+        "japan_result": "不参加",
+        "highlight": "ブラジル連覇。ペレが怪我で途中離脱もガリンシャが躍動。チリのホスト国3位入賞。",
+        "period_ja": "1962年5月30日〜6月17日",
+        "mvp": None, "mvp_ja": None,
+    },
+    1966: {
+        "champion": "イングランド", "champion_en": "England",
+        "runner_up": "西ドイツ", "runner_up_en": "West Germany",
+        "third": "ポルトガル",
+        "final_score": "4-2（延長）",
+        "top_scorer": "エウゼビオ", "top_scorer_country": "ポルトガル", "top_scorer_goals": 9,
+        "teams": 16, "matches": 32, "total_goals": 89,
+        "host": "イングランド", "host_en": "England",
+        "japan_result": "不参加",
+        "highlight": "イングランド唯一の優勝。ジェフ・ハーストが決勝でハットトリック（歴代唯一）。論争のゴールラインシュート。",
+        "period_ja": "1966年7月11日〜7月30日",
+        "mvp": None, "mvp_ja": None,
+    },
+    1970: {
+        "champion": "ブラジル", "champion_en": "Brazil",
+        "runner_up": "イタリア", "runner_up_en": "Italy",
+        "third": "西ドイツ",
+        "final_score": "4-1",
+        "top_scorer": "ゲルト・ミュラー", "top_scorer_country": "西ドイツ", "top_scorer_goals": 10,
+        "teams": 16, "matches": 32, "total_goals": 95,
+        "host": "メキシコ", "host_en": "Mexico",
+        "japan_result": "不参加",
+        "highlight": "ペレ伝説の頂点。ブラジル3度目の優勝でジュール・リメ杯永久保持。「世紀の一戦」イタリア4-3西ドイツ準決勝。",
+        "period_ja": "1970年5月31日〜6月21日",
+        "mvp": None, "mvp_ja": None,
+    },
+    1974: {
+        "champion": "西ドイツ", "champion_en": "West Germany",
+        "runner_up": "オランダ", "runner_up_en": "Netherlands",
+        "third": "ポーランド",
+        "final_score": "2-1",
+        "top_scorer": "グジェゴジュ・ラト", "top_scorer_country": "ポーランド", "top_scorer_goals": 7,
+        "teams": 16, "matches": 38, "total_goals": 97,
+        "host": "西ドイツ", "host_en": "West Germany",
+        "japan_result": "不参加",
+        "highlight": "全員サッカー（トータルフットボール）のオランダ対西ドイツ。2次グループ制（決勝ラウンドなし）。クライフ率いるオランダが準優勝。",
+        "period_ja": "1974年6月13日〜7月7日",
+        "mvp": None, "mvp_ja": None,
+    },
+    1978: {
+        "champion": "アルゼンチン", "champion_en": "Argentina",
+        "runner_up": "オランダ", "runner_up_en": "Netherlands",
+        "third": "ブラジル",
+        "final_score": "3-1（延長）",
+        "top_scorer": "マリオ・ケンペス", "top_scorer_country": "アルゼンチン", "top_scorer_goals": 6,
+        "teams": 16, "matches": 38, "total_goals": 102,
+        "host": "アルゼンチン", "host_en": "Argentina",
+        "japan_result": "不参加",
+        "highlight": "アルゼンチン初優勝。ケンペスが6点で得点王兼決勝2点。軍事政権下での開催。2次グループ制採用。",
+        "period_ja": "1978年6月1日〜6月25日",
+        "mvp": None, "mvp_ja": None,
+    },
+    1982: {
+        "champion": "イタリア", "champion_en": "Italy",
+        "runner_up": "西ドイツ", "runner_up_en": "West Germany",
+        "third": "ポーランド",
+        "final_score": "3-1",
+        "top_scorer": "パオロ・ロッシ", "top_scorer_country": "イタリア", "top_scorer_goals": 6,
+        "teams": 24, "matches": 52, "total_goals": 146,
+        "host": "スペイン", "host_en": "Spain",
+        "japan_result": "不参加",
+        "highlight": "ロッシ伝説。グループ戦で不振だったロッシが決勝Tで爆発（6得点・得点王）。ジーコ・ソクラテス率いるブラジルが敗退。24カ国参加に拡大。",
+        "period_ja": "1982年6月13日〜7月11日",
+        "mvp": None, "mvp_ja": None,
+    },
+    1986: {
+        "champion": "アルゼンチン", "champion_en": "Argentina",
+        "runner_up": "西ドイツ", "runner_up_en": "West Germany",
+        "third": "フランス",
+        "final_score": "3-2",
+        "top_scorer": "ゲーリー・リネカー", "top_scorer_country": "イングランド", "top_scorer_goals": 6,
+        "teams": 24, "matches": 52, "total_goals": 132,
+        "host": "メキシコ", "host_en": "Mexico",
+        "japan_result": "不参加",
+        "highlight": "マラドーナ大会。神の手ゴール（対イングランド）と世紀のゴール（5人抜き）を同一試合で決める。アルゼンチン2度目の優勝。",
+        "period_ja": "1986年5月31日〜6月29日",
+        "mvp": "Diego Maradona", "mvp_ja": "ディエゴ・マラドーナ",
+    },
+    1990: {
+        "champion": "西ドイツ", "champion_en": "West Germany",
+        "runner_up": "アルゼンチン", "runner_up_en": "Argentina",
+        "third": "イタリア",
+        "final_score": "1-0",
+        "top_scorer": "サルバトーレ・スキラッチ", "top_scorer_country": "イタリア", "top_scorer_goals": 6,
+        "teams": 24, "matches": 52, "total_goals": 115,
+        "host": "イタリア", "host_en": "Italy",
+        "japan_result": "不参加",
+        "highlight": "守備的な大会。1試合平均2.21点（当時最低）。スキラッチが6点で得点王MVP。西ドイツが3度目の優勝。24カ国最後の大会。",
+        "period_ja": "1990年6月8日〜7月8日",
+        "mvp": "Salvatore Schillaci", "mvp_ja": "サルバトーレ・スキラッチ",
+    },
+    1994: {
+        "champion": "ブラジル", "champion_en": "Brazil",
+        "runner_up": "イタリア", "runner_up_en": "Italy",
+        "third": "スウェーデン",
+        "final_score": "0-0（PK 3-2）",
+        "top_scorer": "フリスト・ストイチコフ / オレグ・サレンコ（同点）", "top_scorer_country": "ブルガリア / ロシア", "top_scorer_goals": 6,
+        "teams": 24, "matches": 52, "total_goals": 141,
+        "host": "アメリカ", "host_en": "United States",
+        "japan_result": "不参加",
+        "highlight": "ロベルト・バッジョのPK失敗。決勝でブラジルとイタリアが初のPK戦。バッジョが外して試合終了。アメリカ初開催。",
+        "period_ja": "1994年6月17日〜7月17日",
+        "mvp": "Romário", "mvp_ja": "ロマリオ",
+    },
+}
 
 # wc_history.jsonからのメタ情報
 WC_EXTRA = {
@@ -786,6 +990,449 @@ def generate_html_en(year, data, extra):
 </html>"""
 
 
+def all_years_list():
+    """全大会年リスト（ナビ用）。"""
+    return [1930, 1934, 1938, 1950, 1954, 1958, 1962, 1966,
+            1970, 1974, 1978, 1982, 1986, 1990, 1994,
+            1998, 2002, 2006, 2010, 2014, 2018, 2022]
+
+
+def year_nav_html(year, lang="ja"):
+    """全大会ナビゲーションリンクを生成。"""
+    years = all_years_list()
+    links = []
+    for y in years:
+        active = ' class="year-link active"' if y == year else ' class="year-link"'
+        links.append(f'<a href="../{y}/"{active}>{y}</a>')
+    return "\n".join(links)
+
+
+def generate_html_ja_phase_b(year, data, extra):
+    """Phase B（1930-1994）の日本語版HTMLを生成。"""
+    host = extra.get("host", data.get("host", ""))
+    period = extra.get("period_ja", "")
+    champion = extra.get("champion", "")
+    runner_up = extra.get("runner_up", "")
+    final_score = extra.get("final_score", "")
+    top_scorer = extra.get("top_scorer", "")
+    top_scorer_country = extra.get("top_scorer_country", "")
+    top_scorer_goals = extra.get("top_scorer_goals", "")
+    highlight = extra.get("highlight", "")
+    mvp_ja = extra.get("mvp_ja", "")
+    special_note = extra.get("special_note", "")
+
+    # グループステージ
+    groups_html = "\n".join(group_table_html_ja(g) for g in data.get("groups", []))
+
+    # 1950年最終ラウンド
+    final_round_html = ""
+    if data.get("final_round"):
+        fr = data["final_round"]
+        final_round_html = f"""<section id="final-round" class="wc-section">
+    <h2 class="section-title">最終ラウンド（リーグ戦）</h2>
+    <p class="special-note">※ 1950年大会は決勝戦なし。4チームによるリーグ戦で優勝を決定。</p>
+    <div class="groups-container">{group_table_html_ja(fr)}</div>
+  </section>"""
+
+    if not groups_html:
+        groups_html = '<p class="no-data">グループデータを取得中です。</p>'
+
+    # 決勝トーナメント
+    ko_html = knockout_section_html_ja(data.get("knockout", {}))
+    if not ko_html:
+        if year == 1950:
+            ko_html = '<p class="no-data">※ 1950年大会は決勝トーナメントなし（最終ラウンドリーグ戦）。</p>'
+        else:
+            ko_html = '<p class="no-data">決勝トーナメントデータを取得中です。</p>'
+
+    # 1974/1978/1982/1986の2次グループステージ説明
+    format_note = ""
+    fmt = data.get("format", "standard")
+    if fmt == "round2_1974":
+        format_note = '<p class="format-note">※ 本大会は1次グループステージ（4グループ×4チーム）→2次グループステージ（2グループ×4チーム）→決勝・3位決定戦の形式を採用。</p>'
+    elif fmt == "gs2nd_1982":
+        format_note = '<p class="format-note">※ 本大会は1次グループステージ（6グループ×4チーム）→2次グループステージ（4グループ×3チーム）→準決勝・決勝の形式を採用。</p>'
+    elif fmt == "gs2nd_1986":
+        format_note = '<p class="format-note">※ 本大会は1次グループステージ（6グループ×4チーム）→ベスト16→準々決勝→準決勝→決勝の形式を採用。</p>'
+
+    year_nav = year_nav_html(year, "ja")
+
+    return f"""<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{year} FIFAワールドカップ 全試合・グループ結果 | football-jp</title>
+  <meta name="description" content="{year}年FIFAワールドカップ（開催国：{esc(host)}）の全グループ順位表・決勝トーナメント・優勝国・得点王を掲載。優勝：{esc(champion)}。">
+  <link rel="canonical" href="https://football-jp.com/worldcup/history/{year}/">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://football-jp.com/worldcup/history/{year}/">
+  <meta property="og:title" content="{year} FIFAワールドカップ | football-jp">
+  <meta property="og:description" content="{year}年W杯全データ。開催国：{esc(host)}。優勝：{esc(champion)}。">
+  <meta property="og:site_name" content="football-jp">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="alternate" hreflang="en" href="https://football-jp.com/en/worldcup/history/{year}/">
+  <link rel="alternate" hreflang="ja" href="https://football-jp.com/worldcup/history/{year}/">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-39G8CVXRW0"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){{dataLayer.push(arguments);}}
+    gtag("js", new Date());
+    gtag("config", "G-39G8CVXRW0");
+  </script>
+  <link rel="stylesheet" href="../../style.css">
+  <link rel="stylesheet" href="../../worldcup-history-detail.css">
+  <script src="../../wc-nav.js" defer></script>
+</head>
+<body class="wc-page">
+<div class="wc-container">
+
+  <!-- ナビ -->
+  <nav class="wc-nav" id="wcNav"></nav>
+  <script>document.getElementById('wcNav').innerHTML = window.wcRenderNav ? wcRenderNav('history') : '';</script>
+
+  <!-- パンくずリスト -->
+  <nav class="breadcrumb" aria-label="パンくず">
+    <ol>
+      <li><a href="../../">W杯</a></li>
+      <li><a href="../../history.html">歴代W杯</a></li>
+      <li aria-current="page">{year}</li>
+    </ol>
+  </nav>
+
+  <!-- ヘッダー -->
+  <header class="wc-detail-header">
+    <div class="wc-detail-year">{year}</div>
+    <h1 class="wc-detail-title">FIFA ワールドカップ {year}</h1>
+    <div class="wc-detail-meta">
+      <span class="meta-item">開催国：{esc(host)}</span>
+      <span class="meta-item">期間：{esc(period)}</span>
+      <span class="meta-item">出場：{extra.get('teams', '')}カ国</span>
+      <span class="meta-item">総試合：{extra.get('matches', '')}</span>
+      <span class="meta-item">総ゴール：{extra.get('total_goals', '')}</span>
+    </div>
+    <div class="wc-detail-results">
+      <div class="result-item champion">🏆 優勝：{esc(champion)}</div>
+      <div class="result-item">準優勝：{esc(runner_up)}</div>
+      <div class="result-item">決勝スコア：{esc(final_score)}</div>
+      <div class="result-item">得点王：{esc(top_scorer)}（{esc(top_scorer_country)}）{top_scorer_goals}点</div>
+      {'<div class="result-item">MVP：' + esc(mvp_ja) + '</div>' if mvp_ja else ''}
+    </div>
+    {f'<div class="special-note-header">{esc(special_note)}</div>' if special_note else ''}
+    <p class="wc-highlight">{esc(highlight)}</p>
+    <div class="lang-switch">
+      <a href="../../../en/worldcup/history/{year}/" class="lang-btn">🌐 English</a>
+    </div>
+  </header>
+
+  {format_note}
+
+  <!-- TOC -->
+  <nav class="page-toc">
+    <a href="#group-stage">グループステージ</a>
+    {'<a href="#final-round">最終ラウンド</a>' if year == 1950 else ''}
+    <a href="#knockout">決勝トーナメント</a>
+    <a href="#records">記録</a>
+  </nav>
+
+  <!-- グループステージ -->
+  <section id="group-stage" class="wc-section">
+    <h2 class="section-title">グループステージ</h2>
+    <div class="groups-container">
+      {groups_html}
+    </div>
+  </section>
+
+  {final_round_html}
+
+  <!-- 決勝トーナメント -->
+  <section id="knockout" class="wc-section">
+    <h2 class="section-title">決勝トーナメント</h2>
+    <div class="knockout-container">
+      {ko_html}
+    </div>
+  </section>
+
+  <!-- 記録 -->
+  <section id="records" class="wc-section">
+    <h2 class="section-title">大会記録</h2>
+    <div class="records-grid">
+      <div class="record-item"><span class="rec-label">優勝</span><span class="rec-value">{esc(champion)}</span></div>
+      <div class="record-item"><span class="rec-label">準優勝</span><span class="rec-value">{esc(runner_up)}</span></div>
+      <div class="record-item"><span class="rec-label">3位</span><span class="rec-value">{esc(extra.get('third',''))}</span></div>
+      <div class="record-item"><span class="rec-label">決勝スコア</span><span class="rec-value">{esc(final_score)}</span></div>
+      <div class="record-item"><span class="rec-label">得点王</span><span class="rec-value">{esc(top_scorer)}（{top_scorer_goals}点）</span></div>
+      {'<div class="record-item"><span class="rec-label">MVP</span><span class="rec-value">' + esc(mvp_ja) + '</span></div>' if mvp_ja else ''}
+      <div class="record-item"><span class="rec-label">出場国数</span><span class="rec-value">{extra.get('teams', '')}カ国</span></div>
+      <div class="record-item"><span class="rec-label">総試合数</span><span class="rec-value">{extra.get('matches', '')}試合</span></div>
+      <div class="record-item"><span class="rec-label">総ゴール数</span><span class="rec-value">{extra.get('total_goals', '')}点</span></div>
+      <div class="record-item"><span class="rec-label">日本</span><span class="rec-value">{esc(extra.get('japan_result','不参加'))}</span></div>
+    </div>
+  </section>
+
+  <!-- ナビゲーション -->
+  <nav class="year-nav">
+    <a href="../" class="year-nav-btn">← 歴代W杯一覧</a>
+    <div class="year-nav-years">
+      {year_nav}
+    </div>
+  </nav>
+
+  <footer class="wc-footer">
+    <p>データ出典: Wikipedia / FIFA 公式記録</p>
+    <p><a href="../../history.html">歴代W杯一覧へ戻る</a> / <a href="../../">W杯トップへ</a> / <a href="../../../">football-jp トップへ</a></p>
+    <p class="footer-links"><a href="../../../privacy.html">プライバシーポリシー</a></p>
+  </footer>
+</div>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {{
+    const nav = document.getElementById('wcNav');
+    if (nav && typeof wcRenderNav === 'function') {{
+      nav.innerHTML = wcRenderNav('history');
+    }}
+  }});
+</script>
+</body>
+</html>"""
+
+
+def generate_html_en_phase_b(year, data, extra):
+    """Phase B（1930-1994）の英語版HTMLを生成。"""
+    host_en = extra.get("host_en", data.get("host_en", ""))
+    champion_en = extra.get("champion_en", "")
+    runner_up_en = extra.get("runner_up_en", "")
+    final_score = extra.get("final_score", "")
+    top_scorer = extra.get("top_scorer", "")
+    top_scorer_country = extra.get("top_scorer_country", "")
+    top_scorer_goals = extra.get("top_scorer_goals", "")
+    highlight = extra.get("highlight", "")
+    mvp = extra.get("mvp", "")
+    third = extra.get("third", "")
+    special_note = extra.get("special_note", "")
+
+    def group_table_html_en_b(group):
+        rows_html = ""
+        for row in group.get("table", []):
+            team_en = row.get("team_en", "")
+            gf = row.get("goals_for", "")
+            ga = row.get("goals_against", "")
+            gd = (gf - ga) if (isinstance(gf, int) and isinstance(ga, int)) else ""
+            rows_html += f"""<tr>
+        <td class="pos">{row.get('position','')}</td>
+        <td class="team-name">{esc(team_en)}</td>
+        <td>{row.get('played','')}</td><td>{row.get('won','')}</td>
+        <td>{row.get('drawn','')}</td><td>{row.get('lost','')}</td>
+        <td>{gf}</td><td>{ga}</td><td>{gd}</td>
+        <td class="pts">{row.get('points','')}</td>
+        </tr>"""
+        if not rows_html:
+            rows_html = '<tr><td colspan="10" class="no-data">Data loading</td></tr>'
+
+        matches_html = ""
+        for m in group.get("matches", []):
+            sc = score_html(m.get("home_score"), m.get("away_score"))
+            matches_html += f"""<tr>
+        <td class="match-date-cell">{esc(m.get('date',''))}</td>
+        <td class="team-home">{esc(m.get('home_en',''))}</td>
+        <td class="match-score-cell">{sc}</td>
+        <td class="team-away">{esc(m.get('away_en',''))}</td>
+        </tr>"""
+
+        gid = group.get('group_id', '')
+        label = f"Group {gid}" if not gid.startswith("2nd_") else f"Second Group Stage {gid.replace('2nd_','')}"
+        if gid == "final_round":
+            label = "Final Round (Round Robin)"
+        return f"""<div class="group-section" id="group-{gid}">
+  <h3 class="group-title">{label}</h3>
+  <div class="table-wrap">
+    <table class="group-table">
+      <thead><tr><th>Pos</th><th>Team</th><th>P</th><th>W</th><th>D</th><th>L</th><th>GF</th><th>GA</th><th>GD</th><th>Pts</th></tr></thead>
+      <tbody>{rows_html}</tbody>
+    </table>
+  </div>
+  <div class="table-wrap" style="margin-top:12px;">
+    <table class="matches-table">
+      <thead><tr><th>Date</th><th colspan="3">Match</th></tr></thead>
+      <tbody>{matches_html}</tbody>
+    </table>
+  </div>
+</div>"""
+
+    def ko_en_b(knockout):
+        def render(m):
+            if not m:
+                return ""
+            sc = score_html(m.get("home_score"), m.get("away_score"), m.get("pk_score"))
+            return f"""<tr>
+      <td class="match-date-cell">{esc(m.get('date',''))}</td>
+      <td class="team-home">{esc(m.get('home_en',''))}</td>
+      <td class="match-score-cell">{sc}</td>
+      <td class="team-away">{esc(m.get('away_en',''))}</td>
+      </tr>"""
+
+        sections = []
+        rounds = [
+            ("round_of_16", "Round of 16"),
+            ("quarter_finals", "Quarter-finals"),
+            ("semi_finals", "Semi-finals"),
+            ("third_place", "Third-place play-off"),
+            ("final", "Final"),
+        ]
+        for key, label in rounds:
+            d = knockout.get(key)
+            if not d:
+                continue
+            rows = "".join(render(m) for m in d if m) if isinstance(d, list) else render(d)
+            if not rows:
+                continue
+            sections.append(f"""<div class="knockout-round" id="ko-{key}">
+  <h3 class="round-title">{label}</h3>
+  <div class="table-wrap">
+    <table class="matches-table">
+      <thead><tr><th>Date</th><th colspan="3">Match</th></tr></thead>
+      <tbody>{rows}</tbody>
+    </table>
+  </div>
+</div>""")
+        return "\n".join(sections)
+
+    groups_html = "\n".join(group_table_html_en_b(g) for g in data.get("groups", []))
+    ko_html = ko_en_b(data.get("knockout", {}))
+    year_nav = year_nav_html(year, "en")
+
+    final_round_html = ""
+    if data.get("final_round"):
+        fr_html = group_table_html_en_b(data["final_round"])
+        final_round_html = f"""<section id="final-round" class="wc-section">
+    <h2 class="section-title">Final Round (Round Robin)</h2>
+    <p class="special-note">No final match — winner determined by a 4-team round-robin.</p>
+    <div class="groups-container">{fr_html}</div>
+  </section>"""
+
+    return f"""<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{year} FIFA World Cup – Groups, Results & Records | football-jp</title>
+  <meta name="description" content="Complete {year} FIFA World Cup data: all group tables, knockout results, champion and top scorer. Host: {esc(host_en)}. Champion: {esc(champion_en)}.">
+  <link rel="canonical" href="https://football-jp.com/en/worldcup/history/{year}/">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://football-jp.com/en/worldcup/history/{year}/">
+  <meta property="og:title" content="{year} FIFA World Cup | football-jp">
+  <meta property="og:description" content="{year} World Cup data. Host: {esc(host_en)}. Winner: {esc(champion_en)}.">
+  <meta property="og:locale" content="en_US">
+  <link rel="alternate" hreflang="ja" href="https://football-jp.com/worldcup/history/{year}/">
+  <link rel="alternate" hreflang="en" href="https://football-jp.com/en/worldcup/history/{year}/">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-39G8CVXRW0"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){{dataLayer.push(arguments);}}
+    gtag("js", new Date());
+    gtag("config", "G-39G8CVXRW0");
+  </script>
+  <link rel="stylesheet" href="../../../../worldcup/style.css">
+  <link rel="stylesheet" href="../../../../worldcup-history-detail.css">
+</head>
+<body class="wc-page">
+<div class="wc-container">
+
+  <!-- Breadcrumb -->
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <ol>
+      <li><a href="../../../../en/">Home</a></li>
+      <li><a href="../../../../worldcup/history.html">World Cup History</a></li>
+      <li aria-current="page">{year}</li>
+    </ol>
+  </nav>
+
+  <!-- Header -->
+  <header class="wc-detail-header">
+    <div class="wc-detail-year">{year}</div>
+    <h1 class="wc-detail-title">FIFA World Cup {year}</h1>
+    <div class="wc-detail-meta">
+      <span class="meta-item">Host: {esc(host_en)}</span>
+      <span class="meta-item">Teams: {extra.get('teams', '')}</span>
+      <span class="meta-item">Matches: {extra.get('matches', '')}</span>
+      <span class="meta-item">Goals: {extra.get('total_goals', '')}</span>
+    </div>
+    <div class="wc-detail-results">
+      <div class="result-item champion">🏆 Champion: {esc(champion_en)}</div>
+      <div class="result-item">Runner-up: {esc(runner_up_en)}</div>
+      <div class="result-item">3rd place: {esc(third)}</div>
+      <div class="result-item">Final score: {esc(final_score)}</div>
+      <div class="result-item">Top scorer: {esc(top_scorer)} ({esc(top_scorer_country)}) {top_scorer_goals} goals</div>
+      {'<div class="result-item">MVP: ' + esc(mvp) + '</div>' if mvp else ''}
+    </div>
+    {f'<p class="special-note-header">{esc(special_note)}</p>' if special_note else ''}
+    <div class="lang-switch">
+      <a href="../../../../worldcup/history/{year}/" class="lang-btn">🌐 日本語</a>
+    </div>
+  </header>
+
+  <!-- TOC -->
+  <nav class="page-toc">
+    <a href="#group-stage">Group Stage</a>
+    {'<a href="#final-round">Final Round</a>' if year == 1950 else ''}
+    <a href="#knockout">Knockout</a>
+    <a href="#records">Records</a>
+  </nav>
+
+  <!-- Group Stage -->
+  <section id="group-stage" class="wc-section">
+    <h2 class="section-title">Group Stage</h2>
+    <div class="groups-container">
+      {groups_html if groups_html else '<p class="no-data">Group data loading.</p>'}
+    </div>
+  </section>
+
+  {final_round_html}
+
+  <!-- Knockout -->
+  <section id="knockout" class="wc-section">
+    <h2 class="section-title">Knockout Stage</h2>
+    <div class="knockout-container">
+      {ko_html if ko_html else ('<p class="no-data">No knockout stage (round-robin final).</p>' if year == 1950 else '<p class="no-data">Knockout data loading.</p>')}
+    </div>
+  </section>
+
+  <!-- Records -->
+  <section id="records" class="wc-section">
+    <h2 class="section-title">Tournament Records</h2>
+    <div class="records-grid">
+      <div class="record-item"><span class="rec-label">Champion</span><span class="rec-value">{esc(champion_en)}</span></div>
+      <div class="record-item"><span class="rec-label">Runner-up</span><span class="rec-value">{esc(runner_up_en)}</span></div>
+      <div class="record-item"><span class="rec-label">3rd Place</span><span class="rec-value">{esc(third)}</span></div>
+      <div class="record-item"><span class="rec-label">Final Score</span><span class="rec-value">{esc(final_score)}</span></div>
+      <div class="record-item"><span class="rec-label">Top Scorer</span><span class="rec-value">{esc(top_scorer)} ({top_scorer_goals})</span></div>
+      {'<div class="record-item"><span class="rec-label">MVP</span><span class="rec-value">' + esc(mvp) + '</span></div>' if mvp else ''}
+      <div class="record-item"><span class="rec-label">Teams</span><span class="rec-value">{extra.get('teams', '')}</span></div>
+      <div class="record-item"><span class="rec-label">Matches</span><span class="rec-value">{extra.get('matches', '')}</span></div>
+      <div class="record-item"><span class="rec-label">Goals</span><span class="rec-value">{extra.get('total_goals', '')}</span></div>
+    </div>
+  </section>
+
+  <!-- Year Nav -->
+  <nav class="year-nav">
+    <a href="../../../../worldcup/history.html" class="year-nav-btn">← All World Cups</a>
+    <div class="year-nav-years">
+      {year_nav}
+    </div>
+  </nav>
+
+  <footer class="wc-footer">
+    <p>Data source: Wikipedia / FIFA official records</p>
+    <p><a href="../../../../worldcup/history.html">Back to History</a> / <a href="../../../../">football-jp Top</a></p>
+    <p><a href="../../../../privacy.html">Privacy Policy</a></p>
+  </footer>
+</div>
+</body>
+</html>"""
+
+
 def main():
     print(f"[INFO] W杯詳細ページ生成開始")
     ja_count = 0
@@ -798,12 +1445,20 @@ def main():
             continue
 
         data = json.loads(json_path.read_text(encoding="utf-8"))
-        extra = WC_EXTRA.get(year, {})
+
+        # Phase A（1998-2022）は既存ロジック、Phase B（1930-1994）は新ロジック
+        if year >= 1998:
+            extra = WC_EXTRA.get(year, {})
+            ja_html = generate_html_ja(year, data, extra)
+            en_html = generate_html_en(year, data, extra)
+        else:
+            extra = WC_EXTRA_PHASE_B.get(year, {})
+            ja_html = generate_html_ja_phase_b(year, data, extra)
+            en_html = generate_html_en_phase_b(year, data, extra)
 
         # 日本語版
         ja_dir = ROOT / "worldcup" / "history" / str(year)
         ja_dir.mkdir(parents=True, exist_ok=True)
-        ja_html = generate_html_ja(year, data, extra)
         (ja_dir / "index.html").write_text(ja_html, encoding="utf-8")
         print(f"[JA] {ja_dir}/index.html")
         ja_count += 1
@@ -811,7 +1466,6 @@ def main():
         # 英語版
         en_dir = ROOT / "en" / "worldcup" / "history" / str(year)
         en_dir.mkdir(parents=True, exist_ok=True)
-        en_html = generate_html_en(year, data, extra)
         (en_dir / "index.html").write_text(en_html, encoding="utf-8")
         print(f"[EN] {en_dir}/index.html")
         en_count += 1

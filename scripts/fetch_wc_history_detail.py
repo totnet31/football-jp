@@ -25,10 +25,75 @@ WIKI_API = "https://en.wikipedia.org/w/api.php"
 UA = "football-jp scraper / 0.2 (saito@tottot.net)"
 JST = timezone(timedelta(hours=9))
 
-TARGET_YEARS = [1998, 2002, 2006, 2010, 2014, 2018, 2022]
+TARGET_YEARS = [
+    1930, 1934, 1938, 1950, 1954, 1958, 1962, 1966,
+    1970, 1974, 1978, 1982, 1986, 1990, 1994,
+    1998, 2002, 2006, 2010, 2014, 2018, 2022,
+]
+
+# 大会フォーマット区分
+# "standard"   : 1994以降の32→16チーム標準ノックアウト
+# "gs1990"     : 1990（24チーム・GS A-F）
+# "gs2nd_1982" : 1982/1986（1次GS + 2次GS + ノックアウト）
+# "round2_1974": 1974/1978（1次GS + 2次GS + 決勝・3位）
+# "pool_1950"  : 1950（グループ + 最終ラウンドリーグ）
+# "early"      : 1930-1938（トーナメント・小規模）
+WC_FORMAT = {
+    1930: "early", 1934: "early", 1938: "early",
+    1950: "pool_1950",
+    1954: "early_ko", 1958: "early_ko", 1962: "early_ko", 1966: "early_ko",
+    1970: "early_ko",
+    1974: "round2_1974", 1978: "round2_1974",
+    1982: "gs2nd_1982", 1986: "gs2nd_1986",
+    1990: "gs1990",
+    1994: "standard",
+    1998: "standard", 2002: "standard", 2006: "standard",
+    2010: "standard", 2014: "standard", 2018: "standard", 2022: "standard",
+}
+
+# グループ数マッピング（各大会のグループ数）
+WC_GROUPS = {
+    1930: ["1", "2", "3", "4"],
+    1934: [],  # トーナメント方式
+    1938: [],  # トーナメント方式
+    1950: ["1", "2", "3", "4"],
+    1954: ["1", "2", "3", "4"],
+    1958: ["1", "2", "3", "4"],
+    1962: ["1", "2", "3", "4"],
+    1966: ["1", "2", "3", "4"],
+    1970: ["1", "2", "3", "4"],
+    1974: ["1", "2", "3", "4"],
+    1978: ["1", "2", "3", "4"],
+    1982: list("ABCDEF"),
+    1986: list("ABCDEF"),
+    1990: list("ABCDEF"),
+    1994: list("ABCD") + ["E", "F"],
+    1998: list("ABCDEFGH"),
+    2002: list("ABCDEFGH"),
+    2006: list("ABCDEFGH"),
+    2010: list("ABCDEFGH"),
+    2014: list("ABCDEFGH"),
+    2018: list("ABCDEFGH"),
+    2022: list("ABCDEFGH"),
+}
 
 # 大会基本情報
 WC_META = {
+    1930: {"host": "ウルグアイ", "host_en": "Uruguay", "japan_group": None},
+    1934: {"host": "イタリア", "host_en": "Italy", "japan_group": None},
+    1938: {"host": "フランス", "host_en": "France", "japan_group": None},
+    1950: {"host": "ブラジル", "host_en": "Brazil", "japan_group": None},
+    1954: {"host": "スイス", "host_en": "Switzerland", "japan_group": None},
+    1958: {"host": "スウェーデン", "host_en": "Sweden", "japan_group": None},
+    1962: {"host": "チリ", "host_en": "Chile", "japan_group": None},
+    1966: {"host": "イングランド", "host_en": "England", "japan_group": None},
+    1970: {"host": "メキシコ", "host_en": "Mexico", "japan_group": None},
+    1974: {"host": "西ドイツ", "host_en": "West Germany", "japan_group": None},
+    1978: {"host": "アルゼンチン", "host_en": "Argentina", "japan_group": None},
+    1982: {"host": "スペイン", "host_en": "Spain", "japan_group": None},
+    1986: {"host": "メキシコ", "host_en": "Mexico", "japan_group": None},
+    1990: {"host": "イタリア", "host_en": "Italy", "japan_group": None},
+    1994: {"host": "アメリカ", "host_en": "United States", "japan_group": None},
     1998: {"host": "フランス", "host_en": "France", "japan_group": "H"},
     2002: {"host": "日本・韓国", "host_en": "Japan / South Korea", "japan_group": "H"},
     2006: {"host": "ドイツ", "host_en": "Germany", "japan_group": "F"},
@@ -526,10 +591,25 @@ def parse_external_group_tables_template(template_wikitext, group_id):
 
 def fetch_group_data(year, group_id):
     """特定の年・グループのデータをWikipediaから取得。"""
-    page_title = f"{year}_FIFA_World_Cup_Group_{group_id}"
+    # 1930-1970年は "Group N" (数字)、1974以降はアルファベット
+    if str(group_id).isdigit():
+        page_title = f"{year}_FIFA_World_Cup_Group_{group_id}"
+    else:
+        page_title = f"{year}_FIFA_World_Cup_Group_{group_id}"
+
     wikitext = fetch_wikitext(page_title)
     if not wikitext:
-        return None
+        # 古い大会の別ページタイトル試行
+        alt_titles = [
+            f"{year}_FIFA_World_Cup_group_{group_id}",
+            f"{year}_FIFA_World_Cup_groups",
+        ]
+        for alt in alt_titles:
+            wikitext = fetch_wikitext(alt)
+            if wikitext:
+                break
+        if not wikitext:
+            return None
 
     table = parse_group_standings(wikitext)
 
@@ -543,12 +623,71 @@ def fetch_group_data(year, group_id):
 
     matches = parse_group_boxes(wikitext)
 
+    # グループ名（数字の場合も対応）
+    if str(group_id).isdigit():
+        name_ja = f"グループ{group_id}"
+    else:
+        name_ja = f"グループ{group_id}"
+
     return {
-        "group_id": group_id,
-        "name_ja": f"グループ{group_id}",
+        "group_id": str(group_id),
+        "name_ja": name_ja,
         "table": table,
         "matches": matches,
     }
+
+
+def fetch_1950_final_round():
+    """1950年の最終ラウンドリーグ戦データを取得。"""
+    page_title = "1950_FIFA_World_Cup_Final_Round"
+    wikitext = fetch_wikitext(page_title)
+    if not wikitext:
+        return None
+
+    table = parse_group_standings(wikitext)
+    matches = parse_group_boxes(wikitext)
+
+    return {
+        "group_id": "final_round",
+        "name_ja": "最終ラウンド（リーグ戦）",
+        "table": table,
+        "matches": matches,
+    }
+
+
+def fetch_second_group_stage(year, group_ids):
+    """1974/1978/1982/1986の2次グループステージデータを取得。"""
+    groups = []
+    for gid in group_ids:
+        page_title = f"{year}_FIFA_World_Cup_second_group_stage"
+        wikitext = fetch_wikitext(page_title)
+        if not wikitext:
+            alt_titles = [
+                f"{year}_FIFA_World_Cup_second_round",
+                f"{year}_FIFA_World_Cup_Second_round",
+                f"{year}_FIFA_World_Cup_second_group_stage_Group_{gid}",
+            ]
+            for alt in alt_titles:
+                wikitext = fetch_wikitext(alt)
+                if wikitext:
+                    break
+        if not wikitext:
+            continue
+
+        # ページ内の特定グループ部分を取り出す
+        matches = parse_group_boxes(wikitext)
+        table = parse_group_standings(wikitext)
+
+        groups.append({
+            "group_id": f"2nd_{gid}",
+            "name_ja": f"2次グループ{gid}",
+            "table": table,
+            "matches": matches,
+        })
+        time.sleep(0.5)
+        break  # 同一ページなので1回で十分
+
+    return groups
 
 
 def parse_knockout_boxes(wikitext, section_names):
@@ -588,21 +727,67 @@ def fetch_knockout_data(year):
     page_title = f"{year}_FIFA_World_Cup_knockout_stage"
     wikitext = fetch_wikitext(page_title)
     if not wikitext:
-        # フォールバック: メインページから取得
-        page_title = f"{year}_FIFA_World_Cup"
-        wikitext = fetch_wikitext(page_title)
+        # 古い大会用フォールバック
+        alt_titles = [
+            f"{year}_FIFA_World_Cup_Final",
+            f"{year}_FIFA_World_Cup",
+        ]
+        for alt in alt_titles:
+            wikitext = fetch_wikitext(alt)
+            if wikitext:
+                break
         if not wikitext:
             return {}
 
     time.sleep(0.5)
 
-    round_sections = {
-        "round_of_16": ["Round of 16", "Second round", "Round of sixteen"],
-        "quarter_finals": ["Quarter-finals", "Quarter finals", "Quarterfinals"],
-        "semi_finals": ["Semi-finals", "Semi finals", "Semifinals"],
-        "third_place": ["Third-place play-off", "Third place play-off", "Third place match"],
-        "final": ["Final"],
-    }
+    # 大会年代により試合ラウンド名が異なる
+    if year <= 1938:
+        round_sections = {
+            "quarter_finals": ["Quarter-finals", "Quarter finals", "Quarterfinal", "First round"],
+            "semi_finals": ["Semi-finals", "Semi finals", "Semifinal"],
+            "third_place": ["Third-place play-off", "Third place play-off", "Third place match", "Third place"],
+            "final": ["Final"],
+        }
+    elif year == 1950:
+        # 1950は決勝ラウンドリーグ戦（finalなし）
+        return {}
+    elif year in [1954, 1958, 1962, 1966, 1970]:
+        round_sections = {
+            "quarter_finals": ["Quarter-finals", "Quarter finals", "Quarterfinal"],
+            "semi_finals": ["Semi-finals", "Semi finals", "Semifinal"],
+            "third_place": ["Third-place play-off", "Third place play-off", "Third place match", "Third place"],
+            "final": ["Final"],
+        }
+    elif year in [1974, 1978]:
+        # 2次グループ制のため、ここでは決勝・3位決定戦のみ
+        round_sections = {
+            "third_place": ["Third-place play-off", "Third place play-off", "Third place match"],
+            "final": ["Final"],
+        }
+    elif year in [1982, 1986]:
+        # 1982/1986: 2次GS + 準決勝・決勝
+        round_sections = {
+            "semi_finals": ["Semi-finals", "Semi finals", "Semifinal"],
+            "third_place": ["Third-place play-off", "Third place play-off", "Third place match"],
+            "final": ["Final"],
+        }
+    elif year == 1990:
+        round_sections = {
+            "round_of_16": ["Round of 16", "Second round", "Round of sixteen"],
+            "quarter_finals": ["Quarter-finals", "Quarter finals", "Quarterfinals"],
+            "semi_finals": ["Semi-finals", "Semi finals", "Semifinals"],
+            "third_place": ["Third-place play-off", "Third place play-off", "Third place match"],
+            "final": ["Final"],
+        }
+    else:
+        round_sections = {
+            "round_of_16": ["Round of 16", "Second round", "Round of sixteen"],
+            "quarter_finals": ["Quarter-finals", "Quarter finals", "Quarterfinals"],
+            "semi_finals": ["Semi-finals", "Semi finals", "Semifinals"],
+            "third_place": ["Third-place play-off", "Third place play-off", "Third place match"],
+            "final": ["Final"],
+        }
 
     knockout = {}
     for round_key, section_names in round_sections.items():
@@ -619,23 +804,44 @@ def fetch_year_data(year):
     """特定の年のW杯詳細データを取得してdictで返す。"""
     print(f"\n[{year}] データ取得開始")
     meta = WC_META.get(year, {})
-    group_ids = list("ABCDEFGH")
+    fmt = WC_FORMAT.get(year, "standard")
+    group_ids = WC_GROUPS.get(year, list("ABCDEFGH"))
     groups = []
 
+    # グループステージ取得
     for gid in group_ids:
         print(f"  [GS-{gid}] グループ{gid}を取得中...")
-        group_data = fetch_group_data(year, gid)
-        if group_data:
-            groups.append(group_data)
-            m_count = len(group_data.get("matches", []))
-            t_count = len(group_data.get("table", []))
-            print(f"  [GS-{gid}] OK: テーブル{t_count}チーム / {m_count}試合")
-        else:
-            print(f"  [GS-{gid}] 取得失敗")
+        try:
+            group_data = fetch_group_data(year, gid)
+            if group_data:
+                groups.append(group_data)
+                m_count = len(group_data.get("matches", []))
+                t_count = len(group_data.get("table", []))
+                print(f"  [GS-{gid}] OK: テーブル{t_count}チーム / {m_count}試合")
+            else:
+                print(f"  [GS-{gid}] 取得失敗")
+        except Exception as e:
+            print(f"  [GS-{gid}] エラー: {e}")
+        time.sleep(1.0)
+
+    # 1950年の最終ラウンドリーグ戦
+    final_round_data = None
+    if fmt == "pool_1950":
+        print(f"  [1950FR] 最終ラウンドを取得中...")
+        try:
+            final_round_data = fetch_1950_final_round()
+            if final_round_data:
+                print(f"  [1950FR] OK: {len(final_round_data.get('matches',[]))}試合")
+        except Exception as e:
+            print(f"  [1950FR] エラー: {e}")
         time.sleep(1.0)
 
     print(f"  [KO] 決勝トーナメントを取得中...")
-    knockout = fetch_knockout_data(year)
+    try:
+        knockout = fetch_knockout_data(year)
+    except Exception as e:
+        print(f"  [KO] エラー: {e}")
+        knockout = {}
     print(f"  [KO] 完了")
     time.sleep(1.0)
 
@@ -660,17 +866,24 @@ def fetch_year_data(year):
             entry["note"] = m["note"]
         japan_matches.append(entry)
 
-    return {
+    result = {
         "year": year,
         "host": meta.get("host", ""),
         "host_en": meta.get("host_en", ""),
-        "japan_group": meta.get("japan_group", ""),
+        "japan_group": meta.get("japan_group"),
+        "format": fmt,
         "groups": groups,
         "knockout": knockout,
         "japan_matches": japan_matches,
         "_source": "Wikipedia",
         "_updated": datetime.now(JST).strftime("%Y-%m-%d"),
     }
+
+    # 1950年の最終ラウンドを追加
+    if final_round_data:
+        result["final_round"] = final_round_data
+
+    return result
 
 
 def main():
