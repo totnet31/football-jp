@@ -69,8 +69,17 @@ curl -X POST https://football-jp-push-api.saito-dfe.workers.dev/api/subscribe \
   }'
 ```
 
+## Web Push 暗号化対応済み（RFC 8291 / aes128gcm）
+
+`/api/send-push` は RFC 8291 仕様の **aes128gcm** 暗号化に対応しています。
+
+- エフェメラル ECDH P-256 鍵ペアをリクエスト毎に生成
+- HKDF（HMAC-SHA256 ベース）で CEK（16バイト）と Nonce（12バイト）を導出
+- AES-128-GCM でペイロードを暗号化し、RFC 8188 形式のヘッダ（salt + rs + keyid）を付与
+- Cloudflare Workers の `crypto.subtle` Web Crypto API のみで実装（Node.js 依存なし）
+
 ## ⚠️ 注意事項
 
 - `ADMIN_TOKEN` が未設定の場合、`/api/subscriptions` と `/api/send-push` は 401 を返す
-- Web Push の暗号化（aes128gcm）は現在 TODO。実際の配信には暗号化実装が必要
+- `VAPID_PUBLIC_KEY` を Cloudflare Secret に設定することを推奨（未設定時はハードコード値を使用）
 - 購読者が410エラーを返した場合、KVから自動削除される
