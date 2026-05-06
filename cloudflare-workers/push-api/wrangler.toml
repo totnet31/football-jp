@@ -6,4 +6,8 @@ compatibility_date = "2024-09-25"
 binding = "PUSH_SUBSCRIPTIONS"
 id = "47da5166a3514c41a66b2e1159e44a69"
 
-# VAPID_PUBLIC_KEY / VAPID_PRIVATE_KEY / VAPID_SUBJECT は wrangler secret put で設定
+# 以下は wrangler secret put で設定（gitに含めない）:
+# VAPID_PUBLIC_KEY  : VAPID公開鍵
+# VAPID_PRIVATE_KEY : VAPID秘密鍵
+# VAPID_SUBJECT     : mailto:privacy@football-jp.com
+# ADMIN_TOKEN       : GitHub Actions / send_weekly_push.py 認証用トークン（任意の乱数文字列）
