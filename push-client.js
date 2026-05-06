@@ -2,7 +2,7 @@
 // 使い方：window.fjPush.subscribe(['mitoma', 'kubo']) / window.fjPush.unsubscribe()
 
 const VAPID_PUBLIC_KEY = 'BOQ4LvD-tUTTYj8E7_L28zVtbio-10Brm8oFzwBlCd2gVlG-wPt_YfOzPdtEJ-wwnN8DUdEoXBJGoUQHkyllvb8';
-const API_BASE = 'https://push.football-jp.com'; // Cloudflare Workers のドメイン（デプロイ後に確定）
+const API_BASE = 'https://football-jp-push-api.saito-dfe.workers.dev'; // Cloudflare Workers（2026-05-07 デプロイ）
 const STORAGE_KEY = 'fjPushFavorites';
 const SUB_KEY = 'fjPushSubscribed';
 
