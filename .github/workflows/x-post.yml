@@ -1,0 +1,188 @@
+name: X（Twitter）自動投稿
+
+# -----------------------------------------------------------------------
+# 現在このワークフローは無効化されています（if: false で全ジョブをスキップ）
+# 有効化するには:
+#   1. X APIキーを GitHub Secrets に設定済みであることを確認
+#   2. 各ジョブの "if: false" を削除
+#   3. develop ブランチにプッシュして動作確認
+#   4. main にマージして本番稼働
+# -----------------------------------------------------------------------
+
+on:
+  schedule:
+    # 朝のスケジュール投稿（JST 7:30 = UTC 22:30 前日）
+    - cron: '30 22 * * *'
+
+    # 試合結果投稿 その1：JST 18:00 = UTC 9:00（昼の試合結果）
+    - cron: '0 9 * * *'
+
+    # 試合結果投稿 その2：JST 22:00 = UTC 13:00（夜の試合結果）
+    - cron: '0 13 * * *'
+
+    # 試合結果投稿 その3：JST 翌8:00 = UTC 23:00（深夜試合の結果）
+    - cron: '0 23 * * *'
+
+    # 週次まとめ（月曜 JST 9:00 = UTC 日曜 0:00）
+    - cron: '0 0 * * 1'
+
+  # GitHub の画面から手動実行も可能
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: '投稿モード（morning / results / weekly）'
+        required: true
+        default: 'morning'
+        type: choice
+        options:
+          - morning
+          - results
+          - weekly
+      dry_run:
+        description: 'dry-run モード（実際には投稿しない）'
+        required: false
+        default: 'true'
+        type: boolean
+
+jobs:
+  # -----------------------------------------------------------------------
+  # 朝のスケジュール投稿（7:30 JST）
+  # -----------------------------------------------------------------------
+  morning-schedule:
+    name: 朝のスケジュール投稿
+    runs-on: ubuntu-latest
+    if: false  # 有効化時はこの行を削除
+
+    # 朝のcron（22:30 UTC）または手動実行（modeがmorning）のみ実行
+    # ※ GitHub Actions では cron の識別が難しいため、全cronで実行してスクリプト側で制御
+    steps:
+      - name: リポジトリを取得
+        uses: actions/checkout@v4
+        with:
+          ref: main  # 本番はmainブランチのデータを使用
+
+      - name: Python をセットアップ
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: 依存ライブラリをインストール
+        run: pip install requests requests-oauthlib
+
+      - name: 朝のスケジュール投稿を実行
+        env:
+          X_API_KEY: ${{ secrets.X_API_KEY }}
+          X_API_SECRET: ${{ secrets.X_API_SECRET }}
+          X_BEARER_TOKEN: ${{ secrets.X_BEARER_TOKEN }}
+          X_ACCESS_TOKEN: ${{ secrets.X_ACCESS_TOKEN }}
+          X_ACCESS_TOKEN_SECRET: ${{ secrets.X_ACCESS_TOKEN_SECRET }}
+        run: python scripts/post_to_x.py --mode morning
+
+  # -----------------------------------------------------------------------
+  # 試合結果投稿（18:00 / 22:00 / 翌8:00 JST）
+  # -----------------------------------------------------------------------
+  match-results:
+    name: 試合結果投稿
+    runs-on: ubuntu-latest
+    if: false  # 有効化時はこの行を削除
+
+    steps:
+      - name: リポジトリを取得
+        uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: Python をセットアップ
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: 依存ライブラリをインストール
+        run: pip install requests requests-oauthlib
+
+      - name: 試合結果を投稿
+        env:
+          X_API_KEY: ${{ secrets.X_API_KEY }}
+          X_API_SECRET: ${{ secrets.X_API_SECRET }}
+          X_BEARER_TOKEN: ${{ secrets.X_BEARER_TOKEN }}
+          X_ACCESS_TOKEN: ${{ secrets.X_ACCESS_TOKEN }}
+          X_ACCESS_TOKEN_SECRET: ${{ secrets.X_ACCESS_TOKEN_SECRET }}
+        run: python scripts/post_to_x.py --mode results
+
+      - name: 投稿済みIDを保存（コミット）
+        if: success()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/x_posted_matches.json
+          git diff --cached --quiet || git commit -m "chore: X投稿済み試合IDを更新"
+          git push origin main
+
+  # -----------------------------------------------------------------------
+  # 週次まとめ投稿（月曜 9:00 JST）
+  # -----------------------------------------------------------------------
+  weekly-summary:
+    name: 週次まとめ投稿
+    runs-on: ubuntu-latest
+    if: false  # 有効化時はこの行を削除
+
+    steps:
+      - name: リポジトリを取得
+        uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: Python をセットアップ
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: 依存ライブラリをインストール
+        run: pip install requests requests-oauthlib
+
+      - name: 週次まとめを投稿
+        env:
+          X_API_KEY: ${{ secrets.X_API_KEY }}
+          X_API_SECRET: ${{ secrets.X_API_SECRET }}
+          X_BEARER_TOKEN: ${{ secrets.X_BEARER_TOKEN }}
+          X_ACCESS_TOKEN: ${{ secrets.X_ACCESS_TOKEN }}
+          X_ACCESS_TOKEN_SECRET: ${{ secrets.X_ACCESS_TOKEN_SECRET }}
+        run: python scripts/post_to_x.py --mode weekly
+
+  # -----------------------------------------------------------------------
+  # 手動実行ジョブ（workflow_dispatch 用）
+  # -----------------------------------------------------------------------
+  manual-post:
+    name: 手動投稿
+    runs-on: ubuntu-latest
+    if: false  # 有効化時はこの行を削除（github.event_name == 'workflow_dispatch' も可）
+
+    steps:
+      - name: リポジトリを取得
+        uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: Python をセットアップ
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: 依存ライブラリをインストール
+        run: pip install requests requests-oauthlib
+
+      - name: 指定モードで投稿
+        env:
+          X_API_KEY: ${{ secrets.X_API_KEY }}
+          X_API_SECRET: ${{ secrets.X_API_SECRET }}
+          X_BEARER_TOKEN: ${{ secrets.X_BEARER_TOKEN }}
+          X_ACCESS_TOKEN: ${{ secrets.X_ACCESS_TOKEN }}
+          X_ACCESS_TOKEN_SECRET: ${{ secrets.X_ACCESS_TOKEN_SECRET }}
+        run: |
+          MODE="${{ github.event.inputs.mode }}"
+          DRY_RUN="${{ github.event.inputs.dry_run }}"
+          DRY_FLAG=""
+          if [ "$DRY_RUN" = "true" ]; then
+            DRY_FLAG="--dry-run"
+          fi
+          python scripts/post_to_x.py --mode "$MODE" $DRY_FLAG

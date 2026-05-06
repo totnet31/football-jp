@@ -444,28 +444,50 @@ def build_player_page(player: dict, slug: str, scorer_stats: dict,
     note = player.get("note", "")
 
     title = f"{esc(name_ja)}（{esc(name_en)}）プロフィール｜football-jp"
-    desc = f"{esc(name_ja)}選手の{esc(club_ja)}での試合・ゴール・統計を日本時間で。"
+
+    # メタdesc生成（100-160字）
+    goals_val = (wiki_stats or scorer_stats or {}).get("goals", 0) if (wiki_stats or scorer_stats) else 0
+    played_val = (wiki_stats or scorer_stats or {}).get("played", 0) if (wiki_stats or scorer_stats) else 0
+    if goals_val and played_val:
+        desc_raw = f"{name_ja}（{position}・{club_ja}）の試合スケジュール・最新成績・配信局情報を日本時間で確認。今シーズン{goals_val}ゴール・{played_val}試合出場。{league_ja}で活躍する日本人海外組の最新データ。三笘薫・久保建英ら68名をまとめてチェックできる国内最速データベース。"
+    else:
+        desc_raw = f"{name_ja}（{position}・{club_ja}）の試合スケジュール・最新成績・配信局情報を日本時間でチェック。{league_ja}在籍の日本人海外組。三笘薫・久保建英ら全68名の最新データをfootball-jpで一括確認。配信局・次の試合日程も掲載。"
+    # 文字数調整（160字以内）
+    if len(desc_raw) > 160:
+        desc_raw = desc_raw[:157] + "…"
+    desc = desc_raw
+
     canonical = f"{SITE_URL}/players/{slug}/"
 
-    # Schema.org Person JSON-LD
+    # Schema.org Person JSON-LD（強化版）
     schema_person = {
         "@context": "https://schema.org",
         "@type": "Person",
         "name": name_ja,
         "alternateName": name_en,
-        "jobTitle": position,
-        "affiliation": {
+        "jobTitle": "Footballer",
+        "nationality": "JP",
+        "memberOf": {
             "@type": "SportsTeam",
             "name": club_ja,
-            "sport": "Football"
+            "alternateName": club_en,
+            "sport": "Soccer",
+            "url": f"{SITE_URL}/clubs/{make_slug(club_en)}/"
         },
         "url": canonical,
-        "nationality": {
-            "@type": "Country",
-            "name": "Japan"
-        }
+    }
+    # BreadcrumbList
+    schema_breadcrumb = {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": "ホーム", "item": f"{SITE_URL}/"},
+            {"@type": "ListItem", "position": 2, "name": "選手", "item": f"{SITE_URL}/players/"},
+            {"@type": "ListItem", "position": 3, "name": name_ja, "item": canonical},
+        ]
     }
     schema_ld = json.dumps(schema_person, ensure_ascii=False, indent=2)
+    schema_breadcrumb_ld = json.dumps(schema_breadcrumb, ensure_ascii=False, indent=2)
 
     # --- 統計セクション ---
     # wiki_stats を優先、なければ scorer_stats (football-data API top50) を使用
@@ -959,6 +981,12 @@ def build_player_page(player: dict, slug: str, scorer_stats: dict,
   <meta property="og:site_name" content="{esc(SITE_NAME)}">
   <meta property="og:locale" content="ja_JP">
   <meta name="twitter:card" content="summary_large_image">
+  <script type="application/ld+json">
+{schema_ld}
+  </script>
+  <script type="application/ld+json">
+{schema_breadcrumb_ld}
+  </script>
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id={GA4_ID}"></script>
   <script>
@@ -974,6 +1002,16 @@ def build_player_page(player: dict, slug: str, scorer_stats: dict,
   <link rel="apple-touch-icon" sizes="180x180" href="/assets/logos/favicon-180.png">
   <link rel="stylesheet" href="/style.css">
   <style>
+    .breadcrumb {{
+      font-size: 12px;
+      color: #888;
+      padding: 8px 16px;
+      background: #f8f9fa;
+      border-bottom: 1px solid var(--c-border, #e5e7eb);
+    }}
+    .breadcrumb a {{ color: #555; text-decoration: none; }}
+    .breadcrumb a:hover {{ color: var(--c-accent, #0047ab); text-decoration: underline; }}
+    .breadcrumb span {{ color: #333; }}
     .player-hero {{
       background: #ffffff;
       border-bottom: 1px solid var(--c-border, #e5e7eb);
@@ -1352,7 +1390,11 @@ def build_player_page(player: dict, slug: str, scorer_stats: dict,
 </head>
 <body>
 
-<a class="back-link" href="/">← football-jp トップへ</a>
+<nav class="breadcrumb" aria-label="パンくずリスト">
+  <a href="/">ホーム</a> ›
+  <a href="/players/">選手</a> ›
+  <span aria-current="page">{esc(name_ja)}</span>
+</nav>
 
 <div class="player-hero">
   <div class="name-block">
@@ -1452,7 +1494,7 @@ function trackAffClick(el) {{
 def build_players_index(players: list, slug_map: dict) -> str:
     """選手一覧ページ（/players/index.html）を生成する。"""
     title = "日本人サッカー選手 一覧 海外組68名｜football-jp"
-    desc = "プレミア・ラ・リーガ・ブンデス等で活躍する日本人選手68名の一覧。各選手のプロフィール・統計・最近の試合へ。"
+    desc = "三笘薫・久保建英・遠藤航など海外組68名の日本人選手一覧。プレミアリーグ・ブンデスリーガ・ラ・リーガ等の試合スケジュール・成績・配信情報を日本時間で確認。"
     canonical = f"{SITE_URL}/players/"
 
     # ポジション正規化（GK/DF/MF/FW の4分類）
@@ -1520,6 +1562,29 @@ def build_players_index(players: list, slug_map: dict) -> str:
         </div>
       </section>"""
 
+    # Schema.org ItemList（事前生成）
+    item_list_elements = [
+        {"@type": "ListItem", "position": i + 1, "name": p.get("name_ja", ""),
+         "url": f"{SITE_URL}/players/{slug_map.get(i, '')}/"}
+        for i, p in enumerate(players[:20])
+    ]
+    schema_itemlist = json.dumps({
+        "@context": "https://schema.org",
+        "@type": "ItemList",
+        "name": "日本人サッカー選手一覧",
+        "description": f"海外リーグで活躍する日本人選手{len(players)}名の一覧",
+        "url": f"{SITE_URL}/players/",
+        "itemListElement": item_list_elements
+    }, ensure_ascii=False, indent=2)
+    schema_breadcrumb_index = json.dumps({
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": "ホーム", "item": f"{SITE_URL}/"},
+            {"@type": "ListItem", "position": 2, "name": "選手一覧", "item": f"{SITE_URL}/players/"}
+        ]
+    }, ensure_ascii=False, indent=2)
+
     return f"""<!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -1535,6 +1600,12 @@ def build_players_index(players: list, slug_map: dict) -> str:
   <meta property="og:site_name" content="{esc(SITE_NAME)}">
   <meta property="og:locale" content="ja_JP">
   <meta name="twitter:card" content="summary_large_image">
+  <script type="application/ld+json">
+{schema_itemlist}
+  </script>
+  <script type="application/ld+json">
+{schema_breadcrumb_index}
+  </script>
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id={GA4_ID}"></script>
   <script>
@@ -1548,6 +1619,15 @@ def build_players_index(players: list, slug_map: dict) -> str:
   <link rel="apple-touch-icon" sizes="180x180" href="/assets/logos/favicon-180.png">
   <link rel="stylesheet" href="/style.css">
   <style>
+    .breadcrumb {{
+      font-size: 12px;
+      color: #888;
+      padding: 8px 16px;
+      background: #f8f9fa;
+      border-bottom: 1px solid var(--c-border, #e5e7eb);
+    }}
+    .breadcrumb a {{ color: #555; text-decoration: none; }}
+    .breadcrumb a:hover {{ color: var(--c-accent, #0047ab); text-decoration: underline; }}
     .index-hero {{
       background: #fff;
       border-bottom: 1px solid var(--c-border, #e5e7eb);
@@ -1663,7 +1743,10 @@ def build_players_index(players: list, slug_map: dict) -> str:
 </head>
 <body>
 
-<a class="back-link" href="/">← football-jp トップへ</a>
+<nav class="breadcrumb" aria-label="パンくずリスト">
+  <a href="/">ホーム</a> ›
+  <span aria-current="page">選手一覧</span>
+</nav>
 
 <div class="index-hero">
   <h1>🇯🇵 日本人選手 一覧</h1>

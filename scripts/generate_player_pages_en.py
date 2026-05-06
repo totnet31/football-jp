@@ -350,30 +350,44 @@ def build_player_page_en(player: dict, slug: str, scorer_stats: dict,
     note = player.get("note", "")
 
     title = f"{esc(name_en)} - Stats & Match History | football-jp"
-    desc = (f"{esc(name_en)} plays as {esc(position_en)} for {esc(club_en)} "
-            f"({esc(league_en)}). Stats, match history, goals, and career info in JST.")
+    goals_val = (wiki_stats or scorer_stats or {}).get("goals", 0) if (wiki_stats or scorer_stats) else 0
+    played_val = (wiki_stats or scorer_stats or {}).get("played", 0) if (wiki_stats or scorer_stats) else 0
+    if goals_val and played_val:
+        desc = f"{name_en} ({position_en}, {club_en}) – {goals_val} goals in {played_val} apps this season. Match schedule, stats, and broadcaster info in JST. Japanese overseas player tracker."
+    else:
+        desc = f"{name_en} ({position_en}) plays for {club_en} in the {league_en}. Match schedule, stats, broadcasters, and career info updated in Japan Standard Time."
+    if len(desc) > 160:
+        desc = desc[:157] + "..."
     canonical = f"{SITE_URL}/en/players/{slug}/"
     ja_url = f"{SITE_URL}/players/{slug}/"
 
-    # Schema.org Person JSON-LD (English)
+    # Schema.org Person JSON-LD (English, 強化版)
     schema_person = {
         "@context": "https://schema.org",
         "@type": "Person",
         "name": name_en,
         "alternateName": name_ja,
-        "jobTitle": position_en,
-        "affiliation": {
+        "jobTitle": "Footballer",
+        "nationality": "JP",
+        "memberOf": {
             "@type": "SportsTeam",
             "name": club_en,
-            "sport": "Football"
+            "sport": "Soccer",
+            "url": f"{SITE_URL}/en/clubs/{make_slug(club_en)}/"
         },
         "url": canonical,
-        "nationality": {
-            "@type": "Country",
-            "name": "Japan"
-        }
+    }
+    schema_breadcrumb = {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": "Home", "item": f"{SITE_URL}/en/"},
+            {"@type": "ListItem", "position": 2, "name": "Players", "item": f"{SITE_URL}/en/players/"},
+            {"@type": "ListItem", "position": 3, "name": name_en, "item": canonical},
+        ]
     }
     schema_ld = json.dumps(schema_person, ensure_ascii=False, indent=2)
+    schema_breadcrumb_ld = json.dumps(schema_breadcrumb, ensure_ascii=False, indent=2)
 
     # --- Stats section ---
     active_stats = wiki_stats if wiki_stats else scorer_stats
@@ -1099,10 +1113,28 @@ def build_player_page_en(player: dict, slug: str, scorer_stats: dict,
   <script type="application/ld+json">
 {schema_ld}
   </script>
+  <script type="application/ld+json">
+{schema_breadcrumb_ld}
+  </script>
+  <style>
+    .breadcrumb {{
+      font-size: 12px;
+      color: #888;
+      padding: 8px 16px;
+      background: #f8f9fa;
+      border-bottom: 1px solid var(--c-border, #e5e7eb);
+    }}
+    .breadcrumb a {{ color: #555; text-decoration: none; }}
+    .breadcrumb a:hover {{ color: var(--c-accent, #0047ab); text-decoration: underline; }}
+  </style>
 </head>
 <body>
 
-<a class="back-link" href="/en/">← football-jp (English)</a>
+<nav class="breadcrumb" aria-label="Breadcrumb">
+  <a href="/en/">Home</a> ›
+  <a href="/en/players/">Players</a> ›
+  <span aria-current="page">{esc(name_en)}</span>
+</nav>
 
 <div class="player-hero">
   <div class="name-block">

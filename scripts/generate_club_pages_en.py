@@ -362,8 +362,13 @@ def build_club_page_en(club_info: dict, slug: str, standing: dict,
     players = club_info.get("players", [])
 
     title = f"{esc(club_en)} - Japanese Players, Fixtures & Standings | football-jp"
-    desc = (f"{esc(club_en)} ({esc(league_en)}) Japanese players, fixtures, and league standings "
-            f"in Japan Standard Time.")
+    player_names_en = ", ".join([p.get("name_en", "") for p in players[:3] if p.get("name_en")])
+    if player_names_en:
+        desc = f"{club_en} ({league_en}) Japanese players: {player_names_en}. Fixtures, standings, and broadcaster info in Japan Standard Time (JST)."
+    else:
+        desc = f"{club_en} ({league_en}) fixture schedule, league standings, and Japanese player info updated in Japan Standard Time (JST). football-jp."
+    if len(desc) > 160:
+        desc = desc[:157] + "..."
     canonical = f"{SITE_URL}/en/clubs/{slug}/"
     ja_url = f"{SITE_URL}/clubs/{slug}/"
 
@@ -372,11 +377,11 @@ def build_club_page_en(club_info: dict, slug: str, standing: dict,
         "@type": "SportsTeam",
         "name": club_en,
         "alternateName": club_ja,
-        "sport": "Football",
+        "sport": "Soccer",
         "url": canonical,
     }
     if league_en:
-        schema_team["memberOf"] = {"@type": "SportsOrganization", "name": league_en}
+        schema_team["memberOf"] = {"@type": "SportsLeague", "name": league_en}
     if crest_url:
         schema_team["image"] = crest_url
     schema_ld = json.dumps(schema_team, ensure_ascii=False, indent=2)

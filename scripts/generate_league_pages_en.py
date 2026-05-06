@@ -331,10 +331,14 @@ def generate_league_page_en(
     canonical = f"{SITE_URL}/en/leagues/{lg_slug_str}/"
     ja_url = f"{SITE_URL}/leagues/{lg_slug_str}/"
     title = f"Japanese Players in {lg_en_name} - Stats & Match Schedule | football-jp"
-    description = (
-        f"All {num_players} Japanese players across {num_clubs} clubs in the {lg_en_name}. "
-        f"Check match schedule, results, standings and streaming info in JST."
-    )
+    top_players_en = ", ".join([p.get("name_en", "") for p in players[:3] if p.get("name_en")])
+    if top_players_en:
+        desc_raw = f"{num_players} Japanese players in the {lg_en_name}: {top_players_en} and more. Match schedule, stats, standings and streaming info in Japan Standard Time (JST)."
+    else:
+        desc_raw = f"All {num_players} Japanese players across {num_clubs} clubs in the {lg_en_name}. Match schedule, results, standings and streaming info in JST. football-jp."
+    if len(desc_raw) > 160:
+        desc_raw = desc_raw[:157] + "..."
+    description = desc_raw
 
     schema = json.dumps({
         "@context": "https://schema.org",

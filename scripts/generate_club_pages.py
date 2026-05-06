@@ -470,26 +470,60 @@ def build_club_page(club_info: dict, slug: str, standing: dict,
     players = club_info.get("players", [])
 
     title = f"{esc(club_ja)}（{esc(club_en)}）｜日本人選手・試合・順位｜football-jp"
-    desc = f"{esc(club_ja)}に所属する日本人選手の試合日程・リーグ順位を日本時間で。"
+
+    # メタdesc生成（100-160字）
+    player_names = "・".join([p.get("name_ja", "") for p in players[:3]])
+    player_count = len(players)
+    if player_names and player_count > 0:
+        desc_raw = f"{club_ja}（{league_ja}）の試合スケジュール・リーグ順位・所属日本人選手情報を一括確認。{player_names}がプレー中。最新順位・配信局・直近試合結果を日本時間でリアルタイムチェック。football-jp海外サッカーファン必見。"
+    else:
+        desc_raw = f"{club_ja}（{league_ja}）の試合スケジュール・リーグ順位・配信局情報を日本時間でチェック。日本人選手の最新成績・ゴール数・出場試合数をfootball-jpで一括確認。海外サッカーファン必見。"
+    if len(desc_raw) > 160:
+        desc_raw = desc_raw[:157] + "…"
+    desc = desc_raw
+
     canonical = f"{SITE_URL}/clubs/{slug}/"
 
-    # Schema.org SportsTeam JSON-LD
+    # Schema.org SportsTeam JSON-LD（強化版）
     schema_team = {
         "@context": "https://schema.org",
         "@type": "SportsTeam",
         "name": club_ja,
         "alternateName": club_en,
-        "sport": "Football",
+        "sport": "Soccer",
         "url": canonical,
     }
     if league_ja:
         schema_team["memberOf"] = {
-            "@type": "SportsOrganization",
+            "@type": "SportsLeague",
             "name": league_ja
         }
     if crest_url:
         schema_team["image"] = crest_url
+    # 所属日本人選手をathleteとして追加
+    athlete_list = []
+    for pl in players:
+        pl_en = pl.get("name_en", "")
+        pl_slug = player_slug_map.get(pl_en, make_slug(pl_en))
+        athlete_list.append({
+            "@type": "Person",
+            "name": pl.get("name_ja", ""),
+            "url": f"{SITE_URL}/players/{pl_slug}/"
+        })
+    if athlete_list:
+        schema_team["athlete"] = athlete_list
     schema_ld = json.dumps(schema_team, ensure_ascii=False, indent=2)
+    # BreadcrumbList
+    schema_breadcrumb = {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": "ホーム", "item": f"{SITE_URL}/"},
+            {"@type": "ListItem", "position": 2, "name": "クラブ", "item": f"{SITE_URL}/clubs/"},
+            {"@type": "ListItem", "position": 3, "name": club_ja, "item": canonical},
+        ]
+    }
+    schema_breadcrumb_ld = json.dumps(schema_breadcrumb, ensure_ascii=False, indent=2)
 
     # --- 紋章 ---
     crest_html = ""
@@ -1184,10 +1218,28 @@ def build_club_page(club_info: dict, slug: str, standing: dict,
   <script type="application/ld+json">
 {schema_ld}
   </script>
+  <script type="application/ld+json">
+{schema_breadcrumb_ld}
+  </script>
+  <style>
+    .breadcrumb {{
+      font-size: 12px;
+      color: #888;
+      padding: 8px 16px;
+      background: #f8f9fa;
+      border-bottom: 1px solid var(--c-border, #e5e7eb);
+    }}
+    .breadcrumb a {{ color: #555; text-decoration: none; }}
+    .breadcrumb a:hover {{ color: var(--c-accent, #0047ab); text-decoration: underline; }}
+  </style>
 </head>
 <body>
 
-<a class="back-link" href="/">← football-jp トップへ</a>
+<nav class="breadcrumb" aria-label="パンくずリスト">
+  <a href="/">ホーム</a> ›
+  <a href="/clubs/">クラブ</a> ›
+  <span aria-current="page">{esc(club_ja)}</span>
+</nav>
 
 <div class="club-hero">
   <div class="crest-wrapper">
@@ -1266,7 +1318,7 @@ function trackAffClick(el) {{
 def build_clubs_index(clubs: dict, club_crest_map: dict) -> str:
     """クラブ一覧ページ（/clubs/index.html）を生成する。"""
     title = "日本人選手所属クラブ 一覧 41クラブ｜football-jp"
-    desc = "海外リーグで日本人選手が在籍するクラブ41の一覧。プレミア・ブンデス・ラ・リーガ等リーグ別に紹介。"
+    desc = "日本人選手が在籍するクラブ41チームの一覧。プレミアリーグ・ブンデスリーガ・ラ・リーガ等リーグ別に紹介。各クラブの試合日程・順位・配信局情報を日本時間で確認できます。"
     canonical = f"{SITE_URL}/clubs/"
 
     # リーグ別にグループ化
@@ -1444,11 +1496,23 @@ def build_clubs_index(clubs: dict, club_crest_map: dict) -> str:
       margin-top: 20px;
     }}
     .site-footer a {{ color: #666; }}
+    .breadcrumb {{
+      font-size: 12px;
+      color: #888;
+      padding: 8px 16px;
+      background: #f8f9fa;
+      border-bottom: 1px solid var(--c-border, #e5e7eb);
+    }}
+    .breadcrumb a {{ color: #555; text-decoration: none; }}
+    .breadcrumb a:hover {{ color: var(--c-accent, #0047ab); text-decoration: underline; }}
   </style>
 </head>
 <body>
 
-<a class="back-link" href="/">← football-jp トップへ</a>
+<nav class="breadcrumb" aria-label="パンくずリスト">
+  <a href="/">ホーム</a> ›
+  <span aria-current="page">クラブ一覧</span>
+</nav>
 
 <div class="index-hero">
   <h1>🏟️ クラブ 一覧</h1>
