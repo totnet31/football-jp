@@ -1,0 +1,41 @@
+name: 週次 Push 通知送信
+
+on:
+  schedule:
+    - cron: '0 22 * * 0'  # 毎週日曜22:00 UTC = 月曜朝7:00 JST
+  workflow_dispatch:        # GitHubの画面から手動実行も可能
+
+jobs:
+  send-weekly-push:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: リポジトリを取得
+        uses: actions/checkout@v4
+        with:
+          ref: develop
+
+      - name: Python をセットアップ
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: 週次 Push 通知を送信
+        env:
+          ADMIN_TOKEN: ${{ secrets.ADMIN_TOKEN }}
+        run: python3 scripts/send_weekly_push.py
+
+      - name: 失敗時にDiscordへ通知
+        if: failure()
+        env:
+          WEBHOOK: ${{ secrets.DISCORD_WEBHOOK_URL }}
+        run: |
+          if [ -z "$WEBHOOK" ]; then
+            echo "DISCORD_WEBHOOK_URL secret が未設定のため通知スキップ"
+            exit 0
+          fi
+          RUN_URL="${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+          MSG="⚠️ football-jp 週次Push通知の送信が失敗しました\\nRun: $RUN_URL"
+          curl -s -X POST "$WEBHOOK" \
+            -H "Content-Type: application/json" \
+            -d "{\"content\": \"$MSG\"}" || true
