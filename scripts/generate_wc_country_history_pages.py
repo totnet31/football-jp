@@ -702,7 +702,7 @@ def build_country_ja(country, wc_history_tournaments):
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{country['name_ja']} W杯出場履歴 | football-jp</title>
-  <meta name="description" content="{country['name_ja']}のFIFAワールドカップ全出場履歴。出場{country['appearances']}回・{country['best_result_ja']}。歴代の成績・伝説の選手を一覧で確認。">
+  <meta name="description" content="{country['name_ja']}のW杯出場史（出場{country['appearances']}回・最高成績：{country['best_result_ja']}）。歴代全22大会の試合結果・グループステージ成績・レジェンド選手・対戦相手データを徹底網羅。サッカーファン必見。">
   <link rel="canonical" href="https://football-jp.com/worldcup/history/countries/{slug}/">
   <link rel="alternate" hreflang="ja" href="https://football-jp.com/worldcup/history/countries/{slug}/">
   <link rel="alternate" hreflang="en" href="https://football-jp.com/en/worldcup/history/countries/{slug}/">

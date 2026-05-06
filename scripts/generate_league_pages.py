@@ -805,22 +805,33 @@ def generate_league_page(
     canonical = f"{SITE_URL}/leagues/{lg_slug}/"
     en_url = f"{SITE_URL}/en/leagues/{lg_slug}/"
     title = f"{league_ja} の日本人選手 - 試合・配信情報 | football-jp"
-    description = (
-        f"{league_ja}に在籍する日本人選手{num_players}名（{num_clubs}クラブ）の試合日程・結果・リーグ順位を日本時間でチェック。"
-        f"配信情報付き。"
-    )
+    # メタdesc生成（100-160字）
+    top_players = [p.get("name_ja", "") for p in players[:3]]
+    top_names = "・".join(top_players) if top_players else ""
+    desc_raw = f"{league_ja}に在籍する日本人選手{num_players}名の試合スケジュール・成績・配信局情報を日本時間で確認できる総合ハブページ。{top_names}などの最新ゴール数・出場試合・次の試合日程を一括チェック。海外サッカーファン必見。"
+    if len(desc_raw) > 160:
+        desc_raw = desc_raw[:157] + "…"
+    description = desc_raw
 
-    # Schema.org
-    schema = json.dumps({
+    # Schema.org SportsLeague（強化版）
+    schema_league = {
         "@context": "https://schema.org",
         "@type": "SportsLeague",
         "name": lg_en,
+        "alternateName": league_ja,
         "url": canonical,
         "sport": "Soccer",
-        "location": {
-            "@type": "Place",
-            "name": lg_en
-        }
+    }
+    schema = json.dumps(schema_league, ensure_ascii=False, indent=2)
+    # BreadcrumbList
+    schema_breadcrumb = json.dumps({
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": "ホーム", "item": f"{SITE_URL}/"},
+            {"@type": "ListItem", "position": 2, "name": "リーグ", "item": f"{SITE_URL}/leagues/"},
+            {"@type": "ListItem", "position": 3, "name": league_ja, "item": canonical},
+        ]
     }, ensure_ascii=False, indent=2)
 
     # ============================
@@ -837,6 +848,8 @@ def generate_league_page(
     # ============================
     html_parts = [common_head_ja(title, description, canonical, en_url)]
     html_parts.append(f'  <script type="application/ld+json">\n{schema}\n  </script>')
+    html_parts.append(f'  <script type="application/ld+json">\n{schema_breadcrumb}\n  </script>')
+    html_parts.append('  <style>.breadcrumb{font-size:12px;color:#888;padding:8px 16px;background:#f8f9fa;border-bottom:1px solid var(--c-border,#e5e7eb)}.breadcrumb a{color:#555;text-decoration:none}.breadcrumb a:hover{color:var(--c-accent,#0047ab);text-decoration:underline}</style>')
     html_parts.append("</head>")
     html_parts.append('<body data-view="leagues">')
     html_parts.append("""  <header>
@@ -845,6 +858,7 @@ def generate_league_page(
     </div>
   </header>""")
     html_parts.append(common_nav_ja())
+    html_parts.append(f'<nav class="breadcrumb" aria-label="パンくずリスト"><a href="/">ホーム</a> › <a href="/leagues/">リーグ</a> › <span aria-current="page">{esc(league_ja)}</span></nav>')
 
     # ============================
     # ヒーローセクション
@@ -973,6 +987,7 @@ def generate_league_index(league_groups: dict) -> str:
     )
 
     html_parts = [common_head_ja(title, description, canonical, en_url)]
+    html_parts.append('  <style>.breadcrumb{font-size:12px;color:#888;padding:8px 16px;background:#f8f9fa;border-bottom:1px solid var(--c-border,#e5e7eb)}.breadcrumb a{color:#555;text-decoration:none}.breadcrumb a:hover{color:var(--c-accent,#0047ab);text-decoration:underline}</style>')
     html_parts.append("</head>")
     html_parts.append('<body data-view="leagues">')
     html_parts.append("""  <header>
@@ -981,6 +996,7 @@ def generate_league_index(league_groups: dict) -> str:
     </div>
   </header>""")
     html_parts.append(common_nav_ja())
+    html_parts.append('<nav class="breadcrumb" aria-label="パンくずリスト"><a href="/">ホーム</a> › <span aria-current="page">リーグ一覧</span></nav>')
 
     html_parts.append('<div class="league-index-hero">')
     html_parts.append('<h2>リーグ一覧</h2>')

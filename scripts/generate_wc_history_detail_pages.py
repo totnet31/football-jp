@@ -549,7 +549,7 @@ def generate_html_ja(year, data, extra):
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{year} FIFAワールドカップ 全試合・グループ・日本戦 | football-jp</title>
-  <meta name="description" content="{year}年FIFAワールドカップ（開催国：{esc(host)}）の全グループ順位表・決勝トーナメント・日本代表全試合スコアを掲載。日本は{esc(japan_result)}。">
+  <meta name="description" content="{year}年FIFA W杯（{esc(host)}開催）の全結果。優勝：{esc(champion)}・グループステージ全試合・決勝トーナメント詳細。日本代表は{esc(japan_result)}。歴代W杯データを徹底網羅。">
   <link rel="canonical" href="https://football-jp.com/worldcup/history/{year}/">
   <meta property="og:type" content="article">
   <meta property="og:url" content="https://football-jp.com/worldcup/history/{year}/">
@@ -1063,7 +1063,7 @@ def generate_html_ja_phase_b(year, data, extra):
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{year} FIFAワールドカップ 全試合・グループ結果 | football-jp</title>
-  <meta name="description" content="{year}年FIFAワールドカップ（開催国：{esc(host)}）の全グループ順位表・決勝トーナメント・優勝国・得点王を掲載。優勝：{esc(champion)}。">
+  <meta name="description" content="{year}年FIFA W杯（{esc(host)}開催）の全結果。優勝：{esc(champion)}・グループステージ全試合・決勝トーナメント詳細。歴代得点王・出場チームのデータを徹底網羅。">
   <link rel="canonical" href="https://football-jp.com/worldcup/history/{year}/">
   <meta property="og:type" content="article">
   <meta property="og:url" content="https://football-jp.com/worldcup/history/{year}/">
