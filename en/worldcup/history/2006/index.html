@@ -14,6 +14,18 @@
   <link rel="alternate" hreflang="ja" href="https://football-jp.com/worldcup/history/2006/">
   <link rel="alternate" hreflang="en" href="https://football-jp.com/en/worldcup/history/2006/">
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2651130635797183" crossorigin="anonymous"></script>
+  <!-- GA4 opt-out for internal traffic -->
+  <script>
+    (function() {
+      var params = new URLSearchParams(window.location.search);
+      if (params.get('internal') === '1') localStorage.setItem('ga-disabled', '1');
+      if (params.get('internal') === '0') localStorage.removeItem('ga-disabled');
+      if (localStorage.getItem('ga-disabled') === '1') {
+        window['ga-disable-G-39G8CVXRW0'] = true;
+      }
+    })();
+  </script>
+
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-39G8CVXRW0"></script>
   <script>
