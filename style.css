@@ -39,10 +39,12 @@ body {
 }
 
 header {
-  padding: 18px 16px 14px;
+  padding: 18px 80px 14px;
   background: #0d0d0d;
   border-bottom: 4px solid var(--accent);
   color: #ffffff;
+  position: relative;
+  text-align: center;
 }
 
 header h1 {
@@ -53,7 +55,14 @@ header h1 {
   color: #ffffff;
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 8px;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 600px) {
+  header { padding: 18px 70px 14px; }
+  header h1 { font-size: 16px; }
 }
 
 .header-logo {
@@ -225,6 +234,9 @@ header h1 {
   display: flex;
   gap: 6px;
   flex-shrink: 0;
+  position: absolute;
+  top: 18px;
+  right: 16px;
 }
 
 .filters.hidden { display: none; }

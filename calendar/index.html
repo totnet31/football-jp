@@ -67,15 +67,13 @@
 </head>
 <body data-view="calendar">
   <header>
-    <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:8px;">
-      <div>
-        <h1><a href="/" style="color:inherit;text-decoration:none;"><img src="/assets/logos/logo-header.png" alt="football-jp" class="header-logo"> 海外サッカー 日本人選手 試合カレンダー</a></h1>
-        <p class="updated" id="updated"></p>
-        <p class="period" id="period"></p>
-      </div>
+    <div class="fjHeaderBtns">
       <button class="fjHeaderBtn" onclick="openSearchModal()" title="検索 (Cmd+K)" aria-label="検索"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.8" stroke="currentColor" width="20" height="20" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" /></svg></button>
       <button class="fjHeaderBtn" onclick="openPushModal()" title="通知設定" aria-label="通知設定"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.8" stroke="currentColor" width="20" height="20" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M14.857 17.082a23.848 23.848 0 0 0 5.454-1.31A8.967 8.967 0 0 1 18 9.75V9A6 6 0 0 0 6 9v.75a8.967 8.967 0 0 1-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 0 1-5.714 0m5.714 0a3 3 0 1 1-5.714 0" /></svg></button>
     </div>
+    <h1><a href="/" style="color:inherit;text-decoration:none;"><img src="/assets/logos/logo-header.png" alt="football-jp" class="header-logo"> 海外サッカー 日本人選手 試合カレンダー</a></h1>
+    <p class="updated" id="updated"></p>
+    <p class="period" id="period"></p>
   </header>
 
   <a href="/worldcup/" class="wc-promo">
@@ -127,7 +125,7 @@
         <path d="M12 20v-9"/>
         <path d="M17 20v-13"/>
       </svg>
-      <span>順位・ランキング</span>
+      <span>順位</span>
     </a>
   </nav>
 
