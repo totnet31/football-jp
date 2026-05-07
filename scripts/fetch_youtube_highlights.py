@@ -40,6 +40,11 @@ CHANNELS = [
     {"name": "DAZN Fussball", "handle": "@DAZNFussball", "id": "UClBFnQJMlinWDCvfSXj60CA"},
 ]
 
+# UEFAクラブ大会（UCL/UEL/UECL）はWOWOWの独占放映なので、ハイライト動画もWOWOWチャンネルからのみ取得する
+# 他チャンネル（DAZN等）が同タイトルで動画を出していても採用しない
+UEFA_CLUB_COMPETITION_IDS = {2, 3, 848}  # UCL / UEL / UECL
+UEFA_EXCLUSIVE_CHANNEL = "WOWOW"
+
 # Wikipedia の英語チーム名 → 日本語の代表的な検索キーワード
 TEAM_KEYWORDS = {
     # プレミア
@@ -311,6 +316,8 @@ def main():
             continue
         win_start = ko - timedelta(days=1)
         win_end = ko + timedelta(days=5)
+        # UEFA独占大会は WOWOW チャンネルからのみ採用
+        is_uefa_exclusive = m.get("competition_id") in UEFA_CLUB_COMPETITION_IDS
         candidates = []
         for v in all_videos:
             try:
@@ -318,6 +325,8 @@ def main():
             except Exception:
                 continue
             if not (win_start <= pub <= win_end):
+                continue
+            if is_uefa_exclusive and v["channel_name"] != UEFA_EXCLUSIVE_CHANNEL:
                 continue
             if title_match(v["title"], m.get("home_en"), m.get("away_en")):
                 candidates.append(v)
