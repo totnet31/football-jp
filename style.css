@@ -68,8 +68,9 @@ header .period {
 }
 
 @media (max-width: 600px) {
-  header { padding: 18px 70px 14px; }
-  header h1 { font-size: 16px; }
+  header { padding: 12px 16px 14px; }
+  header h1 { font-size: 16px; justify-content: flex-start; }
+  .fjHeaderBtns { position: static; justify-content: flex-end; margin-bottom: 6px; }
 }
 
 .header-logo {
