@@ -67,12 +67,6 @@ header .period {
   margin-right: auto;
 }
 
-@media (max-width: 600px) {
-  header { padding: 12px 16px 14px; }
-  header h1 { font-size: 16px; justify-content: flex-start; }
-  .fjHeaderBtns { position: static; justify-content: flex-end; margin-bottom: 6px; }
-}
-
 .header-logo {
   height: 36px;
   width: 36px;
@@ -245,6 +239,12 @@ header .period {
   position: absolute;
   top: 18px;
   right: 16px;
+}
+
+@media (max-width: 600px) {
+  header { padding: 12px 16px 14px; }
+  header h1 { font-size: 16px; justify-content: flex-start; }
+  .fjHeaderBtns { position: static; justify-content: flex-end; margin-bottom: 6px; }
 }
 
 .filters.hidden { display: none; }
