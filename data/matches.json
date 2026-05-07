@@ -1,5 +1,5 @@
 {
-  "updated": "2026-05-08T01:22:21.097405+09:00",
+  "updated": "2026-05-08T07:01:35.002012+09:00",
   "date_from": "2026-05-01",
   "date_to": "2026-05-22",
   "match_count": 318,
@@ -6419,7 +6419,7 @@
       "competition_category": "european_cup",
       "competition_flag": "🇪🇺",
       "kickoff_jst": "2026-05-08T05:00:00+09:00",
-      "status": "SCHEDULED",
+      "status": "FINISHED",
       "stage": "SEMI_FINALS",
       "matchday": null,
       "home_id": null,
@@ -6430,7 +6430,10 @@
       "away_ja": "ブラガ",
       "away_en": "Braga",
       "away_crest": null,
-      "score": null,
+      "score": {
+        "home": 3,
+        "away": 1
+      },
       "japanese_players": [
         {
           "name_ja": "鈴木唯人",
@@ -6455,7 +6458,7 @@
       "competition_category": "european_cup",
       "competition_flag": "🇪🇺",
       "kickoff_jst": "2026-05-08T05:00:00+09:00",
-      "status": "SCHEDULED",
+      "status": "FINISHED",
       "stage": "SEMI_FINALS",
       "matchday": null,
       "home_id": null,
@@ -6466,7 +6469,10 @@
       "away_ja": "ノッティンガム・フォレスト",
       "away_en": "Nottingham Forest",
       "away_crest": null,
-      "score": null,
+      "score": {
+        "home": 4,
+        "away": 0
+      },
       "japanese_players": [],
       "broadcasters": [
         {
@@ -11465,6 +11471,6 @@
       ]
     }
   ],
-  "updated_yt_highlights": "2026-05-08T01:26:07.772092+09:00",
-  "updated_uefa_secondary": "2026-05-08T01:26:37.340246+09:00"
+  "updated_yt_highlights": "2026-05-08T07:05:24.810755+09:00",
+  "updated_uefa_secondary": "2026-05-08T07:05:55.391616+09:00"
 }
