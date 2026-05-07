@@ -22,16 +22,16 @@
       "name": "WOWOW",
       "logo": "wowow.png",
       "color": "#d40000",
-      "url": "https://www.wowow.co.jp/",
-      "affiliate_url": null,
+      "url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l",
+      "affiliate_url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l",
       "ga4_label": "WOWOW"
     },
     "ABEMA": {
       "name": "ABEMA",
       "logo": "abema.png",
       "color": "#00c2ff",
-      "url": "https://abema.tv/",
-      "affiliate_url": null,
+      "url": "https://abema.tv/subscription/lp/183c3ec2-c6d8-409e-80b6-caf5a8012f8a",
+      "affiliate_url": "https://abema.tv/subscription/lp/183c3ec2-c6d8-409e-80b6-caf5a8012f8a",
       "ga4_label": "ABEMA"
     },
     "Lemino": {
@@ -52,23 +52,172 @@
     }
   },
   "broadcasters": {
-    "39":  [{"name": "U-NEXT", "type": "exclusive", "url": "https://www.unext.jp/", "note": "〜2030-31"}],
-    "40":  [{"name": "DAZN",   "type": "exclusive", "url": "https://www.dazn.com/ja-JP/", "note": "〜2027-28"}],
-    "45":  [{"name": "U-NEXT", "type": "exclusive", "url": "https://www.unext.jp/", "note": "〜2030-31"}],
-    "140": [{"name": "U-NEXT", "type": "shared", "url": "https://www.unext.jp/"}, {"name": "DAZN", "type": "shared", "url": "https://www.dazn.com/ja-JP/", "note": "〜2027-28"}],
-    "143": [{"name": "U-NEXT", "type": "exclusive", "url": "https://www.unext.jp/", "note": "〜2026-27"}],
-    "78":  [{"name": "DAZN",   "type": "exclusive", "url": "https://www.dazn.com/ja-JP/", "note": "〜2027-28"}, {"name": "ABEMA", "type": "partial", "url": "https://abema.tv/", "note": "毎節2試合無料"}],
-    "81":  [{"name": "DAZN",   "type": "exclusive", "url": "https://www.dazn.com/ja-JP/", "note": "〜2025-26"}],
-    "135": [{"name": "DAZN",   "type": "exclusive", "url": "https://www.dazn.com/ja-JP/", "note": "〜2026-27"}],
-    "137": [{"name": "DAZN",   "type": "exclusive", "url": "https://www.dazn.com/ja-JP/", "note": "〜2026-27"}],
-    "61":  [{"name": "DAZN",   "type": "exclusive", "url": "https://www.dazn.com/ja-JP/", "note": "〜2028-29"}],
-    "62":  [{"name": "DAZN",   "type": "partial",   "url": "https://www.dazn.com/ja-JP/", "note": "一部試合のみ"}],
-    "66":  [{"name": "未確定", "type": "unknown",   "url": null, "note": "2026-04-29時点で要確認"}],
-    "88":  [{"name": "U-NEXT", "type": "exclusive", "url": "https://www.unext.jp/", "note": "〜2027-28"}],
-    "90":  [{"name": "未確定", "type": "unknown",   "url": null, "note": "2026-04-29時点で要確認"}],
-    "144": [{"name": "DAZN",   "type": "partial",   "url": "https://www.dazn.com/ja-JP/", "note": "毎節3試合以上"}, {"name": "BS10", "type": "partial", "url": "https://www.bs10.jp/", "note": "シント=トロイデン全試合・無料"}],
-    "2":   [{"name": "WOWOW",  "type": "exclusive", "url": "https://www.wowow.co.jp/", "note": "〜2026-27"}, {"name": "Lemino", "type": "partial", "url": "https://lemino.docomo.ne.jp/", "note": "厳選30試合ディレイ"}],
-    "3":   [{"name": "WOWOW",  "type": "exclusive", "url": "https://www.wowow.co.jp/", "note": "〜2026-27"}],
-    "848": [{"name": "WOWOW",  "type": "partial",   "url": "https://www.wowow.co.jp/", "note": "注目試合"}]
+    "39": [
+      {
+        "name": "U-NEXT",
+        "type": "exclusive",
+        "url": "https://www.unext.jp/",
+        "note": "〜2030-31"
+      }
+    ],
+    "40": [
+      {
+        "name": "DAZN",
+        "type": "exclusive",
+        "url": "https://www.dazn.com/ja-JP/",
+        "note": "〜2027-28"
+      }
+    ],
+    "45": [
+      {
+        "name": "U-NEXT",
+        "type": "exclusive",
+        "url": "https://www.unext.jp/",
+        "note": "〜2030-31"
+      }
+    ],
+    "140": [
+      {
+        "name": "U-NEXT",
+        "type": "shared",
+        "url": "https://www.unext.jp/"
+      },
+      {
+        "name": "DAZN",
+        "type": "shared",
+        "url": "https://www.dazn.com/ja-JP/",
+        "note": "〜2027-28"
+      }
+    ],
+    "143": [
+      {
+        "name": "U-NEXT",
+        "type": "exclusive",
+        "url": "https://www.unext.jp/",
+        "note": "〜2026-27"
+      }
+    ],
+    "78": [
+      {
+        "name": "DAZN",
+        "type": "exclusive",
+        "url": "https://www.dazn.com/ja-JP/",
+        "note": "〜2027-28"
+      },
+      {
+        "name": "ABEMA",
+        "type": "partial",
+        "url": "https://abema.tv/subscription/lp/183c3ec2-c6d8-409e-80b6-caf5a8012f8a",
+        "note": "毎節2試合無料"
+      }
+    ],
+    "81": [
+      {
+        "name": "DAZN",
+        "type": "exclusive",
+        "url": "https://www.dazn.com/ja-JP/",
+        "note": "〜2025-26"
+      }
+    ],
+    "135": [
+      {
+        "name": "DAZN",
+        "type": "exclusive",
+        "url": "https://www.dazn.com/ja-JP/",
+        "note": "〜2026-27"
+      }
+    ],
+    "137": [
+      {
+        "name": "DAZN",
+        "type": "exclusive",
+        "url": "https://www.dazn.com/ja-JP/",
+        "note": "〜2026-27"
+      }
+    ],
+    "61": [
+      {
+        "name": "DAZN",
+        "type": "exclusive",
+        "url": "https://www.dazn.com/ja-JP/",
+        "note": "〜2028-29"
+      }
+    ],
+    "62": [
+      {
+        "name": "DAZN",
+        "type": "partial",
+        "url": "https://www.dazn.com/ja-JP/",
+        "note": "一部試合のみ"
+      }
+    ],
+    "66": [
+      {
+        "name": "未確定",
+        "type": "unknown",
+        "url": null,
+        "note": "2026-04-29時点で要確認"
+      }
+    ],
+    "88": [
+      {
+        "name": "U-NEXT",
+        "type": "exclusive",
+        "url": "https://www.unext.jp/",
+        "note": "〜2027-28"
+      }
+    ],
+    "90": [
+      {
+        "name": "未確定",
+        "type": "unknown",
+        "url": null,
+        "note": "2026-04-29時点で要確認"
+      }
+    ],
+    "144": [
+      {
+        "name": "DAZN",
+        "type": "partial",
+        "url": "https://www.dazn.com/ja-JP/",
+        "note": "毎節3試合以上"
+      },
+      {
+        "name": "BS10",
+        "type": "partial",
+        "url": "https://www.bs10.jp/",
+        "note": "シント=トロイデン全試合・無料"
+      }
+    ],
+    "2": [
+      {
+        "name": "WOWOW",
+        "type": "exclusive",
+        "url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l",
+        "note": "〜2026-27"
+      },
+      {
+        "name": "Lemino",
+        "type": "partial",
+        "url": "https://lemino.docomo.ne.jp/",
+        "note": "厳選30試合ディレイ"
+      }
+    ],
+    "3": [
+      {
+        "name": "WOWOW",
+        "type": "exclusive",
+        "url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l",
+        "note": "〜2026-27"
+      }
+    ],
+    "848": [
+      {
+        "name": "WOWOW",
+        "type": "partial",
+        "url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l",
+        "note": "注目試合"
+      }
+    ]
   }
 }
