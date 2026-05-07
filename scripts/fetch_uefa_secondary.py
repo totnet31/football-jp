@@ -38,7 +38,7 @@ COMPETITIONS = [
         "flag": "🇪🇺",
         "knockout_page": "2025–26 UEFA Europa League knockout phase",
         "broadcasters": [
-            {"name": "WOWOW", "type": "exclusive", "url": "https://www.wowow.co.jp/", "note": "〜2026-27"},
+            {"name": "WOWOW", "type": "exclusive", "url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l", "note": "〜2026-27"},
         ],
     },
     {
@@ -48,7 +48,7 @@ COMPETITIONS = [
         "flag": "🇪🇺",
         "knockout_page": "2025–26 UEFA Conference League knockout phase",
         "broadcasters": [
-            {"name": "WOWOW", "type": "partial", "url": "https://www.wowow.co.jp/", "note": "注目試合"},
+            {"name": "WOWOW", "type": "partial", "url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l", "note": "注目試合"},
         ],
     },
 ]
