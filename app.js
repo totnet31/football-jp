@@ -47,6 +47,7 @@
   let jpPlayerEnMap = new Map(); // name_ja → name_en（英語表示用・苗字のみ）
   let dataRangeFrom = null;
   let dataRangeTo = null;
+  let bcAffiliateMap = new Map();  // broadcaster名 → affiliate_url（broadcasters.jsonから構築）
   const enabledLeagues = new Set();
   // ビューはURL（=ページ）で決まる。body[data-view] を優先、無ければレガシーlocalStorageを参照
   let currentView = document.body.dataset.view || localStorage.getItem('view') || 'schedule';
@@ -104,14 +105,21 @@
 
   async function loadAll() {
     try {
-      const [m, s, sc, players, evts, news] = await Promise.all([
+      const [m, s, sc, players, evts, news, bcs] = await Promise.all([
         fetchJson('/data/matches.json'),
         fetchJson('/data/standings.json').catch(() => null),
         fetchJson('/data/scorers.json').catch(() => null),
         fetchJson('/data/players.json').catch(() => null),
         fetchJson('/data/match_events.json').catch(() => null),
         fetchJson('/data/news.json').catch(() => null),
+        fetchJson('/data/broadcasters.json').catch(() => null),
       ]);
+      // broadcasters.json の services 内 affiliate_url を名前→URL マップに保存
+      if (bcs && bcs.services) {
+        for (const [name, info] of Object.entries(bcs.services)) {
+          if (info && info.affiliate_url) bcAffiliateMap.set(name, info.affiliate_url);
+        }
+      }
       renderNews(news);
       allMatches = m.matches || [];
       // 英語モード時：表示用フィールドを英語に切替（_ja を _en で上書き）
@@ -489,8 +497,9 @@
         const logoHtml = logoFile
           ? `<img class="bc-logo" src="assets/broadcasters/${logoFile}" alt="" width="16" height="16" loading="lazy">`
           : `<span class="bc-play">▶</span>`;
-        if (b.url) {
-          broadcasterTags.push(`<a class="bc-tag ${brandCls}" href="${escape(b.url)}" target="_blank" rel="noopener">${logoHtml}${escape(b.name)}</a>`);
+        const linkUrl = bcAffiliateMap.get(b.name) || b.url;
+        if (linkUrl) {
+          broadcasterTags.push(`<a class="bc-tag ${brandCls}" href="${escape(linkUrl)}" target="_blank" rel="noopener">${logoHtml}${escape(b.name)}</a>`);
         } else {
           broadcasterTags.push(`<span class="bc-tag ${brandCls}">${logoHtml}${escape(b.name)}</span>`);
         }
@@ -876,8 +885,9 @@
       const cls = bcBrandClass(b.name);
       const lf = bcLogoFile(b.name);
       const logo = lf ? `<img class="bc-logo" src="assets/broadcasters/${lf}" alt="" width="16" height="16">` : '<span class="bc-play">▶</span>';
-      return b.url
-        ? `<a class="bc-tag ${cls}" href="${escape(b.url)}" target="_blank" rel="noopener">${logo}${escape(b.name)}</a>`
+      const linkUrl = bcAffiliateMap.get(b.name) || b.url;
+      return linkUrl
+        ? `<a class="bc-tag ${cls}" href="${escape(linkUrl)}" target="_blank" rel="noopener">${logo}${escape(b.name)}</a>`
         : `<span class="bc-tag ${cls}">${logo}${escape(b.name)}</span>`;
     }).join('');
 
