@@ -1,5 +1,5 @@
 {
-  "updated": "2026-05-09T00:10:21.946953+09:00",
+  "updated": "2026-05-09T07:01:47.574286+09:00",
   "date_from": "2026-05-02",
   "date_to": "2026-05-23",
   "match_count": 338,
@@ -6571,7 +6571,7 @@
       "competition_category": "league",
       "competition_flag": "🇩🇪",
       "kickoff_jst": "2026-05-09T03:30:00+09:00",
-      "status": "TIMED",
+      "status": "FINISHED",
       "stage": "REGULAR_SEASON",
       "matchday": 33,
       "home_id": 4,
@@ -6582,7 +6582,10 @@
       "away_ja": "フランクフルト",
       "away_en": "Frankfurt",
       "away_crest": "https://crests.football-data.org/19.png",
-      "score": null,
+      "score": {
+        "home": 3,
+        "away": 2
+      },
       "japanese_players": [
         {
           "name_ja": "堂安律",
@@ -6622,7 +6625,7 @@
       "competition_category": "league",
       "competition_flag": "🇮🇹",
       "kickoff_jst": "2026-05-09T03:45:00+09:00",
-      "status": "TIMED",
+      "status": "FINISHED",
       "stage": "REGULAR_SEASON",
       "matchday": 36,
       "home_id": 586,
@@ -6633,7 +6636,10 @@
       "away_ja": "サッスオーロ",
       "away_en": "Sassuolo",
       "away_crest": "https://crests.football-data.org/471.png",
-      "score": null,
+      "score": {
+        "home": 2,
+        "away": 1
+      },
       "japanese_players": [],
       "broadcasters": [
         {
@@ -6651,7 +6657,7 @@
       "competition_category": "league",
       "competition_flag": "🇫🇷",
       "kickoff_jst": "2026-05-09T03:45:00+09:00",
-      "status": "TIMED",
+      "status": "FINISHED",
       "stage": "REGULAR_SEASON",
       "matchday": 33,
       "home_id": 546,
@@ -6662,7 +6668,10 @@
       "away_ja": "ナント",
       "away_en": "Nantes",
       "away_crest": "https://crests.football-data.org/543.png",
-      "score": null,
+      "score": {
+        "home": 1,
+        "away": 0
+      },
       "japanese_players": [],
       "broadcasters": [
         {
@@ -6680,7 +6689,7 @@
       "competition_category": "league",
       "competition_flag": "🇪🇸",
       "kickoff_jst": "2026-05-09T04:00:00+09:00",
-      "status": "TIMED",
+      "status": "FINISHED",
       "stage": "REGULAR_SEASON",
       "matchday": 35,
       "home_id": 88,
@@ -6691,7 +6700,10 @@
       "away_ja": "オサスナ",
       "away_en": "Osasuna",
       "away_crest": "https://crests.football-data.org/79.png",
-      "score": null,
+      "score": {
+        "home": 3,
+        "away": 2
+      },
       "japanese_players": [],
       "broadcasters": [
         {
@@ -12133,6 +12145,6 @@
       ]
     }
   ],
-  "updated_yt_highlights": "2026-05-09T00:14:06.207010+09:00",
-  "updated_uefa_secondary": "2026-05-09T00:14:33.998917+09:00"
+  "updated_yt_highlights": "2026-05-09T07:05:35.318609+09:00",
+  "updated_uefa_secondary": "2026-05-09T07:06:02.655624+09:00"
 }
