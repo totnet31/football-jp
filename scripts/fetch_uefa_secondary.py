@@ -310,16 +310,38 @@ def main():
         time.sleep(2)  # Wikipedia 思いやりウェイト
 
     # 取得成功した競技だけ既存試合を入れ替える（失敗した競技は既存データを保持）
+    # ただし「Wikipediaが結果未反映で SCHEDULED/no-score だが既存データには FINISHED + score がある」
+    # ケースでは既存データを保持する（Wikipedia の更新遅延で確定結果を上書きしないため）
     new_matches = []
     for comp in COMPETITIONS:
         short = comp["name_short"]
         comp_id = comp["id"]
         prefix = f"{short}_"
         if fetched_per_comp.get(short):
-            # 既存の同競技試合を削除し新規で置き換え
+            # 既存の同競技試合を id でインデックス
+            existing_by_id = {
+                m.get("id"): m for m in matches
+                if isinstance(m.get("id"), str) and m["id"].startswith(prefix)
+            }
+            # 既存の同競技試合を削除し新規で置き換え（ただし結果保護をかける）
             matches = [m for m in matches
                        if not (isinstance(m.get("id"), str) and m["id"].startswith(prefix))]
-            new_matches.extend(fetched_per_comp[short])
+            for new_m in fetched_per_comp[short]:
+                old_m = existing_by_id.get(new_m.get("id"))
+                if (
+                    old_m is not None
+                    and old_m.get("status") == "FINISHED"
+                    and old_m.get("score")
+                    and new_m.get("status") != "FINISHED"
+                ):
+                    # Wikipedia が結果未反映で TBD のまま。既存の確定データを保持
+                    print(
+                        f"  [PROTECT] {new_m.get('id')} 既存FINISHED保持 "
+                        f"(Wikipedia更新遅延)",
+                    )
+                    new_matches.append(old_m)
+                else:
+                    new_matches.append(new_m)
 
     matches.extend(new_matches)
     # kickoff順にソート
