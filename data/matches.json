@@ -1,5 +1,5 @@
 {
-  "updated": "2026-05-08T07:01:35.002012+09:00",
+  "updated": "2026-05-08T14:49:03.689813+09:00",
   "date_from": "2026-05-01",
   "date_to": "2026-05-22",
   "match_count": 318,
@@ -9303,6 +9303,41 @@
       ]
     },
     {
+      "id": 538146,
+      "competition_id": 39,
+      "competition_ja": "プレミアリーグ",
+      "competition_category": "league",
+      "competition_flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+      "kickoff_jst": "2026-05-16T04:00:00+09:00",
+      "status": "TIMED",
+      "stage": "REGULAR_SEASON",
+      "matchday": 37,
+      "home_id": 58,
+      "home_ja": "アストン・ビラ",
+      "home_en": "Aston Villa",
+      "home_crest": "https://crests.football-data.org/58.png",
+      "away_id": 64,
+      "away_ja": "リヴァプール",
+      "away_en": "Liverpool",
+      "away_crest": "https://crests.football-data.org/64.png",
+      "score": null,
+      "japanese_players": [
+        {
+          "name_ja": "遠藤航",
+          "position": "DF/MF",
+          "side": "away"
+        }
+      ],
+      "broadcasters": [
+        {
+          "name": "U-NEXT",
+          "type": "exclusive",
+          "url": "https://www.unext.jp/",
+          "note": "〜2030-31"
+        }
+      ]
+    },
+    {
       "id": 540703,
       "competition_id": 78,
       "competition_ja": "ブンデスリーガ",
@@ -10214,41 +10249,6 @@
       "score": null,
       "japanese_players": [],
       "broadcasters": []
-    },
-    {
-      "id": 538146,
-      "competition_id": 39,
-      "competition_ja": "プレミアリーグ",
-      "competition_category": "league",
-      "competition_flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
-      "kickoff_jst": "2026-05-17T20:30:00+09:00",
-      "status": "TIMED",
-      "stage": "REGULAR_SEASON",
-      "matchday": 37,
-      "home_id": 58,
-      "home_ja": "アストン・ビラ",
-      "home_en": "Aston Villa",
-      "home_crest": "https://crests.football-data.org/58.png",
-      "away_id": 64,
-      "away_ja": "リヴァプール",
-      "away_en": "Liverpool",
-      "away_crest": "https://crests.football-data.org/64.png",
-      "score": null,
-      "japanese_players": [
-        {
-          "name_ja": "遠藤航",
-          "position": "DF/MF",
-          "side": "away"
-        }
-      ],
-      "broadcasters": [
-        {
-          "name": "U-NEXT",
-          "type": "exclusive",
-          "url": "https://www.unext.jp/",
-          "note": "〜2030-31"
-        }
-      ]
     },
     {
       "id": 538152,
@@ -11471,6 +11471,6 @@
       ]
     }
   ],
-  "updated_yt_highlights": "2026-05-08T07:05:24.810755+09:00",
-  "updated_uefa_secondary": "2026-05-08T07:05:55.391616+09:00"
+  "updated_yt_highlights": "2026-05-08T14:52:37.448479+09:00",
+  "updated_uefa_secondary": "2026-05-08T14:53:08.562242+09:00"
 }
