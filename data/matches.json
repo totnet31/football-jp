@@ -3210,9 +3210,9 @@
       "highlights": [
         {
           "broadcaster": "WOWOW",
-          "video_id": "Z2FH5gJXqeU",
-          "url": "https://www.youtube.com/watch?v=Z2FH5gJXqeU",
-          "title": "PSG vs バイエルン｜UEFAチャンピオンズリーグ 準決勝 第1戦 ハイライト"
+          "video_id": "SYDqLIf1gDc",
+          "url": "https://www.youtube.com/watch?v=SYDqLIf1gDc",
+          "title": "【パリ・サンジェルマン vs バイエルン】UEFAチャンピオンズリーグ 2025-26 準決勝 1st leg／3分ハイライト【WOWOW】"
         }
       ]
     },
@@ -6410,6 +6410,14 @@
           "url": "https://lemino.docomo.ne.jp/",
           "note": "厳選30試合ディレイ"
         }
+      ],
+      "highlights": [
+        {
+          "broadcaster": "WOWOW",
+          "video_id": "Z2FH5gJXqeU",
+          "url": "https://www.youtube.com/watch?v=Z2FH5gJXqeU",
+          "title": "【バイエルン vs パリ・サンジェルマン】UEFAチャンピオンズリーグ 2025-26 準決勝 2nd leg／3分ハイライト【WOWOW】"
+        }
       ]
     },
     {
@@ -6491,7 +6499,7 @@
       "competition_category": "european_cup",
       "competition_flag": "🇪🇺",
       "kickoff_jst": "2026-05-08T05:00:00+09:00",
-      "status": "SCHEDULED",
+      "status": "FINISHED",
       "stage": "SEMI_FINALS",
       "matchday": null,
       "home_id": null,
@@ -6502,7 +6510,10 @@
       "away_ja": "シャフタール・ドネツク",
       "away_en": "Shakhtar Donetsk",
       "away_crest": null,
-      "score": null,
+      "score": {
+        "home": 2,
+        "away": 1
+      },
       "japanese_players": [
         {
           "name_ja": "鎌田大地",
@@ -6527,7 +6538,7 @@
       "competition_category": "european_cup",
       "competition_flag": "🇪🇺",
       "kickoff_jst": "2026-05-08T05:00:00+09:00",
-      "status": "SCHEDULED",
+      "status": "FINISHED",
       "stage": "SEMI_FINALS",
       "matchday": null,
       "home_id": null,
@@ -6538,7 +6549,10 @@
       "away_ja": "ラージョ・バジェカーノ",
       "away_en": "Rayo Vallecano",
       "away_crest": null,
-      "score": null,
+      "score": {
+        "home": 0,
+        "away": 1
+      },
       "japanese_players": [],
       "broadcasters": [
         {
