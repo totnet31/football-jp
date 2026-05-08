@@ -6499,7 +6499,7 @@
       "competition_category": "european_cup",
       "competition_flag": "🇪🇺",
       "kickoff_jst": "2026-05-08T05:00:00+09:00",
-      "status": "SCHEDULED",
+      "status": "FINISHED",
       "stage": "SEMI_FINALS",
       "matchday": null,
       "home_id": null,
@@ -6510,7 +6510,10 @@
       "away_ja": "シャフタール・ドネツク",
       "away_en": "Shakhtar Donetsk",
       "away_crest": null,
-      "score": null,
+      "score": {
+        "home": 2,
+        "away": 1
+      },
       "japanese_players": [
         {
           "name_ja": "鎌田大地",
@@ -6535,7 +6538,7 @@
       "competition_category": "european_cup",
       "competition_flag": "🇪🇺",
       "kickoff_jst": "2026-05-08T05:00:00+09:00",
-      "status": "SCHEDULED",
+      "status": "FINISHED",
       "stage": "SEMI_FINALS",
       "matchday": null,
       "home_id": null,
@@ -6546,7 +6549,10 @@
       "away_ja": "ラージョ・バジェカーノ",
       "away_en": "Rayo Vallecano",
       "away_crest": null,
-      "score": null,
+      "score": {
+        "home": 0,
+        "away": 1
+      },
       "japanese_players": [],
       "broadcasters": [
         {
