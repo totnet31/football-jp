@@ -495,7 +495,7 @@
         const brandCls = bcBrandClass(b.name);
         const logoFile = bcLogoFile(b.name);
         const logoHtml = logoFile
-          ? `<img class="bc-logo" src="assets/broadcasters/${logoFile}" alt="" width="16" height="16" loading="lazy">`
+          ? `<img class="bc-logo" src="/assets/broadcasters/${logoFile}" alt="" width="16" height="16" loading="lazy">`
           : `<span class="bc-play">▶</span>`;
         const linkUrl = bcAffiliateMap.get(b.name) || b.url;
         if (linkUrl) {
@@ -884,7 +884,7 @@
     const bcs = (m.broadcasters || []).map(b => {
       const cls = bcBrandClass(b.name);
       const lf = bcLogoFile(b.name);
-      const logo = lf ? `<img class="bc-logo" src="assets/broadcasters/${lf}" alt="" width="16" height="16">` : '<span class="bc-play">▶</span>';
+      const logo = lf ? `<img class="bc-logo" src="/assets/broadcasters/${lf}" alt="" width="16" height="16">` : '<span class="bc-play">▶</span>';
       const linkUrl = bcAffiliateMap.get(b.name) || b.url;
       return linkUrl
         ? `<a class="bc-tag ${cls}" href="${escape(linkUrl)}" target="_blank" rel="noopener">${logo}${escape(b.name)}</a>`
