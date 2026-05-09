@@ -1,5 +1,5 @@
 {
-  "updated": "2026-05-09T17:26:10.198768+09:00",
+  "updated": "2026-05-09T21:00:02.586401+09:00",
   "date_from": "2026-05-02",
   "date_to": "2026-05-23",
   "match_count": 338,
@@ -6726,7 +6726,7 @@
       "competition_category": "league",
       "competition_flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
       "kickoff_jst": "2026-05-09T06:00:00+09:00",
-      "status": "SCHEDULED",
+      "status": "TIMED",
       "stage": "PLAYOFFS",
       "matchday": null,
       "home_id": 322,
@@ -6761,7 +6761,7 @@
       "competition_category": "league",
       "competition_flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
       "kickoff_jst": "2026-05-09T20:30:00+09:00",
-      "status": "TIMED",
+      "status": "IN_PLAY",
       "stage": "REGULAR_SEASON",
       "matchday": 36,
       "home_id": 64,
@@ -6772,7 +6772,10 @@
       "away_ja": "チェルシー",
       "away_en": "Chelsea",
       "away_crest": "https://crests.football-data.org/61.png",
-      "score": null,
+      "score": {
+        "home": 1,
+        "away": 0
+      },
       "japanese_players": [
         {
           "name_ja": "遠藤航",
@@ -6859,7 +6862,7 @@
       "competition_category": "league",
       "competition_flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
       "kickoff_jst": "2026-05-09T22:30:00+09:00",
-      "status": "SCHEDULED",
+      "status": "TIMED",
       "stage": "PLAYOFFS",
       "matchday": null,
       "home_id": 343,
@@ -8820,7 +8823,7 @@
       "competition_category": "league",
       "competition_flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
       "kickoff_jst": "2026-05-12T06:00:00+09:00",
-      "status": "SCHEDULED",
+      "status": "TIMED",
       "stage": "PLAYOFFS",
       "matchday": null,
       "home_id": 384,
@@ -8957,7 +8960,7 @@
       "competition_category": "league",
       "competition_flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
       "kickoff_jst": "2026-05-13T06:00:00+09:00",
-      "status": "SCHEDULED",
+      "status": "TIMED",
       "stage": "PLAYOFFS",
       "matchday": null,
       "home_id": 340,
@@ -12145,6 +12148,6 @@
       ]
     }
   ],
-  "updated_yt_highlights": "2026-05-09T17:30:00.214678+09:00",
-  "updated_uefa_secondary": "2026-05-09T17:30:29.117373+09:00"
+  "updated_yt_highlights": "2026-05-09T21:03:46.334655+09:00",
+  "updated_uefa_secondary": "2026-05-09T21:04:16.023551+09:00"
 }
