@@ -40,9 +40,15 @@ def get_week_window():
     return week_start, week_end
 
 
+USER_AGENT = "football-jp-weekly-push/1.0 (+https://football-jp.com)"
+
+
 def api_get(path):
     url = WORKER_URL + path
-    req = Request(url, headers={"Authorization": f"Bearer {ADMIN_TOKEN}"})
+    req = Request(url, headers={
+        "Authorization": f"Bearer {ADMIN_TOKEN}",
+        "User-Agent": USER_AGENT,
+    })
     try:
         with urlopen(req, timeout=30) as r:
             return json.loads(r.read())
@@ -59,7 +65,8 @@ def api_post(path, body):
     data = json.dumps(body).encode("utf-8")
     req = Request(url, data=data, headers={
         "Authorization": f"Bearer {ADMIN_TOKEN}",
-        "Content-Type": "application/json"
+        "Content-Type": "application/json",
+        "User-Agent": USER_AGENT,
     })
     try:
         with urlopen(req, timeout=30) as r:
