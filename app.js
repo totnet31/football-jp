@@ -362,7 +362,7 @@
   // ===== Schedule view =====
   function renderSchedule() {
     renderFavSection();
-    const matches = filtered().filter(m => m.status !== 'FINISHED');
+    const matches = filtered().filter(m => ['SCHEDULED', 'TIMED', 'IN_PLAY', 'PAUSED'].includes(m.status));
     if (matches.length === 0) {
       scheduleEl.innerHTML = `<p class="empty">予定されている試合はありません。<br>フィルタ条件を変更してください。</p>`;
       return;
@@ -1069,7 +1069,7 @@
     if (currentView === 'schedule') {
       // 予定試合（未終了）の先頭10件
       schemaMatches = filtered()
-        .filter(m => m.status !== 'FINISHED')
+        .filter(m => ['SCHEDULED', 'TIMED', 'IN_PLAY', 'PAUSED'].includes(m.status))
         .slice(0, 10);
     } else if (currentView === 'results') {
       // 終了済み試合の最新10件（降順で先頭10件）
