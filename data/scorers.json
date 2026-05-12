@@ -1,5 +1,5 @@
 {
-  "updated": "2026-05-13T02:23:59.527348+09:00",
+  "updated": "2026-05-13T07:03:24.693428+09:00",
   "competitions": {
     "39": {
       "name_ja": "プレミアリーグ",
@@ -1251,7 +1251,7 @@
           "goals": 17,
           "assists": null,
           "penalties": 6,
-          "playedMatches": 34
+          "playedMatches": 35
         },
         {
           "player_id": 33154,
@@ -1314,6 +1314,18 @@
           "playedMatches": 32
         },
         {
+          "player_id": 8167,
+          "player_name": "Alexander Sørloth",
+          "nationality": "Norway",
+          "team_id": 78,
+          "team_ja": "アトレティコ・マドリー",
+          "team_crest": "https://crests.football-data.org/78.png",
+          "goals": 13,
+          "assists": null,
+          "penalties": null,
+          "playedMatches": 33
+        },
+        {
           "player_id": 371,
           "player_name": "Robert Lewandowski",
           "nationality": "Poland",
@@ -1338,18 +1350,6 @@
           "playedMatches": 35
         },
         {
-          "player_id": 8167,
-          "player_name": "Alexander Sørloth",
-          "nationality": "Norway",
-          "team_id": 78,
-          "team_ja": "アトレティコ・マドリー",
-          "team_crest": "https://crests.football-data.org/78.png",
-          "goals": 12,
-          "assists": null,
-          "penalties": null,
-          "playedMatches": 32
-        },
-        {
           "player_id": 37428,
           "player_name": "Raphinha",
           "nationality": "Brazil",
@@ -1360,6 +1360,18 @@
           "assists": 3,
           "penalties": 3,
           "playedMatches": 23
+        },
+        {
+          "player_id": 32415,
+          "player_name": "Cucho Hernández",
+          "nationality": "Colombia",
+          "team_id": 90,
+          "team_ja": "ベティス",
+          "team_crest": "https://crests.football-data.org/90.png",
+          "goals": 11,
+          "assists": 3,
+          "penalties": 1,
+          "playedMatches": 31
         },
         {
           "player_id": 136646,
@@ -1407,18 +1419,6 @@
           "goals": 10,
           "assists": null,
           "penalties": 3,
-          "playedMatches": 31
-        },
-        {
-          "player_id": 32415,
-          "player_name": "Cucho Hernández",
-          "nationality": "Colombia",
-          "team_id": 90,
-          "team_ja": "ベティス",
-          "team_crest": "https://crests.football-data.org/90.png",
-          "goals": 10,
-          "assists": 3,
-          "penalties": 1,
           "playedMatches": 31
         },
         {
@@ -1506,6 +1506,18 @@
           "playedMatches": 22
         },
         {
+          "player_id": 83406,
+          "player_name": "Ferran Jutglà",
+          "nationality": "Spain",
+          "team_id": 558,
+          "team_ja": "セルタ",
+          "team_crest": "https://crests.football-data.org/558.png",
+          "goals": 9,
+          "assists": 3,
+          "penalties": null,
+          "playedMatches": 33
+        },
+        {
           "player_id": 81565,
           "player_name": "Gorka Guruzeta",
           "nationality": "Spain",
@@ -1566,6 +1578,18 @@
           "playedMatches": 35
         },
         {
+          "player_id": 33117,
+          "player_name": "Pablo Fornals",
+          "nationality": "Spain",
+          "team_id": 90,
+          "team_ja": "ベティス",
+          "team_crest": "https://crests.football-data.org/90.png",
+          "goals": 8,
+          "assists": 6,
+          "penalties": null,
+          "playedMatches": 36
+        },
+        {
           "player_id": 3331,
           "player_name": "Marcus Rashford",
           "nationality": "England",
@@ -1588,18 +1612,6 @@
           "assists": 6,
           "penalties": null,
           "playedMatches": 30
-        },
-        {
-          "player_id": 83406,
-          "player_name": "Ferran Jutglà",
-          "nationality": "Spain",
-          "team_id": 558,
-          "team_ja": "セルタ",
-          "team_crest": "https://crests.football-data.org/558.png",
-          "goals": 8,
-          "assists": 3,
-          "penalties": null,
-          "playedMatches": 33
         },
         {
           "player_id": 3259,
@@ -1662,18 +1674,6 @@
           "playedMatches": 33
         },
         {
-          "player_id": 33117,
-          "player_name": "Pablo Fornals",
-          "nationality": "Spain",
-          "team_id": 90,
-          "team_ja": "ベティス",
-          "team_crest": "https://crests.football-data.org/90.png",
-          "goals": 7,
-          "assists": 5,
-          "penalties": null,
-          "playedMatches": 36
-        },
-        {
           "player_id": 130324,
           "player_name": "Raúl",
           "nationality": "Spain",
@@ -1681,9 +1681,9 @@
           "team_ja": "オサスナ",
           "team_crest": "https://crests.football-data.org/79.png",
           "goals": 7,
-          "assists": null,
+          "assists": 1,
           "penalties": null,
-          "playedMatches": 34
+          "playedMatches": 35
         },
         {
           "player_id": 23132,
@@ -1707,7 +1707,7 @@
           "goals": 7,
           "assists": 2,
           "penalties": null,
-          "playedMatches": 33
+          "playedMatches": 34
         },
         {
           "player_id": 140814,
