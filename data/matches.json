@@ -1,5 +1,5 @@
 {
-  "updated": "2026-05-13T07:02:02.378660+09:00",
+  "updated": "2026-05-13T17:22:41.078736+09:00",
   "date_from": "2026-05-06",
   "date_to": "2026-05-27",
   "match_count": 348,
@@ -9124,7 +9124,7 @@
       "competition_category": "league",
       "competition_flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
       "kickoff_jst": "2026-05-13T04:00:00+09:00",
-      "status": "SCHEDULED",
+      "status": "PAUSED",
       "stage": "PLAYOFFS",
       "matchday": null,
       "home_id": 340,
@@ -9135,7 +9135,10 @@
       "away_ja": "ミドルズブラ",
       "away_en": "Middlesbrough",
       "away_crest": "https://crests.football-data.org/343.png",
-      "score": null,
+      "score": {
+        "home": 2,
+        "away": 1
+      },
       "japanese_players": [
         {
           "name_ja": "松木玖生",
@@ -12669,6 +12672,6 @@
       ]
     }
   ],
-  "updated_yt_highlights": "2026-05-13T07:05:35.454277+09:00",
-  "updated_uefa_secondary": "2026-05-13T07:06:03.576143+09:00"
+  "updated_yt_highlights": "2026-05-13T17:26:21.748347+09:00",
+  "updated_uefa_secondary": "2026-05-13T17:26:47.450513+09:00"
 }
