@@ -64,6 +64,23 @@ jobs:
           fi
         continue-on-error: true
 
+      - name: YouTube ハイライト取得後の警告チェック
+        run: |
+          # data/yt_highlights_status.json があれば found_count をチェック
+          if [ -f data/yt_highlights_status.json ]; then
+            FOUND=$(python3 -c "import json; print(json.load(open('data/yt_highlights_status.json'))['found_count'])")
+            if [ "$FOUND" -eq 0 ]; then
+              echo "::warning::ハイライト発見0件"
+              if [ -n "${{ secrets.DISCORD_WEBHOOK_URL }}" ]; then
+                RUN_URL="${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+                curl -s -X POST "${{ secrets.DISCORD_WEBHOOK_URL }}" \
+                  -H "Content-Type: application/json" \
+                  -d "{\"content\": \"⚠️ football-jp YouTube ハイライト 0件\\nRun: $RUN_URL\"}" || true
+              fi
+            fi
+          fi
+        continue-on-error: true
+
       - name: 選手別ゴール集動画取得（YouTube Search API）
         env:
           YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
