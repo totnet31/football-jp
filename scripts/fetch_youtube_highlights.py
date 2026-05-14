@@ -7,9 +7,17 @@ Phase 2: YouTube Data API でハイライト動画を自動取得
   - WOWOW サッカー: @wowowsoccer
   - DAZN Football (英語版): UCSZ21xyG8w_33KriMM69IxQ
   - DAZN Fußball (ドイツ語版・ブンデス): UClBFnQJMlinWDCvfSXj60CA
-- 各チャンネルの最新アップロードをまとめて取得（search.list × 5 = 500ユニット/日）
+- 各チャンネルの Uploads プレイリストから動画一覧を取得（playlistItems.list × 5 = 5ユニット/日）
 - finished matches の title 内チーム名と照合してマッチング
 - 出力: data/matches.json の各 match.highlights[] 更新
+       data/yt_highlights_status.json に実行統計を保存
+
+【変更履歴】
+- 2025-05-14: search.list → playlistItems（uploads playlist）に切り替え
+  - search.list は index 遅延／取りこぼしが多い
+  - playlistItems は 1ユニット/call（search.list は 100ユニット/call）
+  - publishedAfter フィルタを Python 側で行う
+  - マッチングを「両チームヒット or 片方+日本人選手名」に緩和
 
 【0件になる主な原因】
 1. GitHub Actions で YOUTUBE_API_KEY secret が未設定の場合はスキップされる
@@ -32,12 +40,38 @@ ENV_FILE = ROOT / ".env"
 JST = timezone(timedelta(hours=9))
 
 # 対象チャンネル（公式・日本語 + 英語/ドイツ語補完）
+# uploads_playlist_id: channelId の先頭 UC を UU に置換した文字列（YouTube 仕様）
 CHANNELS = [
-    {"name": "DAZN", "handle": "@DAZNJapan", "id": "UCoFLB_Gw_AoxUuuzKjXrc_Q"},
-    {"name": "U-NEXT", "handle": "@UNEXT_football", "id": "UCMjvvElkdLRTgcTKklAUkSw"},
-    {"name": "WOWOW", "handle": "@wowowsoccer", "id": "UCJQj2lbG_3w8UrncJd7JZXw"},
-    {"name": "DAZN Football", "handle": "@DAZNFootball", "id": "UCSZ21xyG8w_33KriMM69IxQ"},
-    {"name": "DAZN Fussball", "handle": "@DAZNFussball", "id": "UClBFnQJMlinWDCvfSXj60CA"},
+    {
+        "name": "DAZN",
+        "handle": "@DAZNJapan",
+        "id": "UCoFLB_Gw_AoxUuuzKjXrc_Q",
+        "uploads_playlist_id": "UUoFLB_Gw_AoxUuuzKjXrc_Q",
+    },
+    {
+        "name": "U-NEXT",
+        "handle": "@UNEXT_football",
+        "id": "UCMjvvElkdLRTgcTKklAUkSw",
+        "uploads_playlist_id": "UUMjvvElkdLRTgcTKklAUkSw",
+    },
+    {
+        "name": "WOWOW",
+        "handle": "@wowowsoccer",
+        "id": "UCJQj2lbG_3w8UrncJd7JZXw",
+        "uploads_playlist_id": "UUJQj2lbG_3w8UrncJd7JZXw",
+    },
+    {
+        "name": "DAZN Football",
+        "handle": "@DAZNFootball",
+        "id": "UCSZ21xyG8w_33KriMM69IxQ",
+        "uploads_playlist_id": "UUSZ21xyG8w_33KriMM69IxQ",
+    },
+    {
+        "name": "DAZN Fussball",
+        "handle": "@DAZNFussball",
+        "id": "UClBFnQJMlinWDCvfSXj60CA",
+        "uploads_playlist_id": "UUlBFnQJMlinWDCvfSXj60CA",
+    },
 ]
 
 # UEFAクラブ大会（UCL/UEL/UECL）はWOWOWの独占放映なので、ハイライト動画もWOWOWチャンネルからのみ取得する
@@ -175,27 +209,50 @@ def save_json(name, obj):
 _call_count = 0
 
 
-def yt_search_channel(channel_id, key, max_results=50, published_after=None):
-    """指定チャンネルの最新アップロードを取得"""
+def yt_playlist_items(playlist_id, key, max_results=50, published_after=None):
+    """Uploads プレイリストから動画一覧を取得（playlistItems.list, 1ユニット/call）
+
+    playlistItems には publishedAfter パラメータがないため、
+    Python 側で published_after より古い動画が出てきたら break する。
+    """
     global _call_count
     params = {
-        "part": "snippet",
-        "channelId": channel_id,
-        "type": "video",
-        "order": "date",
+        "part": "snippet,contentDetails",
+        "playlistId": playlist_id,
         "maxResults": str(max_results),
         "key": key,
     }
-    if published_after:
-        params["publishedAfter"] = published_after
-    url = f"https://www.googleapis.com/youtube/v3/search?{urlencode(params)}"
+    url = f"https://www.googleapis.com/youtube/v3/playlistItems?{urlencode(params)}"
     _call_count += 1
     try:
         with urlopen(url, timeout=20) as r:
-            return json.loads(r.read())
+            data = json.loads(r.read())
     except (HTTPError, URLError) as e:
-        print(f"  [YT ERROR] channel {channel_id}: {e}", file=sys.stderr)
+        print(f"  [YT ERROR] playlist {playlist_id}: {e}", file=sys.stderr)
         return None
+
+    if "error" in data:
+        err = data["error"]
+        print(f"  [YT ERROR] playlist {playlist_id}: code={err.get('code')} {err.get('message','')}", file=sys.stderr)
+        return None
+
+    if published_after is None:
+        return data
+
+    # published_after より古い動画を除外（既にソート済みなので古いものが続けば打ち切り可）
+    after_dt = datetime.fromisoformat(published_after.replace("Z", "+00:00"))
+    filtered_items = []
+    for it in data.get("items") or []:
+        s = it.get("snippet") or {}
+        pub_str = s.get("publishedAt", "")
+        try:
+            pub_dt = datetime.fromisoformat(pub_str.replace("Z", "+00:00"))
+        except Exception:
+            continue
+        if pub_dt >= after_dt:
+            filtered_items.append(it)
+    data["items"] = filtered_items
+    return data
 
 
 def team_keywords(team_en):
@@ -211,16 +268,33 @@ def team_keywords(team_en):
     return out
 
 
-def title_match(title, home_en, away_en):
-    """両チームの代表ワードがタイトルに含まれているか"""
+def title_match(title, home_en, away_en, player_names_ja=None):
+    """両チームヒット、または「片方ヒット＋日本人選手名ヒット」なら True
+
+    Returns:
+        (matched: bool, preferred: bool)
+        preferred=True  ... 両チームともヒット（確度高）
+        preferred=False ... 片方ヒット＋日本人選手名ヒット（補完マッチ）
+    """
     if not title:
-        return False
+        return False, False
     t = title.lower()
     home_kws = [k.lower() for k in team_keywords(home_en)]
     away_kws = [k.lower() for k in team_keywords(away_en)]
     home_hit = any(k in t for k in home_kws if k)
     away_hit = any(k in t for k in away_kws if k)
-    return home_hit and away_hit
+
+    # 両チームヒット（最優先）
+    if home_hit and away_hit:
+        return True, True
+
+    # 片方ヒット＋日本人選手名ヒット（補完マッチ）
+    if (home_hit or away_hit) and player_names_ja:
+        for name_ja in player_names_ja:
+            if name_ja and name_ja in title:
+                return True, False
+
+    return False, False
 
 
 def main():
@@ -238,6 +312,22 @@ def main():
 
     matches_data = load_json("matches.json")
     matches = matches_data.get("matches", [])
+
+    # players.json から日本人選手リスト読み込み（club_id → [name_ja, ...] マップ）
+    try:
+        players_data = load_json("players.json")
+        players_list = players_data.get("players", [])
+        # club_id をキーに name_ja のリストを作成
+        club_players_map = {}
+        for p in players_list:
+            cid = p.get("club_id")
+            name_ja = p.get("name_ja", "")
+            if cid and name_ja:
+                club_players_map.setdefault(cid, []).append(name_ja)
+        print(f"[INFO] 日本人選手クラブ数: {len(club_players_map)}")
+    except Exception as e:
+        print(f"[WARN] players.json 読み込み失敗: {e}", file=sys.stderr)
+        club_players_map = {}
 
     # 既存の sample でない非公式ハイライトをクリア（過去のテスト残骸）
     all_channel_names = [c["name"].lower() for c in CHANNELS]
@@ -259,26 +349,26 @@ def main():
     if cleared > 0:
         print(f"[INFO] 公式チャンネル外のハイライトを {cleared}件 削除")
 
-    # 各チャンネルから最新50件取得（過去2週間に絞る）
+    # 各チャンネルの Uploads プレイリストから最新50件取得（過去2週間に絞る）
     all_videos = []
     channel_counts = {}
     for ch in CHANNELS:
-        print(f"[INFO] {ch['name']} ({ch['handle']}) の最新動画取得中...")
-        data = yt_search_channel(ch["id"], key, max_results=50, published_after=after)
+        playlist_id = ch["uploads_playlist_id"]
+        print(f"[INFO] {ch['name']} ({ch['handle']}) の最新動画取得中... (playlist: {playlist_id})")
+        data = yt_playlist_items(playlist_id, key, max_results=50, published_after=after)
         if data is None:
             print(f"  → {ch['name']}: APIエラー（スキップ）", file=sys.stderr)
-            channel_counts[ch["name"]] = 0
-            continue
-        if "error" in data:
-            err = data["error"]
-            print(f"  → {ch['name']}: APIエラー code={err.get('code')} {err.get('message','')}", file=sys.stderr)
             channel_counts[ch["name"]] = 0
             continue
         items = data.get("items") or []
         count_before = len(all_videos)
         for it in items:
             s = it.get("snippet") or {}
-            vid = it.get("id", {}).get("videoId")
+            # playlistItems の videoId は resourceId.videoId に入っている
+            vid = s.get("resourceId", {}).get("videoId")
+            if not vid:
+                # contentDetails にも videoId がある場合がある
+                vid = (it.get("contentDetails") or {}).get("videoId")
             if not vid:
                 continue
             all_videos.append({
@@ -291,10 +381,8 @@ def main():
         count = len(all_videos) - count_before
         channel_counts[ch["name"]] = count
         print(f"  → {ch['name']}: {count}本 取得")
-        if count == 0 and items:
-            print(f"  [WARN] items={len(items)}件あるが videoId が取れなかった（resourceId 形式の可能性）")
 
-    print(f"[INFO] 取得動画 累計 {len(all_videos)}本 / API calls: {_call_count}")
+    print(f"[INFO] 取得動画 累計 {len(all_videos)}本 / API calls: {_call_count} (playlistItems: 1ユニット/call)")
     print(f"[INFO] チャンネル別: {channel_counts}")
 
     # finished matches に対して動画照合
@@ -318,7 +406,18 @@ def main():
         win_end = ko + timedelta(days=5)
         # UEFA独占大会は WOWOW チャンネルからのみ採用
         is_uefa_exclusive = m.get("competition_id") in UEFA_CLUB_COMPETITION_IDS
-        candidates = []
+
+        # この試合の日本人選手名リストを取得
+        player_names_ja = []
+        home_id = m.get("home_id")
+        away_id = m.get("away_id")
+        if home_id and home_id in club_players_map:
+            player_names_ja.extend(club_players_map[home_id])
+        if away_id and away_id in club_players_map:
+            player_names_ja.extend(club_players_map[away_id])
+
+        preferred_candidates = []
+        fallback_candidates = []
         for v in all_videos:
             try:
                 pub = datetime.fromisoformat(v["published_at"].replace("Z", "+00:00"))
@@ -328,13 +427,27 @@ def main():
                 continue
             if is_uefa_exclusive and v["channel_name"] != UEFA_EXCLUSIVE_CHANNEL:
                 continue
-            if title_match(v["title"], m.get("home_en"), m.get("away_en")):
-                candidates.append(v)
+            matched, preferred = title_match(
+                v["title"],
+                m.get("home_en"),
+                m.get("away_en"),
+                player_names_ja=player_names_ja,
+            )
+            if matched:
+                if preferred:
+                    preferred_candidates.append(v)
+                else:
+                    fallback_candidates.append(v)
+
+        # 両チームヒット（preferred）を優先、なければ補完マッチ（fallback）を使用
+        candidates = preferred_candidates if preferred_candidates else fallback_candidates
         if not candidates:
             continue
+
         # 公開日が試合に最も近いものを採用
-        candidates.sort(key=lambda v: abs((datetime.fromisoformat(v["published_at"].replace("Z","+00:00")) - ko).total_seconds()))
+        candidates.sort(key=lambda v: abs((datetime.fromisoformat(v["published_at"].replace("Z", "+00:00")) - ko).total_seconds()))
         best = candidates[0]
+        match_type = "両チームヒット" if preferred_candidates else "片方+選手名ヒット"
         new_h = {
             "broadcaster": best["channel_name"],
             "video_id": best["video_id"],
@@ -344,14 +457,30 @@ def main():
         }
         # 上書き（サンプル除去・既存の公式ハイライトは新しいものに更新）
         m["highlights"] = [new_h]
-        print(f"  ⚽ {m['kickoff_jst'][:10]} {m['home_ja']} vs {m['away_ja']} → [{best['channel_name']}] {best['title'][:60]}")
+        print(f"  ⚽ [{match_type}] {m['kickoff_jst'][:10]} {m['home_ja']} vs {m['away_ja']} → [{best['channel_name']}] {best['title'][:60]}")
         found += 1
 
     print(f"[INFO] スキップ（既存ハイライトあり）: {skipped_has_hl}試合")
     matches_data["updated_yt_highlights"] = datetime.now(JST).isoformat()
     save_json("matches.json", matches_data)
-    used_units = _call_count * 100
-    print(f"\n[DONE] ハイライト発見: {found}件 / API calls: {_call_count} / 使用ユニット: {used_units} / 残量目安: {10000 - used_units}ユニット")
+
+    # 終了時に統計を data/yt_highlights_status.json に保存
+    status = {
+        "last_run_at": datetime.now(JST).isoformat(),
+        "channel_counts": channel_counts,
+        "videos_total": len(all_videos),
+        "found_count": found,
+        "skipped_count": skipped_has_hl,
+        "api_calls": _call_count,
+    }
+    save_json("yt_highlights_status.json", status)
+
+    # found=0 かつ動画が取れていた場合は警告
+    if found == 0 and len(all_videos) > 0:
+        print(f"[WARN] 動画は{len(all_videos)}本取れたがハイライト発見0件。マッチング条件再確認推奨", file=sys.stderr)
+
+    used_units = _call_count * 1  # playlistItems は 1ユニット/call
+    print(f"\n[DONE] ハイライト発見: {found}件 / API calls: {_call_count} / 使用ユニット: {used_units} (playlistItems@1unit/call) / 残量目安: {10000 - used_units}ユニット")
 
 
 if __name__ == "__main__":
