@@ -61,6 +61,9 @@
       font-weight: 600;
       cursor: pointer;
       transition: all .15s;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
     }
     .schedule-tabs button.active {
       background: var(--wc-primary, #3d8ef0);
@@ -104,9 +107,13 @@
       border: 1px solid var(--wc-border, #2a3a5e);
       border-radius: 4px;
       background: var(--wc-bg, #0b1220);
-      color: var(--wc-text-main, #dde4f0);
+      color: #e6e6e6;
       font-size: 13px;
       cursor: pointer;
+    }
+    .schedule-filters select option {
+      background: #0b1220;
+      color: #e6e6e6;
     }
 
     /* 日付グループヘッダ */
@@ -129,6 +136,20 @@
       gap: 4px;
       margin-top: 5px;
     }
+    .bc-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      padding: 4px 10px;
+      border-radius: 6px;
+      font-size: 12px;
+      font-weight: 600;
+      color: #fff;
+      text-decoration: none;
+      transition: opacity 0.2s, transform 0.2s;
+    }
+    .bc-tag:hover { opacity: 0.85; transform: translateY(-1px); }
+    .bc-tag .bc-logo { width: 16px; height: 16px; object-fit: contain; background: rgba(255,255,255,0.95); border-radius: 3px; padding: 1px; }
     /* W杯地上波4局：ダークテーマ向け solid 背景 + 白文字 */
     .bc-tag.bc-nhk-so { background: #c1304a; color: #fff; border-color: #c1304a; }
     a.bc-tag.bc-nhk-so:hover { background: #a0253c; border-color: #a0253c; }
@@ -138,6 +159,8 @@
     a.bc-tag.bc-ntv:hover { background: #a80410; border-color: #a80410; }
     .bc-tag.bc-fuji   { background: #ee5c1d; color: #fff; border-color: #ee5c1d; }
     a.bc-tag.bc-fuji:hover { background: #c44b18; border-color: #c44b18; }
+    .bc-tag.bc-dazn   { background: #1c6e2e; }
+    .bc-tag.bc-other  { background: #3d4d6a; }
 
     /* 日本代表ハイライト */
     .wc-match.japan-match {
@@ -189,14 +212,14 @@
 
     <!-- タブ：予定 / 結果 -->
     <div class="schedule-tabs">
-      <button data-tab="upcoming" class="active">📅 予定を見る</button>
-      <button data-tab="finished">✅ 結果を見る</button>
+      <button data-tab="upcoming" class="active"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-3px;margin-right:5px;flex-shrink:0"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>予定を見る</button>
+      <button data-tab="finished"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-3px;margin-right:5px;flex-shrink:0"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>結果を見る</button>
     </div>
 
     <!-- フィルタ -->
     <div class="schedule-filters">
-      <label><input type="checkbox" id="filterFree"> 🆓 無料放送のみ</label>
-      <label><input type="checkbox" id="filterJapan"> 🇯🇵 日本代表のみ</label>
+      <label><input type="checkbox" id="filterFree"> <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-2px;flex-shrink:0"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg> 無料放送のみ</label>
+      <label><input type="checkbox" id="filterJapan"> <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-2px;flex-shrink:0"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" y1="22" x2="4" y2="15"/></svg> 日本代表のみ</label>
       <select id="filterStage">
         <option value="">全ステージ</option>
         <option value="GROUP_STAGE">グループステージ</option>
@@ -391,7 +414,9 @@
       if (info && info.logo) {
         logoHtml = `<img class="bc-logo" src="/assets/broadcasters/${escapeHtml(info.logo)}" alt="" width="16" height="16" loading="lazy">`;
       } else {
-        logoHtml = `<span class="bc-play">▶</span>`;
+        // SVGテキストロゴフォールバック（1〜2文字の局名略称）
+        const abbr = escapeHtml(name.slice(0, 2));
+        logoHtml = `<svg class="bc-logo" width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><rect width="16" height="16" rx="2" fill="rgba(255,255,255,0.2)"/><text x="8" y="11.5" font-family="Arial,sans-serif" font-size="7" font-weight="bold" fill="white" text-anchor="middle">${abbr}</text></svg>`;
       }
       const inner = `${logoHtml}${escapeHtml(name)}`;
       if (linkUrl) {
