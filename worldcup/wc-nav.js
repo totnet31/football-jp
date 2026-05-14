@@ -10,14 +10,17 @@
     history: '<svg class="wc-nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 3v6h6"/><path d="M3.05 13A9 9 0 1 0 6 5.3L3 3"/><path d="M12 7v5l3 3"/></svg>'
   };
 
+  ICONS.schedule = '<svg class="wc-nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/><path d="M8 14h.01M12 14h.01M16 14h.01M8 18h.01M12 18h.01"/></svg>';
+
   const ITEMS = [
-    { href: './',              icon: 'home',   label: 'トップ',         key: 'home' },
-    { href: './japan.html',    icon: 'jp',     label: '日本代表',        key: 'japan' },
-    { href: './groups.html',   icon: 'groups', label: 'グループ順位',     key: 'groups' },
-    { href: './bracket.html',  icon: 'trophy', label: 'トーナメント',    key: 'bracket' },
-    { href: './countries.html',icon: 'globe',  label: '48か国',          key: 'countries' },
-    { href: './rules.html',    icon: 'scroll', label: 'ルール',          key: 'rules' },
-    { href: './history.html',  icon: 'history',label: '歴代の歴史',       key: 'history' }
+    { href: './',               icon: 'home',     label: 'トップ',       key: 'home' },
+    { href: './japan.html',     icon: 'jp',       label: '日本代表',     key: 'japan' },
+    { href: './schedule.html',  icon: 'schedule', label: '全試合',       key: 'schedule' },
+    { href: './groups.html',    icon: 'groups',   label: 'グループ順位', key: 'groups' },
+    { href: './bracket.html',   icon: 'trophy',   label: 'トーナメント', key: 'bracket' },
+    { href: './countries.html', icon: 'globe',    label: '48か国',       key: 'countries' },
+    { href: './rules.html',     icon: 'scroll',   label: 'ルール',       key: 'rules' },
+    { href: './history.html',   icon: 'history',  label: '歴代の歴史',   key: 'history' }
   ];
 
   window.wcRenderNav = function(activeKey) {
