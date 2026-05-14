@@ -49,6 +49,46 @@
       "url": "https://www.bs10.jp/",
       "affiliate_url": null,
       "ga4_label": "BS10"
+    },
+    "NHK総合": {
+      "name": "NHK総合",
+      "logo": null,
+      "color": "#c1304a",
+      "url": "https://www.nhk.or.jp/sports/soccer/worldcup/",
+      "affiliate_url": null,
+      "ga4_label": "NHK_so"
+    },
+    "NHK BS": {
+      "name": "NHK BS",
+      "logo": null,
+      "color": "#9b3553",
+      "url": "https://www.nhk.or.jp/sports/soccer/worldcup/",
+      "affiliate_url": null,
+      "ga4_label": "NHK_bs"
+    },
+    "日本テレビ": {
+      "name": "日本テレビ",
+      "logo": null,
+      "color": "#d20515",
+      "url": "https://www.ntv.co.jp/",
+      "affiliate_url": null,
+      "ga4_label": "NTV"
+    },
+    "フジテレビ": {
+      "name": "フジテレビ",
+      "logo": null,
+      "color": "#ee5c1d",
+      "url": "https://www.fujitv.co.jp/",
+      "affiliate_url": null,
+      "ga4_label": "FujiTV"
+    },
+    "DAZN無料配信": {
+      "name": "DAZN無料配信",
+      "logo": "dazn.png",
+      "color": "#1c6e2e",
+      "url": "https://www.dazn.com/ja-JP/",
+      "affiliate_url": null,
+      "ga4_label": "DAZN_free"
     }
   },
   "broadcasters": {

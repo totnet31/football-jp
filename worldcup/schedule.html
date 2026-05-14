@@ -122,33 +122,22 @@
     }
     .schedule-date-header:first-child { margin-top: 0; }
 
-    /* 放送局バッジ */
-    .bc-badges {
+    /* 放送局タグ（bc-tag ベース＋W杯局オーバーライド） */
+    .bc-tags-row {
       display: flex;
       flex-wrap: wrap;
       gap: 4px;
       margin-top: 5px;
     }
-    .bc-badge {
-      display: inline-block;
-      padding: 2px 7px;
-      border-radius: 3px;
-      font-size: 11px;
-      font-weight: 700;
-      color: #fff;
-      letter-spacing: .02em;
-    }
-    .bc-badge.nhk-so  { background: #c1304a; }
-    .bc-badge.nhk-bs  { background: #9b3553; }
-    .bc-badge.ntv     { background: #d20515; }
-    .bc-badge.fuji    { background: #ee5c1d; }
-    .bc-badge.dazn    { background: #1c6e2e; }
-    .bc-badge.free-mark {
-      background: transparent;
-      border: 1.5px solid #f1c40f;
-      color: #f1c40f;
-      padding: 1px 6px;
-    }
+    /* W杯地上波4局：ダークテーマ向け solid 背景 + 白文字 */
+    .bc-tag.bc-nhk-so { background: #c1304a; color: #fff; border-color: #c1304a; }
+    a.bc-tag.bc-nhk-so:hover { background: #a0253c; border-color: #a0253c; }
+    .bc-tag.bc-nhk-bs { background: #9b3553; color: #fff; border-color: #9b3553; }
+    a.bc-tag.bc-nhk-bs:hover { background: #7e2a43; border-color: #7e2a43; }
+    .bc-tag.bc-ntv    { background: #d20515; color: #fff; border-color: #d20515; }
+    a.bc-tag.bc-ntv:hover { background: #a80410; border-color: #a80410; }
+    .bc-tag.bc-fuji   { background: #ee5c1d; color: #fff; border-color: #ee5c1d; }
+    a.bc-tag.bc-fuji:hover { background: #c44b18; border-color: #c44b18; }
 
     /* 日本代表ハイライト */
     .wc-match.japan-match {
@@ -237,15 +226,25 @@
   // ---- データ取得 ----
   let matches = [];
   let broadcasts = {};
+  const bcAffiliateMap = new Map();
+  const bcInfo = new Map();
   try {
-    const [mRes, bRes] = await Promise.all([
+    const [mRes, bRes, bcsRes] = await Promise.all([
       fetch('../data/wc2026/matches.json'),
-      fetch('../data/wc2026/broadcasts.json')
+      fetch('../data/wc2026/broadcasts.json'),
+      fetch('/data/broadcasters.json')
     ]);
     const mData = await mRes.json();
     matches = mData.matches || [];
     const bData = await bRes.json();
     broadcasts = bData.broadcasts || {};
+    const bcsData = await bcsRes.json();
+    if (bcsData.services) {
+      for (const [name, info] of Object.entries(bcsData.services)) {
+        if (info.affiliate_url) bcAffiliateMap.set(name, info.affiliate_url);
+        bcInfo.set(name, info);
+      }
+    }
   } catch (e) {
     document.getElementById('matchesList').innerHTML =
       '<p class="schedule-empty">データの読み込みに失敗しました。ページを再読み込みしてください。</p>';
@@ -344,18 +343,10 @@
       ? `<span class="wc-team-score has-score">${awayScore}</span>`
       : `<span class="wc-team-score">—</span>`;
 
-    // 放送局バッジ
+    // 放送局タグ（bc-tag スタイル）
     let badgesHtml = '';
-    if (bc) {
-      const badgeParts = [];
-      if (bc.free) badgeParts.push(`<span class="bc-badge free-mark">🆓無料</span>`);
-      (bc.broadcasters || []).forEach(b => {
-        const cls = broadcasterCls(b);
-        badgeParts.push(`<span class="bc-badge ${cls}">${escapeHtml(b)}</span>`);
-      });
-      if (badgeParts.length) {
-        badgesHtml = `<div class="bc-badges">${badgeParts.join('')}</div>`;
-      }
+    if (bc && bc.broadcasters && bc.broadcasters.length) {
+      badgesHtml = `<div class="bc-tags-row">${renderBroadcasterTags(bc.broadcasters)}</div>`;
     }
 
     return `<div class="${matchCls}">
@@ -391,13 +382,33 @@
 </div>`;
   }
 
-  function broadcasterCls(name) {
-    if (name === 'NHK総合') return 'nhk-so';
-    if (name === 'NHK BS') return 'nhk-bs';
-    if (name === '日テレ') return 'ntv';
-    if (name === 'フジ') return 'fuji';
-    if (name === 'DAZN無料') return 'dazn';
-    return '';
+  function renderBroadcasterTags(broadcasters) {
+    return broadcasters.map(name => {
+      const info = bcInfo.get(name);
+      const linkUrl = bcAffiliateMap.get(name) || (info && info.url) || null;
+      const cls = bcBrandClass(name);
+      let logoHtml;
+      if (info && info.logo) {
+        logoHtml = `<img class="bc-logo" src="/assets/broadcasters/${escapeHtml(info.logo)}" alt="" width="16" height="16" loading="lazy">`;
+      } else {
+        logoHtml = `<span class="bc-play">▶</span>`;
+      }
+      const inner = `${logoHtml}${escapeHtml(name)}`;
+      if (linkUrl) {
+        return `<a class="bc-tag ${cls}" href="${escapeHtml(linkUrl)}" target="_blank" rel="noopener nofollow">${inner}</a>`;
+      } else {
+        return `<span class="bc-tag ${cls}">${inner}</span>`;
+      }
+    }).join('');
+  }
+
+  function bcBrandClass(name) {
+    if (name.includes('NHK総合')) return 'bc-nhk-so';
+    if (name.includes('NHK BS')) return 'bc-nhk-bs';
+    if (name.includes('日本テレビ')) return 'bc-ntv';
+    if (name.includes('フジテレビ')) return 'bc-fuji';
+    if (name.includes('DAZN')) return 'bc-dazn';
+    return 'bc-other';
   }
 
   function stageJa(stage, md) {
