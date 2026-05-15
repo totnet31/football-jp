@@ -1,5 +1,5 @@
 {
-  "updated": "2026-05-15T07:01:46.806916+09:00",
+  "updated": "2026-05-15T17:32:53.965706+09:00",
   "date_from": "2026-05-08",
   "date_to": "2026-05-29",
   "match_count": 348,
@@ -12457,40 +12457,6 @@
       ]
     },
     {
-      "id": 544588,
-      "competition_id": 140,
-      "competition_ja": "ラ・リーガ",
-      "competition_category": "league",
-      "competition_flag": "🇪🇸",
-      "kickoff_jst": "2026-05-24T09:00:00+09:00",
-      "status": "SCHEDULED",
-      "stage": "REGULAR_SEASON",
-      "matchday": 38,
-      "home_id": 94,
-      "home_ja": "ビジャレアル",
-      "home_en": "Villarreal",
-      "home_crest": "https://crests.football-data.org/94.png",
-      "away_id": 78,
-      "away_ja": "アトレティコ・マドリー",
-      "away_en": "Atleti",
-      "away_crest": "https://crests.football-data.org/78.png",
-      "score": null,
-      "japanese_players": [],
-      "broadcasters": [
-        {
-          "name": "U-NEXT",
-          "type": "shared",
-          "url": "https://www.unext.jp/"
-        },
-        {
-          "name": "DAZN",
-          "type": "shared",
-          "url": "https://www.dazn.com/ja-JP/",
-          "note": "〜2027-28"
-        }
-      ]
-    },
-    {
       "id": 537185,
       "competition_id": 135,
       "competition_ja": "セリエA",
@@ -13105,8 +13071,42 @@
           "note": "〜2030-31"
         }
       ]
+    },
+    {
+      "id": 544588,
+      "competition_id": 140,
+      "competition_ja": "ラ・リーガ",
+      "competition_category": "league",
+      "competition_flag": "🇪🇸",
+      "kickoff_jst": "2026-05-25T04:00:00+09:00",
+      "status": "TIMED",
+      "stage": "REGULAR_SEASON",
+      "matchday": 38,
+      "home_id": 94,
+      "home_ja": "ビジャレアル",
+      "home_en": "Villarreal",
+      "home_crest": "https://crests.football-data.org/94.png",
+      "away_id": 78,
+      "away_ja": "アトレティコ・マドリー",
+      "away_en": "Atleti",
+      "away_crest": "https://crests.football-data.org/78.png",
+      "score": null,
+      "japanese_players": [],
+      "broadcasters": [
+        {
+          "name": "U-NEXT",
+          "type": "shared",
+          "url": "https://www.unext.jp/"
+        },
+        {
+          "name": "DAZN",
+          "type": "shared",
+          "url": "https://www.dazn.com/ja-JP/",
+          "note": "〜2027-28"
+        }
+      ]
     }
   ],
-  "updated_yt_highlights": "2026-05-15T07:05:38.143577+09:00",
-  "updated_uefa_secondary": "2026-05-15T07:06:08.937986+09:00"
+  "updated_yt_highlights": "2026-05-15T17:36:51.271924+09:00",
+  "updated_uefa_secondary": "2026-05-15T17:37:24.457666+09:00"
 }
