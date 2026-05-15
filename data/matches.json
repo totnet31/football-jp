@@ -1,8 +1,8 @@
 {
-  "updated": "2026-05-15T20:31:36.388505+09:00",
-  "date_from": "2026-05-08",
-  "date_to": "2026-05-29",
-  "match_count": 348,
+  "updated": "2026-05-16T01:18:59.161434+09:00",
+  "date_from": "2026-05-09",
+  "date_to": "2026-05-30",
+  "match_count": 349,
   "_note": "累積保持モード：フェッチ窓外の過去試合データはそのまま保持される。",
   "matches": [
     {
@@ -10628,7 +10628,7 @@
       "competition_ja": "セリエA",
       "competition_category": "league",
       "competition_flag": "🇮🇹",
-      "kickoff_jst": "2026-05-17T19:30:00+09:00",
+      "kickoff_jst": "2026-05-17T19:00:00+09:00",
       "status": "TIMED",
       "stage": "REGULAR_SEASON",
       "matchday": 37,
@@ -10657,7 +10657,7 @@
       "competition_ja": "セリエA",
       "competition_category": "league",
       "competition_flag": "🇮🇹",
-      "kickoff_jst": "2026-05-17T19:30:00+09:00",
+      "kickoff_jst": "2026-05-17T19:00:00+09:00",
       "status": "TIMED",
       "stage": "REGULAR_SEASON",
       "matchday": 37,
@@ -10686,7 +10686,7 @@
       "competition_ja": "セリエA",
       "competition_category": "league",
       "competition_flag": "🇮🇹",
-      "kickoff_jst": "2026-05-17T19:30:00+09:00",
+      "kickoff_jst": "2026-05-17T19:00:00+09:00",
       "status": "TIMED",
       "stage": "REGULAR_SEASON",
       "matchday": 37,
@@ -10721,7 +10721,7 @@
       "competition_ja": "セリエA",
       "competition_category": "league",
       "competition_flag": "🇮🇹",
-      "kickoff_jst": "2026-05-17T19:30:00+09:00",
+      "kickoff_jst": "2026-05-17T19:00:00+09:00",
       "status": "TIMED",
       "stage": "REGULAR_SEASON",
       "matchday": 37,
@@ -10750,7 +10750,7 @@
       "competition_ja": "セリエA",
       "competition_category": "league",
       "competition_flag": "🇮🇹",
-      "kickoff_jst": "2026-05-17T19:30:00+09:00",
+      "kickoff_jst": "2026-05-17T19:00:00+09:00",
       "status": "TIMED",
       "stage": "REGULAR_SEASON",
       "matchday": 37,
@@ -11402,40 +11402,6 @@
       ]
     },
     {
-      "id": 544573,
-      "competition_id": 140,
-      "competition_ja": "ラ・リーガ",
-      "competition_category": "league",
-      "competition_flag": "🇪🇸",
-      "kickoff_jst": "2026-05-18T02:00:00+09:00",
-      "status": "TIMED",
-      "stage": "REGULAR_SEASON",
-      "matchday": 37,
-      "home_id": 81,
-      "home_ja": "バルセロナ",
-      "home_en": "Barça",
-      "home_crest": "https://crests.football-data.org/81.png",
-      "away_id": 90,
-      "away_ja": "ベティス",
-      "away_en": "Real Betis",
-      "away_crest": "https://crests.football-data.org/90.png",
-      "score": null,
-      "japanese_players": [],
-      "broadcasters": [
-        {
-          "name": "U-NEXT",
-          "type": "shared",
-          "url": "https://www.unext.jp/"
-        },
-        {
-          "name": "DAZN",
-          "type": "shared",
-          "url": "https://www.dazn.com/ja-JP/",
-          "note": "〜2027-28"
-        }
-      ]
-    },
-    {
       "id": 544574,
       "competition_id": 140,
       "competition_ja": "ラ・リーガ",
@@ -12042,6 +12008,40 @@
           "type": "exclusive",
           "url": "https://www.dazn.com/ja-JP/",
           "note": "〜2028-29"
+        }
+      ]
+    },
+    {
+      "id": 544573,
+      "competition_id": 140,
+      "competition_ja": "ラ・リーガ",
+      "competition_category": "league",
+      "competition_flag": "🇪🇸",
+      "kickoff_jst": "2026-05-18T04:15:00+09:00",
+      "status": "TIMED",
+      "stage": "REGULAR_SEASON",
+      "matchday": 37,
+      "home_id": 81,
+      "home_ja": "バルセロナ",
+      "home_en": "Barça",
+      "home_crest": "https://crests.football-data.org/81.png",
+      "away_id": 90,
+      "away_ja": "ベティス",
+      "away_en": "Real Betis",
+      "away_crest": "https://crests.football-data.org/90.png",
+      "score": null,
+      "japanese_players": [],
+      "broadcasters": [
+        {
+          "name": "U-NEXT",
+          "type": "shared",
+          "url": "https://www.unext.jp/"
+        },
+        {
+          "name": "DAZN",
+          "type": "shared",
+          "url": "https://www.dazn.com/ja-JP/",
+          "note": "〜2027-28"
         }
       ]
     },
@@ -13105,8 +13105,43 @@
           "note": "〜2027-28"
         }
       ]
+    },
+    {
+      "id": 552096,
+      "competition_id": 2,
+      "competition_ja": "UEFAチャンピオンズリーグ",
+      "competition_category": "europe",
+      "competition_flag": "🇪🇺",
+      "kickoff_jst": "2026-05-31T01:00:00+09:00",
+      "status": "TIMED",
+      "stage": "FINAL",
+      "matchday": null,
+      "home_id": 524,
+      "home_ja": "PSG",
+      "home_en": "PSG",
+      "home_crest": "https://crests.football-data.org/524.png",
+      "away_id": 57,
+      "away_ja": "アーセナル",
+      "away_en": "Arsenal",
+      "away_crest": "https://crests.football-data.org/57.png",
+      "score": null,
+      "japanese_players": [],
+      "broadcasters": [
+        {
+          "name": "WOWOW",
+          "type": "exclusive",
+          "url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l",
+          "note": "〜2026-27"
+        },
+        {
+          "name": "Lemino",
+          "type": "partial",
+          "url": "https://lemino.docomo.ne.jp/",
+          "note": "厳選30試合ディレイ"
+        }
+      ]
     }
   ],
-  "updated_yt_highlights": "2026-05-15T20:35:18.836689+09:00",
-  "updated_uefa_secondary": "2026-05-15T20:35:48.325508+09:00"
+  "updated_yt_highlights": "2026-05-16T01:22:43.569823+09:00",
+  "updated_uefa_secondary": "2026-05-16T01:23:13.167378+09:00"
 }
