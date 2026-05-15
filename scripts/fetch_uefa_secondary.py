@@ -354,6 +354,11 @@ def main():
     ):
         print("[WARN] EL/ECL 試合が0件です（取得失敗で既存も無し）", file=sys.stderr)
 
+    from utils import fix_finished_status
+    fixed = fix_finished_status(matches)
+    if fixed:
+        print(f"[INFO] status='FINISHED' に補正: {fixed}件")
+
     matches_data["matches"] = matches
     matches_data["match_count"] = len(matches)
     matches_data["updated_uefa_secondary"] = datetime.now(JST).isoformat()

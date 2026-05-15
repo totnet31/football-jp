@@ -182,6 +182,11 @@ def main():
     if preserved_old:
         print(f"[INFO] フェッチ外の過去試合 {preserved_old}件 を保持しました（累積モード）。")
 
+    from utils import fix_finished_status
+    fixed = fix_finished_status(accumulated)
+    if fixed:
+        print(f"[INFO] status='FINISHED' に補正: {fixed}件")
+
     matches_out = {
         "updated": datetime.now(JST).isoformat(),
         "competition": "FIFA World Cup 2026",

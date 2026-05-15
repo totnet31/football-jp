@@ -320,7 +320,7 @@
       if (!enabledLeagues.has(m.competition_id)) return false;
       if (m.home_ja === '未定' && m.away_ja === '未定') return false;
       const kickoff = new Date(m.kickoff_jst);
-      if (m.status === 'FINISHED' && kickoff < cutoff) return false;
+      if (isFinished(m) && kickoff < cutoff) return false;
       const jp = m.japanese_players || [];
       return jp.some(p => {
         const raw = String(p.name_ja || '').trim();
@@ -362,7 +362,10 @@
   // ===== Schedule view =====
   function renderSchedule() {
     renderFavSection();
-    const matches = filtered().filter(m => ['SCHEDULED', 'TIMED', 'IN_PLAY', 'PAUSED'].includes(m.status));
+    const matches = filtered().filter(m => {
+      if (isFinished(m)) return false;  // 終了試合（スコア入り含む）を除外
+      return ['SCHEDULED', 'TIMED', 'IN_PLAY', 'PAUSED'].includes(m.status);
+    });
     if (matches.length === 0) {
       scheduleEl.innerHTML = `<p class="empty">予定されている試合はありません。<br>フィルタ条件を変更してください。</p>`;
       return;
@@ -385,7 +388,7 @@
 
   // ===== Results view =====
   function renderResults() {
-    const matches = filtered().filter(m => m.status === 'FINISHED').slice().reverse();
+    const matches = filtered().filter(m => isFinished(m)).slice().reverse();
     if (matches.length === 0) {
       resultsEl.innerHTML = `<p class="empty">直近の結果はありません。<br>フィルタ条件を変更してください。</p>`;
       return;
@@ -407,7 +410,7 @@
   }
 
   function renderMatch(m, isToday) {
-    const finished = m.status === 'FINISHED';
+    const finished = isFinished(m);
     const live = m.status === 'IN_PLAY' || m.status === 'PAUSED';
     const time = fmtTime(m.kickoff_jst);
     const dd = diffDays(m.kickoff_jst);
@@ -830,6 +833,19 @@
     }[c]));
   }
 
+  // 試合が終了したかどうかの判定
+  // status === 'FINISHED' を基本とするが、スコアが入っている場合も終了扱い（データ反映漏れ対策）
+  function isFinished(m) {
+    if (!m) return false;
+    if (m.status === 'FINISHED') return true;
+    // status が SCHEDULED 等でも、スコアが入っていれば終了とみなす
+    if (m.score && (
+        (m.score.home !== null && m.score.home !== undefined) ||
+        (m.score.away !== null && m.score.away !== undefined)
+    )) return true;
+    return false;
+  }
+
   // ==== Events ====
   onlyJpEl.addEventListener('change', rerender);
   // タブは <a> 要素で各ページにナビゲートする（クリックハンドラ不要）
@@ -999,7 +1015,7 @@
     if (!matches || !matches.length) return;
 
     const data = matches.map(m => {
-      const finished = m.status === 'FINISHED';
+      const finished = isFinished(m);
       // 試合終了予定時刻 = キックオフ + 105分（90分 + 15分ハーフタイム）
       const start = new Date(m.kickoff_jst);
       const end = new Date(start.getTime() + 105 * 60 * 1000);
@@ -1069,12 +1085,12 @@
     if (currentView === 'schedule') {
       // 予定試合（未終了）の先頭10件
       schemaMatches = filtered()
-        .filter(m => ['SCHEDULED', 'TIMED', 'IN_PLAY', 'PAUSED'].includes(m.status))
+        .filter(m => !isFinished(m) && ['SCHEDULED', 'TIMED', 'IN_PLAY', 'PAUSED'].includes(m.status))
         .slice(0, 10);
     } else if (currentView === 'results') {
       // 終了済み試合の最新10件（降順で先頭10件）
       schemaMatches = filtered()
-        .filter(m => m.status === 'FINISHED')
+        .filter(m => isFinished(m))
         .slice()
         .reverse()
         .slice(0, 10);
