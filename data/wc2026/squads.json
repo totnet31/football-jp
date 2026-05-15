@@ -7,17 +7,17 @@
     "tla": "JPN",
     "ja": "日本",
     "flag": "🇯🇵",
-    "as_of": "2026年3月19日発表（直近の親善試合用）",
+    "as_of": "2026年5月15日発表（W杯本番26名）",
     "players": [
       {
         "no": null,
         "pos": "GK",
-        "name_ja": "鈴木 彩艶",
-        "name_en": "SUZUKI Zion",
-        "club": "パルマ (イタリア)",
-        "dob": "2002-08-21",
-        "height_cm": 190,
-        "weight_kg": 91
+        "name_ja": "早川 友基",
+        "name_en": "HAYAKAWA Tomoki",
+        "club": "鹿島アントラーズ",
+        "dob": "1999-03-03",
+        "height_cm": 187,
+        "weight_kg": 81
       },
       {
         "no": null,
@@ -32,39 +32,29 @@
       {
         "no": null,
         "pos": "GK",
-        "name_ja": "早川 友基",
-        "name_en": "HAYAKAWA Tomoki",
-        "club": "鹿島アントラーズ",
-        "dob": "1999-03-03",
-        "height_cm": 187,
-        "weight_kg": 81
+        "name_ja": "鈴木 彩艶",
+        "name_en": "SUZUKI Zion",
+        "club": "パルマ (イタリア)",
+        "dob": "2002-08-21",
+        "height_cm": 190,
+        "weight_kg": 91
       },
       {
         "no": null,
         "pos": "DF",
-        "name_ja": "鈴木 淳之介",
-        "name_en": "SUZUKI Junnosuke",
-        "club": "FCコペンハーゲン (デンマーク)",
-        "dob": "2003-07-12",
-        "height_cm": 180,
-        "weight_kg": 78
-      },
-      {
-        "no": null,
-        "pos": "DF",
-        "name_ja": "橋岡 大樹",
-        "name_en": "HASHIOKA Daiki",
-        "club": "ヘント (ベルギー)",
-        "dob": "1999-05-17",
-        "height_cm": 183,
-        "weight_kg": 75
+        "name_ja": "長友 佑都",
+        "name_en": "NAGATOMO Yuto",
+        "club": "FC東京",
+        "dob": null,
+        "height_cm": null,
+        "weight_kg": null
       },
       {
         "no": null,
         "pos": "DF",
         "name_ja": "谷口 彰悟",
         "name_en": "TANIGUCHI Shogo",
-        "club": "シント・トロイデン (ベルギー)",
+        "club": "シントトロイデンVV (ベルギー)",
         "dob": "1991-07-15",
         "height_cm": 182,
         "weight_kg": 70
@@ -72,8 +62,18 @@
       {
         "no": null,
         "pos": "DF",
+        "name_ja": "板倉 滉",
+        "name_en": "ITAKURA Ko",
+        "club": "アヤックス (オランダ)",
+        "dob": null,
+        "height_cm": null,
+        "weight_kg": null
+      },
+      {
+        "no": null,
+        "pos": "DF",
         "name_ja": "渡辺 剛",
-        "name_en": "WATANABE Tsuyosi",
+        "name_en": "WATANABE Ko",
         "club": "フェイエノールト (オランダ)",
         "dob": "1997-02-05",
         "height_cm": 186,
@@ -92,36 +92,6 @@
       {
         "no": null,
         "pos": "DF",
-        "name_ja": "瀬古 歩夢",
-        "name_en": "SEKO Ayumu",
-        "club": "ル・アーヴル (フランス)",
-        "dob": "2000-06-07",
-        "height_cm": 185,
-        "weight_kg": 72
-      },
-      {
-        "no": null,
-        "pos": "DF",
-        "name_ja": "安藤 智哉",
-        "name_en": "ANDO Tomoya",
-        "club": "ザンクトパウリ (ドイツ)",
-        "dob": "1999-01-10",
-        "height_cm": 190,
-        "weight_kg": 82
-      },
-      {
-        "no": null,
-        "pos": "DF",
-        "name_ja": "菅原 由勢",
-        "name_en": "SUGAWARA Yukinari",
-        "club": "ベルダー・ブレーメン (ドイツ)",
-        "dob": "2000-06-28",
-        "height_cm": 179,
-        "weight_kg": 67
-      },
-      {
-        "no": null,
-        "pos": "DF",
         "name_ja": "伊藤 洋輝",
         "name_en": "ITO Hiroki",
         "club": "バイエルン・ミュンヘン (ドイツ)",
@@ -131,20 +101,50 @@
       },
       {
         "no": null,
+        "pos": "DF",
+        "name_ja": "瀬古 歩夢",
+        "name_en": "SEKO Ayumu",
+        "club": "ル・アーヴルAC (フランス)",
+        "dob": "2000-06-07",
+        "height_cm": 185,
+        "weight_kg": 72
+      },
+      {
+        "no": null,
+        "pos": "DF",
+        "name_ja": "菅原 由勢",
+        "name_en": "SUGAWARA Yukinari",
+        "club": "ヴェルダー・ブレーメン (ドイツ)",
+        "dob": "2000-06-28",
+        "height_cm": 179,
+        "weight_kg": 67
+      },
+      {
+        "no": null,
+        "pos": "DF",
+        "name_ja": "鈴木 淳之介",
+        "name_en": "SUZUKI Junnosuke",
+        "club": "FCコペンハーゲン (デンマーク)",
+        "dob": "2003-07-12",
+        "height_cm": 180,
+        "weight_kg": 78
+      },
+      {
+        "no": null,
         "pos": "MF",
-        "name_ja": "佐藤 龍之介",
-        "name_en": "SATO Ryunosuke",
-        "club": "FC東京",
-        "dob": "2006-10-16",
-        "height_cm": 171,
-        "weight_kg": 65
+        "name_ja": "遠藤 航",
+        "name_en": "ENDO Wataru",
+        "club": "リバプールFC (イングランド)",
+        "dob": null,
+        "height_cm": null,
+        "weight_kg": null
       },
       {
         "no": null,
         "pos": "MF",
         "name_ja": "伊東 純也",
         "name_en": "ITO Junya",
-        "club": "ヘンク (ベルギー)",
+        "club": "KRCゲンク (ベルギー)",
         "dob": "1993-03-09",
         "height_cm": 176,
         "weight_kg": 68
@@ -152,52 +152,12 @@
       {
         "no": null,
         "pos": "MF",
-        "name_ja": "佐野 航大",
-        "name_en": "SANO Kodai",
-        "club": "NECナイメヘン (オランダ)",
-        "dob": "2003-09-25",
-        "height_cm": 176,
-        "weight_kg": 68
-      },
-      {
-        "no": null,
-        "pos": "MF",
-        "name_ja": "中村 敬斗",
-        "name_en": "NAKAMURA Keito",
-        "club": "スタッド・ランス (フランス)",
-        "dob": "2000-07-28",
+        "name_ja": "鎌田 大地",
+        "name_en": "KAMADA Daichi",
+        "club": "クリスタル・パレス (イングランド)",
+        "dob": "1996-08-05",
         "height_cm": 180,
-        "weight_kg": 75
-      },
-      {
-        "no": null,
-        "pos": "MF",
-        "name_ja": "鈴木 唯人",
-        "name_en": "SUZUKI Yuito",
-        "club": "フライブルク (ドイツ)",
-        "dob": "2001-10-25",
-        "height_cm": 175,
-        "weight_kg": 66
-      },
-      {
-        "no": null,
-        "pos": "MF",
-        "name_ja": "藤田 譲瑠チマ",
-        "name_en": "FUJITA Joeru Chima",
-        "club": "ザンクトパウリ (ドイツ)",
-        "dob": "2002-02-16",
-        "height_cm": 175,
-        "weight_kg": 76
-      },
-      {
-        "no": null,
-        "pos": "MF",
-        "name_ja": "佐野 海舟",
-        "name_en": "SANO Kaishu",
-        "club": "マインツ05 (ドイツ)",
-        "dob": "2000-12-30",
-        "height_cm": 176,
-        "weight_kg": 67
+        "weight_kg": 72
       },
       {
         "no": null,
@@ -222,42 +182,52 @@
       {
         "no": null,
         "pos": "MF",
-        "name_ja": "鎌田 大地",
-        "name_en": "KAMADA Daichi",
-        "club": "クリスタル・パレス (イングランド)",
-        "dob": "1996-08-05",
+        "name_ja": "中村 敬斗",
+        "name_en": "NAKAMURA Keito",
+        "club": "スタッド・ランス (フランス)",
+        "dob": "2000-07-28",
         "height_cm": 180,
-        "weight_kg": 72
+        "weight_kg": 75
       },
       {
         "no": null,
         "pos": "MF",
-        "name_ja": "三笘 薫",
-        "name_en": "MITOMA Kaoru",
-        "club": "ブライトン＆ホーヴ・アルビオン (イングランド)",
-        "dob": "1997-05-20",
-        "height_cm": 178,
-        "weight_kg": 71
+        "name_ja": "佐野 海舟",
+        "name_en": "SANO Kaishu",
+        "club": "マインツ05 (ドイツ)",
+        "dob": "2000-12-30",
+        "height_cm": 176,
+        "weight_kg": 67
+      },
+      {
+        "no": null,
+        "pos": "MF",
+        "name_ja": "久保 建英",
+        "name_en": "KUBO Takefusa",
+        "club": "レアル・ソシエダード (スペイン)",
+        "dob": null,
+        "height_cm": null,
+        "weight_kg": null
+      },
+      {
+        "no": null,
+        "pos": "MF",
+        "name_ja": "鈴木 唯人",
+        "name_en": "SUZUKI Yuito",
+        "club": "SCフライブルク (ドイツ)",
+        "dob": "2001-10-25",
+        "height_cm": 175,
+        "weight_kg": 66
       },
       {
         "no": null,
         "pos": "FW",
-        "name_ja": "町野 修斗",
-        "name_en": "MACHINO Shuto",
-        "club": "ボルシア・メンヒェングラートバッハ (ドイツ)",
-        "dob": "1999-09-30",
-        "height_cm": 185,
-        "weight_kg": 77
-      },
-      {
-        "no": null,
-        "pos": "FW",
-        "name_ja": "塩貝 健斗",
-        "name_en": "SHIOGAI Kento",
-        "club": "ボルフスブルク (ドイツ)",
-        "dob": "2005-03-26",
-        "height_cm": 180,
-        "weight_kg": 75
+        "name_ja": "小川 航基",
+        "name_en": "OGAWA Koki",
+        "club": "NECナイメヘン (オランダ)",
+        "dob": "1997-08-08",
+        "height_cm": 186,
+        "weight_kg": 78
       },
       {
         "no": null,
@@ -282,19 +252,19 @@
       {
         "no": null,
         "pos": "FW",
-        "name_ja": "小川 航基",
-        "name_en": "OGAWA Koki",
-        "club": "NECナイメヘン (オランダ)",
-        "dob": "1997-08-08",
-        "height_cm": 186,
-        "weight_kg": 78
+        "name_ja": "塩貝 健人",
+        "name_en": "SHIOGAI Kento",
+        "club": "VfLヴォルフスブルク (ドイツ)",
+        "dob": "2005-03-26",
+        "height_cm": 180,
+        "weight_kg": 75
       },
       {
         "no": null,
         "pos": "FW",
         "name_ja": "後藤 啓介",
-        "name_en": "GOTŌ Keisuke",
-        "club": "シント・トロイデン (ベルギー)",
+        "name_en": "GOTO Keisuke",
+        "club": "シントトロイデンVV (ベルギー)",
         "dob": "2005-06-03",
         "height_cm": 191,
         "weight_kg": 78

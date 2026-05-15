@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FIFAワールドカップ2026 全104試合スケジュール｜地上波放送・日本時間 - football-jp</title>
+  <meta name="description" content="FIFA W杯2026の全104試合スケジュールを日本時間で一覧。地上波・無料配信（NHK／日テレ／フジ／DAZN）の放送局バッジ付き。日本代表戦フィルター・予定/結果タブで簡単チェック。">
+  <link rel="canonical" href="https://football-jp.com/worldcup/schedule.html">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://football-jp.com/worldcup/schedule.html">
+  <meta property="og:title" content="FIFAワールドカップ2026 全104試合スケジュール｜地上波放送・日本時間 - football-jp">
+  <meta property="og:description" content="FIFA W杯2026の全104試合スケジュールを日本時間で一覧。地上波・無料配信（NHK／日テレ／フジ／DAZN）の放送局バッジ付き。">
+  <meta property="og:site_name" content="football-jp">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2651130635797183" crossorigin="anonymous"></script>
+  <!-- GA4 opt-out for internal traffic -->
+  <script>
+    (function() {
+      var params = new URLSearchParams(window.location.search);
+      if (params.get('internal') === '1') localStorage.setItem('ga-disabled', '1');
+      if (params.get('internal') === '0') localStorage.removeItem('ga-disabled');
+      if (localStorage.getItem('ga-disabled') === '1') {
+        window['ga-disable-G-39G8CVXRW0'] = true;
+      }
+    })();
+  </script>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-39G8CVXRW0"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag("js", new Date());
+    gtag("config", "G-39G8CVXRW0");
+  </script>
+  <link rel="stylesheet" href="style.css">
+  <link rel="manifest" href="/manifest.json">
+  <meta name="theme-color" content="#0b1220">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="football-jp">
+  <link rel="apple-touch-icon" href="/assets/logos/favicon-180.png">
+
+  <style>
+    /* ===== スケジュールページ固有スタイル ===== */
+
+    /* タブ */
+    .schedule-tabs {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 16px;
+    }
+    .schedule-tabs button {
+      flex: 1;
+      padding: 10px 0;
+      border: 1.5px solid var(--wc-border, #2a3a5e);
+      border-radius: 6px;
+      background: transparent;
+      color: var(--wc-text-sub, #8899bb);
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all .15s;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .schedule-tabs button.active {
+      background: var(--wc-primary, #3d8ef0);
+      border-color: var(--wc-primary, #3d8ef0);
+      color: #fff;
+    }
+    .schedule-tabs button:hover:not(.active) {
+      border-color: var(--wc-primary, #3d8ef0);
+      color: var(--wc-primary, #3d8ef0);
+    }
+
+    /* フィルタ行 */
+    .schedule-filters {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px 16px;
+      align-items: center;
+      margin-bottom: 16px;
+      padding: 10px 14px;
+      background: var(--wc-card-bg, #111c30);
+      border: 1px solid var(--wc-border, #2a3a5e);
+      border-radius: 6px;
+      font-size: 13px;
+      color: var(--wc-text-main, #dde4f0);
+    }
+    .schedule-filters label {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      cursor: pointer;
+      white-space: nowrap;
+    }
+    .schedule-filters input[type="checkbox"] {
+      width: 15px;
+      height: 15px;
+      cursor: pointer;
+      accent-color: var(--wc-primary, #3d8ef0);
+    }
+    .schedule-filters select {
+      appearance: none;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      padding: 6px 28px 6px 10px;
+      border: 1px solid #2a3a5e;
+      border-radius: 4px;
+      background-color: #0b1220;
+      color: #ffffff;
+      font-size: 13px;
+      font-weight: 500;
+      cursor: pointer;
+      background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23ffffff' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'><polyline points='6 9 12 15 18 9'/></svg>");
+      background-repeat: no-repeat;
+      background-position: right 8px center;
+      background-size: 12px 12px;
+    }
+    .schedule-filters select:hover {
+      border-color: #4a5a8e;
+    }
+    .schedule-filters select option {
+      background-color: #0b1220;
+      color: #ffffff;
+    }
+
+    /* 日付グループヘッダ */
+    .schedule-date-header {
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--wc-text-sub, #8899bb);
+      text-transform: uppercase;
+      letter-spacing: .04em;
+      padding: 6px 0 4px;
+      border-bottom: 1px solid var(--wc-border, #2a3a5e);
+      margin: 18px 0 8px;
+    }
+    .schedule-date-header:first-child { margin-top: 0; }
+
+    /* 放送局タグ（bc-tag ベース＋W杯局オーバーライド） */
+    .bc-tags-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 4px;
+      margin-top: 5px;
+    }
+    .bc-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      padding: 4px 10px;
+      border-radius: 6px;
+      font-size: 12px;
+      font-weight: 600;
+      color: #fff;
+      text-decoration: none;
+      transition: opacity 0.2s, transform 0.2s;
+    }
+    .bc-tag:hover { opacity: 0.85; transform: translateY(-1px); }
+    .bc-tag .bc-logo { width: 16px; height: 16px; object-fit: contain; background: rgba(255,255,255,0.95); border-radius: 3px; padding: 1px; }
+    /* W杯地上波4局：ダークテーマ向け solid 背景 + 白文字 */
+    .bc-tag.bc-nhk-so { background: #c1304a; color: #fff; border-color: #c1304a; }
+    a.bc-tag.bc-nhk-so:hover { background: #a0253c; border-color: #a0253c; }
+    .bc-tag.bc-nhk-bs { background: #015aff; color: #fff; border-color: #015aff; }
+    a.bc-tag.bc-nhk-bs:hover { background: #0146cc; border-color: #0146cc; }
+    .bc-tag.bc-ntv    { background: #d20515; color: #fff; border-color: #d20515; }
+    a.bc-tag.bc-ntv:hover { background: #a80410; border-color: #a80410; }
+    .bc-tag.bc-fuji   { background: #ee5c1d; color: #fff; border-color: #ee5c1d; }
+    a.bc-tag.bc-fuji:hover { background: #c44b18; border-color: #c44b18; }
+    .bc-tag.bc-dazn   { background: #1c6e2e; }
+    .bc-tag.bc-other  { background: #3d4d6a; }
+
+    /* 日本代表ハイライト */
+    .wc-match.japan-match {
+      border-left: 3px solid #e8333a;
+      padding-left: 11px;
+    }
+
+    /* 空状態 */
+    .schedule-empty {
+      text-align: center;
+      padding: 36px 0;
+      color: var(--wc-text-sub, #8899bb);
+      font-size: 14px;
+    }
+
+    /* 結果スコア（FINISHED時） */
+    .wc-team-score.has-score {
+      font-size: 16px;
+      font-weight: 800;
+      color: var(--wc-text-main, #dde4f0);
+    }
+
+    /* レスポンシブ */
+    @media (max-width: 480px) {
+      .schedule-filters {
+        gap: 8px 12px;
+      }
+      .schedule-tabs button {
+        font-size: 13px;
+      }
+    }
+  </style>
+</head>
+<body class="wc-page">
+
+<header class="wc-header">
+  <a href="../" class="wc-back-link">⚽ football-jp トップへ</a>
+  <h1>📅 FIFA ワールドカップ 2026 全試合スケジュール</h1>
+  <p class="wc-tagline">全104試合 / 地上波・無料配信を一目で確認</p>
+</header>
+
+<div class="wc-container">
+
+  <nav class="wc-nav" id="wcNav"></nav>
+  <script src="wc-nav.js"></script>
+  <script>document.getElementById('wcNav').innerHTML = wcRenderNav('schedule');</script>
+
+  <section class="wc-section">
+
+    <!-- タブ：予定 / 結果 -->
+    <div class="schedule-tabs">
+      <button data-tab="upcoming" class="active"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-3px;margin-right:5px;flex-shrink:0"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>予定を見る</button>
+      <button data-tab="finished"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-3px;margin-right:5px;flex-shrink:0"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>結果を見る</button>
+    </div>
+
+    <!-- フィルタ -->
+    <div class="schedule-filters">
+      <label><input type="checkbox" id="filterFree"> <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-2px;flex-shrink:0"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg> 無料放送のみ</label>
+      <label><input type="checkbox" id="filterJapan"> <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-2px;flex-shrink:0"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" y1="22" x2="4" y2="15"/></svg> 日本代表のみ</label>
+      <select id="filterStage">
+        <option value="">全ステージ</option>
+        <option value="GROUP_STAGE">グループステージ</option>
+        <option value="LAST_32">決勝T 1回戦</option>
+        <option value="LAST_16">決勝T 2回戦</option>
+        <option value="QUARTER_FINALS">準々決勝</option>
+        <option value="SEMI_FINALS">準決勝</option>
+        <option value="THIRD_PLACE">3位決定戦</option>
+        <option value="FINAL">決勝</option>
+      </select>
+    </div>
+
+    <!-- 試合一覧 -->
+    <div id="matchesList"></div>
+  </section>
+
+  <footer class="wc-footer">
+    <p>データ提供: <a href="https://www.football-data.org/" target="_blank" rel="noopener">Football data provided by the Football-Data.org API</a></p>
+    <p>放送情報は2026-05-14時点。変更の可能性あり。</p>
+    <p>このページは2026 FIFA W杯の期間限定特集です／<a href="../">football-jp トップへ</a></p>
+    <p class="footer-links"><a href="../privacy.html">プライバシーポリシー</a></p>
+  </footer>
+</div>
+
+<script>
+(async () => {
+  // ---- データ取得 ----
+  let matches = [];
+  let broadcasts = {};
+  const bcAffiliateMap = new Map();
+  const bcInfo = new Map();
+  try {
+    const [mRes, bRes, bcsRes] = await Promise.all([
+      fetch('../data/wc2026/matches.json'),
+      fetch('../data/wc2026/broadcasts.json'),
+      fetch('/data/broadcasters.json')
+    ]);
+    const mData = await mRes.json();
+    matches = mData.matches || [];
+    const bData = await bRes.json();
+    broadcasts = bData.broadcasts || {};
+    const bcsData = await bcsRes.json();
+    if (bcsData.services) {
+      for (const [name, info] of Object.entries(bcsData.services)) {
+        if (info.affiliate_url) bcAffiliateMap.set(name, info.affiliate_url);
+        bcInfo.set(name, info);
+      }
+    }
+  } catch (e) {
+    document.getElementById('matchesList').innerHTML =
+      '<p class="schedule-empty">データの読み込みに失敗しました。ページを再読み込みしてください。</p>';
+    return;
+  }
+
+  // ---- 状態 ----
+  let activeTab = 'upcoming';
+  let filterFree = false;
+  let filterJapan = false;
+  let filterStage = '';
+
+  // ---- タブ切替 ----
+  document.querySelectorAll('.schedule-tabs button').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.schedule-tabs button').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      activeTab = btn.dataset.tab;
+      render();
+    });
+  });
+
+  // ---- フィルタ ----
+  document.getElementById('filterFree').addEventListener('change', e => {
+    filterFree = e.target.checked;
+    render();
+  });
+  document.getElementById('filterJapan').addEventListener('change', e => {
+    filterJapan = e.target.checked;
+    render();
+  });
+  document.getElementById('filterStage').addEventListener('change', e => {
+    filterStage = e.target.value;
+    render();
+  });
+
+  // ---- レンダリング ----
+  function render() {
+    const isFinished = activeTab === 'finished';
+    let list = matches.filter(m => {
+      if (isFinished) return m.status === 'FINISHED';
+      return m.status !== 'FINISHED';
+    });
+
+    if (filterFree) {
+      list = list.filter(m => broadcasts[String(m.id)] && broadcasts[String(m.id)].free);
+    }
+    if (filterJapan) {
+      list = list.filter(m => m.home_tla === 'JPN' || m.away_tla === 'JPN');
+    }
+    if (filterStage) {
+      list = list.filter(m => m.stage === filterStage);
+    }
+
+    if (!list.length) {
+      document.getElementById('matchesList').innerHTML =
+        '<p class="schedule-empty">該当する試合がありません</p>';
+      return;
+    }
+
+    // 日付グループ化
+    const groups = {};
+    list.forEach(m => {
+      const ko = new Date(m.kickoff_jst);
+      const dKey = ko.toLocaleDateString('ja-JP', { year: 'numeric', month: '2-digit', day: '2-digit', weekday: 'short' });
+      if (!groups[dKey]) groups[dKey] = [];
+      groups[dKey].push(m);
+    });
+
+    let html = '';
+    for (const [dateStr, dayMatches] of Object.entries(groups)) {
+      html += `<div class="schedule-date-header">${dateStr}</div>`;
+      dayMatches.forEach(m => { html += renderMatch(m); });
+    }
+    document.getElementById('matchesList').innerHTML = html;
+  }
+
+  function renderMatch(m) {
+    const ko = new Date(m.kickoff_jst);
+    const timeStr = ko.toLocaleTimeString('ja-JP', { hour: '2-digit', minute: '2-digit' });
+    const bc = broadcasts[String(m.id)];
+    const isJapan = m.home_tla === 'JPN' || m.away_tla === 'JPN';
+    const matchCls = isJapan ? 'wc-match japan-match' : 'wc-match';
+
+    const finished = m.status === 'FINISHED';
+    const score = m.score;
+    const homeScore = (finished && score) ? score.home : null;
+    const awayScore = (finished && score) ? score.away : null;
+    const homeWin = homeScore !== null && homeScore > awayScore;
+    const awayWin = awayScore !== null && awayScore > homeScore;
+
+    const homeScoreHtml = homeScore !== null
+      ? `<span class="wc-team-score has-score">${homeScore}</span>`
+      : `<span class="wc-team-score">—</span>`;
+    const awayScoreHtml = awayScore !== null
+      ? `<span class="wc-team-score has-score">${awayScore}</span>`
+      : `<span class="wc-team-score">—</span>`;
+
+    // 放送局タグ（bc-tag スタイル）
+    let badgesHtml = '';
+    if (bc && bc.broadcasters && bc.broadcasters.length) {
+      badgesHtml = `<div class="bc-tags-row">${renderBroadcasterTags(bc.broadcasters)}</div>`;
+    }
+
+    return `<div class="${matchCls}">
+  <div class="wc-match-top">
+    <div class="wc-kickoff">${timeStr}<small>JST</small></div>
+    <div class="wc-teams">
+      <div class="wc-team-row${homeWin ? ' winner' : ''}">
+        <span class="wc-team-flag">${m.home_flag || '🌐'}</span>
+        <div class="wc-team-mid">
+          <span class="wc-team-name">${escapeHtml(m.home_ja)}</span>
+          <span class="wc-team-tla">${escapeHtml(m.home_tla || '')}</span>
+        </div>
+        ${homeScoreHtml}
+      </div>
+      <div class="wc-team-row${awayWin ? ' winner' : ''}">
+        <span class="wc-team-flag">${m.away_flag || '🌐'}</span>
+        <div class="wc-team-mid">
+          <span class="wc-team-name">${escapeHtml(m.away_ja)}</span>
+          <span class="wc-team-tla">${escapeHtml(m.away_tla || '')}</span>
+        </div>
+        ${awayScoreHtml}
+      </div>
+    </div>
+  </div>
+  <div class="wc-tags">
+    ${m.group ? `<span class="wc-tag group">${escapeHtml(m.group.replace('GROUP_', 'G'))}</span>` : ''}
+    <span class="wc-tag stage">${stageJa(m.stage, m.matchday)}</span>
+    ${finished ? '<span class="wc-tag status-finished">終了</span>' : ''}
+    ${m.status === 'IN_PLAY' || m.status === 'PAUSED' ? '<span class="wc-tag status-live">LIVE</span>' : ''}
+    ${m.venue ? `<span class="wc-tag" style="color:var(--wc-text-sub,#8899bb);background:transparent;border-color:transparent;font-size:11px;">📍${escapeHtml(m.venue)}</span>` : ''}
+  </div>
+  ${badgesHtml}
+</div>`;
+  }
+
+  function renderBroadcasterTags(broadcasters) {
+    return broadcasters.map(name => {
+      const info = bcInfo.get(name);
+      const linkUrl = bcAffiliateMap.get(name) || (info && info.url) || null;
+      const cls = bcBrandClass(name);
+      let logoHtml;
+      if (info && info.logo) {
+        logoHtml = `<img class="bc-logo" src="/assets/broadcasters/${escapeHtml(info.logo)}" alt="" width="16" height="16" loading="lazy">`;
+      } else {
+        // SVGテキストロゴフォールバック（1〜2文字の局名略称）
+        const abbr = escapeHtml(name.slice(0, 2));
+        logoHtml = `<svg class="bc-logo" width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><rect width="16" height="16" rx="2" fill="rgba(255,255,255,0.2)"/><text x="8" y="11.5" font-family="Arial,sans-serif" font-size="7" font-weight="bold" fill="white" text-anchor="middle">${abbr}</text></svg>`;
+      }
+      const inner = `${logoHtml}${escapeHtml(name)}`;
+      if (linkUrl) {
+        return `<a class="bc-tag ${cls}" href="${escapeHtml(linkUrl)}" target="_blank" rel="noopener nofollow">${inner}</a>`;
+      } else {
+        return `<span class="bc-tag ${cls}">${inner}</span>`;
+      }
+    }).join('');
+  }
+
+  function bcBrandClass(name) {
+    if (name.includes('NHK総合')) return 'bc-nhk-so';
+    if (name.includes('NHK BS')) return 'bc-nhk-bs';
+    if (name.includes('日本テレビ')) return 'bc-ntv';
+    if (name.includes('フジテレビ')) return 'bc-fuji';
+    if (name.includes('DAZN')) return 'bc-dazn';
+    return 'bc-other';
+  }
+
+  function stageJa(stage, md) {
+    const map = {
+      'GROUP_STAGE':   `グループステージ${md ? ' 第' + md + '節' : ''}`,
+      'LAST_32':       '決勝T 1回戦',
+      'LAST_16':       '決勝T 2回戦',
+      'QUARTER_FINALS':'準々決勝',
+      'SEMI_FINALS':   '準決勝',
+      'THIRD_PLACE':   '3位決定戦',
+      'FINAL':         '決勝',
+    };
+    return map[stage] || stage;
+  }
+
+  function escapeHtml(s) {
+    return String(s || '').replace(/[&<>"']/g, c =>
+      ({ '&':'&amp;', '<':'&lt;', '>':'&gt;', '"':'&quot;', "'":'&#39;' }[c]));
+  }
+
+  // 初期レンダリング
+  render();
+})();
+</script>
+
+  <script src="/sw-register.js" defer></script>
+  <script src="/push-client.js" defer></script>
+  <script src="/push-ui.js" defer></script>
+  <script src="/search.js" defer></script>
+  <script src="/search-ui.js" defer></script>
+</body>
+</html>

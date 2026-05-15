@@ -78,9 +78,8 @@
 
   <section class="wc-section">
     <h2>📋 日本代表26名スカッド</h2>
-    <div class="wc-empty">
-      ※ 5月下旬〜6月上旬の正式発表後に掲載します。<br>
-      最新の招集情報は <a href="../" style="color:var(--wc-primary);">football-jp</a>（クラブ単位の試合情報）でも追えます。
+    <div id="squadSection">
+      <div class="wc-empty">スカッドデータを読み込み中…</div>
     </div>
   </section>
 
@@ -98,6 +97,88 @@
 </div>
 
 <script>
+// ===== 26名スカッド表示 =====
+(async () => {
+  const SQUAD_SLUGS = {
+    "鈴木 彩艶": "zion-suzuki",
+    "谷口 彰悟": "shogo-taniguchi",
+    "板倉 滉": "ko-itakura",
+    "渡辺 剛": "ko-watanabe",
+    "冨安 健洋": "takehiro-tomiyasu",
+    "伊藤 洋輝": "hiroki-ito",
+    "瀬古 歩夢": "ayumu-seko",
+    "菅原 由勢": "yukinari-sugawara",
+    "遠藤 航": "wataru-endo",
+    "伊東 純也": "junya-ito",
+    "鎌田 大地": "daichi-kamada",
+    "堂安 律": "ritsu-doan",
+    "田中 碧": "ao-tanaka",
+    "中村 敬斗": "keito-nakamura",
+    "佐野 海舟": "kaishu-sano",
+    "久保 建英": "takefusa-kubo",
+    "鈴木 唯人": "yuito-suzuki",
+    "小川 航基": "koki-ogawa",
+    "上田 綺世": "ayase-ueda",
+    "塩貝 健人": "kento-shiogai",
+    "後藤 啓介": "keisuke-goto",
+  };
+
+  const POS_LABEL = {
+    GK: { icon: "🥅", label: "GK" },
+    DF: { icon: "🛡️", label: "DF" },
+    MF: { icon: "⚙️", label: "MF" },
+    FW: { icon: "⚡", label: "FW" },
+  };
+  const POS_ORDER = ["GK", "DF", "MF", "FW"];
+
+  const container = document.getElementById('squadSection');
+  if (!container) return;
+
+  try {
+    const res = await fetch('../data/wc2026/squads.json');
+    const squadsData = await res.json();
+    const jpn = squadsData['JPN'];
+    if (!jpn || !jpn.players) throw new Error('JPN data not found');
+
+    // ポジション別にグループ化
+    const grouped = {};
+    POS_ORDER.forEach(p => { grouped[p] = []; });
+    jpn.players.forEach(player => {
+      if (grouped[player.pos]) grouped[player.pos].push(player);
+    });
+
+    let html = `<p style="font-size:12px; color:var(--c-text-sub); margin:0 0 12px;">${escapeHtml(jpn.as_of)}</p>`;
+
+    POS_ORDER.forEach(pos => {
+      const players = grouped[pos];
+      if (!players.length) return;
+      const { icon, label } = POS_LABEL[pos];
+      html += `<div class="squad-pos-group">`;
+      html += `<h3 class="squad-pos-heading">${icon} ${label}（${players.length}名）</h3>`;
+      html += `<div class="squad-cards">`;
+      players.forEach(p => {
+        const slug = SQUAD_SLUGS[p.name_ja];
+        const nameHtml = escapeHtml(p.name_ja);
+        const clubHtml = escapeHtml(p.club);
+        const inner = `<span class="squad-card-name">${nameHtml}</span><span class="squad-card-club">${clubHtml}</span>`;
+        if (slug) {
+          html += `<a href="/players/${escapeHtml(slug)}/" class="wc-squad-card">${inner}</a>`;
+        } else {
+          html += `<div class="wc-squad-card wc-squad-card--nolink">${inner}</div>`;
+        }
+      });
+      html += `</div></div>`;
+    });
+
+    html += `<p class="squad-note">※ 三笘薫・南野拓実は怪我のため選外。冨安健洋・遠藤航は怪我から間に合いました。</p>`;
+
+    container.innerHTML = html;
+  } catch(e) {
+    container.innerHTML = '<div class="wc-empty">スカッドデータの読み込みに失敗しました。</div>';
+  }
+})();
+
+// ===== 試合・順位表 =====
 (async () => {
   const matchesRes = await fetch('../data/wc2026/matches.json');
   const matches = (await matchesRes.json()).matches || [];
