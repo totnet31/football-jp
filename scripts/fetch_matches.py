@@ -226,6 +226,11 @@ def main():
     if preserved_old:
         print(f"[INFO] フェッチ窓外の過去データ {preserved_old}件 を保持しました（累積モード）。")
 
+    from utils import fix_finished_status
+    fixed = fix_finished_status(accumulated_matches)
+    if fixed:
+        print(f"[INFO] status='FINISHED' に補正: {fixed}件")
+
     output = {
         "updated": datetime.now(JST).isoformat(),
         "date_from": date_from,
