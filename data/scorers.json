@@ -1,5 +1,5 @@
 {
-  "updated": "2026-05-16T01:20:22.547521+09:00",
+  "updated": "2026-05-16T07:03:35.031162+09:00",
   "competitions": {
     "39": {
       "name_ja": "プレミアリーグ",
@@ -66,6 +66,18 @@
           "playedMatches": 34
         },
         {
+          "player_id": 4444,
+          "player_name": "Ollie Watkins",
+          "nationality": "England",
+          "team_id": 58,
+          "team_ja": "アストン・ビラ",
+          "team_crest": "https://crests.football-data.org/58.png",
+          "goals": 14,
+          "assists": 3,
+          "penalties": null,
+          "playedMatches": 36
+        },
+        {
           "player_id": 7839,
           "player_name": "Dominic Calvert-Lewin",
           "nationality": "England",
@@ -112,18 +124,6 @@
           "assists": null,
           "penalties": 2,
           "playedMatches": 36
-        },
-        {
-          "player_id": 4444,
-          "player_name": "Ollie Watkins",
-          "nationality": "England",
-          "team_id": 58,
-          "team_ja": "アストン・ビラ",
-          "team_crest": "https://crests.football-data.org/58.png",
-          "goals": 12,
-          "assists": 2,
-          "penalties": null,
-          "playedMatches": 35
         },
         {
           "player_id": 152454,
@@ -184,6 +184,18 @@
           "assists": 6,
           "penalties": null,
           "playedMatches": 34
+        },
+        {
+          "player_id": 82140,
+          "player_name": "Morgan Rogers",
+          "nationality": "England",
+          "team_id": 58,
+          "team_ja": "アストン・ビラ",
+          "team_crest": "https://crests.football-data.org/58.png",
+          "goals": 10,
+          "assists": 7,
+          "penalties": null,
+          "playedMatches": 37
         },
         {
           "player_id": 67893,
@@ -280,18 +292,6 @@
           "assists": 3,
           "penalties": 4,
           "playedMatches": 35
-        },
-        {
-          "player_id": 82140,
-          "player_name": "Morgan Rogers",
-          "nationality": "England",
-          "team_id": 58,
-          "team_ja": "アストン・ビラ",
-          "team_crest": "https://crests.football-data.org/58.png",
-          "goals": 9,
-          "assists": 6,
-          "penalties": null,
-          "playedMatches": 36
         },
         {
           "player_id": 30842,
@@ -399,7 +399,7 @@
           "goals": 7,
           "assists": 5,
           "penalties": null,
-          "playedMatches": 34
+          "playedMatches": 35
         },
         {
           "player_id": 3754,
@@ -411,7 +411,7 @@
           "goals": 7,
           "assists": 6,
           "penalties": 1,
-          "playedMatches": 27
+          "playedMatches": 28
         },
         {
           "player_id": 99813,
@@ -553,9 +553,9 @@
           "team_ja": "リヴァプール",
           "team_crest": "https://crests.football-data.org/64.png",
           "goals": 6,
-          "assists": 5,
+          "assists": 7,
           "penalties": null,
-          "playedMatches": 34
+          "playedMatches": 35
         },
         {
           "player_id": 31941,
@@ -567,7 +567,7 @@
           "goals": 6,
           "assists": 2,
           "penalties": null,
-          "playedMatches": 35
+          "playedMatches": 36
         },
         {
           "player_id": 8984,
