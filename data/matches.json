@@ -1,8 +1,8 @@
 {
-  "updated": "2026-05-16T07:02:12.501707+09:00",
+  "updated": "2026-05-16T15:39:49.511849+09:00",
   "date_from": "2026-05-09",
   "date_to": "2026-05-30",
-  "match_count": 349,
+  "match_count": 350,
   "_note": "累積保持モード：フェッチ窓外の過去試合データはそのまま保持される。",
   "matches": [
     {
@@ -12142,6 +12142,46 @@
       ]
     },
     {
+      "id": 557983,
+      "competition_id": 40,
+      "competition_ja": "チャンピオンシップ",
+      "competition_category": "league",
+      "competition_flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+      "kickoff_jst": "2026-05-23T10:00:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "PLAYOFFS",
+      "matchday": null,
+      "home_id": 322,
+      "home_ja": "ハル・シティ",
+      "home_en": "Hull City",
+      "home_crest": "https://crests.football-data.org/322.png",
+      "away_id": 340,
+      "away_ja": "サウサンプトン",
+      "away_en": "Southampton",
+      "away_crest": "https://crests.football-data.org/340.png",
+      "score": null,
+      "japanese_players": [
+        {
+          "name_ja": "平河悠",
+          "position": "FW/MF",
+          "side": "home"
+        },
+        {
+          "name_ja": "松木玖生",
+          "position": "FW/MF",
+          "side": "away"
+        }
+      ],
+      "broadcasters": [
+        {
+          "name": "DAZN",
+          "type": "exclusive",
+          "url": "https://www.dazn.com/ja-JP/",
+          "note": "〜2027-28"
+        }
+      ]
+    },
+    {
       "id": 544581,
       "competition_id": 140,
       "competition_ja": "ラ・リーガ",
@@ -13145,6 +13185,6 @@
       ]
     }
   ],
-  "updated_yt_highlights": "2026-05-16T07:05:53.127776+09:00",
-  "updated_uefa_secondary": "2026-05-16T07:06:23.757550+09:00"
+  "updated_yt_highlights": "2026-05-16T15:43:41.899869+09:00",
+  "updated_uefa_secondary": "2026-05-16T15:44:11.190790+09:00"
 }
