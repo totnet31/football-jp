@@ -1435,22 +1435,16 @@ footer a { color: var(--text-sub); }
   text-decoration: none;
   color: inherit;
   display: block;
-  width: 320px;
+  width: min(320px, 100%);
   flex: 0 0 auto;
-}
-@media (max-width: 480px) {
-  .player-card-link {
-    width: 100%;
-  }
 }
 .player-card {
   display: flex;
   align-items: flex-start;
   gap: 14px;
-  background: #fdf8f8;
-  border: 1px solid #f0e5e5;
-  border-left: 3px solid #dc2626;
-  border-radius: 6px;
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
   padding: 16px 18px;
   transition: box-shadow 0.15s, border-color 0.15s;
   cursor: pointer;
@@ -1458,8 +1452,7 @@ footer a { color: var(--text-sub); }
 }
 .player-card:hover {
   box-shadow: 0 2px 12px rgba(0,0,0,0.08);
-  border-color: #f0e5e5;
-  border-left-color: #dc2626;
+  border-color: #94a3b8;
 }
 .player-avatar {
   width: 44px;
@@ -1474,7 +1467,7 @@ footer a { color: var(--text-sub); }
   flex-shrink: 0;
 }
 .player-card-info {
-  flex: 1;
+  flex: 1 1 auto;
   min-width: 0;
 }
 .player-card-name-ja {
