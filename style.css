@@ -2100,8 +2100,10 @@ footer a { color: var(--text-sub); }
 }
 .column-article-header {
   margin-bottom: 24px;
-  padding-bottom: 20px;
+  padding: 0 0 20px;
   border-bottom: 1px solid #e5e7eb;
+  background: transparent;
+  color: inherit;
 }
 .column-article-meta {
   margin: 0 0 12px;
