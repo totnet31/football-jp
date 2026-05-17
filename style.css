@@ -2036,6 +2036,23 @@ footer a { color: var(--text-sub); }
   overflow: hidden;
   transition: box-shadow 0.15s, transform 0.15s;
 }
+.column-card-pinned {
+  border-color: #fbbf24;
+  background: #fffbeb;
+}
+.column-card-pinned:hover {
+  box-shadow: 0 4px 14px rgba(251,191,36,0.18);
+}
+.column-card-pin-badge {
+  display: inline-block;
+  background: #fbbf24;
+  color: #78350f;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 4px;
+  letter-spacing: 0.04em;
+}
 .column-card:hover {
   box-shadow: 0 4px 14px rgba(0,0,0,0.08);
   transform: translateY(-1px);

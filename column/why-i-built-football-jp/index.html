@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>なぜfootball-jpを作ったのか｜海外サッカーファンの3つの不満から生まれたサイト｜football-jp コラム</title>
+  <meta name="description" content="海外サッカーを観るたびに感じる「日本時間が書いていない」「配信局がわからない」「日本人選手の情報が散在」という3つの不満。それを自分で解決するために作ったのがfootball-jp。サイトの設計思想と運営方針をまとめた創設者ノート。">
+  <link rel="canonical" href="https://football-jp.com/column/why-i-built-football-jp/">
+  <link rel="alternate" hreflang="ja" href="https://football-jp.com/column/why-i-built-football-jp/">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://football-jp.com/column/why-i-built-football-jp/">
+  <meta property="og:title" content="なぜfootball-jpを作ったのか｜海外サッカーファンの3つの不満から生まれたサイト">
+  <meta property="og:description" content="海外サッカーを観るたびに感じる3つの不満を自分で解決するために作ったのがfootball-jp。サイトの設計思想と運営方針をまとめた創設者ノート。">
+  <meta property="og:site_name" content="football-jp">
+  <meta property="og:locale" content="ja_JP">
+  <meta property="article:published_time" content="2026-05-17T09:00:00+09:00">
+  <meta property="article:modified_time" content="2026-05-17T09:00:00+09:00">
+  <meta property="article:author" content="football-jp 編集部">
+  <meta property="article:section" content="サイト紹介">
+  <meta property="article:tag" content="football-jp">
+  <meta property="article:tag" content="海外サッカー">
+  <meta property="article:tag" content="個人開発">
+  <meta name="twitter:card" content="summary_large_image">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2651130635797183" crossorigin="anonymous"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-39G8CVXRW0"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-39G8CVXRW0');
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "なぜfootball-jpを作ったのか｜海外サッカーファンの3つの不満から生まれたサイト",
+  "description": "海外サッカーを観るたびに感じる3つの不満を自分で解決するために作ったのがfootball-jp。サイトの設計思想と運営方針をまとめた創設者ノート。",
+  "datePublished": "2026-05-17T09:00:00+09:00",
+  "dateModified": "2026-05-17T09:00:00+09:00",
+  "author": {
+    "@type": "Organization",
+    "name": "football-jp 編集部",
+    "url": "https://football-jp.com/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "football-jp",
+    "url": "https://football-jp.com/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://football-jp.com/assets/logos/logo-header.png"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://football-jp.com/column/why-i-built-football-jp/"
+  },
+  "inLanguage": "ja-JP",
+  "articleSection": "サイト紹介",
+  "keywords": "football-jp,海外サッカー,日本人選手,個人開発,サイト紹介,設計思想"
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://football-jp.com/"},
+    {"@type": "ListItem", "position": 2, "name": "コラム", "item": "https://football-jp.com/column/"},
+    {"@type": "ListItem", "position": 3, "name": "なぜfootball-jpを作ったのか", "item": "https://football-jp.com/column/why-i-built-football-jp/"}
+  ]
+}
+  </script>
+  <link rel="stylesheet" href="/style.css">
+  <link rel="icon" href="/favicon.ico">
+  <link rel="icon" type="image/png" sizes="48x48" href="/assets/logos/favicon-48.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/logos/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/logos/favicon-16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/logos/favicon-180.png">
+  <link rel="manifest" href="/manifest.json">
+  <meta name="theme-color" content="#0b1220">
+</head>
+<body data-view="column">
+  <header>
+    <h1 style="font-size:18px; margin:0; padding:12px 16px;"><a href="/" style="color:inherit; text-decoration:none;"><img src="/assets/logos/logo-header.png" alt="football-jp" class="header-logo" style="height:24px; vertical-align:middle;"> football-jp</a></h1>
+  </header>
+
+  <nav class="view-tabs">
+    <a class="view-tab" href="/" data-view="schedule">
+      <svg class="vt-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <circle cx="12" cy="12" r="9"/>
+        <path d="M12 7v5l3.5 2"/>
+      </svg>
+      <span>予定を見る</span>
+    </a>
+    <a class="view-tab" href="/results/" data-view="results">
+      <svg class="vt-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <circle cx="12" cy="12" r="9"/>
+        <path d="M8 12.5l3 3 5-6"/>
+      </svg>
+      <span>結果を見る</span>
+    </a>
+    <a class="view-tab" href="/calendar/" data-view="calendar">
+      <svg class="vt-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <rect x="3.5" y="5" width="17" height="15.5" rx="1.5"/>
+        <path d="M3.5 10h17"/>
+        <path d="M8 3v4M16 3v4"/>
+      </svg>
+      <span>カレンダー</span>
+    </a>
+    <a class="view-tab" href="/standings/" data-view="ranking">
+      <svg class="vt-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M4 20h16"/>
+        <path d="M7 20v-5"/>
+        <path d="M12 20v-9"/>
+        <path d="M17 20v-13"/>
+      </svg>
+      <span>順位</span>
+    </a>
+    <a class="view-tab" href="/leagues/" data-view="leagues">
+      <svg class="vt-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <circle cx="12" cy="12" r="9"/>
+        <path d="M12 3v4M12 17v4M3 12h4M17 12h4"/>
+        <circle cx="12" cy="12" r="3"/>
+      </svg>
+      <span>リーグ</span>
+    </a>
+    <a class="view-tab active" href="/column/" data-view="column">
+      <svg class="vt-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M4 5h16v14H4z"/>
+        <path d="M7 9h10M7 13h10M7 17h6"/>
+      </svg>
+      <span>コラム</span>
+    </a>
+  </nav>
+
+  <nav class="breadcrumb" aria-label="パンくずリスト">
+    <a href="/">ホーム</a> › <a href="/column/">コラム</a> › <span aria-current="page">なぜfootball-jpを作ったのか</span>
+  </nav>
+
+  <main>
+    <article class="column-article">
+      <header class="column-article-header">
+        <p class="column-article-meta">
+          <time datetime="2026-05-17">2026年5月17日</time>
+          <span class="column-article-tag">サイト紹介</span>
+          <span class="column-article-tag">創設者ノート</span>
+        </p>
+        <h1>なぜfootball-jpを作ったのか｜海外サッカーファンの3つの不満から生まれたサイト</h1>
+        <p class="column-article-lead">三笘薫がブライトンでスタメンを張り、久保建英がラ・リーガで輝き、上田綺世がフェイエノールトでゴールを量産する。これだけ日本人選手が欧州で活躍する時代に、「いつ・どこで・誰が観られるか」を調べるのが、なぜこんなに面倒なのか。その問いが、football-jpの出発点になった。サイトの設計思想と、運営しながら見えてきたものを整理する。</p>
+      </header>
+
+      <nav class="column-toc" aria-label="目次">
+        <p class="column-toc-title">📑 目次</p>
+        <ol class="column-toc-list">
+          <li><a href="#problems">海外サッカーを観るときの3つの不満</a></li>
+          <li><a href="#solution">「自分が使いたいツールを作る」という選択</a></li>
+          <li><a href="#features">football-jpが解決した3つの課題</a></li>
+          <li><a href="#users">このサイトが想定するユーザー像</a></li>
+          <li><a href="#data">データ整合性を保つ仕組み</a></li>
+          <li><a href="#worldcup">W杯2026に向けた強化方針</a></li>
+          <li><a href="#related">関連コラム</a></li>
+        </ol>
+      </nav>
+
+      <section id="problems">
+        <h2>海外サッカーを観るときの3つの不満</h2>
+        <p>football-jpを作る前、海外サッカーを追いかけるたびに感じていた共通の不満が3つあった。これは個人の感想ではなく、SNSや友人との会話でも繰り返し聞いてきた、海外サッカーファンの「あるある」だ。</p>
+        <h3>不満1：日本時間がどこにも書いていない</h3>
+        <p>海外リーグの公式サイトは現地時間表記が基本。プレミアリーグの「キックオフ 15:00」がイギリス時間なら、日本では翌日深夜1時。冬時間と夏時間の切り替えもあり、毎回手計算するのは地味なストレスだった。スマホで試合直前に「あれ、今何時から？」と検索するファンは少なくないはずだ。</p>
+        <h3>不満2：どこで配信されるのかが直感的にわからない</h3>
+        <p>U-NEXT、DAZN、WOWOW、ABEMA──選択肢が増えるほど、「この試合はどのサービス？」という疑問が増える。リーグ単位の独占契約は把握しやすいが、カップ戦・親善試合・代表戦になると配信が分散する。試合ごとに配信局を明示してくれるサイトは案外少なかった。</p>
+        <h3>不満3：日本人選手の情報がクラブごとに散在</h3>
+        <p>三笘薫はブライトン公式、遠藤航はリバプール公式、伊東純也はヘンク公式──「今シーズン、海外組の誰がどの数字を出しているか」を横断比較するには、68名分のクラブページを手動で回るしかなかった。日本人選手だけを切り出した一覧が存在しない、というシンプルな空白があった。</p>
+      </section>
+
+      <section id="solution">
+        <h2>「自分が使いたいツールを作る」という選択</h2>
+        <p>既存サービスへの不満を並べ続けても何も変わらない。ならば自分で作ってしまえばいい──それがfootball-jpの出発点だ。やることは決まっていた。<strong>日本人選手に絞る・日本時間で表記する・配信局を試合ごとに明示する</strong>。この3つを満たすサイトを作れば、まず自分が日々使いたいものになる。</p>
+        <p>個人開発である以上、大手メディアと同じ網羅性は出せない。だからこそ「68名の海外組」「日本時間」「配信局」という3軸に意図的に絞り込んだ。スコープを限定することで、データ更新の質も維持しやすくなる。</p>
+      </section>
+
+      <section id="features">
+        <h2>football-jpが解決した3つの課題</h2>
+        <p>サイトの主要機能は、上記の3つの不満に1対1で対応している。</p>
+        <ul>
+          <li><strong>日本時間で表示</strong>：すべての試合キックオフをJST（UTC+9）で統一表示。冬時間／夏時間の切り替えも自動処理。</li>
+          <li><strong>配信局を試合ごとに明示</strong>：各試合カードにU-NEXT / DAZN / WOWOW / ABEMAなどのバッジを付与。<a href="/column/broadcast-guide-2025-26/">配信局ガイドの詳細記事</a>も併設。</li>
+          <li><strong>日本人選手の横断データベース</strong>：<a href="/players/">海外組68名の一覧</a>から、所属クラブ・出場記録・ゴール数を一画面で比較できる。</li>
+        </ul>
+        <p>結果として、試合前に1分かけてアプリやサイトを巡回していた手間が、5秒で済むようになった。「自分のための時短ツール」が、同じ不満を抱える人にも届く可能性が出てきたのが想定外の発見だった。</p>
+      </section>
+
+      <section id="users">
+        <h2>このサイトが想定するユーザー像</h2>
+        <p>football-jpを設計する段階で、具体的に3つのユーザー像を頭に置いていた。</p>
+        <h3>1. 夜中に試合を観るファン</h3>
+        <p>プレミアリーグは深夜〜早朝、ブンデスリーガは22時頃が主戦場。仕事終わりにスマホで「今夜の試合、どこで観られる？」と検索する人。そのファンが5秒で答えにたどり着けることを目標にした。</p>
+        <h3>2. 複数選手を同時に追いかけるファン</h3>
+        <p>三笘も好きだし遠藤も応援している──しかし所属リーグが違うため、別々の情報源を巡回するのは面倒。一画面で複数選手の試合スケジュールを並列で確認できることに価値がある。</p>
+        <h3>3. W杯2026に向けて日本代表を学び直したい入門者層</h3>
+        <p>カタール大会以降、にわかファンが増えた。「日本代表のクラブ別所属」「対戦相手のレベル感」を入門レベルから知りたい人にとって、football-jpはエントリーポイントとして機能できる。</p>
+      </section>
+
+      <section id="data">
+        <h2>データ整合性を保つ仕組み</h2>
+        <p>個人開発で最も骨が折れたのが、データの整合性維持だ。選手は移籍する、配信権契約は年度で更新される、試合日程は延期・変更される。これらを正確に追跡しながら表示崩れを起こさない仕組みが必要だった。</p>
+        <p>特にWikipediaのクラブページからシーズン成績を抽出する処理は、ページごとにフォーマットが異なるため複数パターンへの対応が必要になった。「Efsテンプレート形式」と「wikitable形式」が混在するクラブもあり、両方を解釈できるパーサーをゼロから書いた。</p>
+        <p>更新の自動化はGitHub Actionsで毎朝7時に動かしている。試合データ・順位表・スコアラー・YouTube公式ハイライトを並列で取得し、Cloudflare Pagesに自動デプロイする構成だ。これにより、サイトを開けば常にその日の最新情報が反映される状態を維持している。</p>
+      </section>
+
+      <section id="worldcup">
+        <h2>W杯2026に向けた強化方針</h2>
+        <p>2026年6月開催のW杯は、48か国・104試合の史上最大規模。日本代表は<a href="/worldcup/japan.html">グループF（オランダ・スウェーデン・チュニジア）</a>に入っている。この大会に向けて、football-jpは以下のコンテンツ強化を進めている。</p>
+        <ul>
+          <li><a href="/worldcup/">W杯2026特集ページ</a>：48か国全プロフィール・スカッド・順位表・決勝トーナメント表</li>
+          <li><a href="/worldcup/history/">歴代W杯アーカイブ</a>：1930年から2022年までの全大会成績・得点王・優勝国</li>
+          <li>日本代表26名の所属クラブ・直近スタッツの統合ビュー（更新中）</li>
+        </ul>
+        <p>「海外サッカーをもっと気軽に楽しめるように」というシンプルな思いを軸に、機能の追加と精度の向上を継続していく。</p>
+      </section>
+
+      <section id="related" class="column-article-related">
+        <h2>関連コラム</h2>
+        <p>このコラムは「コラム」シリーズの紹介記事です。データジャーナリズム視点で書かれた個別記事は<a href="/column/">コラム一覧</a>からご覧いただけます。海外組68名の最新動向、W杯2026の対戦相手分析、配信局ガイドなどを毎週更新中です。</p>
+      </section>
+
+      <footer class="column-article-footer">
+        <p class="column-article-footer-meta">
+          公開：<time datetime="2026-05-17">2026-05-17</time>　／
+          最終更新：<time datetime="2026-05-17">2026-05-17</time>　／
+          編集：football-jp 編集部
+        </p>
+        <p class="column-article-footer-source">
+          football-jp は個人運営の海外サッカー日本人選手データベースサイトです
+        </p>
+      </footer>
+    </article>
+  </main>
+
+  <footer>
+    <p>データ提供: <a href="https://www.football-data.org/" target="_blank" rel="noopener">football-data.org</a></p>
+    <nav class="footer-nav">
+      <a href="/players/">日本人選手一覧</a>
+      <a href="/clubs/">クラブ一覧</a>
+      <a href="/column/">コラム一覧</a>
+    </nav>
+    <p class="footer-legal">
+      <a href="/privacy.html">プライバシーポリシー</a>
+      &nbsp;|&nbsp;
+      <a href="/en/">🇺🇸 English</a>
+    </p>
+  </footer>
+</body>
+</html>
