@@ -1446,17 +1446,20 @@ footer a { color: var(--text-sub); }
 .player-card {
   display: flex;
   align-items: flex-start;
-  gap: 12px;
-  background: #fff;
-  border: 1px solid #e5e7eb;
-  border-radius: 10px;
-  padding: 12px;
+  gap: 14px;
+  background: #fdf8f8;
+  border: 1px solid #f0e5e5;
+  border-left: 3px solid #dc2626;
+  border-radius: 6px;
+  padding: 16px 18px;
   transition: box-shadow 0.15s, border-color 0.15s;
   cursor: pointer;
+  min-height: 76px;
 }
 .player-card:hover {
-  box-shadow: 0 2px 12px rgba(0,0,0,0.1);
-  border-color: #38bdf8;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+  border-color: #f0e5e5;
+  border-left-color: #dc2626;
 }
 .player-avatar {
   width: 44px;
