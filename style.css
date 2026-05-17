@@ -2141,6 +2141,53 @@ footer a { color: var(--text-sub); }
 }
 .column-article section {
   margin-bottom: 28px;
+  scroll-margin-top: 16px;
+}
+
+/* 目次（ToC） */
+.column-toc {
+  background: #f8f9fa;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 16px 20px;
+  margin: 0 0 28px;
+}
+.column-toc-title {
+  margin: 0 0 10px;
+  font-size: 14px;
+  font-weight: 700;
+  color: #0b1220;
+  letter-spacing: 0.02em;
+}
+.column-toc-list {
+  margin: 0;
+  padding-left: 24px;
+  counter-reset: column-toc;
+  list-style: none;
+}
+.column-toc-list > li {
+  position: relative;
+  margin: 6px 0;
+  font-size: 14px;
+  line-height: 1.6;
+  counter-increment: column-toc;
+}
+.column-toc-list > li::before {
+  content: counter(column-toc) ".";
+  position: absolute;
+  left: -24px;
+  color: #4338ca;
+  font-weight: 700;
+  font-size: 13px;
+}
+.column-toc-list a {
+  color: #333;
+  text-decoration: none;
+  border-bottom: 1px dotted #cbd5e1;
+}
+.column-toc-list a:hover {
+  color: #4338ca;
+  border-bottom-color: #4338ca;
 }
 .column-article h2 {
   margin: 28px 0 14px;
