@@ -1357,6 +1357,7 @@ footer a { color: var(--text-sub); }
   align-items: center;
   gap: 16px;
   max-width: 800px;
+  margin: 0 auto;
 }
 .league-flag-big {
   font-size: 48px;
@@ -1387,6 +1388,8 @@ footer a { color: var(--text-sub); }
 .league-section {
   padding: 18px 16px;
   border-bottom: 1px solid #e5e7eb;
+  max-width: 800px;
+  margin: 0 auto;
 }
 .section-title {
   font-size: 16px;
@@ -1423,29 +1426,33 @@ footer a { color: var(--text-sub); }
 
 /* 選手カードグリッド */
 .player-cards-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
   gap: 10px;
 }
 .player-card-link {
   text-decoration: none;
   color: inherit;
   display: block;
+  width: min(320px, 100%);
+  flex: 0 0 auto;
 }
 .player-card {
   display: flex;
   align-items: flex-start;
-  gap: 12px;
+  gap: 14px;
   background: #fff;
   border: 1px solid #e5e7eb;
-  border-radius: 10px;
-  padding: 12px;
+  border-radius: 8px;
+  padding: 16px 18px;
   transition: box-shadow 0.15s, border-color 0.15s;
   cursor: pointer;
+  min-height: 76px;
 }
 .player-card:hover {
-  box-shadow: 0 2px 12px rgba(0,0,0,0.1);
-  border-color: #38bdf8;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+  border-color: #94a3b8;
 }
 .player-avatar {
   width: 44px;
@@ -1460,7 +1467,7 @@ footer a { color: var(--text-sub); }
   flex-shrink: 0;
 }
 .player-card-info {
-  flex: 1;
+  flex: 1 1 auto;
   min-width: 0;
 }
 .player-card-name-ja {
