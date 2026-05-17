@@ -1,5 +1,5 @@
 {
-  "updated": "2026-05-17T07:02:22.278529+09:00",
+  "updated": "2026-05-17T16:44:36.432349+09:00",
   "date_from": "2026-05-10",
   "date_to": "2026-05-31",
   "match_count": 350,
@@ -10481,7 +10481,7 @@
       "away_crest": "https://crests.football-data.org/10340.png",
       "score": {
         "home": 0,
-        "away": 1
+        "away": 0
       },
       "japanese_players": [],
       "broadcasters": []
@@ -10555,7 +10555,7 @@
       "away_en": "Rio Ave",
       "away_crest": "https://crests.football-data.org/496.png",
       "score": {
-        "home": 2,
+        "home": 1,
         "away": 1
       },
       "japanese_players": [],
@@ -10670,7 +10670,16 @@
           "side": "away"
         }
       ],
-      "broadcasters": []
+      "broadcasters": [],
+      "highlights": [
+        {
+          "broadcaster": "DAZN",
+          "video_id": "VUefDWYbJpQ",
+          "url": "https://youtu.be/VUefDWYbJpQ",
+          "title": "【今季限りでの退団を発表の守田英正がビューティフルアシストで“有終の美”｜スポルティング×ジウ・ヴィセンテ｜ハイライト】ポルトガルリーグ第34節｜2025-26シーズン",
+          "yt_published": "2026-05-16"
+        }
+      ]
     },
     {
       "id": 546001,
@@ -13257,6 +13266,6 @@
       ]
     }
   ],
-  "updated_yt_highlights": "2026-05-17T07:06:06.915437+09:00",
-  "updated_uefa_secondary": "2026-05-17T07:06:34.950251+09:00"
+  "updated_yt_highlights": "2026-05-17T16:48:25.100550+09:00",
+  "updated_uefa_secondary": "2026-05-17T16:48:53.448636+09:00"
 }
