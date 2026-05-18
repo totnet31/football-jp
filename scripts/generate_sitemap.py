@@ -19,6 +19,7 @@ REPO_ROOT = Path(__file__).parent.parent
 PROFILES_JSON = REPO_ROOT / "data" / "wc2026" / "country_profiles.json"
 PLAYERS_JSON = REPO_ROOT / "data" / "players.json"
 OUTPUT_FILE = REPO_ROOT / "sitemap.xml"
+COLUMN_DIR = REPO_ROOT / "column"
 
 BASE_URL = "https://football-jp.com"
 
@@ -35,7 +36,11 @@ def make_slug(en: str) -> str:
     s = en.lower()
     s = s.replace("'", "")
     s = s.replace(".", "")
-    s = s.replace("ç", "c").replace("ã", "a").replace("é", "e").replace("ñ", "n")
+    # ウムラウト・特殊文字の変換（ü → u などクラブ名対応を追加）
+    s = (s.replace("ü", "u").replace("ö", "o").replace("ä", "a")
+          .replace("ç", "c").replace("ã", "a").replace("é", "e")
+          .replace("ñ", "n").replace("ó", "o").replace("á", "a")
+          .replace("í", "i").replace("ú", "u"))
     s = re.sub(r"[^a-z0-9]+", "-", s)
     s = s.strip("-")
     return s
@@ -51,6 +56,9 @@ STATIC_URLS = [
     ("/calendar/",                  "0.8", "daily"),
     ("/standings/",                 "0.8", "daily"),
     ("/leagues/",                   "0.8", "weekly"),
+    ("/players/",                   "0.8", "weekly"),
+    ("/clubs/",                     "0.7", "weekly"),
+    ("/column/",                    "0.8", "weekly"),
     ("/privacy.html",               "0.3", "yearly"),
     ("/worldcup/",                  "0.9", "daily"),
     ("/worldcup/japan.html",        "0.9", "daily"),
@@ -59,7 +67,22 @@ STATIC_URLS = [
     ("/worldcup/rules.html",        "0.5", "monthly"),
     ("/worldcup/countries.html",    "0.7", "weekly"),
     ("/worldcup/history.html",      "0.8", "monthly"),
-    # W杯歴代詳細ページ（日本出場7大会）
+    # W杯歴代詳細ページ（全大会 1930〜2022）
+    ("/worldcup/history/1930/",     "0.6", "monthly"),
+    ("/worldcup/history/1934/",     "0.6", "monthly"),
+    ("/worldcup/history/1938/",     "0.6", "monthly"),
+    ("/worldcup/history/1950/",     "0.6", "monthly"),
+    ("/worldcup/history/1954/",     "0.6", "monthly"),
+    ("/worldcup/history/1958/",     "0.6", "monthly"),
+    ("/worldcup/history/1962/",     "0.6", "monthly"),
+    ("/worldcup/history/1966/",     "0.6", "monthly"),
+    ("/worldcup/history/1970/",     "0.6", "monthly"),
+    ("/worldcup/history/1974/",     "0.6", "monthly"),
+    ("/worldcup/history/1978/",     "0.6", "monthly"),
+    ("/worldcup/history/1982/",     "0.6", "monthly"),
+    ("/worldcup/history/1986/",     "0.6", "monthly"),
+    ("/worldcup/history/1990/",     "0.6", "monthly"),
+    ("/worldcup/history/1994/",     "0.6", "monthly"),
     ("/worldcup/history/1998/",     "0.7", "monthly"),
     ("/worldcup/history/2002/",     "0.7", "monthly"),
     ("/worldcup/history/2006/",     "0.7", "monthly"),
@@ -75,7 +98,22 @@ STATIC_URLS = [
     ("/en/players/",                "0.8", "weekly"),
     ("/en/clubs/",                  "0.7", "weekly"),
     ("/en/leagues/",                "0.7", "weekly"),
-    # English W杯歴代詳細ページ
+    # English W杯歴代詳細ページ（全大会 1930〜2022）
+    ("/en/worldcup/history/1930/",  "0.5", "monthly"),
+    ("/en/worldcup/history/1934/",  "0.5", "monthly"),
+    ("/en/worldcup/history/1938/",  "0.5", "monthly"),
+    ("/en/worldcup/history/1950/",  "0.5", "monthly"),
+    ("/en/worldcup/history/1954/",  "0.5", "monthly"),
+    ("/en/worldcup/history/1958/",  "0.5", "monthly"),
+    ("/en/worldcup/history/1962/",  "0.5", "monthly"),
+    ("/en/worldcup/history/1966/",  "0.5", "monthly"),
+    ("/en/worldcup/history/1970/",  "0.5", "monthly"),
+    ("/en/worldcup/history/1974/",  "0.5", "monthly"),
+    ("/en/worldcup/history/1978/",  "0.5", "monthly"),
+    ("/en/worldcup/history/1982/",  "0.5", "monthly"),
+    ("/en/worldcup/history/1986/",  "0.5", "monthly"),
+    ("/en/worldcup/history/1990/",  "0.5", "monthly"),
+    ("/en/worldcup/history/1994/",  "0.5", "monthly"),
     ("/en/worldcup/history/1998/",  "0.6", "monthly"),
     ("/en/worldcup/history/2002/",  "0.6", "monthly"),
     ("/en/worldcup/history/2006/",  "0.6", "monthly"),
@@ -185,6 +223,13 @@ def build_sitemap() -> str:
 
     en_league_urls = [(f"/en{path}", "0.6", "weekly") for path, _, _ in league_urls]
 
+    # column/ 配下を動的スキャン
+    column_urls = []
+    if COLUMN_DIR.exists():
+        for d in sorted(COLUMN_DIR.iterdir()):
+            if d.is_dir() and (d / "index.html").exists():
+                column_urls.append((f"/column/{d.name}/", "0.7", "weekly"))
+
     all_urls = (
         STATIC_URLS
         + sorted(country_urls, key=lambda x: x[0])
@@ -194,6 +239,7 @@ def build_sitemap() -> str:
         + sorted(en_player_urls, key=lambda x: x[0])
         + sorted(en_club_urls, key=lambda x: x[0])
         + sorted(en_league_urls, key=lambda x: x[0])
+        + column_urls
     )
 
     # XML 生成
