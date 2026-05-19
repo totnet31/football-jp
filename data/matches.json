@@ -1,5 +1,5 @@
 {
-  "updated": "2026-05-19T19:48:41.186543+09:00",
+  "updated": "2026-05-19T23:06:56.313112+09:00",
   "date_from": "2026-05-12",
   "date_to": "2026-06-02",
   "match_count": 350,
@@ -10808,7 +10808,7 @@
       "away_crest": "https://crests.football-data.org/112.png",
       "score": {
         "home": 1,
-        "away": 1
+        "away": 0
       },
       "japanese_players": [
         {
@@ -13028,35 +13028,6 @@
       ]
     },
     {
-      "id": 537188,
-      "competition_id": 135,
-      "competition_ja": "セリエA",
-      "competition_category": "league",
-      "competition_flag": "🇮🇹",
-      "kickoff_jst": "2026-05-24T22:00:00+09:00",
-      "status": "TIMED",
-      "stage": "REGULAR_SEASON",
-      "matchday": 38,
-      "home_id": 586,
-      "home_ja": "トリノ",
-      "home_en": "Torino",
-      "home_crest": "https://crests.football-data.org/586.png",
-      "away_id": 109,
-      "away_ja": "ユヴェントス",
-      "away_en": "Juventus",
-      "away_crest": "https://crests.football-data.org/109.png",
-      "score": null,
-      "japanese_players": [],
-      "broadcasters": [
-        {
-          "name": "DAZN",
-          "type": "exclusive",
-          "url": "https://www.dazn.com/ja-JP/",
-          "note": "〜2026-27"
-        }
-      ]
-    },
-    {
       "id": 537191,
       "competition_id": 135,
       "competition_ja": "セリエA",
@@ -13470,6 +13441,35 @@
       ]
     },
     {
+      "id": 537188,
+      "competition_id": 135,
+      "competition_ja": "セリエA",
+      "competition_category": "league",
+      "competition_flag": "🇮🇹",
+      "kickoff_jst": "2026-05-25T03:45:00+09:00",
+      "status": "TIMED",
+      "stage": "REGULAR_SEASON",
+      "matchday": 38,
+      "home_id": 586,
+      "home_ja": "トリノ",
+      "home_en": "Torino",
+      "home_crest": "https://crests.football-data.org/586.png",
+      "away_id": 109,
+      "away_ja": "ユヴェントス",
+      "away_en": "Juventus",
+      "away_crest": "https://crests.football-data.org/109.png",
+      "score": null,
+      "japanese_players": [],
+      "broadcasters": [
+        {
+          "name": "DAZN",
+          "type": "exclusive",
+          "url": "https://www.dazn.com/ja-JP/",
+          "note": "〜2026-27"
+        }
+      ]
+    },
+    {
       "id": 537189,
       "competition_id": 135,
       "competition_ja": "セリエA",
@@ -13626,6 +13626,6 @@
       ]
     }
   ],
-  "updated_yt_highlights": "2026-05-19T19:52:26.691447+09:00",
-  "updated_uefa_secondary": "2026-05-19T19:52:54.958759+09:00"
+  "updated_yt_highlights": "2026-05-19T23:10:42.658611+09:00",
+  "updated_uefa_secondary": "2026-05-19T23:11:08.808480+09:00"
 }
