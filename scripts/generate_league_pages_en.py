@@ -119,7 +119,7 @@ def common_footer_en() -> str:
       <a href="/en/leagues/">Leagues</a>
     </nav>
     <p>
-      <a href="/privacy.html">Privacy Policy</a>
+      <a href="/privacy">Privacy Policy</a>
       &nbsp;|&nbsp;
       <a href="/">🇯🇵 日本語</a>
     </p>

@@ -1451,7 +1451,7 @@ def build_player_page(player: dict, slug: str, scorer_stats: dict,
       <a href="/">football-jp トップへ</a> |
       <a href="/players/">選手一覧</a> |
       <a href="/clubs/">クラブ一覧</a> |
-      <a href="/privacy.html">プライバシーポリシー</a>
+      <a href="/privacy">プライバシーポリシー</a>
     </p>
   </footer>
 </div>
@@ -1773,7 +1773,7 @@ def build_players_index(players: list, slug_map: dict) -> str:
     <p class="footer-links">
       <a href="/">football-jp トップへ</a> |
       <a href="/clubs/">クラブ一覧（41）</a> |
-      <a href="/privacy.html">プライバシーポリシー</a>
+      <a href="/privacy">プライバシーポリシー</a>
     </p>
   </footer>
 </div>

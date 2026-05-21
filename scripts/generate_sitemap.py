@@ -59,7 +59,7 @@ STATIC_URLS = [
     ("/players/",                   "0.8", "weekly"),
     ("/clubs/",                     "0.7", "weekly"),
     ("/column/",                    "0.8", "weekly"),
-    ("/privacy.html",               "0.3", "yearly"),
+    ("/privacy",               "0.3", "yearly"),
     ("/worldcup/",                  "0.9", "daily"),
     ("/worldcup/japan.html",        "0.9", "daily"),
     ("/worldcup/groups.html",       "0.7", "weekly"),

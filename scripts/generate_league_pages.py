@@ -337,7 +337,7 @@ def common_footer_ja() -> str:
       <a href="/leagues/">リーグ一覧</a>
     </nav>
     <p>
-      <a href="/privacy.html">プライバシーポリシー</a>
+      <a href="/privacy">プライバシーポリシー</a>
       &nbsp;|&nbsp;
       <a href="/en/">🇺🇸 English</a>
     </p>

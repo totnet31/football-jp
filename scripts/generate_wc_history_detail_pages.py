@@ -676,7 +676,7 @@ def generate_html_ja(year, data, extra):
   <footer class="wc-footer">
     <p>データ出典: Wikipedia / FIFA 公式記録</p>
     <p><a href="../../history.html">歴代W杯一覧へ戻る</a> / <a href="../../">W杯トップへ</a> / <a href="../../../">football-jp トップへ</a></p>
-    <p class="footer-links"><a href="../../../privacy.html">プライバシーポリシー</a></p>
+    <p class="footer-links"><a href="../../../privacy">プライバシーポリシー</a></p>
   </footer>
 </div>
 <script>
@@ -983,7 +983,7 @@ def generate_html_en(year, data, extra):
   <footer class="wc-footer">
     <p>Data source: Wikipedia / FIFA official records</p>
     <p><a href="../../../../worldcup/history.html">Back to History</a> / <a href="../../../../">football-jp Top</a></p>
-    <p><a href="../../../../privacy.html">Privacy Policy</a></p>
+    <p><a href="../../../../privacy">Privacy Policy</a></p>
   </footer>
 </div>
 </body>
@@ -1183,7 +1183,7 @@ def generate_html_ja_phase_b(year, data, extra):
   <footer class="wc-footer">
     <p>データ出典: Wikipedia / FIFA 公式記録</p>
     <p><a href="../../history.html">歴代W杯一覧へ戻る</a> / <a href="../../">W杯トップへ</a> / <a href="../../../">football-jp トップへ</a></p>
-    <p class="footer-links"><a href="../../../privacy.html">プライバシーポリシー</a></p>
+    <p class="footer-links"><a href="../../../privacy">プライバシーポリシー</a></p>
   </footer>
 </div>
 <script>
@@ -1426,7 +1426,7 @@ def generate_html_en_phase_b(year, data, extra):
   <footer class="wc-footer">
     <p>Data source: Wikipedia / FIFA official records</p>
     <p><a href="../../../../worldcup/history.html">Back to History</a> / <a href="../../../../">football-jp Top</a></p>
-    <p><a href="../../../../privacy.html">Privacy Policy</a></p>
+    <p><a href="../../../../privacy">Privacy Policy</a></p>
   </footer>
 </div>
 </body>

@@ -1276,7 +1276,7 @@ def build_club_page(club_info: dict, slug: str, standing: dict,
       <a href="/">football-jp トップへ</a> |
       <a href="/players/">選手一覧</a> |
       <a href="/clubs/">クラブ一覧</a> |
-      <a href="/privacy.html">プライバシーポリシー</a>
+      <a href="/privacy">プライバシーポリシー</a>
     </p>
   </footer>
 </div>
@@ -1527,7 +1527,7 @@ def build_clubs_index(clubs: dict, club_crest_map: dict) -> str:
     <p class="footer-links">
       <a href="/">football-jp トップへ</a> |
       <a href="/players/">日本人選手一覧（68名）</a> |
-      <a href="/privacy.html">プライバシーポリシー</a>
+      <a href="/privacy">プライバシーポリシー</a>
     </p>
   </footer>
 </div>

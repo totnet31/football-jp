@@ -539,7 +539,7 @@ def build_ja_page(tournaments_data):
   <footer class="wc-footer">
     <p>データ出典: Wikipedia / FIFA公式記録（2022年大会終了時点）</p>
     <p><a href="../../">歴史と記録トップへ</a> ／ <a href="../../../">football-jp トップへ</a></p>
-    <p class="footer-links"><a href="../../../privacy.html">プライバシーポリシー</a></p>
+    <p class="footer-links"><a href="../../../privacy">プライバシーポリシー</a></p>
   </footer>
 </div>
 
@@ -775,7 +775,7 @@ def build_en_page(tournaments_data):
   <footer class="wc-footer">
     <p>Data source: Wikipedia / FIFA official records (as of 2022 World Cup)</p>
     <p><a href="../">History &amp; Records</a> / <a href="../../../../">football-jp Top</a></p>
-    <p class="footer-links"><a href="../../../../privacy.html">Privacy Policy</a></p>
+    <p class="footer-links"><a href="../../../../privacy">Privacy Policy</a></p>
   </footer>
 </div>
 

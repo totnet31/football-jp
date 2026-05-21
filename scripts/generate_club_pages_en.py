@@ -985,7 +985,7 @@ def build_club_page_en(club_info: dict, slug: str, standing: dict,
       <a href="/en/">football-jp (English)</a> |
       <a href="/en/players/">Players</a> |
       <a href="/en/clubs/">Clubs</a> |
-      <a href="/privacy.html">Privacy Policy</a> |
+      <a href="/privacy">Privacy Policy</a> |
       <a href="{esc(ja_url)}">🇯🇵 Japanese</a>
     </p>
   </footer>
