@@ -1,5 +1,5 @@
 {
-  "updated": "2026-05-19T23:08:19.459137+09:00",
+  "updated": "2026-05-21T07:02:52.947679+09:00",
   "competitions": {
     "39": {
       "name_ja": "プレミアリーグ",
@@ -12,10 +12,10 @@
           "team_id": 65,
           "team_ja": "マンチェスター・シティ",
           "team_crest": "https://crests.football-data.org/65.png",
-          "goals": 26,
+          "goals": 27,
           "assists": 8,
           "penalties": 3,
-          "playedMatches": 35
+          "playedMatches": 36
         },
         {
           "player_id": 175994,
@@ -39,7 +39,7 @@
           "goals": 16,
           "assists": 4,
           "penalties": 1,
-          "playedMatches": 35
+          "playedMatches": 36
         },
         {
           "player_id": 103125,
@@ -120,10 +120,10 @@
           "team_id": 1044,
           "team_ja": "ボーンマス",
           "team_crest": "https://crests.football-data.org/bournemouth.png",
-          "goals": 12,
+          "goals": 13,
           "assists": null,
           "penalties": 2,
-          "playedMatches": 36
+          "playedMatches": 37
         },
         {
           "player_id": 152454,
@@ -136,6 +136,18 @@
           "assists": 4,
           "penalties": null,
           "playedMatches": 29
+        },
+        {
+          "player_id": 8133,
+          "player_name": "Richarlison",
+          "nationality": "Brazil",
+          "team_id": 73,
+          "team_ja": "トッテナム",
+          "team_crest": "https://crests.football-data.org/73.png",
+          "goals": 11,
+          "assists": 4,
+          "penalties": null,
+          "playedMatches": 32
         },
         {
           "player_id": 641,
@@ -162,16 +174,16 @@
           "playedMatches": 32
         },
         {
-          "player_id": 8133,
-          "player_name": "Richarlison",
-          "nationality": "Brazil",
-          "team_id": 73,
-          "team_ja": "トッテナム",
-          "team_crest": "https://crests.football-data.org/73.png",
+          "player_id": 102603,
+          "player_name": "Enzo Fernández",
+          "nationality": "Argentina",
+          "team_id": 61,
+          "team_ja": "チェルシー",
+          "team_crest": "https://crests.football-data.org/61.png",
           "goals": 10,
           "assists": 4,
-          "penalties": null,
-          "playedMatches": 31
+          "penalties": 2,
+          "playedMatches": 35
         },
         {
           "player_id": 8626,
@@ -234,18 +246,6 @@
           "playedMatches": 31
         },
         {
-          "player_id": 102603,
-          "player_name": "Enzo Fernández",
-          "nationality": "Argentina",
-          "team_id": 61,
-          "team_ja": "チェルシー",
-          "team_crest": "https://crests.football-data.org/61.png",
-          "goals": 9,
-          "assists": 3,
-          "penalties": 2,
-          "playedMatches": 34
-        },
-        {
           "player_id": 3638,
           "player_name": "Ismaïla Sarr",
           "nationality": "Senegal",
@@ -291,7 +291,7 @@
           "goals": 9,
           "assists": 1,
           "penalties": 5,
-          "playedMatches": 25
+          "playedMatches": 26
         },
         {
           "player_id": 3231,
@@ -483,7 +483,7 @@
           "goals": 7,
           "assists": 5,
           "penalties": null,
-          "playedMatches": 34
+          "playedMatches": 35
         },
         {
           "player_id": 4032,
@@ -555,7 +555,7 @@
           "goals": 6,
           "assists": 4,
           "penalties": 2,
-          "playedMatches": 32
+          "playedMatches": 33
         },
         {
           "player_id": 94091,
@@ -579,7 +579,7 @@
           "goals": 6,
           "assists": 2,
           "penalties": null,
-          "playedMatches": 34
+          "playedMatches": 35
         },
         {
           "player_id": 8251,
