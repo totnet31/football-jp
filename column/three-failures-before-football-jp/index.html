@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>football-jpを作るまでに、僕は3回挫折した話｜football-jp コラム</title>
+  <meta name="description" content="完成したサイトを見ると「作ろうと思って作った」ように見えると思います。でも実際は、途中で3回、本気で諦めました。データ収集の壁、整合性崩壊、「誰が使うんだ」という問い——3回の挫折と再開の話を正直に書きます。">
+  <link rel="canonical" href="https://football-jp.com/column/three-failures-before-football-jp/">
+  <link rel="alternate" hreflang="ja" href="https://football-jp.com/column/three-failures-before-football-jp/">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://football-jp.com/column/three-failures-before-football-jp/">
+  <meta property="og:title" content="football-jpを作るまでに、僕は3回挫折した話">
+  <meta property="og:description" content="データ収集の壁、整合性崩壊、「誰が使うんだ」という問い——football-jpができるまでの3回の挫折と再開の話を正直に書きます。">
+  <meta property="og:image" content="https://football-jp.com/column/three-failures-before-football-jp/header.png">
+  <meta property="og:site_name" content="football-jp">
+  <meta property="og:locale" content="ja_JP">
+  <meta property="article:published_time" content="2026-05-20T09:00:00+09:00">
+  <meta property="article:modified_time" content="2026-05-20T09:00:00+09:00">
+  <meta property="article:author" content="football-jp 編集部">
+  <meta property="article:section" content="エッセイ">
+  <meta property="article:tag" content="個人開発">
+  <meta property="article:tag" content="football-jp">
+  <meta name="twitter:card" content="summary_large_image">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2651130635797183" crossorigin="anonymous"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-39G8CVXRW0"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-39G8CVXRW0');
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "football-jpを作るまでに、僕は3回挫折した話",
+  "description": "データ収集の壁、整合性崩壊、「誰が使うんだ」という問い——football-jpができるまでの3回の挫折と再開の話を正直に書きます。",
+  "image": "https://football-jp.com/column/three-failures-before-football-jp/header.png",
+  "datePublished": "2026-05-20T09:00:00+09:00",
+  "dateModified": "2026-05-20T09:00:00+09:00",
+  "author": {
+    "@type": "Organization",
+    "name": "football-jp 編集部",
+    "url": "https://football-jp.com/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "football-jp",
+    "url": "https://football-jp.com/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://football-jp.com/assets/logos/logo-header.png"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://football-jp.com/column/three-failures-before-football-jp/"
+  },
+  "inLanguage": "ja-JP",
+  "articleSection": "エッセイ",
+  "keywords": "個人開発,football-jp,挫折,サイト制作,海外サッカー"
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://football-jp.com/"},
+    {"@type": "ListItem", "position": 2, "name": "コラム", "item": "https://football-jp.com/column/"},
+    {"@type": "ListItem", "position": 3, "name": "football-jpを作るまでに3回挫折した話", "item": "https://football-jp.com/column/three-failures-before-football-jp/"}
+  ]
+}
+  </script>
+  <link rel="stylesheet" href="/style.css">
+  <link rel="icon" href="/favicon.ico">
+  <link rel="icon" type="image/png" sizes="48x48" href="/assets/logos/favicon-48.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/logos/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/logos/favicon-16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/logos/favicon-180.png">
+  <link rel="manifest" href="/manifest.json">
+  <meta name="theme-color" content="#0b1220">
+</head>
+<body data-view="column">
+  <header>
+    <h1 style="font-size:18px; margin:0; padding:12px 16px;"><a href="/" style="color:inherit; text-decoration:none;"><img src="/assets/logos/logo-header.png" alt="football-jp" class="header-logo" style="height:24px; vertical-align:middle;"> football-jp</a></h1>
+  </header>
+
+  <nav class="view-tabs">
+    <a class="view-tab" href="/" data-view="schedule">
+      <svg class="vt-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg>
+      <span>予定を見る</span>
+    </a>
+    <a class="view-tab" href="/results/" data-view="results">
+      <svg class="vt-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l3 3 5-6"/></svg>
+      <span>結果を見る</span>
+    </a>
+    <a class="view-tab" href="/calendar/" data-view="calendar">
+      <svg class="vt-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15.5" rx="1.5"/><path d="M3.5 10h17"/><path d="M8 3v4M16 3v4"/></svg>
+      <span>カレンダー</span>
+    </a>
+    <a class="view-tab" href="/standings/" data-view="ranking">
+      <svg class="vt-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20h16"/><path d="M7 20v-5"/><path d="M12 20v-9"/><path d="M17 20v-13"/></svg>
+      <span>順位</span>
+    </a>
+    <a class="view-tab" href="/leagues/" data-view="leagues">
+      <svg class="vt-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 3v4M12 17v4M3 12h4M17 12h4"/><circle cx="12" cy="12" r="3"/></svg>
+      <span>リーグ</span>
+    </a>
+    <a class="view-tab active" href="/column/" data-view="column">
+      <svg class="vt-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h16v14H4z"/><path d="M7 9h10M7 13h10M7 17h6"/></svg>
+      <span>コラム</span>
+    </a>
+  </nav>
+
+  <nav class="breadcrumb" aria-label="パンくずリスト">
+    <a href="/">ホーム</a> › <a href="/column/">コラム</a> › <span aria-current="page">football-jpを作るまでに3回挫折した話</span>
+  </nav>
+
+  <main>
+    <article class="column-article">
+      <header class="column-article-header">
+        <p class="column-article-meta">
+          <time datetime="2026-05-20">2026年5月20日</time>
+          <span class="column-article-tag">エッセイ</span>
+          <span class="column-article-tag">個人開発</span>
+        </p>
+        <h1>football-jpを作るまでに、僕は3回挫折した話</h1>
+        <p class="column-article-lead">完成したサイトを見ると、「作ろうと思って作った」ように見えると思います。でも実際は、途中で3回、本気で諦めました。今回はその話を正直に書きます。</p>
+      </header>
+
+      <img src="header.png" alt="football-jpを作るまでに3回挫折した話" style="width:100%; max-width:900px; height:auto; display:block; margin:0 auto 2rem;">
+
+      <nav class="column-toc" aria-label="目次">
+        <p class="column-toc-title">📑 目次</p>
+        <ol class="column-toc-list">
+          <li><a href="#failure1">1回目の挫折：データが取れない</a></li>
+          <li><a href="#failure2">2回目の挫折：整合性が崩れる</a></li>
+          <li><a href="#failure3">3回目の挫折：「誰が使うんだ」という気持ち</a></li>
+          <li><a href="#reason">諦めなかった理由、ひとつだけ</a></li>
+          <li><a href="#between">挫折と再開のあいだにあったこと</a></li>
+          <li><a href="#after">完成したあとに思ったこと</a></li>
+          <li><a href="#count">挫折に「回数」があることについて</a></li>
+        </ol>
+      </nav>
+
+      <section id="failure1">
+        <h2>1回目の挫折：データが取れない</h2>
+        <p>最初の壁は、データ収集でした。football-jpを作るにあたって、まず「日本人選手68名の所属クラブと試合日程を自動で取得する仕組み」が必要でした。手動で更新していたら時間が足りない。毎日変わる試合日程を人力で追いかけるのは無理です。</p>
+        <p>当初、Wikipediaの各クラブページからデータを取得しようとしました。ところが、Wikipediaのページは書き方がバラバラです。「Efsテンプレート形式」と呼ばれる記法を使っているページもあれば、「wikitable形式」で書かれているページもある。ひとつのパーサーを書いても、別のクラブページでは動かない。何日もかけて作ったコードが、別のページでは完全に壊れる。それが続いて、「これは無理かもしれない」と思いました。これが1回目の挫折です。</p>
+        <p>1回目の挫折で止めていた期間は、3日間ほどでした。「問題はページごとの書き方の違いだ」という結論に至ったのは、3日後のことです。止まっている間に、頭が勝手に整理していた形です。</p>
+      </section>
+
+      <section id="failure2">
+        <h2>2回目の挫折：整合性が崩れる</h2>
+        <p>1回目の挫折から少し経って、複数のパーサーを組み合わせる方法で再挑戦しました。Efsテンプレート形式用とwikitable形式用の2つを作り、ページの形式を自動判定して切り替える仕組みにしました。これで一応、データが取れるようになりました。</p>
+        <p>しかし次の問題が出ました。データの「整合性」です。選手データとクラブデータが食い違う。日付がずれる。ひとつ直すと別の場所が壊れる——このパズルが無限に続く感覚になりました。68名の選手、41のクラブ。それだけのデータが常に正確に同期されていなければ、サイトとして機能しない。その規模感を実感した瞬間に、2回目の「もう無理かも」が来ました。</p>
+        <p>2回目の挫折で「手動更新に切り替えよう」という妥協案を真剣に検討しました。でも手動更新にすると、毎日の更新作業に何時間もかかる。妥協案を捨てて、「完全自動化」という当初の方針を保ったまま続けることを選んだのは、「自分が使いたいサイト」という動機が諦めより強かったからです。</p>
+      </section>
+
+      <section id="failure3">
+        <h2>3回目の挫折：「誰が使うんだ」という気持ち</h2>
+        <p>技術的な問題をどうにかクリアして、サイトの形が見えてきた頃に、3回目の挫折が来ました。「誰が使うんだ、これ」という気持ちです。すでに国内には大手のスポーツサイトがある。「日本人海外組に特化したサイト」というニッチな軸で、誰かが本当に使ってくれるのか。自分が欲しいから作っているとはいえ、需要があるのかどうか、わからなくなってきました。</p>
+        <p>この3回目が、技術的な挫折より長く引きずりました。なぜなら、「作業を止める理由」にならないことです。1回目・2回目は「技術的にできない」という明確な壁があったので、止まることに合理性がありました。でも3回目は「作業はできる、でも意味があるかわからない」という状態なので、手は動かせる。動かしながら「これに意味があるのか」という問いが頭の中で回り続ける。これが一番きつかったです。</p>
+      </section>
+
+      <section id="reason">
+        <h2>諦めなかった理由、ひとつだけ</h2>
+        <p>それでも完成させたのは、理由がひとつだけあったからです。「自分が使いたい」という気持ちが、ずっと変わらなかった。日本人選手の試合が日本時間でわかる。どの配信サービスで見られるかが一目でわかる。——自分がずっと欲しかったものです。それが作れるなら、作り続けようと思いました。</p>
+        <p>挫折するたびに「やっぱりやめよう」と思いながら、数日後にはまたコードを開いていました。意思が強いとか、根性があるとかではなく、ただ「これがないと不便だ」という感覚が勝っていただけです。「自分が使いたい」という動機は、「誰かに見てもらいたい」という動機より根強かった。公開前にPVがゼロでも、機能していれば自分は使えます。それが、最小限の価値の確認でした。</p>
+      </section>
+
+      <section id="between">
+        <h2>挫折と再開のあいだにあったこと</h2>
+        <p>3回の挫折それぞれに、「再開のきっかけ」がありました。1回目の挫折では、3日間止まっていた間に「Efsとwikitableの両方に対応する」というアイデアが来て、再開しました。2回目の挫折は、整合性崩壊の問題を紙に書き出して整理することで、「どこが原因でどこから直せばいいか」の地図が見えた。</p>
+        <p>3回目の挫折には、再開のきっかけが少し違いました。当時、試合日程を確認するためにfootball-jpの開発中版を開いた日がありました。完成していないのに、試合時間の確認に使えた。日本時間で表示されていた。それだけで「あ、これは自分には使える」と思えた。誰かが使うかどうかより前に、自分が使えることが確認できた。それが3回目の「再開」のきっかけでした。</p>
+        <p>作業を「止める」ことと「やめる」ことは違います。止まりながらも、諦めていなかった——それが3回の挫折を超えられた理由だと思っています。</p>
+      </section>
+
+      <section id="after">
+        <h2>完成したあとに思ったこと</h2>
+        <p><a href="https://football-jp.com/">football-jp.com</a> が公開できたとき、達成感というより「やっと使える」という実感がありました。公開してから少し経ったいま、「誰が使うんだ」という3回目の疑問に対する答えが少しずつ見えてきています。試合日程を確認しに来てくれる方がいる。SNSで記事をシェアしてくれる方がいる。作る前には想像できなかった、自分以外の「使っている人」がいる。それが、3回目の挫折への答えになっています。</p>
+        <p>個人開発をしている人や、何かを作り途中でやめた人に、この話が少し届けば嬉しいです。諦めなくてよかった、というよりも——諦めながらも続けていたら、なんとかなった。それが正直なところです。</p>
+      </section>
+
+      <section id="count">
+        <h2>挫折に「回数」があることについて</h2>
+        <p>3回という数字を書いてみて気づいたのですが、挫折に「回数」があること自体が、少し前向きな話かもしれません。1回しか挫折しなかった人は、そこで終わっている可能性がある。3回挫折したということは、3回再開した、ということです。</p>
+        <p>挫折の数と再開の数は、同じです。「3回挫折した」を「3回諦めた」と読むこともできる。でも「3回再開した」という読み方も同時に成立します。「諦めた」と「止まっている」は、違います。3回の挫折を経て、それが一番伝えたいことかもしれません。</p>
+      </section>
+
+      <section class="column-article-related">
+        <h2>関連コラム</h2>
+        <p><a href="/column/why-i-built-football-jp/">なぜfootball-jpを作ったのか</a> ／ <a href="/column/pv3-day-story/">個人サイトを公開して1か月、PV3だった日のこと</a> ／ <a href="/column/before-after-football-jp-launch/">football-jp公開前後で変わった10のこと</a></p>
+      </section>
+
+      <footer class="column-article-footer">
+        <p class="column-article-footer-meta">
+          公開：<time datetime="2026-05-20">2026-05-20</time>　／
+          最終更新：<time datetime="2026-05-20">2026-05-20</time>　／
+          編集：football-jp 編集部
+        </p>
+        <p class="column-article-footer-source">
+          この記事は <a href="https://note.com/" target="_blank" rel="noopener">note</a> で公開した原文をもとにfootball-jp向けに再構成したものです
+        </p>
+      </footer>
+    </article>
+  </main>
+
+  <footer>
+    <p>データ提供: <a href="https://www.football-data.org/" target="_blank" rel="noopener">football-data.org</a></p>
+    <nav class="footer-nav">
+      <a href="/players/">日本人選手一覧</a>
+      <a href="/clubs/">クラブ一覧</a>
+      <a href="/column/">コラム一覧</a>
+    </nav>
+    <p class="footer-legal">
+      <a href="/privacy">プライバシーポリシー</a>
+      &nbsp;|&nbsp;
+      <a href="/en/">🇺🇸 English</a>
+    </p>
+  </footer>
+</body>
+</html>
