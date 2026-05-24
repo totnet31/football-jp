@@ -1,5 +1,5 @@
 {
-  "updated": "2026-05-24T07:02:26.151026+09:00",
+  "updated": "2026-05-24T17:03:44.474058+09:00",
   "date_from": "2026-05-17",
   "date_to": "2026-06-07",
   "match_count": 350,
@@ -10808,7 +10808,7 @@
       "away_crest": "https://crests.football-data.org/112.png",
       "score": {
         "home": 1,
-        "away": 1
+        "away": 0
       },
       "japanese_players": [
         {
@@ -12639,46 +12639,6 @@
       ]
     },
     {
-      "id": 557983,
-      "competition_id": 40,
-      "competition_ja": "チャンピオンシップ",
-      "competition_category": "league",
-      "competition_flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
-      "kickoff_jst": "2026-05-23T10:00:00+09:00",
-      "status": "SCHEDULED",
-      "stage": "PLAYOFFS",
-      "matchday": null,
-      "home_id": 322,
-      "home_ja": "ハル・シティ",
-      "home_en": "Hull City",
-      "home_crest": "https://crests.football-data.org/322.png",
-      "away_id": 340,
-      "away_ja": "サウサンプトン",
-      "away_en": "Southampton",
-      "away_crest": "https://crests.football-data.org/340.png",
-      "score": null,
-      "japanese_players": [
-        {
-          "name_ja": "平河悠",
-          "position": "FW/MF",
-          "side": "home"
-        },
-        {
-          "name_ja": "松木玖生",
-          "position": "FW/MF",
-          "side": "away"
-        }
-      ],
-      "broadcasters": [
-        {
-          "name": "DAZN",
-          "type": "exclusive",
-          "url": "https://www.dazn.com/ja-JP/",
-          "note": "〜2027-28"
-        }
-      ]
-    },
-    {
       "id": 537187,
       "competition_id": 135,
       "competition_ja": "セリエA",
@@ -12707,6 +12667,53 @@
           "type": "exclusive",
           "url": "https://www.dazn.com/ja-JP/",
           "note": "〜2026-27"
+        }
+      ],
+      "highlights": [
+        {
+          "broadcaster": "DAZN",
+          "video_id": "wNr_7-dCSlU",
+          "url": "https://youtu.be/wNr_7-dCSlU",
+          "title": "【ボローニャ×インテル｜ハイライト】セリエA第38節｜2025-26シーズン",
+          "yt_published": "2026-05-23"
+        }
+      ]
+    },
+    {
+      "id": 557983,
+      "competition_id": 40,
+      "competition_ja": "チャンピオンシップ",
+      "competition_category": "league",
+      "competition_flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+      "kickoff_jst": "2026-05-24T01:30:00+09:00",
+      "status": "FINISHED",
+      "stage": "PLAYOFFS",
+      "matchday": null,
+      "home_id": 322,
+      "home_ja": "ハル・シティ",
+      "home_en": "Hull City",
+      "home_crest": "https://crests.football-data.org/322.png",
+      "away_id": 343,
+      "away_ja": "ミドルズブラ",
+      "away_en": "Middlesbrough",
+      "away_crest": "https://crests.football-data.org/343.png",
+      "score": {
+        "home": 1,
+        "away": 0
+      },
+      "japanese_players": [
+        {
+          "name_ja": "平河悠",
+          "position": "FW/MF",
+          "side": "home"
+        }
+      ],
+      "broadcasters": [
+        {
+          "name": "DAZN",
+          "type": "exclusive",
+          "url": "https://www.dazn.com/ja-JP/",
+          "note": "〜2027-28"
         }
       ]
     },
@@ -12785,6 +12792,15 @@
           "type": "shared",
           "url": "https://www.dazn.com/ja-JP/",
           "note": "〜2027-28"
+        }
+      ],
+      "highlights": [
+        {
+          "broadcaster": "U-NEXT",
+          "video_id": "xCwrGtTJD74",
+          "url": "https://youtu.be/xCwrGtTJD74",
+          "title": "【アラベス v ラージョ・バジェカーノ｜ハイライト】ラ・リーガ25/26 第38節",
+          "yt_published": "2026-05-23"
         }
       ]
     },
@@ -12958,6 +12974,15 @@
           "url": "https://www.dazn.com/ja-JP/",
           "note": "〜2027-28"
         }
+      ],
+      "highlights": [
+        {
+          "broadcaster": "DAZN",
+          "video_id": "EuRTT8aoz9g",
+          "url": "https://youtu.be/EuRTT8aoz9g",
+          "title": "【ヘタフェが来季のECL出場権獲得！｜ヘタフェ×オサスナ｜ハイライト】ラ・リーガ第38節｜2025-26シーズン",
+          "yt_published": "2026-05-23"
+        }
       ]
     },
     {
@@ -13000,6 +13025,15 @@
           "type": "shared",
           "url": "https://www.dazn.com/ja-JP/",
           "note": "〜2027-28"
+        }
+      ],
+      "highlights": [
+        {
+          "broadcaster": "DAZN",
+          "video_id": "8bkatZc2SC0",
+          "url": "https://youtu.be/8bkatZc2SC0",
+          "title": "【浅野拓磨先発のマジョルカが最終節に快勝も、無念の2部降格が決定...｜マジョルカ×オビエド｜ハイライト】ラ・リーガ第38節｜2025-26シーズン",
+          "yt_published": "2026-05-23"
         }
       ]
     },
@@ -13713,6 +13747,6 @@
       ]
     }
   ],
-  "updated_yt_highlights": "2026-05-24T07:06:14.229311+09:00",
-  "updated_uefa_secondary": "2026-05-24T07:06:45.037534+09:00"
+  "updated_yt_highlights": "2026-05-24T17:07:28.302804+09:00",
+  "updated_uefa_secondary": "2026-05-24T17:08:00.566189+09:00"
 }
