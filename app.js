@@ -695,7 +695,13 @@
   function zoneClass(competitionId, position, total) {
     // 簡易版：プレミア・ラ・リーガ・ブンデス・セリエA・リーグ・アンの上位がCL圏
     const compId = Number(competitionId);
-    if (compId === 39 || compId === 140 || compId === 135 || compId === 61) {
+    if (compId === 39) {
+      // プレミア2025-26最終: アストン・ヴィラのEL優勝でCL枠が5に拡大。
+      // 1-5位CL, 6-8位EL/ECL, 18-20位降格
+      if (position <= 5) return 'zone-cl';
+      if (position <= 8) return 'zone-uel';
+      if (position >= total - 2) return 'zone-relegate';
+    } else if (compId === 140 || compId === 135 || compId === 61) {
       // 5大リーグ標準: 1-4位CL, 5位EL, 6位ECL, 18-20位降格
       if (position <= 4) return 'zone-cl';
       if (position === 5) return 'zone-uel';
