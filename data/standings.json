@@ -1,5 +1,5 @@
 {
-  "updated": "2026-05-25T21:07:36.523031+09:00",
+  "updated": "2026-05-25T23:22:45.014517+09:00",
   "competitions": {
     "39": {
       "name_ja": "プレミアリーグ",
@@ -1387,13 +1387,13 @@
               "team_id": 109,
               "team_ja": "ユヴェントス",
               "team_crest": "https://crests.football-data.org/109.png",
-              "playedGames": 37,
+              "playedGames": 38,
               "won": 19,
-              "draw": 11,
+              "draw": 12,
               "lost": 7,
-              "points": 68,
-              "goalsFor": 59,
-              "goalsAgainst": 32,
+              "points": 69,
+              "goalsFor": 61,
+              "goalsAgainst": 34,
               "goalDifference": 27,
               "form": null
             },
@@ -1474,6 +1474,21 @@
             },
             {
               "position": 12,
+              "team_id": 586,
+              "team_ja": "トリノ",
+              "team_crest": "https://crests.football-data.org/586.png",
+              "playedGames": 38,
+              "won": 12,
+              "draw": 9,
+              "lost": 17,
+              "points": 45,
+              "goalsFor": 44,
+              "goalsAgainst": 63,
+              "goalDifference": -19,
+              "form": null
+            },
+            {
+              "position": 13,
               "team_id": 112,
               "team_ja": "パルマ",
               "team_crest": "https://crests.football-data.org/112.png",
@@ -1485,21 +1500,6 @@
               "goalsFor": 28,
               "goalsAgainst": 46,
               "goalDifference": -18,
-              "form": null
-            },
-            {
-              "position": 13,
-              "team_id": 586,
-              "team_ja": "トリノ",
-              "team_crest": "https://crests.football-data.org/586.png",
-              "playedGames": 37,
-              "won": 12,
-              "draw": 8,
-              "lost": 17,
-              "points": 44,
-              "goalsFor": 42,
-              "goalsAgainst": 61,
-              "goalDifference": -19,
               "form": null
             },
             {
