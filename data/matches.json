@@ -1,8 +1,8 @@
 {
-  "updated": "2026-05-27T07:02:09.329740+09:00",
+  "updated": "2026-05-27T20:06:49.546804+09:00",
   "date_from": "2026-05-20",
   "date_to": "2026-06-10",
-  "match_count": 350,
+  "match_count": 351,
   "_note": "累積保持モード：フェッチ窓外の過去試合データはそのまま保持される。",
   "matches": [
     {
@@ -13907,8 +13907,162 @@
           "note": "厳選30試合ディレイ"
         }
       ]
+    },
+    {
+      "id": "KIRIN_2026-05-31_Japan_Iceland",
+      "competition_id": 99001,
+      "competition_ja": "キリンチャレンジカップ",
+      "competition_category": "friendly",
+      "competition_flag": "🇯🇵",
+      "kickoff_jst": "2026-05-31T19:25:00+09:00",
+      "status": "TIMED",
+      "stage": "REGULAR_SEASON",
+      "matchday": null,
+      "home_id": null,
+      "home_ja": "日本代表",
+      "home_en": "Japan",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "アイスランド代表",
+      "away_en": "Iceland",
+      "away_crest": null,
+      "score": null,
+      "japanese_players": [
+        {
+          "name_ja": "鈴木彩艶",
+          "position": "GK",
+          "side": "home"
+        },
+        {
+          "name_ja": "大迫敬介",
+          "position": "GK",
+          "side": "home"
+        },
+        {
+          "name_ja": "早川友基",
+          "position": "GK",
+          "side": "home"
+        },
+        {
+          "name_ja": "菅原由勢",
+          "position": "DF",
+          "side": "home"
+        },
+        {
+          "name_ja": "谷口彰悟",
+          "position": "DF",
+          "side": "home"
+        },
+        {
+          "name_ja": "板倉滉",
+          "position": "DF",
+          "side": "home"
+        },
+        {
+          "name_ja": "長友佑都",
+          "position": "DF",
+          "side": "home"
+        },
+        {
+          "name_ja": "渡辺剛",
+          "position": "DF",
+          "side": "home"
+        },
+        {
+          "name_ja": "瀬古歩夢",
+          "position": "DF",
+          "side": "home"
+        },
+        {
+          "name_ja": "伊藤洋輝",
+          "position": "DF",
+          "side": "home"
+        },
+        {
+          "name_ja": "冨安健洋",
+          "position": "DF",
+          "side": "home"
+        },
+        {
+          "name_ja": "鈴木淳之介",
+          "position": "DF",
+          "side": "home"
+        },
+        {
+          "name_ja": "遠藤航",
+          "position": "MF",
+          "side": "home"
+        },
+        {
+          "name_ja": "田中碧",
+          "position": "MF",
+          "side": "home"
+        },
+        {
+          "name_ja": "久保建英",
+          "position": "MF/FW",
+          "side": "home"
+        },
+        {
+          "name_ja": "後藤啓介",
+          "position": "FW",
+          "side": "home"
+        },
+        {
+          "name_ja": "堂安律",
+          "position": "MF/FW",
+          "side": "home"
+        },
+        {
+          "name_ja": "前田大然",
+          "position": "FW",
+          "side": "home"
+        },
+        {
+          "name_ja": "中村敬斗",
+          "position": "MF/FW",
+          "side": "home"
+        },
+        {
+          "name_ja": "伊東純也",
+          "position": "MF/FW",
+          "side": "home"
+        },
+        {
+          "name_ja": "鎌田大地",
+          "position": "MF",
+          "side": "home"
+        },
+        {
+          "name_ja": "鈴木唯人",
+          "position": "MF/FW",
+          "side": "home"
+        },
+        {
+          "name_ja": "上田綺世",
+          "position": "FW",
+          "side": "home"
+        },
+        {
+          "name_ja": "小川航基",
+          "position": "FW",
+          "side": "home"
+        },
+        {
+          "name_ja": "佐野海舟",
+          "position": "MF",
+          "side": "home"
+        },
+        {
+          "name_ja": "塩貝健人",
+          "position": "FW",
+          "side": "home"
+        }
+      ],
+      "broadcasters": [],
+      "venue": "国立競技場（東京）"
     }
   ],
-  "updated_yt_highlights": "2026-05-27T07:05:45.567537+09:00",
-  "updated_uefa_secondary": "2026-05-27T07:06:15.730951+09:00"
+  "updated_yt_highlights": "2026-05-27T20:10:29.465757+09:00",
+  "updated_uefa_secondary": "2026-05-27T20:10:57.034482+09:00"
 }
