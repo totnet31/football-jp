@@ -1,0 +1,29 @@
+# Cloudflare Pages ヘッダールール
+# https://developers.cloudflare.com/pages/configuration/headers/
+#
+# AdSense審査対応: 自動生成の薄いページをnoindex化
+# 更新: 2026-05-28
+
+/players/*
+  X-Robots-Tag: noindex, nofollow
+
+/clubs/*
+  X-Robots-Tag: noindex, nofollow
+
+/leagues/*
+  X-Robots-Tag: noindex, nofollow
+
+/standings/*
+  X-Robots-Tag: noindex, nofollow
+
+/results/*
+  X-Robots-Tag: noindex, nofollow
+
+/calendar/*
+  X-Robots-Tag: noindex, nofollow
+
+/en/*
+  X-Robots-Tag: noindex, nofollow
+
+/worldcup/countries/*
+  X-Robots-Tag: noindex, nofollow
