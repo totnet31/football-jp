@@ -1,5 +1,5 @@
 {
-  "updated": "2026-05-29T07:05:31.761406+09:00",
+  "updated": "2026-05-29T20:02:48.313123+09:00",
   "competitions": {
     "39": {
       "name_ja": "プレミアリーグ",
@@ -1745,6 +1745,21 @@
             },
             {
               "position": 9,
+              "team_id": 511,
+              "team_ja": "トゥールーズ",
+              "team_crest": "https://crests.football-data.org/511.png",
+              "playedGames": 34,
+              "won": 12,
+              "draw": 9,
+              "lost": 13,
+              "points": 45,
+              "goalsFor": 47,
+              "goalsAgainst": 46,
+              "goalDifference": 1,
+              "form": null
+            },
+            {
+              "position": 10,
               "team_id": 525,
               "team_ja": "ロリアン",
               "team_crest": "https://crests.football-data.org/525.png",
@@ -1756,21 +1771,6 @@
               "goalsFor": 48,
               "goalsAgainst": 51,
               "goalDifference": -3,
-              "form": null
-            },
-            {
-              "position": 10,
-              "team_id": 511,
-              "team_ja": "トゥールーズ",
-              "team_crest": "https://crests.football-data.org/511.png",
-              "playedGames": 33,
-              "won": 12,
-              "draw": 8,
-              "lost": 13,
-              "points": 44,
-              "goalsFor": 47,
-              "goalsAgainst": 46,
-              "goalDifference": 1,
               "form": null
             },
             {
@@ -1868,11 +1868,11 @@
               "team_id": 543,
               "team_ja": "ナント",
               "team_crest": "https://crests.football-data.org/543.png",
-              "playedGames": 33,
+              "playedGames": 34,
               "won": 5,
-              "draw": 8,
+              "draw": 9,
               "lost": 20,
-              "points": 23,
+              "points": 24,
               "goalsFor": 29,
               "goalsAgainst": 52,
               "goalDifference": -23,
