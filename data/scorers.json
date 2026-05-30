@@ -1,5 +1,5 @@
 {
-  "updated": "2026-05-30T19:53:22.281820+09:00",
+  "updated": "2026-05-31T07:03:35.193834+09:00",
   "competitions": {
     "39": {
       "name_ja": "プレミアリーグ",
@@ -4887,7 +4887,7 @@
           "goals": 10,
           "assists": 6,
           "penalties": null,
-          "playedMatches": 15
+          "playedMatches": 16
         },
         {
           "player_id": 7848,
@@ -4926,6 +4926,18 @@
           "playedMatches": 10
         },
         {
+          "player_id": 3373,
+          "player_name": "Ousmane Dembélé",
+          "nationality": "France",
+          "team_id": 524,
+          "team_ja": "PSG",
+          "team_crest": "https://crests.football-data.org/524.png",
+          "goals": 8,
+          "assists": 2,
+          "penalties": 2,
+          "playedMatches": 13
+        },
+        {
           "player_id": 9434,
           "player_name": "Victor Osimhen",
           "nationality": "Nigeria",
@@ -4936,18 +4948,6 @@
           "assists": 2,
           "penalties": 3,
           "playedMatches": 10
-        },
-        {
-          "player_id": 3373,
-          "player_name": "Ousmane Dembélé",
-          "nationality": "France",
-          "team_id": 524,
-          "team_ja": "PSG",
-          "team_crest": "https://crests.football-data.org/524.png",
-          "goals": 7,
-          "assists": 2,
-          "penalties": 1,
-          "playedMatches": 12
         },
         {
           "player_id": 22396,
@@ -4971,7 +4971,7 @@
           "goals": 6,
           "assists": 2,
           "penalties": null,
-          "playedMatches": 13
+          "playedMatches": 14
         },
         {
           "player_id": 37916,
@@ -5031,7 +5031,7 @@
           "goals": 6,
           "assists": 1,
           "penalties": 1,
-          "playedMatches": 16
+          "playedMatches": 17
         },
         {
           "player_id": 8167,
@@ -5115,7 +5115,7 @@
           "goals": 5,
           "assists": 4,
           "penalties": null,
-          "playedMatches": 12
+          "playedMatches": 13
         },
         {
           "player_id": 8279,
@@ -5127,7 +5127,7 @@
           "goals": 5,
           "assists": 2,
           "penalties": 1,
-          "playedMatches": 12
+          "playedMatches": 13
         },
         {
           "player_id": 16347,
@@ -5346,6 +5346,18 @@
           "playedMatches": 11
         },
         {
+          "player_id": 171,
+          "player_name": "Kai Havertz",
+          "nationality": "Germany",
+          "team_id": 57,
+          "team_ja": "アーセナル",
+          "team_crest": "https://crests.football-data.org/57.png",
+          "goals": 4,
+          "assists": 1,
+          "penalties": 1,
+          "playedMatches": 8
+        },
+        {
           "player_id": 82515,
           "player_name": "Karim Adeyemi",
           "nationality": "Germany",
@@ -5440,18 +5452,6 @@
           "assists": 1,
           "penalties": null,
           "playedMatches": 5
-        },
-        {
-          "player_id": 220542,
-          "player_name": "Alisson Santos",
-          "nationality": "Brazil",
-          "team_id": 498,
-          "team_ja": "スポルティングCP",
-          "team_crest": "https://crests.football-data.org/498.png",
-          "goals": 3,
-          "assists": null,
-          "penalties": null,
-          "playedMatches": 8
         }
       ]
     }

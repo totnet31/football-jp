@@ -1,7 +1,7 @@
 {
-  "updated": "2026-05-30T19:51:58.324015+09:00",
-  "date_from": "2026-05-23",
-  "date_to": "2026-06-13",
+  "updated": "2026-05-31T07:02:12.425527+09:00",
+  "date_from": "2026-05-24",
+  "date_to": "2026-06-14",
   "match_count": 351,
   "_note": "累積保持モード：フェッチ窓外の過去試合データはそのまま保持される。",
   "matches": [
@@ -13880,7 +13880,7 @@
       "competition_category": "europe",
       "competition_flag": "🇪🇺",
       "kickoff_jst": "2026-05-31T01:00:00+09:00",
-      "status": "TIMED",
+      "status": "FINISHED",
       "stage": "FINAL",
       "matchday": null,
       "home_id": 524,
@@ -13891,7 +13891,10 @@
       "away_ja": "アーセナル",
       "away_en": "Arsenal",
       "away_crest": "https://crests.football-data.org/57.png",
-      "score": null,
+      "score": {
+        "home": 5,
+        "away": 4
+      },
       "japanese_players": [],
       "broadcasters": [
         {
@@ -14063,6 +14066,6 @@
       "venue": "国立競技場（東京）"
     }
   ],
-  "updated_yt_highlights": "2026-05-30T19:55:52.514977+09:00",
-  "updated_uefa_secondary": "2026-05-30T19:56:24.162027+09:00"
+  "updated_yt_highlights": "2026-05-31T07:05:52.001430+09:00",
+  "updated_uefa_secondary": "2026-05-31T07:06:20.467742+09:00"
 }
