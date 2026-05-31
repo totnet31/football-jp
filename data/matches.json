@@ -13918,7 +13918,7 @@
       "competition_category": "friendly",
       "competition_flag": "🇯🇵",
       "kickoff_jst": "2026-05-31T19:25:00+09:00",
-      "status": "TIMED",
+      "status": "FINISHED",
       "stage": "REGULAR_SEASON",
       "matchday": null,
       "home_id": null,
@@ -13929,7 +13929,10 @@
       "away_ja": "アイスランド代表",
       "away_en": "Iceland",
       "away_crest": null,
-      "score": null,
+      "score": {
+        "home": 1,
+        "away": 0
+      },
       "japanese_players": [
         {
           "name_ja": "鈴木彩艶",
