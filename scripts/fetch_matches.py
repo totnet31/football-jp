@@ -151,7 +151,9 @@ def main():
     date_from = (today - timedelta(days=PAST_DAYS)).isoformat()
     date_to = (today + timedelta(days=FUTURE_DAYS)).isoformat()
 
-    targets = [c for c in competitions["competitions"] if c.get("covered")]
+    # covered かつ fd_code があるものだけ対象（Europa/Conference League は fd_code 未設定で
+    # fetch_uefa_secondary.py が別ソースから取得するため、ここでは除外して None アクセスの400を防ぐ）
+    targets = [c for c in competitions["competitions"] if c.get("covered") and c.get("fd_code")]
     print(f"[INFO] 対象大会: {len(targets)}件 / 期間: {date_from} 〜 {date_to}")
 
     all_matches = []
