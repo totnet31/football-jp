@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-12T07:04:59.447687+09:00",
+  "updated": "2026-06-12T08:24:35.112469+09:00",
   "competition": "FIFA World Cup 2026",
   "match_count": 104,
   "_note": "累積保持モード：APIから消えた試合データもそのまま保持される。",
@@ -23,7 +23,10 @@
       "away_flag": "🇿🇦",
       "away_tla": "RSA",
       "away_crest": "https://crests.football-data.org/9396.svg",
-      "score": null,
+      "score": {
+        "home": 2,
+        "away": 0
+      },
       "venue": null
     },
     {
