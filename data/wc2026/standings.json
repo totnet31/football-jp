@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-14T16:18:25.745533+09:00",
+  "updated": "2026-06-14T20:38:25.065253+09:00",
   "season_start": "2026-06-11",
   "season_end": "2026-07-19",
   "groups": [
@@ -73,10 +73,10 @@
       "table": [
         {
           "position": 1,
-          "team_id": 1060,
-          "team_ja": "ボスニア・ヘルツェゴビナ",
-          "team_flag": "🇧🇦",
-          "team_tla": "BIH",
+          "team_id": 788,
+          "team_ja": "スイス",
+          "team_flag": "🇨🇭",
+          "team_tla": "SUI",
           "playedGames": 1,
           "won": 0,
           "draw": 1,
@@ -87,7 +87,7 @@
           "goalDifference": 0
         },
         {
-          "position": 1,
+          "position": 2,
           "team_id": 828,
           "team_ja": "カナダ",
           "team_flag": "🇨🇦",
@@ -102,7 +102,7 @@
           "goalDifference": 0
         },
         {
-          "position": 1,
+          "position": 3,
           "team_id": 8030,
           "team_ja": "カタール",
           "team_flag": "🇶🇦",
@@ -117,11 +117,11 @@
           "goalDifference": 0
         },
         {
-          "position": 1,
-          "team_id": 788,
-          "team_ja": "スイス",
-          "team_flag": "🇨🇭",
-          "team_tla": "SUI",
+          "position": 4,
+          "team_id": 1060,
+          "team_ja": "ボスニア・ヘルツェゴビナ",
+          "team_flag": "🇧🇦",
+          "team_tla": "BIH",
           "playedGames": 1,
           "won": 0,
           "draw": 1,
@@ -153,10 +153,10 @@
         },
         {
           "position": 2,
-          "team_id": 764,
-          "team_ja": "ブラジル",
-          "team_flag": "🇧🇷",
-          "team_tla": "BRA",
+          "team_id": 815,
+          "team_ja": "モロッコ",
+          "team_flag": "🇲🇦",
+          "team_tla": "MAR",
           "playedGames": 1,
           "won": 0,
           "draw": 1,
@@ -167,11 +167,11 @@
           "goalDifference": 0
         },
         {
-          "position": 2,
-          "team_id": 815,
-          "team_ja": "モロッコ",
-          "team_flag": "🇲🇦",
-          "team_tla": "MAR",
+          "position": 3,
+          "team_id": 764,
+          "team_ja": "ブラジル",
+          "team_flag": "🇧🇷",
+          "team_tla": "BRA",
           "playedGames": 1,
           "won": 0,
           "draw": 1,
