@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-16T08:48:34.115165+09:00",
+  "updated": "2026-06-16T17:41:02.118204+09:00",
   "season_start": "2026-06-11",
   "season_end": "2026-07-19",
   "groups": [
@@ -398,6 +398,36 @@
       "table": [
         {
           "position": 1,
+          "team_id": 840,
+          "team_ja": "イラン",
+          "team_flag": "🇮🇷",
+          "team_tla": "IRN",
+          "playedGames": 1,
+          "won": 0,
+          "draw": 1,
+          "lost": 0,
+          "points": 1,
+          "goalsFor": 2,
+          "goalsAgainst": 2,
+          "goalDifference": 0
+        },
+        {
+          "position": 1,
+          "team_id": 783,
+          "team_ja": "ニュージーランド",
+          "team_flag": "🇳🇿",
+          "team_tla": "NZL",
+          "playedGames": 1,
+          "won": 0,
+          "draw": 1,
+          "lost": 0,
+          "points": 1,
+          "goalsFor": 2,
+          "goalsAgainst": 2,
+          "goalDifference": 0
+        },
+        {
+          "position": 3,
           "team_id": 805,
           "team_ja": "ベルギー",
           "team_flag": "🇧🇪",
@@ -412,7 +442,7 @@
           "goalDifference": 0
         },
         {
-          "position": 2,
+          "position": 4,
           "team_id": 825,
           "team_ja": "エジプト",
           "team_flag": "🇪🇬",
@@ -424,36 +454,6 @@
           "points": 1,
           "goalsFor": 1,
           "goalsAgainst": 1,
-          "goalDifference": 0
-        },
-        {
-          "position": 3,
-          "team_id": 840,
-          "team_ja": "イラン",
-          "team_flag": "🇮🇷",
-          "team_tla": "IRN",
-          "playedGames": 0,
-          "won": 0,
-          "draw": 0,
-          "lost": 0,
-          "points": 0,
-          "goalsFor": 0,
-          "goalsAgainst": 0,
-          "goalDifference": 0
-        },
-        {
-          "position": 3,
-          "team_id": 783,
-          "team_ja": "ニュージーランド",
-          "team_flag": "🇳🇿",
-          "team_tla": "NZL",
-          "playedGames": 0,
-          "won": 0,
-          "draw": 0,
-          "lost": 0,
-          "points": 0,
-          "goalsFor": 0,
-          "goalsAgainst": 0,
           "goalDifference": 0
         }
       ]
@@ -468,16 +468,31 @@
           "team_flag": "🇸🇦",
           "team_tla": "KSA",
           "playedGames": 1,
-          "won": 1,
-          "draw": 0,
+          "won": 0,
+          "draw": 1,
           "lost": 0,
-          "points": 3,
+          "points": 1,
           "goalsFor": 1,
-          "goalsAgainst": 0,
-          "goalDifference": 1
+          "goalsAgainst": 1,
+          "goalDifference": 0
         },
         {
-          "position": 2,
+          "position": 1,
+          "team_id": 758,
+          "team_ja": "ウルグアイ",
+          "team_flag": "🇺🇾",
+          "team_tla": "URU",
+          "playedGames": 1,
+          "won": 0,
+          "draw": 1,
+          "lost": 0,
+          "points": 1,
+          "goalsFor": 1,
+          "goalsAgainst": 1,
+          "goalDifference": 0
+        },
+        {
+          "position": 3,
           "team_id": 760,
           "team_ja": "スペイン",
           "team_flag": "🇪🇸",
@@ -492,7 +507,7 @@
           "goalDifference": 0
         },
         {
-          "position": 3,
+          "position": 4,
           "team_id": 1930,
           "team_ja": "カーボベルデ",
           "team_flag": "🇨🇻",
@@ -505,21 +520,6 @@
           "goalsFor": 0,
           "goalsAgainst": 0,
           "goalDifference": 0
-        },
-        {
-          "position": 4,
-          "team_id": 758,
-          "team_ja": "ウルグアイ",
-          "team_flag": "🇺🇾",
-          "team_tla": "URU",
-          "playedGames": 1,
-          "won": 0,
-          "draw": 0,
-          "lost": 1,
-          "points": 0,
-          "goalsFor": 0,
-          "goalsAgainst": 1,
-          "goalDifference": -1
         }
       ]
     },
