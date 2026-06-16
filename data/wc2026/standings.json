@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-17T07:04:54.308383+09:00",
+  "updated": "2026-06-17T08:27:15.602135+09:00",
   "season_start": "2026-06-11",
   "season_end": "2026-07-19",
   "groups": [
@@ -543,33 +543,33 @@
         },
         {
           "position": 2,
+          "team_id": 8872,
+          "team_ja": "ノルウェー",
+          "team_flag": "🇳🇴",
+          "team_tla": "NOR",
+          "playedGames": 1,
+          "won": 1,
+          "draw": 0,
+          "lost": 0,
+          "points": 3,
+          "goalsFor": 2,
+          "goalsAgainst": 1,
+          "goalDifference": 1
+        },
+        {
+          "position": 3,
           "team_id": 8062,
           "team_ja": "イラク",
           "team_flag": "🇮🇶",
           "team_tla": "IRQ",
           "playedGames": 1,
           "won": 0,
-          "draw": 1,
-          "lost": 0,
-          "points": 1,
-          "goalsFor": 0,
-          "goalsAgainst": 0,
-          "goalDifference": 0
-        },
-        {
-          "position": 2,
-          "team_id": 8872,
-          "team_ja": "ノルウェー",
-          "team_flag": "🇳🇴",
-          "team_tla": "NOR",
-          "playedGames": 1,
-          "won": 0,
-          "draw": 1,
-          "lost": 0,
-          "points": 1,
-          "goalsFor": 0,
-          "goalsAgainst": 0,
-          "goalDifference": 0
+          "draw": 0,
+          "lost": 1,
+          "points": 0,
+          "goalsFor": 1,
+          "goalsAgainst": 2,
+          "goalDifference": -1
         },
         {
           "position": 4,
