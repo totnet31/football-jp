@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-17T08:27:15.602135+09:00",
+  "updated": "2026-06-17T17:23:49.088144+09:00",
   "season_start": "2026-06-11",
   "season_end": "2026-07-19",
   "groups": [
@@ -528,6 +528,21 @@
       "table": [
         {
           "position": 1,
+          "team_id": 8872,
+          "team_ja": "ノルウェー",
+          "team_flag": "🇳🇴",
+          "team_tla": "NOR",
+          "playedGames": 1,
+          "won": 1,
+          "draw": 0,
+          "lost": 0,
+          "points": 3,
+          "goalsFor": 4,
+          "goalsAgainst": 1,
+          "goalDifference": 3
+        },
+        {
+          "position": 2,
           "team_id": 773,
           "team_ja": "フランス",
           "team_flag": "🇫🇷",
@@ -542,37 +557,7 @@
           "goalDifference": 2
         },
         {
-          "position": 2,
-          "team_id": 8872,
-          "team_ja": "ノルウェー",
-          "team_flag": "🇳🇴",
-          "team_tla": "NOR",
-          "playedGames": 1,
-          "won": 1,
-          "draw": 0,
-          "lost": 0,
-          "points": 3,
-          "goalsFor": 2,
-          "goalsAgainst": 1,
-          "goalDifference": 1
-        },
-        {
           "position": 3,
-          "team_id": 8062,
-          "team_ja": "イラク",
-          "team_flag": "🇮🇶",
-          "team_tla": "IRQ",
-          "playedGames": 1,
-          "won": 0,
-          "draw": 0,
-          "lost": 1,
-          "points": 0,
-          "goalsFor": 1,
-          "goalsAgainst": 2,
-          "goalDifference": -1
-        },
-        {
-          "position": 4,
           "team_id": 804,
           "team_ja": "セネガル",
           "team_flag": "🇸🇳",
@@ -585,6 +570,21 @@
           "goalsFor": 1,
           "goalsAgainst": 3,
           "goalDifference": -2
+        },
+        {
+          "position": 4,
+          "team_id": 8062,
+          "team_ja": "イラク",
+          "team_flag": "🇮🇶",
+          "team_tla": "IRQ",
+          "playedGames": 1,
+          "won": 0,
+          "draw": 0,
+          "lost": 1,
+          "points": 0,
+          "goalsFor": 1,
+          "goalsAgainst": 4,
+          "goalDifference": -3
         }
       ]
     },
@@ -593,63 +593,63 @@
       "table": [
         {
           "position": 1,
-          "team_id": 778,
-          "team_ja": "アルジェリア",
-          "team_flag": "🇩🇿",
-          "team_tla": "ALG",
-          "playedGames": 0,
-          "won": 0,
-          "draw": 0,
-          "lost": 0,
-          "points": 0,
-          "goalsFor": 0,
-          "goalsAgainst": 0,
-          "goalDifference": 0
-        },
-        {
-          "position": 1,
           "team_id": 762,
           "team_ja": "アルゼンチン",
           "team_flag": "🇦🇷",
           "team_tla": "ARG",
-          "playedGames": 0,
-          "won": 0,
+          "playedGames": 1,
+          "won": 1,
           "draw": 0,
           "lost": 0,
-          "points": 0,
-          "goalsFor": 0,
+          "points": 3,
+          "goalsFor": 3,
           "goalsAgainst": 0,
-          "goalDifference": 0
+          "goalDifference": 3
         },
         {
-          "position": 1,
-          "team_id": 8049,
-          "team_ja": "ヨルダン",
-          "team_flag": "🇯🇴",
-          "team_tla": "JOR",
-          "playedGames": 0,
-          "won": 0,
-          "draw": 0,
-          "lost": 0,
-          "points": 0,
-          "goalsFor": 0,
-          "goalsAgainst": 0,
-          "goalDifference": 0
-        },
-        {
-          "position": 1,
+          "position": 2,
           "team_id": 816,
           "team_ja": "オーストリア",
           "team_flag": "🇦🇹",
           "team_tla": "AUT",
-          "playedGames": 0,
-          "won": 0,
+          "playedGames": 1,
+          "won": 1,
           "draw": 0,
           "lost": 0,
+          "points": 3,
+          "goalsFor": 3,
+          "goalsAgainst": 1,
+          "goalDifference": 2
+        },
+        {
+          "position": 3,
+          "team_id": 8049,
+          "team_ja": "ヨルダン",
+          "team_flag": "🇯🇴",
+          "team_tla": "JOR",
+          "playedGames": 1,
+          "won": 0,
+          "draw": 0,
+          "lost": 1,
+          "points": 0,
+          "goalsFor": 1,
+          "goalsAgainst": 3,
+          "goalDifference": -2
+        },
+        {
+          "position": 4,
+          "team_id": 778,
+          "team_ja": "アルジェリア",
+          "team_flag": "🇩🇿",
+          "team_tla": "ALG",
+          "playedGames": 1,
+          "won": 0,
+          "draw": 0,
+          "lost": 1,
           "points": 0,
           "goalsFor": 0,
-          "goalsAgainst": 0,
-          "goalDifference": 0
+          "goalsAgainst": 3,
+          "goalDifference": -3
         }
       ]
     },
