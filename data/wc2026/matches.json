@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-17T17:23:41.472715+09:00",
+  "updated": "2026-06-17T21:59:09.288550+09:00",
   "competition": "FIFA World Cup 2026",
   "match_count": 104,
   "_note": "累積保持モード：APIから消えた試合データもそのまま保持される。",
@@ -73,7 +73,10 @@
       "away_flag": "🇧🇦",
       "away_tla": "BIH",
       "away_crest": "https://crests.football-data.org/bosnia.svg",
-      "score": null,
+      "score": {
+        "home": 1,
+        "away": 1
+      },
       "venue": null
     },
     {
