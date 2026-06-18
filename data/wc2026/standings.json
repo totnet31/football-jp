@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-18T21:34:02.560465+09:00",
+  "updated": "2026-06-19T07:04:17.300816+09:00",
   "season_start": "2026-06-11",
   "season_end": "2026-07-19",
   "groups": [
@@ -42,13 +42,13 @@
           "team_ja": "チェコ",
           "team_flag": "🇨🇿",
           "team_tla": "CZE",
-          "playedGames": 1,
+          "playedGames": 2,
           "won": 0,
-          "draw": 0,
+          "draw": 1,
           "lost": 1,
-          "points": 0,
-          "goalsFor": 1,
-          "goalsAgainst": 2,
+          "points": 1,
+          "goalsFor": 2,
+          "goalsAgainst": 3,
           "goalDifference": -1
         },
         {
@@ -57,13 +57,13 @@
           "team_ja": "南アフリカ",
           "team_flag": "🇿🇦",
           "team_tla": "RSA",
-          "playedGames": 1,
+          "playedGames": 2,
           "won": 0,
-          "draw": 0,
+          "draw": 1,
           "lost": 1,
-          "points": 0,
-          "goalsFor": 0,
-          "goalsAgainst": 2,
+          "points": 1,
+          "goalsFor": 1,
+          "goalsAgainst": 3,
           "goalDifference": -2
         }
       ]
@@ -77,14 +77,14 @@
           "team_ja": "スイス",
           "team_flag": "🇨🇭",
           "team_tla": "SUI",
-          "playedGames": 1,
-          "won": 0,
+          "playedGames": 2,
+          "won": 1,
           "draw": 1,
           "lost": 0,
-          "points": 1,
-          "goalsFor": 1,
-          "goalsAgainst": 1,
-          "goalDifference": 0
+          "points": 4,
+          "goalsFor": 5,
+          "goalsAgainst": 2,
+          "goalDifference": 3
         },
         {
           "position": 2,
@@ -92,11 +92,11 @@
           "team_ja": "カナダ",
           "team_flag": "🇨🇦",
           "team_tla": "CAN",
-          "playedGames": 1,
+          "playedGames": 2,
           "won": 0,
-          "draw": 1,
+          "draw": 2,
           "lost": 0,
-          "points": 1,
+          "points": 2,
           "goalsFor": 1,
           "goalsAgainst": 1,
           "goalDifference": 0
@@ -107,11 +107,11 @@
           "team_ja": "カタール",
           "team_flag": "🇶🇦",
           "team_tla": "QAT",
-          "playedGames": 1,
+          "playedGames": 2,
           "won": 0,
-          "draw": 1,
+          "draw": 2,
           "lost": 0,
-          "points": 1,
+          "points": 2,
           "goalsFor": 1,
           "goalsAgainst": 1,
           "goalDifference": 0
@@ -122,14 +122,14 @@
           "team_ja": "ボスニア・ヘルツェゴビナ",
           "team_flag": "🇧🇦",
           "team_tla": "BIH",
-          "playedGames": 1,
+          "playedGames": 2,
           "won": 0,
           "draw": 1,
-          "lost": 0,
+          "lost": 1,
           "points": 1,
-          "goalsFor": 1,
-          "goalsAgainst": 1,
-          "goalDifference": 0
+          "goalsFor": 2,
+          "goalsAgainst": 5,
+          "goalDifference": -3
         }
       ]
     },
