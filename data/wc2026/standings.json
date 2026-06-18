@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-18T08:27:32.018026+09:00",
+  "updated": "2026-06-18T16:28:56.030339+09:00",
   "season_start": "2026-06-11",
   "season_end": "2026-07-19",
   "groups": [
@@ -658,6 +658,21 @@
       "table": [
         {
           "position": 1,
+          "team_id": 818,
+          "team_ja": "コロンビア",
+          "team_flag": "🇨🇴",
+          "team_tla": "COL",
+          "playedGames": 1,
+          "won": 1,
+          "draw": 0,
+          "lost": 0,
+          "points": 3,
+          "goalsFor": 3,
+          "goalsAgainst": 1,
+          "goalDifference": 2
+        },
+        {
+          "position": 2,
           "team_id": 1934,
           "team_ja": "コンゴ民主共和国",
           "team_flag": "🇨🇩",
@@ -672,7 +687,7 @@
           "goalDifference": 0
         },
         {
-          "position": 1,
+          "position": 2,
           "team_id": 765,
           "team_ja": "ポルトガル",
           "team_flag": "🇵🇹",
@@ -687,34 +702,19 @@
           "goalDifference": 0
         },
         {
-          "position": 3,
-          "team_id": 818,
-          "team_ja": "コロンビア",
-          "team_flag": "🇨🇴",
-          "team_tla": "COL",
-          "playedGames": 0,
-          "won": 0,
-          "draw": 0,
-          "lost": 0,
-          "points": 0,
-          "goalsFor": 0,
-          "goalsAgainst": 0,
-          "goalDifference": 0
-        },
-        {
-          "position": 3,
+          "position": 4,
           "team_id": 8070,
           "team_ja": "ウズベキスタン",
           "team_flag": "🇺🇿",
           "team_tla": "UZB",
-          "playedGames": 0,
+          "playedGames": 1,
           "won": 0,
           "draw": 0,
-          "lost": 0,
+          "lost": 1,
           "points": 0,
-          "goalsFor": 0,
-          "goalsAgainst": 0,
-          "goalDifference": 0
+          "goalsFor": 1,
+          "goalsAgainst": 3,
+          "goalDifference": -2
         }
       ]
     },
@@ -743,28 +743,28 @@
           "team_flag": "🇬🇭",
           "team_tla": "GHA",
           "playedGames": 1,
-          "won": 0,
-          "draw": 1,
+          "won": 1,
+          "draw": 0,
           "lost": 0,
-          "points": 1,
-          "goalsFor": 0,
+          "points": 3,
+          "goalsFor": 1,
           "goalsAgainst": 0,
-          "goalDifference": 0
+          "goalDifference": 1
         },
         {
-          "position": 2,
+          "position": 3,
           "team_id": 1836,
           "team_ja": "パナマ",
           "team_flag": "🇵🇦",
           "team_tla": "PAN",
           "playedGames": 1,
           "won": 0,
-          "draw": 1,
-          "lost": 0,
-          "points": 1,
+          "draw": 0,
+          "lost": 1,
+          "points": 0,
           "goalsFor": 0,
-          "goalsAgainst": 0,
-          "goalDifference": 0
+          "goalsAgainst": 1,
+          "goalDifference": -1
         },
         {
           "position": 4,
