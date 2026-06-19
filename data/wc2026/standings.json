@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-20T07:04:16.351476+09:00",
+  "updated": "2026-06-20T08:00:39.888539+09:00",
   "season_start": "2026-06-11",
   "season_end": "2026-07-19",
   "groups": [
@@ -138,30 +138,30 @@
       "table": [
         {
           "position": 1,
+          "team_id": 815,
+          "team_ja": "モロッコ",
+          "team_flag": "🇲🇦",
+          "team_tla": "MAR",
+          "playedGames": 2,
+          "won": 1,
+          "draw": 1,
+          "lost": 0,
+          "points": 4,
+          "goalsFor": 2,
+          "goalsAgainst": 1,
+          "goalDifference": 1
+        },
+        {
+          "position": 2,
           "team_id": 8873,
           "team_ja": "スコットランド",
           "team_flag": "🏴󠁧󠁢󠁳󠁣󠁴󠁿",
           "team_tla": "SCO",
           "playedGames": 2,
           "won": 1,
-          "draw": 1,
-          "lost": 0,
-          "points": 4,
-          "goalsFor": 1,
-          "goalsAgainst": 0,
-          "goalDifference": 1
-        },
-        {
-          "position": 2,
-          "team_id": 815,
-          "team_ja": "モロッコ",
-          "team_flag": "🇲🇦",
-          "team_tla": "MAR",
-          "playedGames": 2,
-          "won": 0,
-          "draw": 2,
-          "lost": 0,
-          "points": 2,
+          "draw": 0,
+          "lost": 1,
+          "points": 3,
           "goalsFor": 1,
           "goalsAgainst": 1,
           "goalDifference": 0
