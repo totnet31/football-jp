@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-20T08:00:31.918969+09:00",
+  "updated": "2026-06-20T15:57:08.951740+09:00",
   "competition": "FIFA World Cup 2026",
   "match_count": 104,
   "_note": "累積保持モード：APIから消えた試合データもそのまま保持される。",
@@ -757,7 +757,7 @@
     {
       "id": 537341,
       "kickoff_jst": "2026-06-20T09:30:00+09:00",
-      "status": "TIMED",
+      "status": "FINISHED",
       "stage": "GROUP_STAGE",
       "group": "GROUP_C",
       "matchday": 2,
@@ -773,13 +773,16 @@
       "away_flag": "🇭🇹",
       "away_tla": "HAI",
       "away_crest": "https://crests.football-data.org/haiti.svg",
-      "score": null,
+      "score": {
+        "home": 3,
+        "away": 0
+      },
       "venue": null
     },
     {
       "id": 537347,
       "kickoff_jst": "2026-06-20T12:00:00+09:00",
-      "status": "TIMED",
+      "status": "FINISHED",
       "stage": "GROUP_STAGE",
       "group": "GROUP_D",
       "matchday": 2,
@@ -795,7 +798,10 @@
       "away_flag": "🇵🇾",
       "away_tla": "PAR",
       "away_crest": "https://crests.football-data.org/761.svg",
-      "score": null,
+      "score": {
+        "home": 0,
+        "away": 1
+      },
       "venue": null
     },
     {

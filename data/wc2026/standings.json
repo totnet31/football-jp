@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-20T08:00:39.888539+09:00",
+  "updated": "2026-06-20T15:57:16.408074+09:00",
   "season_start": "2026-06-11",
   "season_end": "2026-07-19",
   "groups": [
@@ -138,6 +138,21 @@
       "table": [
         {
           "position": 1,
+          "team_id": 764,
+          "team_ja": "ブラジル",
+          "team_flag": "🇧🇷",
+          "team_tla": "BRA",
+          "playedGames": 2,
+          "won": 1,
+          "draw": 1,
+          "lost": 0,
+          "points": 4,
+          "goalsFor": 4,
+          "goalsAgainst": 1,
+          "goalDifference": 3
+        },
+        {
+          "position": 2,
           "team_id": 815,
           "team_ja": "モロッコ",
           "team_flag": "🇲🇦",
@@ -152,7 +167,7 @@
           "goalDifference": 1
         },
         {
-          "position": 2,
+          "position": 3,
           "team_id": 8873,
           "team_ja": "スコットランド",
           "team_flag": "🏴󠁧󠁢󠁳󠁣󠁴󠁿",
@@ -167,34 +182,19 @@
           "goalDifference": 0
         },
         {
-          "position": 3,
-          "team_id": 764,
-          "team_ja": "ブラジル",
-          "team_flag": "🇧🇷",
-          "team_tla": "BRA",
-          "playedGames": 1,
-          "won": 0,
-          "draw": 1,
-          "lost": 0,
-          "points": 1,
-          "goalsFor": 1,
-          "goalsAgainst": 1,
-          "goalDifference": 0
-        },
-        {
           "position": 4,
           "team_id": 836,
           "team_ja": "ハイチ",
           "team_flag": "🇭🇹",
           "team_tla": "HAI",
-          "playedGames": 1,
+          "playedGames": 2,
           "won": 0,
           "draw": 0,
-          "lost": 1,
+          "lost": 2,
           "points": 0,
           "goalsFor": 0,
-          "goalsAgainst": 1,
-          "goalDifference": -1
+          "goalsAgainst": 4,
+          "goalDifference": -4
         }
       ]
     },
@@ -233,32 +233,32 @@
         },
         {
           "position": 3,
-          "team_id": 803,
-          "team_ja": "トルコ",
-          "team_flag": "🇹🇷",
-          "team_tla": "TUR",
-          "playedGames": 1,
-          "won": 0,
-          "draw": 0,
-          "lost": 1,
-          "points": 0,
-          "goalsFor": 0,
-          "goalsAgainst": 2,
-          "goalDifference": -2
-        },
-        {
-          "position": 4,
           "team_id": 761,
           "team_ja": "パラグアイ",
           "team_flag": "🇵🇾",
           "team_tla": "PAR",
-          "playedGames": 1,
-          "won": 0,
+          "playedGames": 2,
+          "won": 1,
           "draw": 0,
           "lost": 1,
-          "points": 0,
-          "goalsFor": 1,
+          "points": 3,
+          "goalsFor": 2,
           "goalsAgainst": 4,
+          "goalDifference": -2
+        },
+        {
+          "position": 4,
+          "team_id": 803,
+          "team_ja": "トルコ",
+          "team_flag": "🇹🇷",
+          "team_tla": "TUR",
+          "playedGames": 2,
+          "won": 0,
+          "draw": 0,
+          "lost": 2,
+          "points": 0,
+          "goalsFor": 0,
+          "goalsAgainst": 3,
           "goalDifference": -3
         }
       ]
