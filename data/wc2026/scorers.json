@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-21T20:52:59.284687+09:00",
+  "updated": "2026-06-22T07:04:16.002486+09:00",
   "scorers": [
     {
       "player_id": 6928,
@@ -206,6 +206,17 @@
       "team_id": 766,
       "team_ja": "日本",
       "team_flag": "🇯🇵",
+      "goals": 2,
+      "assists": 1,
+      "playedMatches": 2
+    },
+    {
+      "player_id": 180137,
+      "player_name": "Mikel Oyarzabal",
+      "nationality": "Spain",
+      "team_id": 760,
+      "team_ja": "スペイン",
+      "team_flag": "🇪🇸",
       "goals": 2,
       "assists": 1,
       "playedMatches": 2
@@ -516,7 +527,7 @@
       "team_flag": "🇸🇦",
       "goals": 1,
       "assists": null,
-      "playedMatches": 1
+      "playedMatches": 2
     },
     {
       "player_id": 28770,
@@ -527,7 +538,7 @@
       "team_flag": "🇺🇾",
       "goals": 1,
       "assists": null,
-      "playedMatches": 1
+      "playedMatches": 2
     },
     {
       "player_id": 3804,
@@ -538,18 +549,7 @@
       "team_flag": "🇮🇷",
       "goals": 1,
       "assists": 1,
-      "playedMatches": 1
-    },
-    {
-      "player_id": 172641,
-      "player_name": "Mohammad Mohebi",
-      "nationality": "Iran",
-      "team_id": 840,
-      "team_ja": "イラン",
-      "team_flag": "🇮🇷",
-      "goals": 1,
-      "assists": null,
-      "playedMatches": 1
+      "playedMatches": 2
     }
   ]
 }
