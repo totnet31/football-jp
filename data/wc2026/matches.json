@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-22T08:15:23.684942+09:00",
+  "updated": "2026-06-22T17:50:50.449135+09:00",
   "competition": "FIFA World Cup 2026",
   "match_count": 104,
   "_note": "累積保持モード：APIから消えた試合データもそのまま保持される。",
@@ -975,14 +975,14 @@
       "away_crest": "https://crests.football-data.org/cape_verde.svg",
       "score": {
         "home": 2,
-        "away": 1
+        "away": 2
       },
       "venue": null
     },
     {
       "id": 537366,
       "kickoff_jst": "2026-06-22T10:00:00+09:00",
-      "status": "TIMED",
+      "status": "FINISHED",
       "stage": "GROUP_STAGE",
       "group": "GROUP_G",
       "matchday": 2,
@@ -998,7 +998,10 @@
       "away_flag": "🇪🇬",
       "away_tla": "EGY",
       "away_crest": "https://crests.football-data.org/825.svg",
-      "score": null,
+      "score": {
+        "home": 1,
+        "away": 3
+      },
       "venue": null
     },
     {
