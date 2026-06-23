@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-23T21:16:14.520276+09:00",
+  "updated": "2026-06-24T07:04:28.927952+09:00",
   "season_start": "2026-06-11",
   "season_end": "2026-07-19",
   "groups": [
@@ -658,6 +658,21 @@
       "table": [
         {
           "position": 1,
+          "team_id": 765,
+          "team_ja": "ポルトガル",
+          "team_flag": "🇵🇹",
+          "team_tla": "POR",
+          "playedGames": 2,
+          "won": 1,
+          "draw": 1,
+          "lost": 0,
+          "points": 4,
+          "goalsFor": 6,
+          "goalsAgainst": 1,
+          "goalDifference": 5
+        },
+        {
+          "position": 2,
           "team_id": 818,
           "team_ja": "コロンビア",
           "team_flag": "🇨🇴",
@@ -672,26 +687,11 @@
           "goalDifference": 2
         },
         {
-          "position": 2,
+          "position": 3,
           "team_id": 1934,
           "team_ja": "コンゴ民主共和国",
           "team_flag": "🇨🇩",
           "team_tla": "COD",
-          "playedGames": 1,
-          "won": 0,
-          "draw": 1,
-          "lost": 0,
-          "points": 1,
-          "goalsFor": 1,
-          "goalsAgainst": 1,
-          "goalDifference": 0
-        },
-        {
-          "position": 2,
-          "team_id": 765,
-          "team_ja": "ポルトガル",
-          "team_flag": "🇵🇹",
-          "team_tla": "POR",
           "playedGames": 1,
           "won": 0,
           "draw": 1,
@@ -707,14 +707,14 @@
           "team_ja": "ウズベキスタン",
           "team_flag": "🇺🇿",
           "team_tla": "UZB",
-          "playedGames": 1,
+          "playedGames": 2,
           "won": 0,
           "draw": 0,
-          "lost": 1,
+          "lost": 2,
           "points": 0,
           "goalsFor": 1,
-          "goalsAgainst": 3,
-          "goalDifference": -2
+          "goalsAgainst": 8,
+          "goalDifference": -7
         }
       ]
     },
@@ -727,11 +727,11 @@
           "team_ja": "イングランド",
           "team_flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
           "team_tla": "ENG",
-          "playedGames": 1,
+          "playedGames": 2,
           "won": 1,
-          "draw": 0,
+          "draw": 1,
           "lost": 0,
-          "points": 3,
+          "points": 4,
           "goalsFor": 4,
           "goalsAgainst": 2,
           "goalDifference": 2
@@ -742,11 +742,11 @@
           "team_ja": "ガーナ",
           "team_flag": "🇬🇭",
           "team_tla": "GHA",
-          "playedGames": 1,
+          "playedGames": 2,
           "won": 1,
-          "draw": 0,
+          "draw": 1,
           "lost": 0,
-          "points": 3,
+          "points": 4,
           "goalsFor": 1,
           "goalsAgainst": 0,
           "goalDifference": 1
