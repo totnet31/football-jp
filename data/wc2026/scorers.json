@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-23T08:22:56.032582+09:00",
+  "updated": "2026-06-23T15:42:08.133122+09:00",
   "scorers": [
     {
       "player_id": 3218,
@@ -13,6 +13,28 @@
       "playedMatches": 2
     },
     {
+      "player_id": 3374,
+      "player_name": "Kylian Mbappé",
+      "nationality": "France",
+      "team_id": 773,
+      "team_ja": "フランス",
+      "team_flag": "🇫🇷",
+      "goals": 4,
+      "assists": null,
+      "playedMatches": 2
+    },
+    {
+      "player_id": 38101,
+      "player_name": "Erling Haaland",
+      "nationality": "Norway",
+      "team_id": 8872,
+      "team_ja": "ノルウェー",
+      "team_flag": "🇳🇴",
+      "goals": 4,
+      "assists": null,
+      "playedMatches": 2
+    },
+    {
       "player_id": 6928,
       "player_name": "Deniz Undav",
       "nationality": "Germany",
@@ -21,17 +43,6 @@
       "team_flag": "🇩🇪",
       "goals": 3,
       "assists": 2,
-      "playedMatches": 2
-    },
-    {
-      "player_id": 3374,
-      "player_name": "Kylian Mbappé",
-      "nationality": "France",
-      "team_id": 773,
-      "team_ja": "フランス",
-      "team_flag": "🇫🇷",
-      "goals": 3,
-      "assists": null,
       "playedMatches": 2
     },
     {
@@ -145,17 +156,6 @@
       "playedMatches": 2
     },
     {
-      "player_id": 38101,
-      "player_name": "Erling Haaland",
-      "nationality": "Norway",
-      "team_id": 8872,
-      "team_ja": "ノルウェー",
-      "team_flag": "🇳🇴",
-      "goals": 2,
-      "assists": null,
-      "playedMatches": 2
-    },
-    {
       "player_id": 8004,
       "player_name": "Harry Kane",
       "nationality": "England",
@@ -230,6 +230,17 @@
       "team_flag": "🇪🇸",
       "goals": 2,
       "assists": 1,
+      "playedMatches": 2
+    },
+    {
+      "player_id": 3638,
+      "player_name": "Ismaïla Sarr",
+      "nationality": "Senegal",
+      "team_id": 804,
+      "team_ja": "セネガル",
+      "team_flag": "🇸🇳",
+      "goals": 2,
+      "assists": null,
       "playedMatches": 2
     },
     {
@@ -538,17 +549,6 @@
       "team_flag": "🇸🇦",
       "goals": 1,
       "assists": null,
-      "playedMatches": 2
-    },
-    {
-      "player_id": 3804,
-      "player_name": "Ramin Rezaeian",
-      "nationality": "Iran",
-      "team_id": 840,
-      "team_ja": "イラン",
-      "team_flag": "🇮🇷",
-      "goals": 1,
-      "assists": 1,
       "playedMatches": 2
     }
   ]
