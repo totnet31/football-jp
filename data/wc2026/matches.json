@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-23T08:22:40.745001+09:00",
+  "updated": "2026-06-23T15:41:52.595889+09:00",
   "competition": "FIFA World Cup 2026",
   "match_count": 104,
   "_note": "累積保持モード：APIから消えた試合データもそのまま保持される。",
@@ -1049,7 +1049,7 @@
       "away_tla": "IRQ",
       "away_crest": "https://crests.football-data.org/iraq.svg",
       "score": {
-        "home": 1,
+        "home": 3,
         "away": 0
       },
       "venue": null
@@ -1057,7 +1057,7 @@
     {
       "id": 537394,
       "kickoff_jst": "2026-06-23T09:00:00+09:00",
-      "status": "TIMED",
+      "status": "FINISHED",
       "stage": "GROUP_STAGE",
       "group": "GROUP_I",
       "matchday": 2,
@@ -1073,13 +1073,16 @@
       "away_flag": "🇸🇳",
       "away_tla": "SEN",
       "away_crest": "https://crests.football-data.org/senegal.svg",
-      "score": null,
+      "score": {
+        "home": 3,
+        "away": 2
+      },
       "venue": null
     },
     {
       "id": 537400,
       "kickoff_jst": "2026-06-23T12:00:00+09:00",
-      "status": "TIMED",
+      "status": "FINISHED",
       "stage": "GROUP_STAGE",
       "group": "GROUP_J",
       "matchday": 2,
@@ -1095,7 +1098,10 @@
       "away_flag": "🇩🇿",
       "away_tla": "ALG",
       "away_crest": "https://crests.football-data.org/algeria.svg",
-      "score": null,
+      "score": {
+        "home": 1,
+        "away": 2
+      },
       "venue": null
     },
     {
