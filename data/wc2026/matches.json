@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-24T20:55:09.969612+09:00",
+  "updated": "2026-06-25T07:04:12.998284+09:00",
   "competition": "FIFA World Cup 2026",
   "match_count": 104,
   "_note": "累積保持モード：APIから消えた試合データもそのまま保持される。",
@@ -1207,7 +1207,7 @@
     {
       "id": 537337,
       "kickoff_jst": "2026-06-25T04:00:00+09:00",
-      "status": "TIMED",
+      "status": "FINISHED",
       "stage": "GROUP_STAGE",
       "group": "GROUP_B",
       "matchday": 3,
@@ -1223,13 +1223,16 @@
       "away_flag": "🇨🇦",
       "away_tla": "CAN",
       "away_crest": "https://crests.football-data.org/canada.svg",
-      "score": null,
+      "score": {
+        "home": 2,
+        "away": 1
+      },
       "venue": null
     },
     {
       "id": 537338,
       "kickoff_jst": "2026-06-25T04:00:00+09:00",
-      "status": "TIMED",
+      "status": "FINISHED",
       "stage": "GROUP_STAGE",
       "group": "GROUP_B",
       "matchday": 3,
@@ -1245,7 +1248,10 @@
       "away_flag": "🇶🇦",
       "away_tla": "QAT",
       "away_crest": "https://crests.football-data.org/8030.svg",
-      "score": null,
+      "score": {
+        "home": 3,
+        "away": 1
+      },
       "venue": null
     },
     {
