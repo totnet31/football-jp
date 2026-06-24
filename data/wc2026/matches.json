@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-24T08:11:38.500154+09:00",
+  "updated": "2026-06-24T15:38:19.616680+09:00",
   "competition": "FIFA World Cup 2026",
   "match_count": 104,
   "_note": "累積保持モード：APIから消えた試合データもそのまま保持される。",
@@ -1175,14 +1175,14 @@
       "away_crest": "https://crests.football-data.org/799.svg",
       "score": {
         "home": 0,
-        "away": 0
+        "away": 1
       },
       "venue": null
     },
     {
       "id": 537406,
       "kickoff_jst": "2026-06-24T11:00:00+09:00",
-      "status": "TIMED",
+      "status": "FINISHED",
       "stage": "GROUP_STAGE",
       "group": "GROUP_K",
       "matchday": 2,
@@ -1198,7 +1198,10 @@
       "away_flag": "🇨🇩",
       "away_tla": "COD",
       "away_crest": "https://crests.football-data.org/congo_dr.svg",
-      "score": null,
+      "score": {
+        "home": 1,
+        "away": 0
+      },
       "venue": null
     },
     {
@@ -2044,12 +2047,12 @@
       "stage": "LAST_32",
       "group": null,
       "matchday": null,
-      "home_id": null,
-      "home_ja": "未定",
-      "home_en": null,
-      "home_flag": "",
-      "home_tla": "",
-      "home_crest": null,
+      "home_id": 762,
+      "home_ja": "アルゼンチン",
+      "home_en": "Argentina",
+      "home_flag": "🇦🇷",
+      "home_tla": "ARG",
+      "home_crest": "https://crests.football-data.org/762.png",
       "away_id": null,
       "away_ja": "未定",
       "away_en": null,
