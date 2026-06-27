@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-28T07:04:18.793267+09:00",
+  "updated": "2026-06-28T08:05:38.553575+09:00",
   "scorers": [
     {
       "player_id": 3218,
@@ -85,6 +85,17 @@
       "team_id": 783,
       "team_ja": "ニュージーランド",
       "team_flag": "🇳🇿",
+      "goals": 3,
+      "assists": null,
+      "playedMatches": 3
+    },
+    {
+      "player_id": 8004,
+      "player_name": "Harry Kane",
+      "nationality": "England",
+      "team_id": 770,
+      "team_ja": "イングランド",
+      "team_flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
       "goals": 3,
       "assists": null,
       "playedMatches": 3
@@ -244,14 +255,14 @@
       "playedMatches": 3
     },
     {
-      "player_id": 8004,
-      "player_name": "Harry Kane",
+      "player_id": 125010,
+      "player_name": "Jude Bellingham",
       "nationality": "England",
       "team_id": 770,
       "team_ja": "イングランド",
       "team_flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
       "goals": 2,
-      "assists": null,
+      "assists": 1,
       "playedMatches": 3
     },
     {
@@ -263,7 +274,7 @@
       "team_flag": "🇨🇴",
       "goals": 2,
       "assists": null,
-      "playedMatches": 1
+      "playedMatches": 2
     },
     {
       "player_id": 31913,
@@ -340,7 +351,7 @@
       "team_flag": "🇵🇹",
       "goals": 2,
       "assists": null,
-      "playedMatches": 2
+      "playedMatches": 3
     },
     {
       "player_id": 8412,
@@ -539,17 +550,6 @@
       "goals": 1,
       "assists": null,
       "playedMatches": 2
-    },
-    {
-      "player_id": 144393,
-      "player_name": "Jamal Musiala",
-      "nationality": "Germany",
-      "team_id": 759,
-      "team_ja": "ドイツ",
-      "team_flag": "🇩🇪",
-      "goals": 1,
-      "assists": null,
-      "playedMatches": 3
     }
   ]
 }
