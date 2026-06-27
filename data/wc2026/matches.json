@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-27T20:05:17.933453+09:00",
+  "updated": "2026-06-28T07:04:02.781238+09:00",
   "competition": "FIFA World Cup 2026",
   "match_count": 104,
   "_note": "累積保持モード：APIから消えた試合データもそのまま保持される。",
@@ -1657,7 +1657,7 @@
     {
       "id": 537413,
       "kickoff_jst": "2026-06-28T06:00:00+09:00",
-      "status": "TIMED",
+      "status": "FINISHED",
       "stage": "GROUP_STAGE",
       "group": "GROUP_L",
       "matchday": 3,
@@ -1673,13 +1673,16 @@
       "away_flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
       "away_tla": "ENG",
       "away_crest": "https://crests.football-data.org/770.svg",
-      "score": null,
+      "score": {
+        "home": 0,
+        "away": 0
+      },
       "venue": null
     },
     {
       "id": 537414,
       "kickoff_jst": "2026-06-28T06:00:00+09:00",
-      "status": "TIMED",
+      "status": "FINISHED",
       "stage": "GROUP_STAGE",
       "group": "GROUP_L",
       "matchday": 3,
@@ -1695,7 +1698,10 @@
       "away_flag": "🇬🇭",
       "away_tla": "GHA",
       "away_crest": "https://crests.football-data.org/ghana.svg",
-      "score": null,
+      "score": {
+        "home": 1,
+        "away": 0
+      },
       "venue": null
     },
     {
