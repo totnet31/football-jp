@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-27T08:08:44.169139+09:00",
+  "updated": "2026-06-27T15:23:09.713943+09:00",
   "scorers": [
     {
       "player_id": 3218,
@@ -76,6 +76,17 @@
       "team_flag": "🇩🇪",
       "goals": 3,
       "assists": 2,
+      "playedMatches": 3
+    },
+    {
+      "player_id": 118981,
+      "player_name": "Elijah Just",
+      "nationality": "New Zealand",
+      "team_id": 783,
+      "team_ja": "ニュージーランド",
+      "team_flag": "🇳🇿",
+      "goals": 3,
+      "assists": null,
       "playedMatches": 3
     },
     {
@@ -222,15 +233,15 @@
       "playedMatches": 3
     },
     {
-      "player_id": 118981,
-      "player_name": "Elijah Just",
-      "nationality": "New Zealand",
-      "team_id": 783,
-      "team_ja": "ニュージーランド",
-      "team_flag": "🇳🇿",
+      "player_id": 3804,
+      "player_name": "Ramin Rezaeian",
+      "nationality": "Iran",
+      "team_id": 840,
+      "team_ja": "イラン",
+      "team_flag": "🇮🇷",
       "goals": 2,
-      "assists": null,
-      "playedMatches": 2
+      "assists": 1,
+      "playedMatches": 3
     },
     {
       "player_id": 8004,
@@ -351,6 +362,17 @@
       "team_flag": "🇸🇳",
       "goals": 2,
       "assists": 1,
+      "playedMatches": 3
+    },
+    {
+      "player_id": 8984,
+      "player_name": "Leandro Trossard",
+      "nationality": "Belgium",
+      "team_id": 805,
+      "team_ja": "ベルギー",
+      "team_flag": "🇧🇪",
+      "goals": 2,
+      "assists": null,
       "playedMatches": 3
     },
     {
@@ -527,28 +549,6 @@
       "team_flag": "🇩🇪",
       "goals": 1,
       "assists": null,
-      "playedMatches": 3
-    },
-    {
-      "player_id": 184533,
-      "player_name": "Nathaniel Brown",
-      "nationality": "Germany",
-      "team_id": 759,
-      "team_ja": "ドイツ",
-      "team_flag": "🇩🇪",
-      "goals": 1,
-      "assists": 1,
-      "playedMatches": 2
-    },
-    {
-      "player_id": 7869,
-      "player_name": "Virgil van Dijk",
-      "nationality": "Netherlands",
-      "team_id": 8601,
-      "team_ja": "オランダ",
-      "team_flag": "🇳🇱",
-      "goals": 1,
-      "assists": 1,
       "playedMatches": 3
     }
   ]
