@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-28T08:05:38.553575+09:00",
+  "updated": "2026-06-28T15:56:35.726246+09:00",
   "scorers": [
     {
       "player_id": 3218,
@@ -8,9 +8,9 @@
       "team_id": 762,
       "team_ja": "アルゼンチン",
       "team_flag": "🇦🇷",
-      "goals": 5,
+      "goals": 6,
       "assists": null,
-      "playedMatches": 2
+      "playedMatches": 3
     },
     {
       "player_id": 1556,
@@ -88,6 +88,17 @@
       "goals": 3,
       "assists": null,
       "playedMatches": 3
+    },
+    {
+      "player_id": 612,
+      "player_name": "Yoane Wissa",
+      "nationality": "Congo DR",
+      "team_id": 1934,
+      "team_ja": "コンゴ民主共和国",
+      "team_flag": "🇨🇩",
+      "goals": 3,
+      "assists": null,
+      "playedMatches": 2
     },
     {
       "player_id": 8004,
@@ -255,6 +266,17 @@
       "playedMatches": 3
     },
     {
+      "player_id": 8223,
+      "player_name": "Marko Arnautovic",
+      "nationality": "Austria",
+      "team_id": 816,
+      "team_ja": "オーストリア",
+      "team_flag": "🇦🇹",
+      "goals": 2,
+      "assists": null,
+      "playedMatches": 3
+    },
+    {
       "player_id": 125010,
       "player_name": "Jude Bellingham",
       "nationality": "England",
@@ -384,6 +406,17 @@
       "team_flag": "🇧🇪",
       "goals": 2,
       "assists": null,
+      "playedMatches": 3
+    },
+    {
+      "player_id": 8069,
+      "player_name": "Riyad Mahrez",
+      "nationality": "Algeria",
+      "team_id": 778,
+      "team_ja": "アルジェリア",
+      "team_flag": "🇩🇿",
+      "goals": 2,
+      "assists": 2,
       "playedMatches": 3
     },
     {
@@ -517,39 +550,6 @@
       "goals": 1,
       "assists": null,
       "playedMatches": 3
-    },
-    {
-      "player_id": 101074,
-      "player_name": "Felix Kalu Nmecha",
-      "nationality": "Germany",
-      "team_id": 759,
-      "team_ja": "ドイツ",
-      "team_flag": "🇩🇪",
-      "goals": 1,
-      "assists": 1,
-      "playedMatches": 3
-    },
-    {
-      "player_id": 166156,
-      "player_name": "Livano Comenencia",
-      "nationality": "Curaçao",
-      "team_id": 9460,
-      "team_ja": "キュラソー",
-      "team_flag": "🇨🇼",
-      "goals": 1,
-      "assists": null,
-      "playedMatches": 3
-    },
-    {
-      "player_id": 75539,
-      "player_name": "Nico Schlotterbeck",
-      "nationality": "Germany",
-      "team_id": 759,
-      "team_ja": "ドイツ",
-      "team_flag": "🇩🇪",
-      "goals": 1,
-      "assists": null,
-      "playedMatches": 2
     }
   ]
 }
