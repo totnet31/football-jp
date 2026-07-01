@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-01T21:17:26.616751+09:00",
+  "updated": "2026-07-02T07:04:29.319369+09:00",
   "scorers": [
     {
       "player_id": 3374,
@@ -35,6 +35,17 @@
       "playedMatches": 4
     },
     {
+      "player_id": 8004,
+      "player_name": "Harry Kane",
+      "nationality": "England",
+      "team_id": 770,
+      "team_ja": "イングランド",
+      "team_flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+      "goals": 5,
+      "assists": null,
+      "playedMatches": 4
+    },
+    {
       "player_id": 1556,
       "player_name": "Vinicius Junior",
       "nationality": "Brazil",
@@ -54,6 +65,17 @@
       "team_flag": "🇫🇷",
       "goals": 4,
       "assists": 2,
+      "playedMatches": 4
+    },
+    {
+      "player_id": 3638,
+      "player_name": "Ismaïla Sarr",
+      "nationality": "Senegal",
+      "team_id": 804,
+      "team_ja": "セネガル",
+      "team_flag": "🇸🇳",
+      "goals": 4,
+      "assists": 1,
       "playedMatches": 4
     },
     {
@@ -120,17 +142,6 @@
       "team_flag": "🇨🇩",
       "goals": 3,
       "assists": null,
-      "playedMatches": 2
-    },
-    {
-      "player_id": 8004,
-      "player_name": "Harry Kane",
-      "nationality": "England",
-      "team_id": 770,
-      "team_ja": "イングランド",
-      "team_flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
-      "goals": 3,
-      "assists": null,
       "playedMatches": 3
     },
     {
@@ -187,17 +198,6 @@
       "goals": 3,
       "assists": 1,
       "playedMatches": 4
-    },
-    {
-      "player_id": 3638,
-      "player_name": "Ismaïla Sarr",
-      "nationality": "Senegal",
-      "team_id": 804,
-      "team_ja": "セネガル",
-      "team_flag": "🇸🇳",
-      "goals": 3,
-      "assists": 1,
-      "playedMatches": 3
     },
     {
       "player_id": 3305,
@@ -329,7 +329,7 @@
       "team_flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
       "goals": 2,
       "assists": 1,
-      "playedMatches": 3
+      "playedMatches": 4
     },
     {
       "player_id": 22010,
@@ -420,6 +420,17 @@
       "playedMatches": 3
     },
     {
+      "player_id": 171876,
+      "player_name": "Habib Diarra",
+      "nationality": "Senegal",
+      "team_id": 804,
+      "team_ja": "セネガル",
+      "team_flag": "🇸🇳",
+      "goals": 2,
+      "assists": null,
+      "playedMatches": 4
+    },
+    {
       "player_id": 633,
       "player_name": "Pape Gueye",
       "nationality": "Senegal",
@@ -428,7 +439,7 @@
       "team_flag": "🇸🇳",
       "goals": 2,
       "assists": 1,
-      "playedMatches": 3
+      "playedMatches": 4
     },
     {
       "player_id": 8984,
@@ -438,8 +449,19 @@
       "team_ja": "ベルギー",
       "team_flag": "🇧🇪",
       "goals": 2,
-      "assists": null,
-      "playedMatches": 3
+      "assists": 1,
+      "playedMatches": 4
+    },
+    {
+      "player_id": 3662,
+      "player_name": "Romelu Lukaku",
+      "nationality": "Belgium",
+      "team_id": 805,
+      "team_ja": "ベルギー",
+      "team_flag": "🇧🇪",
+      "goals": 2,
+      "assists": 1,
+      "playedMatches": 4
     },
     {
       "player_id": 8069,
@@ -527,28 +549,6 @@
       "team_flag": "🇨🇭",
       "goals": 1,
       "assists": 2,
-      "playedMatches": 3
-    },
-    {
-      "player_id": 115828,
-      "player_name": "Boualem Khoukhi",
-      "nationality": "Qatar",
-      "team_id": 8030,
-      "team_ja": "カタール",
-      "team_flag": "🇶🇦",
-      "goals": 1,
-      "assists": null,
-      "playedMatches": 3
-    },
-    {
-      "player_id": 34646,
-      "player_name": "John McGinn",
-      "nationality": "Scotland",
-      "team_id": 8873,
-      "team_ja": "スコットランド",
-      "team_flag": "🏴󠁧󠁢󠁳󠁣󠁴󠁿",
-      "goals": 1,
-      "assists": null,
       "playedMatches": 3
     }
   ]
