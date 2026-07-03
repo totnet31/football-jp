@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-03T08:09:15.399838+09:00",
+  "updated": "2026-07-03T15:23:17.522041+09:00",
   "competition": "FIFA World Cup 2026",
   "match_count": 104,
   "_note": "累積保持モード：APIから消えた試合データもそのまま保持される。",
@@ -2099,15 +2099,15 @@
       "away_tla": "CRO",
       "away_crest": "https://crests.football-data.org/799.svg",
       "score": {
-        "home": 0,
-        "away": 0
+        "home": 2,
+        "away": 1
       },
       "venue": null
     },
     {
       "id": 537429,
       "kickoff_jst": "2026-07-03T12:00:00+09:00",
-      "status": "TIMED",
+      "status": "FINISHED",
       "stage": "LAST_32",
       "group": null,
       "matchday": null,
@@ -2123,7 +2123,10 @@
       "away_flag": "🇩🇿",
       "away_tla": "ALG",
       "away_crest": "https://crests.football-data.org/algeria.svg",
-      "score": null,
+      "score": {
+        "home": 2,
+        "away": 0
+      },
       "venue": null
     },
     {
