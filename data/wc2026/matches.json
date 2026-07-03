@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-03T20:42:09.422320+09:00",
+  "updated": "2026-07-04T07:04:30.144676+09:00",
   "competition": "FIFA World Cup 2026",
   "match_count": 104,
   "_note": "累積保持モード：APIから消えた試合データもそのまま保持される。",
@@ -2132,7 +2132,7 @@
     {
       "id": 537428,
       "kickoff_jst": "2026-07-04T03:00:00+09:00",
-      "status": "TIMED",
+      "status": "FINISHED",
       "stage": "LAST_32",
       "group": null,
       "matchday": null,
@@ -2148,7 +2148,10 @@
       "away_flag": "🇪🇬",
       "away_tla": "EGY",
       "away_crest": "https://crests.football-data.org/825.svg",
-      "score": null,
+      "score": {
+        "home": 3,
+        "away": 5
+      },
       "venue": null
     },
     {
