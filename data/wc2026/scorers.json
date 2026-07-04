@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-04T20:01:32.778458+09:00",
+  "updated": "2026-07-05T07:04:53.625420+09:00",
   "scorers": [
     {
       "player_id": 3218,
@@ -9,7 +9,7 @@
       "team_ja": "アルゼンチン",
       "team_flag": "🇦🇷",
       "goals": 7,
-      "assists": 1,
+      "assists": null,
       "playedMatches": 4
     },
     {
@@ -21,7 +21,7 @@
       "team_flag": "🇫🇷",
       "goals": 6,
       "assists": 2,
-      "playedMatches": 4
+      "playedMatches": 5
     },
     {
       "player_id": 38101,
@@ -76,7 +76,7 @@
       "team_flag": "🇫🇷",
       "goals": 4,
       "assists": 2,
-      "playedMatches": 4
+      "playedMatches": 5
     },
     {
       "player_id": 3638,
@@ -120,7 +120,7 @@
       "team_flag": "🇲🇦",
       "goals": 3,
       "assists": null,
-      "playedMatches": 4
+      "playedMatches": 5
     },
     {
       "player_id": 171,
@@ -186,7 +186,7 @@
       "team_flag": "🇨🇦",
       "goals": 3,
       "assists": null,
-      "playedMatches": 4
+      "playedMatches": 5
     },
     {
       "player_id": 30842,
@@ -252,7 +252,7 @@
       "team_flag": "🇨🇦",
       "goals": 2,
       "assists": null,
-      "playedMatches": 4
+      "playedMatches": 5
     },
     {
       "player_id": 3483,
@@ -351,7 +351,7 @@
       "team_flag": "🇫🇷",
       "goals": 2,
       "assists": 1,
-      "playedMatches": 4
+      "playedMatches": 5
     },
     {
       "player_id": 8223,
@@ -431,6 +431,17 @@
       "playedMatches": 4
     },
     {
+      "player_id": 130502,
+      "player_name": "Soufiane Rahimi",
+      "nationality": "Morocco",
+      "team_id": 815,
+      "team_ja": "モロッコ",
+      "team_flag": "🇲🇦",
+      "goals": 2,
+      "assists": 1,
+      "playedMatches": 5
+    },
+    {
       "player_id": 8412,
       "player_name": "Nicolas Pépé",
       "nationality": "Ivory Coast",
@@ -508,6 +519,17 @@
       "playedMatches": 4
     },
     {
+      "player_id": 122511,
+      "player_name": "Azzedine Ounahi",
+      "nationality": "Morocco",
+      "team_id": 815,
+      "team_ja": "モロッコ",
+      "team_flag": "🇲🇦",
+      "goals": 2,
+      "assists": null,
+      "playedMatches": 5
+    },
+    {
       "player_id": 1878,
       "player_name": "Ladislav Krejčí",
       "nationality": "Czech Republic",
@@ -528,28 +550,6 @@
       "goals": 1,
       "assists": 1,
       "playedMatches": 3
-    },
-    {
-      "player_id": 191295,
-      "player_name": "Hyun-Gyu Oh",
-      "nationality": "South Korea",
-      "team_id": 772,
-      "team_ja": "韓国",
-      "team_flag": "🇰🇷",
-      "goals": 1,
-      "assists": null,
-      "playedMatches": 3
-    },
-    {
-      "player_id": 17767,
-      "player_name": "Jovo Lukić",
-      "nationality": "Bosnia-Herzegovina",
-      "team_id": 1060,
-      "team_ja": "ボスニア・ヘルツェゴビナ",
-      "team_flag": "🇧🇦",
-      "goals": 1,
-      "assists": null,
-      "playedMatches": 4
     }
   ]
 }
