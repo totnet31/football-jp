@@ -1,6 +1,17 @@
 {
-  "updated": "2026-07-07T21:07:22.444546+09:00",
+  "updated": "2026-07-08T07:04:30.498920+09:00",
   "scorers": [
+    {
+      "player_id": 3218,
+      "player_name": "Lionel Messi",
+      "nationality": "Argentina",
+      "team_id": 762,
+      "team_ja": "アルゼンチン",
+      "team_flag": "🇦🇷",
+      "goals": 8,
+      "assists": 1,
+      "playedMatches": 5
+    },
     {
       "player_id": 3374,
       "player_name": "Kylian Mbappé",
@@ -22,17 +33,6 @@
       "goals": 7,
       "assists": null,
       "playedMatches": 5
-    },
-    {
-      "player_id": 3218,
-      "player_name": "Lionel Messi",
-      "nationality": "Argentina",
-      "team_id": 762,
-      "team_ja": "アルゼンチン",
-      "team_flag": "🇦🇷",
-      "goals": 7,
-      "assists": null,
-      "playedMatches": 4
     },
     {
       "player_id": 8004,
@@ -285,7 +285,7 @@
       "team_flag": "🇨🇭",
       "goals": 2,
       "assists": 2,
-      "playedMatches": 4
+      "playedMatches": 5
     },
     {
       "player_id": 102193,
@@ -340,7 +340,7 @@
       "team_flag": "🇪🇬",
       "goals": 2,
       "assists": null,
-      "playedMatches": 4
+      "playedMatches": 5
     },
     {
       "player_id": 28770,
@@ -395,7 +395,7 @@
       "team_flag": "🇨🇴",
       "goals": 2,
       "assists": null,
-      "playedMatches": 3
+      "playedMatches": 4
     },
     {
       "player_id": 31913,
@@ -406,7 +406,7 @@
       "team_flag": "🇨🇭",
       "goals": 2,
       "assists": 1,
-      "playedMatches": 4
+      "playedMatches": 5
     },
     {
       "player_id": 221764,
@@ -440,6 +440,17 @@
       "goals": 2,
       "assists": 1,
       "playedMatches": 4
+    },
+    {
+      "player_id": 295848,
+      "player_name": "Mostafa Ziko",
+      "nationality": "Egypt",
+      "team_id": 825,
+      "team_ja": "エジプト",
+      "team_flag": "🇪🇬",
+      "goals": 2,
+      "assists": 1,
+      "playedMatches": 5
     },
     {
       "player_id": 130502,
@@ -538,17 +549,6 @@
       "team_flag": "🇲🇦",
       "goals": 2,
       "assists": null,
-      "playedMatches": 5
-    },
-    {
-      "player_id": 129947,
-      "player_name": "Charles De Ketelaere",
-      "nationality": "Belgium",
-      "team_id": 805,
-      "team_ja": "ベルギー",
-      "team_flag": "🇧🇪",
-      "goals": 2,
-      "assists": 1,
       "playedMatches": 5
     }
   ]
