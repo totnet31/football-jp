@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-07T08:10:13.452137+09:00",
+  "updated": "2026-07-07T15:38:27.953541+09:00",
   "scorers": [
     {
       "player_id": 3374,
@@ -255,6 +255,17 @@
       "playedMatches": 5
     },
     {
+      "player_id": 3662,
+      "player_name": "Romelu Lukaku",
+      "nationality": "Belgium",
+      "team_id": 805,
+      "team_ja": "ベルギー",
+      "team_flag": "🇧🇪",
+      "goals": 3,
+      "assists": 1,
+      "playedMatches": 5
+    },
+    {
       "player_id": 15958,
       "player_name": "Cyle Larin",
       "nationality": "Canada",
@@ -482,18 +493,7 @@
       "team_ja": "ベルギー",
       "team_flag": "🇧🇪",
       "goals": 2,
-      "assists": 1,
-      "playedMatches": 5
-    },
-    {
-      "player_id": 3662,
-      "player_name": "Romelu Lukaku",
-      "nationality": "Belgium",
-      "team_id": 805,
-      "team_ja": "ベルギー",
-      "team_flag": "🇧🇪",
-      "goals": 2,
-      "assists": 1,
+      "assists": 2,
       "playedMatches": 5
     },
     {
@@ -519,6 +519,17 @@
       "playedMatches": 5
     },
     {
+      "player_id": 144470,
+      "player_name": "Malik Tillman",
+      "nationality": "USA",
+      "team_id": 771,
+      "team_ja": "アメリカ",
+      "team_flag": "🇺🇸",
+      "goals": 2,
+      "assists": null,
+      "playedMatches": 5
+    },
+    {
       "player_id": 122511,
       "player_name": "Azzedine Ounahi",
       "nationality": "Morocco",
@@ -530,26 +541,15 @@
       "playedMatches": 5
     },
     {
-      "player_id": 1878,
-      "player_name": "Ladislav Krejčí",
-      "nationality": "Czech Republic",
-      "team_id": 798,
-      "team_ja": "チェコ",
-      "team_flag": "🇨🇿",
-      "goals": 1,
-      "assists": null,
-      "playedMatches": 3
-    },
-    {
-      "player_id": 170561,
-      "player_name": "In-beom Hwang",
-      "nationality": "South Korea",
-      "team_id": 772,
-      "team_ja": "韓国",
-      "team_flag": "🇰🇷",
-      "goals": 1,
+      "player_id": 129947,
+      "player_name": "Charles De Ketelaere",
+      "nationality": "Belgium",
+      "team_id": 805,
+      "team_ja": "ベルギー",
+      "team_flag": "🇧🇪",
+      "goals": 2,
       "assists": 1,
-      "playedMatches": 3
+      "playedMatches": 5
     }
   ]
 }
