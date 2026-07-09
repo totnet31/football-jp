@@ -1,6 +1,17 @@
 {
-  "updated": "2026-07-09T21:16:09.711145+09:00",
+  "updated": "2026-07-10T07:03:53.158066+09:00",
   "scorers": [
+    {
+      "player_id": 3374,
+      "player_name": "Kylian Mbappé",
+      "nationality": "France",
+      "team_id": 773,
+      "team_ja": "フランス",
+      "team_flag": "🇫🇷",
+      "goals": 8,
+      "assists": 2,
+      "playedMatches": 6
+    },
     {
       "player_id": 3218,
       "player_name": "Lionel Messi",
@@ -10,17 +21,6 @@
       "team_flag": "🇦🇷",
       "goals": 8,
       "assists": 1,
-      "playedMatches": 5
-    },
-    {
-      "player_id": 3374,
-      "player_name": "Kylian Mbappé",
-      "nationality": "France",
-      "team_id": 773,
-      "team_ja": "フランス",
-      "team_flag": "🇫🇷",
-      "goals": 7,
-      "assists": 2,
       "playedMatches": 5
     },
     {
@@ -44,6 +44,17 @@
       "goals": 6,
       "assists": 1,
       "playedMatches": 5
+    },
+    {
+      "player_id": 3373,
+      "player_name": "Ousmane Dembélé",
+      "nationality": "France",
+      "team_id": 773,
+      "team_ja": "フランス",
+      "team_flag": "🇫🇷",
+      "goals": 5,
+      "assists": 2,
+      "playedMatches": 6
     },
     {
       "player_id": 39237,
@@ -90,17 +101,6 @@
       "playedMatches": 5
     },
     {
-      "player_id": 3373,
-      "player_name": "Ousmane Dembélé",
-      "nationality": "France",
-      "team_id": 773,
-      "team_ja": "フランス",
-      "team_flag": "🇫🇷",
-      "goals": 4,
-      "assists": 2,
-      "playedMatches": 5
-    },
-    {
       "player_id": 3638,
       "player_name": "Ismaïla Sarr",
       "nationality": "Senegal",
@@ -142,7 +142,7 @@
       "team_flag": "🇲🇦",
       "goals": 3,
       "assists": null,
-      "playedMatches": 5
+      "playedMatches": 6
     },
     {
       "player_id": 171,
@@ -373,7 +373,7 @@
       "team_flag": "🇫🇷",
       "goals": 2,
       "assists": 1,
-      "playedMatches": 5
+      "playedMatches": 6
     },
     {
       "player_id": 8223,
@@ -461,7 +461,7 @@
       "team_flag": "🇲🇦",
       "goals": 2,
       "assists": 1,
-      "playedMatches": 5
+      "playedMatches": 6
     },
     {
       "player_id": 8412,
@@ -549,7 +549,7 @@
       "team_flag": "🇲🇦",
       "goals": 2,
       "assists": null,
-      "playedMatches": 5
+      "playedMatches": 6
     }
   ]
 }
