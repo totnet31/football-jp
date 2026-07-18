@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-19T07:05:14.204140+09:00",
+  "updated": "2026-07-19T07:52:11.664136+09:00",
   "scorers": [
     {
       "player_id": 3374,
@@ -8,8 +8,8 @@
       "team_id": 773,
       "team_ja": "フランス",
       "team_flag": "🇫🇷",
-      "goals": 8,
-      "assists": 3,
+      "goals": 10,
+      "assists": 4,
       "playedMatches": 8
     },
     {
@@ -178,6 +178,17 @@
       "playedMatches": 3
     },
     {
+      "player_id": 172762,
+      "player_name": "Bradley Barcola",
+      "nationality": "France",
+      "team_id": 773,
+      "team_ja": "フランス",
+      "team_flag": "🇫🇷",
+      "goals": 3,
+      "assists": 1,
+      "playedMatches": 8
+    },
+    {
       "player_id": 612,
       "player_name": "Yoane Wissa",
       "nationality": "Congo DR",
@@ -288,6 +299,17 @@
       "playedMatches": 6
     },
     {
+      "player_id": 99813,
+      "player_name": "Bukayo Saka",
+      "nationality": "England",
+      "team_id": 770,
+      "team_ja": "イングランド",
+      "team_flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+      "goals": 3,
+      "assists": 3,
+      "playedMatches": 8
+    },
+    {
       "player_id": 15958,
       "player_name": "Cyle Larin",
       "nationality": "Canada",
@@ -385,17 +407,6 @@
       "goals": 2,
       "assists": 1,
       "playedMatches": 3
-    },
-    {
-      "player_id": 172762,
-      "player_name": "Bradley Barcola",
-      "nationality": "France",
-      "team_id": 773,
-      "team_ja": "フランス",
-      "team_flag": "🇫🇷",
-      "goals": 2,
-      "assists": 1,
-      "playedMatches": 8
     },
     {
       "player_id": 8223,
@@ -539,17 +550,6 @@
       "goals": 2,
       "assists": 2,
       "playedMatches": 4
-    },
-    {
-      "player_id": 3658,
-      "player_name": "Youri Tielemans",
-      "nationality": "Belgium",
-      "team_id": 805,
-      "team_ja": "ベルギー",
-      "team_flag": "🇧🇪",
-      "goals": 2,
-      "assists": null,
-      "playedMatches": 5
     }
   ]
 }
