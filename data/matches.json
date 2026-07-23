@@ -1,8 +1,8 @@
 {
-  "updated": "2026-07-23T20:17:48.160112+09:00",
-  "date_from": "2026-07-16",
-  "date_to": "2026-08-06",
-  "match_count": 351,
+  "updated": "2026-07-24T07:01:53.177829+09:00",
+  "date_from": "2026-07-17",
+  "date_to": "2026-08-07",
+  "match_count": 353,
   "_note": "累積保持モード：フェッチ窓外の過去試合データはそのまま保持される。",
   "matches": [
     {
@@ -14067,8 +14067,59 @@
       ],
       "broadcasters": [],
       "venue": "国立競技場（東京）"
+    },
+    {
+      "id": 558214,
+      "competition_id": 88,
+      "competition_ja": "エールディビジ",
+      "competition_category": "league",
+      "competition_flag": "🇳🇱",
+      "kickoff_jst": "2026-08-08T03:00:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "REGULAR_SEASON",
+      "matchday": 1,
+      "home_id": 1909,
+      "home_ja": "Cambuur",
+      "home_en": "Cambuur",
+      "home_crest": "https://crests.football-data.org/1909.png",
+      "away_id": 670,
+      "away_ja": "エクセルシオール",
+      "away_en": "Excelsior",
+      "away_crest": "https://crests.football-data.org/670.png",
+      "score": null,
+      "japanese_players": [],
+      "broadcasters": [
+        {
+          "name": "U-NEXT",
+          "type": "exclusive",
+          "url": "https://www.unext.jp/",
+          "note": "〜2027-28"
+        }
+      ]
+    },
+    {
+      "id": 567264,
+      "competition_id": 94,
+      "competition_ja": "プリメイラ・リーガ",
+      "competition_category": "league",
+      "competition_flag": "🇵🇹",
+      "kickoff_jst": "2026-08-08T04:15:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "REGULAR_SEASON",
+      "matchday": 1,
+      "home_id": 582,
+      "home_ja": "エストリル",
+      "home_en": "Estoril Praia",
+      "home_crest": "https://crests.football-data.org/582.png",
+      "away_id": 5531,
+      "away_ja": "ファマリカン",
+      "away_en": "Famalicão",
+      "away_crest": "https://crests.football-data.org/5531.png",
+      "score": null,
+      "japanese_players": [],
+      "broadcasters": []
     }
   ],
-  "updated_yt_highlights": "2026-07-23T20:20:46.867306+09:00",
-  "updated_uefa_secondary": "2026-07-23T20:21:13.625109+09:00"
+  "updated_yt_highlights": "2026-07-24T07:04:45.630763+09:00",
+  "updated_uefa_secondary": "2026-07-24T07:05:12.069340+09:00"
 }
