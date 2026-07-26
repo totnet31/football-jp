@@ -1,8 +1,8 @@
 {
-  "updated": "2026-07-26T19:49:20.629126+09:00",
-  "date_from": "2026-07-19",
-  "date_to": "2026-08-09",
-  "match_count": 368,
+  "updated": "2026-07-27T07:02:05.753973+09:00",
+  "date_from": "2026-07-20",
+  "date_to": "2026-08-10",
+  "match_count": 369,
   "_note": "累積保持モード：フェッチ窓外の過去試合データはそのまま保持される。",
   "matches": [
     {
@@ -14565,8 +14565,30 @@
       "score": null,
       "japanese_players": [],
       "broadcasters": []
+    },
+    {
+      "id": 567257,
+      "competition_id": 94,
+      "competition_ja": "プリメイラ・リーガ",
+      "competition_category": "league",
+      "competition_flag": "🇵🇹",
+      "kickoff_jst": "2026-08-11T04:15:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "REGULAR_SEASON",
+      "matchday": 1,
+      "home_id": 5530,
+      "home_ja": "サンタクララ",
+      "home_en": "Santa Clara",
+      "home_crest": "https://crests.football-data.org/5530.png",
+      "away_id": 5529,
+      "away_ja": "ナシオナル",
+      "away_en": "CD Nacional",
+      "away_crest": "https://crests.football-data.org/5529.png",
+      "score": null,
+      "japanese_players": [],
+      "broadcasters": []
     }
   ],
-  "updated_yt_highlights": "2026-07-26T19:52:11.888234+09:00",
-  "updated_uefa_secondary": "2026-07-26T19:52:40.157416+09:00"
+  "updated_yt_highlights": "2026-07-27T07:05:02.049113+09:00",
+  "updated_uefa_secondary": "2026-07-27T07:05:27.630452+09:00"
 }
