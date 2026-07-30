@@ -1,8 +1,8 @@
 {
-  "updated": "2026-07-30T20:17:09.500823+09:00",
-  "date_from": "2026-07-23",
-  "date_to": "2026-08-13",
-  "match_count": 369,
+  "updated": "2026-07-31T07:07:04.043786+09:00",
+  "date_from": "2026-07-24",
+  "date_to": "2026-08-14",
+  "match_count": 372,
   "_note": "累積保持モード：フェッチ窓外の過去試合データはそのまま保持される。",
   "matches": [
     {
@@ -14587,8 +14587,111 @@
       "score": null,
       "japanese_players": [],
       "broadcasters": []
+    },
+    {
+      "id": 558223,
+      "competition_id": 88,
+      "competition_ja": "エールディビジ",
+      "competition_category": "league",
+      "competition_flag": "🇳🇱",
+      "kickoff_jst": "2026-08-15T03:00:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "REGULAR_SEASON",
+      "matchday": 2,
+      "home_id": 1912,
+      "home_ja": "テルスター",
+      "home_en": "Telstar",
+      "home_crest": "https://crests.football-data.org/1912.png",
+      "away_id": 6806,
+      "away_ja": "スパルタ・ロッテルダム",
+      "away_en": "Sparta",
+      "away_crest": "https://crests.football-data.org/6806.png",
+      "score": null,
+      "japanese_players": [
+        {
+          "name_ja": "三戸舜介",
+          "position": "FW/MF",
+          "side": "away"
+        }
+      ],
+      "broadcasters": [
+        {
+          "name": "U-NEXT",
+          "type": "exclusive",
+          "url": "https://www.unext.jp/",
+          "note": "〜2027-28"
+        }
+      ]
+    },
+    {
+      "id": 561761,
+      "competition_id": 40,
+      "competition_ja": "チャンピオンシップ",
+      "competition_category": "league",
+      "competition_flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+      "kickoff_jst": "2026-08-15T04:00:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "REGULAR_SEASON",
+      "matchday": 1,
+      "home_id": 76,
+      "home_ja": "ウルバーハンプトン",
+      "home_en": "Wolverhampton",
+      "home_crest": "https://crests.football-data.org/76.png",
+      "away_id": 59,
+      "away_ja": "ブラックバーン",
+      "away_en": "Blackburn",
+      "away_crest": "https://crests.football-data.org/59.png",
+      "score": null,
+      "japanese_players": [
+        {
+          "name_ja": "大橋祐紀",
+          "position": "FW",
+          "side": "away"
+        },
+        {
+          "name_ja": "森下龍矢",
+          "position": "FW/MF",
+          "side": "away"
+        }
+      ],
+      "broadcasters": [
+        {
+          "name": "DAZN",
+          "type": "exclusive",
+          "url": "https://www.dazn.com/ja-JP/",
+          "note": "〜2027-28"
+        }
+      ]
+    },
+    {
+      "id": 567268,
+      "competition_id": 94,
+      "competition_ja": "プリメイラ・リーガ",
+      "competition_category": "league",
+      "competition_flag": "🇵🇹",
+      "kickoff_jst": "2026-08-15T04:15:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "REGULAR_SEASON",
+      "matchday": 2,
+      "home_id": 498,
+      "home_ja": "スポルティングCP",
+      "home_en": "Sporting CP",
+      "home_crest": "https://crests.football-data.org/498.png",
+      "away_id": 5543,
+      "away_ja": "ヴィトーリア",
+      "away_en": "Vitória SC",
+      "away_crest": "https://crests.football-data.org/5543.png",
+      "score": null,
+      "japanese_players": [
+        {
+          "name_ja": "守田英正",
+          "position": "MF",
+          "side": "home"
+        }
+      ],
+      "broadcasters": []
     }
   ],
-  "updated_yt_highlights": "2026-07-30T20:20:08.730646+09:00",
-  "updated_uefa_secondary": "2026-07-30T20:20:38.704265+09:00"
+  "updated_yt_highlights": "2026-07-31T07:09:56.117122+09:00",
+  "updated_uefa_secondary": "2026-07-31T07:10:22.019673+09:00"
 }
