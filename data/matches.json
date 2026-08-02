@@ -1,8 +1,8 @@
 {
-  "updated": "2026-08-02T19:46:18.511067+09:00",
-  "date_from": "2026-07-26",
-  "date_to": "2026-08-16",
-  "match_count": 402,
+  "updated": "2026-08-03T07:02:04.164305+09:00",
+  "date_from": "2026-07-27",
+  "date_to": "2026-08-17",
+  "match_count": 405,
   "_note": "累積保持モード：フェッチ窓外の過去試合データはそのまま保持される。",
   "matches": [
     {
@@ -15615,8 +15615,93 @@
         }
       ],
       "broadcasters": []
+    },
+    {
+      "id": 561772,
+      "competition_id": 40,
+      "competition_ja": "チャンピオンシップ",
+      "competition_category": "league",
+      "competition_flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+      "kickoff_jst": "2026-08-18T04:00:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "REGULAR_SEASON",
+      "matchday": 1,
+      "home_id": 715,
+      "home_ja": "Cardiff",
+      "home_en": "Cardiff",
+      "home_crest": "https://crests.football-data.org/715.png",
+      "away_id": 404,
+      "away_ja": "レクサム",
+      "away_en": "Wrexham",
+      "away_crest": "https://crests.football-data.org/404.png",
+      "score": null,
+      "japanese_players": [],
+      "broadcasters": [
+        {
+          "name": "DAZN",
+          "type": "exclusive",
+          "url": "https://www.dazn.com/ja-JP/",
+          "note": "〜2027-28"
+        }
+      ]
+    },
+    {
+      "id": 564635,
+      "competition_id": 140,
+      "competition_ja": "ラ・リーガ",
+      "competition_category": "league",
+      "competition_flag": "🇪🇸",
+      "kickoff_jst": "2026-08-18T04:00:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "REGULAR_SEASON",
+      "matchday": 1,
+      "home_id": 560,
+      "home_ja": "Deportivo",
+      "home_en": "Deportivo",
+      "home_crest": "https://crests.football-data.org/560.png",
+      "away_id": 285,
+      "away_ja": "エルチェ",
+      "away_en": "Elche",
+      "away_crest": "https://crests.football-data.org/285.png",
+      "score": null,
+      "japanese_players": [],
+      "broadcasters": [
+        {
+          "name": "U-NEXT",
+          "type": "shared",
+          "url": "https://www.unext.jp/"
+        },
+        {
+          "name": "DAZN",
+          "type": "shared",
+          "url": "https://www.dazn.com/ja-JP/",
+          "note": "〜2027-28"
+        }
+      ]
+    },
+    {
+      "id": 567272,
+      "competition_id": 94,
+      "competition_ja": "プリメイラ・リーガ",
+      "competition_category": "league",
+      "competition_flag": "🇵🇹",
+      "kickoff_jst": "2026-08-18T04:15:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "REGULAR_SEASON",
+      "matchday": 2,
+      "home_id": 712,
+      "home_ja": "アロウカ",
+      "home_en": "Arouca",
+      "home_crest": "https://crests.football-data.org/712.png",
+      "away_id": 583,
+      "away_ja": "モレイレンセ",
+      "away_en": "Moreirense",
+      "away_crest": "https://crests.football-data.org/583.png",
+      "score": null,
+      "japanese_players": [],
+      "broadcasters": []
     }
   ],
-  "updated_yt_highlights": "2026-08-02T19:49:13.066159+09:00",
-  "updated_uefa_secondary": "2026-08-02T19:50:02.889265+09:00"
+  "updated_yt_highlights": "2026-08-03T07:04:58.672847+09:00",
+  "updated_uefa_secondary": "2026-08-03T07:05:30.862558+09:00"
 }
