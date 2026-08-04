@@ -1,8 +1,8 @@
 {
-  "updated": "2026-08-04T20:31:13.889851+09:00",
-  "date_from": "2026-07-28",
-  "date_to": "2026-08-18",
-  "match_count": 405,
+  "updated": "2026-08-05T07:02:06.496600+09:00",
+  "date_from": "2026-07-29",
+  "date_to": "2026-08-19",
+  "match_count": 406,
   "_note": "累積保持モード：フェッチ窓外の過去試合データはそのまま保持される。",
   "matches": [
     {
@@ -15700,8 +15700,42 @@
       "score": null,
       "japanese_players": [],
       "broadcasters": []
+    },
+    {
+      "id": 564628,
+      "competition_id": 140,
+      "competition_ja": "ラ・リーガ",
+      "competition_category": "league",
+      "competition_flag": "🇪🇸",
+      "kickoff_jst": "2026-08-20T04:00:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "REGULAR_SEASON",
+      "matchday": 1,
+      "home_id": 78,
+      "home_ja": "アトレティコ・マドリー",
+      "home_en": "Atleti",
+      "home_crest": "https://crests.football-data.org/78.png",
+      "away_id": 84,
+      "away_ja": "Málaga",
+      "away_en": "Málaga",
+      "away_crest": "https://crests.football-data.org/84.png",
+      "score": null,
+      "japanese_players": [],
+      "broadcasters": [
+        {
+          "name": "U-NEXT",
+          "type": "shared",
+          "url": "https://www.unext.jp/"
+        },
+        {
+          "name": "DAZN",
+          "type": "shared",
+          "url": "https://www.dazn.com/ja-JP/",
+          "note": "〜2027-28"
+        }
+      ]
     }
   ],
-  "updated_yt_highlights": "2026-08-04T20:34:09.119857+09:00",
-  "updated_uefa_secondary": "2026-08-04T20:34:38.163882+09:00"
+  "updated_yt_highlights": "2026-08-05T07:04:58.549260+09:00",
+  "updated_uefa_secondary": "2026-08-05T07:05:26.980270+09:00"
 }
