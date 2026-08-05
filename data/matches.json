@@ -1,8 +1,8 @@
 {
-  "updated": "2026-08-05T20:26:43.192368+09:00",
-  "date_from": "2026-07-29",
-  "date_to": "2026-08-19",
-  "match_count": 406,
+  "updated": "2026-08-06T07:02:10.203129+09:00",
+  "date_from": "2026-07-30",
+  "date_to": "2026-08-20",
+  "match_count": 407,
   "_note": "累積保持モード：フェッチ窓外の過去試合データはそのまま保持される。",
   "matches": [
     {
@@ -15734,8 +15734,42 @@
           "note": "〜2027-28"
         }
       ]
+    },
+    {
+      "id": 564638,
+      "competition_id": 140,
+      "competition_ja": "ラ・リーガ",
+      "competition_category": "league",
+      "competition_flag": "🇪🇸",
+      "kickoff_jst": "2026-08-21T04:00:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "REGULAR_SEASON",
+      "matchday": 2,
+      "home_id": 87,
+      "home_ja": "ラージョ・バジェカーノ",
+      "home_en": "Rayo Vallecano",
+      "home_crest": "https://crests.football-data.org/87.png",
+      "away_id": 263,
+      "away_ja": "アラベス",
+      "away_en": "Alavés",
+      "away_crest": "https://crests.football-data.org/263.png",
+      "score": null,
+      "japanese_players": [],
+      "broadcasters": [
+        {
+          "name": "U-NEXT",
+          "type": "shared",
+          "url": "https://www.unext.jp/"
+        },
+        {
+          "name": "DAZN",
+          "type": "shared",
+          "url": "https://www.dazn.com/ja-JP/",
+          "note": "〜2027-28"
+        }
+      ]
     }
   ],
-  "updated_yt_highlights": "2026-08-05T20:29:39.900785+09:00",
-  "updated_uefa_secondary": "2026-08-05T20:30:07.785649+09:00"
+  "updated_yt_highlights": "2026-08-06T07:05:07.553978+09:00",
+  "updated_uefa_secondary": "2026-08-06T07:05:36.579925+09:00"
 }
