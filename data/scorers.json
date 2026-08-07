@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-07T19:08:10.050578+09:00",
+  "updated": "2026-08-08T07:03:15.586249+09:00",
   "competitions": {
     "39": {
       "name_ja": "プレミアリーグ",
@@ -34,12 +34,74 @@
     "88": {
       "name_ja": "エールディビジ",
       "flag": "🇳🇱",
-      "scorers": []
+      "scorers": [
+        {
+          "player_id": 179498,
+          "player_name": "Noah Naujoks",
+          "nationality": "Netherlands",
+          "team_id": 670,
+          "team_ja": "エクセルシオール",
+          "team_crest": "https://crests.football-data.org/670.png",
+          "goals": 2,
+          "assists": null,
+          "penalties": null,
+          "playedMatches": 0
+        },
+        {
+          "player_id": 191155,
+          "player_name": "Irakli Yegoian",
+          "nationality": "Georgia",
+          "team_id": 670,
+          "team_ja": "エクセルシオール",
+          "team_crest": "https://crests.football-data.org/670.png",
+          "goals": 1,
+          "assists": 1,
+          "penalties": null,
+          "playedMatches": 0
+        },
+        {
+          "player_id": 214463,
+          "player_name": "David Garden",
+          "nationality": "Netherlands",
+          "team_id": 670,
+          "team_ja": "エクセルシオール",
+          "team_crest": "https://crests.football-data.org/670.png",
+          "goals": 1,
+          "assists": null,
+          "penalties": null,
+          "playedMatches": 0
+        }
+      ]
     },
     "94": {
       "name_ja": "プリメイラ・リーガ",
       "flag": "🇵🇹",
-      "scorers": []
+      "scorers": [
+        {
+          "player_id": 146109,
+          "player_name": "Georgios Koutsias",
+          "nationality": "Greece",
+          "team_id": 5531,
+          "team_ja": "ファマリカン",
+          "team_crest": "https://crests.football-data.org/5531.png",
+          "goals": 1,
+          "assists": null,
+          "penalties": null,
+          "playedMatches": 0
+        },
+        {
+          "player_id": 553,
+          "player_name": "Yanis Begraoui",
+          "nationality": "France",
+          "team_id": 582,
+          "team_ja": "エストリル",
+          "team_crest": "https://crests.football-data.org/582.png",
+          "goals": 1,
+          "assists": null,
+          "penalties": null,
+          "playedMatches": 0
+        }
+      ]
     },
     "2": {
       "name_ja": "UEFAチャンピオンズリーグ",
