@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-08T13:06:10.946807+09:00",
+  "updated": "2026-08-08T18:50:07.427171+09:00",
   "competitions": {
     "39": {
       "name_ja": "プレミアリーグ",
@@ -1911,6 +1911,21 @@
           "table": [
             {
               "position": 1,
+              "team_id": 670,
+              "team_ja": "エクセルシオール",
+              "team_crest": "https://crests.football-data.org/670.png",
+              "playedGames": 1,
+              "won": 1,
+              "draw": 0,
+              "lost": 0,
+              "points": 3,
+              "goalsFor": 4,
+              "goalsAgainst": 0,
+              "goalDifference": 4,
+              "form": null
+            },
+            {
+              "position": 2,
               "team_id": 1912,
               "team_ja": "テルスター",
               "team_crest": "https://crests.football-data.org/1912.png",
@@ -1925,22 +1940,7 @@
               "form": null
             },
             {
-              "position": 1,
-              "team_id": 670,
-              "team_ja": "エクセルシオール",
-              "team_crest": "https://crests.football-data.org/670.png",
-              "playedGames": 0,
-              "won": 0,
-              "draw": 0,
-              "lost": 0,
-              "points": 0,
-              "goalsFor": 0,
-              "goalsAgainst": 0,
-              "goalDifference": 0,
-              "form": null
-            },
-            {
-              "position": 1,
+              "position": 2,
               "team_id": 675,
               "team_ja": "フェイエノールト",
               "team_crest": "https://crests.football-data.org/675.png",
@@ -1955,7 +1955,7 @@
               "form": null
             },
             {
-              "position": 1,
+              "position": 2,
               "team_id": 677,
               "team_ja": "フローニンゲン",
               "team_crest": "https://crests.football-data.org/677.png",
@@ -1970,7 +1970,7 @@
               "form": null
             },
             {
-              "position": 1,
+              "position": 2,
               "team_id": 684,
               "team_ja": "ズヴォレ",
               "team_crest": "https://crests.football-data.org/684.png",
@@ -1985,7 +1985,7 @@
               "form": null
             },
             {
-              "position": 1,
+              "position": 2,
               "team_id": 666,
               "team_ja": "トゥエンテ",
               "team_crest": "https://crests.football-data.org/666.png",
@@ -2000,22 +2000,7 @@
               "form": null
             },
             {
-              "position": 1,
-              "team_id": 1909,
-              "team_ja": "Cambuur",
-              "team_crest": "https://crests.football-data.org/1909.png",
-              "playedGames": 0,
-              "won": 0,
-              "draw": 0,
-              "lost": 0,
-              "points": 0,
-              "goalsFor": 0,
-              "goalsAgainst": 0,
-              "goalDifference": 0,
-              "form": null
-            },
-            {
-              "position": 1,
+              "position": 2,
               "team_id": 678,
               "team_ja": "アヤックス",
               "team_crest": "https://crests.football-data.org/678.png",
@@ -2030,7 +2015,7 @@
               "form": null
             },
             {
-              "position": 1,
+              "position": 2,
               "team_id": 1915,
               "team_ja": "NEC",
               "team_crest": "https://crests.football-data.org/1915.png",
@@ -2045,7 +2030,7 @@
               "form": null
             },
             {
-              "position": 1,
+              "position": 2,
               "team_id": 676,
               "team_ja": "ユトレヒト",
               "team_crest": "https://crests.football-data.org/676.png",
@@ -2060,7 +2045,7 @@
               "form": null
             },
             {
-              "position": 1,
+              "position": 2,
               "team_id": 6806,
               "team_ja": "スパルタ・ロッテルダム",
               "team_crest": "https://crests.football-data.org/6806.png",
@@ -2075,7 +2060,7 @@
               "form": null
             },
             {
-              "position": 1,
+              "position": 2,
               "team_id": 1920,
               "team_ja": "フォルトゥナ・シッタート",
               "team_crest": "https://crests.football-data.org/1920.png",
@@ -2090,7 +2075,7 @@
               "form": null
             },
             {
-              "position": 1,
+              "position": 2,
               "team_id": 673,
               "team_ja": "ヘーレンフェーン",
               "team_crest": "https://crests.football-data.org/673.png",
@@ -2105,7 +2090,7 @@
               "form": null
             },
             {
-              "position": 1,
+              "position": 2,
               "team_id": 674,
               "team_ja": "PSV",
               "team_crest": "https://crests.football-data.org/674.png",
@@ -2120,7 +2105,7 @@
               "form": null
             },
             {
-              "position": 1,
+              "position": 2,
               "team_id": 672,
               "team_ja": "Willem II",
               "team_crest": "https://crests.football-data.org/672.png",
@@ -2135,7 +2120,7 @@
               "form": null
             },
             {
-              "position": 1,
+              "position": 2,
               "team_id": 718,
               "team_ja": "ゴー・アヘッド",
               "team_crest": "https://crests.football-data.org/718.png",
@@ -2150,7 +2135,7 @@
               "form": null
             },
             {
-              "position": 1,
+              "position": 2,
               "team_id": 680,
               "team_ja": "Den Haag",
               "team_crest": "https://crests.football-data.org/680.png",
@@ -2165,7 +2150,7 @@
               "form": null
             },
             {
-              "position": 1,
+              "position": 2,
               "team_id": 682,
               "team_ja": "AZ",
               "team_crest": "https://crests.football-data.org/682.png",
@@ -2177,6 +2162,21 @@
               "goalsFor": 0,
               "goalsAgainst": 0,
               "goalDifference": 0,
+              "form": null
+            },
+            {
+              "position": 18,
+              "team_id": 1909,
+              "team_ja": "Cambuur",
+              "team_crest": "https://crests.football-data.org/1909.png",
+              "playedGames": 1,
+              "won": 0,
+              "draw": 0,
+              "lost": 1,
+              "points": 0,
+              "goalsFor": 0,
+              "goalsAgainst": 4,
+              "goalDifference": -4,
               "form": null
             }
           ]
