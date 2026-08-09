@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-09T13:09:49.143013+09:00",
+  "updated": "2026-08-09T18:50:18.842126+09:00",
   "date_from": "2026-08-02",
   "date_to": "2026-08-23",
   "match_count": 465,
@@ -14132,7 +14132,7 @@
       "competition_category": "league",
       "competition_flag": "🇳🇱",
       "kickoff_jst": "2026-08-08T23:30:00+09:00",
-      "status": "TIMED",
+      "status": "FINISHED",
       "stage": "REGULAR_SEASON",
       "matchday": 1,
       "home_id": 1915,
@@ -14143,7 +14143,10 @@
       "away_ja": "テルスター",
       "away_en": "Telstar",
       "away_crest": "https://crests.football-data.org/1912.png",
-      "score": null,
+      "score": {
+        "home": 1,
+        "away": 2
+      },
       "japanese_players": [
         {
           "name_ja": "小川航基",
@@ -14163,6 +14166,15 @@
           "url": "https://www.unext.jp/",
           "note": "〜2027-28"
         }
+      ],
+      "highlights": [
+        {
+          "broadcaster": "U-NEXT",
+          "video_id": "Nw1Lb9SWY7w",
+          "url": "https://youtu.be/Nw1Lb9SWY7w",
+          "title": "【王者へ完全移籍】佐野航大（PSVアイントホーフェン）｜NECナイメヘン時代ベストプレー集｜エールディヴィジ 2026/27",
+          "yt_published": "2026-08-09"
+        }
       ]
     },
     {
@@ -14172,7 +14184,7 @@
       "competition_category": "league",
       "competition_flag": "🇵🇹",
       "kickoff_jst": "2026-08-08T23:30:00+09:00",
-      "status": "2026-08-08 13:30:00Z",
+      "status": "FINISHED",
       "stage": "REGULAR_SEASON",
       "matchday": 1,
       "home_id": 5575,
@@ -14183,7 +14195,10 @@
       "away_ja": "カーザ・ピア",
       "away_en": "Casa Pia",
       "away_crest": "https://crests.football-data.org/6618.png",
-      "score": null,
+      "score": {
+        "home": 1,
+        "away": 0
+      },
       "japanese_players": [],
       "broadcasters": []
     },
@@ -17615,6 +17630,6 @@
       "broadcasters": []
     }
   ],
-  "updated_yt_highlights": "2026-08-09T13:12:45.258482+09:00",
-  "updated_uefa_secondary": "2026-08-09T13:13:16.391912+09:00"
+  "updated_yt_highlights": "2026-08-09T18:53:11.411155+09:00",
+  "updated_uefa_secondary": "2026-08-09T18:54:02.011834+09:00"
 }
