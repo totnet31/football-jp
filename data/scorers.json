@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-10T19:26:55.313082+09:00",
+  "updated": "2026-08-11T07:03:24.972632+09:00",
   "competitions": {
     "39": {
       "name_ja": "プレミアリーグ",
@@ -330,6 +330,18 @@
       "flag": "🇵🇹",
       "scorers": [
         {
+          "player_id": 15919,
+          "player_name": "Gonçalo Paciência",
+          "nationality": "Portugal",
+          "team_id": 5530,
+          "team_ja": "サンタクララ",
+          "team_crest": "https://crests.football-data.org/5530.png",
+          "goals": 2,
+          "assists": null,
+          "penalties": null,
+          "playedMatches": 1
+        },
+        {
           "player_id": 146109,
           "player_name": "Georgios Koutsias",
           "nationality": "Greece",
@@ -552,6 +564,30 @@
           "team_id": 5527,
           "team_ja": "Acad. Viseu",
           "team_crest": "https://crests.football-data.org/5527.png",
+          "goals": 1,
+          "assists": null,
+          "penalties": null,
+          "playedMatches": 1
+        },
+        {
+          "player_id": 1362,
+          "player_name": "Liziero",
+          "nationality": "Brazil",
+          "team_id": 5529,
+          "team_ja": "ナシオナル",
+          "team_crest": "https://crests.football-data.org/5529.png",
+          "goals": 1,
+          "assists": null,
+          "penalties": 1,
+          "playedMatches": 1
+        },
+        {
+          "player_id": 147456,
+          "player_name": "Miguel Baeza",
+          "nationality": "Spain",
+          "team_id": 5529,
+          "team_ja": "ナシオナル",
+          "team_crest": "https://crests.football-data.org/5529.png",
           "goals": 1,
           "assists": null,
           "penalties": null,

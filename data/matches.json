@@ -1,8 +1,8 @@
 {
-  "updated": "2026-08-10T19:25:47.644220+09:00",
-  "date_from": "2026-08-03",
-  "date_to": "2026-08-24",
-  "match_count": 471,
+  "updated": "2026-08-11T07:02:17.171990+09:00",
+  "date_from": "2026-08-04",
+  "date_to": "2026-08-25",
+  "match_count": 472,
   "_note": "累積保持モード：フェッチ窓外の過去試合データはそのまま保持される。",
   "matches": [
     {
@@ -14642,7 +14642,7 @@
       "competition_category": "league",
       "competition_flag": "🇵🇹",
       "kickoff_jst": "2026-08-11T04:15:00+09:00",
-      "status": "TIMED",
+      "status": "FINISHED",
       "stage": "REGULAR_SEASON",
       "matchday": 1,
       "home_id": 5530,
@@ -14653,7 +14653,10 @@
       "away_ja": "ナシオナル",
       "away_en": "CD Nacional",
       "away_crest": "https://crests.football-data.org/5529.png",
-      "score": null,
+      "score": {
+        "home": 2,
+        "away": 2
+      },
       "japanese_players": [],
       "broadcasters": []
     },
@@ -17844,8 +17847,42 @@
           "note": "〜2027-28"
         }
       ]
+    },
+    {
+      "id": 564637,
+      "competition_id": 140,
+      "competition_ja": "ラ・リーガ",
+      "competition_category": "league",
+      "competition_flag": "🇪🇸",
+      "kickoff_jst": "2026-08-26T04:00:00+09:00",
+      "status": "TIMED",
+      "stage": "REGULAR_SEASON",
+      "matchday": 1,
+      "home_id": 95,
+      "home_ja": "バレンシア",
+      "home_en": "Valencia",
+      "home_crest": "https://crests.football-data.org/95.png",
+      "away_id": 90,
+      "away_ja": "ベティス",
+      "away_en": "Real Betis",
+      "away_crest": "https://crests.football-data.org/90.png",
+      "score": null,
+      "japanese_players": [],
+      "broadcasters": [
+        {
+          "name": "U-NEXT",
+          "type": "shared",
+          "url": "https://www.unext.jp/"
+        },
+        {
+          "name": "DAZN",
+          "type": "shared",
+          "url": "https://www.dazn.com/ja-JP/",
+          "note": "〜2027-28"
+        }
+      ]
     }
   ],
-  "updated_yt_highlights": "2026-08-10T19:28:46.864411+09:00",
-  "updated_uefa_secondary": "2026-08-10T19:29:16.134599+09:00"
+  "updated_yt_highlights": "2026-08-11T07:05:18.421767+09:00",
+  "updated_uefa_secondary": "2026-08-11T07:05:47.699035+09:00"
 }
