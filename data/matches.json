@@ -1,8 +1,8 @@
 {
-  "updated": "2026-08-11T19:06:34.279767+09:00",
-  "date_from": "2026-08-04",
-  "date_to": "2026-08-25",
-  "match_count": 472,
+  "updated": "2026-08-12T07:01:34.432688+09:00",
+  "date_from": "2026-08-05",
+  "date_to": "2026-08-26",
+  "match_count": 473,
   "_note": "累積保持モード：フェッチ窓外の過去試合データはそのまま保持される。",
   "matches": [
     {
@@ -17881,8 +17881,48 @@
           "note": "〜2027-28"
         }
       ]
+    },
+    {
+      "id": 564631,
+      "competition_id": 140,
+      "competition_ja": "ラ・リーガ",
+      "competition_category": "league",
+      "competition_flag": "🇪🇸",
+      "kickoff_jst": "2026-08-27T04:00:00+09:00",
+      "status": "TIMED",
+      "stage": "REGULAR_SEASON",
+      "matchday": 1,
+      "home_id": 86,
+      "home_ja": "レアル・マドリー",
+      "home_en": "Real Madrid",
+      "home_crest": "https://crests.football-data.org/86.png",
+      "away_id": 92,
+      "away_ja": "レアル・ソシエダ",
+      "away_en": "Real Sociedad",
+      "away_crest": "https://crests.football-data.org/92.png",
+      "score": null,
+      "japanese_players": [
+        {
+          "name_ja": "久保建英",
+          "position": "MF/FW",
+          "side": "away"
+        }
+      ],
+      "broadcasters": [
+        {
+          "name": "U-NEXT",
+          "type": "shared",
+          "url": "https://www.unext.jp/"
+        },
+        {
+          "name": "DAZN",
+          "type": "shared",
+          "url": "https://www.dazn.com/ja-JP/",
+          "note": "〜2027-28"
+        }
+      ]
     }
   ],
-  "updated_yt_highlights": "2026-08-11T19:09:30.282253+09:00",
-  "updated_uefa_secondary": "2026-08-11T19:09:58.948410+09:00"
+  "updated_yt_highlights": "2026-08-12T07:04:26.411212+09:00",
+  "updated_uefa_secondary": "2026-08-12T07:04:55.297009+09:00"
 }
