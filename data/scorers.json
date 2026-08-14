@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-14T19:14:00.315479+09:00",
+  "updated": "2026-08-15T07:02:53.205113+09:00",
   "competitions": {
     "39": {
       "name_ja": "プレミアリーグ",
@@ -9,7 +9,56 @@
     "40": {
       "name_ja": "チャンピオンシップ",
       "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
-      "scorers": []
+      "scorers": [
+        {
+          "player_id": 34754,
+          "player_name": "Marshall Munetsi",
+          "nationality": "Zimbabwe",
+          "team_id": 76,
+          "team_ja": "ウルバーハンプトン",
+          "team_crest": "https://crests.football-data.org/76.png",
+          "goals": 1,
+          "assists": null,
+          "penalties": null,
+          "playedMatches": 0
+        },
+        {
+          "player_id": 36914,
+          "player_name": "Sean McLoughlin",
+          "nationality": "Ireland",
+          "team_id": 59,
+          "team_ja": "ブラックバーン",
+          "team_crest": "https://crests.football-data.org/59.png",
+          "goals": 1,
+          "assists": null,
+          "penalties": null,
+          "playedMatches": 0
+        },
+        {
+          "player_id": 202863,
+          "player_name": "Andri Guðjohnsen",
+          "nationality": "Iceland",
+          "team_id": 59,
+          "team_ja": "ブラックバーン",
+          "team_crest": "https://crests.football-data.org/59.png",
+          "goals": 1,
+          "assists": null,
+          "penalties": null,
+          "playedMatches": 0
+        },
+        {
+          "player_id": 3305,
+          "player_name": "Raúl Jiménez",
+          "nationality": "Mexico",
+          "team_id": 76,
+          "team_ja": "ウルバーハンプトン",
+          "team_crest": "https://crests.football-data.org/76.png",
+          "goals": 1,
+          "assists": null,
+          "penalties": 1,
+          "playedMatches": 0
+        }
+      ]
     },
     "140": {
       "name_ja": "ラ・リーガ",
@@ -81,7 +130,7 @@
           "goals": 1,
           "assists": 1,
           "penalties": null,
-          "playedMatches": 1
+          "playedMatches": 2
         },
         {
           "player_id": 57281,
@@ -93,7 +142,7 @@
           "goals": 1,
           "assists": null,
           "penalties": null,
-          "playedMatches": 1
+          "playedMatches": 2
         },
         {
           "player_id": 7574,
@@ -322,6 +371,54 @@
           "assists": null,
           "penalties": null,
           "playedMatches": 1
+        },
+        {
+          "player_id": 254333,
+          "player_name": "Marvin Young",
+          "nationality": "Netherlands",
+          "team_id": 6806,
+          "team_ja": "スパルタ・ロッテルダム",
+          "team_crest": "https://crests.football-data.org/6806.png",
+          "goals": 1,
+          "assists": null,
+          "penalties": null,
+          "playedMatches": 2
+        },
+        {
+          "player_id": 117796,
+          "player_name": "Nökkvi Þórisson",
+          "nationality": "Iceland",
+          "team_id": 6806,
+          "team_ja": "スパルタ・ロッテルダム",
+          "team_crest": "https://crests.football-data.org/6806.png",
+          "goals": 1,
+          "assists": null,
+          "penalties": null,
+          "playedMatches": 2
+        },
+        {
+          "player_id": 297046,
+          "player_name": "Abdelnour Soualhia",
+          "nationality": "France",
+          "team_id": 1912,
+          "team_ja": "テルスター",
+          "team_crest": "https://crests.football-data.org/1912.png",
+          "goals": 1,
+          "assists": 1,
+          "penalties": null,
+          "playedMatches": 2
+        },
+        {
+          "player_id": 243902,
+          "player_name": "Milan Zonneveld",
+          "nationality": "Netherlands",
+          "team_id": 6806,
+          "team_ja": "スパルタ・ロッテルダム",
+          "team_crest": "https://crests.football-data.org/6806.png",
+          "goals": 1,
+          "assists": null,
+          "penalties": null,
+          "playedMatches": 2
         }
       ]
     },
@@ -329,6 +426,18 @@
       "name_ja": "プリメイラ・リーガ",
       "flag": "🇵🇹",
       "scorers": [
+        {
+          "player_id": 186459,
+          "player_name": "Fotis Ioannidis",
+          "nationality": "Greece",
+          "team_id": 498,
+          "team_ja": "スポルティングCP",
+          "team_crest": "https://crests.football-data.org/498.png",
+          "goals": 2,
+          "assists": 2,
+          "penalties": null,
+          "playedMatches": 2
+        },
         {
           "player_id": 15919,
           "player_name": "Gonçalo Paciência",
@@ -399,19 +508,7 @@
           "goals": 1,
           "assists": 1,
           "penalties": null,
-          "playedMatches": 1
-        },
-        {
-          "player_id": 186459,
-          "player_name": "Fotis Ioannidis",
-          "nationality": "Greece",
-          "team_id": 498,
-          "team_ja": "スポルティングCP",
-          "team_crest": "https://crests.football-data.org/498.png",
-          "goals": 1,
-          "assists": null,
-          "penalties": null,
-          "playedMatches": 1
+          "playedMatches": 2
         },
         {
           "player_id": 182080,
@@ -592,6 +689,54 @@
           "assists": null,
           "penalties": null,
           "playedMatches": 1
+        },
+        {
+          "player_id": 280747,
+          "player_name": "Flávio Gonçalves",
+          "nationality": "France",
+          "team_id": 498,
+          "team_ja": "スポルティングCP",
+          "team_crest": "https://crests.football-data.org/498.png",
+          "goals": 1,
+          "assists": null,
+          "penalties": null,
+          "playedMatches": 2
+        },
+        {
+          "player_id": 212861,
+          "player_name": "Sergi Altimira",
+          "nationality": "Spain",
+          "team_id": 498,
+          "team_ja": "スポルティングCP",
+          "team_crest": "https://crests.football-data.org/498.png",
+          "goals": 1,
+          "assists": null,
+          "penalties": null,
+          "playedMatches": 2
+        },
+        {
+          "player_id": 45514,
+          "player_name": "Samu",
+          "nationality": "Portugal",
+          "team_id": 5543,
+          "team_ja": "ヴィトーリア",
+          "team_crest": "https://crests.football-data.org/5543.png",
+          "goals": 1,
+          "assists": null,
+          "penalties": null,
+          "playedMatches": 2
+        },
+        {
+          "player_id": 149724,
+          "player_name": "Alioune Ndoye",
+          "nationality": "Senegal",
+          "team_id": 5543,
+          "team_ja": "ヴィトーリア",
+          "team_crest": "https://crests.football-data.org/5543.png",
+          "goals": 1,
+          "assists": null,
+          "penalties": null,
+          "playedMatches": 2
         }
       ]
     },
