@@ -1,5 +1,5 @@
 {
-  "updated": "2026-04-29",
+  "updated": "2026-08-18",
   "note": "club_id は football-data.org のチームID。null は football-data.org でカバーされないクラブ（リーグ・ドゥ／ベルギー）。",
   "players": [
     {
@@ -36,7 +36,7 @@
       "league_ja": "プレミアリーグ",
       "competition_id": 39,
       "api_player_id": null,
-      "note": ""
+      "note": "2026年8月に契約を1年延長して残留"
     },
     {
       "name_ja": "田中碧",
@@ -60,7 +60,7 @@
       "league_ja": "プレミアリーグ",
       "competition_id": 39,
       "api_player_id": null,
-      "note": "2026年1月にボルシアMGへレンタル中"
+      "note": "2026年6月にボルシアMGへのレンタルが終了し復帰"
     },
     {
       "name_ja": "松木玖生",
@@ -81,22 +81,22 @@
       "club_ja": "コヴェントリー",
       "club_en": "Coventry",
       "club_id": 1076,
-      "league_ja": "チャンピオンシップ",
-      "competition_id": 40,
+      "league_ja": "プレミアリーグ",
+      "competition_id": 39,
       "api_player_id": null,
-      "note": ""
+      "note": "コヴェントリーが2025-26チャンピオンシップ優勝で昇格"
     },
     {
       "name_ja": "平河悠",
       "name_en": "Yu Hirakawa",
       "position": "FW/MF",
-      "club_ja": "ハル・シティ",
-      "club_en": "Hull City",
-      "club_id": 322,
+      "club_ja": "ブリストル・シティ",
+      "club_en": "Bristol City",
+      "club_id": 387,
       "league_ja": "チャンピオンシップ",
       "competition_id": 40,
       "api_player_id": null,
-      "note": "2026年1月ブリストルからレンタル"
+      "note": "2026年6月にハル・シティへのレンタルが終了し復帰"
     },
     {
       "name_ja": "大橋祐紀",
@@ -135,18 +135,6 @@
       "note": ""
     },
     {
-      "name_ja": "瀬古樹",
-      "name_en": "Itsuki Seko",
-      "position": "MF",
-      "club_ja": "ストーク・シティ",
-      "club_en": "Stoke City",
-      "club_id": 70,
-      "league_ja": "チャンピオンシップ",
-      "competition_id": 40,
-      "api_player_id": null,
-      "note": ""
-    },
-    {
       "name_ja": "岩田智輝",
       "name_en": "Tomoki Iwata",
       "position": "DF",
@@ -159,28 +147,16 @@
       "note": ""
     },
     {
-      "name_ja": "古橋亨梧",
-      "name_en": "Kyogo Furuhashi",
-      "position": "FW",
+      "name_ja": "藤本寛也",
+      "name_en": "Kanya Fujimoto",
+      "position": "MF",
       "club_ja": "バーミンガム",
       "club_en": "Birmingham",
       "club_id": 332,
       "league_ja": "チャンピオンシップ",
       "competition_id": 40,
       "api_player_id": null,
-      "note": ""
-    },
-    {
-      "name_ja": "藤本寛也",
-      "name_en": "Kanya Fujimoto",
-      "position": "MF",
-      "club_ja": "ジル・ヴィセンテ",
-      "club_en": "Gil Vicente",
-      "club_id": 5533,
-      "league_ja": "プリメイラ・リーガ",
-      "competition_id": 94,
-      "api_player_id": null,
-      "note": "ローン中の場合あり"
+      "note": "2025年7月にジル・ヴィセンテから移籍。リストの記載誤りを修正"
     },
     {
       "name_ja": "久保建英",
@@ -189,18 +165,6 @@
       "club_ja": "レアル・ソシエダ",
       "club_en": "Real Sociedad",
       "club_id": 92,
-      "league_ja": "ラ・リーガ",
-      "competition_id": 140,
-      "api_player_id": null,
-      "note": ""
-    },
-    {
-      "name_ja": "浅野拓磨",
-      "name_en": "Takuma Asano",
-      "position": "FW",
-      "club_ja": "マジョルカ",
-      "club_en": "Mallorca",
-      "club_id": 89,
       "league_ja": "ラ・リーガ",
       "competition_id": 140,
       "api_player_id": null,
@@ -294,25 +258,25 @@
       "name_ja": "菅原由勢",
       "name_en": "Yukinari Sugawara",
       "position": "DF",
-      "club_ja": "ブレーメン",
-      "club_en": "Werder Bremen",
-      "club_id": 12,
-      "league_ja": "ブンデスリーガ",
-      "competition_id": 78,
+      "club_ja": "サウサンプトン",
+      "club_en": "Southampton",
+      "club_id": 340,
+      "league_ja": "チャンピオンシップ",
+      "competition_id": 40,
       "api_player_id": null,
-      "note": ""
+      "note": "2026年6月にブレーメンへのレンタルが終了し復帰"
     },
     {
       "name_ja": "長田澪",
       "name_en": "Mio Backhaus",
       "position": "GK",
-      "club_ja": "ブレーメン",
-      "club_en": "Werder Bremen",
-      "club_id": 12,
+      "club_ja": "フライブルク",
+      "club_en": "SC Freiburg",
+      "club_id": 17,
       "league_ja": "ブンデスリーガ",
       "competition_id": 78,
       "api_player_id": null,
-      "note": ""
+      "note": "2026年5月にブレーメンから完全移籍"
     },
     {
       "name_ja": "町野修斗",
@@ -327,40 +291,28 @@
       "note": ""
     },
     {
-      "name_ja": "高井幸大（レンタル）",
-      "name_en": "Kota Takai",
-      "position": "DF",
-      "club_ja": "ボルシアMG",
-      "club_en": "Borussia Mönchengladbach",
-      "club_id": 18,
-      "league_ja": "ブンデスリーガ",
-      "competition_id": 78,
-      "api_player_id": null,
-      "note": "2026年1月レンタル加入（保有元トッテナム）"
-    },
-    {
       "name_ja": "塩貝健人",
       "name_en": "Kento Shiogai",
       "position": "FW",
       "club_ja": "ヴォルフスブルク",
       "club_en": "VfL Wolfsburg",
-      "club_id": 11,
-      "league_ja": "ブンデスリーガ",
-      "competition_id": 78,
+      "club_id": null,
+      "league_ja": "ブンデスリーガ2部",
+      "competition_id": 79,
       "api_player_id": null,
-      "note": "2026年1月にNECから完全移籍"
+      "note": "ヴォルフスブルクは2025-26入れ替え戦敗退で2部降格"
     },
     {
       "name_ja": "小野田亮汰",
       "name_en": "Ryota Onoda",
       "position": "FW",
-      "club_ja": "アウクスブルク",
-      "club_en": "FC Augsburg",
-      "club_id": 16,
+      "club_ja": "アウクスブルクII",
+      "club_en": "FC Augsburg II",
+      "club_id": null,
       "league_ja": "ブンデスリーガ",
       "competition_id": 78,
       "api_player_id": null,
-      "note": "冬加入"
+      "note": "トップチームではなくアウクスブルクIIに所属。リーグ表記は要確認"
     },
     {
       "name_ja": "藤田譲瑠チマ",
@@ -368,11 +320,11 @@
       "position": "MF",
       "club_ja": "ザンクト・パウリ",
       "club_en": "FC St. Pauli",
-      "club_id": 20,
-      "league_ja": "ブンデスリーガ",
-      "competition_id": 78,
+      "club_id": null,
+      "league_ja": "ブンデスリーガ2部",
+      "competition_id": 79,
       "api_player_id": null,
-      "note": ""
+      "note": "ザンクト・パウリは2025-26最下位で2部降格"
     },
     {
       "name_ja": "安藤智哉",
@@ -380,11 +332,11 @@
       "position": "DF",
       "club_ja": "ザンクト・パウリ",
       "club_en": "FC St. Pauli",
-      "club_id": 20,
-      "league_ja": "ブンデスリーガ",
-      "competition_id": 78,
+      "club_id": null,
+      "league_ja": "ブンデスリーガ2部",
+      "competition_id": 79,
       "api_player_id": null,
-      "note": "2026年1月に福岡から完全移籍"
+      "note": "ザンクト・パウリは2025-26最下位で2部降格"
     },
     {
       "name_ja": "原大智",
@@ -392,11 +344,11 @@
       "position": "FW",
       "club_ja": "ザンクト・パウリ",
       "club_en": "FC St. Pauli",
-      "club_id": 20,
-      "league_ja": "ブンデスリーガ",
-      "competition_id": 78,
+      "club_id": null,
+      "league_ja": "ブンデスリーガ2部",
+      "competition_id": 79,
       "api_player_id": null,
-      "note": "2026年1月に京都から完全移籍"
+      "note": "ザンクト・パウリは2025-26最下位で2部降格"
     },
     {
       "name_ja": "町田浩樹",
@@ -459,18 +411,6 @@
       "note": "リーグ・ドゥは無料プラン対象外"
     },
     {
-      "name_ja": "関根大輝",
-      "name_en": "Daiki Sekine",
-      "position": "DF",
-      "club_ja": "スタッド・ランス",
-      "club_en": "Stade de Reims",
-      "club_id": null,
-      "league_ja": "リーグ・ドゥ",
-      "competition_id": 62,
-      "api_player_id": null,
-      "note": "リーグ・ドゥは無料プラン対象外"
-    },
-    {
       "name_ja": "板倉滉",
       "name_en": "Ko Itakura",
       "position": "DF",
@@ -486,13 +426,13 @@
       "name_ja": "冨安健洋",
       "name_en": "Takehiro Tomiyasu",
       "position": "DF",
-      "club_ja": "アヤックス",
-      "club_en": "Ajax",
-      "club_id": 678,
-      "league_ja": "エールディビジ",
-      "competition_id": 88,
+      "club_ja": "クリスタル・パレス",
+      "club_en": "Crystal Palace",
+      "club_id": 354,
+      "league_ja": "プレミアリーグ",
+      "competition_id": 39,
       "api_player_id": null,
-      "note": "2025年12月加入"
+      "note": "2026年8月にアヤックスから加入（契約満了によるフリー）"
     },
     {
       "name_ja": "上田綺世",
@@ -558,13 +498,13 @@
       "name_ja": "佐野航大",
       "name_en": "Kodai Sano",
       "position": "MF",
-      "club_ja": "NECナイメヘン",
-      "club_en": "NEC Nijmegen",
-      "club_id": 1915,
+      "club_ja": "PSVアイントホーフェン",
+      "club_en": "PSV Eindhoven",
+      "club_id": 674,
       "league_ja": "エールディビジ",
       "competition_id": 88,
       "api_player_id": null,
-      "note": ""
+      "note": "2026年8月にNECナイメヘンから完全移籍"
     },
     {
       "name_ja": "三戸舜介",
@@ -642,13 +582,13 @@
       "name_ja": "橋岡大樹",
       "name_en": "Daiki Hashioka",
       "position": "DF",
-      "club_ja": "ヘント",
-      "club_en": "Gent",
-      "club_id": null,
-      "league_ja": "ジュピラー・プロ・リーグ",
-      "competition_id": 144,
+      "club_ja": "ボルシアMG",
+      "club_en": "Borussia Mönchengladbach",
+      "club_id": 18,
+      "league_ja": "ブンデスリーガ",
+      "competition_id": 78,
       "api_player_id": null,
-      "note": "ベルギーは無料プラン対象外"
+      "note": "2026年7月にスラビア・プラハからレンタル（買取オプション付・2027年6月30日まで）"
     },
     {
       "name_ja": "坂本一彩",
@@ -687,30 +627,6 @@
       "note": "ベルギーは無料プラン対象外"
     },
     {
-      "name_ja": "明本考浩",
-      "name_en": "Takahiro Akimoto",
-      "position": "DF/MF",
-      "club_ja": "OHルーヴェン",
-      "club_en": "OH Leuven",
-      "club_id": null,
-      "league_ja": "ジュピラー・プロ・リーグ",
-      "competition_id": 144,
-      "api_player_id": null,
-      "note": "ベルギーは無料プラン対象外"
-    },
-    {
-      "name_ja": "大南拓磨",
-      "name_en": "Takuma Ominami",
-      "position": "DF",
-      "club_ja": "OHルーヴェン",
-      "club_en": "OH Leuven",
-      "club_id": null,
-      "league_ja": "ジュピラー・プロ・リーグ",
-      "competition_id": 144,
-      "api_player_id": null,
-      "note": "ベルギーは無料プラン対象外"
-    },
-    {
       "name_ja": "小久保玲央ブライアン",
       "name_en": "Leo Kokubo",
       "position": "GK",
@@ -732,31 +648,19 @@
       "league_ja": "ジュピラー・プロ・リーグ",
       "competition_id": 144,
       "api_player_id": null,
-      "note": "ベルギーは無料プラン対象外"
+      "note": "2026年7月に契約満了後、あらためて契約"
     },
     {
       "name_ja": "山本理仁",
       "name_en": "Riihito Yamamoto",
       "position": "MF",
-      "club_ja": "シント＝トロイデン",
-      "club_en": "Sint-Truiden",
-      "club_id": null,
-      "league_ja": "ジュピラー・プロ・リーグ",
-      "competition_id": 144,
+      "club_ja": "フライブルク",
+      "club_en": "SC Freiburg",
+      "club_id": 17,
+      "league_ja": "ブンデスリーガ",
+      "competition_id": 78,
       "api_player_id": null,
-      "note": "ベルギーは無料プラン対象外"
-    },
-    {
-      "name_ja": "伊藤涼太郎",
-      "name_en": "Ryotaro Ito",
-      "position": "MF/FW",
-      "club_ja": "シント＝トロイデン",
-      "club_en": "Sint-Truiden",
-      "club_id": null,
-      "league_ja": "ジュピラー・プロ・リーグ",
-      "competition_id": 144,
-      "api_player_id": null,
-      "note": "ベルギーは無料プラン対象外"
+      "note": "2026年5月にシント＝トロイデンから完全移籍"
     },
     {
       "name_ja": "畑大雅",
@@ -774,13 +678,13 @@
       "name_ja": "後藤啓介",
       "name_en": "Keisuke Goto",
       "position": "FW",
-      "club_ja": "シント＝トロイデン",
-      "club_en": "Sint-Truiden",
-      "club_id": null,
-      "league_ja": "ジュピラー・プロ・リーグ",
-      "competition_id": 144,
+      "club_ja": "フライブルク",
+      "club_en": "SC Freiburg",
+      "club_id": 17,
+      "league_ja": "ブンデスリーガ",
+      "competition_id": 78,
       "api_player_id": null,
-      "note": "ベルギーは無料プラン対象外"
+      "note": "2026年6月にアンデルレヒトから完全移籍（STVVへレンタル中だった）"
     },
     {
       "name_ja": "松澤海斗",
@@ -810,13 +714,169 @@
       "name_ja": "守田英正",
       "name_en": "Hidemasa Morita",
       "position": "MF",
-      "club_ja": "スポルティングCP",
-      "club_en": "Sporting CP",
-      "club_id": 498,
+      "club_ja": "ハル・シティ",
+      "club_en": "Hull City",
+      "club_id": 322,
+      "league_ja": "プレミアリーグ",
+      "competition_id": 39,
+      "api_player_id": null,
+      "note": "2026年7月にスポルティングCPから加入（フリー）。ハルは2025-26に昇格"
+    },
+    {
+      "name_ja": "佐藤龍之介",
+      "name_en": "Ryunosuke Sato",
+      "position": "FW",
+      "club_ja": "バレンシア",
+      "club_en": "Valencia CF",
+      "club_id": 95,
+      "league_ja": "ラ・リーガ",
+      "competition_id": 140,
+      "api_player_id": null,
+      "note": "2026年7月にFC東京から完全移籍"
+    },
+    {
+      "name_ja": "宇野禅斗",
+      "name_en": "Zento Uno",
+      "position": "MF",
+      "club_ja": "ボルシアMG",
+      "club_en": "Borussia Mönchengladbach",
+      "club_id": 18,
+      "league_ja": "ブンデスリーガ",
+      "competition_id": 78,
+      "api_player_id": null,
+      "note": "2026年6月に清水エスパルスから完全移籍（2030年6月まで）"
+    },
+    {
+      "name_ja": "田中聡",
+      "name_en": "Satoshi Tanaka",
+      "position": "MF",
+      "club_ja": "シャルケ04",
+      "club_en": "FC Schalke 04",
+      "club_id": 6,
+      "league_ja": "ブンデスリーガ",
+      "competition_id": 78,
+      "api_player_id": null,
+      "note": "2026年6月にデュッセルドルフから完全移籍。シャルケは2部優勝で昇格"
+    },
+    {
+      "name_ja": "中村草太",
+      "name_en": "Sota Nakamura",
+      "position": "FW",
+      "club_ja": "ル・アーヴル",
+      "club_en": "Le Havre",
+      "club_id": 533,
+      "league_ja": "リーグ・アン",
+      "competition_id": 61,
+      "api_player_id": null,
+      "note": "2026年7月にサンフレッチェ広島からレンタル（2027年6月30日まで）"
+    },
+    {
+      "name_ja": "水多海斗",
+      "name_en": "Kaito Mizuta",
+      "position": "MF",
+      "club_ja": "ル・アーヴル",
+      "club_en": "Le Havre",
+      "club_id": 533,
+      "league_ja": "リーグ・アン",
+      "competition_id": 61,
+      "api_player_id": null,
+      "note": "2026年7月にロートヴァイス・エッセンから完全移籍（3年契約）"
+    },
+    {
+      "name_ja": "福井太智",
+      "name_en": "Taichi Fukui",
+      "position": "MF",
+      "club_ja": "FCアロウカ",
+      "club_en": "FC Arouca",
+      "club_id": 712,
       "league_ja": "プリメイラ・リーガ",
       "competition_id": 94,
       "api_player_id": null,
-      "note": ""
+      "note": "2025年2月に買取オプション行使で完全移籍（2028年まで）"
+    },
+    {
+      "name_ja": "荒木遼太郎",
+      "name_en": "Ryotaro Araki",
+      "position": "MF",
+      "club_ja": "シント＝トロイデン",
+      "club_en": "Sint-Truiden",
+      "club_id": null,
+      "league_ja": "ジュピラー・プロ・リーグ",
+      "competition_id": 144,
+      "api_player_id": null,
+      "note": "2026年7月に鹿島アントラーズから完全移籍。ベルギーは無料プラン対象外"
+    },
+    {
+      "name_ja": "石渡ネルソン",
+      "name_en": "Nelson Ishiwatari",
+      "position": "DF",
+      "club_ja": "シント＝トロイデン",
+      "club_en": "Sint-Truiden",
+      "club_id": null,
+      "league_ja": "ジュピラー・プロ・リーグ",
+      "competition_id": 144,
+      "api_player_id": null,
+      "note": "2026年7月にセレッソ大阪から完全移籍。ベルギーは無料プラン対象外"
+    },
+    {
+      "name_ja": "荻原拓也",
+      "name_en": "Takuya Ogiwara",
+      "position": "DF",
+      "club_ja": "OHルーヴェン",
+      "club_en": "OH Leuven",
+      "club_id": null,
+      "league_ja": "ジュピラー・プロ・リーグ",
+      "competition_id": 144,
+      "api_player_id": null,
+      "note": "2026年7月に浦和レッズからレンタル（買取オプション付・2027年6月30日まで）。ベルギーは無料プラン対象外"
+    },
+    {
+      "name_ja": "山田新",
+      "name_en": "Shin Yamada",
+      "position": "FW",
+      "club_ja": "OHルーヴェン",
+      "club_en": "OH Leuven",
+      "club_id": null,
+      "league_ja": "ジュピラー・プロ・リーグ",
+      "competition_id": 144,
+      "api_player_id": null,
+      "note": "2026年7月にセルティックからレンタル（今季末まで）。ベルギーは無料プラン対象外"
+    },
+    {
+      "name_ja": "倍井謙",
+      "name_en": "Ken Masui",
+      "position": "FW",
+      "club_ja": "KVコルトレイク",
+      "club_en": "KV Kortrijk",
+      "club_id": null,
+      "league_ja": "ジュピラー・プロ・リーグ",
+      "competition_id": 144,
+      "api_player_id": null,
+      "note": "2026年6月に名古屋グランパスからレンタル（2027年6月30日まで）。コルトレイクは2026-27に1部昇格。ベルギーは無料プラン対象外"
+    },
+    {
+      "name_ja": "安藤晃希",
+      "name_en": "Koki Ando",
+      "position": "",
+      "club_ja": "ロイヤル・アントワープ",
+      "club_en": "Royal Antwerp",
+      "club_id": null,
+      "league_ja": "ジュピラー・プロ・リーグ",
+      "competition_id": 144,
+      "api_player_id": null,
+      "note": "2026年6月に水戸ホーリーホックから完全移籍。ベルギーは無料プラン対象外。ポジションは要確認"
+    },
+    {
+      "name_ja": "ハーフナー・ニッキ",
+      "name_en": "Nikki Havenaar",
+      "position": "DF",
+      "club_ja": "ユニオン・サンジロワーズ",
+      "club_en": "Royale Union Saint-Gilloise",
+      "club_id": null,
+      "league_ja": "ジュピラー・プロ・リーグ",
+      "competition_id": 144,
+      "api_player_id": null,
+      "note": "2026年5月にSVリート（オーストリア）から加入（契約満了によるフリー・2029年まで）。ベルギーは無料プラン対象外"
     }
   ]
 }
