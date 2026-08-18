@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-18T07:23:18.680437+09:00",
+  "updated": "2026-08-18T12:35:50.859227+09:00",
   "date_from": "2026-08-11",
   "date_to": "2026-09-01",
   "match_count": 560,
@@ -3320,6 +3320,21 @@
           "name_ja": "鈴木唯人",
           "position": "MF/FW",
           "side": "away"
+        },
+        {
+          "name_ja": "長田澪",
+          "position": "GK",
+          "side": "away"
+        },
+        {
+          "name_ja": "山本理仁",
+          "position": "MF",
+          "side": "away"
+        },
+        {
+          "name_ja": "後藤啓介",
+          "position": "FW",
+          "side": "away"
         }
       ],
       "broadcasters": [
@@ -3391,6 +3406,11 @@
         {
           "name_ja": "鎌田大地",
           "position": "MF",
+          "side": "away"
+        },
+        {
+          "name_ja": "冨安健洋",
+          "position": "DF",
           "side": "away"
         }
       ],
@@ -6519,6 +6539,21 @@
           "name_ja": "鈴木唯人",
           "position": "MF/FW",
           "side": "home"
+        },
+        {
+          "name_ja": "長田澪",
+          "position": "GK",
+          "side": "home"
+        },
+        {
+          "name_ja": "山本理仁",
+          "position": "MF",
+          "side": "home"
+        },
+        {
+          "name_ja": "後藤啓介",
+          "position": "FW",
+          "side": "home"
         }
       ],
       "broadcasters": [
@@ -6590,6 +6625,11 @@
         {
           "name_ja": "鎌田大地",
           "position": "MF",
+          "side": "home"
+        },
+        {
+          "name_ja": "冨安健洋",
+          "position": "DF",
           "side": "home"
         }
       ],
@@ -14289,6 +14329,15 @@
           "url": "https://www.unext.jp/",
           "note": "〜2027-28"
         }
+      ],
+      "highlights": [
+        {
+          "broadcaster": "U-NEXT",
+          "video_id": "Nw1Lb9SWY7w",
+          "url": "https://youtu.be/Nw1Lb9SWY7w",
+          "title": "【王者へ完全移籍】佐野航大（PSVアイントホーフェン）｜NECナイメヘン時代ベストプレー集｜エールディヴィジ 2026/27",
+          "yt_published": "2026-08-09"
+        }
       ]
     },
     {
@@ -14763,13 +14812,7 @@
         "home": 3,
         "away": 2
       },
-      "japanese_players": [
-        {
-          "name_ja": "守田英正",
-          "position": "MF",
-          "side": "home"
-        }
-      ],
+      "japanese_players": [],
       "broadcasters": []
     },
     {
@@ -14858,7 +14901,13 @@
         "home": 0,
         "away": 2
       },
-      "japanese_players": [],
+      "japanese_players": [
+        {
+          "name_ja": "平河悠",
+          "position": "FW/MF",
+          "side": "home"
+        }
+      ],
       "broadcasters": [
         {
           "name": "DAZN",
@@ -14922,13 +14971,7 @@
         "home": 1,
         "away": 2
       },
-      "japanese_players": [
-        {
-          "name_ja": "瀬古樹",
-          "position": "MF",
-          "side": "home"
-        }
-      ],
+      "japanese_players": [],
       "broadcasters": [
         {
           "name": "DAZN",
@@ -15035,11 +15078,6 @@
           "name_ja": "小川航基",
           "position": "FW",
           "side": "away"
-        },
-        {
-          "name_ja": "佐野航大",
-          "position": "MF",
-          "side": "away"
         }
       ],
       "broadcasters": [
@@ -15105,8 +15143,8 @@
           "side": "away"
         },
         {
-          "name_ja": "古橋亨梧",
-          "position": "FW",
+          "name_ja": "藤本寛也",
+          "position": "MF",
           "side": "away"
         }
       ],
@@ -15255,7 +15293,13 @@
         "home": 1,
         "away": 2
       },
-      "japanese_players": [],
+      "japanese_players": [
+        {
+          "name_ja": "佐野航大",
+          "position": "MF",
+          "side": "away"
+        }
+      ],
       "broadcasters": [
         {
           "name": "U-NEXT",
@@ -15378,13 +15422,7 @@
       "away_en": "Gil Vicente",
       "away_crest": "https://crests.football-data.org/5533.png",
       "score": null,
-      "japanese_players": [
-        {
-          "name_ja": "藤本寛也",
-          "position": "MF",
-          "side": "away"
-        }
-      ],
+      "japanese_players": [],
       "broadcasters": []
     },
     {
@@ -15445,6 +15483,11 @@
         {
           "name_ja": "松木玖生",
           "position": "FW/MF",
+          "side": "away"
+        },
+        {
+          "name_ja": "菅原由勢",
+          "position": "DF",
           "side": "away"
         }
       ],
@@ -15602,11 +15645,6 @@
           "name_ja": "板倉滉",
           "position": "DF",
           "side": "home"
-        },
-        {
-          "name_ja": "冨安健洋",
-          "position": "DF",
-          "side": "home"
         }
       ],
       "broadcasters": [
@@ -15755,7 +15793,13 @@
         "home": 4,
         "away": 0
       },
-      "japanese_players": [],
+      "japanese_players": [
+        {
+          "name_ja": "福井太智",
+          "position": "MF",
+          "side": "home"
+        }
+      ],
       "broadcasters": []
     },
     {
@@ -16073,11 +16117,6 @@
           "name_ja": "小川航基",
           "position": "FW",
           "side": "home"
-        },
-        {
-          "name_ja": "佐野航大",
-          "position": "MF",
-          "side": "home"
         }
       ],
       "broadcasters": [
@@ -16110,8 +16149,8 @@
       "score": null,
       "japanese_players": [
         {
-          "name_ja": "平河悠",
-          "position": "FW/MF",
+          "name_ja": "守田英正",
+          "position": "MF",
           "side": "home"
         }
       ],
@@ -16150,9 +16189,14 @@
           "side": "home"
         },
         {
-          "name_ja": "古橋亨梧",
-          "position": "FW",
+          "name_ja": "藤本寛也",
+          "position": "MF",
           "side": "home"
+        },
+        {
+          "name_ja": "平河悠",
+          "position": "FW/MF",
+          "side": "away"
         }
       ],
       "broadcasters": [
@@ -16309,6 +16353,11 @@
         {
           "name_ja": "鎌田大地",
           "position": "MF",
+          "side": "away"
+        },
+        {
+          "name_ja": "冨安健洋",
+          "position": "DF",
           "side": "away"
         }
       ],
@@ -16532,9 +16581,9 @@
           "side": "home"
         },
         {
-          "name_ja": "瀬古樹",
-          "position": "MF",
-          "side": "away"
+          "name_ja": "菅原由勢",
+          "position": "DF",
+          "side": "home"
         }
       ],
       "broadcasters": [
@@ -16875,7 +16924,13 @@
       "away_en": "Celta",
       "away_crest": "https://crests.football-data.org/558.png",
       "score": null,
-      "japanese_players": [],
+      "japanese_players": [
+        {
+          "name_ja": "佐藤龍之介",
+          "position": "FW",
+          "side": "home"
+        }
+      ],
       "broadcasters": [
         {
           "name": "U-NEXT",
@@ -17152,13 +17207,7 @@
       "away_en": "Alverca",
       "away_crest": "https://crests.football-data.org/7822.png",
       "score": null,
-      "japanese_players": [
-        {
-          "name_ja": "守田英正",
-          "position": "MF",
-          "side": "home"
-        }
-      ],
+      "japanese_players": [],
       "broadcasters": []
     },
     {
@@ -17238,7 +17287,13 @@
       "away_en": "Groningen",
       "away_crest": "https://crests.football-data.org/677.png",
       "score": null,
-      "japanese_players": [],
+      "japanese_players": [
+        {
+          "name_ja": "佐野航大",
+          "position": "MF",
+          "side": "home"
+        }
+      ],
       "broadcasters": [
         {
           "name": "U-NEXT",
@@ -17460,6 +17515,16 @@
         {
           "name_ja": "瀬古歩夢",
           "position": "DF",
+          "side": "home"
+        },
+        {
+          "name_ja": "中村草太",
+          "position": "FW",
+          "side": "home"
+        },
+        {
+          "name_ja": "水多海斗",
+          "position": "MF",
           "side": "home"
         },
         {
@@ -17766,7 +17831,13 @@
       "away_en": "Arouca",
       "away_crest": "https://crests.football-data.org/712.png",
       "score": null,
-      "japanese_players": [],
+      "japanese_players": [
+        {
+          "name_ja": "福井太智",
+          "position": "MF",
+          "side": "away"
+        }
+      ],
       "broadcasters": []
     },
     {
@@ -17909,13 +17980,7 @@
       "away_en": "Casa Pia",
       "away_crest": "https://crests.football-data.org/6618.png",
       "score": null,
-      "japanese_players": [
-        {
-          "name_ja": "藤本寛也",
-          "position": "MF",
-          "side": "home"
-        }
-      ],
+      "japanese_players": [],
       "broadcasters": []
     },
     {
@@ -17971,7 +18036,13 @@
       "away_en": "Real Betis",
       "away_crest": "https://crests.football-data.org/90.png",
       "score": null,
-      "japanese_players": [],
+      "japanese_players": [
+        {
+          "name_ja": "佐藤龍之介",
+          "position": "FW",
+          "side": "home"
+        }
+      ],
       "broadcasters": [
         {
           "name": "U-NEXT",
@@ -18280,6 +18351,11 @@
           "name_ja": "鎌田大地",
           "position": "MF",
           "side": "home"
+        },
+        {
+          "name_ja": "冨安健洋",
+          "position": "DF",
+          "side": "home"
         }
       ],
       "broadcasters": [
@@ -18317,8 +18393,8 @@
           "side": "away"
         },
         {
-          "name_ja": "古橋亨梧",
-          "position": "FW",
+          "name_ja": "藤本寛也",
+          "position": "MF",
           "side": "away"
         }
       ],
@@ -18350,13 +18426,7 @@
       "away_en": "Sporting CP",
       "away_crest": "https://crests.football-data.org/498.png",
       "score": null,
-      "japanese_players": [
-        {
-          "name_ja": "守田英正",
-          "position": "MF",
-          "side": "away"
-        }
-      ],
+      "japanese_players": [],
       "broadcasters": []
     },
     {
@@ -18447,13 +18517,7 @@
       "away_en": "Stoke",
       "away_crest": "https://crests.football-data.org/70.png",
       "score": null,
-      "japanese_players": [
-        {
-          "name_ja": "瀬古樹",
-          "position": "MF",
-          "side": "away"
-        }
-      ],
+      "japanese_players": [],
       "broadcasters": [
         {
           "name": "DAZN",
@@ -18547,8 +18611,13 @@
           "side": "away"
         },
         {
-          "name_ja": "高井幸大（レンタル）",
+          "name_ja": "橋岡大樹",
           "position": "DF",
+          "side": "away"
+        },
+        {
+          "name_ja": "宇野禅斗",
+          "position": "MF",
           "side": "away"
         }
       ],
@@ -18795,8 +18864,8 @@
           "side": "home"
         },
         {
-          "name_ja": "平河悠",
-          "position": "FW/MF",
+          "name_ja": "守田英正",
+          "position": "MF",
           "side": "away"
         }
       ],
@@ -18886,7 +18955,13 @@
       "away_en": "Portsmouth",
       "away_crest": "https://crests.football-data.org/325.png",
       "score": null,
-      "japanese_players": [],
+      "japanese_players": [
+        {
+          "name_ja": "平河悠",
+          "position": "FW/MF",
+          "side": "home"
+        }
+      ],
       "broadcasters": [
         {
           "name": "DAZN",
@@ -18919,6 +18994,11 @@
         {
           "name_ja": "松木玖生",
           "position": "FW/MF",
+          "side": "home"
+        },
+        {
+          "name_ja": "菅原由勢",
+          "position": "DF",
           "side": "home"
         }
       ],
@@ -19139,7 +19219,13 @@
       "away_en": "Marítimo",
       "away_crest": "https://crests.football-data.org/5575.png",
       "score": null,
-      "japanese_players": [],
+      "japanese_players": [
+        {
+          "name_ja": "福井太智",
+          "position": "MF",
+          "side": "home"
+        }
+      ],
       "broadcasters": []
     },
     {
@@ -19552,6 +19638,16 @@
           "name_ja": "瀬古歩夢",
           "position": "DF",
           "side": "away"
+        },
+        {
+          "name_ja": "中村草太",
+          "position": "FW",
+          "side": "away"
+        },
+        {
+          "name_ja": "水多海斗",
+          "position": "MF",
+          "side": "away"
         }
       ],
       "broadcasters": [
@@ -19645,11 +19741,6 @@
           "name_ja": "小川航基",
           "position": "FW",
           "side": "away"
-        },
-        {
-          "name_ja": "佐野航大",
-          "position": "MF",
-          "side": "away"
         }
       ],
       "broadcasters": [
@@ -19714,7 +19805,13 @@
       "away_en": "PSV",
       "away_crest": "https://crests.football-data.org/674.png",
       "score": null,
-      "japanese_players": [],
+      "japanese_players": [
+        {
+          "name_ja": "佐野航大",
+          "position": "MF",
+          "side": "away"
+        }
+      ],
       "broadcasters": [
         {
           "name": "U-NEXT",
@@ -19947,14 +20044,19 @@
           "side": "home"
         },
         {
-          "name_ja": "菅原由勢",
-          "position": "DF",
-          "side": "away"
-        },
-        {
           "name_ja": "長田澪",
           "position": "GK",
-          "side": "away"
+          "side": "home"
+        },
+        {
+          "name_ja": "山本理仁",
+          "position": "MF",
+          "side": "home"
+        },
+        {
+          "name_ja": "後藤啓介",
+          "position": "FW",
+          "side": "home"
         }
       ],
       "broadcasters": [
@@ -20016,11 +20118,6 @@
       "japanese_players": [
         {
           "name_ja": "板倉滉",
-          "position": "DF",
-          "side": "away"
-        },
-        {
-          "name_ja": "冨安健洋",
           "position": "DF",
           "side": "away"
         }
@@ -20147,9 +20244,9 @@
       "score": null,
       "japanese_players": [
         {
-          "name_ja": "小野田亮汰",
-          "position": "FW",
-          "side": "home"
+          "name_ja": "田中聡",
+          "position": "MF",
+          "side": "away"
         }
       ],
       "broadcasters": [
@@ -20237,7 +20334,13 @@
       "away_en": "Valencia",
       "away_crest": "https://crests.football-data.org/95.png",
       "score": null,
-      "japanese_players": [],
+      "japanese_players": [
+        {
+          "name_ja": "佐藤龍之介",
+          "position": "FW",
+          "side": "away"
+        }
+      ],
       "broadcasters": [
         {
           "name": "U-NEXT",
@@ -20427,13 +20530,7 @@
       "away_en": "Gil Vicente",
       "away_crest": "https://crests.football-data.org/5533.png",
       "score": null,
-      "japanese_players": [
-        {
-          "name_ja": "藤本寛也",
-          "position": "MF",
-          "side": "away"
-        }
-      ],
+      "japanese_players": [],
       "broadcasters": []
     },
     {
@@ -20654,7 +20751,13 @@
       "away_en": "Bristol City",
       "away_crest": "https://crests.football-data.org/387.png",
       "score": null,
-      "japanese_players": [],
+      "japanese_players": [
+        {
+          "name_ja": "平河悠",
+          "position": "FW/MF",
+          "side": "away"
+        }
+      ],
       "broadcasters": [
         {
           "name": "DAZN",
@@ -20817,13 +20920,18 @@
           "side": "home"
         },
         {
-          "name_ja": "古橋亨梧",
-          "position": "FW",
+          "name_ja": "藤本寛也",
+          "position": "MF",
           "side": "home"
         },
         {
           "name_ja": "松木玖生",
           "position": "FW/MF",
+          "side": "away"
+        },
+        {
+          "name_ja": "菅原由勢",
+          "position": "DF",
           "side": "away"
         }
       ],
@@ -20884,13 +20992,7 @@
       "away_en": "Norwich",
       "away_crest": "https://crests.football-data.org/68.png",
       "score": null,
-      "japanese_players": [
-        {
-          "name_ja": "瀬古樹",
-          "position": "MF",
-          "side": "home"
-        }
-      ],
+      "japanese_players": [],
       "broadcasters": [
         {
           "name": "DAZN",
@@ -20901,6 +21003,6 @@
       ]
     }
   ],
-  "updated_yt_highlights": "2026-08-18T07:26:14.363132+09:00",
-  "updated_uefa_secondary": "2026-08-18T07:26:45.783221+09:00"
+  "updated_yt_highlights": "2026-08-18T12:38:45.411067+09:00",
+  "updated_uefa_secondary": "2026-08-18T12:39:14.515561+09:00"
 }

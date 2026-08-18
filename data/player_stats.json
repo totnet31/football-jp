@@ -1,7 +1,7 @@
 {
-  "updated": "2026-08-18T07:27:50+09:00",
+  "updated": "2026-08-18T12:40:21+09:00",
   "note": "Wikipediaの各クラブシーズンページから取得。Efsテンプレート形式とwikitable形式の両方に対応。league_apps/league_goalsがリーグ戦、total_apps/total_goalsが全大会合計。",
-  "total_players": 25,
+  "total_players": 24,
   "stats": {
     "Wataru Endo": {
       "apps": 8,
@@ -68,6 +68,19 @@
       "wiki_page": "2025–26 Southampton F.C. season",
       "wiki_format": "wikitable"
     },
+    "Yukinari Sugawara": {
+      "apps": 2,
+      "goals": 0,
+      "assists": 0,
+      "total_apps": 2,
+      "total_goals": 0,
+      "club": "Southampton",
+      "club_ja": "サウサンプトン",
+      "name_ja": "菅原由勢",
+      "source": "wikipedia",
+      "wiki_page": "2025–26 Southampton F.C. season",
+      "wiki_format": "wikitable"
+    },
     "Tatsuhiro Sakamoto": {
       "apps": 35,
       "goals": 0,
@@ -120,19 +133,6 @@
       "wiki_page": "2025–26 Queens Park Rangers F.C. season",
       "wiki_format": "efs"
     },
-    "Itsuki Seko": {
-      "apps": 43,
-      "goals": 0,
-      "assists": 0,
-      "total_apps": 47,
-      "total_goals": 0,
-      "club": "Stoke City",
-      "club_ja": "ストーク・シティ",
-      "name_ja": "瀬古樹",
-      "source": "wikipedia",
-      "wiki_page": "2025–26 Stoke City F.C. season",
-      "wiki_format": "wikitable"
-    },
     "Hiroki Ito": {
       "apps": 16,
       "goals": 1,
@@ -172,32 +172,6 @@
       "wiki_page": "2025–26 Eintracht Frankfurt season",
       "wiki_format": "efs"
     },
-    "Yukinari Sugawara": {
-      "apps": 19,
-      "goals": 0,
-      "assists": 0,
-      "total_apps": 19,
-      "total_goals": 0,
-      "club": "Werder Bremen",
-      "club_ja": "ブレーメン",
-      "name_ja": "菅原由勢",
-      "source": "wikipedia",
-      "wiki_page": "2025–26 SV Werder Bremen season",
-      "wiki_format": "efs"
-    },
-    "Mio Backhaus": {
-      "apps": 19,
-      "goals": 0,
-      "assists": 0,
-      "total_apps": 19,
-      "total_goals": 0,
-      "club": "Werder Bremen",
-      "club_ja": "ブレーメン",
-      "name_ja": "長田澪",
-      "source": "wikipedia",
-      "wiki_page": "2025–26 SV Werder Bremen season",
-      "wiki_format": "efs"
-    },
     "Takumi Minamino": {
       "apps": 15,
       "goals": 3,
@@ -224,19 +198,6 @@
       "wiki_page": "2025–26 AFC Ajax season",
       "wiki_format": "efs"
     },
-    "Takehiro Tomiyasu": {
-      "apps": 6,
-      "goals": 0,
-      "assists": 0,
-      "total_apps": 8,
-      "total_goals": 0,
-      "club": "Ajax",
-      "club_ja": "アヤックス",
-      "name_ja": "冨安健洋",
-      "source": "wikipedia",
-      "wiki_page": "2025–26 AFC Ajax season",
-      "wiki_format": "efs"
-    },
     "Takuma Ominami": {
       "apps": 12,
       "goals": 0,
@@ -246,7 +207,7 @@
       "club": "OH Leuven",
       "club_ja": "OHルーヴェン",
       "name_ja": "大南拓磨",
-      "source": "wikipedia",
+      "source": "wikipedia_cached",
       "wiki_page": "2025–26 Oud-Heverlee Leuven season",
       "wiki_format": "wikitable"
     },
@@ -259,21 +220,21 @@
       "club": "OH Leuven",
       "club_ja": "OHルーヴェン",
       "name_ja": "明本考浩",
-      "source": "wikipedia",
+      "source": "wikipedia_cached",
       "wiki_page": "2025–26 Oud-Heverlee Leuven season",
       "wiki_format": "wikitable"
     },
-    "Hidemasa Morita": {
-      "apps": 31,
-      "goals": 1,
+    "Mio Backhaus": {
+      "apps": 19,
+      "goals": 0,
       "assists": 0,
-      "total_apps": 50,
-      "total_goals": 1,
-      "club": "Sporting CP",
-      "club_ja": "スポルティングCP",
-      "name_ja": "守田英正",
-      "source": "wikipedia",
-      "wiki_page": "2025–26 Sporting CP season",
+      "total_apps": 19,
+      "total_goals": 0,
+      "club": "Werder Bremen",
+      "club_ja": "ブレーメン",
+      "name_ja": "長田澪",
+      "source": "wikipedia_cached",
+      "wiki_page": "2025–26 SV Werder Bremen season",
       "wiki_format": "efs"
     },
     "Kento Shiogai": {
@@ -289,6 +250,19 @@
       "competition_id": 88,
       "competition_name": "comp_88",
       "note": "リーグ戦のみ（scorers経由）"
+    },
+    "Takehiro Tomiyasu": {
+      "apps": 6,
+      "goals": 0,
+      "assists": 0,
+      "total_apps": 8,
+      "total_goals": 0,
+      "club": "Ajax",
+      "club_ja": "アヤックス",
+      "name_ja": "冨安健洋",
+      "source": "wikipedia_cached",
+      "wiki_page": "2025–26 AFC Ajax season",
+      "wiki_format": "efs"
     },
     "Ayase Ueda": {
       "apps": 30,
@@ -331,6 +305,19 @@
       "competition_id": 88,
       "competition_name": "comp_88",
       "note": "リーグ戦のみ（scorers経由）"
+    },
+    "Hidemasa Morita": {
+      "apps": 31,
+      "goals": 1,
+      "assists": 0,
+      "total_apps": 50,
+      "total_goals": 1,
+      "club": "Sporting CP",
+      "club_ja": "スポルティングCP",
+      "name_ja": "守田英正",
+      "source": "wikipedia_cached",
+      "wiki_page": "2025–26 Sporting CP season",
+      "wiki_format": "efs"
     }
   }
 }
