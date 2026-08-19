@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-19T18:45:13.903631+09:00",
+  "updated": "2026-08-20T07:04:37.778522+09:00",
   "competitions": {
     "39": {
       "name_ja": "プレミアリーグ",
@@ -737,6 +737,21 @@
             },
             {
               "position": 3,
+              "team_id": 78,
+              "team_ja": "アトレティコ・マドリー",
+              "team_crest": "https://crests.football-data.org/78.png",
+              "playedGames": 1,
+              "won": 1,
+              "draw": 0,
+              "lost": 0,
+              "points": 3,
+              "goalsFor": 2,
+              "goalsAgainst": 0,
+              "goalDifference": 2,
+              "form": null
+            },
+            {
+              "position": 4,
               "team_id": 559,
               "team_ja": "セビージャ",
               "team_crest": "https://crests.football-data.org/559.png",
@@ -751,7 +766,7 @@
               "form": null
             },
             {
-              "position": 4,
+              "position": 5,
               "team_id": 5335,
               "team_ja": "Santander",
               "team_crest": "https://crests.football-data.org/5335.png",
@@ -766,7 +781,7 @@
               "form": null
             },
             {
-              "position": 4,
+              "position": 5,
               "team_id": 94,
               "team_ja": "ビジャレアル",
               "team_crest": "https://crests.football-data.org/94.png",
@@ -781,7 +796,7 @@
               "form": null
             },
             {
-              "position": 6,
+              "position": 7,
               "team_id": 560,
               "team_ja": "Deportivo",
               "team_crest": "https://crests.football-data.org/560.png",
@@ -796,7 +811,7 @@
               "form": null
             },
             {
-              "position": 6,
+              "position": 7,
               "team_id": 285,
               "team_ja": "エルチェ",
               "team_crest": "https://crests.football-data.org/285.png",
@@ -811,7 +826,7 @@
               "form": null
             },
             {
-              "position": 8,
+              "position": 9,
               "team_id": 77,
               "team_ja": "アスレティック・ビルバオ",
               "team_crest": "https://crests.football-data.org/77.png",
@@ -826,22 +841,7 @@
               "form": null
             },
             {
-              "position": 8,
-              "team_id": 78,
-              "team_ja": "アトレティコ・マドリー",
-              "team_crest": "https://crests.football-data.org/78.png",
-              "playedGames": 0,
-              "won": 0,
-              "draw": 0,
-              "lost": 0,
-              "points": 0,
-              "goalsFor": 0,
-              "goalsAgainst": 0,
-              "goalDifference": 0,
-              "form": null
-            },
-            {
-              "position": 8,
+              "position": 9,
               "team_id": 79,
               "team_ja": "オサスナ",
               "team_crest": "https://crests.football-data.org/79.png",
@@ -856,7 +856,7 @@
               "form": null
             },
             {
-              "position": 8,
+              "position": 9,
               "team_id": 81,
               "team_ja": "バルセロナ",
               "team_crest": "https://crests.football-data.org/81.png",
@@ -871,22 +871,7 @@
               "form": null
             },
             {
-              "position": 8,
-              "team_id": 84,
-              "team_ja": "Málaga",
-              "team_crest": "https://crests.football-data.org/84.png",
-              "playedGames": 0,
-              "won": 0,
-              "draw": 0,
-              "lost": 0,
-              "points": 0,
-              "goalsFor": 0,
-              "goalsAgainst": 0,
-              "goalDifference": 0,
-              "form": null
-            },
-            {
-              "position": 8,
+              "position": 9,
               "team_id": 558,
               "team_ja": "セルタ",
               "team_crest": "https://crests.football-data.org/558.png",
@@ -901,7 +886,7 @@
               "form": null
             },
             {
-              "position": 8,
+              "position": 9,
               "team_id": 90,
               "team_ja": "ベティス",
               "team_crest": "https://crests.football-data.org/90.png",
@@ -916,7 +901,7 @@
               "form": null
             },
             {
-              "position": 8,
+              "position": 9,
               "team_id": 86,
               "team_ja": "レアル・マドリー",
               "team_crest": "https://crests.football-data.org/86.png",
@@ -931,7 +916,7 @@
               "form": null
             },
             {
-              "position": 8,
+              "position": 9,
               "team_id": 92,
               "team_ja": "レアル・ソシエダ",
               "team_crest": "https://crests.football-data.org/92.png",
@@ -946,7 +931,7 @@
               "form": null
             },
             {
-              "position": 8,
+              "position": 9,
               "team_id": 95,
               "team_ja": "バレンシア",
               "team_crest": "https://crests.football-data.org/95.png",
@@ -961,7 +946,7 @@
               "form": null
             },
             {
-              "position": 18,
+              "position": 17,
               "team_id": 87,
               "team_ja": "ラージョ・バジェカーノ",
               "team_crest": "https://crests.football-data.org/87.png",
@@ -973,6 +958,21 @@
               "goalsFor": 1,
               "goalsAgainst": 2,
               "goalDifference": -1,
+              "form": null
+            },
+            {
+              "position": 18,
+              "team_id": 84,
+              "team_ja": "Málaga",
+              "team_crest": "https://crests.football-data.org/84.png",
+              "playedGames": 1,
+              "won": 0,
+              "draw": 0,
+              "lost": 1,
+              "points": 0,
+              "goalsFor": 0,
+              "goalsAgainst": 2,
+              "goalDifference": -2,
               "form": null
             },
             {
