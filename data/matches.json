@@ -1,8 +1,8 @@
 {
-  "updated": "2026-08-19T18:42:02.694905+09:00",
-  "date_from": "2026-08-12",
-  "date_to": "2026-09-02",
-  "match_count": 564,
+  "updated": "2026-08-20T07:01:45.455197+09:00",
+  "date_from": "2026-08-13",
+  "date_to": "2026-09-03",
+  "match_count": 566,
   "_note": "累積保持モード：フェッチ窓外の過去試合データはそのまま保持される。",
   "matches": [
     {
@@ -15928,7 +15928,7 @@
       "competition_category": "league",
       "competition_flag": "🇪🇸",
       "kickoff_jst": "2026-08-20T04:00:00+09:00",
-      "status": "TIMED",
+      "status": "FINISHED",
       "stage": "REGULAR_SEASON",
       "matchday": 1,
       "home_id": 78,
@@ -15939,7 +15939,10 @@
       "away_ja": "Málaga",
       "away_en": "Málaga",
       "away_crest": "https://crests.football-data.org/84.png",
-      "score": null,
+      "score": {
+        "home": 2,
+        "away": 0
+      },
       "japanese_players": [],
       "broadcasters": [
         {
@@ -21123,8 +21126,77 @@
           "note": "〜2027-28"
         }
       ]
+    },
+    {
+      "id": 559696,
+      "competition_id": 61,
+      "competition_ja": "リーグ・アン",
+      "competition_category": "league",
+      "competition_flag": "🇫🇷",
+      "kickoff_jst": "2026-09-04T03:45:00+09:00",
+      "status": "TIMED",
+      "stage": "REGULAR_SEASON",
+      "matchday": 3,
+      "home_id": 511,
+      "home_ja": "トゥールーズ",
+      "home_en": "Toulouse",
+      "home_crest": "https://crests.football-data.org/511.png",
+      "away_id": 521,
+      "away_ja": "リール",
+      "away_en": "Lille",
+      "away_crest": "https://crests.football-data.org/521.png",
+      "score": null,
+      "japanese_players": [],
+      "broadcasters": [
+        {
+          "name": "DAZN",
+          "type": "exclusive",
+          "url": "https://www.dazn.com/ja-JP/",
+          "note": "〜2028-29"
+        }
+      ]
+    },
+    {
+      "id": 564682,
+      "competition_id": 140,
+      "competition_ja": "ラ・リーガ",
+      "competition_category": "league",
+      "competition_flag": "🇪🇸",
+      "kickoff_jst": "2026-09-04T04:00:00+09:00",
+      "status": "TIMED",
+      "stage": "REGULAR_SEASON",
+      "matchday": 6,
+      "home_id": 92,
+      "home_ja": "レアル・ソシエダ",
+      "home_en": "Real Sociedad",
+      "home_crest": "https://crests.football-data.org/92.png",
+      "away_id": 558,
+      "away_ja": "セルタ",
+      "away_en": "Celta",
+      "away_crest": "https://crests.football-data.org/558.png",
+      "score": null,
+      "japanese_players": [
+        {
+          "name_ja": "久保建英",
+          "position": "MF/FW",
+          "side": "home"
+        }
+      ],
+      "broadcasters": [
+        {
+          "name": "U-NEXT",
+          "type": "shared",
+          "url": "https://www.unext.jp/"
+        },
+        {
+          "name": "DAZN",
+          "type": "shared",
+          "url": "https://www.dazn.com/ja-JP/",
+          "note": "〜2027-28"
+        }
+      ]
     }
   ],
-  "updated_yt_highlights": "2026-08-19T18:44:57.001279+09:00",
-  "updated_uefa_secondary": "2026-08-19T18:45:43.684305+09:00"
+  "updated_yt_highlights": "2026-08-20T07:04:37.301049+09:00",
+  "updated_uefa_secondary": "2026-08-20T07:05:06.306692+09:00"
 }
