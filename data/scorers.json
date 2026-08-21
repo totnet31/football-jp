@@ -1,10 +1,47 @@
 {
-  "updated": "2026-08-21T18:46:54.799991+09:00",
+  "updated": "2026-08-22T07:02:50.161530+09:00",
   "competitions": {
     "39": {
       "name_ja": "プレミアリーグ",
       "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
-      "scorers": []
+      "scorers": [
+        {
+          "player_id": 171,
+          "player_name": "Kai Havertz",
+          "nationality": "Germany",
+          "team_id": 57,
+          "team_ja": "アーセナル",
+          "team_crest": "https://crests.football-data.org/57.png",
+          "goals": 1,
+          "assists": null,
+          "penalties": null,
+          "playedMatches": 1
+        },
+        {
+          "player_id": 99813,
+          "player_name": "Bukayo Saka",
+          "nationality": "England",
+          "team_id": 57,
+          "team_ja": "アーセナル",
+          "team_crest": "https://crests.football-data.org/57.png",
+          "goals": 1,
+          "assists": null,
+          "penalties": null,
+          "playedMatches": 1
+        },
+        {
+          "player_id": 7427,
+          "player_name": "Martin Ødegaard",
+          "nationality": "Norway",
+          "team_id": 57,
+          "team_ja": "アーセナル",
+          "team_crest": "https://crests.football-data.org/57.png",
+          "goals": 1,
+          "assists": null,
+          "penalties": null,
+          "playedMatches": 1
+        }
+      ]
     },
     "40": {
       "name_ja": "チャンピオンシップ",
@@ -579,6 +616,18 @@
           "assists": null,
           "penalties": null,
           "playedMatches": 2
+        },
+        {
+          "player_id": 128731,
+          "player_name": "Rodrigo Riquelme",
+          "nationality": "Spain",
+          "team_id": 90,
+          "team_ja": "ベティス",
+          "team_crest": "https://crests.football-data.org/90.png",
+          "goals": 1,
+          "assists": null,
+          "penalties": null,
+          "playedMatches": 1
         }
       ]
     },
@@ -595,7 +644,44 @@
     "61": {
       "name_ja": "リーグ・アン",
       "flag": "🇫🇷",
-      "scorers": []
+      "scorers": [
+        {
+          "player_id": 8476,
+          "player_name": "Amine Gouiri",
+          "nationality": "Algeria",
+          "team_id": 516,
+          "team_ja": "マルセイユ",
+          "team_crest": "https://crests.football-data.org/516.png",
+          "goals": 2,
+          "assists": null,
+          "penalties": 1,
+          "playedMatches": 1
+        },
+        {
+          "player_id": 250795,
+          "player_name": "Keyliane Abdallah",
+          "nationality": "France",
+          "team_id": 516,
+          "team_ja": "マルセイユ",
+          "team_crest": "https://crests.football-data.org/516.png",
+          "goals": 1,
+          "assists": null,
+          "penalties": null,
+          "playedMatches": 1
+        },
+        {
+          "player_id": 8093,
+          "player_name": "Pierre Emile Højbjerg",
+          "nationality": "Denmark",
+          "team_id": 516,
+          "team_ja": "マルセイユ",
+          "team_crest": "https://crests.football-data.org/516.png",
+          "goals": 1,
+          "assists": null,
+          "penalties": null,
+          "playedMatches": 1
+        }
+      ]
     },
     "88": {
       "name_ja": "エールディビジ",
