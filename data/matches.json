@@ -1,8 +1,8 @@
 {
-  "updated": "2026-08-18T07:23:18.680437+09:00",
-  "date_from": "2026-08-11",
-  "date_to": "2026-09-01",
-  "match_count": 560,
+  "updated": "2026-08-21T12:41:23.843607+09:00",
+  "date_from": "2026-08-14",
+  "date_to": "2026-09-04",
+  "match_count": 582,
   "_note": "累積保持モード：フェッチ窓外の過去試合データはそのまま保持される。",
   "matches": [
     {
@@ -3320,6 +3320,21 @@
           "name_ja": "鈴木唯人",
           "position": "MF/FW",
           "side": "away"
+        },
+        {
+          "name_ja": "長田澪",
+          "position": "GK",
+          "side": "away"
+        },
+        {
+          "name_ja": "山本理仁",
+          "position": "MF",
+          "side": "away"
+        },
+        {
+          "name_ja": "後藤啓介",
+          "position": "FW",
+          "side": "away"
         }
       ],
       "broadcasters": [
@@ -3391,6 +3406,11 @@
         {
           "name_ja": "鎌田大地",
           "position": "MF",
+          "side": "away"
+        },
+        {
+          "name_ja": "冨安健洋",
+          "position": "DF",
           "side": "away"
         }
       ],
@@ -6519,6 +6539,21 @@
           "name_ja": "鈴木唯人",
           "position": "MF/FW",
           "side": "home"
+        },
+        {
+          "name_ja": "長田澪",
+          "position": "GK",
+          "side": "home"
+        },
+        {
+          "name_ja": "山本理仁",
+          "position": "MF",
+          "side": "home"
+        },
+        {
+          "name_ja": "後藤啓介",
+          "position": "FW",
+          "side": "home"
         }
       ],
       "broadcasters": [
@@ -6590,6 +6625,11 @@
         {
           "name_ja": "鎌田大地",
           "position": "MF",
+          "side": "home"
+        },
+        {
+          "name_ja": "冨安健洋",
+          "position": "DF",
           "side": "home"
         }
       ],
@@ -14289,6 +14329,15 @@
           "url": "https://www.unext.jp/",
           "note": "〜2027-28"
         }
+      ],
+      "highlights": [
+        {
+          "broadcaster": "U-NEXT",
+          "video_id": "Nw1Lb9SWY7w",
+          "url": "https://youtu.be/Nw1Lb9SWY7w",
+          "title": "【王者へ完全移籍】佐野航大（PSVアイントホーフェン）｜NECナイメヘン時代ベストプレー集｜エールディヴィジ 2026/27",
+          "yt_published": "2026-08-09"
+        }
       ]
     },
     {
@@ -14763,13 +14812,7 @@
         "home": 3,
         "away": 2
       },
-      "japanese_players": [
-        {
-          "name_ja": "守田英正",
-          "position": "MF",
-          "side": "home"
-        }
-      ],
+      "japanese_players": [],
       "broadcasters": []
     },
     {
@@ -14858,7 +14901,13 @@
         "home": 0,
         "away": 2
       },
-      "japanese_players": [],
+      "japanese_players": [
+        {
+          "name_ja": "平河悠",
+          "position": "FW/MF",
+          "side": "home"
+        }
+      ],
       "broadcasters": [
         {
           "name": "DAZN",
@@ -14922,13 +14971,7 @@
         "home": 1,
         "away": 2
       },
-      "japanese_players": [
-        {
-          "name_ja": "瀬古樹",
-          "position": "MF",
-          "side": "home"
-        }
-      ],
+      "japanese_players": [],
       "broadcasters": [
         {
           "name": "DAZN",
@@ -15035,11 +15078,6 @@
           "name_ja": "小川航基",
           "position": "FW",
           "side": "away"
-        },
-        {
-          "name_ja": "佐野航大",
-          "position": "MF",
-          "side": "away"
         }
       ],
       "broadcasters": [
@@ -15105,8 +15143,8 @@
           "side": "away"
         },
         {
-          "name_ja": "古橋亨梧",
-          "position": "FW",
+          "name_ja": "藤本寛也",
+          "position": "MF",
           "side": "away"
         }
       ],
@@ -15255,7 +15293,13 @@
         "home": 1,
         "away": 2
       },
-      "japanese_players": [],
+      "japanese_players": [
+        {
+          "name_ja": "佐野航大",
+          "position": "MF",
+          "side": "away"
+        }
+      ],
       "broadcasters": [
         {
           "name": "U-NEXT",
@@ -15378,13 +15422,7 @@
       "away_en": "Gil Vicente",
       "away_crest": "https://crests.football-data.org/5533.png",
       "score": null,
-      "japanese_players": [
-        {
-          "name_ja": "藤本寛也",
-          "position": "MF",
-          "side": "away"
-        }
-      ],
+      "japanese_players": [],
       "broadcasters": []
     },
     {
@@ -15445,6 +15483,11 @@
         {
           "name_ja": "松木玖生",
           "position": "FW/MF",
+          "side": "away"
+        },
+        {
+          "name_ja": "菅原由勢",
+          "position": "DF",
           "side": "away"
         }
       ],
@@ -15602,11 +15645,6 @@
           "name_ja": "板倉滉",
           "position": "DF",
           "side": "home"
-        },
-        {
-          "name_ja": "冨安健洋",
-          "position": "DF",
-          "side": "home"
         }
       ],
       "broadcasters": [
@@ -15755,7 +15793,13 @@
         "home": 4,
         "away": 0
       },
-      "japanese_players": [],
+      "japanese_players": [
+        {
+          "name_ja": "福井太智",
+          "position": "MF",
+          "side": "home"
+        }
+      ],
       "broadcasters": []
     },
     {
@@ -15884,7 +15928,7 @@
       "competition_category": "league",
       "competition_flag": "🇪🇸",
       "kickoff_jst": "2026-08-20T04:00:00+09:00",
-      "status": "TIMED",
+      "status": "FINISHED",
       "stage": "REGULAR_SEASON",
       "matchday": 1,
       "home_id": 78,
@@ -15895,7 +15939,10 @@
       "away_ja": "Málaga",
       "away_en": "Málaga",
       "away_crest": "https://crests.football-data.org/84.png",
-      "score": null,
+      "score": {
+        "home": 2,
+        "away": 0
+      },
       "japanese_players": [],
       "broadcasters": [
         {
@@ -15918,7 +15965,7 @@
       "competition_category": "league",
       "competition_flag": "🇪🇸",
       "kickoff_jst": "2026-08-21T04:00:00+09:00",
-      "status": "TIMED",
+      "status": "FINISHED",
       "stage": "REGULAR_SEASON",
       "matchday": 2,
       "home_id": 87,
@@ -15929,7 +15976,10 @@
       "away_ja": "アラベス",
       "away_en": "Alavés",
       "away_crest": "https://crests.football-data.org/263.png",
-      "score": null,
+      "score": {
+        "home": 1,
+        "away": 1
+      },
       "japanese_players": [],
       "broadcasters": [
         {
@@ -15943,6 +15993,15 @@
           "url": "https://www.dazn.com/ja-JP/",
           "note": "〜2027-28"
         }
+      ],
+      "highlights": [
+        {
+          "broadcaster": "DAZN",
+          "video_id": "kYR2mYU6s9o",
+          "url": "https://youtu.be/kYR2mYU6s9o",
+          "title": "【ラージョ・バジェカーノ×アラベス｜ハイライト】ラ・リーガ第2節｜2026-27シーズン",
+          "yt_published": "2026-08-20"
+        }
       ]
     },
     {
@@ -15952,7 +16011,7 @@
       "competition_category": "league",
       "competition_flag": "🇫🇷",
       "kickoff_jst": "2026-08-22T03:45:00+09:00",
-      "status": "SCHEDULED",
+      "status": "2026-08-21 18:45:00Z",
       "stage": "REGULAR_SEASON",
       "matchday": 1,
       "home_id": 516,
@@ -16073,11 +16132,6 @@
           "name_ja": "小川航基",
           "position": "FW",
           "side": "home"
-        },
-        {
-          "name_ja": "佐野航大",
-          "position": "MF",
-          "side": "home"
         }
       ],
       "broadcasters": [
@@ -16110,8 +16164,8 @@
       "score": null,
       "japanese_players": [
         {
-          "name_ja": "平河悠",
-          "position": "FW/MF",
+          "name_ja": "守田英正",
+          "position": "MF",
           "side": "home"
         }
       ],
@@ -16131,7 +16185,7 @@
       "competition_category": "league",
       "competition_flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
       "kickoff_jst": "2026-08-22T20:30:00+09:00",
-      "status": "TIMED",
+      "status": "2026-08-22 11:30:00Z",
       "stage": "REGULAR_SEASON",
       "matchday": 2,
       "home_id": 332,
@@ -16150,9 +16204,14 @@
           "side": "home"
         },
         {
-          "name_ja": "古橋亨梧",
-          "position": "FW",
+          "name_ja": "藤本寛也",
+          "position": "MF",
           "side": "home"
+        },
+        {
+          "name_ja": "平河悠",
+          "position": "FW/MF",
+          "side": "away"
         }
       ],
       "broadcasters": [
@@ -16171,7 +16230,7 @@
       "competition_category": "league",
       "competition_flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
       "kickoff_jst": "2026-08-22T20:30:00+09:00",
-      "status": "TIMED",
+      "status": "2026-08-22 11:30:00Z",
       "stage": "REGULAR_SEASON",
       "matchday": 2,
       "home_id": 1126,
@@ -16200,7 +16259,7 @@
       "competition_category": "league",
       "competition_flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
       "kickoff_jst": "2026-08-22T20:30:00+09:00",
-      "status": "TIMED",
+      "status": "2026-08-22 11:30:00Z",
       "stage": "REGULAR_SEASON",
       "matchday": 2,
       "home_id": 384,
@@ -16310,6 +16369,11 @@
           "name_ja": "鎌田大地",
           "position": "MF",
           "side": "away"
+        },
+        {
+          "name_ja": "冨安健洋",
+          "position": "DF",
+          "side": "away"
         }
       ],
       "broadcasters": [
@@ -16328,7 +16392,7 @@
       "competition_category": "league",
       "competition_flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
       "kickoff_jst": "2026-08-22T23:00:00+09:00",
-      "status": "TIMED",
+      "status": "2026-08-22 14:00:00Z",
       "stage": "REGULAR_SEASON",
       "matchday": 2,
       "home_id": 72,
@@ -16357,7 +16421,7 @@
       "competition_category": "league",
       "competition_flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
       "kickoff_jst": "2026-08-22T23:00:00+09:00",
-      "status": "TIMED",
+      "status": "2026-08-22 14:00:00Z",
       "stage": "REGULAR_SEASON",
       "matchday": 2,
       "home_id": 563,
@@ -16386,7 +16450,7 @@
       "competition_category": "league",
       "competition_flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
       "kickoff_jst": "2026-08-22T23:00:00+09:00",
-      "status": "TIMED",
+      "status": "2026-08-22 14:00:00Z",
       "stage": "REGULAR_SEASON",
       "matchday": 2,
       "home_id": 342,
@@ -16415,7 +16479,7 @@
       "competition_category": "league",
       "competition_flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
       "kickoff_jst": "2026-08-22T23:00:00+09:00",
-      "status": "TIMED",
+      "status": "2026-08-22 14:00:00Z",
       "stage": "REGULAR_SEASON",
       "matchday": 2,
       "home_id": 1081,
@@ -16444,7 +16508,7 @@
       "competition_category": "league",
       "competition_flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
       "kickoff_jst": "2026-08-22T23:00:00+09:00",
-      "status": "TIMED",
+      "status": "2026-08-22 14:00:00Z",
       "stage": "REGULAR_SEASON",
       "matchday": 2,
       "home_id": 404,
@@ -16473,7 +16537,7 @@
       "competition_category": "league",
       "competition_flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
       "kickoff_jst": "2026-08-22T23:00:00+09:00",
-      "status": "TIMED",
+      "status": "2026-08-22 14:00:00Z",
       "stage": "REGULAR_SEASON",
       "matchday": 2,
       "home_id": 59,
@@ -16513,7 +16577,7 @@
       "competition_category": "league",
       "competition_flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
       "kickoff_jst": "2026-08-22T23:00:00+09:00",
-      "status": "TIMED",
+      "status": "2026-08-22 14:00:00Z",
       "stage": "REGULAR_SEASON",
       "matchday": 2,
       "home_id": 340,
@@ -16532,9 +16596,9 @@
           "side": "home"
         },
         {
-          "name_ja": "瀬古樹",
-          "position": "MF",
-          "side": "away"
+          "name_ja": "菅原由勢",
+          "position": "DF",
+          "side": "home"
         }
       ],
       "broadcasters": [
@@ -16553,7 +16617,7 @@
       "competition_category": "league",
       "competition_flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
       "kickoff_jst": "2026-08-22T23:00:00+09:00",
-      "status": "TIMED",
+      "status": "2026-08-22 14:00:00Z",
       "stage": "REGULAR_SEASON",
       "matchday": 2,
       "home_id": 69,
@@ -16628,7 +16692,7 @@
       "competition_category": "league",
       "competition_flag": "🇵🇹",
       "kickoff_jst": "2026-08-22T23:30:00+09:00",
-      "status": "TIMED",
+      "status": "2026-08-22 14:30:00Z",
       "stage": "REGULAR_SEASON",
       "matchday": 3,
       "home_id": 5575,
@@ -16684,7 +16748,7 @@
       "competition_category": "league",
       "competition_flag": "🇫🇷",
       "kickoff_jst": "2026-08-23T00:15:00+09:00",
-      "status": "SCHEDULED",
+      "status": "2026-08-22 15:15:00Z",
       "stage": "REGULAR_SEASON",
       "matchday": 1,
       "home_id": 546,
@@ -16841,7 +16905,7 @@
       "competition_category": "league",
       "competition_flag": "🇵🇹",
       "kickoff_jst": "2026-08-23T02:00:00+09:00",
-      "status": "TIMED",
+      "status": "2026-08-22 17:00:00Z",
       "stage": "REGULAR_SEASON",
       "matchday": 3,
       "home_id": 582,
@@ -16875,7 +16939,13 @@
       "away_en": "Celta",
       "away_crest": "https://crests.football-data.org/558.png",
       "score": null,
-      "japanese_players": [],
+      "japanese_players": [
+        {
+          "name_ja": "佐藤龍之介",
+          "position": "FW",
+          "side": "home"
+        }
+      ],
       "broadcasters": [
         {
           "name": "U-NEXT",
@@ -16961,7 +17031,7 @@
       "competition_category": "league",
       "competition_flag": "🇫🇷",
       "kickoff_jst": "2026-08-23T03:45:00+09:00",
-      "status": "SCHEDULED",
+      "status": "2026-08-22 18:45:00Z",
       "stage": "REGULAR_SEASON",
       "matchday": 1,
       "home_id": 535,
@@ -16990,7 +17060,7 @@
       "competition_category": "league",
       "competition_flag": "🇫🇷",
       "kickoff_jst": "2026-08-23T03:45:00+09:00",
-      "status": "SCHEDULED",
+      "status": "2026-08-22 18:45:00Z",
       "stage": "REGULAR_SEASON",
       "matchday": 1,
       "home_id": 531,
@@ -17019,7 +17089,7 @@
       "competition_category": "league",
       "competition_flag": "🇫🇷",
       "kickoff_jst": "2026-08-23T03:45:00+09:00",
-      "status": "SCHEDULED",
+      "status": "2026-08-22 18:45:00Z",
       "stage": "REGULAR_SEASON",
       "matchday": 1,
       "home_id": 522,
@@ -17048,7 +17118,7 @@
       "competition_category": "league",
       "competition_flag": "🇫🇷",
       "kickoff_jst": "2026-08-23T03:45:00+09:00",
-      "status": "SCHEDULED",
+      "status": "2026-08-22 18:45:00Z",
       "stage": "REGULAR_SEASON",
       "matchday": 1,
       "home_id": 511,
@@ -17140,7 +17210,7 @@
       "competition_category": "league",
       "competition_flag": "🇵🇹",
       "kickoff_jst": "2026-08-23T04:30:00+09:00",
-      "status": "TIMED",
+      "status": "2026-08-22 19:30:00Z",
       "stage": "REGULAR_SEASON",
       "matchday": 3,
       "home_id": 498,
@@ -17152,13 +17222,7 @@
       "away_en": "Alverca",
       "away_crest": "https://crests.football-data.org/7822.png",
       "score": null,
-      "japanese_players": [
-        {
-          "name_ja": "守田英正",
-          "position": "MF",
-          "side": "home"
-        }
-      ],
+      "japanese_players": [],
       "broadcasters": []
     },
     {
@@ -17197,7 +17261,7 @@
       "competition_category": "league",
       "competition_flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
       "kickoff_jst": "2026-08-23T20:00:00+09:00",
-      "status": "TIMED",
+      "status": "2026-08-23 11:00:00Z",
       "stage": "REGULAR_SEASON",
       "matchday": 2,
       "home_id": 74,
@@ -17238,7 +17302,13 @@
       "away_en": "Groningen",
       "away_crest": "https://crests.football-data.org/677.png",
       "score": null,
-      "japanese_players": [],
+      "japanese_players": [
+        {
+          "name_ja": "佐野航大",
+          "position": "MF",
+          "side": "home"
+        }
+      ],
       "broadcasters": [
         {
           "name": "U-NEXT",
@@ -17319,7 +17389,7 @@
       "competition_category": "league",
       "competition_flag": "🇫🇷",
       "kickoff_jst": "2026-08-23T22:00:00+09:00",
-      "status": "SCHEDULED",
+      "status": "2026-08-23 13:00:00Z",
       "stage": "REGULAR_SEASON",
       "matchday": 1,
       "home_id": 532,
@@ -17348,7 +17418,7 @@
       "competition_category": "league",
       "competition_flag": "🇵🇹",
       "kickoff_jst": "2026-08-23T23:30:00+09:00",
-      "status": "TIMED",
+      "status": "2026-08-23 14:30:00Z",
       "stage": "REGULAR_SEASON",
       "matchday": 3,
       "home_id": 5543,
@@ -17444,7 +17514,7 @@
       "competition_category": "league",
       "competition_flag": "🇫🇷",
       "kickoff_jst": "2026-08-24T00:15:00+09:00",
-      "status": "SCHEDULED",
+      "status": "2026-08-23 15:15:00Z",
       "stage": "REGULAR_SEASON",
       "matchday": 1,
       "home_id": 533,
@@ -17460,6 +17530,16 @@
         {
           "name_ja": "瀬古歩夢",
           "position": "DF",
+          "side": "home"
+        },
+        {
+          "name_ja": "中村草太",
+          "position": "FW",
+          "side": "home"
+        },
+        {
+          "name_ja": "水多海斗",
+          "position": "MF",
           "side": "home"
         },
         {
@@ -17577,7 +17657,7 @@
       "competition_category": "league",
       "competition_flag": "🇵🇹",
       "kickoff_jst": "2026-08-24T02:00:00+09:00",
-      "status": "TIMED",
+      "status": "2026-08-23 17:00:00Z",
       "stage": "REGULAR_SEASON",
       "matchday": 3,
       "home_id": 5530,
@@ -17691,7 +17771,7 @@
       "competition_category": "league",
       "competition_flag": "🇫🇷",
       "kickoff_jst": "2026-08-24T03:45:00+09:00",
-      "status": "SCHEDULED",
+      "status": "2026-08-23 18:45:00Z",
       "stage": "REGULAR_SEASON",
       "matchday": 1,
       "home_id": 524,
@@ -17754,7 +17834,7 @@
       "competition_category": "league",
       "competition_flag": "🇵🇹",
       "kickoff_jst": "2026-08-24T04:30:00+09:00",
-      "status": "TIMED",
+      "status": "2026-08-23 19:30:00Z",
       "stage": "REGULAR_SEASON",
       "matchday": 3,
       "home_id": 503,
@@ -17766,7 +17846,13 @@
       "away_en": "Arouca",
       "away_crest": "https://crests.football-data.org/712.png",
       "score": null,
-      "japanese_players": [],
+      "japanese_players": [
+        {
+          "name_ja": "福井太智",
+          "position": "MF",
+          "side": "away"
+        }
+      ],
       "broadcasters": []
     },
     {
@@ -17897,7 +17983,7 @@
       "competition_category": "league",
       "competition_flag": "🇵🇹",
       "kickoff_jst": "2026-08-25T04:15:00+09:00",
-      "status": "TIMED",
+      "status": "2026-08-24 19:15:00Z",
       "stage": "REGULAR_SEASON",
       "matchday": 3,
       "home_id": 5533,
@@ -17909,13 +17995,7 @@
       "away_en": "Casa Pia",
       "away_crest": "https://crests.football-data.org/6618.png",
       "score": null,
-      "japanese_players": [
-        {
-          "name_ja": "藤本寛也",
-          "position": "MF",
-          "side": "home"
-        }
-      ],
+      "japanese_players": [],
       "broadcasters": []
     },
     {
@@ -17971,7 +18051,13 @@
       "away_en": "Real Betis",
       "away_crest": "https://crests.football-data.org/90.png",
       "score": null,
-      "japanese_players": [],
+      "japanese_players": [
+        {
+          "name_ja": "佐藤龍之介",
+          "position": "FW",
+          "side": "home"
+        }
+      ],
       "broadcasters": [
         {
           "name": "U-NEXT",
@@ -18234,7 +18320,7 @@
       "competition_category": "league",
       "competition_flag": "🇫🇷",
       "kickoff_jst": "2026-08-29T03:45:00+09:00",
-      "status": "SCHEDULED",
+      "status": "2026-08-28 18:45:00Z",
       "stage": "REGULAR_SEASON",
       "matchday": 2,
       "home_id": 521,
@@ -18280,6 +18366,11 @@
           "name_ja": "鎌田大地",
           "position": "MF",
           "side": "home"
+        },
+        {
+          "name_ja": "冨安健洋",
+          "position": "DF",
+          "side": "home"
         }
       ],
       "broadcasters": [
@@ -18298,7 +18389,7 @@
       "competition_category": "league",
       "competition_flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
       "kickoff_jst": "2026-08-29T04:00:00+09:00",
-      "status": "TIMED",
+      "status": "2026-08-28 19:00:00Z",
       "stage": "REGULAR_SEASON",
       "matchday": 3,
       "home_id": 404,
@@ -18317,8 +18408,8 @@
           "side": "away"
         },
         {
-          "name_ja": "古橋亨梧",
-          "position": "FW",
+          "name_ja": "藤本寛也",
+          "position": "MF",
           "side": "away"
         }
       ],
@@ -18338,7 +18429,7 @@
       "competition_category": "league",
       "competition_flag": "🇵🇹",
       "kickoff_jst": "2026-08-29T04:15:00+09:00",
-      "status": "TIMED",
+      "status": "2026-08-28 19:15:00Z",
       "stage": "REGULAR_SEASON",
       "matchday": 4,
       "home_id": 496,
@@ -18350,13 +18441,7 @@
       "away_en": "Sporting CP",
       "away_crest": "https://crests.football-data.org/498.png",
       "score": null,
-      "japanese_players": [
-        {
-          "name_ja": "守田英正",
-          "position": "MF",
-          "side": "away"
-        }
-      ],
+      "japanese_players": [],
       "broadcasters": []
     },
     {
@@ -18435,7 +18520,7 @@
       "competition_category": "league",
       "competition_flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
       "kickoff_jst": "2026-08-29T20:30:00+09:00",
-      "status": "TIMED",
+      "status": "2026-08-29 11:30:00Z",
       "stage": "REGULAR_SEASON",
       "matchday": 3,
       "home_id": 76,
@@ -18447,13 +18532,7 @@
       "away_en": "Stoke",
       "away_crest": "https://crests.football-data.org/70.png",
       "score": null,
-      "japanese_players": [
-        {
-          "name_ja": "瀬古樹",
-          "position": "MF",
-          "side": "away"
-        }
-      ],
+      "japanese_players": [],
       "broadcasters": [
         {
           "name": "DAZN",
@@ -18470,7 +18549,7 @@
       "competition_category": "league",
       "competition_flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
       "kickoff_jst": "2026-08-29T20:30:00+09:00",
-      "status": "TIMED",
+      "status": "2026-08-29 11:30:00Z",
       "stage": "REGULAR_SEASON",
       "matchday": 3,
       "home_id": 342,
@@ -18499,7 +18578,7 @@
       "competition_category": "league",
       "competition_flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
       "kickoff_jst": "2026-08-29T20:30:00+09:00",
-      "status": "TIMED",
+      "status": "2026-08-29 11:30:00Z",
       "stage": "REGULAR_SEASON",
       "matchday": 3,
       "home_id": 343,
@@ -18547,8 +18626,13 @@
           "side": "away"
         },
         {
-          "name_ja": "高井幸大（レンタル）",
+          "name_ja": "橋岡大樹",
           "position": "DF",
+          "side": "away"
+        },
+        {
+          "name_ja": "宇野禅斗",
+          "position": "MF",
           "side": "away"
         }
       ],
@@ -18795,8 +18879,8 @@
           "side": "home"
         },
         {
-          "name_ja": "平河悠",
-          "position": "FW/MF",
+          "name_ja": "守田英正",
+          "position": "MF",
           "side": "away"
         }
       ],
@@ -18816,7 +18900,7 @@
       "competition_category": "league",
       "competition_flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
       "kickoff_jst": "2026-08-29T23:00:00+09:00",
-      "status": "TIMED",
+      "status": "2026-08-29 14:00:00Z",
       "stage": "REGULAR_SEASON",
       "matchday": 3,
       "home_id": 68,
@@ -18845,7 +18929,7 @@
       "competition_category": "league",
       "competition_flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
       "kickoff_jst": "2026-08-29T23:00:00+09:00",
-      "status": "TIMED",
+      "status": "2026-08-29 14:00:00Z",
       "stage": "REGULAR_SEASON",
       "matchday": 3,
       "home_id": 60,
@@ -18874,7 +18958,7 @@
       "competition_category": "league",
       "competition_flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
       "kickoff_jst": "2026-08-29T23:00:00+09:00",
-      "status": "TIMED",
+      "status": "2026-08-29 14:00:00Z",
       "stage": "REGULAR_SEASON",
       "matchday": 3,
       "home_id": 387,
@@ -18886,7 +18970,13 @@
       "away_en": "Portsmouth",
       "away_crest": "https://crests.football-data.org/325.png",
       "score": null,
-      "japanese_players": [],
+      "japanese_players": [
+        {
+          "name_ja": "平河悠",
+          "position": "FW/MF",
+          "side": "home"
+        }
+      ],
       "broadcasters": [
         {
           "name": "DAZN",
@@ -18903,7 +18993,7 @@
       "competition_category": "league",
       "competition_flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
       "kickoff_jst": "2026-08-29T23:00:00+09:00",
-      "status": "TIMED",
+      "status": "2026-08-29 14:00:00Z",
       "stage": "REGULAR_SEASON",
       "matchday": 3,
       "home_id": 340,
@@ -18919,6 +19009,11 @@
         {
           "name_ja": "松木玖生",
           "position": "FW/MF",
+          "side": "home"
+        },
+        {
+          "name_ja": "菅原由勢",
+          "position": "DF",
           "side": "home"
         }
       ],
@@ -18938,7 +19033,7 @@
       "competition_category": "league",
       "competition_flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
       "kickoff_jst": "2026-08-29T23:00:00+09:00",
-      "status": "TIMED",
+      "status": "2026-08-29 14:00:00Z",
       "stage": "REGULAR_SEASON",
       "matchday": 3,
       "home_id": 348,
@@ -18967,7 +19062,7 @@
       "competition_category": "league",
       "competition_flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
       "kickoff_jst": "2026-08-29T23:00:00+09:00",
-      "status": "TIMED",
+      "status": "2026-08-29 14:00:00Z",
       "stage": "REGULAR_SEASON",
       "matchday": 3,
       "home_id": 59,
@@ -19012,7 +19107,7 @@
       "competition_category": "league",
       "competition_flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
       "kickoff_jst": "2026-08-29T23:00:00+09:00",
-      "status": "TIMED",
+      "status": "2026-08-29 14:00:00Z",
       "stage": "REGULAR_SEASON",
       "matchday": 3,
       "home_id": 715,
@@ -19041,7 +19136,7 @@
       "competition_category": "league",
       "competition_flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
       "kickoff_jst": "2026-08-29T23:00:00+09:00",
-      "status": "TIMED",
+      "status": "2026-08-29 14:00:00Z",
       "stage": "REGULAR_SEASON",
       "matchday": 3,
       "home_id": 346,
@@ -19105,7 +19200,7 @@
       "competition_category": "league",
       "competition_flag": "🇵🇹",
       "kickoff_jst": "2026-08-29T23:30:00+09:00",
-      "status": "TIMED",
+      "status": "2026-08-29 14:30:00Z",
       "stage": "REGULAR_SEASON",
       "matchday": 4,
       "home_id": 7822,
@@ -19127,7 +19222,7 @@
       "competition_category": "league",
       "competition_flag": "🇵🇹",
       "kickoff_jst": "2026-08-29T23:30:00+09:00",
-      "status": "TIMED",
+      "status": "2026-08-29 14:30:00Z",
       "stage": "REGULAR_SEASON",
       "matchday": 4,
       "home_id": 712,
@@ -19139,7 +19234,13 @@
       "away_en": "Marítimo",
       "away_crest": "https://crests.football-data.org/5575.png",
       "score": null,
-      "japanese_players": [],
+      "japanese_players": [
+        {
+          "name_ja": "福井太智",
+          "position": "MF",
+          "side": "home"
+        }
+      ],
       "broadcasters": []
     },
     {
@@ -19183,7 +19284,7 @@
       "competition_category": "league",
       "competition_flag": "🇫🇷",
       "kickoff_jst": "2026-08-30T00:15:00+09:00",
-      "status": "SCHEDULED",
+      "status": "2026-08-29 15:15:00Z",
       "stage": "REGULAR_SEASON",
       "matchday": 2,
       "home_id": 576,
@@ -19449,7 +19550,7 @@
       "competition_category": "league",
       "competition_flag": "🇵🇹",
       "kickoff_jst": "2026-08-30T02:00:00+09:00",
-      "status": "TIMED",
+      "status": "2026-08-29 17:00:00Z",
       "stage": "REGULAR_SEASON",
       "matchday": 4,
       "home_id": 5527,
@@ -19506,7 +19607,7 @@
       "competition_category": "league",
       "competition_flag": "🇫🇷",
       "kickoff_jst": "2026-08-30T03:45:00+09:00",
-      "status": "SCHEDULED",
+      "status": "2026-08-29 18:45:00Z",
       "stage": "REGULAR_SEASON",
       "matchday": 2,
       "home_id": 525,
@@ -19535,7 +19636,7 @@
       "competition_category": "league",
       "competition_flag": "🇫🇷",
       "kickoff_jst": "2026-08-30T03:45:00+09:00",
-      "status": "SCHEDULED",
+      "status": "2026-08-29 18:45:00Z",
       "stage": "REGULAR_SEASON",
       "matchday": 2,
       "home_id": 523,
@@ -19551,6 +19652,16 @@
         {
           "name_ja": "瀬古歩夢",
           "position": "DF",
+          "side": "away"
+        },
+        {
+          "name_ja": "中村草太",
+          "position": "FW",
+          "side": "away"
+        },
+        {
+          "name_ja": "水多海斗",
+          "position": "MF",
           "side": "away"
         }
       ],
@@ -19570,7 +19681,7 @@
       "competition_category": "league",
       "competition_flag": "🇫🇷",
       "kickoff_jst": "2026-08-30T03:45:00+09:00",
-      "status": "SCHEDULED",
+      "status": "2026-08-29 18:45:00Z",
       "stage": "REGULAR_SEASON",
       "matchday": 2,
       "home_id": 519,
@@ -19599,7 +19710,7 @@
       "competition_category": "league",
       "competition_flag": "🇫🇷",
       "kickoff_jst": "2026-08-30T03:45:00+09:00",
-      "status": "SCHEDULED",
+      "status": "2026-08-29 18:45:00Z",
       "stage": "REGULAR_SEASON",
       "matchday": 2,
       "home_id": 512,
@@ -19644,11 +19755,6 @@
         {
           "name_ja": "小川航基",
           "position": "FW",
-          "side": "away"
-        },
-        {
-          "name_ja": "佐野航大",
-          "position": "MF",
           "side": "away"
         }
       ],
@@ -19714,7 +19820,13 @@
       "away_en": "PSV",
       "away_crest": "https://crests.football-data.org/674.png",
       "score": null,
-      "japanese_players": [],
+      "japanese_players": [
+        {
+          "name_ja": "佐野航大",
+          "position": "MF",
+          "side": "away"
+        }
+      ],
       "broadcasters": [
         {
           "name": "U-NEXT",
@@ -19899,7 +20011,7 @@
       "competition_category": "league",
       "competition_flag": "🇫🇷",
       "kickoff_jst": "2026-08-30T22:00:00+09:00",
-      "status": "SCHEDULED",
+      "status": "2026-08-30 13:00:00Z",
       "stage": "REGULAR_SEASON",
       "matchday": 2,
       "home_id": 1045,
@@ -19947,14 +20059,19 @@
           "side": "home"
         },
         {
-          "name_ja": "菅原由勢",
-          "position": "DF",
-          "side": "away"
-        },
-        {
           "name_ja": "長田澪",
           "position": "GK",
-          "side": "away"
+          "side": "home"
+        },
+        {
+          "name_ja": "山本理仁",
+          "position": "MF",
+          "side": "home"
+        },
+        {
+          "name_ja": "後藤啓介",
+          "position": "FW",
+          "side": "home"
         }
       ],
       "broadcasters": [
@@ -19979,7 +20096,7 @@
       "competition_category": "league",
       "competition_flag": "🇵🇹",
       "kickoff_jst": "2026-08-30T23:30:00+09:00",
-      "status": "TIMED",
+      "status": "2026-08-30 14:30:00Z",
       "stage": "REGULAR_SEASON",
       "matchday": 4,
       "home_id": 5529,
@@ -20016,11 +20133,6 @@
       "japanese_players": [
         {
           "name_ja": "板倉滉",
-          "position": "DF",
-          "side": "away"
-        },
-        {
-          "name_ja": "冨安健洋",
           "position": "DF",
           "side": "away"
         }
@@ -20075,7 +20187,7 @@
       "competition_category": "league",
       "competition_flag": "🇫🇷",
       "kickoff_jst": "2026-08-31T00:15:00+09:00",
-      "status": "SCHEDULED",
+      "status": "2026-08-30 15:15:00Z",
       "stage": "REGULAR_SEASON",
       "matchday": 2,
       "home_id": 529,
@@ -20147,9 +20259,9 @@
       "score": null,
       "japanese_players": [
         {
-          "name_ja": "小野田亮汰",
-          "position": "FW",
-          "side": "home"
+          "name_ja": "田中聡",
+          "position": "MF",
+          "side": "away"
         }
       ],
       "broadcasters": [
@@ -20203,7 +20315,7 @@
       "competition_category": "league",
       "competition_flag": "🇵🇹",
       "kickoff_jst": "2026-08-31T02:00:00+09:00",
-      "status": "TIMED",
+      "status": "2026-08-30 17:00:00Z",
       "stage": "REGULAR_SEASON",
       "matchday": 4,
       "home_id": 6618,
@@ -20237,7 +20349,13 @@
       "away_en": "Valencia",
       "away_crest": "https://crests.football-data.org/95.png",
       "score": null,
-      "japanese_players": [],
+      "japanese_players": [
+        {
+          "name_ja": "佐藤龍之介",
+          "position": "FW",
+          "side": "away"
+        }
+      ],
       "broadcasters": [
         {
           "name": "U-NEXT",
@@ -20346,7 +20464,7 @@
       "competition_category": "league",
       "competition_flag": "🇫🇷",
       "kickoff_jst": "2026-08-31T03:45:00+09:00",
-      "status": "SCHEDULED",
+      "status": "2026-08-30 18:45:00Z",
       "stage": "REGULAR_SEASON",
       "matchday": 2,
       "home_id": 548,
@@ -20415,7 +20533,7 @@
       "competition_category": "league",
       "competition_flag": "🇵🇹",
       "kickoff_jst": "2026-08-31T04:30:00+09:00",
-      "status": "TIMED",
+      "status": "2026-08-30 19:30:00Z",
       "stage": "REGULAR_SEASON",
       "matchday": 4,
       "home_id": 5531,
@@ -20427,13 +20545,7 @@
       "away_en": "Gil Vicente",
       "away_crest": "https://crests.football-data.org/5533.png",
       "score": null,
-      "japanese_players": [
-        {
-          "name_ja": "藤本寛也",
-          "position": "MF",
-          "side": "away"
-        }
-      ],
+      "japanese_players": [],
       "broadcasters": []
     },
     {
@@ -20506,7 +20618,7 @@
       "competition_category": "league",
       "competition_flag": "🇵🇹",
       "kickoff_jst": "2026-09-01T02:45:00+09:00",
-      "status": "TIMED",
+      "status": "2026-08-31 17:45:00Z",
       "stage": "REGULAR_SEASON",
       "matchday": 4,
       "home_id": 1903,
@@ -20620,7 +20732,7 @@
       "competition_category": "league",
       "competition_flag": "🇵🇹",
       "kickoff_jst": "2026-09-01T04:45:00+09:00",
-      "status": "TIMED",
+      "status": "2026-08-31 19:45:00Z",
       "stage": "REGULAR_SEASON",
       "matchday": 4,
       "home_id": 5613,
@@ -20642,7 +20754,7 @@
       "competition_category": "league",
       "competition_flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
       "kickoff_jst": "2026-09-02T03:45:00+09:00",
-      "status": "TIMED",
+      "status": "2026-09-01 18:45:00Z",
       "stage": "REGULAR_SEASON",
       "matchday": 4,
       "home_id": 1081,
@@ -20654,7 +20766,13 @@
       "away_en": "Bristol City",
       "away_crest": "https://crests.football-data.org/387.png",
       "score": null,
-      "japanese_players": [],
+      "japanese_players": [
+        {
+          "name_ja": "平河悠",
+          "position": "FW/MF",
+          "side": "away"
+        }
+      ],
       "broadcasters": [
         {
           "name": "DAZN",
@@ -20671,7 +20789,7 @@
       "competition_category": "league",
       "competition_flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
       "kickoff_jst": "2026-09-02T03:45:00+09:00",
-      "status": "TIMED",
+      "status": "2026-09-01 18:45:00Z",
       "stage": "REGULAR_SEASON",
       "matchday": 4,
       "home_id": 563,
@@ -20700,7 +20818,7 @@
       "competition_category": "league",
       "competition_flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
       "kickoff_jst": "2026-09-02T03:45:00+09:00",
-      "status": "TIMED",
+      "status": "2026-09-01 18:45:00Z",
       "stage": "REGULAR_SEASON",
       "matchday": 4,
       "home_id": 1126,
@@ -20740,7 +20858,7 @@
       "competition_category": "league",
       "competition_flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
       "kickoff_jst": "2026-09-02T03:45:00+09:00",
-      "status": "TIMED",
+      "status": "2026-09-01 18:45:00Z",
       "stage": "REGULAR_SEASON",
       "matchday": 4,
       "home_id": 356,
@@ -20769,7 +20887,7 @@
       "competition_category": "league",
       "competition_flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
       "kickoff_jst": "2026-09-02T03:45:00+09:00",
-      "status": "TIMED",
+      "status": "2026-09-01 18:45:00Z",
       "stage": "REGULAR_SEASON",
       "matchday": 4,
       "home_id": 325,
@@ -20798,7 +20916,7 @@
       "competition_category": "league",
       "competition_flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
       "kickoff_jst": "2026-09-02T03:45:00+09:00",
-      "status": "TIMED",
+      "status": "2026-09-01 18:45:00Z",
       "stage": "REGULAR_SEASON",
       "matchday": 4,
       "home_id": 332,
@@ -20817,13 +20935,18 @@
           "side": "home"
         },
         {
-          "name_ja": "古橋亨梧",
-          "position": "FW",
+          "name_ja": "藤本寛也",
+          "position": "MF",
           "side": "home"
         },
         {
           "name_ja": "松木玖生",
           "position": "FW/MF",
+          "side": "away"
+        },
+        {
+          "name_ja": "菅原由勢",
+          "position": "DF",
           "side": "away"
         }
       ],
@@ -20843,7 +20966,7 @@
       "competition_category": "league",
       "competition_flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
       "kickoff_jst": "2026-09-02T03:45:00+09:00",
-      "status": "TIMED",
+      "status": "2026-09-01 18:45:00Z",
       "stage": "REGULAR_SEASON",
       "matchday": 4,
       "home_id": 72,
@@ -20872,7 +20995,7 @@
       "competition_category": "league",
       "competition_flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
       "kickoff_jst": "2026-09-02T04:00:00+09:00",
-      "status": "TIMED",
+      "status": "2026-09-01 19:00:00Z",
       "stage": "REGULAR_SEASON",
       "matchday": 4,
       "home_id": 70,
@@ -20884,9 +21007,67 @@
       "away_en": "Norwich",
       "away_crest": "https://crests.football-data.org/68.png",
       "score": null,
+      "japanese_players": [],
+      "broadcasters": [
+        {
+          "name": "DAZN",
+          "type": "exclusive",
+          "url": "https://www.dazn.com/ja-JP/",
+          "note": "〜2027-28"
+        }
+      ]
+    },
+    {
+      "id": 561806,
+      "competition_id": 40,
+      "competition_ja": "チャンピオンシップ",
+      "competition_category": "league",
+      "competition_flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+      "kickoff_jst": "2026-09-03T03:45:00+09:00",
+      "status": "2026-09-02 18:45:00Z",
+      "stage": "REGULAR_SEASON",
+      "matchday": 4,
+      "home_id": 384,
+      "home_ja": "ミルウォール",
+      "home_en": "Millwall",
+      "home_crest": "https://crests.football-data.org/384.png",
+      "away_id": 404,
+      "away_ja": "レクサム",
+      "away_en": "Wrexham",
+      "away_crest": "https://crests.football-data.org/404.png",
+      "score": null,
+      "japanese_players": [],
+      "broadcasters": [
+        {
+          "name": "DAZN",
+          "type": "exclusive",
+          "url": "https://www.dazn.com/ja-JP/",
+          "note": "〜2027-28"
+        }
+      ]
+    },
+    {
+      "id": 561807,
+      "competition_id": 40,
+      "competition_ja": "チャンピオンシップ",
+      "competition_category": "league",
+      "competition_flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+      "kickoff_jst": "2026-09-03T03:45:00+09:00",
+      "status": "2026-09-02 18:45:00Z",
+      "stage": "REGULAR_SEASON",
+      "matchday": 4,
+      "home_id": 69,
+      "home_ja": "QPR",
+      "home_en": "QPR",
+      "home_crest": "https://crests.football-data.org/69.png",
+      "away_id": 715,
+      "away_ja": "Cardiff",
+      "away_en": "Cardiff",
+      "away_crest": "https://crests.football-data.org/715.png",
+      "score": null,
       "japanese_players": [
         {
-          "name_ja": "瀬古樹",
+          "name_ja": "斉藤光毅",
           "position": "MF",
           "side": "home"
         }
@@ -20899,8 +21080,571 @@
           "note": "〜2027-28"
         }
       ]
+    },
+    {
+      "id": 561808,
+      "competition_id": 40,
+      "competition_ja": "チャンピオンシップ",
+      "competition_category": "league",
+      "competition_flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+      "kickoff_jst": "2026-09-03T03:45:00+09:00",
+      "status": "2026-09-02 18:45:00Z",
+      "stage": "REGULAR_SEASON",
+      "matchday": 4,
+      "home_id": 74,
+      "home_ja": "WBA",
+      "home_en": "West Brom",
+      "home_crest": "https://crests.football-data.org/74.png",
+      "away_id": 348,
+      "away_ja": "チャールトン",
+      "away_en": "Charlton",
+      "away_crest": "https://crests.football-data.org/348.png",
+      "score": null,
+      "japanese_players": [],
+      "broadcasters": [
+        {
+          "name": "DAZN",
+          "type": "exclusive",
+          "url": "https://www.dazn.com/ja-JP/",
+          "note": "〜2027-28"
+        }
+      ]
+    },
+    {
+      "id": 561805,
+      "competition_id": 40,
+      "competition_ja": "チャンピオンシップ",
+      "competition_category": "league",
+      "competition_flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+      "kickoff_jst": "2026-09-03T04:00:00+09:00",
+      "status": "2026-09-02 19:00:00Z",
+      "stage": "REGULAR_SEASON",
+      "matchday": 4,
+      "home_id": 328,
+      "home_ja": "バーンリー",
+      "home_en": "Burnley",
+      "home_crest": "https://crests.football-data.org/328.png",
+      "away_id": 343,
+      "away_ja": "ミドルズブラ",
+      "away_en": "Middlesbrough",
+      "away_crest": "https://crests.football-data.org/343.png",
+      "score": null,
+      "japanese_players": [],
+      "broadcasters": [
+        {
+          "name": "DAZN",
+          "type": "exclusive",
+          "url": "https://www.dazn.com/ja-JP/",
+          "note": "〜2027-28"
+        }
+      ]
+    },
+    {
+      "id": 559696,
+      "competition_id": 61,
+      "competition_ja": "リーグ・アン",
+      "competition_category": "league",
+      "competition_flag": "🇫🇷",
+      "kickoff_jst": "2026-09-04T03:45:00+09:00",
+      "status": "2026-09-03 18:45:00Z",
+      "stage": "REGULAR_SEASON",
+      "matchday": 3,
+      "home_id": 511,
+      "home_ja": "トゥールーズ",
+      "home_en": "Toulouse",
+      "home_crest": "https://crests.football-data.org/511.png",
+      "away_id": 521,
+      "away_ja": "リール",
+      "away_en": "Lille",
+      "away_crest": "https://crests.football-data.org/521.png",
+      "score": null,
+      "japanese_players": [],
+      "broadcasters": [
+        {
+          "name": "DAZN",
+          "type": "exclusive",
+          "url": "https://www.dazn.com/ja-JP/",
+          "note": "〜2028-29"
+        }
+      ]
+    },
+    {
+      "id": 564682,
+      "competition_id": 140,
+      "competition_ja": "ラ・リーガ",
+      "competition_category": "league",
+      "competition_flag": "🇪🇸",
+      "kickoff_jst": "2026-09-04T04:00:00+09:00",
+      "status": "TIMED",
+      "stage": "REGULAR_SEASON",
+      "matchday": 6,
+      "home_id": 92,
+      "home_ja": "レアル・ソシエダ",
+      "home_en": "Real Sociedad",
+      "home_crest": "https://crests.football-data.org/92.png",
+      "away_id": 558,
+      "away_ja": "セルタ",
+      "away_en": "Celta",
+      "away_crest": "https://crests.football-data.org/558.png",
+      "score": null,
+      "japanese_players": [
+        {
+          "name_ja": "久保建英",
+          "position": "MF/FW",
+          "side": "home"
+        }
+      ],
+      "broadcasters": [
+        {
+          "name": "U-NEXT",
+          "type": "shared",
+          "url": "https://www.unext.jp/"
+        },
+        {
+          "name": "DAZN",
+          "type": "shared",
+          "url": "https://www.dazn.com/ja-JP/",
+          "note": "〜2027-28"
+        }
+      ]
+    },
+    {
+      "id": 559699,
+      "competition_id": 61,
+      "competition_ja": "リーグ・アン",
+      "competition_category": "league",
+      "competition_flag": "🇫🇷",
+      "kickoff_jst": "2026-09-05T02:00:00+09:00",
+      "status": "2026-09-04 17:00:00Z",
+      "stage": "REGULAR_SEASON",
+      "matchday": 3,
+      "home_id": 523,
+      "home_ja": "リヨン",
+      "home_en": "Olympique Lyon",
+      "home_crest": "https://crests.football-data.org/523.png",
+      "away_id": 519,
+      "away_ja": "オセール",
+      "away_en": "Auxerre",
+      "away_crest": "https://crests.football-data.org/519.png",
+      "score": null,
+      "japanese_players": [],
+      "broadcasters": [
+        {
+          "name": "DAZN",
+          "type": "exclusive",
+          "url": "https://www.dazn.com/ja-JP/",
+          "note": "〜2028-29"
+        }
+      ]
+    },
+    {
+      "id": 558250,
+      "competition_id": 88,
+      "competition_ja": "エールディビジ",
+      "competition_category": "league",
+      "competition_flag": "🇳🇱",
+      "kickoff_jst": "2026-09-05T03:00:00+09:00",
+      "status": "TIMED",
+      "stage": "REGULAR_SEASON",
+      "matchday": 5,
+      "home_id": 6806,
+      "home_ja": "スパルタ・ロッテルダム",
+      "home_en": "Sparta",
+      "home_crest": "https://crests.football-data.org/6806.png",
+      "away_id": 684,
+      "away_ja": "ズヴォレ",
+      "away_en": "Zwolle",
+      "away_crest": "https://crests.football-data.org/684.png",
+      "score": null,
+      "japanese_players": [
+        {
+          "name_ja": "三戸舜介",
+          "position": "FW/MF",
+          "side": "home"
+        }
+      ],
+      "broadcasters": [
+        {
+          "name": "U-NEXT",
+          "type": "exclusive",
+          "url": "https://www.unext.jp/",
+          "note": "〜2027-28"
+        }
+      ]
+    },
+    {
+      "id": 565791,
+      "competition_id": 78,
+      "competition_ja": "ブンデスリーガ",
+      "competition_category": "league",
+      "competition_flag": "🇩🇪",
+      "kickoff_jst": "2026-09-05T03:30:00+09:00",
+      "status": "TIMED",
+      "stage": "REGULAR_SEASON",
+      "matchday": 2,
+      "home_id": 10,
+      "home_ja": "シュトゥットガルト",
+      "home_en": "Stuttgart",
+      "home_crest": "https://crests.football-data.org/10.png",
+      "away_id": 1,
+      "away_ja": "ケルン",
+      "away_en": "1. FC Köln",
+      "away_crest": "https://crests.football-data.org/1.png",
+      "score": null,
+      "japanese_players": [],
+      "broadcasters": [
+        {
+          "name": "DAZN",
+          "type": "exclusive",
+          "url": "https://www.dazn.com/ja-JP/",
+          "note": "〜2027-28"
+        },
+        {
+          "name": "ABEMA",
+          "type": "partial",
+          "url": "https://abema.tv/subscription/lp/183c3ec2-c6d8-409e-80b6-caf5a8012f8a",
+          "note": "毎節2試合無料"
+        }
+      ]
+    },
+    {
+      "id": 558609,
+      "competition_id": 135,
+      "competition_ja": "セリエA",
+      "competition_category": "league",
+      "competition_flag": "🇮🇹",
+      "kickoff_jst": "2026-09-05T03:45:00+09:00",
+      "status": "TIMED",
+      "stage": "REGULAR_SEASON",
+      "matchday": 3,
+      "home_id": 107,
+      "home_ja": "ジェノア",
+      "home_en": "Genoa",
+      "home_crest": "https://crests.football-data.org/107.png",
+      "away_id": 7397,
+      "away_ja": "コモ",
+      "away_en": "Como 1907",
+      "away_crest": "https://crests.football-data.org/7397.png",
+      "score": null,
+      "japanese_players": [],
+      "broadcasters": [
+        {
+          "name": "DAZN",
+          "type": "exclusive",
+          "url": "https://www.dazn.com/ja-JP/",
+          "note": "〜2026-27"
+        }
+      ]
+    },
+    {
+      "id": 560566,
+      "competition_id": 39,
+      "competition_ja": "プレミアリーグ",
+      "competition_category": "league",
+      "competition_flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+      "kickoff_jst": "2026-09-05T04:00:00+09:00",
+      "status": "TIMED",
+      "stage": "REGULAR_SEASON",
+      "matchday": 3,
+      "home_id": 349,
+      "home_ja": "イプスウィッチ",
+      "home_en": "Ipswich Town",
+      "home_crest": "https://crests.football-data.org/349.png",
+      "away_id": 64,
+      "away_ja": "リヴァプール",
+      "away_en": "Liverpool",
+      "away_crest": "https://crests.football-data.org/64.png",
+      "score": null,
+      "japanese_players": [
+        {
+          "name_ja": "遠藤航",
+          "position": "DF/MF",
+          "side": "away"
+        }
+      ],
+      "broadcasters": [
+        {
+          "name": "U-NEXT",
+          "type": "exclusive",
+          "url": "https://www.unext.jp/",
+          "note": "〜2030-31"
+        }
+      ]
+    },
+    {
+      "id": 564667,
+      "competition_id": 140,
+      "competition_ja": "ラ・リーガ",
+      "competition_category": "league",
+      "competition_flag": "🇪🇸",
+      "kickoff_jst": "2026-09-05T04:00:00+09:00",
+      "status": "TIMED",
+      "stage": "REGULAR_SEASON",
+      "matchday": 4,
+      "home_id": 90,
+      "home_ja": "ベティス",
+      "home_en": "Real Betis",
+      "home_crest": "https://crests.football-data.org/90.png",
+      "away_id": 86,
+      "away_ja": "レアル・マドリー",
+      "away_en": "Real Madrid",
+      "away_crest": "https://crests.football-data.org/86.png",
+      "score": null,
+      "japanese_players": [],
+      "broadcasters": [
+        {
+          "name": "U-NEXT",
+          "type": "shared",
+          "url": "https://www.unext.jp/"
+        },
+        {
+          "name": "DAZN",
+          "type": "shared",
+          "url": "https://www.dazn.com/ja-JP/",
+          "note": "〜2027-28"
+        }
+      ]
+    },
+    {
+      "id": 559697,
+      "competition_id": 61,
+      "competition_ja": "リーグ・アン",
+      "competition_category": "league",
+      "competition_flag": "🇫🇷",
+      "kickoff_jst": "2026-09-05T04:05:00+09:00",
+      "status": "2026-09-04 19:05:00Z",
+      "stage": "REGULAR_SEASON",
+      "matchday": 3,
+      "home_id": 524,
+      "home_ja": "PSG",
+      "home_en": "PSG",
+      "home_crest": "https://crests.football-data.org/524.png",
+      "away_id": 548,
+      "away_ja": "モナコ",
+      "away_en": "Monaco",
+      "away_crest": "https://crests.football-data.org/548.png",
+      "score": null,
+      "japanese_players": [
+        {
+          "name_ja": "南野拓実",
+          "position": "MF/FW",
+          "side": "away"
+        }
+      ],
+      "broadcasters": [
+        {
+          "name": "DAZN",
+          "type": "exclusive",
+          "url": "https://www.dazn.com/ja-JP/",
+          "note": "〜2028-29"
+        }
+      ]
+    },
+    {
+      "id": 567296,
+      "competition_id": 94,
+      "competition_ja": "プリメイラ・リーガ",
+      "competition_category": "league",
+      "competition_flag": "🇵🇹",
+      "kickoff_jst": "2026-09-05T09:00:00+09:00",
+      "status": "2026-09-06 15:00:00Z",
+      "stage": "REGULAR_SEASON",
+      "matchday": 5,
+      "home_id": 7822,
+      "home_ja": "アルヴェルカ",
+      "home_en": "Alverca",
+      "home_crest": "https://crests.football-data.org/7822.png",
+      "away_id": 5613,
+      "away_ja": "ブラガ",
+      "away_en": "Braga",
+      "away_crest": "https://crests.football-data.org/5613.png",
+      "score": null,
+      "japanese_players": [],
+      "broadcasters": []
+    },
+    {
+      "id": 567297,
+      "competition_id": 94,
+      "competition_ja": "プリメイラ・リーガ",
+      "competition_category": "league",
+      "competition_flag": "🇵🇹",
+      "kickoff_jst": "2026-09-05T09:00:00+09:00",
+      "status": "2026-09-06 15:00:00Z",
+      "stage": "REGULAR_SEASON",
+      "matchday": 5,
+      "home_id": 9136,
+      "home_ja": "アマドーラ",
+      "home_en": "Amadora",
+      "home_crest": "https://crests.football-data.org/9136.png",
+      "away_id": 5531,
+      "away_ja": "ファマリカン",
+      "away_en": "Famalicão",
+      "away_crest": "https://crests.football-data.org/5531.png",
+      "score": null,
+      "japanese_players": [],
+      "broadcasters": []
+    },
+    {
+      "id": 567298,
+      "competition_id": 94,
+      "competition_ja": "プリメイラ・リーガ",
+      "competition_category": "league",
+      "competition_flag": "🇵🇹",
+      "kickoff_jst": "2026-09-05T09:00:00+09:00",
+      "status": "2026-09-06 15:00:00Z",
+      "stage": "REGULAR_SEASON",
+      "matchday": 5,
+      "home_id": 498,
+      "home_ja": "スポルティングCP",
+      "home_en": "Sporting CP",
+      "home_crest": "https://crests.football-data.org/498.png",
+      "away_id": 5529,
+      "away_ja": "ナシオナル",
+      "away_en": "CD Nacional",
+      "away_crest": "https://crests.football-data.org/5529.png",
+      "score": null,
+      "japanese_players": [],
+      "broadcasters": []
+    },
+    {
+      "id": 567299,
+      "competition_id": 94,
+      "competition_ja": "プリメイラ・リーガ",
+      "competition_category": "league",
+      "competition_flag": "🇵🇹",
+      "kickoff_jst": "2026-09-05T09:00:00+09:00",
+      "status": "2026-09-06 15:00:00Z",
+      "stage": "REGULAR_SEASON",
+      "matchday": 5,
+      "home_id": 503,
+      "home_ja": "ポルト",
+      "home_en": "Porto",
+      "home_crest": "https://crests.football-data.org/503.png",
+      "away_id": 583,
+      "away_ja": "モレイレンセ",
+      "away_en": "Moreirense",
+      "away_crest": "https://crests.football-data.org/583.png",
+      "score": null,
+      "japanese_players": [],
+      "broadcasters": []
+    },
+    {
+      "id": 567300,
+      "competition_id": 94,
+      "competition_ja": "プリメイラ・リーガ",
+      "competition_category": "league",
+      "competition_flag": "🇵🇹",
+      "kickoff_jst": "2026-09-05T09:00:00+09:00",
+      "status": "2026-09-06 15:00:00Z",
+      "stage": "REGULAR_SEASON",
+      "matchday": 5,
+      "home_id": 5530,
+      "home_ja": "サンタクララ",
+      "home_en": "Santa Clara",
+      "home_crest": "https://crests.football-data.org/5530.png",
+      "away_id": 496,
+      "away_ja": "リオアヴェ",
+      "away_en": "Rio Ave",
+      "away_crest": "https://crests.football-data.org/496.png",
+      "score": null,
+      "japanese_players": [],
+      "broadcasters": []
+    },
+    {
+      "id": 567301,
+      "competition_id": 94,
+      "competition_ja": "プリメイラ・リーガ",
+      "competition_category": "league",
+      "competition_flag": "🇵🇹",
+      "kickoff_jst": "2026-09-05T09:00:00+09:00",
+      "status": "2026-09-06 15:00:00Z",
+      "stage": "REGULAR_SEASON",
+      "matchday": 5,
+      "home_id": 5533,
+      "home_ja": "ジル・ヴィセンテ",
+      "home_en": "Gil Vicente",
+      "home_crest": "https://crests.football-data.org/5533.png",
+      "away_id": 5527,
+      "away_ja": "Acad. Viseu",
+      "away_en": "Acad. Viseu",
+      "away_crest": "https://crests.football-data.org/5527.png",
+      "score": null,
+      "japanese_players": [],
+      "broadcasters": []
+    },
+    {
+      "id": 567293,
+      "competition_id": 94,
+      "competition_ja": "プリメイラ・リーガ",
+      "competition_category": "league",
+      "competition_flag": "🇵🇹",
+      "kickoff_jst": "2026-09-05T09:00:00+09:00",
+      "status": "2026-09-06 15:00:00Z",
+      "stage": "REGULAR_SEASON",
+      "matchday": 5,
+      "home_id": 5575,
+      "home_ja": "Marítimo",
+      "home_en": "Marítimo",
+      "home_crest": "https://crests.football-data.org/5575.png",
+      "away_id": 1903,
+      "away_ja": "ベンフィカ",
+      "away_en": "SL Benfica",
+      "away_crest": "https://crests.football-data.org/1903.png",
+      "score": null,
+      "japanese_players": [],
+      "broadcasters": []
+    },
+    {
+      "id": 567294,
+      "competition_id": 94,
+      "competition_ja": "プリメイラ・リーガ",
+      "competition_category": "league",
+      "competition_flag": "🇵🇹",
+      "kickoff_jst": "2026-09-05T09:00:00+09:00",
+      "status": "2026-09-06 15:00:00Z",
+      "stage": "REGULAR_SEASON",
+      "matchday": 5,
+      "home_id": 5543,
+      "home_ja": "ヴィトーリア",
+      "home_en": "Vitória SC",
+      "home_crest": "https://crests.football-data.org/5543.png",
+      "away_id": 6618,
+      "away_ja": "カーザ・ピア",
+      "away_en": "Casa Pia",
+      "away_crest": "https://crests.football-data.org/6618.png",
+      "score": null,
+      "japanese_players": [],
+      "broadcasters": []
+    },
+    {
+      "id": 567295,
+      "competition_id": 94,
+      "competition_ja": "プリメイラ・リーガ",
+      "competition_category": "league",
+      "competition_flag": "🇵🇹",
+      "kickoff_jst": "2026-09-05T09:00:00+09:00",
+      "status": "2026-09-06 15:00:00Z",
+      "stage": "REGULAR_SEASON",
+      "matchday": 5,
+      "home_id": 582,
+      "home_ja": "エストリル",
+      "home_en": "Estoril Praia",
+      "home_crest": "https://crests.football-data.org/582.png",
+      "away_id": 712,
+      "away_ja": "アロウカ",
+      "away_en": "Arouca",
+      "away_crest": "https://crests.football-data.org/712.png",
+      "score": null,
+      "japanese_players": [
+        {
+          "name_ja": "福井太智",
+          "position": "MF",
+          "side": "away"
+        }
+      ],
+      "broadcasters": []
     }
   ],
-  "updated_yt_highlights": "2026-08-18T07:26:14.363132+09:00",
-  "updated_uefa_secondary": "2026-08-18T07:26:45.783221+09:00"
+  "updated_yt_highlights": "2026-08-21T12:44:19.023353+09:00",
+  "updated_uefa_secondary": "2026-08-21T12:44:48.233626+09:00"
 }

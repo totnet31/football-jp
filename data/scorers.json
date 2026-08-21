@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-18T07:24:25.366737+09:00",
+  "updated": "2026-08-21T12:42:31.515547+09:00",
   "competitions": {
     "39": {
       "name_ja": "プレミアリーグ",
@@ -377,6 +377,18 @@
       "flag": "🇪🇸",
       "scorers": [
         {
+          "player_id": 8474,
+          "player_name": "Mariano Díaz",
+          "nationality": "Dominican Republic",
+          "team_id": 263,
+          "team_ja": "アラベス",
+          "team_crest": "https://crests.football-data.org/263.png",
+          "goals": 2,
+          "assists": 2,
+          "penalties": null,
+          "playedMatches": 2
+        },
+        {
           "player_id": 180218,
           "player_name": "Roberto Fernández",
           "nationality": "Spain",
@@ -398,19 +410,7 @@
           "goals": 1,
           "assists": null,
           "penalties": null,
-          "playedMatches": 1
-        },
-        {
-          "player_id": 8474,
-          "player_name": "Mariano Díaz",
-          "nationality": "Dominican Republic",
-          "team_id": 263,
-          "team_ja": "アラベス",
-          "team_crest": "https://crests.football-data.org/263.png",
-          "goals": 1,
-          "assists": 2,
-          "penalties": null,
-          "playedMatches": 1
+          "playedMatches": 2
         },
         {
           "player_id": 290184,
@@ -422,7 +422,7 @@
           "goals": 1,
           "assists": null,
           "penalties": null,
-          "playedMatches": 1
+          "playedMatches": 2
         },
         {
           "player_id": 32312,
@@ -434,7 +434,7 @@
           "goals": 1,
           "assists": null,
           "penalties": null,
-          "playedMatches": 1
+          "playedMatches": 2
         },
         {
           "player_id": 33092,
@@ -543,6 +543,42 @@
           "assists": null,
           "penalties": null,
           "playedMatches": 1
+        },
+        {
+          "player_id": 213217,
+          "player_name": "Kang-in Lee",
+          "nationality": "South Korea",
+          "team_id": 78,
+          "team_ja": "アトレティコ・マドリー",
+          "team_crest": "https://crests.football-data.org/78.png",
+          "goals": 1,
+          "assists": null,
+          "penalties": null,
+          "playedMatches": 1
+        },
+        {
+          "player_id": 213278,
+          "player_name": "Álex Baena",
+          "nationality": "Spain",
+          "team_id": 78,
+          "team_ja": "アトレティコ・マドリー",
+          "team_crest": "https://crests.football-data.org/78.png",
+          "goals": 1,
+          "assists": null,
+          "penalties": null,
+          "playedMatches": 1
+        },
+        {
+          "player_id": 115175,
+          "player_name": "Sergio Camello",
+          "nationality": "Spain",
+          "team_id": 87,
+          "team_ja": "ラージョ・バジェカーノ",
+          "team_crest": "https://crests.football-data.org/87.png",
+          "goals": 1,
+          "assists": null,
+          "penalties": null,
+          "playedMatches": 2
         }
       ]
     },
