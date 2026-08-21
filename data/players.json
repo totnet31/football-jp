@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-18",
+  "updated": "2026-08-21",
   "note": "club_id は football-data.org のチームID。null は football-data.org でカバーされないクラブ（リーグ・ドゥ／ベルギー）。",
   "players": [
     {
@@ -366,13 +366,13 @@
       "name_ja": "鈴木彩艶",
       "name_en": "Zion Suzuki",
       "position": "GK",
-      "club_ja": "パルマ",
-      "club_en": "Parma",
-      "club_id": 112,
-      "league_ja": "セリエA",
-      "competition_id": 135,
+      "club_ja": "アストン・ビラ",
+      "club_en": "Aston Villa",
+      "club_id": 58,
+      "league_ja": "プレミアリーグ",
+      "competition_id": 39,
       "api_player_id": null,
-      "note": "11月に負傷、2026年1月復帰"
+      "note": "2026年8月19日にパルマから完全移籍で加入（5年契約）"
     },
     {
       "name_ja": "南野拓実",
@@ -721,6 +721,18 @@
       "competition_id": 39,
       "api_player_id": null,
       "note": "2026年7月にスポルティングCPから加入（フリー）。ハルは2025-26に昇格"
+    },
+    {
+      "name_ja": "前田大然",
+      "name_en": "Daizen Maeda",
+      "position": "FW",
+      "club_ja": "イプスウィッチ",
+      "club_en": "Ipswich Town",
+      "club_id": 349,
+      "league_ja": "プレミアリーグ",
+      "competition_id": 39,
+      "api_player_id": null,
+      "note": "2026年7月25日にセルティックから完全移籍で加入（2029年夏まで3年契約）"
     },
     {
       "name_ja": "佐藤龍之介",
