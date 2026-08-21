@@ -41,7 +41,7 @@ TEAM_KEYWORDS = {
     "Crystal Palace": ["クリスタル・パレス", "クリスタルパレス"],
     "Brighton & Hove Albion": ["ブライトン"],
     "Newcastle": ["ニューカッスル"],
-    "Aston Villa": ["アストン・ビラ", "アストンビラ"],
+    "Aston Villa": ["アストン・ヴィラ", "アストン・ビラ", "アストンビラ"],
     "West Ham": ["ウェストハム"],
     "Wolverhampton": ["ウルブス", "ウルバーハンプトン", "ウォルバーハンプトン", "ウォルヴァーハンプトン"],
     "Everton": ["エヴァートン", "エバートン"],
