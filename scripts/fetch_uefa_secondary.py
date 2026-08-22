@@ -257,7 +257,7 @@ def main():
         "Braga": "ブラガ",
         "S.C. Braga": "ブラガ",
         "Nottingham Forest": "ノッティンガム・フォレスト",
-        "Aston Villa": "アストン・ビラ",
+        "Aston Villa": "アストン・ヴィラ",
         "Shakhtar Donetsk": "シャフタール・ドネツク",
         "FC Shakhtar Donetsk": "シャフタール・ドネツク",
         "Rayo Vallecano": "ラージョ・バジェカーノ",
