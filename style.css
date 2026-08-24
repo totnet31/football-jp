@@ -86,77 +86,36 @@ header .period {
   color: rgba(255, 255, 255, 0.7);
 }
 
-/* === W杯特集バナー（ヘッダー直下のプロモ） === */
-.wc-promo {
-  display: block;
-  background: linear-gradient(135deg, #c1304a 0%, #7a1928 100%);
-  color: #ffffff !important;
-  text-decoration: none;
-  padding: 16px 18px;
-  border-bottom: 4px solid #0d0d0d;
-  transition: filter 0.15s ease;
-}
-.wc-promo:hover {
-  filter: brightness(1.08);
-  text-decoration: none !important;
-}
-.wc-promo-grid {
-  display: grid;
-  grid-template-columns: auto 1fr auto;
-  gap: 16px;
-  align-items: center;
+/* === W杯特集への導線（閉幕後、バナーから小さなボタンへ格下げ） === */
+.wc-link-row {
   max-width: 720px;
-  margin: 0 auto;
-}
-.wc-promo .trophy {
-  font-size: 38px;
-  line-height: 1;
-  filter: drop-shadow(0 1px 2px rgba(0,0,0,0.3));
-}
-.wc-promo .text {
+  margin: 14px auto 0;
+  padding: 0 16px;
   display: flex;
-  flex-direction: column;
-  gap: 2px;
-  min-width: 0;
+  justify-content: flex-end;
 }
-.wc-promo .title {
-  font-size: 16px;
-  font-weight: 800;
-  letter-spacing: 0.02em;
+.wc-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  background: var(--bg-subtle);
+  color: var(--text-sub);
+  font-size: 12px;
+  font-weight: 600;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: all 0.15s ease;
 }
-.wc-promo .sub {
-  font-size: 11px;
-  opacity: 0.88;
-  line-height: 1.5;
-}
-.wc-promo .countdown-block {
-  text-align: right;
-  border-left: 1px solid rgba(255,255,255,0.3);
-  padding-left: 14px;
-  min-width: 64px;
-}
-.wc-promo .countdown {
-  font-size: 28px;
-  font-weight: 800;
-  font-feature-settings: "tnum";
-  line-height: 1;
-}
-.wc-promo .countdown .num { display: inline; }
-.wc-promo .countdown .unit { font-size: 14px; margin-left: 2px; opacity: 0.85; }
-.wc-promo .countdown-label {
-  font-size: 10px;
-  opacity: 0.85;
-  margin-top: 4px;
-  letter-spacing: 0.04em;
+.wc-link:hover {
+  border-color: var(--text);
+  color: var(--text);
+  text-decoration: none;
 }
 @media (max-width: 600px) {
-  .wc-promo { padding: 14px 14px; }
-  .wc-promo-grid { gap: 12px; }
-  .wc-promo .trophy { font-size: 32px; }
-  .wc-promo .title { font-size: 15px; }
-  .wc-promo .sub { font-size: 11px; }
-  .wc-promo .countdown { font-size: 22px; }
-  .wc-promo .countdown-block { padding-left: 10px; min-width: 56px; }
+  .wc-link { font-size: 11px; padding: 5px 10px; }
 }
 
 .view-tabs {

@@ -76,19 +76,9 @@
     <p class="period" id="period"></p>
   </header>
 
-  <a href="/worldcup/" class="wc-promo">
-    <div class="wc-promo-grid">
-      <div class="trophy">🏆</div>
-      <div class="text">
-        <div class="title">2026 FIFA ワールドカップ 特集</div>
-        <div class="sub">日本はGroup F（オランダ・スウェーデン・チュニジア）／全104試合・48か国を日本時間で</div>
-      </div>
-      <div class="countdown-block">
-        <div class="countdown" id="wcDays">—</div>
-        <div class="countdown-label">日本初戦まで</div>
-      </div>
-    </div>
-  </a>
+  <div class="wc-link-row">
+    <a href="/worldcup/" class="wc-link">🏆 2026 FIFA ワールドカップ 特集</a>
+  </div>
 
   <nav class="view-tabs">
     <a class="view-tab active" href="/" data-view="schedule">
@@ -220,22 +210,6 @@
   </footer>
 
   <script src="/app.js"></script>
-  <script>
-  // W杯 日本初戦カウントダウン (Netherlands vs Japan: 2026-06-15 05:00 JST)
-  (function() {
-    const target = new Date('2026-06-15T05:00:00+09:00').getTime();
-    const el = document.getElementById('wcDays');
-    if (!el) return;
-    function tick() {
-      const diff = target - Date.now();
-      if (diff <= 0) { el.textContent = '開幕'; return; }
-      const days = Math.ceil(diff / 86400000);
-      el.innerHTML = `<span class="num">${days}</span><span class="unit">日</span>`;
-    }
-    tick();
-    setInterval(tick, 60000); // 毎分更新
-  })();
-  </script>
   <script src="/sw-register.js" defer></script>
   <script src="/push-client.js" defer></script>
   <script src="/push-ui.js" defer></script>
