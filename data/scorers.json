@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-24T18:57:48.470802+09:00",
+  "updated": "2026-08-25T07:02:34.389364+09:00",
   "competitions": {
     "39": {
       "name_ja": "プレミアリーグ",
@@ -279,6 +279,66 @@
           "goals": 1,
           "assists": null,
           "penalties": 1,
+          "playedMatches": 1
+        },
+        {
+          "player_id": 103125,
+          "player_name": "João Pedro",
+          "nationality": "Brazil",
+          "team_id": 61,
+          "team_ja": "チェルシー",
+          "team_crest": "https://crests.football-data.org/61.png",
+          "goals": 1,
+          "assists": 1,
+          "penalties": null,
+          "playedMatches": 1
+        },
+        {
+          "player_id": 246418,
+          "player_name": "Joshua King",
+          "nationality": "England",
+          "team_id": 63,
+          "team_ja": "フラム",
+          "team_crest": "https://crests.football-data.org/63.png",
+          "goals": 1,
+          "assists": null,
+          "penalties": null,
+          "playedMatches": 1
+        },
+        {
+          "player_id": 82140,
+          "player_name": "Morgan Rogers",
+          "nationality": "England",
+          "team_id": 61,
+          "team_ja": "チェルシー",
+          "team_crest": "https://crests.football-data.org/61.png",
+          "goals": 1,
+          "assists": null,
+          "penalties": null,
+          "playedMatches": 1
+        },
+        {
+          "player_id": 144892,
+          "player_name": "Cole Palmer",
+          "nationality": "England",
+          "team_id": 61,
+          "team_ja": "チェルシー",
+          "team_crest": "https://crests.football-data.org/61.png",
+          "goals": 1,
+          "assists": 1,
+          "penalties": null,
+          "playedMatches": 1
+        },
+        {
+          "player_id": 217658,
+          "player_name": "Gonzalo García",
+          "nationality": "Spain",
+          "team_id": 63,
+          "team_ja": "フラム",
+          "team_crest": "https://crests.football-data.org/63.png",
+          "goals": 1,
+          "assists": null,
+          "penalties": null,
           "playedMatches": 1
         }
       ]
@@ -918,6 +978,18 @@
           "playedMatches": 2
         },
         {
+          "player_id": 7801,
+          "player_name": "Pierre-Emerick Aubameyang",
+          "nationality": "Gabon",
+          "team_id": 560,
+          "team_ja": "Deportivo",
+          "team_crest": "https://crests.football-data.org/560.png",
+          "goals": 2,
+          "assists": null,
+          "penalties": null,
+          "playedMatches": 2
+        },
+        {
           "player_id": 37428,
           "player_name": "Raphinha",
           "nationality": "Brazil",
@@ -1060,18 +1132,6 @@
           "assists": null,
           "penalties": null,
           "playedMatches": 2
-        },
-        {
-          "player_id": 7801,
-          "player_name": "Pierre-Emerick Aubameyang",
-          "nationality": "Gabon",
-          "team_id": 560,
-          "team_ja": "Deportivo",
-          "team_crest": "https://crests.football-data.org/560.png",
-          "goals": 1,
-          "assists": null,
-          "penalties": null,
-          "playedMatches": 1
         },
         {
           "player_id": 159647,
@@ -1288,6 +1348,18 @@
           "assists": null,
           "penalties": null,
           "playedMatches": 1
+        },
+        {
+          "player_id": 264254,
+          "player_name": "Chupete",
+          "nationality": "Spain",
+          "team_id": 84,
+          "team_ja": "Málaga",
+          "team_crest": "https://crests.football-data.org/84.png",
+          "goals": 1,
+          "assists": null,
+          "penalties": 1,
+          "playedMatches": 2
         }
       ]
     },
@@ -1300,6 +1372,18 @@
       "name_ja": "セリエA",
       "flag": "🇮🇹",
       "scorers": [
+        {
+          "player_id": 7457,
+          "player_name": "Donyell Malen",
+          "nationality": "Netherlands",
+          "team_id": 100,
+          "team_ja": "ローマ",
+          "team_crest": "https://crests.football-data.org/100.png",
+          "goals": 3,
+          "assists": null,
+          "penalties": null,
+          "playedMatches": 1
+        },
         {
           "player_id": 822,
           "player_name": "Hassane Kamara",
@@ -1523,6 +1607,30 @@
           "team_id": 586,
           "team_ja": "トリノ",
           "team_crest": "https://crests.football-data.org/586.png",
+          "goals": 1,
+          "assists": null,
+          "penalties": null,
+          "playedMatches": 1
+        },
+        {
+          "player_id": 2200,
+          "player_name": "Davide Frattesi",
+          "nationality": "Italy",
+          "team_id": 110,
+          "team_ja": "ラツィオ",
+          "team_crest": "https://crests.football-data.org/110.png",
+          "goals": 1,
+          "assists": null,
+          "penalties": null,
+          "playedMatches": 1
+        },
+        {
+          "player_id": 192382,
+          "player_name": "Niccolo Pisilli",
+          "nationality": "Italy",
+          "team_id": 100,
+          "team_ja": "ローマ",
+          "team_crest": "https://crests.football-data.org/100.png",
           "goals": 1,
           "assists": null,
           "penalties": null,
@@ -2471,6 +2579,18 @@
           "playedMatches": 3
         },
         {
+          "player_id": 32309,
+          "player_name": "Héctor Hernández",
+          "nationality": "Spain",
+          "team_id": 5533,
+          "team_ja": "ジル・ヴィセンテ",
+          "team_crest": "https://crests.football-data.org/5533.png",
+          "goals": 2,
+          "assists": 1,
+          "penalties": 2,
+          "playedMatches": 2
+        },
+        {
           "player_id": 182123,
           "player_name": "Gianluca Prestianni",
           "nationality": "Argentina",
@@ -2625,18 +2745,6 @@
           "assists": null,
           "penalties": null,
           "playedMatches": 2
-        },
-        {
-          "player_id": 32309,
-          "player_name": "Héctor Hernández",
-          "nationality": "Spain",
-          "team_id": 5533,
-          "team_ja": "ジル・ヴィセンテ",
-          "team_crest": "https://crests.football-data.org/5533.png",
-          "goals": 1,
-          "assists": null,
-          "penalties": 1,
-          "playedMatches": 1
         },
         {
           "player_id": 136307,
@@ -2985,6 +3093,18 @@
           "assists": null,
           "penalties": null,
           "playedMatches": 3
+        },
+        {
+          "player_id": 262713,
+          "player_name": "Gil Martins",
+          "nationality": "Portugal",
+          "team_id": 5533,
+          "team_ja": "ジル・ヴィセンテ",
+          "team_crest": "https://crests.football-data.org/5533.png",
+          "goals": 1,
+          "assists": null,
+          "penalties": null,
+          "playedMatches": 2
         }
       ]
     },
