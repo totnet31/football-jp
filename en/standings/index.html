@@ -62,19 +62,9 @@
     <p class="period" id="period"></p>
   </header>
 
-  <a href="/worldcup/" class="wc-promo">
-    <div class="wc-promo-grid">
-      <div class="trophy">🏆</div>
-      <div class="text">
-        <div class="title">2026 FIFA World Cup Special</div>
-        <div class="sub">Japan in Group F (Netherlands / Sweden / Tunisia) — All 104 matches &amp; 48 nations in JST</div>
-      </div>
-      <div class="countdown-block">
-        <div class="countdown" id="wcDays">—</div>
-        <div class="countdown-label">days to Japan's first match</div>
-      </div>
-    </div>
-  </a>
+  <div class="wc-link-row">
+    <a href="/worldcup/" class="wc-link">🏆 2026 FIFA World Cup Special</a>
+  </div>
 
   <nav class="view-tabs">
     <a class="view-tab" href="/en/" data-view="schedule">
@@ -187,21 +177,6 @@
   </footer>
 
   <script src="/app.js"></script>
-  <script>
-  (function() {
-    const target = new Date('2026-06-15T05:00:00+09:00').getTime();
-    const el = document.getElementById('wcDays');
-    if (!el) return;
-    function tick() {
-      const diff = target - Date.now();
-      if (diff <= 0) { el.textContent = 'Kick off!'; return; }
-      const days = Math.ceil(diff / 86400000);
-      el.innerHTML = `<span class="num">${days}</span><span class="unit">d</span>`;
-    }
-    tick();
-    setInterval(tick, 60000);
-  })();
-  </script>
   <script src="/sw-register.js" defer></script>
   <script src="/push-client.js" defer></script>
   <script src="/push-ui.js" defer></script>
