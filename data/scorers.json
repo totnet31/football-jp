@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-25T18:45:03.430766+09:00",
+  "updated": "2026-08-26T07:02:36.151291+09:00",
   "competitions": {
     "39": {
       "name_ja": "プレミアリーグ",
@@ -1191,7 +1191,7 @@
           "goals": 1,
           "assists": null,
           "penalties": null,
-          "playedMatches": 1
+          "playedMatches": 2
         },
         {
           "player_id": 244751,
@@ -1359,6 +1359,18 @@
           "goals": 1,
           "assists": null,
           "penalties": 1,
+          "playedMatches": 2
+        },
+        {
+          "player_id": 274546,
+          "player_name": "Pablo García",
+          "nationality": "Spain",
+          "team_id": 90,
+          "team_ja": "ベティス",
+          "team_crest": "https://crests.football-data.org/90.png",
+          "goals": 1,
+          "assists": null,
+          "penalties": null,
           "playedMatches": 2
         }
       ]
