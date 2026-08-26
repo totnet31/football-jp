@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-26T18:54:41.224160+09:00",
+  "updated": "2026-08-27T07:04:16.730778+09:00",
   "competitions": {
     "39": {
       "name_ja": "プレミアリーグ",
@@ -707,6 +707,21 @@
           "table": [
             {
               "position": 1,
+              "team_id": 86,
+              "team_ja": "レアル・マドリー",
+              "team_crest": "https://crests.football-data.org/86.png",
+              "playedGames": 2,
+              "won": 2,
+              "draw": 0,
+              "lost": 0,
+              "points": 6,
+              "goalsFor": 6,
+              "goalsAgainst": 2,
+              "goalDifference": 4,
+              "form": null
+            },
+            {
+              "position": 2,
               "team_id": 559,
               "team_ja": "セビージャ",
               "team_crest": "https://crests.football-data.org/559.png",
@@ -721,7 +736,7 @@
               "form": null
             },
             {
-              "position": 2,
+              "position": 3,
               "team_id": 90,
               "team_ja": "ベティス",
               "team_crest": "https://crests.football-data.org/90.png",
@@ -736,7 +751,7 @@
               "form": null
             },
             {
-              "position": 3,
+              "position": 4,
               "team_id": 263,
               "team_ja": "アラベス",
               "team_crest": "https://crests.football-data.org/263.png",
@@ -751,7 +766,7 @@
               "form": null
             },
             {
-              "position": 4,
+              "position": 5,
               "team_id": 78,
               "team_ja": "アトレティコ・マドリー",
               "team_crest": "https://crests.football-data.org/78.png",
@@ -766,7 +781,7 @@
               "form": null
             },
             {
-              "position": 5,
+              "position": 6,
               "team_id": 81,
               "team_ja": "バルセロナ",
               "team_crest": "https://crests.football-data.org/81.png",
@@ -781,7 +796,7 @@
               "form": null
             },
             {
-              "position": 6,
+              "position": 7,
               "team_id": 80,
               "team_ja": "エスパニョール",
               "team_crest": "https://crests.football-data.org/80.png",
@@ -793,21 +808,6 @@
               "goalsFor": 4,
               "goalsAgainst": 2,
               "goalDifference": 2,
-              "form": null
-            },
-            {
-              "position": 7,
-              "team_id": 86,
-              "team_ja": "レアル・マドリー",
-              "team_crest": "https://crests.football-data.org/86.png",
-              "playedGames": 1,
-              "won": 1,
-              "draw": 0,
-              "lost": 0,
-              "points": 3,
-              "goalsFor": 2,
-              "goalsAgainst": 1,
-              "goalDifference": 1,
               "form": null
             },
             {
@@ -977,21 +977,6 @@
             },
             {
               "position": 19,
-              "team_id": 92,
-              "team_ja": "レアル・ソシエダ",
-              "team_crest": "https://crests.football-data.org/92.png",
-              "playedGames": 1,
-              "won": 0,
-              "draw": 0,
-              "lost": 1,
-              "points": 0,
-              "goalsFor": 0,
-              "goalsAgainst": 1,
-              "goalDifference": -1,
-              "form": null
-            },
-            {
-              "position": 20,
               "team_id": 77,
               "team_ja": "アスレティック・ビルバオ",
               "team_crest": "https://crests.football-data.org/77.png",
@@ -1003,6 +988,21 @@
               "goalsFor": 1,
               "goalsAgainst": 3,
               "goalDifference": -2,
+              "form": null
+            },
+            {
+              "position": 20,
+              "team_id": 92,
+              "team_ja": "レアル・ソシエダ",
+              "team_crest": "https://crests.football-data.org/92.png",
+              "playedGames": 2,
+              "won": 0,
+              "draw": 0,
+              "lost": 2,
+              "points": 0,
+              "goalsFor": 1,
+              "goalsAgainst": 5,
+              "goalDifference": -4,
               "form": null
             }
           ]

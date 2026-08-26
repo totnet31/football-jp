@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-26T18:52:39.912947+09:00",
+  "updated": "2026-08-27T07:02:33.156164+09:00",
   "competitions": {
     "39": {
       "name_ja": "プレミアリーグ",
@@ -954,6 +954,18 @@
       "flag": "🇪🇸",
       "scorers": [
         {
+          "player_id": 3374,
+          "player_name": "Kylian Mbappé",
+          "nationality": "France",
+          "team_id": 86,
+          "team_ja": "レアル・マドリー",
+          "team_crest": "https://crests.football-data.org/86.png",
+          "goals": 3,
+          "assists": null,
+          "penalties": null,
+          "playedMatches": 2
+        },
+        {
           "player_id": 8474,
           "player_name": "Mariano Díaz",
           "nationality": "Dominican Republic",
@@ -1249,9 +1261,9 @@
           "team_ja": "レアル・マドリー",
           "team_crest": "https://crests.football-data.org/86.png",
           "goals": 1,
-          "assists": null,
+          "assists": 2,
           "penalties": null,
-          "playedMatches": 1
+          "playedMatches": 2
         },
         {
           "player_id": 220538,
@@ -1275,7 +1287,7 @@
           "goals": 1,
           "assists": null,
           "penalties": null,
-          "playedMatches": 1
+          "playedMatches": 2
         },
         {
           "player_id": 176745,
@@ -1370,6 +1382,30 @@
           "team_crest": "https://crests.football-data.org/90.png",
           "goals": 1,
           "assists": null,
+          "penalties": null,
+          "playedMatches": 2
+        },
+        {
+          "player_id": 82516,
+          "player_name": "Luka Sučić",
+          "nationality": "Croatia",
+          "team_id": 92,
+          "team_ja": "レアル・ソシエダ",
+          "team_crest": "https://crests.football-data.org/92.png",
+          "goals": 1,
+          "assists": null,
+          "penalties": null,
+          "playedMatches": 2
+        },
+        {
+          "player_id": 1556,
+          "player_name": "Vinicius Junior",
+          "nationality": "Brazil",
+          "team_id": 86,
+          "team_ja": "レアル・マドリー",
+          "team_crest": "https://crests.football-data.org/86.png",
+          "goals": 1,
+          "assists": 1,
           "penalties": null,
           "playedMatches": 2
         }
