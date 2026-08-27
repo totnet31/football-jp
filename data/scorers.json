@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-27T22:18:00.479155+09:00",
+  "updated": "2026-08-28T04:49:44.402523+09:00",
   "competitions": {
     "39": {
       "name_ja": "プレミアリーグ",
@@ -954,6 +954,18 @@
       "flag": "🇪🇸",
       "scorers": [
         {
+          "player_id": 37428,
+          "player_name": "Raphinha",
+          "nationality": "Brazil",
+          "team_id": 81,
+          "team_ja": "バルセロナ",
+          "team_crest": "https://crests.football-data.org/81.png",
+          "goals": 3,
+          "assists": null,
+          "penalties": 1,
+          "playedMatches": 2
+        },
+        {
           "player_id": 3374,
           "player_name": "Kylian Mbappé",
           "nationality": "France",
@@ -1002,18 +1014,6 @@
           "playedMatches": 2
         },
         {
-          "player_id": 37428,
-          "player_name": "Raphinha",
-          "nationality": "Brazil",
-          "team_id": 81,
-          "team_ja": "バルセロナ",
-          "team_crest": "https://crests.football-data.org/81.png",
-          "goals": 2,
-          "assists": null,
-          "penalties": 1,
-          "playedMatches": 1
-        },
-        {
           "player_id": 214533,
           "player_name": "Fermín López",
           "nationality": "Spain",
@@ -1023,7 +1023,7 @@
           "goals": 2,
           "assists": null,
           "penalties": null,
-          "playedMatches": 1
+          "playedMatches": 2
         },
         {
           "player_id": 46123,
@@ -1251,7 +1251,7 @@
           "goals": 1,
           "assists": null,
           "penalties": null,
-          "playedMatches": 1
+          "playedMatches": 2
         },
         {
           "player_id": 125010,
@@ -1359,7 +1359,7 @@
           "goals": 1,
           "assists": null,
           "penalties": null,
-          "playedMatches": 1
+          "playedMatches": 2
         },
         {
           "player_id": 264254,
@@ -1406,6 +1406,30 @@
           "team_crest": "https://crests.football-data.org/86.png",
           "goals": 1,
           "assists": 1,
+          "penalties": null,
+          "playedMatches": 2
+        },
+        {
+          "player_id": 3201,
+          "player_name": "Iago Aspas",
+          "nationality": "Spain",
+          "team_id": 558,
+          "team_ja": "セルタ",
+          "team_crest": "https://crests.football-data.org/558.png",
+          "goals": 1,
+          "assists": null,
+          "penalties": null,
+          "playedMatches": 2
+        },
+        {
+          "player_id": 32004,
+          "player_name": "Kike Barja",
+          "nationality": "Spain",
+          "team_id": 79,
+          "team_ja": "オサスナ",
+          "team_crest": "https://crests.football-data.org/79.png",
+          "goals": 1,
+          "assists": null,
           "penalties": null,
           "playedMatches": 2
         }
