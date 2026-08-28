@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-29T05:52:28.397345+09:00",
+  "updated": "2026-08-29T07:04:28.691807+09:00",
   "competitions": {
     "39": {
       "name_ja": "プレミアリーグ",
@@ -23,9 +23,9 @@
               "draw": 0,
               "lost": 0,
               "points": 6,
-              "goalsFor": 5,
+              "goalsFor": 6,
               "goalsAgainst": 2,
-              "goalDifference": 3,
+              "goalDifference": 4,
               "form": null
             },
             {
@@ -285,21 +285,6 @@
             },
             {
               "position": 19,
-              "team_id": 354,
-              "team_ja": "クリスタル・パレス",
-              "team_crest": "https://crests.football-data.org/354.png",
-              "playedGames": 2,
-              "won": 0,
-              "draw": 0,
-              "lost": 2,
-              "points": 0,
-              "goalsFor": 1,
-              "goalsAgainst": 5,
-              "goalDifference": -4,
-              "form": null
-            },
-            {
-              "position": 20,
               "team_id": 58,
               "team_ja": "アストン・ヴィラ",
               "team_crest": "https://crests.football-data.org/58.png",
@@ -311,6 +296,21 @@
               "goalsFor": 0,
               "goalsAgainst": 4,
               "goalDifference": -4,
+              "form": null
+            },
+            {
+              "position": 20,
+              "team_id": 354,
+              "team_ja": "クリスタル・パレス",
+              "team_crest": "https://crests.football-data.org/354.png",
+              "playedGames": 2,
+              "won": 0,
+              "draw": 0,
+              "lost": 2,
+              "points": 0,
+              "goalsFor": 1,
+              "goalsAgainst": 6,
+              "goalDifference": -5,
               "form": null
             }
           ]
@@ -1629,13 +1629,13 @@
               "team_ja": "リール",
               "team_crest": "https://crests.football-data.org/521.png",
               "playedGames": 2,
-              "won": 2,
-              "draw": 0,
+              "won": 1,
+              "draw": 1,
               "lost": 0,
-              "points": 6,
+              "points": 4,
               "goalsFor": 4,
-              "goalsAgainst": 0,
-              "goalDifference": 4,
+              "goalsAgainst": 2,
+              "goalDifference": 2,
               "form": null
             },
             {
@@ -1700,6 +1700,21 @@
             },
             {
               "position": 6,
+              "team_id": 524,
+              "team_ja": "PSG",
+              "team_crest": "https://crests.football-data.org/524.png",
+              "playedGames": 2,
+              "won": 0,
+              "draw": 2,
+              "lost": 0,
+              "points": 2,
+              "goalsFor": 4,
+              "goalsAgainst": 4,
+              "goalDifference": 0,
+              "form": null
+            },
+            {
+              "position": 7,
               "team_id": 535,
               "team_ja": "Le Mans",
               "team_crest": "https://upload.wikimedia.org/wikipedia/en/5/57/Le_Mans_FC_logo.svg",
@@ -1714,7 +1729,7 @@
               "form": null
             },
             {
-              "position": 6,
+              "position": 7,
               "team_id": 512,
               "team_ja": "ブレスト",
               "team_crest": "https://crests.football-data.org/512.png",
@@ -1729,7 +1744,7 @@
               "form": null
             },
             {
-              "position": 6,
+              "position": 7,
               "team_id": 529,
               "team_ja": "レンヌ",
               "team_crest": "https://crests.football-data.org/529.png",
@@ -1744,7 +1759,7 @@
               "form": null
             },
             {
-              "position": 9,
+              "position": 10,
               "team_id": 531,
               "team_ja": "Troyes",
               "team_crest": "https://crests.football-data.org/531.png",
@@ -1759,7 +1774,7 @@
               "form": null
             },
             {
-              "position": 9,
+              "position": 10,
               "team_id": 525,
               "team_ja": "ロリアン",
               "team_crest": "https://crests.football-data.org/525.png",
@@ -1774,7 +1789,7 @@
               "form": null
             },
             {
-              "position": 9,
+              "position": 10,
               "team_id": 522,
               "team_ja": "ニース",
               "team_crest": "https://crests.football-data.org/522.png",
@@ -1789,7 +1804,7 @@
               "form": null
             },
             {
-              "position": 9,
+              "position": 10,
               "team_id": 1045,
               "team_ja": "パリFC",
               "team_crest": "https://crests.football-data.org/1045.png",
@@ -1801,21 +1816,6 @@
               "goalsFor": 0,
               "goalsAgainst": 0,
               "goalDifference": 0,
-              "form": null
-            },
-            {
-              "position": 13,
-              "team_id": 524,
-              "team_ja": "PSG",
-              "team_crest": "https://crests.football-data.org/524.png",
-              "playedGames": 2,
-              "won": 0,
-              "draw": 1,
-              "lost": 1,
-              "points": 1,
-              "goalsFor": 2,
-              "goalsAgainst": 4,
-              "goalDifference": -2,
               "form": null
             },
             {
