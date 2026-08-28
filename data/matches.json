@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-29T05:49:35.877484+09:00",
+  "updated": "2026-08-29T07:01:41.025755+09:00",
   "date_from": "2026-08-22",
   "date_to": "2026-09-12",
   "match_count": 717,
@@ -18700,7 +18700,7 @@
       "competition_category": "league",
       "competition_flag": "🇩🇪",
       "kickoff_jst": "2026-08-29T03:30:00+09:00",
-      "status": "TIMED",
+      "status": "FINISHED",
       "stage": "REGULAR_SEASON",
       "matchday": 1,
       "home_id": 5,
@@ -18711,7 +18711,10 @@
       "away_ja": "シュトゥットガルト",
       "away_en": "Stuttgart",
       "away_crest": "https://crests.football-data.org/10.png",
-      "score": null,
+      "score": {
+        "home": 5,
+        "away": 1
+      },
       "japanese_players": [
         {
           "name_ja": "伊藤洋輝",
@@ -18732,6 +18735,15 @@
           "url": "https://abema.tv/subscription/lp/183c3ec2-c6d8-409e-80b6-caf5a8012f8a",
           "note": "毎節2試合無料"
         }
+      ],
+      "highlights": [
+        {
+          "broadcaster": "DAZN",
+          "video_id": "E-CnhFbWdX8",
+          "url": "https://youtu.be/E-CnhFbWdX8",
+          "title": "【伊藤洋輝（バイエルン）開幕直前インタビュー】しっかりとプレー時間を確保できるように｜2026-27 ブンデスリーガ",
+          "yt_published": "2026-08-28"
+        }
       ]
     },
     {
@@ -18741,7 +18753,7 @@
       "competition_category": "league",
       "competition_flag": "🇮🇹",
       "kickoff_jst": "2026-08-29T03:45:00+09:00",
-      "status": "FINISHED",
+      "status": "TIMED",
       "stage": "REGULAR_SEASON",
       "matchday": 2,
       "home_id": 98,
@@ -18752,10 +18764,7 @@
       "away_ja": "Venezia FC",
       "away_en": "Venezia FC",
       "away_crest": "https://crests.football-data.org/454.png",
-      "score": {
-        "home": 2,
-        "away": 0
-      },
+      "score": null,
       "japanese_players": [],
       "broadcasters": [
         {
@@ -18786,7 +18795,7 @@
       "away_crest": "https://crests.football-data.org/524.png",
       "score": {
         "home": 2,
-        "away": 0
+        "away": 2
       },
       "japanese_players": [],
       "broadcasters": [
@@ -18795,6 +18804,15 @@
           "type": "exclusive",
           "url": "https://www.dazn.com/ja-JP/",
           "note": "〜2028-29"
+        }
+      ],
+      "highlights": [
+        {
+          "broadcaster": "DAZN Fussball",
+          "video_id": "rpdYRBAYz2s",
+          "url": "https://youtu.be/rpdYRBAYz2s",
+          "title": "Marquinhos-Ekstase in der Nachspielzeit: Lille - PSG | 2. Spieltag | Ligue 1 | DAZN Highlights",
+          "yt_published": "2026-08-28"
         }
       ]
     },
@@ -18818,7 +18836,7 @@
       "away_crest": "https://crests.football-data.org/65.png",
       "score": {
         "home": 1,
-        "away": 3
+        "away": 4
       },
       "japanese_players": [
         {
@@ -18943,6 +18961,15 @@
           "type": "shared",
           "url": "https://www.dazn.com/ja-JP/",
           "note": "〜2027-28"
+        }
+      ],
+      "highlights": [
+        {
+          "broadcaster": "U-NEXT",
+          "video_id": "B-pQg4bj_rU",
+          "url": "https://youtu.be/B-pQg4bj_rU",
+          "title": "【アラベス v ビジャレアル｜ハイライト】ラ・リーガ 2026/27 第3節",
+          "yt_published": "2026-08-28"
         }
       ]
     },
@@ -26685,6 +26712,6 @@
       ]
     }
   ],
-  "updated_yt_highlights": "2026-08-29T05:52:27.868269+09:00",
-  "updated_uefa_secondary": "2026-08-29T05:52:57.193815+09:00"
+  "updated_yt_highlights": "2026-08-29T07:04:28.303886+09:00",
+  "updated_uefa_secondary": "2026-08-29T07:04:56.218404+09:00"
 }
