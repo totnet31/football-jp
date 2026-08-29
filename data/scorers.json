@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-29T07:02:47.352273+09:00",
+  "updated": "2026-08-29T12:33:23.335674+09:00",
   "competitions": {
     "39": {
       "name_ja": "プレミアリーグ",
@@ -2199,7 +2199,7 @@
           "goals": 3,
           "assists": null,
           "penalties": null,
-          "playedMatches": 4
+          "playedMatches": 3
         },
         {
           "player_id": 178013,
@@ -2271,7 +2271,7 @@
           "goals": 2,
           "assists": 2,
           "penalties": null,
-          "playedMatches": 4
+          "playedMatches": 3
         },
         {
           "player_id": 182186,
@@ -2332,30 +2332,6 @@
           "assists": null,
           "penalties": 1,
           "playedMatches": 3
-        },
-        {
-          "player_id": 167699,
-          "player_name": "Lequincio Zeefuik",
-          "nationality": "Netherlands",
-          "team_id": 1920,
-          "team_ja": "フォルトゥナ・シッタート",
-          "team_crest": "https://crests.football-data.org/1920.png",
-          "goals": 2,
-          "assists": 1,
-          "penalties": null,
-          "playedMatches": 4
-        },
-        {
-          "player_id": 272985,
-          "player_name": "David van der Werff",
-          "nationality": "Netherlands",
-          "team_id": 677,
-          "team_ja": "フローニンゲン",
-          "team_crest": "https://crests.football-data.org/677.png",
-          "goals": 2,
-          "assists": null,
-          "penalties": null,
-          "playedMatches": 4
         },
         {
           "player_id": 119460,
@@ -2545,9 +2521,9 @@
           "team_ja": "フォルトゥナ・シッタート",
           "team_crest": "https://crests.football-data.org/1920.png",
           "goals": 1,
-          "assists": 2,
+          "assists": null,
           "penalties": null,
-          "playedMatches": 4
+          "playedMatches": 3
         },
         {
           "player_id": 178402,
@@ -2763,7 +2739,19 @@
           "goals": 1,
           "assists": null,
           "penalties": null,
-          "playedMatches": 4
+          "playedMatches": 3
+        },
+        {
+          "player_id": 167699,
+          "player_name": "Lequincio Zeefuik",
+          "nationality": "Netherlands",
+          "team_id": 1920,
+          "team_ja": "フォルトゥナ・シッタート",
+          "team_crest": "https://crests.football-data.org/1920.png",
+          "goals": 1,
+          "assists": null,
+          "penalties": null,
+          "playedMatches": 3
         },
         {
           "player_id": 214172,
@@ -2772,6 +2760,18 @@
           "team_id": 1920,
           "team_ja": "フォルトゥナ・シッタート",
           "team_crest": "https://crests.football-data.org/1920.png",
+          "goals": 1,
+          "assists": null,
+          "penalties": null,
+          "playedMatches": 2
+        },
+        {
+          "player_id": 272985,
+          "player_name": "David van der Werff",
+          "nationality": "Netherlands",
+          "team_id": 677,
+          "team_ja": "フローニンゲン",
+          "team_crest": "https://crests.football-data.org/677.png",
           "goals": 1,
           "assists": null,
           "penalties": null,
