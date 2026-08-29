@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-29T07:01:41.025755+09:00",
+  "updated": "2026-08-29T12:32:15.734290+09:00",
   "date_from": "2026-08-22",
   "date_to": "2026-09-12",
   "match_count": 717,
@@ -18753,7 +18753,7 @@
       "competition_category": "league",
       "competition_flag": "🇮🇹",
       "kickoff_jst": "2026-08-29T03:45:00+09:00",
-      "status": "TIMED",
+      "status": "FINISHED",
       "stage": "REGULAR_SEASON",
       "matchday": 2,
       "home_id": 98,
@@ -18764,7 +18764,10 @@
       "away_ja": "Venezia FC",
       "away_en": "Venezia FC",
       "away_crest": "https://crests.football-data.org/454.png",
-      "score": null,
+      "score": {
+        "home": 2,
+        "away": 0
+      },
       "japanese_players": [],
       "broadcasters": [
         {
@@ -18772,6 +18775,15 @@
           "type": "exclusive",
           "url": "https://www.dazn.com/ja-JP/",
           "note": "〜2026-27"
+        }
+      ],
+      "highlights": [
+        {
+          "broadcaster": "DAZN Football",
+          "video_id": "Tkjr6fliibA",
+          "url": "https://youtu.be/Tkjr6fliibA",
+          "title": "Milan vs Venezia | Matchday 2 | 2026-27 Serie A Highlights",
+          "yt_published": "2026-08-29"
         }
       ]
     },
@@ -18856,6 +18868,15 @@
           "type": "exclusive",
           "url": "https://www.unext.jp/",
           "note": "〜2030-31"
+        }
+      ],
+      "highlights": [
+        {
+          "broadcaster": "U-NEXT",
+          "video_id": "RoYOZ3nMN4Q",
+          "url": "https://youtu.be/RoYOZ3nMN4Q",
+          "title": "【鎌田大地と冨安健洋が揃って先発｜クリスタル・パレス v マンチェスター・C｜ショートハイライト】プレミアリーグ 2026/27 第2節",
+          "yt_published": "2026-08-28"
         }
       ]
     },
@@ -21991,34 +22012,6 @@
       "broadcasters": []
     },
     {
-      "id": 567295,
-      "competition_id": 94,
-      "competition_ja": "プリメイラ・リーガ",
-      "competition_category": "league",
-      "competition_flag": "🇵🇹",
-      "kickoff_jst": "2026-09-05T09:00:00+09:00",
-      "status": "SCHEDULED",
-      "stage": "REGULAR_SEASON",
-      "matchday": 5,
-      "home_id": 582,
-      "home_ja": "エストリル",
-      "home_en": "Estoril Praia",
-      "home_crest": "https://crests.football-data.org/582.png",
-      "away_id": 712,
-      "away_ja": "アロウカ",
-      "away_en": "Arouca",
-      "away_crest": "https://crests.football-data.org/712.png",
-      "score": null,
-      "japanese_players": [
-        {
-          "name_ja": "福井太智",
-          "position": "MF",
-          "side": "away"
-        }
-      ],
-      "broadcasters": []
-    },
-    {
       "id": 560571,
       "competition_id": 39,
       "competition_ja": "プレミアリーグ",
@@ -24115,6 +24108,34 @@
       "away_crest": "https://crests.football-data.org/5527.png",
       "score": null,
       "japanese_players": [],
+      "broadcasters": []
+    },
+    {
+      "id": 567295,
+      "competition_id": 94,
+      "competition_ja": "プリメイラ・リーガ",
+      "competition_category": "league",
+      "competition_flag": "🇵🇹",
+      "kickoff_jst": "2026-09-07T09:00:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "REGULAR_SEASON",
+      "matchday": 5,
+      "home_id": 582,
+      "home_ja": "エストリル",
+      "home_en": "Estoril Praia",
+      "home_crest": "https://crests.football-data.org/582.png",
+      "away_id": 712,
+      "away_ja": "アロウカ",
+      "away_en": "Arouca",
+      "away_crest": "https://crests.football-data.org/712.png",
+      "score": null,
+      "japanese_players": [
+        {
+          "name_ja": "福井太智",
+          "position": "MF",
+          "side": "away"
+        }
+      ],
       "broadcasters": []
     },
     {
@@ -26712,6 +26733,6 @@
       ]
     }
   ],
-  "updated_yt_highlights": "2026-08-29T07:04:28.303886+09:00",
-  "updated_uefa_secondary": "2026-08-29T07:04:56.218404+09:00"
+  "updated_yt_highlights": "2026-08-29T12:35:09.875012+09:00",
+  "updated_uefa_secondary": "2026-08-29T12:35:46.130784+09:00"
 }
