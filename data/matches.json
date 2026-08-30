@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-30T07:01:46.056122+09:00",
+  "updated": "2026-08-30T08:54:31.705989+09:00",
   "date_from": "2026-08-23",
   "date_to": "2026-09-13",
   "match_count": 734,
@@ -19051,7 +19051,7 @@
       "away_en": "Stoke",
       "away_crest": "https://crests.football-data.org/70.png",
       "score": {
-        "home": 4,
+        "home": 2,
         "away": 1
       },
       "japanese_players": [],
@@ -19115,8 +19115,8 @@
       "away_en": "West Brom",
       "away_crest": "https://crests.football-data.org/74.png",
       "score": {
-        "home": 3,
-        "away": 1
+        "home": 0,
+        "away": 0
       },
       "japanese_players": [],
       "broadcasters": [
@@ -20036,6 +20036,15 @@
           "url": "https://www.dazn.com/ja-JP/",
           "note": "〜2026-27"
         }
+      ],
+      "highlights": [
+        {
+          "broadcaster": "DAZN",
+          "video_id": "jbvDKOUgqLg",
+          "url": "https://youtu.be/jbvDKOUgqLg",
+          "title": "【サッスオーロ×トリノ｜ハイライト】セリエA 第2節｜2026-27シーズン",
+          "yt_published": "2026-08-29"
+        }
       ]
     },
     {
@@ -20340,6 +20349,15 @@
           "type": "exclusive",
           "url": "https://www.dazn.com/ja-JP/",
           "note": "〜2028-29"
+        }
+      ],
+      "highlights": [
+        {
+          "broadcaster": "DAZN",
+          "video_id": "ZlkZiWUzsds",
+          "url": "https://youtu.be/ZlkZiWUzsds",
+          "title": "【中村草太の劇的弾は幻に...｜リヨン×ル・アーヴル｜ハイライト】リーグアン 第2節｜2026-27シーズン",
+          "yt_published": "2026-08-29"
         }
       ]
     },
@@ -22148,28 +22166,6 @@
       ]
     },
     {
-      "id": 567298,
-      "competition_id": 94,
-      "competition_ja": "プリメイラ・リーガ",
-      "competition_category": "league",
-      "competition_flag": "🇵🇹",
-      "kickoff_jst": "2026-09-05T04:15:00+09:00",
-      "status": "TIMED",
-      "stage": "REGULAR_SEASON",
-      "matchday": 5,
-      "home_id": 498,
-      "home_ja": "スポルティングCP",
-      "home_en": "Sporting CP",
-      "home_crest": "https://crests.football-data.org/498.png",
-      "away_id": 5529,
-      "away_ja": "ナシオナル",
-      "away_en": "CD Nacional",
-      "away_crest": "https://crests.football-data.org/5529.png",
-      "score": null,
-      "japanese_players": [],
-      "broadcasters": []
-    },
-    {
       "id": 567299,
       "competition_id": 94,
       "competition_ja": "プリメイラ・リーガ",
@@ -23558,6 +23554,28 @@
       ]
     },
     {
+      "id": 567298,
+      "competition_id": 94,
+      "competition_ja": "プリメイラ・リーガ",
+      "competition_category": "league",
+      "competition_flag": "🇵🇹",
+      "kickoff_jst": "2026-09-06T04:30:00+09:00",
+      "status": "TIMED",
+      "stage": "REGULAR_SEASON",
+      "matchday": 5,
+      "home_id": 498,
+      "home_ja": "スポルティングCP",
+      "home_en": "Sporting CP",
+      "home_crest": "https://crests.football-data.org/498.png",
+      "away_id": 5529,
+      "away_ja": "ナシオナル",
+      "away_en": "CD Nacional",
+      "away_crest": "https://crests.football-data.org/5529.png",
+      "score": null,
+      "japanese_players": [],
+      "broadcasters": []
+    },
+    {
       "id": 558255,
       "competition_id": 88,
       "competition_ja": "エールディビジ",
@@ -24913,7 +24931,7 @@
       "competition_ja": "プリメイラ・リーガ",
       "competition_category": "league",
       "competition_flag": "🇵🇹",
-      "kickoff_jst": "2026-09-10T04:15:00+09:00",
+      "kickoff_jst": "2026-09-10T04:45:00+09:00",
       "status": "TIMED",
       "stage": "REGULAR_SEASON",
       "matchday": 3,
@@ -27457,6 +27475,6 @@
       ]
     }
   ],
-  "updated_yt_highlights": "2026-08-30T07:04:39.899469+09:00",
-  "updated_uefa_secondary": "2026-08-30T07:05:09.356553+09:00"
+  "updated_yt_highlights": "2026-08-30T08:57:15.512292+09:00",
+  "updated_uefa_secondary": "2026-08-30T08:57:44.957669+09:00"
 }
