@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-31T07:01:41.152747+09:00",
+  "updated": "2026-08-31T09:13:33.139677+09:00",
   "date_from": "2026-08-24",
   "date_to": "2026-09-14",
   "match_count": 754,
@@ -21092,6 +21092,15 @@
           "url": "https://www.dazn.com/ja-JP/",
           "note": "〜2026-27"
         }
+      ],
+      "highlights": [
+        {
+          "broadcaster": "DAZN Football",
+          "video_id": "c1YA4ztQmtM",
+          "url": "https://youtu.be/c1YA4ztQmtM",
+          "title": "Napoli vs Como | Matchday 2 | 2026-27 Serie A Highlights",
+          "yt_published": "2026-08-30"
+        }
       ]
     },
     {
@@ -21190,8 +21199,8 @@
       "away_en": "Twente",
       "away_crest": "https://crests.football-data.org/666.png",
       "score": {
-        "home": 1,
-        "away": 4
+        "home": 0,
+        "away": 2
       },
       "japanese_players": [],
       "broadcasters": [
@@ -21222,7 +21231,7 @@
       "away_en": "Genoa",
       "away_crest": "https://crests.football-data.org/107.png",
       "score": {
-        "home": 1,
+        "home": 0,
         "away": 0
       },
       "japanese_players": [],
@@ -21286,7 +21295,7 @@
       "away_en": "Marseille",
       "away_crest": "https://crests.football-data.org/516.png",
       "score": {
-        "home": 2,
+        "home": 1,
         "away": 0
       },
       "japanese_players": [
@@ -21321,7 +21330,7 @@
       "competition_category": "league",
       "competition_flag": "🇪🇸",
       "kickoff_jst": "2026-08-31T04:30:00+09:00",
-      "status": "FINISHED",
+      "status": "TIMED",
       "stage": "REGULAR_SEASON",
       "matchday": 3,
       "home_id": 558,
@@ -21332,10 +21341,7 @@
       "away_ja": "アスレティック・ビルバオ",
       "away_en": "Athletic",
       "away_crest": "https://crests.football-data.org/77.png",
-      "score": {
-        "home": 0,
-        "away": 2
-      },
+      "score": null,
       "japanese_players": [],
       "broadcasters": [
         {
@@ -21358,7 +21364,7 @@
       "competition_category": "league",
       "competition_flag": "🇵🇹",
       "kickoff_jst": "2026-08-31T04:30:00+09:00",
-      "status": "FINISHED",
+      "status": "TIMED",
       "stage": "REGULAR_SEASON",
       "matchday": 4,
       "home_id": 5531,
@@ -21369,10 +21375,7 @@
       "away_ja": "ジル・ヴィセンテ",
       "away_en": "Gil Vicente",
       "away_crest": "https://crests.football-data.org/5533.png",
-      "score": {
-        "home": 0,
-        "away": 0
-      },
+      "score": null,
       "japanese_players": [],
       "broadcasters": []
     },
@@ -28318,6 +28321,6 @@
       ]
     }
   ],
-  "updated_yt_highlights": "2026-08-31T07:04:29.049055+09:00",
-  "updated_uefa_secondary": "2026-08-31T07:04:55.701808+09:00"
+  "updated_yt_highlights": "2026-08-31T09:16:24.301866+09:00",
+  "updated_uefa_secondary": "2026-08-31T09:16:56.052302+09:00"
 }
