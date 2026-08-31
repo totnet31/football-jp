@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-01T02:02:50.979423+09:00",
+  "updated": "2026-09-01T07:02:55.829997+09:00",
   "competitions": {
     "39": {
       "name_ja": "プレミアリーグ",
@@ -15,6 +15,18 @@
           "goals": 3,
           "assists": 1,
           "penalties": 1,
+          "playedMatches": 2
+        },
+        {
+          "player_id": 99813,
+          "player_name": "Bukayo Saka",
+          "nationality": "England",
+          "team_id": 57,
+          "team_ja": "アーセナル",
+          "team_crest": "https://crests.football-data.org/57.png",
+          "goals": 2,
+          "assists": null,
+          "penalties": null,
           "playedMatches": 2
         },
         {
@@ -99,19 +111,7 @@
           "goals": 1,
           "assists": null,
           "penalties": null,
-          "playedMatches": 1
-        },
-        {
-          "player_id": 99813,
-          "player_name": "Bukayo Saka",
-          "nationality": "England",
-          "team_id": 57,
-          "team_ja": "アーセナル",
-          "team_crest": "https://crests.football-data.org/57.png",
-          "goals": 1,
-          "assists": null,
-          "penalties": null,
-          "playedMatches": 1
+          "playedMatches": 2
         },
         {
           "player_id": 7427,
@@ -123,7 +123,7 @@
           "goals": 1,
           "assists": null,
           "penalties": null,
-          "playedMatches": 1
+          "playedMatches": 2
         },
         {
           "player_id": 6451,
@@ -1206,6 +1206,18 @@
       "flag": "🇪🇸",
       "scorers": [
         {
+          "player_id": 37428,
+          "player_name": "Raphinha",
+          "nationality": "Brazil",
+          "team_id": 81,
+          "team_ja": "バルセロナ",
+          "team_crest": "https://crests.football-data.org/81.png",
+          "goals": 5,
+          "assists": null,
+          "penalties": 1,
+          "playedMatches": 3
+        },
+        {
           "player_id": 3374,
           "player_name": "Kylian Mbappé",
           "nationality": "France",
@@ -1254,16 +1266,16 @@
           "playedMatches": 3
         },
         {
-          "player_id": 37428,
-          "player_name": "Raphinha",
-          "nationality": "Brazil",
-          "team_id": 81,
-          "team_ja": "バルセロナ",
-          "team_crest": "https://crests.football-data.org/81.png",
+          "player_id": 115175,
+          "player_name": "Sergio Camello",
+          "nationality": "Spain",
+          "team_id": 87,
+          "team_ja": "ラージョ・バジェカーノ",
+          "team_crest": "https://crests.football-data.org/87.png",
           "goals": 3,
           "assists": null,
-          "penalties": 1,
-          "playedMatches": 2
+          "penalties": null,
+          "playedMatches": 3
         },
         {
           "player_id": 214533,
@@ -1275,7 +1287,7 @@
           "goals": 3,
           "assists": null,
           "penalties": null,
-          "playedMatches": 2
+          "playedMatches": 3
         },
         {
           "player_id": 265516,
@@ -1326,6 +1338,18 @@
           "playedMatches": 3
         },
         {
+          "player_id": 2237,
+          "player_name": "Ante Budimir",
+          "nationality": "Croatia",
+          "team_id": 79,
+          "team_ja": "オサスナ",
+          "team_crest": "https://crests.football-data.org/79.png",
+          "goals": 2,
+          "assists": null,
+          "penalties": 2,
+          "playedMatches": 3
+        },
+        {
           "player_id": 180282,
           "player_name": "Brugui",
           "nationality": "Spain",
@@ -1336,6 +1360,18 @@
           "assists": null,
           "penalties": null,
           "playedMatches": 2
+        },
+        {
+          "player_id": 202283,
+          "player_name": "Lamine Yamal",
+          "nationality": "Spain",
+          "team_id": 81,
+          "team_ja": "バルセロナ",
+          "team_crest": "https://crests.football-data.org/81.png",
+          "goals": 2,
+          "assists": null,
+          "penalties": null,
+          "playedMatches": 3
         },
         {
           "player_id": 46123,
@@ -1369,9 +1405,9 @@
           "team_ja": "ラージョ・バジェカーノ",
           "team_crest": "https://crests.football-data.org/87.png",
           "goals": 1,
-          "assists": null,
+          "assists": 1,
           "penalties": null,
-          "playedMatches": 2
+          "playedMatches": 3
         },
         {
           "player_id": 33092,
@@ -1480,18 +1516,6 @@
           "assists": 1,
           "penalties": null,
           "playedMatches": 3
-        },
-        {
-          "player_id": 115175,
-          "player_name": "Sergio Camello",
-          "nationality": "Spain",
-          "team_id": 87,
-          "team_ja": "ラージョ・バジェカーノ",
-          "team_crest": "https://crests.football-data.org/87.png",
-          "goals": 1,
-          "assists": null,
-          "penalties": null,
-          "playedMatches": 2
         },
         {
           "player_id": 244751,
@@ -1633,9 +1657,9 @@
           "team_ja": "バルセロナ",
           "team_crest": "https://crests.football-data.org/81.png",
           "goals": 1,
-          "assists": null,
+          "assists": 1,
           "penalties": null,
-          "playedMatches": 2
+          "playedMatches": 3
         },
         {
           "player_id": 264254,
@@ -1710,18 +1734,6 @@
           "playedMatches": 3
         },
         {
-          "player_id": 2237,
-          "player_name": "Ante Budimir",
-          "nationality": "Croatia",
-          "team_id": 79,
-          "team_ja": "オサスナ",
-          "team_crest": "https://crests.football-data.org/79.png",
-          "goals": 1,
-          "assists": null,
-          "penalties": 1,
-          "playedMatches": 3
-        },
-        {
           "player_id": 244544,
           "player_name": "Buba",
           "nationality": "Spain",
@@ -1785,18 +1797,6 @@
           "player_id": 177245,
           "player_name": "Enzo Bardeli",
           "nationality": "France",
-          "team_id": 88,
-          "team_ja": "レバンテ",
-          "team_crest": "https://crests.football-data.org/88.png",
-          "goals": 1,
-          "assists": 1,
-          "penalties": null,
-          "playedMatches": 3
-        },
-        {
-          "player_id": 161293,
-          "player_name": "Jon Olasagasti",
-          "nationality": "Spain",
           "team_id": 88,
           "team_ja": "レバンテ",
           "team_crest": "https://crests.football-data.org/88.png",
@@ -2367,7 +2367,7 @@
           "goals": 1,
           "assists": null,
           "penalties": null,
-          "playedMatches": 1
+          "playedMatches": 2
         },
         {
           "player_id": 125523,
@@ -2391,7 +2391,7 @@
           "goals": 1,
           "assists": null,
           "penalties": null,
-          "playedMatches": 1
+          "playedMatches": 2
         },
         {
           "player_id": 192142,
@@ -2580,6 +2580,42 @@
           "team_id": 113,
           "team_ja": "ナポリ",
           "team_crest": "https://crests.football-data.org/113.png",
+          "goals": 1,
+          "assists": null,
+          "penalties": null,
+          "playedMatches": 2
+        },
+        {
+          "player_id": 171121,
+          "player_name": "Matias Soule",
+          "nationality": "Argentina",
+          "team_id": 100,
+          "team_ja": "ローマ",
+          "team_crest": "https://crests.football-data.org/100.png",
+          "goals": 1,
+          "assists": null,
+          "penalties": null,
+          "playedMatches": 2
+        },
+        {
+          "player_id": 261273,
+          "player_name": "Rodrigo Mora",
+          "nationality": "Portugal",
+          "team_id": 100,
+          "team_ja": "ローマ",
+          "team_crest": "https://crests.football-data.org/100.png",
+          "goals": 1,
+          "assists": null,
+          "penalties": null,
+          "playedMatches": 2
+        },
+        {
+          "player_id": 130420,
+          "player_name": "Lazar Samardzic",
+          "nationality": "Serbia",
+          "team_id": 102,
+          "team_ja": "アタランタ",
+          "team_crest": "https://crests.football-data.org/102.png",
           "goals": 1,
           "assists": null,
           "penalties": null,
@@ -3726,10 +3762,10 @@
           "team_id": 1903,
           "team_ja": "ベンフィカ",
           "team_crest": "https://crests.football-data.org/1903.png",
-          "goals": 4,
+          "goals": 5,
           "assists": 1,
           "penalties": null,
-          "playedMatches": 2
+          "playedMatches": 3
         },
         {
           "player_id": 15919,
@@ -3792,6 +3828,18 @@
           "playedMatches": 4
         },
         {
+          "player_id": 553,
+          "player_name": "Yanis Begraoui",
+          "nationality": "France",
+          "team_id": 582,
+          "team_ja": "エストリル",
+          "team_crest": "https://crests.football-data.org/582.png",
+          "goals": 2,
+          "assists": null,
+          "penalties": null,
+          "playedMatches": 3
+        },
+        {
           "player_id": 186459,
           "player_name": "Fotis Ioannidis",
           "nationality": "Greece",
@@ -3837,7 +3885,7 @@
           "goals": 2,
           "assists": 1,
           "penalties": null,
-          "playedMatches": 2
+          "playedMatches": 3
         },
         {
           "player_id": 45366,
@@ -3912,18 +3960,6 @@
           "playedMatches": 3
         },
         {
-          "player_id": 553,
-          "player_name": "Yanis Begraoui",
-          "nationality": "France",
-          "team_id": 582,
-          "team_ja": "エストリル",
-          "team_crest": "https://crests.football-data.org/582.png",
-          "goals": 1,
-          "assists": null,
-          "penalties": null,
-          "playedMatches": 2
-        },
-        {
           "player_id": 32995,
           "player_name": "Raphael Guzzo",
           "nationality": "Portugal",
@@ -3969,7 +4005,7 @@
           "goals": 1,
           "assists": null,
           "penalties": null,
-          "playedMatches": 1
+          "playedMatches": 2
         },
         {
           "player_id": 263535,
@@ -3993,7 +4029,7 @@
           "goals": 1,
           "assists": null,
           "penalties": null,
-          "playedMatches": 1
+          "playedMatches": 2
         },
         {
           "player_id": 262645,
@@ -4065,7 +4101,7 @@
           "goals": 1,
           "assists": null,
           "penalties": null,
-          "playedMatches": 3
+          "playedMatches": 4
         },
         {
           "player_id": 149724,
@@ -4077,7 +4113,7 @@
           "goals": 1,
           "assists": null,
           "penalties": null,
-          "playedMatches": 3
+          "playedMatches": 4
         },
         {
           "player_id": 146253,
@@ -4195,9 +4231,9 @@
           "team_ja": "ベンフィカ",
           "team_crest": "https://crests.football-data.org/1903.png",
           "goals": 1,
-          "assists": 1,
+          "assists": 2,
           "penalties": null,
-          "playedMatches": 2
+          "playedMatches": 3
         },
         {
           "player_id": 104493,
@@ -4209,7 +4245,7 @@
           "goals": 1,
           "assists": null,
           "penalties": null,
-          "playedMatches": 2
+          "playedMatches": 3
         },
         {
           "player_id": 142160,
@@ -4305,7 +4341,7 @@
           "goals": 1,
           "assists": null,
           "penalties": null,
-          "playedMatches": 3
+          "playedMatches": 4
         },
         {
           "player_id": 262713,
