@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-02T07:01:43.176962+09:00",
+  "updated": "2026-09-02T08:49:30.990535+09:00",
   "date_from": "2026-08-26",
   "date_to": "2026-09-16",
   "match_count": 764,
@@ -27661,46 +27661,6 @@
       ]
     },
     {
-      "id": 558893,
-      "competition_id": 88,
-      "competition_ja": "エールディビジ",
-      "competition_category": "league",
-      "competition_flag": "🇳🇱",
-      "kickoff_jst": "2026-09-13T21:30:00+09:00",
-      "status": "TIMED",
-      "stage": "REGULAR_SEASON",
-      "matchday": 6,
-      "home_id": 674,
-      "home_ja": "PSV",
-      "home_en": "PSV",
-      "home_crest": "https://crests.football-data.org/674.png",
-      "away_id": 6806,
-      "away_ja": "スパルタ・ロッテルダム",
-      "away_en": "Sparta",
-      "away_crest": "https://crests.football-data.org/6806.png",
-      "score": null,
-      "japanese_players": [
-        {
-          "name_ja": "佐野航大",
-          "position": "MF",
-          "side": "home"
-        },
-        {
-          "name_ja": "三戸舜介",
-          "position": "FW/MF",
-          "side": "away"
-        }
-      ],
-      "broadcasters": [
-        {
-          "name": "U-NEXT",
-          "type": "exclusive",
-          "url": "https://www.unext.jp/",
-          "note": "〜2027-28"
-        }
-      ]
-    },
-    {
       "id": 558895,
       "competition_id": 88,
       "competition_ja": "エールディビジ",
@@ -28094,6 +28054,46 @@
           "name": "DAZN",
           "type": "shared",
           "url": "https://www.dazn.com/ja-JP/",
+          "note": "〜2027-28"
+        }
+      ]
+    },
+    {
+      "id": 558893,
+      "competition_id": 88,
+      "competition_ja": "エールディビジ",
+      "competition_category": "league",
+      "competition_flag": "🇳🇱",
+      "kickoff_jst": "2026-09-14T03:00:00+09:00",
+      "status": "TIMED",
+      "stage": "REGULAR_SEASON",
+      "matchday": 6,
+      "home_id": 674,
+      "home_ja": "PSV",
+      "home_en": "PSV",
+      "home_crest": "https://crests.football-data.org/674.png",
+      "away_id": 6806,
+      "away_ja": "スパルタ・ロッテルダム",
+      "away_en": "Sparta",
+      "away_crest": "https://crests.football-data.org/6806.png",
+      "score": null,
+      "japanese_players": [
+        {
+          "name_ja": "佐野航大",
+          "position": "MF",
+          "side": "home"
+        },
+        {
+          "name_ja": "三戸舜介",
+          "position": "FW/MF",
+          "side": "away"
+        }
+      ],
+      "broadcasters": [
+        {
+          "name": "U-NEXT",
+          "type": "exclusive",
+          "url": "https://www.unext.jp/",
           "note": "〜2027-28"
         }
       ]
@@ -28764,6 +28764,6 @@
       ]
     }
   ],
-  "updated_yt_highlights": "2026-09-02T07:04:33.840673+09:00",
-  "updated_uefa_secondary": "2026-09-02T07:05:02.502888+09:00"
+  "updated_yt_highlights": "2026-09-02T08:52:20.911881+09:00",
+  "updated_uefa_secondary": "2026-09-02T08:52:50.822666+09:00"
 }
