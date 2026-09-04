@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-04T08:48:26.850760+09:00",
+  "updated": "2026-09-04T16:30:01.567408+09:00",
   "date_from": "2026-08-28",
   "date_to": "2026-09-18",
   "match_count": 771,
@@ -18809,7 +18809,13 @@
         "home": 2,
         "away": 2
       },
-      "japanese_players": [],
+      "japanese_players": [
+        {
+          "name_ja": "上田綺世",
+          "position": "FW",
+          "side": "home"
+        }
+      ],
       "broadcasters": [
         {
           "name": "DAZN",
@@ -19598,11 +19604,6 @@
           "name_ja": "松木玖生",
           "position": "FW/MF",
           "side": "home"
-        },
-        {
-          "name_ja": "菅原由勢",
-          "position": "DF",
-          "side": "home"
         }
       ],
       "broadcasters": [
@@ -19952,13 +19953,7 @@
         "home": 0,
         "away": 2
       },
-      "japanese_players": [
-        {
-          "name_ja": "高井幸大",
-          "position": "DF",
-          "side": "home"
-        }
-      ],
+      "japanese_players": [],
       "broadcasters": [
         {
           "name": "U-NEXT",
@@ -20337,6 +20332,11 @@
       },
       "japanese_players": [
         {
+          "name_ja": "中村敬斗",
+          "position": "MF",
+          "side": "home"
+        },
+        {
           "name_ja": "瀬古歩夢",
           "position": "DF",
           "side": "away"
@@ -20629,11 +20629,6 @@
         "away": 2
       },
       "japanese_players": [
-        {
-          "name_ja": "上田綺世",
-          "position": "FW",
-          "side": "home"
-        },
         {
           "name_ja": "渡辺剛",
           "position": "DF",
@@ -21284,7 +21279,13 @@
         "home": 0,
         "away": 1
       },
-      "japanese_players": [],
+      "japanese_players": [
+        {
+          "name_ja": "菅原由勢",
+          "position": "DF",
+          "side": "home"
+        }
+      ],
       "broadcasters": [
         {
           "name": "DAZN",
@@ -21934,11 +21935,6 @@
           "name_ja": "松木玖生",
           "position": "FW/MF",
           "side": "away"
-        },
-        {
-          "name_ja": "菅原由勢",
-          "position": "DF",
-          "side": "away"
         }
       ],
       "broadcasters": [
@@ -22106,7 +22102,13 @@
         "home": 0,
         "away": 1
       },
-      "japanese_players": [],
+      "japanese_players": [
+        {
+          "name_ja": "上田綺世",
+          "position": "FW",
+          "side": "away"
+        }
+      ],
       "broadcasters": [
         {
           "name": "DAZN",
@@ -22196,7 +22198,13 @@
       "away_en": "Auxerre",
       "away_crest": "https://crests.football-data.org/519.png",
       "score": null,
-      "japanese_players": [],
+      "japanese_players": [
+        {
+          "name_ja": "中村敬斗",
+          "position": "MF",
+          "side": "home"
+        }
+      ],
       "broadcasters": [
         {
           "name": "DAZN",
@@ -22352,7 +22360,7 @@
       "competition_category": "league",
       "competition_flag": "🇪🇸",
       "kickoff_jst": "2026-09-05T04:00:00+09:00",
-      "status": "2026-09-05 13:15:00Z",
+      "status": "2026-09-04 18:00:00Z",
       "stage": "REGULAR_SEASON",
       "matchday": 4,
       "home_id": 90,
@@ -22557,11 +22565,6 @@
         {
           "name_ja": "松木玖生",
           "position": "FW/MF",
-          "side": "away"
-        },
-        {
-          "name_ja": "菅原由勢",
-          "position": "DF",
           "side": "away"
         }
       ],
@@ -22840,13 +22843,7 @@
       "away_en": "Tottenham",
       "away_crest": "https://crests.football-data.org/73.png",
       "score": null,
-      "japanese_players": [
-        {
-          "name_ja": "高井幸大",
-          "position": "DF",
-          "side": "away"
-        }
-      ],
+      "japanese_players": [],
       "broadcasters": [
         {
           "name": "U-NEXT",
@@ -23222,7 +23219,7 @@
       "competition_category": "league",
       "competition_flag": "🇪🇸",
       "kickoff_jst": "2026-09-05T23:15:00+09:00",
-      "status": "2026-09-05 14:15:00Z",
+      "status": "TIMED",
       "stage": "REGULAR_SEASON",
       "matchday": 4,
       "home_id": 77,
@@ -23273,11 +23270,6 @@
           "name_ja": "小川航基",
           "position": "FW",
           "side": "home"
-        },
-        {
-          "name_ja": "上田綺世",
-          "position": "FW",
-          "side": "away"
         },
         {
           "name_ja": "渡辺剛",
@@ -24576,7 +24568,13 @@
       "away_en": "Lecce",
       "away_crest": "https://crests.football-data.org/5890.png",
       "score": null,
-      "japanese_players": [],
+      "japanese_players": [
+        {
+          "name_ja": "菅原由勢",
+          "position": "DF",
+          "side": "home"
+        }
+      ],
       "broadcasters": [
         {
           "name": "DAZN",
@@ -24892,11 +24890,6 @@
           "name_ja": "松木玖生",
           "position": "FW/MF",
           "side": "home"
-        },
-        {
-          "name_ja": "菅原由勢",
-          "position": "DF",
-          "side": "home"
         }
       ],
       "broadcasters": [
@@ -25148,7 +25141,13 @@
       "away_en": "Real Betis",
       "away_crest": "https://crests.football-data.org/90.png",
       "score": null,
-      "japanese_players": [],
+      "japanese_players": [
+        {
+          "name_ja": "上田綺世",
+          "position": "FW",
+          "side": "home"
+        }
+      ],
       "broadcasters": [
         {
           "name": "WOWOW",
@@ -25171,7 +25170,7 @@
       "competition_category": "league",
       "competition_flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
       "kickoff_jst": "2026-09-09T09:00:00+09:00",
-      "status": "POSTPONED",
+      "status": "2026-09-16 17:45:00Z",
       "stage": "REGULAR_SEASON",
       "matchday": 6,
       "home_id": 76,
@@ -25242,11 +25241,6 @@
       "away_crest": "https://crests.football-data.org/675.png",
       "score": null,
       "japanese_players": [
-        {
-          "name_ja": "上田綺世",
-          "position": "FW",
-          "side": "away"
-        },
         {
           "name_ja": "渡辺剛",
           "position": "DF",
@@ -26642,11 +26636,6 @@
           "side": "home"
         },
         {
-          "name_ja": "菅原由勢",
-          "position": "DF",
-          "side": "home"
-        },
-        {
           "name_ja": "平河悠",
           "position": "FW/MF",
           "side": "away"
@@ -26992,13 +26981,7 @@
       "away_en": "Everton",
       "away_crest": "https://crests.football-data.org/62.png",
       "score": null,
-      "japanese_players": [
-        {
-          "name_ja": "高井幸大",
-          "position": "DF",
-          "side": "home"
-        }
-      ],
+      "japanese_players": [],
       "broadcasters": [
         {
           "name": "U-NEXT",
@@ -27160,7 +27143,13 @@
       "away_en": "Cagliari",
       "away_crest": "https://crests.football-data.org/104.png",
       "score": null,
-      "japanese_players": [],
+      "japanese_players": [
+        {
+          "name_ja": "菅原由勢",
+          "position": "DF",
+          "side": "away"
+        }
+      ],
       "broadcasters": [
         {
           "name": "DAZN",
@@ -27292,7 +27281,13 @@
       "away_en": "Olympique Lyon",
       "away_crest": "https://crests.football-data.org/523.png",
       "score": null,
-      "japanese_players": [],
+      "japanese_players": [
+        {
+          "name_ja": "中村敬斗",
+          "position": "MF",
+          "side": "away"
+        }
+      ],
       "broadcasters": [
         {
           "name": "DAZN",
@@ -27813,7 +27808,13 @@
       "away_en": "Troyes",
       "away_crest": "https://crests.football-data.org/531.png",
       "score": null,
-      "japanese_players": [],
+      "japanese_players": [
+        {
+          "name_ja": "上田綺世",
+          "position": "FW",
+          "side": "home"
+        }
+      ],
       "broadcasters": [
         {
           "name": "DAZN",
@@ -27912,11 +27913,6 @@
       "away_crest": "https://crests.football-data.org/675.png",
       "score": null,
       "japanese_players": [
-        {
-          "name_ja": "上田綺世",
-          "position": "FW",
-          "side": "away"
-        },
         {
           "name_ja": "渡辺剛",
           "position": "DF",
@@ -29032,6 +29028,6 @@
       ]
     }
   ],
-  "updated_yt_highlights": "2026-09-04T08:51:16.281722+09:00",
-  "updated_uefa_secondary": "2026-09-04T08:52:03.751805+09:00"
+  "updated_yt_highlights": "2026-09-04T16:32:56.784861+09:00",
+  "updated_uefa_secondary": "2026-09-04T16:33:25.591717+09:00"
 }
