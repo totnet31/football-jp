@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-21",
+  "updated": "2026-09-04",
   "note": "club_id は football-data.org のチームID。null は football-data.org でカバーされないクラブ（リーグ・ドゥ／ベルギー）。",
   "players": [
     {
@@ -54,13 +54,13 @@
       "name_ja": "高井幸大",
       "name_en": "Kota Takai",
       "position": "DF",
-      "club_ja": "トッテナム",
-      "club_en": "Tottenham",
-      "club_id": 73,
-      "league_ja": "プレミアリーグ",
-      "competition_id": 39,
+      "club_ja": "シント＝トロイデン",
+      "club_en": "Sint-Truiden",
+      "club_id": null,
+      "league_ja": "ジュピラー・プロ・リーグ",
+      "competition_id": 144,
       "api_player_id": null,
-      "note": "2026年6月にボルシアMGへのレンタルが終了し復帰"
+      "note": "2026年9月にシント＝トロイデンへレンタル移籍（今季終了まで）"
     },
     {
       "name_ja": "松木玖生",
@@ -258,13 +258,13 @@
       "name_ja": "菅原由勢",
       "name_en": "Yukinari Sugawara",
       "position": "DF",
-      "club_ja": "サウサンプトン",
-      "club_en": "Southampton",
-      "club_id": 340,
-      "league_ja": "チャンピオンシップ",
-      "competition_id": 40,
+      "club_ja": "カリアリ",
+      "club_en": "Cagliari",
+      "club_id": 104,
+      "league_ja": "セリエA",
+      "competition_id": 135,
       "api_player_id": null,
-      "note": "2026年6月にブレーメンへのレンタルが終了し復帰"
+      "note": "2026年9月にカリアリへレンタル移籍（買い取りオプション付き）"
     },
     {
       "name_ja": "長田澪",
@@ -402,13 +402,13 @@
       "name_ja": "中村敬斗",
       "name_en": "Keito Nakamura",
       "position": "MF",
-      "club_ja": "スタッド・ランス",
-      "club_en": "Stade de Reims",
-      "club_id": null,
-      "league_ja": "リーグ・ドゥ",
-      "competition_id": 62,
+      "club_ja": "リヨン",
+      "club_en": "Olympique Lyonnais",
+      "club_id": 523,
+      "league_ja": "リーグ・アン",
+      "competition_id": 61,
       "api_player_id": null,
-      "note": "リーグ・ドゥは無料プラン対象外"
+      "note": "2026年9月にリヨンへ完全移籍（2030年6月まで・背番号11）"
     },
     {
       "name_ja": "板倉滉",
@@ -438,13 +438,13 @@
       "name_ja": "上田綺世",
       "name_en": "Ayase Ueda",
       "position": "FW",
-      "club_ja": "フェイエノールト",
-      "club_en": "Feyenoord",
-      "club_id": 675,
-      "league_ja": "エールディビジ",
-      "competition_id": 88,
+      "club_ja": "リール",
+      "club_en": "LOSC Lille",
+      "club_id": 521,
+      "league_ja": "リーグ・アン",
+      "competition_id": 61,
       "api_player_id": null,
-      "note": ""
+      "note": "2026年9月にリールへ完全移籍（2030年まで・背番号18）"
     },
     {
       "name_ja": "渡辺剛",
