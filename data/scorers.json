@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-05T16:12:35.032040+09:00",
+  "updated": "2026-09-05T21:36:08.067644+09:00",
   "competitions": {
     "39": {
       "name_ja": "プレミアリーグ",
@@ -621,7 +621,19 @@
           "goals": 4,
           "assists": null,
           "penalties": null,
-          "playedMatches": 4
+          "playedMatches": 5
+        },
+        {
+          "player_id": 136351,
+          "player_name": "Ethan Galbraith",
+          "nationality": "Northern Ireland",
+          "team_id": 70,
+          "team_ja": "ストーク",
+          "team_crest": "https://crests.football-data.org/70.png",
+          "goals": 4,
+          "assists": null,
+          "penalties": null,
+          "playedMatches": 5
         },
         {
           "player_id": 177457,
@@ -633,7 +645,7 @@
           "goals": 3,
           "assists": null,
           "penalties": null,
-          "playedMatches": 4
+          "playedMatches": 5
         },
         {
           "player_id": 34754,
@@ -657,7 +669,7 @@
           "goals": 2,
           "assists": 1,
           "penalties": null,
-          "playedMatches": 3
+          "playedMatches": 4
         },
         {
           "player_id": 3305,
@@ -753,7 +765,7 @@
           "goals": 2,
           "assists": null,
           "penalties": null,
-          "playedMatches": 4
+          "playedMatches": 5
         },
         {
           "player_id": 4029,
@@ -864,18 +876,6 @@
           "playedMatches": 3
         },
         {
-          "player_id": 136351,
-          "player_name": "Ethan Galbraith",
-          "nationality": "Northern Ireland",
-          "team_id": 70,
-          "team_ja": "ストーク",
-          "team_crest": "https://crests.football-data.org/70.png",
-          "goals": 2,
-          "assists": null,
-          "penalties": null,
-          "playedMatches": 4
-        },
-        {
           "player_id": 166548,
           "player_name": "Isaac Price",
           "nationality": "Northern Ireland",
@@ -972,6 +972,30 @@
           "playedMatches": 4
         },
         {
+          "player_id": 6145,
+          "player_name": "Callum Lang",
+          "nationality": "England",
+          "team_id": 1081,
+          "team_ja": "プレストン",
+          "team_crest": "https://crests.football-data.org/1081.png",
+          "goals": 2,
+          "assists": null,
+          "penalties": null,
+          "playedMatches": 5
+        },
+        {
+          "player_id": 152149,
+          "player_name": "Justin Devenny",
+          "nationality": "Northern Ireland",
+          "team_id": 70,
+          "team_ja": "ストーク",
+          "team_crest": "https://crests.football-data.org/70.png",
+          "goals": 2,
+          "assists": null,
+          "penalties": 1,
+          "playedMatches": 1
+        },
+        {
           "player_id": 36914,
           "player_name": "Sean McLoughlin",
           "nationality": "Ireland",
@@ -981,7 +1005,7 @@
           "goals": 1,
           "assists": null,
           "penalties": null,
-          "playedMatches": 3
+          "playedMatches": 4
         },
         {
           "player_id": 147461,
@@ -1005,7 +1029,7 @@
           "goals": 1,
           "assists": null,
           "penalties": null,
-          "playedMatches": 4
+          "playedMatches": 5
         },
         {
           "player_id": 38373,
@@ -1041,7 +1065,7 @@
           "goals": 1,
           "assists": null,
           "penalties": null,
-          "playedMatches": 4
+          "playedMatches": 5
         },
         {
           "player_id": 137512,
@@ -1051,9 +1075,9 @@
           "team_ja": "ストーク",
           "team_crest": "https://crests.football-data.org/70.png",
           "goals": 1,
-          "assists": null,
+          "assists": 2,
           "penalties": null,
-          "playedMatches": 4
+          "playedMatches": 5
         },
         {
           "player_id": 127875,
@@ -1173,31 +1197,7 @@
           "goals": 1,
           "assists": null,
           "penalties": 1,
-          "playedMatches": 4
-        },
-        {
-          "player_id": 14631,
-          "player_name": "Ebou Adams",
-          "nationality": "Gambia",
-          "team_id": 325,
-          "team_ja": "ポーツマス",
-          "team_crest": "https://crests.football-data.org/325.png",
-          "goals": 1,
-          "assists": 1,
-          "penalties": null,
-          "playedMatches": 4
-        },
-        {
-          "player_id": 131115,
-          "player_name": "Luke Cundle",
-          "nationality": "England",
-          "team_id": 384,
-          "team_ja": "ミルウォール",
-          "team_crest": "https://crests.football-data.org/384.png",
-          "goals": 1,
-          "assists": null,
-          "penalties": null,
-          "playedMatches": 3
+          "playedMatches": 5
         }
       ]
     },
