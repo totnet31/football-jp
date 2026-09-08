@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-08T16:34:20.118086+09:00",
+  "updated": "2026-09-08T22:32:47.838379+09:00",
   "competitions": {
     "39": {
       "name_ja": "プレミアリーグ",
@@ -1986,6 +1986,21 @@
             },
             {
               "position": 6,
+              "team_id": 718,
+              "team_ja": "ゴー・アヘッド",
+              "team_crest": "https://crests.football-data.org/718.png",
+              "playedGames": 5,
+              "won": 2,
+              "draw": 2,
+              "lost": 1,
+              "points": 8,
+              "goalsFor": 14,
+              "goalsAgainst": 12,
+              "goalDifference": 2,
+              "form": null
+            },
+            {
+              "position": 7,
               "team_id": 678,
               "team_ja": "アヤックス",
               "team_crest": "https://crests.football-data.org/678.png",
@@ -2000,7 +2015,7 @@
               "form": null
             },
             {
-              "position": 6,
+              "position": 7,
               "team_id": 666,
               "team_ja": "トゥエンテ",
               "team_crest": "https://crests.football-data.org/666.png",
@@ -2012,21 +2027,6 @@
               "goalsFor": 9,
               "goalsAgainst": 5,
               "goalDifference": 4,
-              "form": null
-            },
-            {
-              "position": 8,
-              "team_id": 718,
-              "team_ja": "ゴー・アヘッド",
-              "team_crest": "https://crests.football-data.org/718.png",
-              "playedGames": 4,
-              "won": 2,
-              "draw": 1,
-              "lost": 1,
-              "points": 7,
-              "goalsFor": 11,
-              "goalsAgainst": 9,
-              "goalDifference": 2,
               "form": null
             },
             {
@@ -2121,6 +2121,21 @@
             },
             {
               "position": 15,
+              "team_id": 676,
+              "team_ja": "ユトレヒト",
+              "team_crest": "https://crests.football-data.org/676.png",
+              "playedGames": 5,
+              "won": 0,
+              "draw": 2,
+              "lost": 3,
+              "points": 2,
+              "goalsFor": 9,
+              "goalsAgainst": 18,
+              "goalDifference": -9,
+              "form": null
+            },
+            {
+              "position": 16,
               "team_id": 680,
               "team_ja": "Den Haag",
               "team_crest": "https://crests.football-data.org/680.png",
@@ -2132,21 +2147,6 @@
               "goalsFor": 6,
               "goalsAgainst": 14,
               "goalDifference": -8,
-              "form": null
-            },
-            {
-              "position": 16,
-              "team_id": 676,
-              "team_ja": "ユトレヒト",
-              "team_crest": "https://crests.football-data.org/676.png",
-              "playedGames": 4,
-              "won": 0,
-              "draw": 1,
-              "lost": 3,
-              "points": 1,
-              "goalsFor": 6,
-              "goalsAgainst": 15,
-              "goalDifference": -9,
               "form": null
             },
             {
