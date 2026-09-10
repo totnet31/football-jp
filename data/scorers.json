@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-10T16:36:48.807487+09:00",
+  "updated": "2026-09-10T22:32:00.309622+09:00",
   "competitions": {
     "39": {
       "name_ja": "プレミアリーグ",
@@ -3678,6 +3678,18 @@
           "playedMatches": 5
         },
         {
+          "player_id": 265560,
+          "player_name": "Artem Stepanov",
+          "nationality": "Ukraine",
+          "team_id": 676,
+          "team_ja": "ユトレヒト",
+          "team_crest": "https://crests.football-data.org/676.png",
+          "goals": 4,
+          "assists": null,
+          "penalties": 1,
+          "playedMatches": 3
+        },
+        {
           "player_id": 178013,
           "player_name": "Rafik el Arguioui",
           "nationality": "Netherlands",
@@ -3760,18 +3772,6 @@
           "assists": 1,
           "penalties": 2,
           "playedMatches": 5
-        },
-        {
-          "player_id": 265560,
-          "player_name": "Artem Stepanov",
-          "nationality": "Ukraine",
-          "team_id": 676,
-          "team_ja": "ユトレヒト",
-          "team_crest": "https://crests.football-data.org/676.png",
-          "goals": 3,
-          "assists": null,
-          "penalties": null,
-          "playedMatches": 3
         },
         {
           "player_id": 119731,
@@ -4026,6 +4026,18 @@
           "playedMatches": 3
         },
         {
+          "player_id": 78310,
+          "player_name": "Matisse Didden",
+          "nationality": "Belgium",
+          "team_id": 676,
+          "team_ja": "ユトレヒト",
+          "team_crest": "https://crests.football-data.org/676.png",
+          "goals": 2,
+          "assists": null,
+          "penalties": null,
+          "playedMatches": 2
+        },
+        {
           "player_id": 2004,
           "player_name": "Ivan Perišić",
           "nationality": "Croatia",
@@ -4226,18 +4238,6 @@
           "team_crest": "https://crests.football-data.org/1920.png",
           "goals": 1,
           "assists": 2,
-          "penalties": null,
-          "playedMatches": 5
-        },
-        {
-          "player_id": 7690,
-          "player_name": "Calvin Stengs",
-          "nationality": "Netherlands",
-          "team_id": 682,
-          "team_ja": "AZ",
-          "team_crest": "https://crests.football-data.org/682.png",
-          "goals": 1,
-          "assists": 1,
           "penalties": null,
           "playedMatches": 5
         }
