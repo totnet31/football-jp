@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-12T08:56:51.949344+09:00",
+  "updated": "2026-09-12T16:28:24.517774+09:00",
   "competitions": {
     "39": {
       "name_ja": "プレミアリーグ",
@@ -331,6 +331,21 @@
           "table": [
             {
               "position": 1,
+              "team_id": 563,
+              "team_ja": "ウェストハム",
+              "team_crest": "https://crests.football-data.org/563.png",
+              "playedGames": 7,
+              "won": 4,
+              "draw": 2,
+              "lost": 1,
+              "points": 14,
+              "goalsFor": 20,
+              "goalsAgainst": 9,
+              "goalDifference": 11,
+              "form": null
+            },
+            {
+              "position": 2,
               "team_id": 74,
               "team_ja": "WBA",
               "team_crest": "https://crests.football-data.org/74.png",
@@ -342,21 +357,6 @@
               "goalsFor": 9,
               "goalsAgainst": 6,
               "goalDifference": 3,
-              "form": null
-            },
-            {
-              "position": 2,
-              "team_id": 563,
-              "team_ja": "ウェストハム",
-              "team_crest": "https://crests.football-data.org/563.png",
-              "playedGames": 6,
-              "won": 3,
-              "draw": 2,
-              "lost": 1,
-              "points": 11,
-              "goalsFor": 14,
-              "goalsAgainst": 9,
-              "goalDifference": 5,
               "form": null
             },
             {
@@ -526,21 +526,6 @@
             },
             {
               "position": 14,
-              "team_id": 404,
-              "team_ja": "レクサム",
-              "team_crest": "https://crests.football-data.org/404.png",
-              "playedGames": 6,
-              "won": 1,
-              "draw": 4,
-              "lost": 1,
-              "points": 7,
-              "goalsFor": 7,
-              "goalsAgainst": 5,
-              "goalDifference": 2,
-              "form": null
-            },
-            {
-              "position": 15,
               "team_id": 332,
               "team_ja": "バーミンガム",
               "team_crest": "https://crests.football-data.org/332.png",
@@ -555,7 +540,7 @@
               "form": null
             },
             {
-              "position": 16,
+              "position": 15,
               "team_id": 70,
               "team_ja": "ストーク",
               "team_crest": "https://crests.football-data.org/70.png",
@@ -567,6 +552,21 @@
               "goalsFor": 9,
               "goalsAgainst": 10,
               "goalDifference": -1,
+              "form": null
+            },
+            {
+              "position": 16,
+              "team_id": 404,
+              "team_ja": "レクサム",
+              "team_crest": "https://crests.football-data.org/404.png",
+              "playedGames": 7,
+              "won": 1,
+              "draw": 4,
+              "lost": 2,
+              "points": 7,
+              "goalsFor": 7,
+              "goalsAgainst": 11,
+              "goalDifference": -4,
               "form": null
             },
             {
