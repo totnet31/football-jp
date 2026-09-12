@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-12T16:28:24.517774+09:00",
+  "updated": "2026-09-12T21:51:34.515368+09:00",
   "competitions": {
     "39": {
       "name_ja": "プレミアリーグ",
@@ -725,13 +725,13 @@
               "team_id": 263,
               "team_ja": "アラベス",
               "team_crest": "https://crests.football-data.org/263.png",
-              "playedGames": 4,
+              "playedGames": 5,
               "won": 3,
-              "draw": 1,
+              "draw": 2,
               "lost": 0,
-              "points": 10,
-              "goalsFor": 10,
-              "goalsAgainst": 3,
+              "points": 11,
+              "goalsFor": 11,
+              "goalsAgainst": 4,
               "goalDifference": 7,
               "form": null
             },
@@ -872,6 +872,21 @@
             },
             {
               "position": 12,
+              "team_id": 5335,
+              "team_ja": "Santander",
+              "team_crest": "https://crests.football-data.org/5335.png",
+              "playedGames": 5,
+              "won": 1,
+              "draw": 2,
+              "lost": 2,
+              "points": 5,
+              "goalsFor": 8,
+              "goalsAgainst": 9,
+              "goalDifference": -1,
+              "form": null
+            },
+            {
+              "position": 13,
               "team_id": 80,
               "team_ja": "エスパニョール",
               "team_crest": "https://crests.football-data.org/80.png",
@@ -883,21 +898,6 @@
               "goalsFor": 6,
               "goalsAgainst": 5,
               "goalDifference": 1,
-              "form": null
-            },
-            {
-              "position": 13,
-              "team_id": 5335,
-              "team_ja": "Santander",
-              "team_crest": "https://crests.football-data.org/5335.png",
-              "playedGames": 4,
-              "won": 1,
-              "draw": 1,
-              "lost": 2,
-              "points": 4,
-              "goalsFor": 7,
-              "goalsAgainst": 8,
-              "goalDifference": -1,
               "form": null
             },
             {
