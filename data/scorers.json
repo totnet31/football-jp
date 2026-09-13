@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-13T16:45:52.076776+09:00",
+  "updated": "2026-09-13T22:47:54.692184+09:00",
   "competitions": {
     "39": {
       "name_ja": "プレミアリーグ",
@@ -399,7 +399,7 @@
           "goals": 1,
           "assists": 1,
           "penalties": null,
-          "playedMatches": 3
+          "playedMatches": 4
         },
         {
           "player_id": 7459,
@@ -579,7 +579,7 @@
           "goals": 1,
           "assists": null,
           "penalties": null,
-          "playedMatches": 3
+          "playedMatches": 4
         },
         {
           "player_id": 8273,
@@ -589,9 +589,9 @@
           "team_ja": "ブライトン",
           "team_crest": "https://crests.football-data.org/397.png",
           "goals": 1,
-          "assists": null,
+          "assists": 1,
           "penalties": null,
-          "playedMatches": 3
+          "playedMatches": 4
         },
         {
           "player_id": 7839,
@@ -684,6 +684,18 @@
           "playedMatches": 5
         },
         {
+          "player_id": 3305,
+          "player_name": "Raúl Jiménez",
+          "nationality": "Mexico",
+          "team_id": 76,
+          "team_ja": "ウルバーハンプトン",
+          "team_crest": "https://crests.football-data.org/76.png",
+          "goals": 3,
+          "assists": 1,
+          "penalties": 2,
+          "playedMatches": 5
+        },
+        {
           "player_id": 274561,
           "player_name": "Jimmy Morgan",
           "nationality": "England",
@@ -753,7 +765,7 @@
           "goals": 3,
           "assists": 1,
           "penalties": null,
-          "playedMatches": 4
+          "playedMatches": 5
         },
         {
           "player_id": 146647,
@@ -813,19 +825,7 @@
           "goals": 2,
           "assists": null,
           "penalties": null,
-          "playedMatches": 4
-        },
-        {
-          "player_id": 3305,
-          "player_name": "Raúl Jiménez",
-          "nationality": "Mexico",
-          "team_id": 76,
-          "team_ja": "ウルバーハンプトン",
-          "team_crest": "https://crests.football-data.org/76.png",
-          "goals": 2,
-          "assists": 1,
-          "penalties": 2,
-          "playedMatches": 4
+          "playedMatches": 5
         },
         {
           "player_id": 189593,
@@ -1077,7 +1077,7 @@
           "goals": 2,
           "assists": 1,
           "penalties": null,
-          "playedMatches": 4
+          "playedMatches": 5
         },
         {
           "player_id": 261683,
@@ -1149,7 +1149,7 @@
           "goals": 2,
           "assists": null,
           "penalties": 1,
-          "playedMatches": 6
+          "playedMatches": 7
         },
         {
           "player_id": 286321,
@@ -1173,7 +1173,7 @@
           "goals": 2,
           "assists": 1,
           "penalties": null,
-          "playedMatches": 6
+          "playedMatches": 7
         },
         {
           "player_id": 176904,
@@ -1239,7 +1239,7 @@
           "goals": 6,
           "assists": null,
           "penalties": 1,
-          "playedMatches": 4
+          "playedMatches": 5
         },
         {
           "player_id": 3374,
@@ -1299,7 +1299,7 @@
           "goals": 4,
           "assists": 2,
           "penalties": null,
-          "playedMatches": 4
+          "playedMatches": 5
         },
         {
           "player_id": 2237,
@@ -1335,7 +1335,7 @@
           "goals": 4,
           "assists": null,
           "penalties": null,
-          "playedMatches": 4
+          "playedMatches": 5
         },
         {
           "player_id": 8474,
@@ -1443,7 +1443,7 @@
           "goals": 2,
           "assists": null,
           "penalties": null,
-          "playedMatches": 3
+          "playedMatches": 4
         },
         {
           "player_id": 101870,
@@ -1731,7 +1731,7 @@
           "goals": 1,
           "assists": 1,
           "penalties": null,
-          "playedMatches": 4
+          "playedMatches": 5
         },
         {
           "player_id": 264254,
@@ -1743,7 +1743,7 @@
           "goals": 1,
           "assists": null,
           "penalties": 1,
-          "playedMatches": 4
+          "playedMatches": 5
         },
         {
           "player_id": 1556,
@@ -1767,7 +1767,7 @@
           "goals": 1,
           "assists": null,
           "penalties": null,
-          "playedMatches": 5
+          "playedMatches": 6
         },
         {
           "player_id": 32004,
@@ -1803,7 +1803,7 @@
           "goals": 1,
           "assists": null,
           "penalties": null,
-          "playedMatches": 4
+          "playedMatches": 5
         },
         {
           "player_id": 33038,
@@ -1917,7 +1917,7 @@
           "goals": 2,
           "assists": null,
           "penalties": null,
-          "playedMatches": 2
+          "playedMatches": 3
         },
         {
           "player_id": 7029,
@@ -2157,7 +2157,7 @@
           "goals": 1,
           "assists": null,
           "penalties": null,
-          "playedMatches": 2
+          "playedMatches": 3
         },
         {
           "player_id": 150517,
@@ -2523,7 +2523,19 @@
           "goals": 2,
           "assists": null,
           "penalties": null,
-          "playedMatches": 2
+          "playedMatches": 3
+        },
+        {
+          "player_id": 246341,
+          "player_name": "Tiago Gabriel",
+          "nationality": "Portugal",
+          "team_id": 5890,
+          "team_ja": "レッチェ",
+          "team_crest": "https://crests.football-data.org/5890.png",
+          "goals": 2,
+          "assists": null,
+          "penalties": null,
+          "playedMatches": 4
         },
         {
           "player_id": 192142,
@@ -2658,6 +2670,18 @@
           "playedMatches": 4
         },
         {
+          "player_id": 8658,
+          "player_name": "Lassana Coulibaly",
+          "nationality": "Mali",
+          "team_id": 5890,
+          "team_ja": "レッチェ",
+          "team_crest": "https://crests.football-data.org/5890.png",
+          "goals": 2,
+          "assists": 1,
+          "penalties": null,
+          "playedMatches": 4
+        },
+        {
           "player_id": 2097,
           "player_name": "Piotr Zieliński",
           "nationality": "Poland",
@@ -2751,19 +2775,7 @@
           "goals": 1,
           "assists": null,
           "penalties": null,
-          "playedMatches": 3
-        },
-        {
-          "player_id": 246341,
-          "player_name": "Tiago Gabriel",
-          "nationality": "Portugal",
-          "team_id": 5890,
-          "team_ja": "レッチェ",
-          "team_crest": "https://crests.football-data.org/5890.png",
-          "goals": 1,
-          "assists": null,
-          "penalties": null,
-          "playedMatches": 3
+          "playedMatches": 4
         },
         {
           "player_id": 114117,
@@ -2895,7 +2907,7 @@
           "goals": 1,
           "assists": null,
           "penalties": null,
-          "playedMatches": 3
+          "playedMatches": 4
         },
         {
           "player_id": 7567,
@@ -3016,18 +3028,6 @@
           "assists": null,
           "penalties": null,
           "playedMatches": 3
-        },
-        {
-          "player_id": 8685,
-          "player_name": "Marcus Thuram-Ulien",
-          "nationality": "France",
-          "team_id": 108,
-          "team_ja": "インテル",
-          "team_crest": "https://crests.football-data.org/108.png",
-          "goals": 1,
-          "assists": null,
-          "penalties": null,
-          "playedMatches": 3
         }
       ]
     },
@@ -3115,6 +3115,18 @@
           "team_ja": "モナコ",
           "team_crest": "https://crests.football-data.org/548.png",
           "goals": 3,
+          "assists": null,
+          "penalties": null,
+          "playedMatches": 4
+        },
+        {
+          "player_id": 188087,
+          "player_name": "Tiago Santos",
+          "nationality": "Portugal",
+          "team_id": 521,
+          "team_ja": "リール",
+          "team_crest": "https://crests.football-data.org/521.png",
+          "goals": 2,
           "assists": null,
           "penalties": null,
           "playedMatches": 4
@@ -3321,19 +3333,7 @@
           "goals": 1,
           "assists": 2,
           "penalties": null,
-          "playedMatches": 3
-        },
-        {
-          "player_id": 188087,
-          "player_name": "Tiago Santos",
-          "nationality": "Portugal",
-          "team_id": 521,
-          "team_ja": "リール",
-          "team_crest": "https://crests.football-data.org/521.png",
-          "goals": 1,
-          "assists": null,
-          "penalties": null,
-          "playedMatches": 3
+          "playedMatches": 4
         },
         {
           "player_id": 3314,
@@ -3369,7 +3369,7 @@
           "goals": 1,
           "assists": null,
           "penalties": null,
-          "playedMatches": 3
+          "playedMatches": 4
         },
         {
           "player_id": 151295,
@@ -3379,9 +3379,9 @@
           "team_ja": "リール",
           "team_crest": "https://crests.football-data.org/521.png",
           "goals": 1,
-          "assists": null,
+          "assists": 1,
           "penalties": null,
-          "playedMatches": 2
+          "playedMatches": 3
         },
         {
           "player_id": 178722,
@@ -3405,7 +3405,7 @@
           "goals": 1,
           "assists": null,
           "penalties": 1,
-          "playedMatches": 3
+          "playedMatches": 4
         },
         {
           "player_id": 178696,
@@ -3417,7 +3417,7 @@
           "goals": 1,
           "assists": null,
           "penalties": null,
-          "playedMatches": 3
+          "playedMatches": 4
         },
         {
           "player_id": 8437,
@@ -3585,7 +3585,7 @@
           "goals": 1,
           "assists": null,
           "penalties": null,
-          "playedMatches": 1
+          "playedMatches": 2
         },
         {
           "player_id": 75196,
@@ -3654,6 +3654,18 @@
           "playedMatches": 5
         },
         {
+          "player_id": 265560,
+          "player_name": "Artem Stepanov",
+          "nationality": "Ukraine",
+          "team_id": 676,
+          "team_ja": "ユトレヒト",
+          "team_crest": "https://crests.football-data.org/676.png",
+          "goals": 5,
+          "assists": null,
+          "penalties": 1,
+          "playedMatches": 4
+        },
+        {
           "player_id": 178402,
           "player_name": "Ro-Zangelo Daal",
           "nationality": "Netherlands",
@@ -3690,18 +3702,6 @@
           "playedMatches": 5
         },
         {
-          "player_id": 265560,
-          "player_name": "Artem Stepanov",
-          "nationality": "Ukraine",
-          "team_id": 676,
-          "team_ja": "ユトレヒト",
-          "team_crest": "https://crests.football-data.org/676.png",
-          "goals": 4,
-          "assists": null,
-          "penalties": 1,
-          "playedMatches": 3
-        },
-        {
           "player_id": 178013,
           "player_name": "Rafik el Arguioui",
           "nationality": "Netherlands",
@@ -3735,7 +3735,7 @@
           "goals": 3,
           "assists": null,
           "penalties": null,
-          "playedMatches": 4
+          "playedMatches": 5
         },
         {
           "player_id": 165131,
@@ -3891,7 +3891,7 @@
           "goals": 2,
           "assists": 4,
           "penalties": null,
-          "playedMatches": 4
+          "playedMatches": 5
         },
         {
           "player_id": 179498,
@@ -3927,7 +3927,7 @@
           "goals": 2,
           "assists": null,
           "penalties": null,
-          "playedMatches": 4
+          "playedMatches": 5
         },
         {
           "player_id": 148,
@@ -4047,7 +4047,7 @@
           "goals": 2,
           "assists": 1,
           "penalties": null,
-          "playedMatches": 5
+          "playedMatches": 6
         },
         {
           "player_id": 7432,
@@ -4071,7 +4071,7 @@
           "goals": 2,
           "assists": null,
           "penalties": null,
-          "playedMatches": 2
+          "playedMatches": 3
         },
         {
           "player_id": 2004,
@@ -4108,6 +4108,18 @@
           "assists": null,
           "penalties": null,
           "playedMatches": 6
+        },
+        {
+          "player_id": 272162,
+          "player_name": "Aymen Sliti",
+          "nationality": "Netherlands",
+          "team_id": 670,
+          "team_ja": "エクセルシオール",
+          "team_crest": "https://crests.football-data.org/670.png",
+          "goals": 2,
+          "assists": 1,
+          "penalties": null,
+          "playedMatches": 5
         },
         {
           "player_id": 151613,
@@ -4179,6 +4191,18 @@
           "goals": 2,
           "assists": null,
           "penalties": 2,
+          "playedMatches": 6
+        },
+        {
+          "player_id": 7564,
+          "player_name": "Dani de Wit",
+          "nationality": "Netherlands",
+          "team_id": 676,
+          "team_ja": "ユトレヒト",
+          "team_crest": "https://crests.football-data.org/676.png",
+          "goals": 2,
+          "assists": null,
+          "penalties": null,
           "playedMatches": 5
         },
         {
@@ -4191,7 +4215,7 @@
           "goals": 1,
           "assists": 1,
           "penalties": null,
-          "playedMatches": 5
+          "playedMatches": 6
         },
         {
           "player_id": 57281,
@@ -4203,7 +4227,7 @@
           "goals": 1,
           "assists": null,
           "penalties": null,
-          "playedMatches": 5
+          "playedMatches": 6
         },
         {
           "player_id": 10139,
@@ -4214,30 +4238,6 @@
           "team_crest": "https://crests.football-data.org/718.png",
           "goals": 1,
           "assists": 1,
-          "penalties": null,
-          "playedMatches": 4
-        },
-        {
-          "player_id": 280744,
-          "player_name": "Erik Flataker",
-          "nationality": "Norway",
-          "team_id": 718,
-          "team_ja": "ゴー・アヘッド",
-          "team_crest": "https://crests.football-data.org/718.png",
-          "goals": 1,
-          "assists": null,
-          "penalties": null,
-          "playedMatches": 5
-        },
-        {
-          "player_id": 157121,
-          "player_name": "Julius Dirksen",
-          "nationality": "Netherlands",
-          "team_id": 718,
-          "team_ja": "ゴー・アヘッド",
-          "team_crest": "https://crests.football-data.org/718.png",
-          "goals": 1,
-          "assists": null,
           "penalties": null,
           "playedMatches": 4
         }
