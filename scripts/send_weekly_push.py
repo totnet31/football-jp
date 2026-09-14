@@ -8,7 +8,7 @@ PWA Phase 4: 週次 Push 通知送信スクリプト
 【必要な環境変数】
   ADMIN_TOKEN   - Cloudflare Worker の ADMIN_TOKEN と同じ値
                   GitHub Actions Secret に設定: Settings > Secrets > ADMIN_TOKEN
-  WORKER_URL    - （省略可）デフォルト: https://football-jp-push-api.saito-dfe.workers.dev
+  WORKER_URL    - （省略可）デフォルト: https://football-jp-push-api.tot-tools.workers.dev
 
 【実行方法】
   ADMIN_TOKEN=xxx python3 scripts/send_weekly_push.py
@@ -26,7 +26,7 @@ ROOT = Path(__file__).resolve().parent.parent
 DATA = ROOT / "data"
 JST  = timezone(timedelta(hours=9))
 
-WORKER_URL = os.environ.get("WORKER_URL", "https://football-jp-push-api.saito-dfe.workers.dev")
+WORKER_URL = os.environ.get("WORKER_URL", "https://football-jp-push-api.tot-tools.workers.dev")
 ADMIN_TOKEN = os.environ.get("ADMIN_TOKEN", "")
 
 # 今週の対象期間（月曜朝7時〜日曜23:59 JST）
