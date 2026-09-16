@@ -1,7 +1,7 @@
 {
-  "updated": "2026-09-16T23:10:17.899503+09:00",
-  "date_from": "2026-09-09",
-  "date_to": "2026-09-30",
+  "updated": "2026-09-17T07:02:02.867443+09:00",
+  "date_from": "2026-09-10",
+  "date_to": "2026-10-01",
   "match_count": 842,
   "_note": "累積保持モード：フェッチ窓外の過去試合データはそのまま保持される。",
   "matches": [
@@ -29678,7 +29678,7 @@
       "competition_category": "league",
       "competition_flag": "🇪🇸",
       "kickoff_jst": "2026-09-17T02:00:00+09:00",
-      "status": "TIMED",
+      "status": "FINISHED",
       "stage": "REGULAR_SEASON",
       "matchday": 6,
       "home_id": 560,
@@ -29689,7 +29689,10 @@
       "away_ja": "セビージャ",
       "away_en": "Sevilla FC",
       "away_crest": "https://crests.football-data.org/559.png",
-      "score": null,
+      "score": {
+        "home": 0,
+        "away": 1
+      },
       "japanese_players": [],
       "broadcasters": [
         {
@@ -29712,7 +29715,7 @@
       "competition_category": "league",
       "competition_flag": "🇪🇸",
       "kickoff_jst": "2026-09-17T02:00:00+09:00",
-      "status": "TIMED",
+      "status": "FINISHED",
       "stage": "REGULAR_SEASON",
       "matchday": 6,
       "home_id": 78,
@@ -29723,7 +29726,10 @@
       "away_ja": "オサスナ",
       "away_en": "Osasuna",
       "away_crest": "https://crests.football-data.org/79.png",
-      "score": null,
+      "score": {
+        "home": 4,
+        "away": 0
+      },
       "japanese_players": [],
       "broadcasters": [
         {
@@ -29737,6 +29743,15 @@
           "url": "https://www.dazn.com/ja-JP/",
           "note": "〜2027-28"
         }
+      ],
+      "highlights": [
+        {
+          "broadcaster": "DAZN Fussball",
+          "video_id": "8dyVq5cHwzk",
+          "url": "https://youtu.be/8dyVq5cHwzk",
+          "title": "Neuer Traumsturm Lee und David: Atletico Madrid - Osasuna | 6. Spieltag | LALIGA | DAZN Highlights",
+          "yt_published": "2026-09-16"
+        }
       ]
     },
     {
@@ -29746,7 +29761,7 @@
       "competition_category": "league",
       "competition_flag": "🇪🇸",
       "kickoff_jst": "2026-09-17T04:30:00+09:00",
-      "status": "TIMED",
+      "status": "FINISHED",
       "stage": "REGULAR_SEASON",
       "matchday": 6,
       "home_id": 88,
@@ -29757,7 +29772,10 @@
       "away_ja": "アスレティック・ビルバオ",
       "away_en": "Athletic",
       "away_crest": "https://crests.football-data.org/77.png",
-      "score": null,
+      "score": {
+        "home": 0,
+        "away": 0
+      },
       "japanese_players": [],
       "broadcasters": [
         {
@@ -29780,7 +29798,7 @@
       "competition_category": "league",
       "competition_flag": "🇪🇸",
       "kickoff_jst": "2026-09-17T04:30:00+09:00",
-      "status": "TIMED",
+      "status": "FINISHED",
       "stage": "REGULAR_SEASON",
       "matchday": 6,
       "home_id": 81,
@@ -29791,7 +29809,10 @@
       "away_ja": "Santander",
       "away_en": "Santander",
       "away_crest": "https://crests.football-data.org/5335.png",
-      "score": null,
+      "score": {
+        "home": 7,
+        "away": 2
+      },
       "japanese_players": [],
       "broadcasters": [
         {
@@ -32449,6 +32470,6 @@
       "broadcasters": []
     }
   ],
-  "updated_yt_highlights": "2026-09-16T23:13:06.920312+09:00",
-  "updated_uefa_secondary": "2026-09-16T23:14:01.108309+09:00"
+  "updated_yt_highlights": "2026-09-17T07:04:57.840417+09:00",
+  "updated_uefa_secondary": "2026-09-17T07:05:29.975824+09:00"
 }
