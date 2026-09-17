@@ -1,7 +1,7 @@
 {
-  "updated": "2026-09-17T23:15:45.066506+09:00",
-  "date_from": "2026-09-10",
-  "date_to": "2026-10-01",
+  "updated": "2026-09-18T07:02:24.450869+09:00",
+  "date_from": "2026-09-11",
+  "date_to": "2026-10-02",
   "match_count": 842,
   "_note": "累積保持モード：フェッチ窓外の過去試合データはそのまま保持される。",
   "matches": [
@@ -29835,7 +29835,7 @@
       "competition_category": "league",
       "competition_flag": "🇪🇸",
       "kickoff_jst": "2026-09-18T02:00:00+09:00",
-      "status": "TIMED",
+      "status": "FINISHED",
       "stage": "REGULAR_SEASON",
       "matchday": 6,
       "home_id": 90,
@@ -29846,7 +29846,10 @@
       "away_ja": "ヘタフェ",
       "away_en": "Getafe",
       "away_crest": "https://crests.football-data.org/82.png",
-      "score": null,
+      "score": {
+        "home": 1,
+        "away": 0
+      },
       "japanese_players": [],
       "broadcasters": [
         {
@@ -29860,6 +29863,15 @@
           "url": "https://www.dazn.com/ja-JP/",
           "note": "〜2027-28"
         }
+      ],
+      "highlights": [
+        {
+          "broadcaster": "U-NEXT",
+          "video_id": "x9DS5GWjK-c",
+          "url": "https://youtu.be/x9DS5GWjK-c",
+          "title": "【ベティス v ヘタフェ｜ハイライト】ラ・リーガ 2026/27 第6節",
+          "yt_published": "2026-09-17"
+        }
       ]
     },
     {
@@ -29869,7 +29881,7 @@
       "competition_category": "league",
       "competition_flag": "🇪🇸",
       "kickoff_jst": "2026-09-18T04:30:00+09:00",
-      "status": "TIMED",
+      "status": "FINISHED",
       "stage": "REGULAR_SEASON",
       "matchday": 6,
       "home_id": 84,
@@ -29880,7 +29892,10 @@
       "away_ja": "ビジャレアル",
       "away_en": "Villarreal",
       "away_crest": "https://crests.football-data.org/94.png",
-      "score": null,
+      "score": {
+        "home": 1,
+        "away": 3
+      },
       "japanese_players": [],
       "broadcasters": [
         {
@@ -32470,6 +32485,6 @@
       "broadcasters": []
     }
   ],
-  "updated_yt_highlights": "2026-09-17T23:18:37.726579+09:00",
-  "updated_uefa_secondary": "2026-09-17T23:19:07.040157+09:00"
+  "updated_yt_highlights": "2026-09-18T07:05:20.828963+09:00",
+  "updated_uefa_secondary": "2026-09-18T07:05:47.756911+09:00"
 }
