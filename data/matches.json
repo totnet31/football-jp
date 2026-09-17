@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-17T09:07:57.789814+09:00",
+  "updated": "2026-09-17T17:06:19.190804+09:00",
   "date_from": "2026-09-10",
   "date_to": "2026-10-01",
   "match_count": 842,
@@ -29672,6 +29672,43 @@
       ]
     },
     {
+      "id": 564685,
+      "competition_id": 140,
+      "competition_ja": "ラ・リーガ",
+      "competition_category": "league",
+      "competition_flag": "🇪🇸",
+      "kickoff_jst": "2026-09-16T09:00:00+09:00",
+      "status": "FINISHED",
+      "stage": "REGULAR_SEASON",
+      "matchday": 6,
+      "home_id": 88,
+      "home_ja": "レバンテ",
+      "home_en": "Levante",
+      "home_crest": "https://crests.football-data.org/88.png",
+      "away_id": 77,
+      "away_ja": "アスレティック・ビルバオ",
+      "away_en": "Athletic",
+      "away_crest": "https://crests.football-data.org/77.png",
+      "score": {
+        "home": 0,
+        "away": 0
+      },
+      "japanese_players": [],
+      "broadcasters": [
+        {
+          "name": "U-NEXT",
+          "type": "shared",
+          "url": "https://www.unext.jp/"
+        },
+        {
+          "name": "DAZN",
+          "type": "shared",
+          "url": "https://www.dazn.com/ja-JP/",
+          "note": "〜2027-28"
+        }
+      ]
+    },
+    {
       "id": 564679,
       "competition_id": 140,
       "competition_ja": "ラ・リーガ",
@@ -29751,43 +29788,6 @@
           "url": "https://youtu.be/8dyVq5cHwzk",
           "title": "Neuer Traumsturm Lee und David: Atletico Madrid - Osasuna | 6. Spieltag | LALIGA | DAZN Highlights",
           "yt_published": "2026-09-16"
-        }
-      ]
-    },
-    {
-      "id": 564685,
-      "competition_id": 140,
-      "competition_ja": "ラ・リーガ",
-      "competition_category": "league",
-      "competition_flag": "🇪🇸",
-      "kickoff_jst": "2026-09-17T04:30:00+09:00",
-      "status": "FINISHED",
-      "stage": "REGULAR_SEASON",
-      "matchday": 6,
-      "home_id": 88,
-      "home_ja": "レバンテ",
-      "home_en": "Levante",
-      "home_crest": "https://crests.football-data.org/88.png",
-      "away_id": 77,
-      "away_ja": "アスレティック・ビルバオ",
-      "away_en": "Athletic",
-      "away_crest": "https://crests.football-data.org/77.png",
-      "score": {
-        "home": 0,
-        "away": 0
-      },
-      "japanese_players": [],
-      "broadcasters": [
-        {
-          "name": "U-NEXT",
-          "type": "shared",
-          "url": "https://www.unext.jp/"
-        },
-        {
-          "name": "DAZN",
-          "type": "shared",
-          "url": "https://www.dazn.com/ja-JP/",
-          "note": "〜2027-28"
         }
       ]
     },
@@ -32470,6 +32470,6 @@
       "broadcasters": []
     }
   ],
-  "updated_yt_highlights": "2026-09-17T09:10:48.416880+09:00",
-  "updated_uefa_secondary": "2026-09-17T09:11:17.104939+09:00"
+  "updated_yt_highlights": "2026-09-17T17:09:06.198832+09:00",
+  "updated_uefa_secondary": "2026-09-17T17:09:32.527378+09:00"
 }
