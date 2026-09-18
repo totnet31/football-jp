@@ -1,7 +1,7 @@
 {
-  "updated": "2026-09-18T22:33:50.251018+09:00",
-  "date_from": "2026-09-11",
-  "date_to": "2026-10-02",
+  "updated": "2026-09-19T07:02:16.550564+09:00",
+  "date_from": "2026-09-12",
+  "date_to": "2026-10-03",
   "match_count": 842,
   "_note": "累積保持モード：フェッチ窓外の過去試合データはそのまま保持される。",
   "matches": [
@@ -29918,7 +29918,7 @@
       "competition_category": "league",
       "competition_flag": "🇳🇱",
       "kickoff_jst": "2026-09-19T03:00:00+09:00",
-      "status": "TIMED",
+      "status": "FINISHED",
       "stage": "REGULAR_SEASON",
       "matchday": 7,
       "home_id": 677,
@@ -29929,7 +29929,10 @@
       "away_ja": "ズヴォレ",
       "away_en": "Zwolle",
       "away_crest": "https://crests.football-data.org/684.png",
-      "score": null,
+      "score": {
+        "home": 3,
+        "away": 0
+      },
       "japanese_players": [],
       "broadcasters": [
         {
@@ -29947,7 +29950,7 @@
       "competition_category": "league",
       "competition_flag": "🇩🇪",
       "kickoff_jst": "2026-09-19T03:30:00+09:00",
-      "status": "TIMED",
+      "status": "FINISHED",
       "stage": "REGULAR_SEASON",
       "matchday": 4,
       "home_id": 5,
@@ -29958,7 +29961,10 @@
       "away_ja": "ウニオン・ベルリン",
       "away_en": "Union Berlin",
       "away_crest": "https://crests.football-data.org/28.png",
-      "score": null,
+      "score": {
+        "home": 7,
+        "away": 0
+      },
       "japanese_players": [
         {
           "name_ja": "伊藤洋輝",
@@ -29979,6 +29985,15 @@
           "url": "https://abema.tv/subscription/lp/183c3ec2-c6d8-409e-80b6-caf5a8012f8a",
           "note": "毎節2試合無料"
         }
+      ],
+      "highlights": [
+        {
+          "broadcaster": "DAZN Football",
+          "video_id": "pFbVxJlGi-w",
+          "url": "https://youtu.be/pFbVxJlGi-w",
+          "title": "Bayern München vs Union Berlin | Matchday 4 | 2026-27 Bundesliga Highlights",
+          "yt_published": "2026-09-18"
+        }
       ]
     },
     {
@@ -29988,7 +30003,7 @@
       "competition_category": "league",
       "competition_flag": "🇮🇹",
       "kickoff_jst": "2026-09-19T03:45:00+09:00",
-      "status": "TIMED",
+      "status": "FINISHED",
       "stage": "REGULAR_SEASON",
       "matchday": 5,
       "home_id": 5911,
@@ -29999,7 +30014,10 @@
       "away_ja": "サッスオーロ",
       "away_en": "Sassuolo",
       "away_crest": "https://crests.football-data.org/471.png",
-      "score": null,
+      "score": {
+        "home": 2,
+        "away": 1
+      },
       "japanese_players": [],
       "broadcasters": [
         {
@@ -30017,7 +30035,7 @@
       "competition_category": "league",
       "competition_flag": "🇫🇷",
       "kickoff_jst": "2026-09-19T03:45:00+09:00",
-      "status": "TIMED",
+      "status": "FINISHED",
       "stage": "REGULAR_SEASON",
       "matchday": 5,
       "home_id": 548,
@@ -30028,7 +30046,10 @@
       "away_ja": "ランス",
       "away_en": "RC Lens",
       "away_crest": "https://crests.football-data.org/546.png",
-      "score": null,
+      "score": {
+        "home": 2,
+        "away": 1
+      },
       "japanese_players": [
         {
           "name_ja": "南野拓実",
@@ -30043,6 +30064,15 @@
           "url": "https://www.dazn.com/ja-JP/",
           "note": "〜2028-29"
         }
+      ],
+      "highlights": [
+        {
+          "broadcaster": "DAZN Fussball",
+          "video_id": "Ibrf5SAluFY",
+          "url": "https://youtu.be/Ibrf5SAluFY",
+          "title": "Natürlich wieder Brunner! AS Monaco - RC Lens | 5. Spieltag | Ligue 1 | DAZN Highlights",
+          "yt_published": "2026-09-18"
+        }
       ]
     },
     {
@@ -30052,7 +30082,7 @@
       "competition_category": "league",
       "competition_flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
       "kickoff_jst": "2026-09-19T04:00:00+09:00",
-      "status": "TIMED",
+      "status": "FINISHED",
       "stage": "REGULAR_SEASON",
       "matchday": 5,
       "home_id": 402,
@@ -30063,7 +30093,10 @@
       "away_ja": "チェルシー",
       "away_en": "Chelsea",
       "away_crest": "https://crests.football-data.org/61.png",
-      "score": null,
+      "score": {
+        "home": 3,
+        "away": 0
+      },
       "japanese_players": [],
       "broadcasters": [
         {
@@ -30081,7 +30114,7 @@
       "competition_category": "league",
       "competition_flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
       "kickoff_jst": "2026-09-19T04:00:00+09:00",
-      "status": "TIMED",
+      "status": "FINISHED",
       "stage": "REGULAR_SEASON",
       "matchday": 8,
       "home_id": 387,
@@ -30092,7 +30125,10 @@
       "away_ja": "ワトフォード",
       "away_en": "Watford",
       "away_crest": "https://crests.football-data.org/346.png",
-      "score": null,
+      "score": {
+        "home": 1,
+        "away": 0
+      },
       "japanese_players": [
         {
           "name_ja": "平河悠",
@@ -30116,7 +30152,7 @@
       "competition_category": "league",
       "competition_flag": "🇪🇸",
       "kickoff_jst": "2026-09-19T04:00:00+09:00",
-      "status": "TIMED",
+      "status": "FINISHED",
       "stage": "REGULAR_SEASON",
       "matchday": 7,
       "home_id": 80,
@@ -30127,7 +30163,10 @@
       "away_ja": "エルチェ",
       "away_en": "Elche",
       "away_crest": "https://crests.football-data.org/285.png",
-      "score": null,
+      "score": {
+        "home": 1,
+        "away": 3
+      },
       "japanese_players": [],
       "broadcasters": [
         {
@@ -32485,6 +32524,6 @@
       "broadcasters": []
     }
   ],
-  "updated_yt_highlights": "2026-09-18T22:37:19.162340+09:00",
-  "updated_uefa_secondary": "2026-09-18T22:37:47.571472+09:00"
+  "updated_yt_highlights": "2026-09-19T07:05:07.660123+09:00",
+  "updated_uefa_secondary": "2026-09-19T07:05:38.032843+09:00"
 }
