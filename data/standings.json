@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-21T08:55:33.430084+09:00",
+  "updated": "2026-09-21T17:22:31.450011+09:00",
   "competitions": {
     "39": {
       "name_ja": "プレミアリーグ",
@@ -361,6 +361,21 @@
             },
             {
               "position": 3,
+              "team_id": 343,
+              "team_ja": "ミドルズブラ",
+              "team_crest": "https://crests.football-data.org/343.png",
+              "playedGames": 8,
+              "won": 4,
+              "draw": 3,
+              "lost": 1,
+              "points": 15,
+              "goalsFor": 16,
+              "goalsAgainst": 12,
+              "goalDifference": 4,
+              "form": null
+            },
+            {
+              "position": 4,
               "team_id": 76,
               "team_ja": "ウルバーハンプトン",
               "team_crest": "https://crests.football-data.org/76.png",
@@ -372,21 +387,6 @@
               "goalsFor": 15,
               "goalsAgainst": 10,
               "goalDifference": 5,
-              "form": null
-            },
-            {
-              "position": 4,
-              "team_id": 343,
-              "team_ja": "ミドルズブラ",
-              "team_crest": "https://crests.football-data.org/343.png",
-              "playedGames": 7,
-              "won": 4,
-              "draw": 2,
-              "lost": 1,
-              "points": 14,
-              "goalsFor": 14,
-              "goalsAgainst": 10,
-              "goalDifference": 4,
               "form": null
             },
             {
@@ -439,14 +439,14 @@
               "team_id": 387,
               "team_ja": "ブリストル・シティ",
               "team_crest": "https://crests.football-data.org/387.png",
-              "playedGames": 7,
+              "playedGames": 8,
               "won": 4,
               "draw": 1,
-              "lost": 2,
+              "lost": 3,
               "points": 13,
               "goalsFor": 11,
-              "goalsAgainst": 11,
-              "goalDifference": 0,
+              "goalsAgainst": 12,
+              "goalDifference": -1,
               "form": null
             },
             {
@@ -481,6 +481,36 @@
             },
             {
               "position": 11,
+              "team_id": 384,
+              "team_ja": "ミルウォール",
+              "team_crest": "https://crests.football-data.org/384.png",
+              "playedGames": 8,
+              "won": 3,
+              "draw": 2,
+              "lost": 3,
+              "points": 11,
+              "goalsFor": 15,
+              "goalsAgainst": 15,
+              "goalDifference": 0,
+              "form": null
+            },
+            {
+              "position": 12,
+              "team_id": 1126,
+              "team_ja": "Lincoln City",
+              "team_crest": "https://crests.football-data.org/1126.png",
+              "playedGames": 8,
+              "won": 3,
+              "draw": 2,
+              "lost": 3,
+              "points": 11,
+              "goalsFor": 7,
+              "goalsAgainst": 8,
+              "goalDifference": -1,
+              "form": null
+            },
+            {
+              "position": 13,
               "team_id": 340,
               "team_ja": "サウサンプトン",
               "team_crest": "https://crests.football-data.org/340.png",
@@ -495,22 +525,7 @@
               "form": null
             },
             {
-              "position": 12,
-              "team_id": 384,
-              "team_ja": "ミルウォール",
-              "team_crest": "https://crests.football-data.org/384.png",
-              "playedGames": 7,
-              "won": 3,
-              "draw": 1,
-              "lost": 3,
-              "points": 10,
-              "goalsFor": 13,
-              "goalsAgainst": 13,
-              "goalDifference": 0,
-              "form": null
-            },
-            {
-              "position": 13,
+              "position": 14,
               "team_id": 404,
               "team_ja": "レクサム",
               "team_crest": "https://crests.football-data.org/404.png",
@@ -525,7 +540,7 @@
               "form": null
             },
             {
-              "position": 14,
+              "position": 15,
               "team_id": 60,
               "team_ja": "Bolton",
               "team_crest": "https://crests.football-data.org/60.png",
@@ -540,7 +555,7 @@
               "form": null
             },
             {
-              "position": 15,
+              "position": 16,
               "team_id": 59,
               "team_ja": "ブラックバーン",
               "team_crest": "https://crests.football-data.org/59.png",
@@ -555,7 +570,7 @@
               "form": null
             },
             {
-              "position": 16,
+              "position": 17,
               "team_id": 68,
               "team_ja": "ノリッジ",
               "team_crest": "https://crests.football-data.org/68.png",
@@ -570,7 +585,7 @@
               "form": null
             },
             {
-              "position": 17,
+              "position": 18,
               "team_id": 356,
               "team_ja": "シェフィールド・ユナイテッド",
               "team_crest": "https://crests.football-data.org/356.png",
@@ -585,7 +600,7 @@
               "form": null
             },
             {
-              "position": 18,
+              "position": 19,
               "team_id": 325,
               "team_ja": "ポーツマス",
               "team_crest": "https://crests.football-data.org/325.png",
@@ -597,21 +612,6 @@
               "goalsFor": 9,
               "goalsAgainst": 10,
               "goalDifference": -1,
-              "form": null
-            },
-            {
-              "position": 19,
-              "team_id": 1126,
-              "team_ja": "Lincoln City",
-              "team_crest": "https://crests.football-data.org/1126.png",
-              "playedGames": 7,
-              "won": 2,
-              "draw": 2,
-              "lost": 3,
-              "points": 8,
-              "goalsFor": 6,
-              "goalsAgainst": 8,
-              "goalDifference": -2,
               "form": null
             },
             {
