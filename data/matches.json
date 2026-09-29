@@ -1,8 +1,8 @@
 {
-  "updated": "2026-09-29T18:13:00.034753+09:00",
-  "date_from": "2026-09-22",
-  "date_to": "2026-10-13",
-  "match_count": 937,
+  "updated": "2026-09-30T00:39:22.198675+09:00",
+  "date_from": "2026-09-23",
+  "date_to": "2026-10-14",
+  "match_count": 950,
   "_note": "累積保持モード：フェッチ窓外の過去試合データはそのまま保持される。",
   "matches": [
     {
@@ -36098,8 +36098,469 @@
           "note": "厳選30試合ディレイ"
         }
       ]
+    },
+    {
+      "id": 575350,
+      "competition_id": 2,
+      "competition_ja": "UEFAチャンピオンズリーグ",
+      "competition_category": "europe",
+      "competition_flag": "🇪🇺",
+      "kickoff_jst": "2026-10-15T01:45:00+09:00",
+      "status": "TIMED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 2,
+      "home_id": 2016,
+      "home_ja": "LASK",
+      "home_en": "LASK",
+      "home_crest": "https://crests.football-data.org/2016.png",
+      "away_id": 64,
+      "away_ja": "リヴァプール",
+      "away_en": "Liverpool",
+      "away_crest": "https://crests.football-data.org/64.png",
+      "score": null,
+      "japanese_players": [
+        {
+          "name_ja": "遠藤航",
+          "position": "DF/MF",
+          "side": "away"
+        }
+      ],
+      "broadcasters": [
+        {
+          "name": "WOWOW",
+          "type": "exclusive",
+          "url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l",
+          "note": "〜2026-27"
+        },
+        {
+          "name": "Lemino",
+          "type": "partial",
+          "url": "https://lemino.docomo.ne.jp/",
+          "note": "厳選30試合ディレイ"
+        }
+      ]
+    },
+    {
+      "id": 575351,
+      "competition_id": 2,
+      "competition_ja": "UEFAチャンピオンズリーグ",
+      "competition_category": "europe",
+      "competition_flag": "🇪🇺",
+      "kickoff_jst": "2026-10-15T01:45:00+09:00",
+      "status": "TIMED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 2,
+      "home_id": 675,
+      "home_ja": "フェイエノールト",
+      "home_en": "Feyenoord",
+      "home_crest": "https://crests.football-data.org/675.png",
+      "away_id": 7397,
+      "away_ja": "コモ",
+      "away_en": "Como 1907",
+      "away_crest": "https://crests.football-data.org/7397.png",
+      "score": null,
+      "japanese_players": [
+        {
+          "name_ja": "渡辺剛",
+          "position": "DF",
+          "side": "home"
+        }
+      ],
+      "broadcasters": [
+        {
+          "name": "WOWOW",
+          "type": "exclusive",
+          "url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l",
+          "note": "〜2026-27"
+        },
+        {
+          "name": "Lemino",
+          "type": "partial",
+          "url": "https://lemino.docomo.ne.jp/",
+          "note": "厳選30試合ディレイ"
+        }
+      ]
+    },
+    {
+      "id": 561877,
+      "competition_id": 40,
+      "competition_ja": "チャンピオンシップ",
+      "competition_category": "league",
+      "competition_flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+      "kickoff_jst": "2026-10-15T03:45:00+09:00",
+      "status": "TIMED",
+      "stage": "REGULAR_SEASON",
+      "matchday": 10,
+      "home_id": 325,
+      "home_ja": "ポーツマス",
+      "home_en": "Portsmouth",
+      "home_crest": "https://crests.football-data.org/325.png",
+      "away_id": 356,
+      "away_ja": "シェフィールド・ユナイテッド",
+      "away_en": "Sheffield Utd",
+      "away_crest": "https://crests.football-data.org/356.png",
+      "score": null,
+      "japanese_players": [],
+      "broadcasters": [
+        {
+          "name": "DAZN",
+          "type": "exclusive",
+          "url": "https://www.dazn.com/ja-JP/",
+          "note": "〜2027-28"
+        }
+      ]
+    },
+    {
+      "id": 561879,
+      "competition_id": 40,
+      "competition_ja": "チャンピオンシップ",
+      "competition_category": "league",
+      "competition_flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+      "kickoff_jst": "2026-10-15T03:45:00+09:00",
+      "status": "TIMED",
+      "stage": "REGULAR_SEASON",
+      "matchday": 10,
+      "home_id": 68,
+      "home_ja": "ノリッジ",
+      "home_en": "Norwich",
+      "home_crest": "https://crests.football-data.org/68.png",
+      "away_id": 340,
+      "away_ja": "サウサンプトン",
+      "away_en": "Southampton",
+      "away_crest": "https://crests.football-data.org/340.png",
+      "score": null,
+      "japanese_players": [
+        {
+          "name_ja": "松木玖生",
+          "position": "FW/MF",
+          "side": "away"
+        }
+      ],
+      "broadcasters": [
+        {
+          "name": "DAZN",
+          "type": "exclusive",
+          "url": "https://www.dazn.com/ja-JP/",
+          "note": "〜2027-28"
+        }
+      ]
+    },
+    {
+      "id": 561880,
+      "competition_id": 40,
+      "competition_ja": "チャンピオンシップ",
+      "competition_category": "league",
+      "competition_flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+      "kickoff_jst": "2026-10-15T03:45:00+09:00",
+      "status": "TIMED",
+      "stage": "REGULAR_SEASON",
+      "matchday": 10,
+      "home_id": 69,
+      "home_ja": "QPR",
+      "home_en": "QPR",
+      "home_crest": "https://crests.football-data.org/69.png",
+      "away_id": 342,
+      "away_ja": "ダービー",
+      "away_en": "Derby County",
+      "away_crest": "https://crests.football-data.org/342.png",
+      "score": null,
+      "japanese_players": [
+        {
+          "name_ja": "斉藤光毅",
+          "position": "MF",
+          "side": "home"
+        }
+      ],
+      "broadcasters": [
+        {
+          "name": "DAZN",
+          "type": "exclusive",
+          "url": "https://www.dazn.com/ja-JP/",
+          "note": "〜2027-28"
+        }
+      ]
+    },
+    {
+      "id": 561878,
+      "competition_id": 40,
+      "competition_ja": "チャンピオンシップ",
+      "competition_category": "league",
+      "competition_flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+      "kickoff_jst": "2026-10-15T04:00:00+09:00",
+      "status": "TIMED",
+      "stage": "REGULAR_SEASON",
+      "matchday": 10,
+      "home_id": 1126,
+      "home_ja": "Lincoln City",
+      "home_en": "Lincoln City",
+      "home_crest": "https://crests.football-data.org/1126.png",
+      "away_id": 563,
+      "away_ja": "ウェストハム",
+      "away_en": "West Ham",
+      "away_crest": "https://crests.football-data.org/563.png",
+      "score": null,
+      "japanese_players": [],
+      "broadcasters": [
+        {
+          "name": "DAZN",
+          "type": "exclusive",
+          "url": "https://www.dazn.com/ja-JP/",
+          "note": "〜2027-28"
+        }
+      ]
+    },
+    {
+      "id": 575352,
+      "competition_id": 2,
+      "competition_ja": "UEFAチャンピオンズリーグ",
+      "competition_category": "europe",
+      "competition_flag": "🇪🇺",
+      "kickoff_jst": "2026-10-15T04:00:00+09:00",
+      "status": "TIMED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 2,
+      "home_id": 100,
+      "home_ja": "ローマ",
+      "home_en": "Roma",
+      "home_crest": "https://crests.football-data.org/100.png",
+      "away_id": 86,
+      "away_ja": "レアル・マドリー",
+      "away_en": "Real Madrid",
+      "away_crest": "https://crests.football-data.org/86.png",
+      "score": null,
+      "japanese_players": [],
+      "broadcasters": [
+        {
+          "name": "WOWOW",
+          "type": "exclusive",
+          "url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l",
+          "note": "〜2026-27"
+        },
+        {
+          "name": "Lemino",
+          "type": "partial",
+          "url": "https://lemino.docomo.ne.jp/",
+          "note": "厳選30試合ディレイ"
+        }
+      ]
+    },
+    {
+      "id": 575353,
+      "competition_id": 2,
+      "competition_ja": "UEFAチャンピオンズリーグ",
+      "competition_category": "europe",
+      "competition_flag": "🇪🇺",
+      "kickoff_jst": "2026-10-15T04:00:00+09:00",
+      "status": "TIMED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 2,
+      "home_id": 65,
+      "home_ja": "マンチェスター・シティ",
+      "home_en": "Man City",
+      "home_crest": "https://crests.football-data.org/65.png",
+      "away_id": 524,
+      "away_ja": "PSG",
+      "away_en": "PSG",
+      "away_crest": "https://crests.football-data.org/524.png",
+      "score": null,
+      "japanese_players": [],
+      "broadcasters": [
+        {
+          "name": "WOWOW",
+          "type": "exclusive",
+          "url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l",
+          "note": "〜2026-27"
+        },
+        {
+          "name": "Lemino",
+          "type": "partial",
+          "url": "https://lemino.docomo.ne.jp/",
+          "note": "厳選30試合ディレイ"
+        }
+      ]
+    },
+    {
+      "id": 575354,
+      "competition_id": 2,
+      "competition_ja": "UEFAチャンピオンズリーグ",
+      "competition_category": "europe",
+      "competition_flag": "🇪🇺",
+      "kickoff_jst": "2026-10-15T04:00:00+09:00",
+      "status": "TIMED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 2,
+      "home_id": 5721,
+      "home_ja": "ボデ／グリムト",
+      "home_en": "Bodø/Glimt",
+      "home_crest": "https://crests.football-data.org/5721.png",
+      "away_id": 4,
+      "away_ja": "ドルトムント",
+      "away_en": "Dortmund",
+      "away_crest": "https://crests.football-data.org/4.png",
+      "score": null,
+      "japanese_players": [],
+      "broadcasters": [
+        {
+          "name": "WOWOW",
+          "type": "exclusive",
+          "url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l",
+          "note": "〜2026-27"
+        },
+        {
+          "name": "Lemino",
+          "type": "partial",
+          "url": "https://lemino.docomo.ne.jp/",
+          "note": "厳選30試合ディレイ"
+        }
+      ]
+    },
+    {
+      "id": 575355,
+      "competition_id": 2,
+      "competition_ja": "UEFAチャンピオンズリーグ",
+      "competition_category": "europe",
+      "competition_flag": "🇪🇺",
+      "kickoff_jst": "2026-10-15T04:00:00+09:00",
+      "status": "TIMED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 2,
+      "home_id": 58,
+      "home_ja": "アストン・ヴィラ",
+      "home_en": "Aston Villa",
+      "home_crest": "https://crests.football-data.org/58.png",
+      "away_id": 613,
+      "away_ja": "Fenerbahçe",
+      "away_en": "Fenerbahçe",
+      "away_crest": "https://crests.football-data.org/613.png",
+      "score": null,
+      "japanese_players": [
+        {
+          "name_ja": "鈴木彩艶",
+          "position": "GK",
+          "side": "home"
+        }
+      ],
+      "broadcasters": [
+        {
+          "name": "WOWOW",
+          "type": "exclusive",
+          "url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l",
+          "note": "〜2026-27"
+        },
+        {
+          "name": "Lemino",
+          "type": "partial",
+          "url": "https://lemino.docomo.ne.jp/",
+          "note": "厳選30試合ディレイ"
+        }
+      ]
+    },
+    {
+      "id": 575356,
+      "competition_id": 2,
+      "competition_ja": "UEFAチャンピオンズリーグ",
+      "competition_category": "europe",
+      "competition_flag": "🇪🇺",
+      "kickoff_jst": "2026-10-15T04:00:00+09:00",
+      "status": "TIMED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 2,
+      "home_id": 90,
+      "home_ja": "ベティス",
+      "home_en": "Real Betis",
+      "home_crest": "https://crests.football-data.org/90.png",
+      "away_id": 503,
+      "away_ja": "ポルト",
+      "away_en": "Porto",
+      "away_crest": "https://crests.football-data.org/503.png",
+      "score": null,
+      "japanese_players": [],
+      "broadcasters": [
+        {
+          "name": "WOWOW",
+          "type": "exclusive",
+          "url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l",
+          "note": "〜2026-27"
+        },
+        {
+          "name": "Lemino",
+          "type": "partial",
+          "url": "https://lemino.docomo.ne.jp/",
+          "note": "厳選30試合ディレイ"
+        }
+      ]
+    },
+    {
+      "id": 575357,
+      "competition_id": 2,
+      "competition_ja": "UEFAチャンピオンズリーグ",
+      "competition_category": "europe",
+      "competition_flag": "🇪🇺",
+      "kickoff_jst": "2026-10-15T04:00:00+09:00",
+      "status": "TIMED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 2,
+      "home_id": 1887,
+      "home_ja": "Shaktar",
+      "home_en": "Shaktar",
+      "home_crest": "https://crests.football-data.org/1887.png",
+      "away_id": 1899,
+      "away_ja": "PAE AEK",
+      "away_en": "PAE AEK",
+      "away_crest": "https://crests.football-data.org/1899.png",
+      "score": null,
+      "japanese_players": [],
+      "broadcasters": [
+        {
+          "name": "WOWOW",
+          "type": "exclusive",
+          "url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l",
+          "note": "〜2026-27"
+        },
+        {
+          "name": "Lemino",
+          "type": "partial",
+          "url": "https://lemino.docomo.ne.jp/",
+          "note": "厳選30試合ディレイ"
+        }
+      ]
+    },
+    {
+      "id": 575358,
+      "competition_id": 2,
+      "competition_ja": "UEFAチャンピオンズリーグ",
+      "competition_category": "europe",
+      "competition_flag": "🇪🇺",
+      "kickoff_jst": "2026-10-15T04:00:00+09:00",
+      "status": "TIMED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 2,
+      "home_id": 7509,
+      "home_ja": "Sl. Bratislava",
+      "home_en": "Sl. Bratislava",
+      "home_crest": "https://crests.football-data.org/7509.png",
+      "away_id": 10,
+      "away_ja": "シュトゥットガルト",
+      "away_en": "Stuttgart",
+      "away_crest": "https://crests.football-data.org/10.png",
+      "score": null,
+      "japanese_players": [],
+      "broadcasters": [
+        {
+          "name": "WOWOW",
+          "type": "exclusive",
+          "url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l",
+          "note": "〜2026-27"
+        },
+        {
+          "name": "Lemino",
+          "type": "partial",
+          "url": "https://lemino.docomo.ne.jp/",
+          "note": "厳選30試合ディレイ"
+        }
+      ]
     }
   ],
-  "updated_yt_highlights": "2026-09-29T18:15:54.747692+09:00",
-  "updated_uefa_secondary": "2026-09-29T18:16:24.386785+09:00"
+  "updated_yt_highlights": "2026-09-30T00:42:15.533240+09:00",
+  "updated_uefa_secondary": "2026-09-30T00:42:46.435461+09:00"
 }
