@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-12T10:01:50.926577+09:00",
+  "updated": "2026-10-12T18:56:53.361573+09:00",
   "date_from": "2026-10-05",
   "date_to": "2026-10-26",
   "match_count": 1115,
@@ -34725,7 +34725,7 @@
       "competition_category": "league",
       "competition_flag": "🇳🇱",
       "kickoff_jst": "2026-10-11T19:15:00+09:00",
-      "status": "TIMED",
+      "status": "FINISHED",
       "stage": "REGULAR_SEASON",
       "matchday": 8,
       "home_id": 676,
@@ -34736,7 +34736,10 @@
       "away_ja": "Willem II",
       "away_en": "Willem II",
       "away_crest": "https://crests.football-data.org/672.png",
-      "score": null,
+      "score": {
+        "home": 3,
+        "away": 1
+      },
       "japanese_players": [],
       "broadcasters": [
         {
@@ -34879,7 +34882,7 @@
       "competition_category": "league",
       "competition_flag": "🇳🇱",
       "kickoff_jst": "2026-10-11T21:30:00+09:00",
-      "status": "TIMED",
+      "status": "FINISHED",
       "stage": "REGULAR_SEASON",
       "matchday": 8,
       "home_id": 684,
@@ -34890,7 +34893,10 @@
       "away_ja": "Cambuur",
       "away_en": "Cambuur",
       "away_crest": "https://crests.football-data.org/1909.png",
-      "score": null,
+      "score": {
+        "home": 0,
+        "away": 1
+      },
       "japanese_players": [],
       "broadcasters": [
         {
@@ -34908,7 +34914,7 @@
       "competition_category": "league",
       "competition_flag": "🇳🇱",
       "kickoff_jst": "2026-10-11T21:30:00+09:00",
-      "status": "TIMED",
+      "status": "FINISHED",
       "stage": "REGULAR_SEASON",
       "matchday": 8,
       "home_id": 1912,
@@ -34919,7 +34925,10 @@
       "away_ja": "Den Haag",
       "away_en": "Den Haag",
       "away_crest": "https://crests.football-data.org/680.png",
-      "score": null,
+      "score": {
+        "home": 2,
+        "away": 2
+      },
       "japanese_players": [],
       "broadcasters": [
         {
@@ -35272,7 +35281,7 @@
       "competition_category": "league",
       "competition_flag": "🇳🇱",
       "kickoff_jst": "2026-10-11T23:45:00+09:00",
-      "status": "TIMED",
+      "status": "FINISHED",
       "stage": "REGULAR_SEASON",
       "matchday": 8,
       "home_id": 670,
@@ -35283,7 +35292,10 @@
       "away_ja": "フローニンゲン",
       "away_en": "Groningen",
       "away_crest": "https://crests.football-data.org/677.png",
-      "score": null,
+      "score": {
+        "home": 1,
+        "away": 5
+      },
       "japanese_players": [],
       "broadcasters": [
         {
@@ -42582,6 +42594,6 @@
       ]
     }
   ],
-  "updated_yt_highlights": "2026-10-12T10:04:42.671099+09:00",
-  "updated_uefa_secondary": "2026-10-12T10:05:11.409629+09:00"
+  "updated_yt_highlights": "2026-10-12T18:59:48.032164+09:00",
+  "updated_uefa_secondary": "2026-10-12T19:00:15.263336+09:00"
 }
