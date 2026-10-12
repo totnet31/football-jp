@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-13T03:54:15.417560+09:00",
+  "updated": "2026-10-13T07:01:59.916299+09:00",
   "date_from": "2026-10-06",
   "date_to": "2026-10-27",
   "match_count": 1118,
@@ -34845,7 +34845,7 @@
       "competition_category": "league",
       "competition_flag": "🇪🇸",
       "kickoff_jst": "2026-10-11T21:00:00+09:00",
-      "status": "TIMED",
+      "status": "FINISHED",
       "stage": "REGULAR_SEASON",
       "matchday": 8,
       "home_id": 285,
@@ -34856,7 +34856,10 @@
       "away_ja": "セルタ",
       "away_en": "Celta",
       "away_crest": "https://crests.football-data.org/558.png",
-      "score": null,
+      "score": {
+        "home": 0,
+        "away": 0
+      },
       "japanese_players": [],
       "broadcasters": [
         {
@@ -35210,7 +35213,7 @@
       "competition_category": "league",
       "competition_flag": "🇪🇸",
       "kickoff_jst": "2026-10-11T23:15:00+09:00",
-      "status": "TIMED",
+      "status": "FINISHED",
       "stage": "REGULAR_SEASON",
       "matchday": 8,
       "home_id": 92,
@@ -35221,7 +35224,10 @@
       "away_ja": "Deportivo",
       "away_en": "Deportivo",
       "away_crest": "https://crests.football-data.org/560.png",
-      "score": null,
+      "score": {
+        "home": 3,
+        "away": 2
+      },
       "japanese_players": [
         {
           "name_ja": "久保建英",
@@ -35473,7 +35479,7 @@
       "competition_category": "league",
       "competition_flag": "🇪🇸",
       "kickoff_jst": "2026-10-12T01:30:00+09:00",
-      "status": "TIMED",
+      "status": "FINISHED",
       "stage": "REGULAR_SEASON",
       "matchday": 8,
       "home_id": 90,
@@ -35484,7 +35490,10 @@
       "away_ja": "オサスナ",
       "away_en": "Osasuna",
       "away_crest": "https://crests.football-data.org/79.png",
-      "score": null,
+      "score": {
+        "home": 5,
+        "away": 2
+      },
       "japanese_players": [],
       "broadcasters": [
         {
@@ -35620,7 +35629,7 @@
       "competition_category": "league",
       "competition_flag": "🇪🇸",
       "kickoff_jst": "2026-10-12T04:00:00+09:00",
-      "status": "TIMED",
+      "status": "FINISHED",
       "stage": "REGULAR_SEASON",
       "matchday": 8,
       "home_id": 5335,
@@ -35631,7 +35640,10 @@
       "away_ja": "バレンシア",
       "away_en": "Valencia",
       "away_crest": "https://crests.football-data.org/95.png",
-      "score": null,
+      "score": {
+        "home": 2,
+        "away": 2
+      },
       "japanese_players": [
         {
           "name_ja": "佐藤龍之介",
@@ -35735,8 +35747,8 @@
       "away_en": "Udinese",
       "away_crest": "https://crests.football-data.org/115.png",
       "score": {
-        "home": 0,
-        "away": 0
+        "home": 2,
+        "away": 1
       },
       "japanese_players": [],
       "broadcasters": [
@@ -35755,7 +35767,7 @@
       "competition_category": "league",
       "competition_flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
       "kickoff_jst": "2026-10-13T04:00:00+09:00",
-      "status": "TIMED",
+      "status": "FINISHED",
       "stage": "REGULAR_SEASON",
       "matchday": 6,
       "home_id": 1076,
@@ -35766,7 +35778,10 @@
       "away_ja": "ニューカッスル",
       "away_en": "Newcastle",
       "away_crest": "https://crests.football-data.org/67.png",
-      "score": null,
+      "score": {
+        "home": 4,
+        "away": 1
+      },
       "japanese_players": [
         {
           "name_ja": "坂元達裕",
@@ -35790,7 +35805,7 @@
       "competition_category": "league",
       "competition_flag": "🇪🇸",
       "kickoff_jst": "2026-10-13T04:00:00+09:00",
-      "status": "TIMED",
+      "status": "FINISHED",
       "stage": "REGULAR_SEASON",
       "matchday": 8,
       "home_id": 88,
@@ -35801,7 +35816,10 @@
       "away_ja": "セビージャ",
       "away_en": "Sevilla FC",
       "away_crest": "https://crests.football-data.org/559.png",
-      "score": null,
+      "score": {
+        "home": 3,
+        "away": 3
+      },
       "japanese_players": [],
       "broadcasters": [
         {
@@ -35815,6 +35833,15 @@
           "url": "https://www.dazn.com/ja-JP/",
           "note": "〜2027-28"
         }
+      ],
+      "highlights": [
+        {
+          "broadcaster": "DAZN Fussball",
+          "video_id": "-ASE-bm-D8E",
+          "url": "https://youtu.be/-ASE-bm-D8E",
+          "title": "PURE EKSTASE in der Nachspielzeit: Levante - FC Sevilla | 8. Spieltag | LALIGA | DAZN",
+          "yt_published": "2026-10-12"
+        }
       ]
     },
     {
@@ -35824,7 +35851,7 @@
       "competition_category": "league",
       "competition_flag": "🇵🇹",
       "kickoff_jst": "2026-10-13T04:15:00+09:00",
-      "status": "TIMED",
+      "status": "FINISHED",
       "stage": "REGULAR_SEASON",
       "matchday": 8,
       "home_id": 5531,
@@ -35835,7 +35862,10 @@
       "away_ja": "アルヴェルカ",
       "away_en": "Alverca",
       "away_crest": "https://crests.football-data.org/7822.png",
-      "score": null,
+      "score": {
+        "home": 1,
+        "away": 4
+      },
       "japanese_players": [],
       "broadcasters": []
     },
@@ -42681,6 +42711,6 @@
       ]
     }
   ],
-  "updated_yt_highlights": "2026-10-13T03:57:09.942326+09:00",
-  "updated_uefa_secondary": "2026-10-13T03:57:39.907122+09:00"
+  "updated_yt_highlights": "2026-10-13T07:04:52.293730+09:00",
+  "updated_uefa_secondary": "2026-10-13T07:05:20.749774+09:00"
 }
