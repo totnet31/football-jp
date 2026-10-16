@@ -116,6 +116,7 @@
     .match-result.win { color: #1a7a3a; }
     .match-result.lose { color: #c0392b; }
     .match-result.draw { color: #666; }
+    .match-result.pending { color: #8a6100; font-size: 12px; font-weight: 600; }
     .match-broadcast {
       display: flex; flex-wrap: wrap; gap: 4px;
       align-items: center; justify-content: center;
@@ -380,11 +381,11 @@
     <section class="player-section">
       <h3>🏆 Championship Current Standings</h3>
       <div class="standing-row">
-        <span class="standing-pos">17</span>
+        <span class="standing-pos">7</span>
         <span class="standing-detail">
-          (of 24)&nbsp;&nbsp;1 played&nbsp;
-          0W 0D 1L&nbsp;
-          0 pts
+          (of 24)&nbsp;&nbsp;10 played&nbsp;
+          6W 2D 2L&nbsp;
+          16 pts
         </span>
       </div>
     </section>
@@ -403,30 +404,94 @@
         </div>
         
           <div class="match-row scheduled">
-            <div class="match-date"><span class="match-date-day">2026/09/02</span><span class="match-date-time">(Wed) 03:45</span></div>
+            <div class="match-date"><span class="match-date-day">2026/10/24</span><span class="match-date-time">(Sat) 23:00</span></div>
             <div class="match-venue"><span class="venue-badge venue-away">A</span></div>
-            <div class="match-opponent">vs Birmingham</div>
+            <div class="match-opponent">vs West Ham</div>
             <div class="match-result">—</div>
             <div class="match-broadcast">—</div>
             <div class="match-comp">Championship</div>
           </div>
           <div class="match-row scheduled">
-            <div class="match-date"><span class="match-date-day">2026/08/29</span><span class="match-date-time">(Sat) 23:00</span></div>
+            <div class="match-date"><span class="match-date-day">2026/10/17</span><span class="match-date-time">(Sat) 23:00</span></div>
             <div class="match-venue"><span class="venue-badge venue-home">H</span></div>
-            <div class="match-opponent">vs Millwall</div>
+            <div class="match-opponent">vs Bolton</div>
             <div class="match-result">—</div>
             <div class="match-broadcast">—</div>
             <div class="match-comp">Championship</div>
           </div>
-          <div class="match-row scheduled">
-            <div class="match-date"><span class="match-date-day">2026/08/22</span><span class="match-date-time">(Sat) 23:00</span></div>
+          <div class="match-row result-pending">
+            <div class="match-date"><span class="match-date-day">2026/10/15</span><span class="match-date-time">(Thu) 03:45</span></div>
+            <div class="match-venue"><span class="venue-badge venue-away">A</span></div>
+            <div class="match-opponent">vs Norwich</div>
+            <div class="match-result pending">Result pending</div>
+            <div class="match-broadcast">—</div>
+            <div class="match-comp">Championship</div>
+          </div>
+          <div class="match-row result-pending">
+            <div class="match-date"><span class="match-date-day">2026/10/11</span><span class="match-date-time">(Sun) 20:00</span></div>
             <div class="match-venue"><span class="venue-badge venue-home">H</span></div>
-            <div class="match-opponent">vs Stoke</div>
-            <div class="match-result">—</div>
+            <div class="match-opponent">vs Portsmouth</div>
+            <div class="match-result pending">Result pending</div>
             <div class="match-broadcast">—</div>
             <div class="match-comp">Championship</div>
           </div>
           <div class="match-row">
+            <div class="match-date"><span class="match-date-day">2026/09/19</span><span class="match-date-time">(Sat) 23:00</span></div>
+            <div class="match-venue"><span class="venue-badge venue-away">A</span></div>
+            <div class="match-opponent">vs Wrexham</div>
+            <div class="match-result lose">1 - 2</div>
+            <div class="match-broadcast">—</div>
+            <div class="match-comp">Championship</div>
+          </div>
+          <div class="match-row">
+            <div class="match-date"><span class="match-date-day">2026/09/12</span><span class="match-date-time">(Sat) 23:00</span></div>
+            <div class="match-venue"><span class="venue-badge venue-home">H</span></div>
+            <div class="match-opponent">vs Bristol City</div>
+            <div class="match-result win">4 - 1</div>
+            <div class="match-broadcast">—</div>
+            <div class="match-comp">Championship</div>
+          </div>
+          <div class="match-row">
+            <div class="match-date"><span class="match-date-day">2026/09/09</span><span class="match-date-time">(Wed) 03:45</span></div>
+            <div class="match-venue"><span class="venue-badge venue-home">H</span></div>
+            <div class="match-opponent">vs Swansea</div>
+            <div class="match-result win">3 - 1</div>
+            <div class="match-broadcast">—</div>
+            <div class="match-comp">Championship</div>
+          </div>
+          <div class="match-row">
+            <div class="match-date"><span class="match-date-day">2026/09/05</span><span class="match-date-time">(Sat) 20:30</span></div>
+            <div class="match-venue"><span class="venue-badge venue-away">A</span></div>
+            <div class="match-opponent">vs Lincoln City</div>
+            <div class="match-result draw">1 - 1</div>
+            <div class="match-broadcast">—</div>
+            <div class="match-comp">Championship</div>
+          </div>
+          <div class="match-row">
+            <div class="match-date"><span class="match-date-day">2026/09/02</span><span class="match-date-time">(Wed) 04:00</span></div>
+            <div class="match-venue"><span class="venue-badge venue-away">A</span></div>
+            <div class="match-opponent">vs Birmingham</div>
+            <div class="match-result draw">1 - 1</div>
+            <div class="match-broadcast">—</div>
+            <div class="match-comp">Championship</div>
+          </div>
+          <div class="match-row">
+            <div class="match-date"><span class="match-date-day">2026/08/29</span><span class="match-date-time">(Sat) 23:00</span></div>
+            <div class="match-venue"><span class="venue-badge venue-home">H</span></div>
+            <div class="match-opponent">vs Millwall</div>
+            <div class="match-result win">5 - 1</div>
+            <div class="match-broadcast">—</div>
+            <div class="match-comp">Championship</div>
+          </div>
+          <div class="match-row hidden-extra">
+            <div class="match-date"><span class="match-date-day">2026/08/22</span><span class="match-date-time">(Sat) 23:00</span></div>
+            <div class="match-venue"><span class="venue-badge venue-home">H</span></div>
+            <div class="match-opponent">vs Stoke</div>
+            <div class="match-result win">3 - 1</div>
+            <div class="match-broadcast">—</div>
+            <div class="match-comp">Championship</div>
+          </div>
+          <div class="match-row hidden-extra">
             <div class="match-date"><span class="match-date-day">2026/08/16</span><span class="match-date-time">(Sun) 21:30</span></div>
             <div class="match-venue"><span class="venue-badge venue-away">A</span></div>
             <div class="match-opponent">vs Watford</div>
@@ -434,7 +499,7 @@
             <div class="match-broadcast">—</div>
             <div class="match-comp">Championship</div>
           </div>
-          <div class="match-row">
+          <div class="match-row hidden-extra">
             <div class="match-date"><span class="match-date-day">2026/05/13</span><span class="match-date-time">(Wed) 04:00</span></div>
             <div class="match-venue"><span class="venue-badge venue-home">H</span></div>
             <div class="match-opponent">vs Middlesbrough</div>
@@ -442,7 +507,7 @@
             <div class="match-broadcast">—</div>
             <div class="match-comp">Championship</div>
           </div>
-          <div class="match-row">
+          <div class="match-row hidden-extra">
             <div class="match-date"><span class="match-date-day">2026/05/09</span><span class="match-date-time">(Sat) 20:30</span></div>
             <div class="match-venue"><span class="venue-badge venue-away">A</span></div>
             <div class="match-opponent">vs Middlesbrough</div>
@@ -450,7 +515,7 @@
             <div class="match-broadcast">—</div>
             <div class="match-comp">Championship</div>
           </div>
-          <div class="match-row">
+          <div class="match-row hidden-extra">
             <div class="match-date"><span class="match-date-day">2026/05/02</span><span class="match-date-time">(Sat) 20:30</span></div>
             <div class="match-venue"><span class="venue-badge venue-away">A</span></div>
             <div class="match-opponent">vs Preston NE</div>
@@ -458,7 +523,7 @@
             <div class="match-broadcast">—</div>
             <div class="match-comp">Championship</div>
           </div>
-          <div class="match-row">
+          <div class="match-row hidden-extra">
             <div class="match-date"><span class="match-date-day">2026/04/29</span><span class="match-date-time">(Wed) 03:45</span></div>
             <div class="match-venue"><span class="venue-badge venue-home">H</span></div>
             <div class="match-opponent">vs Ipswich Town</div>
@@ -467,6 +532,9 @@
             <div class="match-comp">Championship</div>
           </div>
       </div>
+      <button class="show-more-matches" onclick="toggleMoreMatches(this)" data-count="6" data-expanded="false">
+        Show more (6 remaining)
+      </button>
     </section>
 
   
@@ -506,6 +574,16 @@
       <h3>Related Highlights</h3>
       <div class="video-grid">
         
+        <a href="https://youtu.be/PM9MfpZSAxk" target="_blank" rel="noopener" class="video-card">
+          <img src="https://i.ytimg.com/vi/PM9MfpZSAxk/mqdefault.jpg" alt="" loading="lazy">
+          <div class="video-title">🇯🇵代表戦で初ゴールを決めた松木玖生🏴󠁧󠁢󠁥󠁮󠁧󠁿サウサンプトンに帰還⚽️🔥今季ブリストル・シティ戦で松木が決めた一撃をプレイバック🎞️｜EFLチャンピオンシップ</div>
+          <div class="video-meta">DAZN · 10/11</div>
+        </a>
+        <a href="https://youtu.be/2HhUi8Cl8mE" target="_blank" rel="noopener" class="video-card">
+          <img src="https://i.ytimg.com/vi/2HhUi8Cl8mE/mqdefault.jpg" alt="" loading="lazy">
+          <div class="video-title">【日本代表初選出・松木玖生が先発出場 | レクサム×サウサンプトン】EFLチャンピオンシップ第8節｜2026-27シーズン</div>
+          <div class="video-meta">DAZN · 09/19</div>
+        </a>
         <a href="https://youtu.be/tm152XLV2Ug" target="_blank" rel="noopener" class="video-card">
           <img src="https://i.ytimg.com/vi/tm152XLV2Ug/mqdefault.jpg" alt="" loading="lazy">
           <div class="video-title">【松木玖生が開幕戦で先発出場|ワトフォード×サウサンプトン】EFLチャンピオンシップ第1節｜2025-26シーズン</div>
@@ -566,13 +644,18 @@
             </div>
             <div class="nt-row">
               <span class="nt-team">Japan U20</span>
-              <span class="nt-years">2023–</span>
-              <span class="nt-stats">8 caps / 3 goals</span>
+              <span class="nt-years">2022–2023</span>
+              <span class="nt-stats">11 caps / 4 goals</span>
             </div>
             <div class="nt-row">
               <span class="nt-team">Japan U23</span>
-              <span class="nt-years">2021–</span>
-              <span class="nt-stats">12 caps / 3 goals</span>
+              <span class="nt-years">2021–2024</span>
+              <span class="nt-stats">18 caps / 4 goals</span>
+            </div>
+            <div class="nt-row">
+              <span class="nt-team">Japan</span>
+              <span class="nt-years">2026–</span>
+              <span class="nt-stats">2 caps / 1 goals</span>
             </div>
       </div>
     </section>
@@ -580,20 +663,6 @@
   
 
   
-    <section class="player-section">
-      <h3>🏟️ Other Japanese Players at This Club</h3>
-      <div class="related-players-grid">
-        
-          <a class="related-player-card" href="/en/players/yukinari-sugawara/">
-            <span class="related-player-flag">🇯🇵</span>
-            <div class="related-player-info">
-              <div class="related-player-name-ja">Yukinari Sugawara</div>
-              <div class="related-player-name-en">菅原由勢</div>
-              <div class="related-player-pos">Defender</div>
-            </div>
-          </a>
-      </div>
-    </section>
 
   <div class="player-section">
     <h3>🔗 Related Links</h3>

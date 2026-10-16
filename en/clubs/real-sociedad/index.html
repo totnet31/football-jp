@@ -92,6 +92,7 @@
     .match-result.win { color: #1a7a3a; }
     .match-result.lose { color: #c0392b; }
     .match-result.draw { color: #666; }
+    .match-result.pending { color: #8a6100; font-size: 12px; font-weight: 600; }
     .match-broadcast { display: flex; flex-wrap: wrap; gap: 4px; align-items: center; justify-content: center; }
     .match-date-day { display: block; font-size: 12px; }
     .match-date-time { display: block; font-size: 11px; color: #555; }
@@ -218,12 +219,12 @@
     <section class="club-section">
       <h3>🏆 La Liga Current Standings</h3>
       <div class="standing-row">
-        <span class="standing-pos">10</span>
+        <span class="standing-pos">6</span>
         <span class="standing-detail">
-          (of 20)&nbsp;&nbsp;0 played&nbsp;
-          0W 0D 0L&nbsp;
-          0-0 GD&nbsp;
-          <strong>0 pts</strong>
+          (of 20)&nbsp;&nbsp;8 played&nbsp;
+          4W 1D 3L&nbsp;
+          12-15 GD&nbsp;
+          <strong>13 pts</strong>
         </span>
       </div>
     </section>
@@ -258,38 +259,86 @@
         </div>
         
           <div class="match-row scheduled">
-            <div class="match-date"><span class="match-date-day">2026/09/04</span><span class="match-date-time">(Fri) 04:00</span></div>
+            <div class="match-date"><span class="match-date-day">2026/10/26</span><span class="match-date-time">(Mon) 02:30</span></div>
             <div class="match-venue"><span class="venue-badge venue-home">H</span></div>
-            <div class="match-opponent">vs Celta</div>
+            <div class="match-opponent">vs Levante</div>
             <div class="match-result">—</div>
             <div class="match-broadcast">—</div>
             <div class="match-comp">La Liga</div>
           </div>
           <div class="match-row scheduled">
-            <div class="match-date"><span class="match-date-day">2026/08/30</span><span class="match-date-time">(Sun) 02:00</span></div>
-            <div class="match-venue"><span class="venue-badge venue-home">H</span></div>
-            <div class="match-opponent">vs Espanyol</div>
-            <div class="match-result">—</div>
-            <div class="match-broadcast">—</div>
-            <div class="match-comp">La Liga</div>
-          </div>
-          <div class="match-row scheduled">
-            <div class="match-date"><span class="match-date-day">2026/08/27</span><span class="match-date-time">(Thu) 04:00</span></div>
+            <div class="match-date"><span class="match-date-day">2026/10/19</span><span class="match-date-time">(Mon) 01:30</span></div>
             <div class="match-venue"><span class="venue-badge venue-away">A</span></div>
-            <div class="match-opponent">vs Real Madrid</div>
-            <div class="match-result">—</div>
-            <div class="match-broadcast">—</div>
-            <div class="match-comp">La Liga</div>
-          </div>
-          <div class="match-row scheduled">
-            <div class="match-date"><span class="match-date-day">2026/08/22</span><span class="match-date-time">(Sat) 04:00</span></div>
-            <div class="match-venue"><span class="venue-badge venue-away">A</span></div>
-            <div class="match-opponent">vs Real Betis</div>
+            <div class="match-opponent">vs Málaga</div>
             <div class="match-result">—</div>
             <div class="match-broadcast">—</div>
             <div class="match-comp">La Liga</div>
           </div>
           <div class="match-row">
+            <div class="match-date"><span class="match-date-day">2026/10/11</span><span class="match-date-time">(Sun) 23:15</span></div>
+            <div class="match-venue"><span class="venue-badge venue-home">H</span></div>
+            <div class="match-opponent">vs Deportivo</div>
+            <div class="match-result win">3 - 2</div>
+            <div class="match-broadcast">—</div>
+            <div class="match-comp">La Liga</div>
+          </div>
+          <div class="match-row">
+            <div class="match-date"><span class="match-date-day">2026/09/21</span><span class="match-date-time">(Mon) 04:00</span></div>
+            <div class="match-venue"><span class="venue-badge venue-away">A</span></div>
+            <div class="match-opponent">vs Valencia</div>
+            <div class="match-result win">3 - 2</div>
+            <div class="match-broadcast">—</div>
+            <div class="match-comp">La Liga</div>
+          </div>
+          <div class="match-row">
+            <div class="match-date"><span class="match-date-day">2026/09/14</span><span class="match-date-time">(Mon) 04:00</span></div>
+            <div class="match-venue"><span class="venue-badge venue-home">H</span></div>
+            <div class="match-opponent">vs Atleti</div>
+            <div class="match-result lose">0 - 3</div>
+            <div class="match-broadcast">—</div>
+            <div class="match-comp">La Liga</div>
+          </div>
+          <div class="match-row">
+            <div class="match-date"><span class="match-date-day">2026/09/08</span><span class="match-date-time">(Tue) 04:30</span></div>
+            <div class="match-venue"><span class="venue-badge venue-away">A</span></div>
+            <div class="match-opponent">vs Elche</div>
+            <div class="match-result win">3 - 2</div>
+            <div class="match-broadcast">—</div>
+            <div class="match-comp">La Liga</div>
+          </div>
+          <div class="match-row">
+            <div class="match-date"><span class="match-date-day">2026/09/04</span><span class="match-date-time">(Fri) 04:00</span></div>
+            <div class="match-venue"><span class="venue-badge venue-home">H</span></div>
+            <div class="match-opponent">vs Celta</div>
+            <div class="match-result draw">0 - 0</div>
+            <div class="match-broadcast">—</div>
+            <div class="match-comp">La Liga</div>
+          </div>
+          <div class="match-row">
+            <div class="match-date"><span class="match-date-day">2026/08/30</span><span class="match-date-time">(Sun) 02:00</span></div>
+            <div class="match-venue"><span class="venue-badge venue-home">H</span></div>
+            <div class="match-opponent">vs Espanyol</div>
+            <div class="match-result win">2 - 1</div>
+            <div class="match-broadcast">—</div>
+            <div class="match-comp">La Liga</div>
+          </div>
+          <div class="match-row">
+            <div class="match-date"><span class="match-date-day">2026/08/27</span><span class="match-date-time">(Thu) 04:00</span></div>
+            <div class="match-venue"><span class="venue-badge venue-away">A</span></div>
+            <div class="match-opponent">vs Real Madrid</div>
+            <div class="match-result lose">1 - 4</div>
+            <div class="match-broadcast">—</div>
+            <div class="match-comp">La Liga</div>
+          </div>
+          <div class="match-row">
+            <div class="match-date"><span class="match-date-day">2026/08/22</span><span class="match-date-time">(Sat) 04:00</span></div>
+            <div class="match-venue"><span class="venue-badge venue-away">A</span></div>
+            <div class="match-opponent">vs Real Betis</div>
+            <div class="match-result lose">0 - 1</div>
+            <div class="match-broadcast">—</div>
+            <div class="match-comp">La Liga</div>
+          </div>
+          <div class="match-row hidden-extra">
             <div class="match-date"><span class="match-date-day">2026/05/24</span><span class="match-date-time">(Sun) 04:00</span></div>
             <div class="match-venue"><span class="venue-badge venue-away">A</span></div>
             <div class="match-opponent">vs Espanyol</div>
@@ -297,7 +346,7 @@
             <div class="match-broadcast">—</div>
             <div class="match-comp">La Liga</div>
           </div>
-          <div class="match-row">
+          <div class="match-row hidden-extra">
             <div class="match-date"><span class="match-date-day">2026/05/18</span><span class="match-date-time">(Mon) 02:00</span></div>
             <div class="match-venue"><span class="venue-badge venue-home">H</span></div>
             <div class="match-opponent">vs Valencia</div>
@@ -305,7 +354,7 @@
             <div class="match-broadcast">—</div>
             <div class="match-comp">La Liga</div>
           </div>
-          <div class="match-row">
+          <div class="match-row hidden-extra">
             <div class="match-date"><span class="match-date-day">2026/05/15</span><span class="match-date-time">(Fri) 03:00</span></div>
             <div class="match-venue"><span class="venue-badge venue-away">A</span></div>
             <div class="match-opponent">vs Girona</div>
@@ -313,7 +362,7 @@
             <div class="match-broadcast">—</div>
             <div class="match-comp">La Liga</div>
           </div>
-          <div class="match-row">
+          <div class="match-row hidden-extra">
             <div class="match-date"><span class="match-date-day">2026/05/10</span><span class="match-date-time">(Sun) 04:00</span></div>
             <div class="match-venue"><span class="venue-badge venue-home">H</span></div>
             <div class="match-opponent">vs Real Betis</div>
@@ -321,7 +370,7 @@
             <div class="match-broadcast">—</div>
             <div class="match-comp">La Liga</div>
           </div>
-          <div class="match-row">
+          <div class="match-row hidden-extra">
             <div class="match-date"><span class="match-date-day">2026/05/05</span><span class="match-date-time">(Tue) 04:00</span></div>
             <div class="match-venue"><span class="venue-badge venue-away">A</span></div>
             <div class="match-opponent">vs Sevilla FC</div>
@@ -329,7 +378,7 @@
             <div class="match-broadcast">—</div>
             <div class="match-comp">La Liga</div>
           </div>
-          <div class="match-row">
+          <div class="match-row hidden-extra">
             <div class="match-date"><span class="match-date-day">2026/04/26</span><span class="match-date-time">(Sun) 21:00</span></div>
             <div class="match-venue"><span class="venue-badge venue-away">A</span></div>
             <div class="match-opponent">vs Rayo Vallecano</div>
@@ -338,6 +387,9 @@
             <div class="match-comp">La Liga</div>
           </div>
       </div>
+      <button class="show-more-matches" onclick="toggleMoreMatches(this)" data-count="6" data-expanded="false">
+        Show more (6 remaining)
+      </button>
     </section>
 
   
@@ -345,6 +397,36 @@
       <h3>📺 Match Highlights</h3>
       <div class="video-grid">
         
+        <a href="https://youtu.be/nI37-0wFqtw" target="_blank" rel="noopener" class="video-card">
+          <img src="https://i.ytimg.com/vi/nI37-0wFqtw/mqdefault.jpg" alt="" loading="lazy">
+          <div class="video-title">Wildes Spektakel! FC Valencia - Real Sociedad | 7. Spieltag | LaLiga | DAZN Highlights</div>
+          <div class="video-meta">DAZN Fussball · 09/21</div>
+        </a>
+        <a href="https://youtu.be/PvUPKioZRKU" target="_blank" rel="noopener" class="video-card">
+          <img src="https://i.ytimg.com/vi/PvUPKioZRKU/mqdefault.jpg" alt="" loading="lazy">
+          <div class="video-title">Grimaldo &amp; David mit erstem Tor: Real Sociedad - Atletico | 5. Spieltag | LALIGA | DAZN Highlights</div>
+          <div class="video-meta">DAZN Fussball · 09/14</div>
+        </a>
+        <a href="https://youtu.be/NffJH1EG724" target="_blank" rel="noopener" class="video-card">
+          <img src="https://i.ytimg.com/vi/NffJH1EG724/mqdefault.jpg" alt="" loading="lazy">
+          <div class="video-title">【久保建英が先発出場｜レアル・ソシエダ v セルタ｜ハイライト】ラ・リーガ 2026/27 第6節 前倒し分</div>
+          <div class="video-meta">U-NEXT · 09/04</div>
+        </a>
+        <a href="https://youtu.be/RoGzyVpnKYw" target="_blank" rel="noopener" class="video-card">
+          <img src="https://i.ytimg.com/vi/RoGzyVpnKYw/mqdefault.jpg" alt="" loading="lazy">
+          <div class="video-title">【久保建英が途中出場｜レアル・ソシエダ v エスパニョール｜ハイライト】ラ・リーガ 2026/27 第3節</div>
+          <div class="video-meta">U-NEXT · 08/30</div>
+        </a>
+        <a href="https://youtu.be/R5HwOIF0OmQ" target="_blank" rel="noopener" class="video-card">
+          <img src="https://i.ytimg.com/vi/R5HwOIF0OmQ/mqdefault.jpg" alt="" loading="lazy">
+          <div class="video-title">【エンバペが圧巻のハットトリック＆久保建英が先発出場 | レアル・マドリード×レアル・ソシエダ｜ハイライト】ラ・リーガ第1節 (延期分）｜2026-27シーズン</div>
+          <div class="video-meta">DAZN · 08/27</div>
+        </a>
+        <a href="https://youtu.be/RbftMefxNQY" target="_blank" rel="noopener" class="video-card">
+          <img src="https://i.ytimg.com/vi/RbftMefxNQY/mqdefault.jpg" alt="" loading="lazy">
+          <div class="video-title">【怪我から復帰の久保建英がリーガ開幕戦で先発出場 | ベティス×レアル・ソシエダ｜ハイライト】ラ・リーガ第2節｜2026-27シーズン</div>
+          <div class="video-meta">DAZN · 08/22</div>
+        </a>
         <a href="https://youtu.be/703bRLyPsBo" target="_blank" rel="noopener" class="video-card">
           <img src="https://i.ytimg.com/vi/703bRLyPsBo/mqdefault.jpg" alt="" loading="lazy">
           <div class="video-title">【エスパニョール v レアル・ソシエダ｜ハイライト】ラ・リーガ25/26 第38節</div>
@@ -365,17 +447,12 @@
           <div class="video-title">【久保建英が先発出場｜レアル・ソシエダ v ベティス｜ハイライト】ラ・リーガ25/26 第35節</div>
           <div class="video-meta">U-NEXT · 05/10</div>
         </a>
-        <a href="https://youtu.be/c3B3rFFpLns" target="_blank" rel="noopener" class="video-card">
-          <img src="https://i.ytimg.com/vi/c3B3rFFpLns/mqdefault.jpg" alt="" loading="lazy">
-          <div class="video-title">【久保建英が先発出場｜ラージョ・バジェカーノ v レアル・ソシエダ ｜ハイライト】ラ・リーガ25/26 第32節</div>
-          <div class="video-meta">U-NEXT · 04/26</div>
-        </a>
       </div>
     </section>
 
   
     <section class="club-section">
-      <h3>📊 Records vs Opponents (Top 6)</h3>
+      <h3>📊 Records vs Opponents (Top 10)</h3>
       <div class="opponent-records">
         <div class="opp-header">
           <div class="opp-name">Opponent</div>
@@ -384,6 +461,24 @@
           <div class="opp-goals">Goals</div>
         </div>
         
+          <div class="opp-row">
+            <div class="opp-name">Real Betis</div>
+            <div class="opp-total">2 played</div>
+            <div class="opp-wdl">0W 1D 1L</div>
+            <div class="opp-goals">2 GF - 3 GA</div>
+          </div>
+          <div class="opp-row">
+            <div class="opp-name">Valencia</div>
+            <div class="opp-total">2 played</div>
+            <div class="opp-wdl">1W 0D 1L</div>
+            <div class="opp-goals">6 GF - 6 GA</div>
+          </div>
+          <div class="opp-row">
+            <div class="opp-name">Espanyol</div>
+            <div class="opp-total">2 played</div>
+            <div class="opp-wdl">1W 1D 0L</div>
+            <div class="opp-goals">3 GF - 2 GA</div>
+          </div>
           <div class="opp-row">
             <div class="opp-name">Rayo Vallecano</div>
             <div class="opp-total">1 played</div>
@@ -397,28 +492,34 @@
             <div class="opp-goals">0 GF - 1 GA</div>
           </div>
           <div class="opp-row">
-            <div class="opp-name">Real Betis</div>
-            <div class="opp-total">1 played</div>
-            <div class="opp-wdl">0W 1D 0L</div>
-            <div class="opp-goals">2 GF - 2 GA</div>
-          </div>
-          <div class="opp-row">
             <div class="opp-name">Girona</div>
             <div class="opp-total">1 played</div>
             <div class="opp-wdl">0W 1D 0L</div>
             <div class="opp-goals">1 GF - 1 GA</div>
           </div>
           <div class="opp-row">
-            <div class="opp-name">Valencia</div>
+            <div class="opp-name">Real Madrid</div>
             <div class="opp-total">1 played</div>
             <div class="opp-wdl">0W 0D 1L</div>
-            <div class="opp-goals">3 GF - 4 GA</div>
+            <div class="opp-goals">1 GF - 4 GA</div>
           </div>
           <div class="opp-row">
-            <div class="opp-name">Espanyol</div>
+            <div class="opp-name">Celta</div>
             <div class="opp-total">1 played</div>
             <div class="opp-wdl">0W 1D 0L</div>
-            <div class="opp-goals">1 GF - 1 GA</div>
+            <div class="opp-goals">0 GF - 0 GA</div>
+          </div>
+          <div class="opp-row">
+            <div class="opp-name">Elche</div>
+            <div class="opp-total">1 played</div>
+            <div class="opp-wdl">1W 0D 0L</div>
+            <div class="opp-goals">3 GF - 2 GA</div>
+          </div>
+          <div class="opp-row">
+            <div class="opp-name">Atleti</div>
+            <div class="opp-total">1 played</div>
+            <div class="opp-wdl">0W 0D 1L</div>
+            <div class="opp-goals">0 GF - 3 GA</div>
           </div>
       </div>
     </section>

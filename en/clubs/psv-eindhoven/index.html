@@ -92,6 +92,7 @@
     .match-result.win { color: #1a7a3a; }
     .match-result.lose { color: #c0392b; }
     .match-result.draw { color: #666; }
+    .match-result.pending { color: #8a6100; font-size: 12px; font-weight: 600; }
     .match-broadcast { display: flex; flex-wrap: wrap; gap: 4px; align-items: center; justify-content: center; }
     .match-date-day { display: block; font-size: 12px; }
     .match-date-time { display: block; font-size: 11px; color: #555; }
@@ -212,12 +213,12 @@
     <section class="club-section">
       <h3>🏆 Eredivisie Current Standings</h3>
       <div class="standing-row">
-        <span class="standing-pos">6</span>
+        <span class="standing-pos">2</span>
         <span class="standing-detail">
-          (of 18)&nbsp;&nbsp;2 played&nbsp;
-          1W 1D 0L&nbsp;
-          4-3 GD&nbsp;
-          <strong>4 pts</strong>
+          (of 18)&nbsp;&nbsp;8 played&nbsp;
+          6W 1D 1L&nbsp;
+          26-10 GD&nbsp;
+          <strong>19 pts</strong>
         </span>
       </div>
     </section>
@@ -252,22 +253,94 @@
         </div>
         
           <div class="match-row scheduled">
-            <div class="match-date"><span class="match-date-day">2026/08/30</span><span class="match-date-time">(Sun) 19:15</span></div>
-            <div class="match-venue"><span class="venue-badge venue-away">A</span></div>
-            <div class="match-opponent">vs Utrecht</div>
+            <div class="match-date"><span class="match-date-day">2026/10/25</span><span class="match-date-time">(Sun) 22:30</span></div>
+            <div class="match-venue"><span class="venue-badge venue-home">H</span></div>
+            <div class="match-opponent">vs Feyenoord</div>
             <div class="match-result">—</div>
             <div class="match-broadcast">—</div>
             <div class="match-comp">Eredivisie</div>
           </div>
           <div class="match-row scheduled">
-            <div class="match-date"><span class="match-date-day">2026/08/23</span><span class="match-date-time">(Sun) 21:30</span></div>
-            <div class="match-venue"><span class="venue-badge venue-home">H</span></div>
-            <div class="match-opponent">vs Groningen</div>
+            <div class="match-date"><span class="match-date-day">2026/10/21</span><span class="match-date-time">(Wed) 04:00</span></div>
+            <div class="match-venue"><span class="venue-badge venue-away">A</span></div>
+            <div class="match-opponent">vs Porto</div>
+            <div class="match-result">—</div>
+            <div class="match-broadcast">—</div>
+            <div class="match-comp">UEFAチャンピオンズリーグ</div>
+          </div>
+          <div class="match-row scheduled">
+            <div class="match-date"><span class="match-date-day">2026/10/17</span><span class="match-date-time">(Sat) 23:30</span></div>
+            <div class="match-venue"><span class="venue-badge venue-away">A</span></div>
+            <div class="match-opponent">vs Den Haag</div>
             <div class="match-result">—</div>
             <div class="match-broadcast">—</div>
             <div class="match-comp">Eredivisie</div>
           </div>
           <div class="match-row">
+            <div class="match-date"><span class="match-date-day">2026/10/14</span><span class="match-date-time">(Wed) 04:00</span></div>
+            <div class="match-venue"><span class="venue-badge venue-away">A</span></div>
+            <div class="match-opponent">vs RB Leipzig</div>
+            <div class="match-result lose">0 - 1</div>
+            <div class="match-broadcast">—</div>
+            <div class="match-comp">UEFAチャンピオンズリーグ</div>
+          </div>
+          <div class="match-row">
+            <div class="match-date"><span class="match-date-day">2026/10/10</span><span class="match-date-time">(Sat) 03:00</span></div>
+            <div class="match-venue"><span class="venue-badge venue-home">H</span></div>
+            <div class="match-opponent">vs Heerenveen</div>
+            <div class="match-result win">2 - 0</div>
+            <div class="match-broadcast">—</div>
+            <div class="match-comp">Eredivisie</div>
+          </div>
+          <div class="match-row">
+            <div class="match-date"><span class="match-date-day">2026/09/20</span><span class="match-date-time">(Sun) 21:30</span></div>
+            <div class="match-venue"><span class="venue-badge venue-away">A</span></div>
+            <div class="match-opponent">vs Twente</div>
+            <div class="match-result lose">2 - 3</div>
+            <div class="match-broadcast">—</div>
+            <div class="match-comp">Eredivisie</div>
+          </div>
+          <div class="match-row">
+            <div class="match-date"><span class="match-date-day">2026/09/14</span><span class="match-date-time">(Mon) 03:00</span></div>
+            <div class="match-venue"><span class="venue-badge venue-home">H</span></div>
+            <div class="match-opponent">vs Sparta</div>
+            <div class="match-result win">4 - 1</div>
+            <div class="match-broadcast">—</div>
+            <div class="match-comp">Eredivisie</div>
+          </div>
+          <div class="match-row">
+            <div class="match-date"><span class="match-date-day">2026/09/11</span><span class="match-date-time">(Fri) 01:45</span></div>
+            <div class="match-venue"><span class="venue-badge venue-home">H</span></div>
+            <div class="match-opponent">vs Shaktar</div>
+            <div class="match-result draw">1 - 1</div>
+            <div class="match-broadcast">—</div>
+            <div class="match-comp">UEFAチャンピオンズリーグ</div>
+          </div>
+          <div class="match-row">
+            <div class="match-date"><span class="match-date-day">2026/09/06</span><span class="match-date-time">(Sun) 03:00</span></div>
+            <div class="match-venue"><span class="venue-badge venue-away">A</span></div>
+            <div class="match-opponent">vs Ajax</div>
+            <div class="match-result win">3 - 1</div>
+            <div class="match-broadcast">—</div>
+            <div class="match-comp">Eredivisie</div>
+          </div>
+          <div class="match-row">
+            <div class="match-date"><span class="match-date-day">2026/08/30</span><span class="match-date-time">(Sun) 19:15</span></div>
+            <div class="match-venue"><span class="venue-badge venue-away">A</span></div>
+            <div class="match-opponent">vs Utrecht</div>
+            <div class="match-result win">6 - 1</div>
+            <div class="match-broadcast">—</div>
+            <div class="match-comp">Eredivisie</div>
+          </div>
+          <div class="match-row hidden-extra">
+            <div class="match-date"><span class="match-date-day">2026/08/23</span><span class="match-date-time">(Sun) 21:30</span></div>
+            <div class="match-venue"><span class="venue-badge venue-home">H</span></div>
+            <div class="match-opponent">vs Groningen</div>
+            <div class="match-result win">5 - 1</div>
+            <div class="match-broadcast">—</div>
+            <div class="match-comp">Eredivisie</div>
+          </div>
+          <div class="match-row hidden-extra">
             <div class="match-date"><span class="match-date-day">2026/08/16</span><span class="match-date-time">(Sun) 03:00</span></div>
             <div class="match-venue"><span class="venue-badge venue-away">A</span></div>
             <div class="match-opponent">vs Excelsior</div>
@@ -275,7 +348,7 @@
             <div class="match-broadcast">—</div>
             <div class="match-comp">Eredivisie</div>
           </div>
-          <div class="match-row">
+          <div class="match-row hidden-extra">
             <div class="match-date"><span class="match-date-day">2026/08/09</span><span class="match-date-time">(Sun) 03:00</span></div>
             <div class="match-venue"><span class="venue-badge venue-home">H</span></div>
             <div class="match-opponent">vs Sittard</div>
@@ -283,7 +356,7 @@
             <div class="match-broadcast">—</div>
             <div class="match-comp">Eredivisie</div>
           </div>
-          <div class="match-row">
+          <div class="match-row hidden-extra">
             <div class="match-date"><span class="match-date-day">2026/05/17</span><span class="match-date-time">(Sun) 21:30</span></div>
             <div class="match-venue"><span class="venue-badge venue-home">H</span></div>
             <div class="match-opponent">vs Twente</div>
@@ -291,7 +364,7 @@
             <div class="match-broadcast">—</div>
             <div class="match-comp">Eredivisie</div>
           </div>
-          <div class="match-row">
+          <div class="match-row hidden-extra">
             <div class="match-date"><span class="match-date-day">2026/05/10</span><span class="match-date-time">(Sun) 23:45</span></div>
             <div class="match-venue"><span class="venue-badge venue-away">A</span></div>
             <div class="match-opponent">vs Go Ahead</div>
@@ -299,7 +372,7 @@
             <div class="match-broadcast">—</div>
             <div class="match-comp">Eredivisie</div>
           </div>
-          <div class="match-row">
+          <div class="match-row hidden-extra">
             <div class="match-date"><span class="match-date-day">2026/05/03</span><span class="match-date-time">(Sun) 03:00</span></div>
             <div class="match-venue"><span class="venue-badge venue-away">A</span></div>
             <div class="match-opponent">vs Ajax</div>
@@ -307,7 +380,7 @@
             <div class="match-broadcast">—</div>
             <div class="match-comp">Eredivisie</div>
           </div>
-          <div class="match-row">
+          <div class="match-row hidden-extra">
             <div class="match-date"><span class="match-date-day">2026/04/24</span><span class="match-date-time">(Fri) 04:00</span></div>
             <div class="match-venue"><span class="venue-badge venue-home">H</span></div>
             <div class="match-opponent">vs Zwolle</div>
@@ -316,6 +389,9 @@
             <div class="match-comp">Eredivisie</div>
           </div>
       </div>
+      <button class="show-more-matches" onclick="toggleMoreMatches(this)" data-count="7" data-expanded="false">
+        Show more (7 remaining)
+      </button>
     </section>
 
   
@@ -323,6 +399,46 @@
       <h3>📺 Match Highlights</h3>
       <div class="video-grid">
         
+        <a href="https://youtu.be/w5oJ2fAluXI" target="_blank" rel="noopener" class="video-card">
+          <img src="https://i.ytimg.com/vi/w5oJ2fAluXI/mqdefault.jpg" alt="" loading="lazy">
+          <div class="video-title">【ライプツィヒ vs PSV】UEFAチャンピオンズリーグ 2026-27 リーグフェーズ MD2／3分ハイライト【WOWOW】</div>
+          <div class="video-meta">WOWOW · 10/14</div>
+        </a>
+        <a href="https://youtu.be/SP7DZtoEh_o" target="_blank" rel="noopener" class="video-card">
+          <img src="https://i.ytimg.com/vi/SP7DZtoEh_o/mqdefault.jpg" alt="" loading="lazy">
+          <div class="video-title">【佐野航大がフル出場 | PSVアイントホーフェン v ヘーレンフェーン｜ショートハイライト】エールディヴィジ 2026/27 第8節</div>
+          <div class="video-meta">U-NEXT · 10/10</div>
+        </a>
+        <a href="https://youtu.be/R2s2fVTrwss" target="_blank" rel="noopener" class="video-card">
+          <img src="https://i.ytimg.com/vi/R2s2fVTrwss/mqdefault.jpg" alt="" loading="lazy">
+          <div class="video-title">【佐野航大がフル出場 | トゥウェンテ v PSVアイントホーフェン｜ショートハイライト】エールディヴィジ 2026/27 第7節</div>
+          <div class="video-meta">U-NEXT · 09/20</div>
+        </a>
+        <a href="https://youtu.be/i8qnD2p7Ao0" target="_blank" rel="noopener" class="video-card">
+          <img src="https://i.ytimg.com/vi/i8qnD2p7Ao0/mqdefault.jpg" alt="" loading="lazy">
+          <div class="video-title">速報｜佐野航大が移籍後初ゴール！｜PSVアイントホーフェン v スパルタ・ロッテルダム｜エールディヴィジ 2026/27 第6節</div>
+          <div class="video-meta">U-NEXT · 09/14</div>
+        </a>
+        <a href="https://youtu.be/lTaKxekd5mE" target="_blank" rel="noopener" class="video-card">
+          <img src="https://i.ytimg.com/vi/lTaKxekd5mE/mqdefault.jpg" alt="" loading="lazy">
+          <div class="video-title">【CLトピック】PSV佐野航大、堂々のCLデビュー！攻守に躍動！プレー集／UEFAチャンピオンズリーグ 2026-27 リーグフェーズ MD1【WOWOW】</div>
+          <div class="video-meta">WOWOW · 09/11</div>
+        </a>
+        <a href="https://youtu.be/aZYiI2t4GNc" target="_blank" rel="noopener" class="video-card">
+          <img src="https://i.ytimg.com/vi/aZYiI2t4GNc/mqdefault.jpg" alt="" loading="lazy">
+          <div class="video-title">【佐野航大がフル出場 | アヤックス v PSVアイントホーフェン｜ショートハイライト】エールディヴィジ 2026/27 第5節</div>
+          <div class="video-meta">U-NEXT · 09/06</div>
+        </a>
+        <a href="https://youtu.be/4uW4r6RJp08" target="_blank" rel="noopener" class="video-card">
+          <img src="https://i.ytimg.com/vi/4uW4r6RJp08/mqdefault.jpg" alt="" loading="lazy">
+          <div class="video-title">【早くもフィット】佐野航大（PSVアイントホーフェン）｜エールディヴィジ 2026/27 第4節 ユトレヒト戦 プレー集</div>
+          <div class="video-meta">U-NEXT · 08/30</div>
+        </a>
+        <a href="https://youtu.be/DuQu3FB34cE" target="_blank" rel="noopener" class="video-card">
+          <img src="https://i.ytimg.com/vi/DuQu3FB34cE/mqdefault.jpg" alt="" loading="lazy">
+          <div class="video-title">移籍後初スタメン｜佐野航大（PSVアイントホーフェン）｜エールディヴィジ 2026/27 第3節 フローニンゲン戦プレー集</div>
+          <div class="video-meta">U-NEXT · 08/23</div>
+        </a>
         <a href="https://youtu.be/Nw1Lb9SWY7w" target="_blank" rel="noopener" class="video-card">
           <img src="https://i.ytimg.com/vi/Nw1Lb9SWY7w/mqdefault.jpg" alt="" loading="lazy">
           <div class="video-title">【王者へ完全移籍】佐野航大（PSVアイントホーフェン）｜NECナイメヘン時代ベストプレー集｜エールディヴィジ 2026/27</div>
@@ -338,7 +454,7 @@
 
   
     <section class="club-section">
-      <h3>📊 Records vs Opponents (Top 6)</h3>
+      <h3>📊 Records vs Opponents (Top 10)</h3>
       <div class="opponent-records">
         <div class="opp-header">
           <div class="opp-name">Opponent</div>
@@ -348,28 +464,28 @@
         </div>
         
           <div class="opp-row">
+            <div class="opp-name">Ajax</div>
+            <div class="opp-total">2 played</div>
+            <div class="opp-wdl">1W 1D 0L</div>
+            <div class="opp-goals">5 GF - 3 GA</div>
+          </div>
+          <div class="opp-row">
+            <div class="opp-name">Twente</div>
+            <div class="opp-total">2 played</div>
+            <div class="opp-wdl">1W 0D 1L</div>
+            <div class="opp-goals">7 GF - 4 GA</div>
+          </div>
+          <div class="opp-row">
             <div class="opp-name">Zwolle</div>
             <div class="opp-total">1 played</div>
             <div class="opp-wdl">1W 0D 0L</div>
             <div class="opp-goals">6 GF - 1 GA</div>
           </div>
           <div class="opp-row">
-            <div class="opp-name">Ajax</div>
-            <div class="opp-total">1 played</div>
-            <div class="opp-wdl">0W 1D 0L</div>
-            <div class="opp-goals">2 GF - 2 GA</div>
-          </div>
-          <div class="opp-row">
             <div class="opp-name">Go Ahead</div>
             <div class="opp-total">1 played</div>
             <div class="opp-wdl">1W 0D 0L</div>
             <div class="opp-goals">4 GF - 1 GA</div>
-          </div>
-          <div class="opp-row">
-            <div class="opp-name">Twente</div>
-            <div class="opp-total">1 played</div>
-            <div class="opp-wdl">1W 0D 0L</div>
-            <div class="opp-goals">5 GF - 1 GA</div>
           </div>
           <div class="opp-row">
             <div class="opp-name">Sittard</div>
@@ -382,6 +498,30 @@
             <div class="opp-total">1 played</div>
             <div class="opp-wdl">1W 0D 0L</div>
             <div class="opp-goals">2 GF - 1 GA</div>
+          </div>
+          <div class="opp-row">
+            <div class="opp-name">Groningen</div>
+            <div class="opp-total">1 played</div>
+            <div class="opp-wdl">1W 0D 0L</div>
+            <div class="opp-goals">5 GF - 1 GA</div>
+          </div>
+          <div class="opp-row">
+            <div class="opp-name">Utrecht</div>
+            <div class="opp-total">1 played</div>
+            <div class="opp-wdl">1W 0D 0L</div>
+            <div class="opp-goals">6 GF - 1 GA</div>
+          </div>
+          <div class="opp-row">
+            <div class="opp-name">Shaktar</div>
+            <div class="opp-total">1 played</div>
+            <div class="opp-wdl">0W 1D 0L</div>
+            <div class="opp-goals">1 GF - 1 GA</div>
+          </div>
+          <div class="opp-row">
+            <div class="opp-name">Sparta</div>
+            <div class="opp-total">1 played</div>
+            <div class="opp-wdl">1W 0D 0L</div>
+            <div class="opp-goals">4 GF - 1 GA</div>
           </div>
       </div>
     </section>

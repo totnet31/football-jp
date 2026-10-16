@@ -116,6 +116,7 @@
     .match-result.win { color: #1a7a3a; }
     .match-result.lose { color: #c0392b; }
     .match-result.draw { color: #666; }
+    .match-result.pending { color: #8a6100; font-size: 12px; font-weight: 600; }
     .match-broadcast {
       display: flex; flex-wrap: wrap; gap: 4px;
       align-items: center; justify-content: center;
@@ -346,7 +347,7 @@
       <h3>👤 Profile <a href="https://en.wikipedia.org/wiki/Ry%C5%ABnosuke_Sat%C5%8D" target="_blank" rel="noopener" style="font-size:11px;color:#888;">Wikipedia →</a></h3>
       <table class="profile-table">
         <tr><td class="profile-label">Height / Weight</td><td class="profile-value">171 cm / —</td></tr>
-        <tr><td class="profile-label">Date of Birth</td><td class="profile-value">2006-10-16 (age 19)</td></tr>
+        <tr><td class="profile-label">Date of Birth</td><td class="profile-value">2006-10-16 (age 20)</td></tr>
         <tr><td class="profile-label">Birthplace</td><td class="profile-value">Nishitokyo, Tokyo, Japan</td></tr>
         <tr><td class="profile-label">Foot</td><td class="profile-value">—</td></tr>
       </table>
@@ -358,11 +359,11 @@
     <section class="player-section">
       <h3>🏆 La Liga Current Standings</h3>
       <div class="standing-row">
-        <span class="standing-pos">10</span>
+        <span class="standing-pos">19</span>
         <span class="standing-detail">
-          (of 20)&nbsp;&nbsp;0 played&nbsp;
-          0W 0D 0L&nbsp;
-          0 pts
+          (of 20)&nbsp;&nbsp;8 played&nbsp;
+          1W 2D 5L&nbsp;
+          5 pts
         </span>
       </div>
     </section>
@@ -381,30 +382,86 @@
         </div>
         
           <div class="match-row scheduled">
-            <div class="match-date"><span class="match-date-day">2026/08/31</span><span class="match-date-time">(Mon) 02:30</span></div>
-            <div class="match-venue"><span class="venue-badge venue-away">A</span></div>
-            <div class="match-opponent">vs Deportivo</div>
+            <div class="match-date"><span class="match-date-day">2026/10/25</span><span class="match-date-time">(Sun) 01:30</span></div>
+            <div class="match-venue"><span class="venue-badge venue-home">H</span></div>
+            <div class="match-opponent">vs Villarreal</div>
             <div class="match-result">—</div>
             <div class="match-broadcast">—</div>
             <div class="match-comp">La Liga</div>
           </div>
           <div class="match-row scheduled">
-            <div class="match-date"><span class="match-date-day">2026/08/26</span><span class="match-date-time">(Wed) 04:00</span></div>
+            <div class="match-date"><span class="match-date-day">2026/10/18</span><span class="match-date-time">(Sun) 04:00</span></div>
             <div class="match-venue"><span class="venue-badge venue-home">H</span></div>
-            <div class="match-opponent">vs Real Betis</div>
-            <div class="match-result">—</div>
-            <div class="match-broadcast">—</div>
-            <div class="match-comp">La Liga</div>
-          </div>
-          <div class="match-row scheduled">
-            <div class="match-date"><span class="match-date-day">2026/08/23</span><span class="match-date-time">(Sun) 02:30</span></div>
-            <div class="match-venue"><span class="venue-badge venue-home">H</span></div>
-            <div class="match-opponent">vs Celta</div>
+            <div class="match-opponent">vs Athletic</div>
             <div class="match-result">—</div>
             <div class="match-broadcast">—</div>
             <div class="match-comp">La Liga</div>
           </div>
           <div class="match-row">
+            <div class="match-date"><span class="match-date-day">2026/10/12</span><span class="match-date-time">(Mon) 04:00</span></div>
+            <div class="match-venue"><span class="venue-badge venue-away">A</span></div>
+            <div class="match-opponent">vs Santander</div>
+            <div class="match-result draw">2 - 2</div>
+            <div class="match-broadcast">—</div>
+            <div class="match-comp">La Liga</div>
+          </div>
+          <div class="match-row">
+            <div class="match-date"><span class="match-date-day">2026/09/21</span><span class="match-date-time">(Mon) 04:00</span></div>
+            <div class="match-venue"><span class="venue-badge venue-home">H</span></div>
+            <div class="match-opponent">vs Real Sociedad</div>
+            <div class="match-result lose">2 - 3</div>
+            <div class="match-broadcast">—</div>
+            <div class="match-comp">La Liga</div>
+          </div>
+          <div class="match-row">
+            <div class="match-date"><span class="match-date-day">2026/09/16</span><span class="match-date-time">(Wed) 03:00</span></div>
+            <div class="match-venue"><span class="venue-badge venue-away">A</span></div>
+            <div class="match-opponent">vs Alavés</div>
+            <div class="match-result win">1 - 0</div>
+            <div class="match-broadcast">—</div>
+            <div class="match-comp">La Liga</div>
+          </div>
+          <div class="match-row">
+            <div class="match-date"><span class="match-date-day">2026/09/12</span><span class="match-date-time">(Sat) 04:00</span></div>
+            <div class="match-venue"><span class="venue-badge venue-away">A</span></div>
+            <div class="match-opponent">vs Sevilla FC</div>
+            <div class="match-result lose">0 - 1</div>
+            <div class="match-broadcast">—</div>
+            <div class="match-comp">La Liga</div>
+          </div>
+          <div class="match-row">
+            <div class="match-date"><span class="match-date-day">2026/09/06</span><span class="match-date-time">(Sun) 23:15</span></div>
+            <div class="match-venue"><span class="venue-badge venue-home">H</span></div>
+            <div class="match-opponent">vs Barça</div>
+            <div class="match-result lose">0 - 5</div>
+            <div class="match-broadcast">—</div>
+            <div class="match-comp">La Liga</div>
+          </div>
+          <div class="match-row">
+            <div class="match-date"><span class="match-date-day">2026/08/31</span><span class="match-date-time">(Mon) 02:30</span></div>
+            <div class="match-venue"><span class="venue-badge venue-away">A</span></div>
+            <div class="match-opponent">vs Deportivo</div>
+            <div class="match-result lose">1 - 3</div>
+            <div class="match-broadcast">—</div>
+            <div class="match-comp">La Liga</div>
+          </div>
+          <div class="match-row">
+            <div class="match-date"><span class="match-date-day">2026/08/26</span><span class="match-date-time">(Wed) 04:00</span></div>
+            <div class="match-venue"><span class="venue-badge venue-home">H</span></div>
+            <div class="match-opponent">vs Real Betis</div>
+            <div class="match-result lose">0 - 1</div>
+            <div class="match-broadcast">—</div>
+            <div class="match-comp">La Liga</div>
+          </div>
+          <div class="match-row">
+            <div class="match-date"><span class="match-date-day">2026/08/23</span><span class="match-date-time">(Sun) 02:30</span></div>
+            <div class="match-venue"><span class="venue-badge venue-home">H</span></div>
+            <div class="match-opponent">vs Celta</div>
+            <div class="match-result draw">0 - 0</div>
+            <div class="match-broadcast">—</div>
+            <div class="match-comp">La Liga</div>
+          </div>
+          <div class="match-row hidden-extra">
             <div class="match-date"><span class="match-date-day">2026/05/24</span><span class="match-date-time">(Sun) 04:00</span></div>
             <div class="match-venue"><span class="venue-badge venue-home">H</span></div>
             <div class="match-opponent">vs Barça</div>
@@ -412,7 +469,7 @@
             <div class="match-broadcast">—</div>
             <div class="match-comp">La Liga</div>
           </div>
-          <div class="match-row">
+          <div class="match-row hidden-extra">
             <div class="match-date"><span class="match-date-day">2026/05/18</span><span class="match-date-time">(Mon) 02:00</span></div>
             <div class="match-venue"><span class="venue-badge venue-away">A</span></div>
             <div class="match-opponent">vs Real Sociedad</div>
@@ -420,7 +477,7 @@
             <div class="match-broadcast">—</div>
             <div class="match-comp">La Liga</div>
           </div>
-          <div class="match-row">
+          <div class="match-row hidden-extra">
             <div class="match-date"><span class="match-date-day">2026/05/15</span><span class="match-date-time">(Fri) 02:00</span></div>
             <div class="match-venue"><span class="venue-badge venue-home">H</span></div>
             <div class="match-opponent">vs Rayo Vallecano</div>
@@ -428,7 +485,7 @@
             <div class="match-broadcast">—</div>
             <div class="match-comp">La Liga</div>
           </div>
-          <div class="match-row">
+          <div class="match-row hidden-extra">
             <div class="match-date"><span class="match-date-day">2026/05/10</span><span class="match-date-time">(Sun) 23:15</span></div>
             <div class="match-venue"><span class="venue-badge venue-away">A</span></div>
             <div class="match-opponent">vs Athletic</div>
@@ -436,7 +493,7 @@
             <div class="match-broadcast">—</div>
             <div class="match-comp">La Liga</div>
           </div>
-          <div class="match-row">
+          <div class="match-row hidden-extra">
             <div class="match-date"><span class="match-date-day">2026/05/02</span><span class="match-date-time">(Sat) 23:15</span></div>
             <div class="match-venue"><span class="venue-badge venue-home">H</span></div>
             <div class="match-opponent">vs Atleti</div>
@@ -444,7 +501,7 @@
             <div class="match-broadcast">—</div>
             <div class="match-comp">La Liga</div>
           </div>
-          <div class="match-row">
+          <div class="match-row hidden-extra">
             <div class="match-date"><span class="match-date-day">2026/04/26</span><span class="match-date-time">(Sun) 01:30</span></div>
             <div class="match-venue"><span class="venue-badge venue-home">H</span></div>
             <div class="match-opponent">vs Girona</div>
@@ -453,6 +510,9 @@
             <div class="match-comp">La Liga</div>
           </div>
       </div>
+      <button class="show-more-matches" onclick="toggleMoreMatches(this)" data-count="6" data-expanded="false">
+        Show more (6 remaining)
+      </button>
     </section>
 
   
@@ -474,7 +534,7 @@
             
           </div>
           <div class="video-title">Ryunosuke Sato (佐藤 龍之介) 🇯🇵 ▶Welcome to Valencia CF! All Skills, Goals &amp;amp; Assists 2026! </div>
-          <div class="video-meta">Wiki Sports Hub  · 06/15</div>
+          <div class="video-meta">WSHComps  · 06/15</div>
         </a>
         <a href="https://youtube.com/watch?v=5SFUiGceTuk" target="_blank" rel="noopener" class="video-card video-card-player">
           <div class="video-thumb-wrap">
@@ -492,6 +552,41 @@
       <h3>Related Highlights</h3>
       <div class="video-grid">
         
+        <a href="https://youtu.be/nI37-0wFqtw" target="_blank" rel="noopener" class="video-card">
+          <img src="https://i.ytimg.com/vi/nI37-0wFqtw/mqdefault.jpg" alt="" loading="lazy">
+          <div class="video-title">Wildes Spektakel! FC Valencia - Real Sociedad | 7. Spieltag | LaLiga | DAZN Highlights</div>
+          <div class="video-meta">DAZN Fussball · 09/21</div>
+        </a>
+        <a href="https://youtu.be/nbYHOloM-j8" target="_blank" rel="noopener" class="video-card">
+          <img src="https://i.ytimg.com/vi/nbYHOloM-j8/mqdefault.jpg" alt="" loading="lazy">
+          <div class="video-title">【アラベス v バレンシア｜ハイライト】ラ・リーガ 2026/27 第6節</div>
+          <div class="video-meta">U-NEXT · 09/16</div>
+        </a>
+        <a href="https://youtu.be/brhIO5n1Rdc" target="_blank" rel="noopener" class="video-card">
+          <img src="https://i.ytimg.com/vi/brhIO5n1Rdc/mqdefault.jpg" alt="" loading="lazy">
+          <div class="video-title">【佐藤龍之介が先発出場 | セビージャ× バレンシア｜ハイライト】ラ・リーガ第5節｜2026-27シーズン</div>
+          <div class="video-meta">DAZN · 09/12</div>
+        </a>
+        <a href="https://youtu.be/-WywMIKecHE" target="_blank" rel="noopener" class="video-card">
+          <img src="https://i.ytimg.com/vi/-WywMIKecHE/mqdefault.jpg" alt="" loading="lazy">
+          <div class="video-title">Barça zerlegt auch Valencia: FC Valencia - FC Barcelona |  4. Spieltag | LaLiga | DAZN Highlights</div>
+          <div class="video-meta">DAZN Fussball · 09/06</div>
+        </a>
+        <a href="https://youtu.be/_wi7-XEzIgk" target="_blank" rel="noopener" class="video-card">
+          <img src="https://i.ytimg.com/vi/_wi7-XEzIgk/mqdefault.jpg" alt="" loading="lazy">
+          <div class="video-title">【佐藤龍之介が先発出場、オーバメヤン開幕3戦連発｜デポルティーボ×バレンシア｜ハイライト】ラ・リーガ 第3節｜2026-27シーズン</div>
+          <div class="video-meta">DAZN · 08/31</div>
+        </a>
+        <a href="https://youtu.be/oeL-BvlDQOs" target="_blank" rel="noopener" class="video-card">
+          <img src="https://i.ytimg.com/vi/oeL-BvlDQOs/mqdefault.jpg" alt="" loading="lazy">
+          <div class="video-title">【佐藤龍之介がフル出場｜バレンシア v ベティス｜ハイライト】ラ・リーガ 2026/27 第1節 延期分</div>
+          <div class="video-meta">U-NEXT · 08/26</div>
+        </a>
+        <a href="https://youtu.be/99ZUrTNYXwY" target="_blank" rel="noopener" class="video-card">
+          <img src="https://i.ytimg.com/vi/99ZUrTNYXwY/mqdefault.jpg" alt="" loading="lazy">
+          <div class="video-title">【佐藤龍之介が開幕スタメン｜バレンシア v セルタ｜ハイライト】ラ・リーガ 2026/27 第2節</div>
+          <div class="video-meta">U-NEXT · 08/23</div>
+        </a>
         <a href="https://youtu.be/k7oambeeMmY" target="_blank" rel="noopener" class="video-card">
           <img src="https://i.ytimg.com/vi/k7oambeeMmY/mqdefault.jpg" alt="" loading="lazy">
           <div class="video-title">【レアル・ソシエダ v バレンシア｜ハイライト】ラ・リーガ25/26 第37節</div>
@@ -506,11 +601,6 @@
           <img src="https://i.ytimg.com/vi/6SQlaD7QVqc/mqdefault.jpg" alt="" loading="lazy">
           <div class="video-title">Debütanten begeistern: FC Valencia - Atletico Madrid | 34. Spieltag | LaLiga | DAZN Highlights</div>
           <div class="video-meta">DAZN Fussball · 05/02</div>
-        </a>
-        <a href="https://youtu.be/MwO_CieZ5CI" target="_blank" rel="noopener" class="video-card">
-          <img src="https://i.ytimg.com/vi/MwO_CieZ5CI/mqdefault.jpg" alt="" loading="lazy">
-          <div class="video-title">【バレンシア×ジローナ｜ハイライト】ラ・リーガ第32節｜2025-26シーズン</div>
-          <div class="video-meta">DAZN · 04/26</div>
         </a>
       </div>
     </section>
@@ -568,7 +658,7 @@
             <div class="nt-row">
               <span class="nt-team">Japan</span>
               <span class="nt-years">2025–</span>
-              <span class="nt-stats">5 caps / 62026102025 goals</span>
+              <span class="nt-stats">5 caps / 62026182026 goals</span>
             </div>
       </div>
     </section>
