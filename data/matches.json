@@ -1,8 +1,8 @@
 {
-  "updated": "2026-10-15T23:06:31.093837+09:00",
-  "date_from": "2026-10-08",
-  "date_to": "2026-10-29",
-  "match_count": 1125,
+  "updated": "2026-10-16T09:06:13.671441+09:00",
+  "date_from": "2026-10-09",
+  "date_to": "2026-10-30",
+  "match_count": 1131,
   "_note": "累積保持モード：フェッチ窓外の過去試合データはそのまま保持される。",
   "matches": [
     {
@@ -43047,8 +43047,219 @@
           "note": "〜2026-27"
         }
       ]
+    },
+    {
+      "id": 559644,
+      "competition_id": 61,
+      "competition_ja": "リーグ・アン",
+      "competition_category": "league",
+      "competition_flag": "🇫🇷",
+      "kickoff_jst": "2026-10-31T03:00:00+09:00",
+      "status": "TIMED",
+      "stage": "REGULAR_SEASON",
+      "matchday": 9,
+      "home_id": 533,
+      "home_ja": "ル・アーヴル",
+      "home_en": "Le Havre",
+      "home_crest": "https://crests.football-data.org/533.png",
+      "away_id": 524,
+      "away_ja": "PSG",
+      "away_en": "PSG",
+      "away_crest": "https://crests.football-data.org/524.png",
+      "score": null,
+      "japanese_players": [
+        {
+          "name_ja": "瀬古歩夢",
+          "position": "DF",
+          "side": "home"
+        },
+        {
+          "name_ja": "中村草太",
+          "position": "FW",
+          "side": "home"
+        },
+        {
+          "name_ja": "水多海斗",
+          "position": "MF",
+          "side": "home"
+        }
+      ],
+      "broadcasters": [
+        {
+          "name": "DAZN",
+          "type": "exclusive",
+          "url": "https://www.dazn.com/ja-JP/",
+          "note": "〜2028-29"
+        }
+      ]
+    },
+    {
+      "id": 565846,
+      "competition_id": 78,
+      "competition_ja": "ブンデスリーガ",
+      "competition_category": "league",
+      "competition_flag": "🇩🇪",
+      "kickoff_jst": "2026-10-31T04:30:00+09:00",
+      "status": "TIMED",
+      "stage": "REGULAR_SEASON",
+      "matchday": 8,
+      "home_id": 719,
+      "home_ja": "Elversberg",
+      "home_en": "Elversberg",
+      "home_crest": "https://crests.football-data.org/719.png",
+      "away_id": 15,
+      "away_ja": "マインツ",
+      "away_en": "Mainz",
+      "away_crest": "https://crests.football-data.org/15.png",
+      "score": null,
+      "japanese_players": [
+        {
+          "name_ja": "佐野海舟",
+          "position": "MF",
+          "side": "away"
+        },
+        {
+          "name_ja": "川﨑颯太",
+          "position": "MF",
+          "side": "away"
+        }
+      ],
+      "broadcasters": [
+        {
+          "name": "DAZN",
+          "type": "exclusive",
+          "url": "https://www.dazn.com/ja-JP/",
+          "note": "〜2027-28"
+        },
+        {
+          "name": "ABEMA",
+          "type": "partial",
+          "url": "https://abema.tv/subscription/lp/183c3ec2-c6d8-409e-80b6-caf5a8012f8a",
+          "note": "毎節2試合無料"
+        }
+      ]
+    },
+    {
+      "id": 561916,
+      "competition_id": 40,
+      "competition_ja": "チャンピオンシップ",
+      "competition_category": "league",
+      "competition_flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+      "kickoff_jst": "2026-10-31T05:00:00+09:00",
+      "status": "TIMED",
+      "stage": "REGULAR_SEASON",
+      "matchday": 13,
+      "home_id": 356,
+      "home_ja": "シェフィールド・ユナイテッド",
+      "home_en": "Sheffield Utd",
+      "home_crest": "https://crests.football-data.org/356.png",
+      "away_id": 404,
+      "away_ja": "レクサム",
+      "away_en": "Wrexham",
+      "away_crest": "https://crests.football-data.org/404.png",
+      "score": null,
+      "japanese_players": [],
+      "broadcasters": [
+        {
+          "name": "DAZN",
+          "type": "exclusive",
+          "url": "https://www.dazn.com/ja-JP/",
+          "note": "〜2027-28"
+        }
+      ]
+    },
+    {
+      "id": 564737,
+      "competition_id": 140,
+      "competition_ja": "ラ・リーガ",
+      "competition_category": "league",
+      "competition_flag": "🇪🇸",
+      "kickoff_jst": "2026-10-31T05:00:00+09:00",
+      "status": "TIMED",
+      "stage": "REGULAR_SEASON",
+      "matchday": 11,
+      "home_id": 94,
+      "home_ja": "ビジャレアル",
+      "home_en": "Villarreal",
+      "home_crest": "https://crests.football-data.org/94.png",
+      "away_id": 80,
+      "away_ja": "エスパニョール",
+      "away_en": "Espanyol",
+      "away_crest": "https://crests.football-data.org/80.png",
+      "score": null,
+      "japanese_players": [],
+      "broadcasters": [
+        {
+          "name": "U-NEXT",
+          "type": "shared",
+          "url": "https://www.unext.jp/"
+        },
+        {
+          "name": "DAZN",
+          "type": "shared",
+          "url": "https://www.dazn.com/ja-JP/",
+          "note": "〜2027-28"
+        }
+      ]
+    },
+    {
+      "id": 559639,
+      "competition_id": 61,
+      "competition_ja": "リーグ・アン",
+      "competition_category": "league",
+      "competition_flag": "🇫🇷",
+      "kickoff_jst": "2026-10-31T05:05:00+09:00",
+      "status": "TIMED",
+      "stage": "REGULAR_SEASON",
+      "matchday": 9,
+      "home_id": 521,
+      "home_ja": "リール",
+      "home_en": "Lille",
+      "home_crest": "https://crests.football-data.org/521.png",
+      "away_id": 546,
+      "away_ja": "ランス",
+      "away_en": "RC Lens",
+      "away_crest": "https://crests.football-data.org/546.png",
+      "score": null,
+      "japanese_players": [
+        {
+          "name_ja": "上田綺世",
+          "position": "FW",
+          "side": "home"
+        }
+      ],
+      "broadcasters": [
+        {
+          "name": "DAZN",
+          "type": "exclusive",
+          "url": "https://www.dazn.com/ja-JP/",
+          "note": "〜2028-29"
+        }
+      ]
+    },
+    {
+      "id": 567344,
+      "competition_id": 94,
+      "competition_ja": "プリメイラ・リーガ",
+      "competition_category": "league",
+      "competition_flag": "🇵🇹",
+      "kickoff_jst": "2026-10-31T05:15:00+09:00",
+      "status": "TIMED",
+      "stage": "REGULAR_SEASON",
+      "matchday": 10,
+      "home_id": 6618,
+      "home_ja": "カーザ・ピア",
+      "home_en": "Casa Pia",
+      "home_crest": "https://crests.football-data.org/6618.png",
+      "away_id": 498,
+      "away_ja": "スポルティングCP",
+      "away_en": "Sporting CP",
+      "away_crest": "https://crests.football-data.org/498.png",
+      "score": null,
+      "japanese_players": [],
+      "broadcasters": []
     }
   ],
-  "updated_yt_highlights": "2026-10-15T23:09:28.587752+09:00",
-  "updated_uefa_secondary": "2026-10-15T23:09:58.103534+09:00"
+  "updated_yt_highlights": "2026-10-16T09:09:05.887638+09:00",
+  "updated_uefa_secondary": "2026-10-16T09:09:33.878034+09:00"
 }
