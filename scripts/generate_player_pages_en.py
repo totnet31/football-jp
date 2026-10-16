@@ -6,6 +6,7 @@ generate_player_pages_en.py
 使い方: python3 scripts/generate_player_pages_en.py
 """
 
+from utils import is_result_pending
 import json
 import os
 import re
@@ -507,12 +508,13 @@ def build_player_page_en(player: dict, slug: str, scorer_stats: dict,
                 opponent = esc(away_en_m) if is_home else esc(home_en_m)
                 venue_cls = "venue-home" if is_home else "venue-away"
                 venue_label = "H" if is_home else "A"
+                _pending = is_result_pending(m)  # 開始から3時間すぎても予定のまま＝結果待ち
                 match_rows += f"""
-          <div class="match-row scheduled{extra_cls}">
+          <div class="match-row {'result-pending' if _pending else 'scheduled'}{extra_cls}">
             <div class="match-date">{date_display}</div>
             <div class="match-venue"><span class="venue-badge {venue_cls}">{venue_label}</span></div>
             <div class="match-opponent">vs {opponent}</div>
-            <div class="match-result">—</div>
+            <div class="match-result{' pending' if _pending else ''}">{'Result pending' if _pending else '—'}</div>
             <div class="match-broadcast">—</div>
             <div class="match-comp">{esc(comp_en_m)}</div>
           </div>"""
@@ -969,6 +971,7 @@ def build_player_page_en(player: dict, slug: str, scorer_stats: dict,
     .match-result.win {{ color: #1a7a3a; }}
     .match-result.lose {{ color: #c0392b; }}
     .match-result.draw {{ color: #666; }}
+    .match-result.pending {{ color: #8a6100; font-size: 12px; font-weight: 600; }}
     .match-broadcast {{
       display: flex; flex-wrap: wrap; gap: 4px;
       align-items: center; justify-content: center;
