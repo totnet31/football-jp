@@ -116,6 +116,7 @@
     .match-result.win { color: #1a7a3a; }
     .match-result.lose { color: #c0392b; }
     .match-result.draw { color: #666; }
+    .match-result.pending { color: #8a6100; font-size: 12px; font-weight: 600; }
     .match-broadcast {
       display: flex; flex-wrap: wrap; gap: 4px;
       align-items: center; justify-content: center;
@@ -343,11 +344,11 @@
 
   
     <section class="player-section">
-      <h3>👤 Profile</h3>
+      <h3>👤 Profile <a href="https://en.wikipedia.org/wiki/Urara_Watanabe" target="_blank" rel="noopener" style="font-size:11px;color:#888;">Wikipedia →</a></h3>
       <table class="profile-table">
-        <tr><td class="profile-label">Height / Weight</td><td class="profile-value">— / —</td></tr>
-        <tr><td class="profile-label">Date of Birth</td><td class="profile-value">—</td></tr>
-        <tr><td class="profile-label">Birthplace</td><td class="profile-value">—</td></tr>
+        <tr><td class="profile-label">Height / Weight</td><td class="profile-value">160 cm / —</td></tr>
+        <tr><td class="profile-label">Date of Birth</td><td class="profile-value">2002-04-08 (age 24)</td></tr>
+        <tr><td class="profile-label">Birthplace</td><td class="profile-value">Kyoto Prefecture, Japan</td></tr>
         <tr><td class="profile-label">Foot</td><td class="profile-value">—</td></tr>
       </table>
     </section>
@@ -358,11 +359,11 @@
     <section class="player-section">
       <h3>🏆 Eredivisie Current Standings</h3>
       <div class="standing-row">
-        <span class="standing-pos">7</span>
+        <span class="standing-pos">1</span>
         <span class="standing-detail">
-          (of 18)&nbsp;&nbsp;2 played&nbsp;
-          1W 1D 0L&nbsp;
-          4 pts
+          (of 18)&nbsp;&nbsp;8 played&nbsp;
+          6W 2D 0L&nbsp;
+          20 pts
         </span>
       </div>
     </section>
@@ -381,22 +382,94 @@
         </div>
         
           <div class="match-row scheduled">
-            <div class="match-date"><span class="match-date-day">2026/08/30</span><span class="match-date-time">(Sun) 21:30</span></div>
-            <div class="match-venue"><span class="venue-badge venue-home">H</span></div>
-            <div class="match-opponent">vs Den Haag</div>
+            <div class="match-date"><span class="match-date-day">2026/10/25</span><span class="match-date-time">(Sun) 22:30</span></div>
+            <div class="match-venue"><span class="venue-badge venue-away">A</span></div>
+            <div class="match-opponent">vs PSV</div>
             <div class="match-result">—</div>
             <div class="match-broadcast">—</div>
             <div class="match-comp">Eredivisie</div>
           </div>
           <div class="match-row scheduled">
-            <div class="match-date"><span class="match-date-day">2026/08/23</span><span class="match-date-time">(Sun) 23:45</span></div>
+            <div class="match-date"><span class="match-date-day">2026/10/22</span><span class="match-date-time">(Thu) 04:00</span></div>
             <div class="match-venue"><span class="venue-badge venue-away">A</span></div>
-            <div class="match-opponent">vs Cambuur</div>
+            <div class="match-opponent">vs Real Betis</div>
+            <div class="match-result">—</div>
+            <div class="match-broadcast">—</div>
+            <div class="match-comp">UEFA Champions League</div>
+          </div>
+          <div class="match-row scheduled">
+            <div class="match-date"><span class="match-date-day">2026/10/18</span><span class="match-date-time">(Sun) 03:00</span></div>
+            <div class="match-venue"><span class="venue-badge venue-away">A</span></div>
+            <div class="match-opponent">vs Telstar</div>
             <div class="match-result">—</div>
             <div class="match-broadcast">—</div>
             <div class="match-comp">Eredivisie</div>
           </div>
           <div class="match-row">
+            <div class="match-date"><span class="match-date-day">2026/10/15</span><span class="match-date-time">(Thu) 01:45</span></div>
+            <div class="match-venue"><span class="venue-badge venue-home">H</span></div>
+            <div class="match-opponent">vs Como 1907</div>
+            <div class="match-result win">3 - 2</div>
+            <div class="match-broadcast">—</div>
+            <div class="match-comp">UEFA Champions League</div>
+          </div>
+          <div class="match-row">
+            <div class="match-date"><span class="match-date-day">2026/10/11</span><span class="match-date-time">(Sun) 01:45</span></div>
+            <div class="match-venue"><span class="venue-badge venue-home">H</span></div>
+            <div class="match-opponent">vs AZ</div>
+            <div class="match-result win">2 - 0</div>
+            <div class="match-broadcast">—</div>
+            <div class="match-comp">Eredivisie</div>
+          </div>
+          <div class="match-row">
+            <div class="match-date"><span class="match-date-day">2026/09/20</span><span class="match-date-time">(Sun) 19:15</span></div>
+            <div class="match-venue"><span class="venue-badge venue-home">H</span></div>
+            <div class="match-opponent">vs Utrecht</div>
+            <div class="match-result win">5 - 0</div>
+            <div class="match-broadcast">—</div>
+            <div class="match-comp">Eredivisie</div>
+          </div>
+          <div class="match-row">
+            <div class="match-date"><span class="match-date-day">2026/09/13</span><span class="match-date-time">(Sun) 23:45</span></div>
+            <div class="match-venue"><span class="venue-badge venue-away">A</span></div>
+            <div class="match-opponent">vs Zwolle</div>
+            <div class="match-result win">7 - 0</div>
+            <div class="match-broadcast">—</div>
+            <div class="match-comp">Eredivisie</div>
+          </div>
+          <div class="match-row">
+            <div class="match-date"><span class="match-date-day">2026/09/10</span><span class="match-date-time">(Thu) 01:45</span></div>
+            <div class="match-venue"><span class="venue-badge venue-away">A</span></div>
+            <div class="match-opponent">vs Barça</div>
+            <div class="match-result lose">1 - 5</div>
+            <div class="match-broadcast">—</div>
+            <div class="match-comp">UEFA Champions League</div>
+          </div>
+          <div class="match-row">
+            <div class="match-date"><span class="match-date-day">2026/09/05</span><span class="match-date-time">(Sat) 23:30</span></div>
+            <div class="match-venue"><span class="venue-badge venue-away">A</span></div>
+            <div class="match-opponent">vs NEC</div>
+            <div class="match-result win">3 - 1</div>
+            <div class="match-broadcast">—</div>
+            <div class="match-comp">Eredivisie</div>
+          </div>
+          <div class="match-row">
+            <div class="match-date"><span class="match-date-day">2026/08/30</span><span class="match-date-time">(Sun) 21:30</span></div>
+            <div class="match-venue"><span class="venue-badge venue-home">H</span></div>
+            <div class="match-opponent">vs Den Haag</div>
+            <div class="match-result draw">2 - 2</div>
+            <div class="match-broadcast">—</div>
+            <div class="match-comp">Eredivisie</div>
+          </div>
+          <div class="match-row hidden-extra">
+            <div class="match-date"><span class="match-date-day">2026/08/23</span><span class="match-date-time">(Sun) 23:45</span></div>
+            <div class="match-venue"><span class="venue-badge venue-away">A</span></div>
+            <div class="match-opponent">vs Cambuur</div>
+            <div class="match-result win">5 - 2</div>
+            <div class="match-broadcast">—</div>
+            <div class="match-comp">Eredivisie</div>
+          </div>
+          <div class="match-row hidden-extra">
             <div class="match-date"><span class="match-date-day">2026/08/16</span><span class="match-date-time">(Sun) 21:30</span></div>
             <div class="match-venue"><span class="venue-badge venue-home">H</span></div>
             <div class="match-opponent">vs Go Ahead</div>
@@ -404,7 +477,7 @@
             <div class="match-broadcast">—</div>
             <div class="match-comp">Eredivisie</div>
           </div>
-          <div class="match-row">
+          <div class="match-row hidden-extra">
             <div class="match-date"><span class="match-date-day">2026/08/09</span><span class="match-date-time">(Sun) 19:15</span></div>
             <div class="match-venue"><span class="venue-badge venue-away">A</span></div>
             <div class="match-opponent">vs Sparta</div>
@@ -412,7 +485,7 @@
             <div class="match-broadcast">—</div>
             <div class="match-comp">Eredivisie</div>
           </div>
-          <div class="match-row">
+          <div class="match-row hidden-extra">
             <div class="match-date"><span class="match-date-day">2026/05/17</span><span class="match-date-time">(Sun) 21:30</span></div>
             <div class="match-venue"><span class="venue-badge venue-away">A</span></div>
             <div class="match-opponent">vs Zwolle</div>
@@ -420,7 +493,7 @@
             <div class="match-broadcast">—</div>
             <div class="match-comp">Eredivisie</div>
           </div>
-          <div class="match-row">
+          <div class="match-row hidden-extra">
             <div class="match-date"><span class="match-date-day">2026/05/10</span><span class="match-date-time">(Sun) 23:45</span></div>
             <div class="match-venue"><span class="venue-badge venue-home">H</span></div>
             <div class="match-opponent">vs AZ</div>
@@ -428,7 +501,7 @@
             <div class="match-broadcast">—</div>
             <div class="match-comp">Eredivisie</div>
           </div>
-          <div class="match-row">
+          <div class="match-row hidden-extra">
             <div class="match-date"><span class="match-date-day">2026/05/03</span><span class="match-date-time">(Sun) 21:30</span></div>
             <div class="match-venue"><span class="venue-badge venue-away">A</span></div>
             <div class="match-opponent">vs Sittard</div>
@@ -436,7 +509,7 @@
             <div class="match-broadcast">—</div>
             <div class="match-comp">Eredivisie</div>
           </div>
-          <div class="match-row">
+          <div class="match-row hidden-extra">
             <div class="match-date"><span class="match-date-day">2026/04/25</span><span class="match-date-time">(Sat) 23:30</span></div>
             <div class="match-venue"><span class="venue-badge venue-home">H</span></div>
             <div class="match-opponent">vs Groningen</div>
@@ -445,6 +518,9 @@
             <div class="match-comp">Eredivisie</div>
           </div>
       </div>
+      <button class="show-more-matches" onclick="toggleMoreMatches(this)" data-count="7" data-expanded="false">
+        Show more (7 remaining)
+      </button>
     </section>
 
   
@@ -452,14 +528,6 @@
       <h3>🎬 Season Goals & Highlights</h3>
       <div class="video-grid video-grid-player">
         
-        <a href="https://youtube.com/watch?v=37WKyC0Yf4Q" target="_blank" rel="noopener" class="video-card video-card-player">
-          <div class="video-thumb-wrap">
-            <img src="https://i.ytimg.com/vi/37WKyC0Yf4Q/mqdefault.jpg" alt="" loading="lazy">
-            
-          </div>
-          <div class="video-title">Vinesh Phogat broke the streak of Japanese wrestler Yui Susaki #olympics #aura #vineshphogat</div>
-          <div class="video-meta">Wrestle Amol · 04/13</div>
-        </a>
         <a href="https://youtube.com/watch?v=rRdWch3RofM" target="_blank" rel="noopener" class="video-card video-card-player">
           <div class="video-thumb-wrap">
             <img src="https://i.ytimg.com/vi/rRdWch3RofM/mqdefault.jpg" alt="" loading="lazy">
@@ -468,13 +536,13 @@
           <div class="video-title">【「チームを牽引する副キャプテン」に注目👀】サンフレッチェ広島レジーナ柳瀬楓菜</div>
           <div class="video-meta">WEリーグ公式チャンネル · 03/27</div>
         </a>
-        <a href="https://youtube.com/watch?v=kkC2JnK9v64" target="_blank" rel="noopener" class="video-card video-card-player">
+        <a href="https://youtube.com/watch?v=U6N43HsEM1o" target="_blank" rel="noopener" class="video-card video-card-player">
           <div class="video-thumb-wrap">
-            <img src="https://i.ytimg.com/vi/kkC2JnK9v64/mqdefault.jpg" alt="" loading="lazy">
+            <img src="https://i.ytimg.com/vi/U6N43HsEM1o/mqdefault.jpg" alt="" loading="lazy">
             
           </div>
-          <div class="video-title">WARMING-UP 🔥 | Feyenoord - Ajax | Eredivisie 25/26</div>
-          <div class="video-meta">Feyenoord · 03/21</div>
+          <div class="video-title">Kaoru Mitoma Dribbling Technique Revealed! Try it Out</div>
+          <div class="video-meta">Defend, Attack, Score! · 02/05</div>
         </a>
       </div>
     </section>
@@ -484,6 +552,21 @@
       <h3>Related Highlights</h3>
       <div class="video-grid">
         
+        <a href="https://youtu.be/M8HuyFGxY6E" target="_blank" rel="noopener" class="video-card">
+          <img src="https://i.ytimg.com/vi/M8HuyFGxY6E/mqdefault.jpg" alt="" loading="lazy">
+          <div class="video-title">【渡辺剛がフル出場 | NECナイメヘン v フェイエノールト｜ショートハイライト】エールディヴィジ 2026/27 第5節</div>
+          <div class="video-meta">U-NEXT · 09/05</div>
+        </a>
+        <a href="https://youtu.be/X54SqU2vvYA" target="_blank" rel="noopener" class="video-card">
+          <img src="https://i.ytimg.com/vi/X54SqU2vvYA/mqdefault.jpg" alt="" loading="lazy">
+          <div class="video-title">速報｜上田綺世が3戦連発！｜フェイエノールト v ADOデン・ハーグ｜エールディヴィジ 2026/27 第4節</div>
+          <div class="video-meta">U-NEXT · 08/30</div>
+        </a>
+        <a href="https://youtu.be/zrW9VpZqFSY" target="_blank" rel="noopener" class="video-card">
+          <img src="https://i.ytimg.com/vi/zrW9VpZqFSY/mqdefault.jpg" alt="" loading="lazy">
+          <div class="video-title">【上田綺世が今季2ゴール目 | カンブール v フェイエノールト｜ショートハイライト】エールディヴィジ 2026/27 第3節</div>
+          <div class="video-meta">U-NEXT · 08/23</div>
+        </a>
         <a href="https://youtu.be/aPaTB3fGo2s" target="_blank" rel="noopener" class="video-card">
           <img src="https://i.ytimg.com/vi/aPaTB3fGo2s/mqdefault.jpg" alt="" loading="lazy">
           <div class="video-title">速報｜上田綺世が今シーズン初ゴール！｜フェイエノールト v ゴー・アヘッド・イーグルス｜エールディヴィジ 2026/27 第2節</div>
@@ -519,26 +602,30 @@
     </section>
 
   
-
-  
-
-  
+    <section class="player-section">
+      <h3>📋 Career</h3>
+      <div class="career-current">🟢 Current club: <strong>Djurgården</strong> (2025–)</div>
+      <div class="career-list">
+        <div class="career-row is-current"><span class="career-years">2025–</span><span class="career-club">Djurgården</span></div><div class="career-row"><span class="career-years">2021–2025</span><span class="career-club">Nittaidai Yokohama</span></div><div class="career-row"><span class="career-years">?</span><span class="career-club">Forest Kyoto (Youth)</span></div><div class="career-row"><span class="career-years">?</span><span class="career-club">Nishikyogoku JSC (Youth)</span></div>
+      </div>
+    </section>
 
   
     <section class="player-section">
-      <h3>🏟️ Other Japanese Players at This Club</h3>
-      <div class="related-players-grid">
+      <h3>🇯🇵 International Career</h3>
+      <div class="national-team-list">
         
-          <a class="related-player-card" href="/en/players/ayase-ueda/">
-            <span class="related-player-flag">🇯🇵</span>
-            <div class="related-player-info">
-              <div class="related-player-name-ja">Ayase Ueda</div>
-              <div class="related-player-name-en">上田綺世</div>
-              <div class="related-player-pos">Forward</div>
+            <div class="nt-row">
+              <span class="nt-team">Japan U20</span>
+              <span class="nt-years">2022</span>
+              <span class="nt-stats">1 caps / 42026 goals</span>
             </div>
-          </a>
       </div>
     </section>
+
+  
+
+  
 
   <div class="player-section">
     <h3>🔗 Related Links</h3>

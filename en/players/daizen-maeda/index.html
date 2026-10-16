@@ -116,6 +116,7 @@
     .match-result.win { color: #1a7a3a; }
     .match-result.lose { color: #c0392b; }
     .match-result.draw { color: #666; }
+    .match-result.pending { color: #8a6100; font-size: 12px; font-weight: 600; }
     .match-broadcast {
       display: flex; flex-wrap: wrap; gap: 4px;
       align-items: center; justify-content: center;
@@ -332,7 +333,7 @@
       <span class="player-meta-tag">🏟️ Ipswich Town</span>
       <span class="player-meta-tag">🏆 Premier League</span>
     </div>
-    <div class="player-note">ℹ️ 2026年7月25日にセルティックから完全移籍で加入（2029年夏まで3年契約）</div>
+    
     <p style="margin:8px 0 0; font-size:12px; color:#888;">
       🇯🇵 <a href="https://football-jp.com/players/daizen-maeda/" class="lang-switch">日本語ページ</a>
     </p>
@@ -358,11 +359,11 @@
     <section class="player-section">
       <h3>🏆 Premier League Current Standings</h3>
       <div class="standing-row">
-        <span class="standing-pos">1</span>
+        <span class="standing-pos">10</span>
         <span class="standing-detail">
-          (of 20)&nbsp;&nbsp;0 played&nbsp;
-          0W 0D 0L&nbsp;
-          0 pts
+          (of 20)&nbsp;&nbsp;6 played&nbsp;
+          3W 0D 3L&nbsp;
+          9 pts
         </span>
       </div>
     </section>
@@ -381,26 +382,66 @@
         </div>
         
           <div class="match-row scheduled">
+            <div class="match-date"><span class="match-date-day">2026/10/24</span><span class="match-date-time">(Sat) 04:00</span></div>
+            <div class="match-venue"><span class="venue-badge venue-home">H</span></div>
+            <div class="match-opponent">vs Nottingham</div>
+            <div class="match-result">—</div>
+            <div class="match-broadcast">—</div>
+            <div class="match-comp">Premier League</div>
+          </div>
+          <div class="match-row scheduled">
+            <div class="match-date"><span class="match-date-day">2026/10/17</span><span class="match-date-time">(Sat) 23:00</span></div>
+            <div class="match-venue"><span class="venue-badge venue-away">A</span></div>
+            <div class="match-opponent">vs Man City</div>
+            <div class="match-result">—</div>
+            <div class="match-broadcast">—</div>
+            <div class="match-comp">Premier League</div>
+          </div>
+          <div class="match-row">
+            <div class="match-date"><span class="match-date-day">2026/10/10</span><span class="match-date-time">(Sat) 23:00</span></div>
+            <div class="match-venue"><span class="venue-badge venue-home">H</span></div>
+            <div class="match-opponent">vs Fulham</div>
+            <div class="match-result win">2 - 1</div>
+            <div class="match-broadcast">—</div>
+            <div class="match-comp">Premier League</div>
+          </div>
+          <div class="match-row">
+            <div class="match-date"><span class="match-date-day">2026/09/19</span><span class="match-date-time">(Sat) 23:00</span></div>
+            <div class="match-venue"><span class="venue-badge venue-away">A</span></div>
+            <div class="match-opponent">vs Everton</div>
+            <div class="match-result lose">0 - 1</div>
+            <div class="match-broadcast">—</div>
+            <div class="match-comp">Premier League</div>
+          </div>
+          <div class="match-row">
+            <div class="match-date"><span class="match-date-day">2026/09/12</span><span class="match-date-time">(Sat) 23:00</span></div>
+            <div class="match-venue"><span class="venue-badge venue-away">A</span></div>
+            <div class="match-opponent">vs Crystal Palace</div>
+            <div class="match-result win">3 - 2</div>
+            <div class="match-broadcast">—</div>
+            <div class="match-comp">Premier League</div>
+          </div>
+          <div class="match-row">
             <div class="match-date"><span class="match-date-day">2026/09/05</span><span class="match-date-time">(Sat) 04:00</span></div>
             <div class="match-venue"><span class="venue-badge venue-home">H</span></div>
             <div class="match-opponent">vs Liverpool</div>
-            <div class="match-result">—</div>
+            <div class="match-result lose">0 - 2</div>
             <div class="match-broadcast">—</div>
             <div class="match-comp">Premier League</div>
           </div>
-          <div class="match-row scheduled">
+          <div class="match-row">
             <div class="match-date"><span class="match-date-day">2026/08/31</span><span class="match-date-time">(Mon) 00:30</span></div>
             <div class="match-venue"><span class="venue-badge venue-away">A</span></div>
             <div class="match-opponent">vs Man United</div>
-            <div class="match-result">—</div>
+            <div class="match-result lose">2 - 5</div>
             <div class="match-broadcast">—</div>
             <div class="match-comp">Premier League</div>
           </div>
-          <div class="match-row scheduled">
+          <div class="match-row">
             <div class="match-date"><span class="match-date-day">2026/08/22</span><span class="match-date-time">(Sat) 23:00</span></div>
             <div class="match-venue"><span class="venue-badge venue-home">H</span></div>
             <div class="match-opponent">vs Sunderland</div>
-            <div class="match-result">—</div>
+            <div class="match-result win">2 - 1</div>
             <div class="match-broadcast">—</div>
             <div class="match-comp">Premier League</div>
           </div>
@@ -420,7 +461,7 @@
             <div class="match-broadcast">—</div>
             <div class="match-comp">Championship</div>
           </div>
-          <div class="match-row">
+          <div class="match-row hidden-extra">
             <div class="match-date"><span class="match-date-day">2026/04/25</span><span class="match-date-time">(Sat) 20:30</span></div>
             <div class="match-venue"><span class="venue-badge venue-away">A</span></div>
             <div class="match-opponent">vs West Brom</div>
@@ -429,15 +470,73 @@
             <div class="match-comp">Championship</div>
           </div>
       </div>
+      <button class="show-more-matches" onclick="toggleMoreMatches(this)" data-count="1" data-expanded="false">
+        Show more (1 remaining)
+      </button>
     </section>
 
   
+    <section class="player-section">
+      <h3>🎬 Season Goals & Highlights</h3>
+      <div class="video-grid video-grid-player">
+        
+        <a href="https://youtube.com/watch?v=qIesO6p8NBw" target="_blank" rel="noopener" class="video-card video-card-player">
+          <div class="video-thumb-wrap">
+            <img src="https://i.ytimg.com/vi/qIesO6p8NBw/mqdefault.jpg" alt="" loading="lazy">
+            
+          </div>
+          <div class="video-title">DAIZEN MAEDA 🔥 | ALL GOALS 2025/26 | CELTIC FC</div>
+          <div class="video-meta">Celtix · 05/31</div>
+        </a>
+        <a href="https://youtube.com/watch?v=tYziWoOx4ko" target="_blank" rel="noopener" class="video-card video-card-player">
+          <div class="video-thumb-wrap">
+            <img src="https://i.ytimg.com/vi/tYziWoOx4ko/mqdefault.jpg" alt="" loading="lazy">
+            
+          </div>
+          <div class="video-title">DAIZEN MAEDA 🇯🇵 | Top Plays &amp;amp; Clutch Moments 👏 | William Hill Premiership 25/26</div>
+          <div class="video-meta">SPFL · 06/29</div>
+        </a>
+        <a href="https://youtube.com/watch?v=8HrRk6LL8-4" target="_blank" rel="noopener" class="video-card video-card-player">
+          <div class="video-thumb-wrap">
+            <img src="https://i.ytimg.com/vi/8HrRk6LL8-4/mqdefault.jpg" alt="" loading="lazy">
+            
+          </div>
+          <div class="video-title">DAIZEN MAEDA / 前田 大然 - Unreal Goals, Skills, Assists - Celtic FC &amp;amp; Japan - 2024/2025</div>
+          <div class="video-meta">paneecalcio · 03/25</div>
+        </a>
+      </div>
+    </section>
 
   
     <section class="player-section">
-      <h3>📺 Match Highlights</h3>
+      <h3>Related Highlights</h3>
       <div class="video-grid">
         
+        <a href="https://youtu.be/RbQjTxnDRhI" target="_blank" rel="noopener" class="video-card">
+          <img src="https://i.ytimg.com/vi/RbQjTxnDRhI/mqdefault.jpg" alt="" loading="lazy">
+          <div class="video-title">【🇯🇵前田大然が先発出場｜イプスウィッチ v フラム｜ショートハイライト】プレミアリーグ2026/27 第6節</div>
+          <div class="video-meta">U-NEXT · 10/10</div>
+        </a>
+        <a href="https://youtu.be/Now_Sy2jLAU" target="_blank" rel="noopener" class="video-card">
+          <img src="https://i.ytimg.com/vi/Now_Sy2jLAU/mqdefault.jpg" alt="" loading="lazy">
+          <div class="video-title">【前田大然が途中出場｜エヴァートン v イプスウィッチ｜ショートハイライト】プレミアリーグ2026/27 第5節</div>
+          <div class="video-meta">U-NEXT · 09/19</div>
+        </a>
+        <a href="https://youtu.be/9dZ4-Z4sDFk" target="_blank" rel="noopener" class="video-card">
+          <img src="https://i.ytimg.com/vi/9dZ4-Z4sDFk/mqdefault.jpg" alt="" loading="lazy">
+          <div class="video-title">【日本人対決を終えて】冨安健洋（クリスタル・パレス）｜イプスウィッチ戦 試合後インタビュー｜プレミアリーグ 2026/27 第4節</div>
+          <div class="video-meta">U-NEXT · 09/12</div>
+        </a>
+        <a href="https://youtu.be/EQy0syd0-wI" target="_blank" rel="noopener" class="video-card">
+          <img src="https://i.ytimg.com/vi/EQy0syd0-wI/mqdefault.jpg" alt="" loading="lazy">
+          <div class="video-title">【前田大然が先発出場｜イプスウィッチ v リヴァプール｜ショートハイライト】プレミアリーグ 2026/27 第3節</div>
+          <div class="video-meta">U-NEXT · 09/05</div>
+        </a>
+        <a href="https://youtu.be/nYVxVHvwM6E" target="_blank" rel="noopener" class="video-card">
+          <img src="https://i.ytimg.com/vi/nYVxVHvwM6E/mqdefault.jpg" alt="" loading="lazy">
+          <div class="video-title">Nilson Angulo with an INSANE free kick for Sunderland vs Ipswich Town 😤 | #PremierLeague</div>
+          <div class="video-meta">DAZN Football · 08/22</div>
+        </a>
         <a href="https://www.youtube.com/watch?v=nNzPtExTyDM" target="_blank" rel="noopener" class="video-card">
           <img src="https://i.ytimg.com/vi/nNzPtExTyDM/mqdefault.jpg" alt="" loading="lazy">
           <div class="video-title">サウサンプトン vs イプスウィッチ｜EFL Championship ハイライト</div>
@@ -474,7 +573,7 @@
             <div class="nt-row">
               <span class="nt-team">Japan</span>
               <span class="nt-years">2019–</span>
-              <span class="nt-stats">30 caps / 5 goals</span>
+              <span class="nt-stats">33 caps / 5 goals</span>
             </div>
       </div>
     </section>

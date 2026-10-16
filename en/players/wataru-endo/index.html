@@ -116,6 +116,7 @@
     .match-result.win { color: #1a7a3a; }
     .match-result.lose { color: #c0392b; }
     .match-result.draw { color: #666; }
+    .match-result.pending { color: #8a6100; font-size: 12px; font-weight: 600; }
     .match-broadcast {
       display: flex; flex-wrap: wrap; gap: 4px;
       align-items: center; justify-content: center;
@@ -347,7 +348,7 @@
       <table class="profile-table">
         <tr><td class="profile-label">Height / Weight</td><td class="profile-value">178 cm / —</td></tr>
         <tr><td class="profile-label">Date of Birth</td><td class="profile-value">1993-02-09 (age 33)</td></tr>
-        <tr><td class="profile-label">Birthplace</td><td class="profile-value">Totsuka-ku, Yokohama, Japan</td></tr>
+        <tr><td class="profile-label">Birthplace</td><td class="profile-value">Totsuka-ku, Yokohama, Kanagawa, Japan</td></tr>
         <tr><td class="profile-label">Foot</td><td class="profile-value">—</td></tr>
       </table>
     </section>
@@ -380,11 +381,11 @@
     <section class="player-section">
       <h3>🏆 Premier League Current Standings</h3>
       <div class="standing-row">
-        <span class="standing-pos">1</span>
+        <span class="standing-pos">9</span>
         <span class="standing-detail">
-          (of 20)&nbsp;&nbsp;0 played&nbsp;
-          0W 0D 0L&nbsp;
-          0 pts
+          (of 20)&nbsp;&nbsp;6 played&nbsp;
+          2W 3D 1L&nbsp;
+          9 pts
         </span>
       </div>
     </section>
@@ -403,30 +404,94 @@
         </div>
         
           <div class="match-row scheduled">
-            <div class="match-date"><span class="match-date-day">2026/09/05</span><span class="match-date-time">(Sat) 04:00</span></div>
-            <div class="match-venue"><span class="venue-badge venue-away">A</span></div>
-            <div class="match-opponent">vs Ipswich Town</div>
-            <div class="match-result">—</div>
-            <div class="match-broadcast">—</div>
-            <div class="match-comp">Premier League</div>
-          </div>
-          <div class="match-row scheduled">
-            <div class="match-date"><span class="match-date-day">2026/08/29</span><span class="match-date-time">(Sat) 20:30</span></div>
+            <div class="match-date"><span class="match-date-day">2026/10/25</span><span class="match-date-time">(Sun) 23:00</span></div>
             <div class="match-venue"><span class="venue-badge venue-home">H</span></div>
-            <div class="match-opponent">vs Nottingham</div>
+            <div class="match-opponent">vs Brighton Hove</div>
             <div class="match-result">—</div>
             <div class="match-broadcast">—</div>
             <div class="match-comp">Premier League</div>
           </div>
           <div class="match-row scheduled">
-            <div class="match-date"><span class="match-date-day">2026/08/24</span><span class="match-date-time">(Mon) 00:30</span></div>
+            <div class="match-date"><span class="match-date-day">2026/10/21</span><span class="match-date-time">(Wed) 04:00</span></div>
+            <div class="match-venue"><span class="venue-badge venue-home">H</span></div>
+            <div class="match-opponent">vs Villarreal</div>
+            <div class="match-result">—</div>
+            <div class="match-broadcast">—</div>
+            <div class="match-comp">UEFA Champions League</div>
+          </div>
+          <div class="match-row scheduled">
+            <div class="match-date"><span class="match-date-day">2026/10/17</span><span class="match-date-time">(Sat) 23:00</span></div>
             <div class="match-venue"><span class="venue-badge venue-away">A</span></div>
-            <div class="match-opponent">vs Newcastle</div>
+            <div class="match-opponent">vs Brentford</div>
             <div class="match-result">—</div>
             <div class="match-broadcast">—</div>
             <div class="match-comp">Premier League</div>
           </div>
           <div class="match-row">
+            <div class="match-date"><span class="match-date-day">2026/10/15</span><span class="match-date-time">(Thu) 01:45</span></div>
+            <div class="match-venue"><span class="venue-badge venue-away">A</span></div>
+            <div class="match-opponent">vs LASK</div>
+            <div class="match-result win">6 - 3</div>
+            <div class="match-broadcast">—</div>
+            <div class="match-comp">UEFA Champions League</div>
+          </div>
+          <div class="match-row">
+            <div class="match-date"><span class="match-date-day">2026/10/12</span><span class="match-date-time">(Mon) 00:30</span></div>
+            <div class="match-venue"><span class="venue-badge venue-home">H</span></div>
+            <div class="match-opponent">vs Man City</div>
+            <div class="match-result lose">0 - 3</div>
+            <div class="match-broadcast">—</div>
+            <div class="match-comp">Premier League</div>
+          </div>
+          <div class="match-row">
+            <div class="match-date"><span class="match-date-day">2026/09/20</span><span class="match-date-time">(Sun) 22:00</span></div>
+            <div class="match-venue"><span class="venue-badge venue-away">A</span></div>
+            <div class="match-opponent">vs Bournemouth</div>
+            <div class="match-result win">1 - 0</div>
+            <div class="match-broadcast">—</div>
+            <div class="match-comp">Premier League</div>
+          </div>
+          <div class="match-row">
+            <div class="match-date"><span class="match-date-day">2026/09/12</span><span class="match-date-time">(Sat) 23:00</span></div>
+            <div class="match-venue"><span class="venue-badge venue-home">H</span></div>
+            <div class="match-opponent">vs Fulham</div>
+            <div class="match-result draw">0 - 0</div>
+            <div class="match-broadcast">—</div>
+            <div class="match-comp">Premier League</div>
+          </div>
+          <div class="match-row">
+            <div class="match-date"><span class="match-date-day">2026/09/10</span><span class="match-date-time">(Thu) 04:00</span></div>
+            <div class="match-venue"><span class="venue-badge venue-home">H</span></div>
+            <div class="match-opponent">vs Atleti</div>
+            <div class="match-result win">2 - 1</div>
+            <div class="match-broadcast">—</div>
+            <div class="match-comp">UEFA Champions League</div>
+          </div>
+          <div class="match-row">
+            <div class="match-date"><span class="match-date-day">2026/09/05</span><span class="match-date-time">(Sat) 04:00</span></div>
+            <div class="match-venue"><span class="venue-badge venue-away">A</span></div>
+            <div class="match-opponent">vs Ipswich Town</div>
+            <div class="match-result win">2 - 0</div>
+            <div class="match-broadcast">—</div>
+            <div class="match-comp">Premier League</div>
+          </div>
+          <div class="match-row">
+            <div class="match-date"><span class="match-date-day">2026/08/29</span><span class="match-date-time">(Sat) 20:30</span></div>
+            <div class="match-venue"><span class="venue-badge venue-home">H</span></div>
+            <div class="match-opponent">vs Nottingham</div>
+            <div class="match-result draw">2 - 2</div>
+            <div class="match-broadcast">—</div>
+            <div class="match-comp">Premier League</div>
+          </div>
+          <div class="match-row hidden-extra">
+            <div class="match-date"><span class="match-date-day">2026/08/24</span><span class="match-date-time">(Mon) 00:30</span></div>
+            <div class="match-venue"><span class="venue-badge venue-away">A</span></div>
+            <div class="match-opponent">vs Newcastle</div>
+            <div class="match-result draw">2 - 2</div>
+            <div class="match-broadcast">—</div>
+            <div class="match-comp">Premier League</div>
+          </div>
+          <div class="match-row hidden-extra">
             <div class="match-date"><span class="match-date-day">2026/05/25</span><span class="match-date-time">(Mon) 00:00</span></div>
             <div class="match-venue"><span class="venue-badge venue-home">H</span></div>
             <div class="match-opponent">vs Brentford</div>
@@ -434,7 +499,7 @@
             <div class="match-broadcast">—</div>
             <div class="match-comp">Premier League</div>
           </div>
-          <div class="match-row">
+          <div class="match-row hidden-extra">
             <div class="match-date"><span class="match-date-day">2026/05/16</span><span class="match-date-time">(Sat) 04:00</span></div>
             <div class="match-venue"><span class="venue-badge venue-away">A</span></div>
             <div class="match-opponent">vs Aston Villa</div>
@@ -442,7 +507,7 @@
             <div class="match-broadcast">—</div>
             <div class="match-comp">Premier League</div>
           </div>
-          <div class="match-row">
+          <div class="match-row hidden-extra">
             <div class="match-date"><span class="match-date-day">2026/05/09</span><span class="match-date-time">(Sat) 20:30</span></div>
             <div class="match-venue"><span class="venue-badge venue-home">H</span></div>
             <div class="match-opponent">vs Chelsea</div>
@@ -450,7 +515,7 @@
             <div class="match-broadcast">—</div>
             <div class="match-comp">Premier League</div>
           </div>
-          <div class="match-row">
+          <div class="match-row hidden-extra">
             <div class="match-date"><span class="match-date-day">2026/05/03</span><span class="match-date-time">(Sun) 23:30</span></div>
             <div class="match-venue"><span class="venue-badge venue-away">A</span></div>
             <div class="match-opponent">vs Man United</div>
@@ -458,7 +523,7 @@
             <div class="match-broadcast">—</div>
             <div class="match-comp">Premier League</div>
           </div>
-          <div class="match-row">
+          <div class="match-row hidden-extra">
             <div class="match-date"><span class="match-date-day">2026/04/25</span><span class="match-date-time">(Sat) 23:00</span></div>
             <div class="match-venue"><span class="venue-badge venue-home">H</span></div>
             <div class="match-opponent">vs Crystal Palace</div>
@@ -467,6 +532,9 @@
             <div class="match-comp">Premier League</div>
           </div>
       </div>
+      <button class="show-more-matches" onclick="toggleMoreMatches(this)" data-count="6" data-expanded="false">
+        Show more (6 remaining)
+      </button>
     </section>
 
   
@@ -482,21 +550,21 @@
           <div class="video-title">Endo&amp;#39;s first touches of pre-season! 💪</div>
           <div class="video-meta">Liverpool FC · 08/09</div>
         </a>
-        <a href="https://youtube.com/watch?v=QLFMQIOldMc" target="_blank" rel="noopener" class="video-card video-card-player">
+        <a href="https://youtube.com/watch?v=yCMk3Q5ajgI" target="_blank" rel="noopener" class="video-card video-card-player">
           <div class="video-thumb-wrap">
-            <img src="https://i.ytimg.com/vi/QLFMQIOldMc/mqdefault.jpg" alt="" loading="lazy">
+            <img src="https://i.ytimg.com/vi/yCMk3Q5ajgI/mqdefault.jpg" alt="" loading="lazy">
             
           </div>
-          <div class="video-title">【遠藤航】現地サポを爆上げさせた瞬間www</div>
-          <div class="video-meta">FOOTBALL NOW · 03/12</div>
+          <div class="video-title">Liverpool 0-3 Man City | Extended Highlights &amp;amp; All Goals | Premier League 2025/26</div>
+          <div class="video-meta">Dima Hanya · 10/11</div>
         </a>
-        <a href="https://youtube.com/watch?v=QWjdJv7ZktY" target="_blank" rel="noopener" class="video-card video-card-player">
+        <a href="https://youtube.com/watch?v=MJJJ9YEQzxo" target="_blank" rel="noopener" class="video-card video-card-player">
           <div class="video-thumb-wrap">
-            <img src="https://i.ytimg.com/vi/QWjdJv7ZktY/mqdefault.jpg" alt="" loading="lazy">
+            <img src="https://i.ytimg.com/vi/MJJJ9YEQzxo/mqdefault.jpg" alt="" loading="lazy">
             
           </div>
-          <div class="video-title">Extended Highlights: Liverpool 2-3 Monaco | Munoz debut, Isak &amp;amp; Wirtz goals</div>
-          <div class="video-meta">Liverpool FC · 08/10</div>
+          <div class="video-title">Man City 3-0 Liverpool | HIGHLIGHTS &amp;amp; All Goals | Premier League 2025/26</div>
+          <div class="video-meta">Dima Hanya · 10/11</div>
         </a>
       </div>
     </section>
@@ -506,6 +574,31 @@
       <h3>Related Highlights</h3>
       <div class="video-grid">
         
+        <a href="https://youtu.be/DHiLHScom2c" target="_blank" rel="noopener" class="video-card">
+          <img src="https://i.ytimg.com/vi/DHiLHScom2c/mqdefault.jpg" alt="" loading="lazy">
+          <div class="video-title">【LASK vs リヴァプール】UEFAチャンピオンズリーグ 2026-27 リーグフェーズ MD2／3分ハイライト【WOWOW】</div>
+          <div class="video-meta">WOWOW · 10/15</div>
+        </a>
+        <a href="https://youtu.be/Cj8DS5XJ0AI" target="_blank" rel="noopener" class="video-card">
+          <img src="https://i.ytimg.com/vi/Cj8DS5XJ0AI/mqdefault.jpg" alt="" loading="lazy">
+          <div class="video-title">【ボーンマス v リヴァプール ｜ショートハイライト】プレミアリーグ2026/27 第5節</div>
+          <div class="video-meta">U-NEXT · 09/20</div>
+        </a>
+        <a href="https://youtu.be/Cr8r1MVHsjM" target="_blank" rel="noopener" class="video-card">
+          <img src="https://i.ytimg.com/vi/Cr8r1MVHsjM/mqdefault.jpg" alt="" loading="lazy">
+          <div class="video-title">【リヴァプール v フラム｜ショートハイライト】プレミアリーグ2026/27 第4節</div>
+          <div class="video-meta">U-NEXT · 09/12</div>
+        </a>
+        <a href="https://youtu.be/EQy0syd0-wI" target="_blank" rel="noopener" class="video-card">
+          <img src="https://i.ytimg.com/vi/EQy0syd0-wI/mqdefault.jpg" alt="" loading="lazy">
+          <div class="video-title">【前田大然が先発出場｜イプスウィッチ v リヴァプール｜ショートハイライト】プレミアリーグ 2026/27 第3節</div>
+          <div class="video-meta">U-NEXT · 09/05</div>
+        </a>
+        <a href="https://youtu.be/4RTOzR95RQQ" target="_blank" rel="noopener" class="video-card">
+          <img src="https://i.ytimg.com/vi/4RTOzR95RQQ/mqdefault.jpg" alt="" loading="lazy">
+          <div class="video-title">【ニューカッスル v リヴァプール｜ショートハイライト】プレミアリーグ 2026/27 第1節</div>
+          <div class="video-meta">U-NEXT · 08/24</div>
+        </a>
         <a href="https://youtu.be/G7JPJlpUrIs" target="_blank" rel="noopener" class="video-card">
           <img src="https://i.ytimg.com/vi/G7JPJlpUrIs/mqdefault.jpg" alt="" loading="lazy">
           <div class="video-title">LAST ASSIST｜モハメド・サラー（リヴァプール）｜リヴァプール v ブレントフォード｜プレミアリーグ25/26 第38節</div>
@@ -571,7 +664,7 @@
     <section class="player-section">
       <h3>🔗 Social Media & Official Links</h3>
       <div class="sns-links">
-        <a class="sns-link sns-twitter" href="https://x.com/LFC" target="_blank" rel="noopener">𝕏 @LFC</a><a class="sns-link sns-instagram" href="https://www.instagram.com/endowataru/" target="_blank" rel="noopener">📷 @endowataru</a><a class="sns-link sns-official" href="https://www.liverpoolfc.com/team/mens/player/wataru-endo" target="_blank" rel="noopener">🌐 www.liverpoolfc.com</a>
+        <a class="sns-link sns-twitter" href="https://x.com/LFC" target="_blank" rel="noopener">𝕏 @LFC</a><a class="sns-link sns-instagram" href="https://www.instagram.com/endowataru/" target="_blank" rel="noopener">📷 @endowataru</a><a class="sns-link sns-official" href="https://www.liverpoolfc.com/teams/mens-team/wataru-endo" target="_blank" rel="noopener">🌐 www.liverpoolfc.com</a>
       </div>
     </section>
 

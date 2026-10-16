@@ -116,6 +116,7 @@
     .match-result.win { color: #1a7a3a; }
     .match-result.lose { color: #c0392b; }
     .match-result.draw { color: #666; }
+    .match-result.pending { color: #8a6100; font-size: 12px; font-weight: 600; }
     .match-broadcast {
       display: flex; flex-wrap: wrap; gap: 4px;
       align-items: center; justify-content: center;
@@ -332,7 +333,7 @@
       <span class="player-meta-tag">🏟️ Birmingham</span>
       <span class="player-meta-tag">🏆 Championship</span>
     </div>
-    <div class="player-note">ℹ️ 2025年7月にジル・ヴィセンテから移籍。リストの記載誤りを修正</div>
+    
     <p style="margin:8px 0 0; font-size:12px; color:#888;">
       🇯🇵 <a href="https://football-jp.com/players/kanya-fujimoto/" class="lang-switch">日本語ページ</a>
     </p>
@@ -358,11 +359,11 @@
     <section class="player-section">
       <h3>🏆 Championship Current Standings</h3>
       <div class="standing-row">
-        <span class="standing-pos">15</span>
+        <span class="standing-pos">4</span>
         <span class="standing-detail">
-          (of 24)&nbsp;&nbsp;1 played&nbsp;
-          0W 1D 0L&nbsp;
-          1 pts
+          (of 24)&nbsp;&nbsp;10 played&nbsp;
+          4W 5D 1L&nbsp;
+          17 pts
         </span>
       </div>
     </section>
@@ -381,30 +382,94 @@
         </div>
         
           <div class="match-row scheduled">
-            <div class="match-date"><span class="match-date-day">2026/09/02</span><span class="match-date-time">(Wed) 03:45</span></div>
-            <div class="match-venue"><span class="venue-badge venue-home">H</span></div>
-            <div class="match-opponent">vs Southampton</div>
-            <div class="match-result">—</div>
-            <div class="match-broadcast">—</div>
-            <div class="match-comp">Championship</div>
-          </div>
-          <div class="match-row scheduled">
-            <div class="match-date"><span class="match-date-day">2026/08/29</span><span class="match-date-time">(Sat) 04:00</span></div>
+            <div class="match-date"><span class="match-date-day">2026/10/24</span><span class="match-date-time">(Sat) 23:00</span></div>
             <div class="match-venue"><span class="venue-badge venue-away">A</span></div>
-            <div class="match-opponent">vs Wrexham</div>
+            <div class="match-opponent">vs Cardiff</div>
             <div class="match-result">—</div>
             <div class="match-broadcast">—</div>
             <div class="match-comp">Championship</div>
           </div>
           <div class="match-row scheduled">
-            <div class="match-date"><span class="match-date-day">2026/08/22</span><span class="match-date-time">(Sat) 20:30</span></div>
+            <div class="match-date"><span class="match-date-day">2026/10/17</span><span class="match-date-time">(Sat) 23:00</span></div>
             <div class="match-venue"><span class="venue-badge venue-home">H</span></div>
-            <div class="match-opponent">vs Bristol City</div>
+            <div class="match-opponent">vs QPR</div>
             <div class="match-result">—</div>
+            <div class="match-broadcast">—</div>
+            <div class="match-comp">Championship</div>
+          </div>
+          <div class="match-row result-pending">
+            <div class="match-date"><span class="match-date-day">2026/10/14</span><span class="match-date-time">(Wed) 04:00</span></div>
+            <div class="match-venue"><span class="venue-badge venue-home">H</span></div>
+            <div class="match-opponent">vs Preston NE</div>
+            <div class="match-result pending">Result pending</div>
             <div class="match-broadcast">—</div>
             <div class="match-comp">Championship</div>
           </div>
           <div class="match-row">
+            <div class="match-date"><span class="match-date-day">2026/10/10</span><span class="match-date-time">(Sat) 20:30</span></div>
+            <div class="match-venue"><span class="venue-badge venue-away">A</span></div>
+            <div class="match-opponent">vs West Brom</div>
+            <div class="match-result win">1 - 0</div>
+            <div class="match-broadcast">—</div>
+            <div class="match-comp">Championship</div>
+          </div>
+          <div class="match-row">
+            <div class="match-date"><span class="match-date-day">2026/09/19</span><span class="match-date-time">(Sat) 23:00</span></div>
+            <div class="match-venue"><span class="venue-badge venue-home">H</span></div>
+            <div class="match-opponent">vs Middlesbrough</div>
+            <div class="match-result draw">2 - 2</div>
+            <div class="match-broadcast">—</div>
+            <div class="match-comp">Championship</div>
+          </div>
+          <div class="match-row">
+            <div class="match-date"><span class="match-date-day">2026/09/12</span><span class="match-date-time">(Sat) 20:30</span></div>
+            <div class="match-venue"><span class="venue-badge venue-away">A</span></div>
+            <div class="match-opponent">vs Derby County</div>
+            <div class="match-result win">2 - 1</div>
+            <div class="match-broadcast">—</div>
+            <div class="match-comp">Championship</div>
+          </div>
+          <div class="match-row">
+            <div class="match-date"><span class="match-date-day">2026/09/10</span><span class="match-date-time">(Thu) 03:45</span></div>
+            <div class="match-venue"><span class="venue-badge venue-away">A</span></div>
+            <div class="match-opponent">vs Norwich</div>
+            <div class="match-result lose">1 - 2</div>
+            <div class="match-broadcast">—</div>
+            <div class="match-comp">Championship</div>
+          </div>
+          <div class="match-row">
+            <div class="match-date"><span class="match-date-day">2026/09/06</span><span class="match-date-time">(Sun) 20:00</span></div>
+            <div class="match-venue"><span class="venue-badge venue-home">H</span></div>
+            <div class="match-opponent">vs Wolverhampton</div>
+            <div class="match-result draw">2 - 2</div>
+            <div class="match-broadcast">—</div>
+            <div class="match-comp">Championship</div>
+          </div>
+          <div class="match-row">
+            <div class="match-date"><span class="match-date-day">2026/09/02</span><span class="match-date-time">(Wed) 04:00</span></div>
+            <div class="match-venue"><span class="venue-badge venue-home">H</span></div>
+            <div class="match-opponent">vs Southampton</div>
+            <div class="match-result draw">1 - 1</div>
+            <div class="match-broadcast">—</div>
+            <div class="match-comp">Championship</div>
+          </div>
+          <div class="match-row">
+            <div class="match-date"><span class="match-date-day">2026/08/29</span><span class="match-date-time">(Sat) 04:00</span></div>
+            <div class="match-venue"><span class="venue-badge venue-away">A</span></div>
+            <div class="match-opponent">vs Wrexham</div>
+            <div class="match-result win">2 - 1</div>
+            <div class="match-broadcast">—</div>
+            <div class="match-comp">Championship</div>
+          </div>
+          <div class="match-row hidden-extra">
+            <div class="match-date"><span class="match-date-day">2026/08/22</span><span class="match-date-time">(Sat) 20:30</span></div>
+            <div class="match-venue"><span class="venue-badge venue-home">H</span></div>
+            <div class="match-opponent">vs Bristol City</div>
+            <div class="match-result draw">2 - 2</div>
+            <div class="match-broadcast">—</div>
+            <div class="match-comp">Championship</div>
+          </div>
+          <div class="match-row hidden-extra">
             <div class="match-date"><span class="match-date-day">2026/08/16</span><span class="match-date-time">(Sun) 01:30</span></div>
             <div class="match-venue"><span class="venue-badge venue-away">A</span></div>
             <div class="match-opponent">vs Sheffield Utd</div>
@@ -412,7 +477,7 @@
             <div class="match-broadcast">—</div>
             <div class="match-comp">Championship</div>
           </div>
-          <div class="match-row">
+          <div class="match-row hidden-extra">
             <div class="match-date"><span class="match-date-day">2026/05/02</span><span class="match-date-time">(Sat) 20:30</span></div>
             <div class="match-venue"><span class="venue-badge venue-away">A</span></div>
             <div class="match-opponent">vs Portsmouth</div>
@@ -420,7 +485,7 @@
             <div class="match-broadcast">—</div>
             <div class="match-comp">Championship</div>
           </div>
-          <div class="match-row">
+          <div class="match-row hidden-extra">
             <div class="match-date"><span class="match-date-day">2026/04/25</span><span class="match-date-time">(Sat) 23:00</span></div>
             <div class="match-venue"><span class="venue-badge venue-home">H</span></div>
             <div class="match-opponent">vs Bristol City</div>
@@ -429,6 +494,9 @@
             <div class="match-comp">Championship</div>
           </div>
       </div>
+      <button class="show-more-matches" onclick="toggleMoreMatches(this)" data-count="4" data-expanded="false">
+        Show more (4 remaining)
+      </button>
     </section>
 
   
@@ -444,9 +512,9 @@
   
     <section class="player-section">
       <h3>📋 Career</h3>
-      <div class="career-current">🟢 Current club: <strong>Birmingham City</strong> (2025–)</div>
+      <div class="career-current">🟢 Current club: <strong>→ Tokyo Verdy (on loan)</strong> (2026–)</div>
       <div class="career-list">
-        <div class="career-row is-current"><span class="career-years">2025–</span><span class="career-club">Birmingham City</span></div><div class="career-row"><span class="career-years">2022–2025</span><span class="career-club">Gil Vicente</span></div><div class="career-row"><span class="career-years">2020–2022</span><span class="career-club">→ Gil Vicente (loan)</span></div><div class="career-row"><span class="career-years">2018–2022</span><span class="career-club">Tokyo Verdy</span></div><div class="career-row"><span class="career-years">2012–2017</span><span class="career-club">Tokyo Verdy (Youth)</span></div><div class="career-row"><span class="career-years">?</span><span class="career-club">Amigos FC (Youth)</span></div><div class="career-row"><span class="career-years">?</span><span class="career-club">FC Valie Tsuru (Youth)</span></div>
+        <div class="career-row is-current"><span class="career-years">2025–</span><span class="career-club">Birmingham City</span></div><div class="career-row is-current"><span class="career-years">2026–</span><span class="career-club">→ Tokyo Verdy (on loan)</span></div><div class="career-row"><span class="career-years">2022–2025</span><span class="career-club">Gil Vicente</span></div><div class="career-row"><span class="career-years">2020–2022</span><span class="career-club">→ Gil Vicente (loan)</span></div><div class="career-row"><span class="career-years">2018–2022</span><span class="career-club">Tokyo Verdy</span></div><div class="career-row"><span class="career-years">2012–2017</span><span class="career-club">Tokyo Verdy (Youth)</span></div><div class="career-row"><span class="career-years">?</span><span class="career-club">Amigos FC (Youth)</span></div><div class="career-row"><span class="career-years">?</span><span class="career-club">FC Valie Tsuru (Youth)</span></div>
       </div>
     </section>
 

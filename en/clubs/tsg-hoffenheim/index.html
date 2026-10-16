@@ -92,6 +92,7 @@
     .match-result.win { color: #1a7a3a; }
     .match-result.lose { color: #c0392b; }
     .match-result.draw { color: #666; }
+    .match-result.pending { color: #8a6100; font-size: 12px; font-weight: 600; }
     .match-broadcast { display: flex; flex-wrap: wrap; gap: 4px; align-items: center; justify-content: center; }
     .match-date-day { display: block; font-size: 12px; }
     .match-date-time { display: block; font-size: 11px; color: #555; }
@@ -218,12 +219,12 @@
     <section class="club-section">
       <h3>🏆 Bundesliga Current Standings</h3>
       <div class="standing-row">
-        <span class="standing-pos">1</span>
+        <span class="standing-pos">17</span>
         <span class="standing-detail">
-          (of 18)&nbsp;&nbsp;0 played&nbsp;
-          0W 0D 0L&nbsp;
-          0-0 GD&nbsp;
-          <strong>0 pts</strong>
+          (of 18)&nbsp;&nbsp;5 played&nbsp;
+          1W 0D 4L&nbsp;
+          9-13 GD&nbsp;
+          <strong>3 pts</strong>
         </span>
       </div>
     </section>
@@ -258,10 +259,58 @@
         </div>
         
           <div class="match-row scheduled">
+            <div class="match-date"><span class="match-date-day">2026/10/25</span><span class="match-date-time">(Sun) 23:30</span></div>
+            <div class="match-venue"><span class="venue-badge venue-home">H</span></div>
+            <div class="match-opponent">vs Leverkusen</div>
+            <div class="match-result">—</div>
+            <div class="match-broadcast">—</div>
+            <div class="match-comp">Bundesliga</div>
+          </div>
+          <div class="match-row scheduled">
+            <div class="match-date"><span class="match-date-day">2026/10/19</span><span class="match-date-time">(Mon) 00:30</span></div>
+            <div class="match-venue"><span class="venue-badge venue-away">A</span></div>
+            <div class="match-opponent">vs M&#39;gladbach</div>
+            <div class="match-result">—</div>
+            <div class="match-broadcast">—</div>
+            <div class="match-comp">Bundesliga</div>
+          </div>
+          <div class="match-row">
+            <div class="match-date"><span class="match-date-day">2026/10/10</span><span class="match-date-time">(Sat) 22:30</span></div>
+            <div class="match-venue"><span class="venue-badge venue-home">H</span></div>
+            <div class="match-opponent">vs HSV</div>
+            <div class="match-result lose">2 - 3</div>
+            <div class="match-broadcast">—</div>
+            <div class="match-comp">Bundesliga</div>
+          </div>
+          <div class="match-row">
+            <div class="match-date"><span class="match-date-day">2026/09/21</span><span class="match-date-time">(Mon) 02:30</span></div>
+            <div class="match-venue"><span class="venue-badge venue-away">A</span></div>
+            <div class="match-opponent">vs SC Paderborn</div>
+            <div class="match-result lose">1 - 3</div>
+            <div class="match-broadcast">—</div>
+            <div class="match-comp">Bundesliga</div>
+          </div>
+          <div class="match-row">
+            <div class="match-date"><span class="match-date-day">2026/09/12</span><span class="match-date-time">(Sat) 22:30</span></div>
+            <div class="match-venue"><span class="venue-badge venue-home">H</span></div>
+            <div class="match-opponent">vs Stuttgart</div>
+            <div class="match-result win">2 - 1</div>
+            <div class="match-broadcast">—</div>
+            <div class="match-comp">Bundesliga</div>
+          </div>
+          <div class="match-row">
+            <div class="match-date"><span class="match-date-day">2026/09/05</span><span class="match-date-time">(Sat) 22:30</span></div>
+            <div class="match-venue"><span class="venue-badge venue-home">H</span></div>
+            <div class="match-opponent">vs Dortmund</div>
+            <div class="match-result lose">2 - 3</div>
+            <div class="match-broadcast">—</div>
+            <div class="match-comp">Bundesliga</div>
+          </div>
+          <div class="match-row">
             <div class="match-date"><span class="match-date-day">2026/08/29</span><span class="match-date-time">(Sat) 22:30</span></div>
             <div class="match-venue"><span class="venue-badge venue-away">A</span></div>
             <div class="match-opponent">vs 1. FC Köln</div>
-            <div class="match-result">—</div>
+            <div class="match-result lose">2 - 3</div>
             <div class="match-broadcast">—</div>
             <div class="match-comp">Bundesliga</div>
           </div>
@@ -289,7 +338,7 @@
             <div class="match-broadcast">—</div>
             <div class="match-comp">Bundesliga</div>
           </div>
-          <div class="match-row">
+          <div class="match-row hidden-extra">
             <div class="match-date"><span class="match-date-day">2026/04/26</span><span class="match-date-time">(Sun) 01:30</span></div>
             <div class="match-venue"><span class="venue-badge venue-away">A</span></div>
             <div class="match-opponent">vs HSV</div>
@@ -298,6 +347,9 @@
             <div class="match-comp">Bundesliga</div>
           </div>
       </div>
+      <button class="show-more-matches" onclick="toggleMoreMatches(this)" data-count="1" data-expanded="false">
+        Show more (1 remaining)
+      </button>
     </section>
 
   
@@ -305,6 +357,11 @@
       <h3>📺 Match Highlights</h3>
       <div class="video-grid">
         
+        <a href="https://youtu.be/NHoXlieMzDM" target="_blank" rel="noopener" class="video-card">
+          <img src="https://i.ytimg.com/vi/NHoXlieMzDM/mqdefault.jpg" alt="" loading="lazy">
+          <div class="video-title">Hoffenheim vs Borussia Dortmund | Matchday 2 | 2026-27 Bundesliga Highlights</div>
+          <div class="video-meta">DAZN Football · 09/05</div>
+        </a>
         <a href="https://youtu.be/SycJiVrCwec" target="_blank" rel="noopener" class="video-card">
           <img src="https://i.ytimg.com/vi/SycJiVrCwec/mqdefault.jpg" alt="" loading="lazy">
           <div class="video-title">【ハンブルガーSV×ホッフェンハイム｜ハイライト】ブンデスリーガ第31節｜2025-26シーズン</div>
@@ -315,7 +372,7 @@
 
   
     <section class="club-section">
-      <h3>📊 Records vs Opponents (Top 4)</h3>
+      <h3>📊 Records vs Opponents (Top 7)</h3>
       <div class="opponent-records">
         <div class="opp-header">
           <div class="opp-name">Opponent</div>
@@ -326,15 +383,15 @@
         
           <div class="opp-row">
             <div class="opp-name">HSV</div>
-            <div class="opp-total">1 played</div>
-            <div class="opp-wdl">1W 0D 0L</div>
-            <div class="opp-goals">2 GF - 1 GA</div>
+            <div class="opp-total">2 played</div>
+            <div class="opp-wdl">1W 0D 1L</div>
+            <div class="opp-goals">4 GF - 4 GA</div>
           </div>
           <div class="opp-row">
             <div class="opp-name">Stuttgart</div>
-            <div class="opp-total">1 played</div>
-            <div class="opp-wdl">0W 1D 0L</div>
-            <div class="opp-goals">3 GF - 3 GA</div>
+            <div class="opp-total">2 played</div>
+            <div class="opp-wdl">1W 1D 0L</div>
+            <div class="opp-goals">5 GF - 4 GA</div>
           </div>
           <div class="opp-row">
             <div class="opp-name">Bremen</div>
@@ -347,6 +404,24 @@
             <div class="opp-total">1 played</div>
             <div class="opp-wdl">0W 0D 1L</div>
             <div class="opp-goals">0 GF - 4 GA</div>
+          </div>
+          <div class="opp-row">
+            <div class="opp-name">1. FC Köln</div>
+            <div class="opp-total">1 played</div>
+            <div class="opp-wdl">0W 0D 1L</div>
+            <div class="opp-goals">2 GF - 3 GA</div>
+          </div>
+          <div class="opp-row">
+            <div class="opp-name">Dortmund</div>
+            <div class="opp-total">1 played</div>
+            <div class="opp-wdl">0W 0D 1L</div>
+            <div class="opp-goals">2 GF - 3 GA</div>
+          </div>
+          <div class="opp-row">
+            <div class="opp-name">SC Paderborn</div>
+            <div class="opp-total">1 played</div>
+            <div class="opp-wdl">0W 0D 1L</div>
+            <div class="opp-goals">1 GF - 3 GA</div>
           </div>
       </div>
     </section>

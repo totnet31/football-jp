@@ -116,6 +116,7 @@
     .match-result.win { color: #1a7a3a; }
     .match-result.lose { color: #c0392b; }
     .match-result.draw { color: #666; }
+    .match-result.pending { color: #8a6100; font-size: 12px; font-weight: 600; }
     .match-broadcast {
       display: flex; flex-wrap: wrap; gap: 4px;
       align-items: center; justify-content: center;
@@ -345,8 +346,8 @@
     <section class="player-section">
       <h3>👤 Profile <a href="https://en.wikipedia.org/wiki/Ao_Tanaka" target="_blank" rel="noopener" style="font-size:11px;color:#888;">Wikipedia →</a></h3>
       <table class="profile-table">
-        <tr><td class="profile-label">Height / Weight</td><td class="profile-value">180 cm / —</td></tr>
-        <tr><td class="profile-label">Date of Birth</td><td class="profile-value">1998-09-10 (age 27)</td></tr>
+        <tr><td class="profile-label">Height / Weight</td><td class="profile-value">186 cm / —</td></tr>
+        <tr><td class="profile-label">Date of Birth</td><td class="profile-value">1998-09-10 (age 28)</td></tr>
         <tr><td class="profile-label">Birthplace</td><td class="profile-value">Kawasaki, Kanagawa, Japan</td></tr>
         <tr><td class="profile-label">Foot</td><td class="profile-value">—</td></tr>
       </table>
@@ -380,11 +381,11 @@
     <section class="player-section">
       <h3>🏆 Premier League Current Standings</h3>
       <div class="standing-row">
-        <span class="standing-pos">1</span>
+        <span class="standing-pos">7</span>
         <span class="standing-detail">
-          (of 20)&nbsp;&nbsp;0 played&nbsp;
-          0W 0D 0L&nbsp;
-          0 pts
+          (of 20)&nbsp;&nbsp;6 played&nbsp;
+          2W 3D 1L&nbsp;
+          9 pts
         </span>
       </div>
     </section>
@@ -403,18 +404,66 @@
         </div>
         
           <div class="match-row scheduled">
-            <div class="match-date"><span class="match-date-day">2026/08/30</span><span class="match-date-time">(Sun) 22:00</span></div>
-            <div class="match-venue"><span class="venue-badge venue-home">H</span></div>
-            <div class="match-opponent">vs Brentford</div>
+            <div class="match-date"><span class="match-date-day">2026/10/26</span><span class="match-date-time">(Mon) 01:30</span></div>
+            <div class="match-venue"><span class="venue-badge venue-away">A</span></div>
+            <div class="match-opponent">vs Sunderland</div>
             <div class="match-result">—</div>
             <div class="match-broadcast">—</div>
             <div class="match-comp">Premier League</div>
           </div>
           <div class="match-row scheduled">
+            <div class="match-date"><span class="match-date-day">2026/10/18</span><span class="match-date-time">(Sun) 22:00</span></div>
+            <div class="match-venue"><span class="venue-badge venue-home">H</span></div>
+            <div class="match-opponent">vs Man United</div>
+            <div class="match-result">—</div>
+            <div class="match-broadcast">—</div>
+            <div class="match-comp">Premier League</div>
+          </div>
+          <div class="match-row">
+            <div class="match-date"><span class="match-date-day">2026/10/10</span><span class="match-date-time">(Sat) 20:30</span></div>
+            <div class="match-venue"><span class="venue-badge venue-away">A</span></div>
+            <div class="match-opponent">vs Arsenal</div>
+            <div class="match-result lose">1 - 2</div>
+            <div class="match-broadcast">—</div>
+            <div class="match-comp">Premier League</div>
+          </div>
+          <div class="match-row">
+            <div class="match-date"><span class="match-date-day">2026/09/20</span><span class="match-date-time">(Sun) 22:00</span></div>
+            <div class="match-venue"><span class="venue-badge venue-home">H</span></div>
+            <div class="match-opponent">vs Crystal Palace</div>
+            <div class="match-result draw">0 - 0</div>
+            <div class="match-broadcast">—</div>
+            <div class="match-comp">Premier League</div>
+          </div>
+          <div class="match-row">
+            <div class="match-date"><span class="match-date-day">2026/09/15</span><span class="match-date-time">(Tue) 04:00</span></div>
+            <div class="match-venue"><span class="venue-badge venue-home">H</span></div>
+            <div class="match-opponent">vs Newcastle</div>
+            <div class="match-result win">4 - 1</div>
+            <div class="match-broadcast">—</div>
+            <div class="match-comp">Premier League</div>
+          </div>
+          <div class="match-row">
+            <div class="match-date"><span class="match-date-day">2026/09/05</span><span class="match-date-time">(Sat) 23:00</span></div>
+            <div class="match-venue"><span class="venue-badge venue-away">A</span></div>
+            <div class="match-opponent">vs Brighton Hove</div>
+            <div class="match-result draw">1 - 1</div>
+            <div class="match-broadcast">—</div>
+            <div class="match-comp">Premier League</div>
+          </div>
+          <div class="match-row">
+            <div class="match-date"><span class="match-date-day">2026/08/30</span><span class="match-date-time">(Sun) 22:00</span></div>
+            <div class="match-venue"><span class="venue-badge venue-home">H</span></div>
+            <div class="match-opponent">vs Brentford</div>
+            <div class="match-result draw">1 - 1</div>
+            <div class="match-broadcast">—</div>
+            <div class="match-comp">Premier League</div>
+          </div>
+          <div class="match-row">
             <div class="match-date"><span class="match-date-day">2026/08/22</span><span class="match-date-time">(Sat) 23:00</span></div>
             <div class="match-venue"><span class="venue-badge venue-away">A</span></div>
             <div class="match-opponent">vs Nottingham</div>
-            <div class="match-result">—</div>
+            <div class="match-result win">1 - 0</div>
             <div class="match-broadcast">—</div>
             <div class="match-comp">Premier League</div>
           </div>
@@ -434,7 +483,7 @@
             <div class="match-broadcast">—</div>
             <div class="match-comp">Premier League</div>
           </div>
-          <div class="match-row">
+          <div class="match-row hidden-extra">
             <div class="match-date"><span class="match-date-day">2026/05/12</span><span class="match-date-time">(Tue) 04:00</span></div>
             <div class="match-venue"><span class="venue-badge venue-away">A</span></div>
             <div class="match-opponent">vs Tottenham</div>
@@ -442,7 +491,7 @@
             <div class="match-broadcast">—</div>
             <div class="match-comp">Premier League</div>
           </div>
-          <div class="match-row">
+          <div class="match-row hidden-extra">
             <div class="match-date"><span class="match-date-day">2026/05/02</span><span class="match-date-time">(Sat) 04:00</span></div>
             <div class="match-venue"><span class="venue-badge venue-home">H</span></div>
             <div class="match-opponent">vs Burnley</div>
@@ -451,6 +500,9 @@
             <div class="match-comp">Premier League</div>
           </div>
       </div>
+      <button class="show-more-matches" onclick="toggleMoreMatches(this)" data-count="2" data-expanded="false">
+        Show more (2 remaining)
+      </button>
     </section>
 
   
@@ -466,21 +518,21 @@
           <div class="video-title">Ao Tanaka - ALL 4 GOALS FOR LEEDS UNITED IN 2025/26 | Skills &amp;amp; Highlights</div>
           <div class="video-meta">Rain of Goals · 06/27</div>
         </a>
-        <a href="https://youtube.com/watch?v=IoBdDYmNUs0" target="_blank" rel="noopener" class="video-card video-card-player">
+        <a href="https://youtube.com/watch?v=UufQvCRR8uA" target="_blank" rel="noopener" class="video-card video-card-player">
           <div class="video-thumb-wrap">
-            <img src="https://i.ytimg.com/vi/IoBdDYmNUs0/mqdefault.jpg" alt="" loading="lazy">
+            <img src="https://i.ytimg.com/vi/UufQvCRR8uA/mqdefault.jpg" alt="" loading="lazy">
             
           </div>
-          <div class="video-title">Ao Tanaka 田中 碧  - Welcome to Manchester United? 2026 - Skills, Goals &amp;amp; Passes | HD</div>
-          <div class="video-meta">WIK7 · 04/18</div>
+          <div class="video-title">Superb footwork and finish for Ao Tanaka goal!</div>
+          <div class="video-meta">Leeds United Official · 04/06</div>
         </a>
-        <a href="https://youtube.com/watch?v=K8496c-rVxI" target="_blank" rel="noopener" class="video-card video-card-player">
+        <a href="https://youtube.com/watch?v=cSBq51rnU8U" target="_blank" rel="noopener" class="video-card video-card-player">
           <div class="video-thumb-wrap">
-            <img src="https://i.ytimg.com/vi/K8496c-rVxI/mqdefault.jpg" alt="" loading="lazy">
+            <img src="https://i.ytimg.com/vi/cSBq51rnU8U/mqdefault.jpg" alt="" loading="lazy">
             
           </div>
-          <div class="video-title">Wait is over! | West Ham United (2-2)  Leeds United AFC | Quarter-final | Emirates FA Cup 2025-26</div>
-          <div class="video-meta">The Emirates FA Cup · 04/06</div>
+          <div class="video-title">Here&amp;#39;s why Manchester United want Ao Tanaka 🔴🔴</div>
+          <div class="video-meta">90 Minutes Football · 04/18</div>
         </a>
       </div>
     </section>
@@ -490,6 +542,26 @@
       <h3>Related Highlights</h3>
       <div class="video-grid">
         
+        <a href="https://youtu.be/t4QHP775wZE" target="_blank" rel="noopener" class="video-card">
+          <img src="https://i.ytimg.com/vi/t4QHP775wZE/mqdefault.jpg" alt="" loading="lazy">
+          <div class="video-title">【田中碧🇯🇵先発出場 | アーセナル v リーズ ｜ショートハイライト】プレミアリーグ2026/27 第6節</div>
+          <div class="video-meta">U-NEXT · 10/10</div>
+        </a>
+        <a href="https://youtu.be/OYm0hUnbN4Y" target="_blank" rel="noopener" class="video-card">
+          <img src="https://i.ytimg.com/vi/OYm0hUnbN4Y/mqdefault.jpg" alt="" loading="lazy">
+          <div class="video-title">🇯🇵今季絶好調の3人が相見える🇯🇵｜鎌田大地 冨安健洋（クリスタル・パレス）田中碧（リーズ）｜プレミアリーグ 2026/27</div>
+          <div class="video-meta">U-NEXT · 09/20</div>
+        </a>
+        <a href="https://youtu.be/3eQHZhJoUhw" target="_blank" rel="noopener" class="video-card">
+          <img src="https://i.ytimg.com/vi/3eQHZhJoUhw/mqdefault.jpg" alt="" loading="lazy">
+          <div class="video-title">速報｜田中碧が先制点を演出！｜リーズ v ニューカッスル｜プレミアリーグ 2026/27 第4節</div>
+          <div class="video-meta">U-NEXT · 09/15</div>
+        </a>
+        <a href="https://youtu.be/bOQ8frRSPys" target="_blank" rel="noopener" class="video-card">
+          <img src="https://i.ytimg.com/vi/bOQ8frRSPys/mqdefault.jpg" alt="" loading="lazy">
+          <div class="video-title">【田中碧が今季プレミア初出場｜リーズ v ブレントフォード｜ショートハイライト】プレミアリーグ 2026/27 第2節</div>
+          <div class="video-meta">U-NEXT · 08/30</div>
+        </a>
         <a href="https://youtu.be/zUhguf_5rJE" target="_blank" rel="noopener" class="video-card">
           <img src="https://i.ytimg.com/vi/zUhguf_5rJE/mqdefault.jpg" alt="" loading="lazy">
           <div class="video-title">【田中碧が先発出場｜ウェストハム v リーズ｜ショートハイライト】プレミアリーグ25/26 第38節</div>
@@ -531,7 +603,7 @@
             <div class="nt-row">
               <span class="nt-team">Japan</span>
               <span class="nt-years">2019–</span>
-              <span class="nt-stats">41 caps / 82303242026302026 goals</span>
+              <span class="nt-stats">45 caps / 8230324202652026 goals</span>
             </div>
       </div>
     </section>
