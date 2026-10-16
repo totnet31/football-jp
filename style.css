@@ -572,6 +572,14 @@ a.bc-tag.bc-bs10:hover { background: #0066b3; color: #ffffff; }
   font-weight: 600;
 }
 
+/* 結果待ち（開始から3時間すぎても結果が届いていない試合） */
+.status-pending {
+  background: #fff4d6;
+  color: #8a6100;
+  font-weight: 600;
+}
+.match.result-pending { opacity: 0.85; }
+
 /* ===== Calendar ===== */
 
 .cal-nav {
