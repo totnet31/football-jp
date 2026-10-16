@@ -35,6 +35,9 @@
   const WEEKDAY_EN = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
 
   const WEEKDAY = IS_EN ? WEEKDAY_EN : ['日', '月', '火', '水', '木', '金', '土'];
+  // 結果待ち：開始から何時間すぎても TIMED/SCHEDULED なら「結果待ち」にするか（isResultPending 参照）
+  const RESULT_PENDING_HOURS = 3;
+  const RESULT_PENDING_LABEL = IS_EN ? 'Result pending' : '結果待ち';
 
   let allMatches = [];
   let standingsData = null;
@@ -320,7 +323,7 @@
       if (!enabledLeagues.has(m.competition_id)) return false;
       if (m.home_ja === '未定' && m.away_ja === '未定') return false;
       const kickoff = new Date(m.kickoff_jst);
-      if (isFinished(m) && kickoff < cutoff) return false;
+      if ((isFinished(m) || isResultPending(m)) && kickoff < cutoff) return false;
       const jp = m.japanese_players || [];
       return jp.some(p => {
         const raw = String(p.name_ja || '').trim();
@@ -364,6 +367,7 @@
     renderFavSection();
     const matches = filtered().filter(m => {
       if (isFinished(m)) return false;  // 終了試合（スコア入り含む）を除外
+      if (isResultPending(m)) return false;  // 開始から3時間すぎても予定のまま＝結果待ち（結果側へ）
       return ['SCHEDULED', 'TIMED', 'IN_PLAY', 'PAUSED'].includes(m.status);
     });
     if (matches.length === 0) {
@@ -388,7 +392,7 @@
 
   // ===== Results view =====
   function renderResults() {
-    const matches = filtered().filter(m => isFinished(m)).slice().reverse();
+    const matches = filtered().filter(m => isFinished(m) || isResultPending(m)).slice().reverse();
     if (matches.length === 0) {
       resultsEl.innerHTML = `<p class="empty">直近の結果はありません。<br>フィルタ条件を変更してください。</p>`;
       return;
@@ -411,6 +415,7 @@
 
   function renderMatch(m, isToday) {
     const finished = isFinished(m);
+    const pending = isResultPending(m);
     const live = m.status === 'IN_PLAY' || m.status === 'PAUSED';
     const time = fmtTime(m.kickoff_jst);
     const dd = diffDays(m.kickoff_jst);
@@ -418,9 +423,11 @@
     let timeLabel;
     if (finished) timeLabel = `<small>終了</small>${time}`;
     else if (live) timeLabel = `<small>LIVE</small>${time}`;
+    else if (pending) timeLabel = `<small>${RESULT_PENDING_LABEL}</small>${time}`;
     else timeLabel = time + (dd > 0 ? `<small>${dd}日後</small>` : (dd < 0 ? `<small>${-dd}日前</small>` : ''));
 
-    const score = m.score;
+    // 結果待ちの試合にはスコアを出さない
+    const score = pending ? null : m.score;
     const homeWin = score && score.home > score.away;
     const awayWin = score && score.away > score.home;
 
@@ -488,6 +495,7 @@
     const primaryTags = [];
     primaryTags.push(`<span class="league-tag cat-league-${m.competition_id}">${m.competition_flag || ''} ${escape(m.competition_ja)}</span>`);
     if (live) primaryTags.push(`<span class="status-tag status-live">LIVE</span>`);
+    if (pending) primaryTags.push(`<span class="status-tag status-pending">${RESULT_PENDING_LABEL}</span>`);
     if (m.stage && m.stage !== 'REGULAR_SEASON') {
       primaryTags.push(`<span class="status-tag">${escape(stageLabel(m.stage))}</span>`);
     }
@@ -512,6 +520,7 @@
     const cls = ['match'];
     if (isToday) cls.push('today');
     if (finished) cls.push('finished');
+    if (pending) cls.push('result-pending');
     if (homeCorner || awayCorner) cls.push('has-jp-corner');
     // 終了試合は詳細モーダル可（イベント無しでも空状態で表示）
     const hasDetails = finished;
@@ -852,6 +861,17 @@
     return false;
   }
 
+  // 結果待ちの判定（取り寄せ元が結果を入れてこない試合への対策）
+  // 開始時刻から RESULT_PENDING_HOURS 時間すぎても status が TIMED/SCHEDULED のままの試合は
+  // 「予定」から外し、「結果待ち」として結果側に出す（スコアは作らない）
+  function isResultPending(m) {
+    if (!m || isFinished(m)) return false;
+    if (m.status !== 'TIMED' && m.status !== 'SCHEDULED') return false;
+    const ko = new Date(m.kickoff_jst).getTime();
+    if (isNaN(ko)) return false;
+    return Date.now() - ko >= RESULT_PENDING_HOURS * 60 * 60 * 1000;
+  }
+
   // ==== Events ====
   onlyJpEl.addEventListener('change', rerender);
   // タブは <a> 要素で各ページにナビゲートする（クリックハンドラ不要）
@@ -1091,7 +1111,7 @@
     if (currentView === 'schedule') {
       // 予定試合（未終了）の先頭10件
       schemaMatches = filtered()
-        .filter(m => !isFinished(m) && ['SCHEDULED', 'TIMED', 'IN_PLAY', 'PAUSED'].includes(m.status))
+        .filter(m => !isFinished(m) && !isResultPending(m) && ['SCHEDULED', 'TIMED', 'IN_PLAY', 'PAUSED'].includes(m.status))
         .slice(0, 10);
     } else if (currentView === 'results') {
       // 終了済み試合の最新10件（降順で先頭10件）
