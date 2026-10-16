@@ -32,6 +32,9 @@
     'UEFAヨーロッパリーグ': 'UEFA Europa League',
     'UEFAカンファレンスリーグ': 'UEFA Conference League',
     'キリンチャレンジカップ': 'Kirin Challenge Cup',
+    'ジュピラー・プロ・リーグ': 'Jupiler Pro League',
+    'リーグ・ドゥ': 'Ligue 2',
+    'ブンデスリーガ2部': '2. Bundesliga',
   };
   const WEEKDAY_EN = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
 
