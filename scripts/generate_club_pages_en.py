@@ -7,6 +7,7 @@ generate_club_pages_en.py
 """
 
 from utils import is_result_pending
+from translation_dict import has_japanese
 import json
 import os
 import re
@@ -435,7 +436,8 @@ def build_club_page_en(club_info: dict, slug: str, standing: dict,
         pl_slug = player_slug_map.get(name_en_pl, make_slug(name_en_pl))
         pos_en = pl.get("position_en", translate_position(pl.get("position", "")))
         note_pl = pl.get("note", "")
-        note_html = f'<div class="player-note-small">{esc(note_pl)}</div>' if note_pl else ""
+        # 日本語のメモは訳がないため英語ページには出さない
+        note_html = f'<div class="player-note-small">{esc(note_pl)}</div>' if note_pl and not has_japanese(note_pl) else ""
         player_cards += f"""
         <a class="player-link-card" href="/en/players/{esc(pl_slug)}/">
           <div class="player-name-ja">{esc(name_en_pl)}</div>

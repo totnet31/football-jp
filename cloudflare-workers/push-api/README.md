@@ -42,7 +42,7 @@ npx wrangler deploy
 ### 5. 動作確認（購読者一覧取得）
 ```bash
 curl -H "Authorization: Bearer YOUR_ADMIN_TOKEN" \
-  https://football-jp-push-api.saito-dfe.workers.dev/api/subscriptions
+  https://football-jp-push-api.tot-tools.workers.dev/api/subscriptions
 ```
 
 ---
@@ -59,7 +59,7 @@ curl -H "Authorization: Bearer YOUR_ADMIN_TOKEN" \
 ## 動作確認（購読登録テスト）
 
 ```bash
-curl -X POST https://football-jp-push-api.saito-dfe.workers.dev/api/subscribe \
+curl -X POST https://football-jp-push-api.tot-tools.workers.dev/api/subscribe \
   -H "Content-Type: application/json" \
   -d '{
     "subscription": {"endpoint":"https://example.com/test","keys":{}},

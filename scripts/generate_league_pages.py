@@ -43,6 +43,7 @@ LEAGUE_SLUG_MAP = {
     "チャンピオンシップ":       "championship",
     "ブンデスリーガ":          "bundesliga",
     "2.ブンデスリーガ":         "2-bundesliga",
+    "ブンデスリーガ2部":        "2",  # 既存URL /leagues/2/ を保つ（英語名を足したことで slug が変わらないように）
     "ラ・リーガ":              "la-liga",
     "ラリーガ":               "la-liga",
     "セリエA":                "serie-a",
@@ -64,6 +65,7 @@ LEAGUE_EN_MAP = {
     "チャンピオンシップ":       "Championship",
     "ブンデスリーガ":          "Bundesliga",
     "2.ブンデスリーガ":         "2. Bundesliga",
+    "ブンデスリーガ2部":        "2. Bundesliga",
     "ラ・リーガ":              "La Liga",
     "ラリーガ":               "La Liga",
     "セリエA":                "Serie A",

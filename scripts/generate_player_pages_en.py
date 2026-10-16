@@ -7,6 +7,7 @@ generate_player_pages_en.py
 """
 
 from utils import is_result_pending
+from translation_dict import has_japanese
 import json
 import os
 import re
@@ -848,7 +849,7 @@ def build_player_page_en(player: dict, slug: str, scorer_stats: dict,
     </section>"""
 
     note_html = ""
-    if note:
+    if note and not has_japanese(note):  # 日本語のメモは訳がないため英語ページには出さない
         note_html = f'<div class="player-note">ℹ️ {esc(note)}</div>'
 
     club_slug = make_slug(club_en)

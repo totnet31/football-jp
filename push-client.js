@@ -2,7 +2,7 @@
 // 使い方：window.fjPush.subscribe(['mitoma'], ['club-397'], ['league-39'])
 
 const VAPID_PUBLIC_KEY = 'BOQ4LvD-tUTTYj8E7_L28zVtbio-10Brm8oFzwBlCd2gVlG-wPt_YfOzPdtEJ-wwnN8DUdEoXBJGoUQHkyllvb8';
-const API_BASE = 'https://football-jp-push-api.saito-dfe.workers.dev'; // Cloudflare Workers（2026-05-07 デプロイ）
+const API_BASE = 'https://football-jp-push-api.tot-tools.workers.dev'; // Cloudflare Workers（2026-05-07 デプロイ／2026-09-14 サブドメイン saito-dfe→tot-tools）
 const STORAGE_KEY         = 'fjPushFavorites';       // 選手 slug 配列（後方互換維持）
 const STORAGE_KEY_CLUBS   = 'fjPushFavoriteClubs';   // クラブ slug 配列（新規）
 const STORAGE_KEY_LEAGUES = 'fjPushFavoriteLeagues'; // リーグ slug 配列（新規）
