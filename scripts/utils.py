@@ -58,3 +58,39 @@ def is_result_pending(m, now=None):
     if now is None:
         now = datetime.now(jst)
     return now - ko >= timedelta(hours=RESULT_PENDING_HOURS)
+
+
+def fix_unplayed_finished(matches, now=None):
+    """開始時刻がまだ来ていないのに「終了（FINISHED）」やスコア入りになっている試合を、予定の試合に戻す。
+
+    取り寄せ元が未来の試合を FINISHED 0-0 で返してくることがある（2026-10 ラ・リーガ
+    レバンテ対アスレティック・ビルバオ 10/22）。そのまま出すと「終了 0-0」と表示されるため、
+    ページを作るときだけ status を TIMED に、スコアを空にして扱う（data/ のファイルは書き換えない）。
+    サイト表示の app.js の normalizeUnplayedFinished と同じ判定。
+    戻した件数を返す。
+    """
+    from datetime import datetime, timedelta, timezone
+    jst = timezone(timedelta(hours=9))
+    if now is None:
+        now = datetime.now(jst)
+    fixed = 0
+    for m in matches or []:
+        if not isinstance(m, dict):
+            continue
+        score = m.get('score')
+        has_score = isinstance(score, dict) and (score.get('home') is not None or score.get('away') is not None)
+        if m.get('status') != 'FINISHED' and not has_score:
+            continue
+        try:
+            ko = datetime.fromisoformat((m.get('kickoff_jst') or '').replace('Z', '+00:00'))
+        except Exception:
+            continue
+        if ko.tzinfo is None:
+            ko = ko.replace(tzinfo=jst)
+        if ko <= now:
+            continue
+        m['status'] = 'TIMED'
+        if isinstance(score, dict):
+            m['score'] = {**score, 'home': None, 'away': None}
+        fixed += 1
+    return fixed
