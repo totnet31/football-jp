@@ -137,6 +137,18 @@ jobs:
         run: python3 scripts/generate_club_pages.py
         continue-on-error: true
 
+      - name: クラブページ生成（英語）
+        run: python3 scripts/generate_club_pages_en.py
+        continue-on-error: true
+
+      - name: リーグページ生成
+        run: python3 scripts/generate_league_pages.py
+        continue-on-error: true
+
+      - name: リーグページ生成（英語）
+        run: python3 scripts/generate_league_pages_en.py
+        continue-on-error: true
+
       - name: スモークテスト（data整合性チェック）
         id: smoke
         run: python3 scripts/smoke_test.py

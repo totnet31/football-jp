@@ -202,7 +202,7 @@ def build_standings_html_en(standings_comps: dict, comp_id: int, jp_club_ids: se
     for row in table[:max_rows]:
         pos = row.get("position", "")
         team_id = row.get("team_id")
-        team_en = row.get("team_en", row.get("team_ja", ""))
+        team_en = row.get("team_en") or team_name_en(team_id) or row.get("team_ja", "")
         crest = row.get("team_crest", "")
         played = row.get("playedGames", "")
         won = row.get("won", "")
@@ -255,9 +255,62 @@ def build_standings_html_en(standings_comps: dict, comp_id: int, jp_club_ids: se
 # ============================
 # 試合カード（英語版）
 # ============================
+_TEAM_EN = None
+
+
+def team_name_en(team_id) -> str:
+    """クラブID → 英語名（data/matches.json の home_en/away_en から）。順位表に英語名が無いための補い。"""
+    global _TEAM_EN
+    if _TEAM_EN is None:
+        _TEAM_EN = {}
+        try:
+            data = json.loads((Path(__file__).resolve().parent.parent / "data" / "matches.json").read_text(encoding="utf-8"))
+            for m in data.get("matches", []):
+                for side in ("home", "away"):
+                    tid, name = m.get(f"{side}_id"), m.get(f"{side}_en")
+                    if tid is not None and name:
+                        _TEAM_EN[tid] = name
+        except Exception:
+            pass
+    return _TEAM_EN.get(team_id, "")
+
+
+def format_kickoff_en(kickoff_str: str) -> str:
+    """kickoff_jst を英語形式（10/17 (Sat) 23:00）に変換する。"""
+    from generate_league_pages import parse_iso_datetime
+    if not kickoff_str:
+        return ""
+    try:
+        dt = parse_iso_datetime(kickoff_str)
+        if dt is None:
+            return kickoff_str
+        return dt.strftime("%m/%d (%a) %H:%M")
+    except Exception:
+        return kickoff_str
+
+
+_JP_NAME_EN = None
+
+
+def jp_name_en(name_ja: str) -> str:
+    """日本人選手の日本語名 → 英語名（data/players.json）。見つからなければ日本語名のまま。"""
+    global _JP_NAME_EN
+    if _JP_NAME_EN is None:
+        _JP_NAME_EN = {}
+        try:
+            data = json.loads((Path(__file__).resolve().parent.parent / "data" / "players.json").read_text(encoding="utf-8"))
+            for p in (data.get("players", []) if isinstance(data, dict) else data):
+                if p.get("name_ja") and p.get("name_en"):
+                    _JP_NAME_EN[p["name_ja"]] = p["name_en"]
+        except Exception:
+            pass
+    import re as _re
+    clean = _re.sub(r"（[^）]*）", "", name_ja or "").strip()
+    return _JP_NAME_EN.get(name_ja) or _JP_NAME_EN.get(clean) or name_ja
+
+
 def build_match_card_en(m: dict, services: dict, league_slug_str: str, is_result: bool) -> str:
-    from generate_league_pages import format_kickoff_ja
-    kickoff = format_kickoff_ja(m.get("kickoff_jst", ""))
+    kickoff = format_kickoff_en(m.get("kickoff_jst", ""))
     home_en = m.get("home_en", m.get("home_ja", ""))
     away_en = m.get("away_en", m.get("away_ja", ""))
     home_crest = m.get("home_crest", "")
@@ -269,7 +322,7 @@ def build_match_card_en(m: dict, services: dict, league_slug_str: str, is_result
     broadcasters = m.get("broadcasters", [])
 
     jp_names = [
-        f'<span class="jp-player-badge">{esc(jp.get("name_ja",""))}</span>'
+        f'<span class="jp-player-badge">{esc(jp_name_en(jp.get("name_ja","")))}</span>'
         for jp in jp_players if jp.get("name_ja")
     ]
     jp_html = f'<div class="jp-players-row">{"".join(jp_names)}</div>' if jp_names else ""

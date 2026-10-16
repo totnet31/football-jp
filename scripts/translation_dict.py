@@ -13,6 +13,7 @@ LEAGUE_JA_TO_EN = {
     "チャンピオンシップ": "Championship",
     "ブンデスリーガ": "Bundesliga",
     "2.ブンデスリーガ": "2. Bundesliga",
+    "ブンデスリーガ2部": "2. Bundesliga",
     "ラ・リーガ": "La Liga",
     "ラリーガ": "La Liga",
     "セリエA": "Serie A",
@@ -26,6 +27,10 @@ LEAGUE_JA_TO_EN = {
     "MLS": "MLS",
     "Jリーグ": "J.League",
     "J1リーグ": "J1 League",
+    "UEFAチャンピオンズリーグ": "UEFA Champions League",
+    "UEFAヨーロッパリーグ": "UEFA Europa League",
+    "UEFAカンファレンスリーグ": "UEFA Conference League",
+    "キリンチャレンジカップ": "Kirin Challenge Cup",
 }
 
 # ============================
@@ -260,3 +265,9 @@ def get_competition_en(comp_ja: str, comp_en_map: dict = None) -> str:
     if comp_en_map and comp_ja in comp_en_map:
         return comp_en_map[comp_ja]
     return LEAGUE_JA_TO_EN.get(comp_ja, comp_ja)
+
+
+def has_japanese(text) -> bool:
+    """文字列に日本語（ひらがな・カタカナ・漢字）が含まれるか。英語ページで訳のない日本語メモを出さないために使う。"""
+    import re as _re
+    return bool(text) and bool(_re.search(r"[\u3040-\u30ff\u4e00-\u9fff]", str(text)))

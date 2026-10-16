@@ -31,6 +31,7 @@
     'UEFAチャンピオンズリーグ': 'UEFA Champions League',
     'UEFAヨーロッパリーグ': 'UEFA Europa League',
     'UEFAカンファレンスリーグ': 'UEFA Conference League',
+    'キリンチャレンジカップ': 'Kirin Challenge Cup',
   };
   const WEEKDAY_EN = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
 
@@ -38,6 +39,8 @@
   // 結果待ち：開始から何時間すぎても TIMED/SCHEDULED なら「結果待ち」にするか（isResultPending 参照）
   const RESULT_PENDING_HOURS = 3;
   const RESULT_PENDING_LABEL = IS_EN ? 'Result pending' : '結果待ち';
+  // 表示文言の日英切り替え（英語ページでは en を出す）
+  const L = (ja, en) => (IS_EN ? en : ja);
 
   let allMatches = [];
   let standingsData = null;
@@ -200,7 +203,7 @@
       // Schema.org SportsEvent 注入
       injectSchemaForView();
     } catch (e) {
-      listEl.innerHTML = `<p class="empty">データの読み込みに失敗しました: ${escape(e.message)}<br>scripts/fetch_matches.py を実行してください。</p>`;
+      listEl.innerHTML = `<p class="empty">${L('データの読み込みに失敗しました', 'Failed to load data')}: ${escape(e.message)}${L('<br>scripts/fetch_matches.py を実行してください。', '')}</p>`;
     }
   }
 
@@ -371,7 +374,7 @@
       return ['SCHEDULED', 'TIMED', 'IN_PLAY', 'PAUSED'].includes(m.status);
     });
     if (matches.length === 0) {
-      scheduleEl.innerHTML = `<p class="empty">予定されている試合はありません。<br>フィルタ条件を変更してください。</p>`;
+      scheduleEl.innerHTML = `<p class="empty">${L('予定されている試合はありません。<br>フィルタ条件を変更してください。', 'No upcoming matches.<br>Try changing the filters.')}</p>`;
       return;
     }
     const groups = new Map();
@@ -394,7 +397,7 @@
   function renderResults() {
     const matches = filtered().filter(m => isFinished(m) || isResultPending(m)).slice().reverse();
     if (matches.length === 0) {
-      resultsEl.innerHTML = `<p class="empty">直近の結果はありません。<br>フィルタ条件を変更してください。</p>`;
+      resultsEl.innerHTML = `<p class="empty">${L('直近の結果はありません。<br>フィルタ条件を変更してください。', 'No recent results.<br>Try changing the filters.')}</p>`;
       return;
     }
     const groups = new Map();
@@ -421,10 +424,10 @@
     const dd = diffDays(m.kickoff_jst);
 
     let timeLabel;
-    if (finished) timeLabel = `<small>終了</small>${time}`;
+    if (finished) timeLabel = `<small>${L('終了', 'FT')}</small>${time}`;
     else if (live) timeLabel = `<small>LIVE</small>${time}`;
     else if (pending) timeLabel = `<small>${RESULT_PENDING_LABEL}</small>${time}`;
-    else timeLabel = time + (dd > 0 ? `<small>${dd}日後</small>` : (dd < 0 ? `<small>${-dd}日前</small>` : ''));
+    else timeLabel = time + (dd > 0 ? `<small>${L(`${dd}日後`, `in ${dd}d`)}</small>` : (dd < 0 ? `<small>${L(`${-dd}日前`, `${-dd}d ago`)}</small>` : ''));
 
     // 結果待ちの試合にはスコアを出さない
     const score = pending ? null : m.score;
@@ -443,7 +446,7 @@
     const cornerBadge = (hasG, hasA) => {
       if (!hasG && !hasA) return '';
       const label = (hasG ? 'G' : '') + (hasA ? 'A' : '');
-      return `<span class="jp-corner" title="日本人選手の${hasG ? 'ゴール':''}${hasG && hasA ? '/':''}${hasA ? 'アシスト':''}（タップで詳細）">🇯🇵 <strong>${label}</strong></span>`;
+      return `<span class="jp-corner" title="${IS_EN ? `Japanese player ${hasG ? 'goal':''}${hasG && hasA ? '/':''}${hasA ? 'assist':''} (tap for details)` : `日本人選手の${hasG ? 'ゴール':''}${hasG && hasA ? '/':''}${hasA ? 'アシスト':''}（タップで詳細）`}">🇯🇵 <strong>${label}</strong></span>`;
     };
     const homeCorner = cornerBadge(homeJpGoals.length > 0, homeJpAssists.length > 0);
     const awayCorner = cornerBadge(awayJpGoals.length > 0, awayJpAssists.length > 0);
@@ -535,7 +538,7 @@
         const url = first.url || `https://youtu.be/${first.video_id}`;
         // YouTube公式アイコン風 SVG（赤角丸 + 白▶）
         const ytIcon = `<svg class="yt-icon" viewBox="0 0 28 20" aria-hidden="true"><rect width="28" height="20" rx="5" fill="#ff0000"/><path d="M11 6 L11 14 L18 10 Z" fill="#ffffff"/></svg>`;
-        highlightCell = `<a class="match-highlight" href="${escape(url)}" target="_blank" rel="noopener" aria-label="ハイライト動画（YouTube）" title="ハイライト動画"><span class="icon-only">${ytIcon}</span><span class="label-text">▶ ハイライト</span></a>`;
+        highlightCell = `<a class="match-highlight" href="${escape(url)}" target="_blank" rel="noopener" aria-label="${L('ハイライト動画（YouTube）', 'Highlights (YouTube)')}" title="${L('ハイライト動画', 'Highlights')}"><span class="icon-only">${ytIcon}</span><span class="label-text">▶ ${L('ハイライト', 'Highlights')}</span></a>`;
       }
     }
 
@@ -580,7 +583,15 @@
   }
 
   function stageLabel(s) {
-    const map = {
+    const map = IS_EN ? {
+      LAST_16: 'Round of 16',
+      QUARTER_FINALS: 'Quarter-finals',
+      SEMI_FINALS: 'Semi-finals',
+      FINAL: 'Final',
+      GROUP_STAGE: 'Group stage',
+      LEAGUE_STAGE: 'League phase',
+      PLAYOFFS: 'Play-offs',
+    } : {
       LAST_16: 'ラウンド16',
       QUARTER_FINALS: '準々決勝',
       SEMI_FINALS: '準決勝',
@@ -595,7 +606,7 @@
   // ===== Calendar view =====
   function renderCalendar() {
     const { year, month } = calCursor;
-    calMonthLabelEl.textContent = `${year}年${month+1}月`;
+    calMonthLabelEl.textContent = IS_EN ? `${year}/${pad(month+1)}` : `${year}年${month+1}月`;
 
     const matches = filtered();
     const byDay = new Map();
@@ -656,7 +667,7 @@
       cells.push(`<div class="${cls.join(' ')}" data-key="${key}" data-oor="${outOfRange ? '1' : ''}">
         <span class="cal-date">${cellD}</span>
         <div class="cal-dots">${dots}</div>
-        ${ms.length > 0 ? `<span class="cal-count">${ms.length}試合</span>` : ''}
+        ${ms.length > 0 ? `<span class="cal-count">${ms.length}${L('試合', IS_EN && ms.length === 1 ? ' match' : ' matches')}</span>` : ''}
       </div>`);
     }
     calGridEl.innerHTML = cells.join('');
@@ -681,11 +692,11 @@
   function renderCalendarDayDetail(byDay) {
     const ms = byDay.get(calSelected) || [];
     if (ms.length === 0) {
-      calDayDetailEl.innerHTML = `<h3>${fmtDateHeading(calSelected)}</h3><p class="empty">この日の試合はありません。</p>`;
+      calDayDetailEl.innerHTML = `<h3>${fmtDateHeading(calSelected)}</h3><p class="empty">${L('この日の試合はありません。', 'No matches on this day.')}</p>`;
       return;
     }
     const isToday = calSelected === todayKey();
-    const html = [`<h3>${fmtDateHeading(calSelected)}（${ms.length}試合）</h3>`];
+    const html = [`<h3>${fmtDateHeading(calSelected)}${L(`（${ms.length}試合）`, ` (${ms.length} ${ms.length === 1 ? 'match' : 'matches'})`)}</h3>`];
     for (const m of ms) html.push(renderMatch(m, isToday));
     calDayDetailEl.innerHTML = html.join('');
   }
@@ -693,7 +704,7 @@
   // ===== Ranking view =====
   function renderRanking() {
     if (!standingsData || !currentRankLeague) {
-      standingsContentEl.innerHTML = '<p class="empty">順位データを読み込めませんでした。</p>';
+      standingsContentEl.innerHTML = `<p class="empty">${L('順位データを読み込めませんでした。', 'Could not load standings.')}</p>`;
       scorersContentEl.innerHTML = '';
       return;
     }
@@ -749,15 +760,15 @@
       html.push(`<table class="standings-table"><thead><tr>
         <th class="position">#</th>
         <th></th>
-        <th>クラブ</th>
-        <th>試合</th>
-        <th>勝</th>
-        <th>分</th>
-        <th>負</th>
-        <th>得点</th>
-        <th>失点</th>
-        <th>差</th>
-        <th>勝点</th>
+        <th>${L('クラブ', 'Club')}</th>
+        <th>${L('試合', 'P')}</th>
+        <th>${L('勝', 'W')}</th>
+        <th>${L('分', 'D')}</th>
+        <th>${L('負', 'L')}</th>
+        <th>${L('得点', 'GF')}</th>
+        <th>${L('失点', 'GA')}</th>
+        <th>${L('差', 'GD')}</th>
+        <th>${L('勝点', 'Pts')}</th>
       </tr></thead><tbody>`);
       for (const r of s.table) {
         const zoneCls = isTotal ? zoneClass(currentRankLeague, r.position, total) : '';
@@ -788,15 +799,15 @@
     const compId = Number(currentRankLeague);
     if (compId === 40) {
       html.push(`<p class="zone-legend">
-        <span><span class="dot" style="background:#1858a8"></span>自動昇格</span>
-        <span><span class="dot" style="background:#f5b500"></span>プレーオフ</span>
-        <span><span class="dot" style="background:#c8102e"></span>降格</span>
+        <span><span class="dot" style="background:#1858a8"></span>${L('自動昇格', 'Promotion')}</span>
+        <span><span class="dot" style="background:#f5b500"></span>${L('プレーオフ', 'Play-offs')}</span>
+        <span><span class="dot" style="background:#c8102e"></span>${L('降格', 'Relegation')}</span>
       </p>`);
     } else if ([39, 140, 135, 61, 78, 88].includes(compId)) {
       html.push(`<p class="zone-legend">
-        <span><span class="dot" style="background:#1858a8"></span>CL圏</span>
-        <span><span class="dot" style="background:#f5b500"></span>EL/ECL圏</span>
-        <span><span class="dot" style="background:#c8102e"></span>降格圏</span>
+        <span><span class="dot" style="background:#1858a8"></span>${L('CL圏', 'UCL')}</span>
+        <span><span class="dot" style="background:#f5b500"></span>${L('EL/ECL圏', 'UEL/UECL')}</span>
+        <span><span class="dot" style="background:#c8102e"></span>${L('降格圏', 'Relegation')}</span>
       </p>`);
     }
 
@@ -806,7 +817,7 @@
   function renderScorers() {
     if (!scorersData) { scorersContentEl.innerHTML = ''; return; }
     const meta = scorersData.competitions[currentRankLeague];
-    if (!meta) { scorersContentEl.innerHTML = '<p class="empty">この大会の得点ランキングはありません。</p>'; return; }
+    if (!meta) { scorersContentEl.innerHTML = `<p class="empty">${L('この大会の得点ランキングはありません。', 'No scorer rankings for this competition.')}</p>`; return; }
 
     const list = [...(meta.scorers || [])].map(s => ({...s, ga: (s.goals || 0) + (s.assists || 0)}));
     list.sort((a, b) => {
@@ -817,13 +828,13 @@
 
     const html = [`<table class="scorers-table"><thead><tr>
       <th>#</th>
-      <th>選手</th>
-      <th>クラブ</th>
+      <th>${L('選手', 'Player')}</th>
+      <th>${L('クラブ', 'Club')}</th>
       <th>G</th>
       <th>A</th>
       <th>G+A</th>
       <th>PK</th>
-      <th>試合</th>
+      <th>${L('試合', 'MP')}</th>
     </tr></thead><tbody>`];
     list.forEach((s, i) => {
       const isJp = s.nationality === 'Japan' || jpPlayerNames.has((s.player_name || '').toLowerCase());
@@ -937,7 +948,7 @@
     const highlightHtml = highlights.length
       ? highlights.map(h => {
           const url = h.url || `https://youtu.be/${h.video_id}`;
-          return `<a class="match-highlight" href="${escape(url)}" target="_blank" rel="noopener">▶ ${escape(h.title || 'ハイライト動画')}</a>`;
+          return `<a class="match-highlight" href="${escape(url)}" target="_blank" rel="noopener">▶ ${escape(h.title || L('ハイライト動画', 'Highlights'))}</a>`;
         }).join('')
       : '';
 
@@ -945,10 +956,10 @@
     overlay.className = 'match-modal-overlay';
     overlay.innerHTML = `
       <div class="match-modal" role="dialog" aria-modal="true">
-        <button class="match-modal-close" aria-label="閉じる">×</button>
+        <button class="match-modal-close" aria-label="${L('閉じる', 'Close')}">×</button>
         <div class="modal-comp">
           <span class="league-tag cat-league-${m.competition_id}">${m.competition_flag || ''} ${escape(m.competition_ja)}</span>
-          ${m.matchday ? `<span class="status-tag">第${m.matchday}節</span>` : ''}
+          ${m.matchday ? `<span class="status-tag">${L(`第${m.matchday}節`, `Matchday ${m.matchday}`)}</span>` : ''}
           ${m.stage && m.stage !== 'REGULAR_SEASON' ? `<span class="status-tag">${escape(stageLabel(m.stage))}</span>` : ''}
         </div>
         <div class="modal-score">
@@ -964,7 +975,7 @@
         </div>
         <div class="modal-meta">${escape(fmtKickoff(m.kickoff_jst))}</div>
         <div class="modal-section">
-          <h3>得点者</h3>
+          <h3>${L('得点者', 'Scorers')}</h3>
           ${(homeGoals.length || awayGoals.length) ? `
             <div class="modal-goals">
               <div class="modal-goals-side">
@@ -977,22 +988,22 @@
               </div>
             </div>
           ` : `
-            <div class="modal-goal-empty">得点者データはまだ取得できていません。</div>
+            <div class="modal-goal-empty">${L('得点者データはまだ取得できていません。', 'Scorer data is not available yet.')}</div>
           `}
         </div>
         ${highlightHtml ? `
           <div class="modal-section">
-            <h3>ハイライト動画</h3>
+            <h3>${L('ハイライト動画', 'Highlights')}</h3>
             <div class="modal-highlights">${highlightHtml}</div>
           </div>
         ` : ''}
         ${bcs ? `
           <div class="modal-section">
-            <h3>放送・配信</h3>
+            <h3>${L('放送・配信', 'Where to watch')}</h3>
             <div class="tags-row broadcasters">${bcs}</div>
           </div>
         ` : ''}
-        <div class="modal-source">出典: Wikipedia 各クラブ2025-26シーズンページ／ハイライトはYouTube公式チャンネル</div>
+        <div class="modal-source">${L('出典: Wikipedia 各クラブ2025-26シーズンページ／ハイライトはYouTube公式チャンネル', 'Source: Wikipedia club 2025-26 season pages / highlights from official YouTube channels')}</div>
       </div>
     `;
     document.body.appendChild(overlay);
@@ -1015,6 +1026,7 @@
 
   function fmtKickoff(iso) {
     const d = new Date(iso);
+    if (IS_EN) return `Kick-off ${d.getFullYear()}/${pad(d.getMonth()+1)}/${pad(d.getDate())} (${WEEKDAY[d.getDay()]}) ${pad(d.getHours())}:${pad(d.getMinutes())} JST`;
     return `${d.getFullYear()}/${pad(d.getMonth()+1)}/${pad(d.getDate())}（${WEEKDAY[d.getDay()]}）${pad(d.getHours())}:${pad(d.getMinutes())} キックオフ`;
   }
 
@@ -1163,7 +1175,7 @@
           <button class="news-more-btn" onclick="
             this.previousElementSibling.hidden=false;
             this.remove();
-          ">残り${items.length - INITIAL}件を見る ▼</button>` : '');
+          ">${L(`残り${items.length - INITIAL}件を見る`, `Show ${items.length - INITIAL} more`)} ▼</button>` : '');
     if (count) count.textContent = `(${items.length})`;
     section.hidden = false;
   }
