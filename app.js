@@ -131,6 +131,7 @@
       }
       renderNews(news);
       allMatches = m.matches || [];
+      normalizeUnplayedFinished(allMatches);
       // 英語モード時：表示用フィールドを英語に切替（_ja を _en で上書き）
       if (IS_EN) {
         for (const x of allMatches) {
@@ -873,6 +874,20 @@
         (m.score.away !== null && m.score.away !== undefined)
     )) return true;
     return false;
+  }
+
+  // 開始前なのに「終了」の試合を予定に戻す（取り寄せ元が未来の試合を FINISHED 0-0 で返すことがある）
+  // 開始時刻がまだ来ていないのに status が FINISHED、またはスコア入りの試合は、
+  // 表示上だけ TIMED・スコア無しとして扱う（データは書き換えない。生成スクリプトの utils.fix_unplayed_finished と同じ判定）
+  function normalizeUnplayedFinished(list) {
+    const now = Date.now();
+    for (const m of list) {
+      if (!m || !isFinished(m)) continue;
+      const ko = new Date(m.kickoff_jst).getTime();
+      if (isNaN(ko) || ko <= now) continue;
+      m.status = 'TIMED';
+      if (m.score) m.score = Object.assign({}, m.score, { home: null, away: null });
+    }
   }
 
   // 結果待ちの判定（取り寄せ元が結果を入れてこない試合への対策）

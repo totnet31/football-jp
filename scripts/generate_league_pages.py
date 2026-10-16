@@ -8,7 +8,7 @@ generate_league_pages.py
 使い方: python3 scripts/generate_league_pages.py
 """
 
-from utils import is_result_pending
+from utils import is_result_pending, fix_unplayed_finished
 import json
 import os
 import re
@@ -369,6 +369,7 @@ def load_all_data():
     with open(MATCHES_JSON, encoding="utf-8") as f:
         matches_raw = json.load(f)
     matches = matches_raw.get("matches", [])
+    fix_unplayed_finished(matches)  # 開始前なのに「終了」になっている試合は予定に戻す（データは書き換えない）
 
     with open(STANDINGS_JSON, encoding="utf-8") as f:
         standings_raw = json.load(f)
