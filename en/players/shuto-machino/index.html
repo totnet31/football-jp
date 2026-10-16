@@ -116,6 +116,7 @@
     .match-result.win { color: #1a7a3a; }
     .match-result.lose { color: #c0392b; }
     .match-result.draw { color: #666; }
+    .match-result.pending { color: #8a6100; font-size: 12px; font-weight: 600; }
     .match-broadcast {
       display: flex; flex-wrap: wrap; gap: 4px;
       align-items: center; justify-content: center;
@@ -346,7 +347,7 @@
       <h3>👤 Profile <a href="https://en.wikipedia.org/wiki/Sh%C5%ABto_Machino" target="_blank" rel="noopener" style="font-size:11px;color:#888;">Wikipedia →</a></h3>
       <table class="profile-table">
         <tr><td class="profile-label">Height / Weight</td><td class="profile-value">185 cm / —</td></tr>
-        <tr><td class="profile-label">Date of Birth</td><td class="profile-value">1999-09-30 (age 26)</td></tr>
+        <tr><td class="profile-label">Date of Birth</td><td class="profile-value">1999-09-30 (age 27)</td></tr>
         <tr><td class="profile-label">Birthplace</td><td class="profile-value">Iga, Mie, Japan</td></tr>
         <tr><td class="profile-label">Foot</td><td class="profile-value">—</td></tr>
       </table>
@@ -358,10 +359,10 @@
     <section class="player-section">
       <h3>🏆 Bundesliga Current Standings</h3>
       <div class="standing-row">
-        <span class="standing-pos">1</span>
+        <span class="standing-pos">18</span>
         <span class="standing-detail">
-          (of 18)&nbsp;&nbsp;0 played&nbsp;
-          0W 0D 0L&nbsp;
+          (of 18)&nbsp;&nbsp;5 played&nbsp;
+          0W 0D 5L&nbsp;
           0 pts
         </span>
       </div>
@@ -381,10 +382,58 @@
         </div>
         
           <div class="match-row scheduled">
+            <div class="match-date"><span class="match-date-day">2026/10/24</span><span class="match-date-time">(Sat) 03:30</span></div>
+            <div class="match-venue"><span class="venue-badge venue-away">A</span></div>
+            <div class="match-opponent">vs Stuttgart</div>
+            <div class="match-result">—</div>
+            <div class="match-broadcast">—</div>
+            <div class="match-comp">Bundesliga</div>
+          </div>
+          <div class="match-row scheduled">
+            <div class="match-date"><span class="match-date-day">2026/10/19</span><span class="match-date-time">(Mon) 00:30</span></div>
+            <div class="match-venue"><span class="venue-badge venue-home">H</span></div>
+            <div class="match-opponent">vs Hoffenheim</div>
+            <div class="match-result">—</div>
+            <div class="match-broadcast">—</div>
+            <div class="match-comp">Bundesliga</div>
+          </div>
+          <div class="match-row">
+            <div class="match-date"><span class="match-date-day">2026/10/11</span><span class="match-date-time">(Sun) 22:30</span></div>
+            <div class="match-venue"><span class="venue-badge venue-away">A</span></div>
+            <div class="match-opponent">vs 1. FC Köln</div>
+            <div class="match-result lose">1 - 2</div>
+            <div class="match-broadcast">—</div>
+            <div class="match-comp">Bundesliga</div>
+          </div>
+          <div class="match-row">
+            <div class="match-date"><span class="match-date-day">2026/09/19</span><span class="match-date-time">(Sat) 22:30</span></div>
+            <div class="match-venue"><span class="venue-badge venue-home">H</span></div>
+            <div class="match-opponent">vs Mainz</div>
+            <div class="match-result lose">3 - 4</div>
+            <div class="match-broadcast">—</div>
+            <div class="match-comp">Bundesliga</div>
+          </div>
+          <div class="match-row">
+            <div class="match-date"><span class="match-date-day">2026/09/12</span><span class="match-date-time">(Sat) 22:30</span></div>
+            <div class="match-venue"><span class="venue-badge venue-away">A</span></div>
+            <div class="match-opponent">vs Freiburg</div>
+            <div class="match-result lose">0 - 5</div>
+            <div class="match-broadcast">—</div>
+            <div class="match-comp">Bundesliga</div>
+          </div>
+          <div class="match-row">
+            <div class="match-date"><span class="match-date-day">2026/09/05</span><span class="match-date-time">(Sat) 22:30</span></div>
+            <div class="match-venue"><span class="venue-badge venue-home">H</span></div>
+            <div class="match-opponent">vs Elversberg</div>
+            <div class="match-result lose">3 - 4</div>
+            <div class="match-broadcast">—</div>
+            <div class="match-comp">Bundesliga</div>
+          </div>
+          <div class="match-row">
             <div class="match-date"><span class="match-date-day">2026/08/29</span><span class="match-date-time">(Sat) 22:30</span></div>
             <div class="match-venue"><span class="venue-badge venue-away">A</span></div>
             <div class="match-opponent">vs RB Leipzig</div>
-            <div class="match-result">—</div>
+            <div class="match-result lose">0 - 3</div>
             <div class="match-broadcast">—</div>
             <div class="match-comp">Bundesliga</div>
           </div>
@@ -412,7 +461,7 @@
             <div class="match-broadcast">—</div>
             <div class="match-comp">Bundesliga</div>
           </div>
-          <div class="match-row">
+          <div class="match-row hidden-extra">
             <div class="match-date"><span class="match-date-day">2026/04/25</span><span class="match-date-time">(Sat) 22:30</span></div>
             <div class="match-venue"><span class="venue-badge venue-away">A</span></div>
             <div class="match-opponent">vs Wolfsburg</div>
@@ -421,6 +470,9 @@
             <div class="match-comp">Bundesliga</div>
           </div>
       </div>
+      <button class="show-more-matches" onclick="toggleMoreMatches(this)" data-count="1" data-expanded="false">
+        Show more (1 remaining)
+      </button>
     </section>
 
   
@@ -460,6 +512,16 @@
       <h3>Related Highlights</h3>
       <div class="video-grid">
         
+        <a href="https://youtu.be/vF8SRS46Beo" target="_blank" rel="noopener" class="video-card">
+          <img src="https://i.ytimg.com/vi/vF8SRS46Beo/mqdefault.jpg" alt="" loading="lazy">
+          <div class="video-title">【宇野禅斗がブンデスリーガ初出場、橋岡大樹、町野修斗が出場 | ケルン×ボルシアMG｜ハイライト】ブンデスリーガ第5節｜2026-27シーズン</div>
+          <div class="video-meta">DAZN · 10/11</div>
+        </a>
+        <a href="https://youtu.be/Kxm1bi8tEZY" target="_blank" rel="noopener" class="video-card">
+          <img src="https://i.ytimg.com/vi/Kxm1bi8tEZY/mqdefault.jpg" alt="" loading="lazy">
+          <div class="video-title">【🇯🇵板倉滉と橋岡大樹が出場｜ライプツィヒ×ボルシアMG ｜ハイライト】ブンデスリーガ第1節｜2026-27シーズン</div>
+          <div class="video-meta">DAZN · 08/29</div>
+        </a>
         <a href="https://youtu.be/AuIWvkeLowg" target="_blank" rel="noopener" class="video-card">
           <img src="https://i.ytimg.com/vi/AuIWvkeLowg/mqdefault.jpg" alt="" loading="lazy">
           <div class="video-title">Borussia Mönchengladbach vs Borussia Dortmund | Bundesliga Highlights | Matchday 32 | 2025-2026</div>
