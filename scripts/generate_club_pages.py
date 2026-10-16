@@ -6,6 +6,7 @@ generate_club_pages.py
 使い方: python3 scripts/generate_club_pages.py
 """
 
+from utils import is_result_pending
 import json
 import os
 import re
@@ -662,12 +663,13 @@ def build_club_page(club_info: dict, slug: str, standing: dict,
                 elif broadcasters_list:
                     bc_names = [b.get("name", "") for b in broadcasters_list[:2] if b.get("name")]
                     bc_tags = esc(" / ".join(bc_names))
+                _pending = is_result_pending(m)  # 開始から3時間すぎても予定のまま＝結果待ち
                 match_rows += f"""
-          <div class="match-row scheduled{extra_cls}">
+          <div class="match-row {'result-pending' if _pending else 'scheduled'}{extra_cls}">
             <div class="match-date">{date_display}</div>
             <div class="match-venue"><span class="venue-badge {venue_cls}">{venue_label}</span></div>
             <div class="match-opponent">vs {opponent}</div>
-            <div class="match-result">—</div>
+            <div class="match-result{' pending' if _pending else ''}">{'結果待ち' if _pending else '—'}</div>
             <div class="match-broadcast">{bc_tags if bc_tags else "—"}</div>
             <div class="match-comp">{esc(comp_ja)}</div>
           </div>"""
@@ -1060,6 +1062,7 @@ def build_club_page(club_info: dict, slug: str, standing: dict,
     .match-result.win {{ color: #1a7a3a; }}
     .match-result.lose {{ color: #c0392b; }}
     .match-result.draw {{ color: #666; }}
+    .match-result.pending {{ color: #8a6100; font-size: 12px; font-weight: 600; }}
     .match-broadcast {{
       display: flex;
       flex-wrap: wrap;

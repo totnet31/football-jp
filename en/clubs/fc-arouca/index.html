@@ -92,6 +92,7 @@
     .match-result.win { color: #1a7a3a; }
     .match-result.lose { color: #c0392b; }
     .match-result.draw { color: #666; }
+    .match-result.pending { color: #8a6100; font-size: 12px; font-weight: 600; }
     .match-broadcast { display: flex; flex-wrap: wrap; gap: 4px; align-items: center; justify-content: center; }
     .match-date-day { display: block; font-size: 12px; }
     .match-date-time { display: block; font-size: 11px; color: #555; }
@@ -212,12 +213,12 @@
     <section class="club-section">
       <h3>🏆 Primeira Liga Current Standings</h3>
       <div class="standing-row">
-        <span class="standing-pos">1</span>
+        <span class="standing-pos">5</span>
         <span class="standing-detail">
-          (of 18)&nbsp;&nbsp;2 played&nbsp;
-          2W 0D 0L&nbsp;
-          5-0 GD&nbsp;
-          <strong>6 pts</strong>
+          (of 18)&nbsp;&nbsp;8 played&nbsp;
+          4W 2D 2L&nbsp;
+          11-7 GD&nbsp;
+          <strong>14 pts</strong>
         </span>
       </div>
     </section>
@@ -252,26 +253,58 @@
         </div>
         
           <div class="match-row scheduled">
-            <div class="match-date"><span class="match-date-day">2026/09/05</span><span class="match-date-time">(Sat) 09:00</span></div>
+            <div class="match-date"><span class="match-date-day">2026/10/25</span><span class="match-date-time">(Sun) 02:00</span></div>
             <div class="match-venue"><span class="venue-badge venue-away">A</span></div>
-            <div class="match-opponent">vs Estoril Praia</div>
+            <div class="match-opponent">vs Alverca</div>
             <div class="match-result">—</div>
             <div class="match-broadcast">—</div>
             <div class="match-comp">Primeira Liga</div>
           </div>
-          <div class="match-row scheduled">
+          <div class="match-row">
+            <div class="match-date"><span class="match-date-day">2026/10/12</span><span class="match-date-time">(Mon) 04:30</span></div>
+            <div class="match-venue"><span class="venue-badge venue-home">H</span></div>
+            <div class="match-opponent">vs Amadora</div>
+            <div class="match-result win">1 - 0</div>
+            <div class="match-broadcast">—</div>
+            <div class="match-comp">Primeira Liga</div>
+          </div>
+          <div class="match-row">
+            <div class="match-date"><span class="match-date-day">2026/09/20</span><span class="match-date-time">(Sun) 04:30</span></div>
+            <div class="match-venue"><span class="venue-badge venue-away">A</span></div>
+            <div class="match-opponent">vs Sporting CP</div>
+            <div class="match-result draw">2 - 2</div>
+            <div class="match-broadcast">—</div>
+            <div class="match-comp">Primeira Liga</div>
+          </div>
+          <div class="match-row">
+            <div class="match-date"><span class="match-date-day">2026/09/14</span><span class="match-date-time">(Mon) 02:00</span></div>
+            <div class="match-venue"><span class="venue-badge venue-home">H</span></div>
+            <div class="match-opponent">vs Santa Clara</div>
+            <div class="match-result lose">1 - 2</div>
+            <div class="match-broadcast">—</div>
+            <div class="match-comp">Primeira Liga</div>
+          </div>
+          <div class="match-row">
+            <div class="match-date"><span class="match-date-day">2026/09/08</span><span class="match-date-time">(Tue) 04:15</span></div>
+            <div class="match-venue"><span class="venue-badge venue-away">A</span></div>
+            <div class="match-opponent">vs Estoril Praia</div>
+            <div class="match-result draw">0 - 0</div>
+            <div class="match-broadcast">—</div>
+            <div class="match-comp">Primeira Liga</div>
+          </div>
+          <div class="match-row">
             <div class="match-date"><span class="match-date-day">2026/08/29</span><span class="match-date-time">(Sat) 23:30</span></div>
             <div class="match-venue"><span class="venue-badge venue-home">H</span></div>
             <div class="match-opponent">vs Marítimo</div>
-            <div class="match-result">—</div>
+            <div class="match-result win">2 - 1</div>
             <div class="match-broadcast">—</div>
             <div class="match-comp">Primeira Liga</div>
           </div>
-          <div class="match-row scheduled">
+          <div class="match-row">
             <div class="match-date"><span class="match-date-day">2026/08/24</span><span class="match-date-time">(Mon) 04:30</span></div>
             <div class="match-venue"><span class="venue-badge venue-away">A</span></div>
             <div class="match-opponent">vs Porto</div>
-            <div class="match-result">—</div>
+            <div class="match-result lose">0 - 2</div>
             <div class="match-broadcast">—</div>
             <div class="match-comp">Primeira Liga</div>
           </div>
@@ -299,7 +332,7 @@
             <div class="match-broadcast">—</div>
             <div class="match-comp">Primeira Liga</div>
           </div>
-          <div class="match-row">
+          <div class="match-row hidden-extra">
             <div class="match-date"><span class="match-date-day">2026/05/12</span><span class="match-date-time">(Tue) 04:15</span></div>
             <div class="match-venue"><span class="venue-badge venue-away">A</span></div>
             <div class="match-opponent">vs Gil Vicente</div>
@@ -307,7 +340,7 @@
             <div class="match-broadcast">—</div>
             <div class="match-comp">Primeira Liga</div>
           </div>
-          <div class="match-row">
+          <div class="match-row hidden-extra">
             <div class="match-date"><span class="match-date-day">2026/05/02</span><span class="match-date-time">(Sat) 23:30</span></div>
             <div class="match-venue"><span class="venue-badge venue-home">H</span></div>
             <div class="match-opponent">vs Santa Clara</div>
@@ -315,7 +348,7 @@
             <div class="match-broadcast">—</div>
             <div class="match-comp">Primeira Liga</div>
           </div>
-          <div class="match-row">
+          <div class="match-row hidden-extra">
             <div class="match-date"><span class="match-date-day">2026/04/25</span><span class="match-date-time">(Sat) 04:15</span></div>
             <div class="match-venue"><span class="venue-badge venue-away">A</span></div>
             <div class="match-opponent">vs Alverca</div>
@@ -324,13 +357,16 @@
             <div class="match-comp">Primeira Liga</div>
           </div>
       </div>
+      <button class="show-more-matches" onclick="toggleMoreMatches(this)" data-count="3" data-expanded="false">
+        Show more (3 remaining)
+      </button>
     </section>
 
   
 
   
     <section class="club-section">
-      <h3>📊 Records vs Opponents (Top 6)</h3>
+      <h3>📊 Records vs Opponents (Top 10)</h3>
       <div class="opponent-records">
         <div class="opp-header">
           <div class="opp-name">Opponent</div>
@@ -340,16 +376,16 @@
         </div>
         
           <div class="opp-row">
+            <div class="opp-name">Santa Clara</div>
+            <div class="opp-total">2 played</div>
+            <div class="opp-wdl">0W 1D 1L</div>
+            <div class="opp-goals">3 GF - 4 GA</div>
+          </div>
+          <div class="opp-row">
             <div class="opp-name">Alverca</div>
             <div class="opp-total">1 played</div>
             <div class="opp-wdl">0W 0D 1L</div>
             <div class="opp-goals">1 GF - 2 GA</div>
-          </div>
-          <div class="opp-row">
-            <div class="opp-name">Santa Clara</div>
-            <div class="opp-total">1 played</div>
-            <div class="opp-wdl">0W 1D 0L</div>
-            <div class="opp-goals">2 GF - 2 GA</div>
           </div>
           <div class="opp-row">
             <div class="opp-name">Gil Vicente</div>
@@ -374,6 +410,30 @@
             <div class="opp-total">1 played</div>
             <div class="opp-wdl">1W 0D 0L</div>
             <div class="opp-goals">4 GF - 0 GA</div>
+          </div>
+          <div class="opp-row">
+            <div class="opp-name">Porto</div>
+            <div class="opp-total">1 played</div>
+            <div class="opp-wdl">0W 0D 1L</div>
+            <div class="opp-goals">0 GF - 2 GA</div>
+          </div>
+          <div class="opp-row">
+            <div class="opp-name">Marítimo</div>
+            <div class="opp-total">1 played</div>
+            <div class="opp-wdl">1W 0D 0L</div>
+            <div class="opp-goals">2 GF - 1 GA</div>
+          </div>
+          <div class="opp-row">
+            <div class="opp-name">Estoril Praia</div>
+            <div class="opp-total">1 played</div>
+            <div class="opp-wdl">0W 1D 0L</div>
+            <div class="opp-goals">0 GF - 0 GA</div>
+          </div>
+          <div class="opp-row">
+            <div class="opp-name">Sporting CP</div>
+            <div class="opp-total">1 played</div>
+            <div class="opp-wdl">0W 1D 0L</div>
+            <div class="opp-goals">2 GF - 2 GA</div>
           </div>
       </div>
     </section>

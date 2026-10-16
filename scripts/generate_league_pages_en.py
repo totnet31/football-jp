@@ -8,6 +8,7 @@ generate_league_pages_en.py
 使い方: python3 scripts/generate_league_pages_en.py
 """
 
+from utils import is_result_pending
 import json
 import sys
 from collections import defaultdict
@@ -278,6 +279,8 @@ def build_match_card_en(m: dict, services: dict, league_slug_str: str, is_result
 
     if is_result and home_score is not None and away_score is not None:
         score_html = f'<span class="match-score">{esc(str(home_score))} - {esc(str(away_score))}</span>'
+    elif is_result and is_result_pending(m):
+        score_html = '<span class="match-vs match-pending">Result pending</span>'
     else:
         score_html = '<span class="match-vs">vs</span>'
 

@@ -92,6 +92,7 @@
     .match-result.win { color: #1a7a3a; }
     .match-result.lose { color: #c0392b; }
     .match-result.draw { color: #666; }
+    .match-result.pending { color: #8a6100; font-size: 12px; font-weight: 600; }
     .match-broadcast { display: flex; flex-wrap: wrap; gap: 4px; align-items: center; justify-content: center; }
     .match-date-day { display: block; font-size: 12px; }
     .match-date-time { display: block; font-size: 11px; color: #555; }
@@ -218,12 +219,12 @@
     <section class="club-section">
       <h3>🏆 Championship Current Standings</h3>
       <div class="standing-row">
-        <span class="standing-pos">1</span>
+        <span class="standing-pos">5</span>
         <span class="standing-detail">
-          (of 24)&nbsp;&nbsp;1 played&nbsp;
-          1W 0D 0L&nbsp;
-          3-1 GD&nbsp;
-          <strong>3 pts</strong>
+          (of 24)&nbsp;&nbsp;10 played&nbsp;
+          4W 5D 1L&nbsp;
+          15-9 GD&nbsp;
+          <strong>17 pts</strong>
         </span>
       </div>
     </section>
@@ -258,30 +259,94 @@
         </div>
         
           <div class="match-row scheduled">
-            <div class="match-date"><span class="match-date-day">2026/09/03</span><span class="match-date-time">(Thu) 03:45</span></div>
+            <div class="match-date"><span class="match-date-day">2026/10/24</span><span class="match-date-time">(Sat) 23:00</span></div>
             <div class="match-venue"><span class="venue-badge venue-home">H</span></div>
-            <div class="match-opponent">vs Cardiff</div>
+            <div class="match-opponent">vs Swansea</div>
             <div class="match-result">—</div>
             <div class="match-broadcast">—</div>
             <div class="match-comp">Championship</div>
           </div>
           <div class="match-row scheduled">
-            <div class="match-date"><span class="match-date-day">2026/08/29</span><span class="match-date-time">(Sat) 23:00</span></div>
+            <div class="match-date"><span class="match-date-day">2026/10/17</span><span class="match-date-time">(Sat) 23:00</span></div>
             <div class="match-venue"><span class="venue-badge venue-away">A</span></div>
-            <div class="match-opponent">vs Blackburn</div>
+            <div class="match-opponent">vs Birmingham</div>
             <div class="match-result">—</div>
             <div class="match-broadcast">—</div>
             <div class="match-comp">Championship</div>
           </div>
-          <div class="match-row scheduled">
-            <div class="match-date"><span class="match-date-day">2026/08/22</span><span class="match-date-time">(Sat) 23:00</span></div>
+          <div class="match-row result-pending">
+            <div class="match-date"><span class="match-date-day">2026/10/15</span><span class="match-date-time">(Thu) 03:45</span></div>
             <div class="match-venue"><span class="venue-badge venue-home">H</span></div>
-            <div class="match-opponent">vs Bolton</div>
-            <div class="match-result">—</div>
+            <div class="match-opponent">vs Derby County</div>
+            <div class="match-result pending">Result pending</div>
             <div class="match-broadcast">—</div>
             <div class="match-comp">Championship</div>
           </div>
           <div class="match-row">
+            <div class="match-date"><span class="match-date-day">2026/10/10</span><span class="match-date-time">(Sat) 04:00</span></div>
+            <div class="match-venue"><span class="venue-badge venue-away">A</span></div>
+            <div class="match-opponent">vs West Ham</div>
+            <div class="match-result draw">1 - 1</div>
+            <div class="match-broadcast">—</div>
+            <div class="match-comp">Championship</div>
+          </div>
+          <div class="match-row">
+            <div class="match-date"><span class="match-date-day">2026/09/19</span><span class="match-date-time">(Sat) 23:00</span></div>
+            <div class="match-venue"><span class="venue-badge venue-home">H</span></div>
+            <div class="match-opponent">vs Preston NE</div>
+            <div class="match-result draw">2 - 2</div>
+            <div class="match-broadcast">—</div>
+            <div class="match-comp">Championship</div>
+          </div>
+          <div class="match-row">
+            <div class="match-date"><span class="match-date-day">2026/09/12</span><span class="match-date-time">(Sat) 20:30</span></div>
+            <div class="match-venue"><span class="venue-badge venue-away">A</span></div>
+            <div class="match-opponent">vs West Brom</div>
+            <div class="match-result draw">1 - 1</div>
+            <div class="match-broadcast">—</div>
+            <div class="match-comp">Championship</div>
+          </div>
+          <div class="match-row">
+            <div class="match-date"><span class="match-date-day">2026/09/10</span><span class="match-date-time">(Thu) 04:00</span></div>
+            <div class="match-venue"><span class="venue-badge venue-away">A</span></div>
+            <div class="match-opponent">vs Charlton</div>
+            <div class="match-result draw">0 - 0</div>
+            <div class="match-broadcast">—</div>
+            <div class="match-comp">Championship</div>
+          </div>
+          <div class="match-row">
+            <div class="match-date"><span class="match-date-day">2026/09/05</span><span class="match-date-time">(Sat) 23:00</span></div>
+            <div class="match-venue"><span class="venue-badge venue-home">H</span></div>
+            <div class="match-opponent">vs Middlesbrough</div>
+            <div class="match-result lose">0 - 1</div>
+            <div class="match-broadcast">—</div>
+            <div class="match-comp">Championship</div>
+          </div>
+          <div class="match-row">
+            <div class="match-date"><span class="match-date-day">2026/09/03</span><span class="match-date-time">(Thu) 03:45</span></div>
+            <div class="match-venue"><span class="venue-badge venue-home">H</span></div>
+            <div class="match-opponent">vs Cardiff</div>
+            <div class="match-result win">2 - 1</div>
+            <div class="match-broadcast">—</div>
+            <div class="match-comp">Championship</div>
+          </div>
+          <div class="match-row">
+            <div class="match-date"><span class="match-date-day">2026/08/29</span><span class="match-date-time">(Sat) 23:00</span></div>
+            <div class="match-venue"><span class="venue-badge venue-away">A</span></div>
+            <div class="match-opponent">vs Blackburn</div>
+            <div class="match-result win">2 - 1</div>
+            <div class="match-broadcast">—</div>
+            <div class="match-comp">Championship</div>
+          </div>
+          <div class="match-row hidden-extra">
+            <div class="match-date"><span class="match-date-day">2026/08/22</span><span class="match-date-time">(Sat) 23:00</span></div>
+            <div class="match-venue"><span class="venue-badge venue-home">H</span></div>
+            <div class="match-opponent">vs Bolton</div>
+            <div class="match-result draw">0 - 0</div>
+            <div class="match-broadcast">—</div>
+            <div class="match-comp">Championship</div>
+          </div>
+          <div class="match-row hidden-extra">
             <div class="match-date"><span class="match-date-day">2026/08/15</span><span class="match-date-time">(Sat) 23:00</span></div>
             <div class="match-venue"><span class="venue-badge venue-away">A</span></div>
             <div class="match-opponent">vs Portsmouth</div>
@@ -289,7 +354,7 @@
             <div class="match-broadcast">—</div>
             <div class="match-comp">Championship</div>
           </div>
-          <div class="match-row">
+          <div class="match-row hidden-extra">
             <div class="match-date"><span class="match-date-day">2026/05/02</span><span class="match-date-time">(Sat) 20:30</span></div>
             <div class="match-venue"><span class="venue-badge venue-away">A</span></div>
             <div class="match-opponent">vs Ipswich Town</div>
@@ -297,7 +362,7 @@
             <div class="match-broadcast">—</div>
             <div class="match-comp">Championship</div>
           </div>
-          <div class="match-row">
+          <div class="match-row hidden-extra">
             <div class="match-date"><span class="match-date-day">2026/04/25</span><span class="match-date-time">(Sat) 23:00</span></div>
             <div class="match-venue"><span class="venue-badge venue-home">H</span></div>
             <div class="match-opponent">vs Derby County</div>
@@ -306,13 +371,16 @@
             <div class="match-comp">Championship</div>
           </div>
       </div>
+      <button class="show-more-matches" onclick="toggleMoreMatches(this)" data-count="4" data-expanded="false">
+        Show more (4 remaining)
+      </button>
     </section>
 
   
 
   
     <section class="club-section">
-      <h3>📊 Records vs Opponents (Top 3)</h3>
+      <h3>📊 Records vs Opponents (Top 10)</h3>
       <div class="opponent-records">
         <div class="opp-header">
           <div class="opp-name">Opponent</div>
@@ -338,6 +406,48 @@
             <div class="opp-total">1 played</div>
             <div class="opp-wdl">1W 0D 0L</div>
             <div class="opp-goals">3 GF - 1 GA</div>
+          </div>
+          <div class="opp-row">
+            <div class="opp-name">Bolton</div>
+            <div class="opp-total">1 played</div>
+            <div class="opp-wdl">0W 1D 0L</div>
+            <div class="opp-goals">0 GF - 0 GA</div>
+          </div>
+          <div class="opp-row">
+            <div class="opp-name">Blackburn</div>
+            <div class="opp-total">1 played</div>
+            <div class="opp-wdl">1W 0D 0L</div>
+            <div class="opp-goals">2 GF - 1 GA</div>
+          </div>
+          <div class="opp-row">
+            <div class="opp-name">Cardiff</div>
+            <div class="opp-total">1 played</div>
+            <div class="opp-wdl">1W 0D 0L</div>
+            <div class="opp-goals">2 GF - 1 GA</div>
+          </div>
+          <div class="opp-row">
+            <div class="opp-name">Middlesbrough</div>
+            <div class="opp-total">1 played</div>
+            <div class="opp-wdl">0W 0D 1L</div>
+            <div class="opp-goals">0 GF - 1 GA</div>
+          </div>
+          <div class="opp-row">
+            <div class="opp-name">Charlton</div>
+            <div class="opp-total">1 played</div>
+            <div class="opp-wdl">0W 1D 0L</div>
+            <div class="opp-goals">0 GF - 0 GA</div>
+          </div>
+          <div class="opp-row">
+            <div class="opp-name">West Brom</div>
+            <div class="opp-total">1 played</div>
+            <div class="opp-wdl">0W 1D 0L</div>
+            <div class="opp-goals">1 GF - 1 GA</div>
+          </div>
+          <div class="opp-row">
+            <div class="opp-name">Preston NE</div>
+            <div class="opp-total">1 played</div>
+            <div class="opp-wdl">0W 1D 0L</div>
+            <div class="opp-goals">2 GF - 2 GA</div>
           </div>
       </div>
     </section>

@@ -116,6 +116,7 @@
     .match-result.win { color: #1a7a3a; }
     .match-result.lose { color: #c0392b; }
     .match-result.draw { color: #666; }
+    .match-result.pending { color: #8a6100; font-size: 12px; font-weight: 600; }
     .match-broadcast {
       display: flex; flex-wrap: wrap; gap: 4px;
       align-items: center; justify-content: center;
@@ -382,9 +383,9 @@
       <div class="standing-row">
         <span class="standing-pos">1</span>
         <span class="standing-detail">
-          (of 18)&nbsp;&nbsp;0 played&nbsp;
-          0W 0D 0L&nbsp;
-          0 pts
+          (of 18)&nbsp;&nbsp;5 played&nbsp;
+          4W 1D 0L&nbsp;
+          13 pts
         </span>
       </div>
     </section>
@@ -403,10 +404,58 @@
         </div>
         
           <div class="match-row scheduled">
+            <div class="match-date"><span class="match-date-day">2026/10/26</span><span class="match-date-time">(Mon) 01:30</span></div>
+            <div class="match-venue"><span class="venue-badge venue-home">H</span></div>
+            <div class="match-opponent">vs Bayern</div>
+            <div class="match-result">—</div>
+            <div class="match-broadcast">—</div>
+            <div class="match-comp">Bundesliga</div>
+          </div>
+          <div class="match-row scheduled">
+            <div class="match-date"><span class="match-date-day">2026/10/18</span><span class="match-date-time">(Sun) 22:30</span></div>
+            <div class="match-venue"><span class="venue-badge venue-away">A</span></div>
+            <div class="match-opponent">vs Leverkusen</div>
+            <div class="match-result">—</div>
+            <div class="match-broadcast">—</div>
+            <div class="match-comp">Bundesliga</div>
+          </div>
+          <div class="match-row">
+            <div class="match-date"><span class="match-date-day">2026/10/12</span><span class="match-date-time">(Mon) 00:30</span></div>
+            <div class="match-venue"><span class="venue-badge venue-home">H</span></div>
+            <div class="match-opponent">vs Schalke</div>
+            <div class="match-result win">2 - 1</div>
+            <div class="match-broadcast">—</div>
+            <div class="match-comp">Bundesliga</div>
+          </div>
+          <div class="match-row">
+            <div class="match-date"><span class="match-date-day">2026/09/19</span><span class="match-date-time">(Sat) 22:30</span></div>
+            <div class="match-venue"><span class="venue-badge venue-away">A</span></div>
+            <div class="match-opponent">vs Frankfurt</div>
+            <div class="match-result draw">2 - 2</div>
+            <div class="match-broadcast">—</div>
+            <div class="match-comp">Bundesliga</div>
+          </div>
+          <div class="match-row">
+            <div class="match-date"><span class="match-date-day">2026/09/12</span><span class="match-date-time">(Sat) 22:30</span></div>
+            <div class="match-venue"><span class="venue-badge venue-home">H</span></div>
+            <div class="match-opponent">vs M&#39;gladbach</div>
+            <div class="match-result win">5 - 0</div>
+            <div class="match-broadcast">—</div>
+            <div class="match-comp">Bundesliga</div>
+          </div>
+          <div class="match-row">
+            <div class="match-date"><span class="match-date-day">2026/09/05</span><span class="match-date-time">(Sat) 22:30</span></div>
+            <div class="match-venue"><span class="venue-badge venue-away">A</span></div>
+            <div class="match-opponent">vs SC Paderborn</div>
+            <div class="match-result win">1 - 0</div>
+            <div class="match-broadcast">—</div>
+            <div class="match-comp">Bundesliga</div>
+          </div>
+          <div class="match-row">
             <div class="match-date"><span class="match-date-day">2026/08/30</span><span class="match-date-time">(Sun) 22:30</span></div>
             <div class="match-venue"><span class="venue-badge venue-home">H</span></div>
             <div class="match-opponent">vs Bremen</div>
-            <div class="match-result">—</div>
+            <div class="match-result win">4 - 1</div>
             <div class="match-broadcast">—</div>
             <div class="match-comp">Bundesliga</div>
           </div>
@@ -434,7 +483,7 @@
             <div class="match-broadcast">—</div>
             <div class="match-comp">Bundesliga</div>
           </div>
-          <div class="match-row">
+          <div class="match-row hidden-extra">
             <div class="match-date"><span class="match-date-day">2026/04/27</span><span class="match-date-time">(Mon) 00:30</span></div>
             <div class="match-venue"><span class="venue-badge venue-away">A</span></div>
             <div class="match-opponent">vs Dortmund</div>
@@ -443,6 +492,9 @@
             <div class="match-comp">Bundesliga</div>
           </div>
       </div>
+      <button class="show-more-matches" onclick="toggleMoreMatches(this)" data-count="1" data-expanded="false">
+        Show more (1 remaining)
+      </button>
     </section>
 
   
@@ -450,6 +502,14 @@
       <h3>🎬 Season Goals & Highlights</h3>
       <div class="video-grid video-grid-player">
         
+        <a href="https://youtube.com/watch?v=t15N4wspUzI" target="_blank" rel="noopener" class="video-card video-card-player">
+          <div class="video-thumb-wrap">
+            <img src="https://i.ytimg.com/vi/t15N4wspUzI/mqdefault.jpg" alt="" loading="lazy">
+            
+          </div>
+          <div class="video-title">Best of Mio Backhaus | Incredible Saves 🔥</div>
+          <div class="video-meta">World Football Scout · 05/18</div>
+        </a>
         <a href="https://youtube.com/watch?v=0COM9_81GfI" target="_blank" rel="noopener" class="video-card video-card-player">
           <div class="video-thumb-wrap">
             <img src="https://i.ytimg.com/vi/0COM9_81GfI/mqdefault.jpg" alt="" loading="lazy">
@@ -457,14 +517,6 @@
           </div>
           <div class="video-title">DANKE MIO! I Best-of Mio Backhaus I SV Werder Bremen</div>
           <div class="video-meta">Werder Bremen · 05/23</div>
-        </a>
-        <a href="https://youtube.com/watch?v=KOH7C6Tn1yk" target="_blank" rel="noopener" class="video-card video-card-player">
-          <div class="video-thumb-wrap">
-            <img src="https://i.ytimg.com/vi/KOH7C6Tn1yk/mqdefault.jpg" alt="" loading="lazy">
-            
-          </div>
-          <div class="video-title">MAINZ 05 - WERDER BREMEN | Highlights | Matchday 9 – Bundesliga 2025/26</div>
-          <div class="video-meta">Bundesliga · 11/02</div>
         </a>
         <a href="https://youtube.com/watch?v=7i2xipHGaFc" target="_blank" rel="noopener" class="video-card video-card-player">
           <div class="video-thumb-wrap">
@@ -501,7 +553,7 @@
       <h3>📋 Career</h3>
       <div class="career-current">🟢 Current club: <strong>SC Freiburg</strong> (2026–)</div>
       <div class="career-list">
-        <div class="career-row is-current"><span class="career-years">2026–</span><span class="career-club">SC Freiburg</span></div><div class="career-row"><span class="career-years">2023–2024</span><span class="career-club">→ FC Volendam (loan)</span></div><div class="career-row"><span class="career-years">2021–2026</span><span class="career-club">Werder Bremen</span></div><div class="career-row"><span class="career-years">2021–2025</span><span class="career-club">Werder Bremen II</span></div><div class="career-row"><span class="career-years">2018–2021</span><span class="career-club">Werder Bremen (Youth)</span></div><div class="career-row"><span class="career-years">2017–2018</span><span class="career-club">Alemannia Aachen (Youth)</span></div><div class="career-row"><span class="career-years">2015–2017</span><span class="career-club">Kawasaki Frontale (Youth)</span></div>
+        <div class="career-row is-current"><span class="career-years">2026–</span><span class="career-club">SC Freiburg</span></div><div class="career-row"><span class="career-years">2023–2024</span><span class="career-club">→ FC Volendam (loan)</span></div><div class="career-row"><span class="career-years">2022–2023</span><span class="career-club">Werder Bremen II</span></div><div class="career-row"><span class="career-years">2021–2026</span><span class="career-club">Werder Bremen</span></div><div class="career-row"><span class="career-years">2018–2021</span><span class="career-club">Werder Bremen (Youth)</span></div><div class="career-row"><span class="career-years">2017–2018</span><span class="career-club">Alemannia Aachen (Youth)</span></div><div class="career-row"><span class="career-years">2015–2017</span><span class="career-club">Kawasaki Frontale (Youth)</span></div>
       </div>
     </section>
 

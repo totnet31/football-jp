@@ -8,6 +8,7 @@ generate_league_pages.py
 使い方: python3 scripts/generate_league_pages.py
 """
 
+from utils import is_result_pending
 import json
 import os
 import re
@@ -518,6 +519,9 @@ def split_matches_by_date(matches: list):
 
         if kickoff >= two_weeks_ago and kickoff <= now and m.get("status") == "FINISHED":
             recent.append(m)
+        elif kickoff >= two_weeks_ago and is_result_pending(m, now):
+            # 開始から3時間すぎても予定のまま＝結果待ち（予定には出さず、結果側に「結果待ち」で出す）
+            recent.append(m)
         elif kickoff > now and kickoff <= two_weeks_later:
             upcoming.append(m)
 
@@ -701,6 +705,8 @@ def build_match_card(m: dict, services: dict, league_slug_str: str, is_result: b
     # スコア表示
     if is_result and home_score is not None and away_score is not None:
         score_html = f'<span class="match-score">{esc(str(home_score))} - {esc(str(away_score))}</span>'
+    elif is_result and is_result_pending(m):
+        score_html = '<span class="match-vs match-pending">結果待ち</span>'
     else:
         score_html = '<span class="match-vs">vs</span>'
 
