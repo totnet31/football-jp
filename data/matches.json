@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-20T01:24:56.118056+09:00",
+  "updated": "2026-10-20T07:01:33.742415+09:00",
   "date_from": "2026-10-13",
   "date_to": "2026-11-03",
   "match_count": 1221,
@@ -39760,7 +39760,7 @@
       "competition_category": "league",
       "competition_flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
       "kickoff_jst": "2026-10-20T04:00:00+09:00",
-      "status": "TIMED",
+      "status": "FINISHED",
       "stage": "REGULAR_SEASON",
       "matchday": 7,
       "home_id": 73,
@@ -39771,7 +39771,10 @@
       "away_ja": "コヴェントリー",
       "away_en": "Coventry City",
       "away_crest": "https://crests.football-data.org/1076.png",
-      "score": null,
+      "score": {
+        "home": 3,
+        "away": 1
+      },
       "japanese_players": [
         {
           "name_ja": "坂元達裕",
@@ -39795,7 +39798,7 @@
       "competition_category": "league",
       "competition_flag": "🇪🇸",
       "kickoff_jst": "2026-10-20T04:00:00+09:00",
-      "status": "TIMED",
+      "status": "FINISHED",
       "stage": "REGULAR_SEASON",
       "matchday": 9,
       "home_id": 82,
@@ -39806,7 +39809,10 @@
       "away_ja": "ラージョ・バジェカーノ",
       "away_en": "Rayo Vallecano",
       "away_crest": "https://crests.football-data.org/87.png",
-      "score": null,
+      "score": {
+        "home": 1,
+        "away": 1
+      },
       "japanese_players": [],
       "broadcasters": [
         {
@@ -39819,6 +39825,15 @@
           "type": "shared",
           "url": "https://www.dazn.com/ja-JP/",
           "note": "〜2027-28"
+        }
+      ],
+      "highlights": [
+        {
+          "broadcaster": "U-NEXT",
+          "video_id": "txqyJnVBlaU",
+          "url": "https://youtu.be/txqyJnVBlaU",
+          "title": "【ヘタフェ v ラージョ・バジェカーノ｜ハイライト】ラ・リーガ 2026/27 第9節",
+          "yt_published": "2026-10-19"
         }
       ]
     },
@@ -46653,6 +46668,6 @@
       ]
     }
   ],
-  "updated_yt_highlights": "2026-10-20T01:27:47.947380+09:00",
-  "updated_uefa_secondary": "2026-10-20T01:28:23.264415+09:00"
+  "updated_yt_highlights": "2026-10-20T07:04:35.755529+09:00",
+  "updated_uefa_secondary": "2026-10-20T07:05:06.007096+09:00"
 }
