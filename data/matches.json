@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-20T07:01:33.742415+09:00",
+  "updated": "2026-10-20T09:55:37.791690+09:00",
   "date_from": "2026-10-13",
   "date_to": "2026-11-03",
   "match_count": 1221,
@@ -39696,7 +39696,7 @@
       "competition_category": "league",
       "competition_flag": "🇮🇹",
       "kickoff_jst": "2026-10-20T01:30:00+09:00",
-      "status": "TIMED",
+      "status": "FINISHED",
       "stage": "REGULAR_SEASON",
       "matchday": 7,
       "home_id": 5911,
@@ -39707,7 +39707,10 @@
       "away_ja": "カリアリ",
       "away_en": "Cagliari",
       "away_crest": "https://crests.football-data.org/104.png",
-      "score": null,
+      "score": {
+        "home": 4,
+        "away": 0
+      },
       "japanese_players": [
         {
           "name_ja": "菅原由勢",
@@ -39731,7 +39734,7 @@
       "competition_category": "league",
       "competition_flag": "🇮🇹",
       "kickoff_jst": "2026-10-20T03:45:00+09:00",
-      "status": "TIMED",
+      "status": "FINISHED",
       "stage": "REGULAR_SEASON",
       "matchday": 7,
       "home_id": 112,
@@ -39742,7 +39745,10 @@
       "away_ja": "トリノ",
       "away_en": "Torino",
       "away_crest": "https://crests.football-data.org/586.png",
-      "score": null,
+      "score": {
+        "home": 0,
+        "away": 3
+      },
       "japanese_players": [],
       "broadcasters": [
         {
@@ -39750,6 +39756,15 @@
           "type": "exclusive",
           "url": "https://www.dazn.com/ja-JP/",
           "note": "〜2026-27"
+        }
+      ],
+      "highlights": [
+        {
+          "broadcaster": "DAZN Football",
+          "video_id": "rKiZkAYWoVg",
+          "url": "https://youtu.be/rKiZkAYWoVg",
+          "title": "Lega Serie A | Parma vs Torino - Full Match LIVE 🔴",
+          "yt_published": "2026-10-19"
         }
       ]
     },
@@ -39788,6 +39803,15 @@
           "type": "exclusive",
           "url": "https://www.unext.jp/",
           "note": "〜2030-31"
+        }
+      ],
+      "highlights": [
+        {
+          "broadcaster": "U-NEXT",
+          "video_id": "hlAJAHa0S50",
+          "url": "https://youtu.be/hlAJAHa0S50",
+          "title": "【🇯🇵坂元達裕が今季初先発｜トッテナム・ホットスパー v コヴェントリー｜ショートハイライト】プレミアリーグ2026/27 第7節",
+          "yt_published": "2026-10-19"
         }
       ]
     },
@@ -39844,7 +39868,7 @@
       "competition_category": "league",
       "competition_flag": "🇵🇹",
       "kickoff_jst": "2026-10-20T04:15:00+09:00",
-      "status": "TIMED",
+      "status": "FINISHED",
       "stage": "REGULAR_SEASON",
       "matchday": 2,
       "home_id": 5613,
@@ -39855,7 +39879,10 @@
       "away_ja": "ジル・ヴィセンテ",
       "away_en": "Gil Vicente",
       "away_crest": "https://crests.football-data.org/5533.png",
-      "score": null,
+      "score": {
+        "home": 1,
+        "away": 2
+      },
       "japanese_players": [],
       "broadcasters": []
     },
@@ -46668,6 +46695,6 @@
       ]
     }
   ],
-  "updated_yt_highlights": "2026-10-20T07:04:35.755529+09:00",
-  "updated_uefa_secondary": "2026-10-20T07:05:06.007096+09:00"
+  "updated_yt_highlights": "2026-10-20T09:58:39.148885+09:00",
+  "updated_uefa_secondary": "2026-10-20T09:59:08.749981+09:00"
 }
