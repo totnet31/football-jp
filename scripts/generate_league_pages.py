@@ -374,6 +374,13 @@ def load_all_data():
     with open(MATCHES_JSON, encoding="utf-8") as f:
         matches_raw = json.load(f)
     matches = matches_raw.get("matches", [])
+    # セカンドチームでプレー中の選手（second_team）は試合カードに出さない（matches.json は fetch_matches.py が次の更新で直す）
+    second_team_names = {p.get("name_ja") for p in players if p.get("second_team")}
+    if second_team_names:
+        for m in matches:
+            jp = m.get("japanese_players") or []
+            if any(x.get("name_ja") in second_team_names for x in jp):
+                m["japanese_players"] = [x for x in jp if x.get("name_ja") not in second_team_names]
     fix_unplayed_finished(matches)  # 開始前なのに「終了」になっている試合は予定に戻す（データは書き換えない）
 
     with open(STANDINGS_JSON, encoding="utf-8") as f:
@@ -400,9 +407,12 @@ def load_all_data():
 # 選手データをリーグ別にグループ化
 # ============================
 def group_players_by_league(players: list) -> dict:
-    """league_ja → list of player dict"""
+    """league_ja → list of player dict
+    second_team（セカンドチームでプレー中）の選手は、リーグの一覧・人数に入れない（選手ページは残る）。"""
     grouped = defaultdict(list)
     for p in players:
+        if p.get("second_team"):
+            continue
         lg = p.get("league_ja", "")
         if lg:
             grouped[lg].append(p)
