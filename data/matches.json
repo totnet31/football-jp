@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-21T17:05:19.966948+09:00",
+  "updated": "2026-10-21T23:27:26.725456+09:00",
   "date_from": "2026-10-14",
   "date_to": "2026-11-04",
   "match_count": 1377,
@@ -889,11 +889,6 @@
       },
       "japanese_players": [
         {
-          "name_ja": "小野田亮汰",
-          "position": "FW",
-          "side": "home"
-        },
-        {
           "name_ja": "堂安律",
           "position": "MF/FW",
           "side": "away"
@@ -901,11 +896,6 @@
         {
           "name_ja": "小杉啓太",
           "position": "FW/DF",
-          "side": "away"
-        },
-        {
-          "name_ja": "神代慶人",
-          "position": "FW",
           "side": "away"
         }
       ],
@@ -3294,85 +3284,6 @@
       "broadcasters": []
     },
     {
-      "id": "ECL_2026-04-30_Shakht_Crysta",
-      "competition_id": 848,
-      "competition_ja": "UEFAカンファレンスリーグ",
-      "competition_category": "european_cup",
-      "competition_flag": "🇪🇺",
-      "kickoff_jst": "2026-05-01T04:00:00+09:00",
-      "status": "FINISHED",
-      "stage": "SEMI_FINALS",
-      "matchday": null,
-      "home_id": null,
-      "home_ja": "シャフタール・ドネツク",
-      "home_en": "Shakhtar Donetsk",
-      "home_crest": null,
-      "away_id": 354,
-      "away_ja": "クリスタル・パレス",
-      "away_en": "Crystal Palace",
-      "away_crest": "https://crests.football-data.org/354.png",
-      "score": {
-        "home": 1,
-        "away": 3
-      },
-      "japanese_players": [
-        {
-          "name_ja": "鎌田大地",
-          "position": "MF",
-          "side": "away"
-        },
-        {
-          "name_ja": "冨安健洋",
-          "position": "DF",
-          "side": "away"
-        }
-      ],
-      "broadcasters": [
-        {
-          "name": "WOWOW",
-          "type": "partial",
-          "url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l",
-          "note": "注目試合"
-        }
-      ],
-      "_source": "wikipedia",
-      "_source_page": "2025–26 UEFA Conference League knockout phase"
-    },
-    {
-      "id": "ECL_2026-04-30_RayoVa_Strasb",
-      "competition_id": 848,
-      "competition_ja": "UEFAカンファレンスリーグ",
-      "competition_category": "european_cup",
-      "competition_flag": "🇪🇺",
-      "kickoff_jst": "2026-05-01T04:00:00+09:00",
-      "status": "FINISHED",
-      "stage": "SEMI_FINALS",
-      "matchday": null,
-      "home_id": null,
-      "home_ja": "ラージョ・バジェカーノ",
-      "home_en": "Rayo Vallecano",
-      "home_crest": null,
-      "away_id": null,
-      "away_ja": "ストラスブール",
-      "away_en": "Strasbourg",
-      "away_crest": null,
-      "score": {
-        "home": 1,
-        "away": 0
-      },
-      "japanese_players": [],
-      "broadcasters": [
-        {
-          "name": "WOWOW",
-          "type": "partial",
-          "url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l",
-          "note": "注目試合"
-        }
-      ],
-      "_source": "wikipedia",
-      "_source_page": "2025–26 UEFA Conference League knockout phase"
-    },
-    {
       "id": "EL_2026-04-30_Braga_SCFrei",
       "competition_id": 3,
       "competition_ja": "UEFAヨーロッパリーグ",
@@ -3466,6 +3377,85 @@
       ],
       "_source": "wikipedia",
       "_source_page": "2025–26 UEFA Europa League knockout phase"
+    },
+    {
+      "id": "ECL_2026-04-30_Shakht_Crysta",
+      "competition_id": 848,
+      "competition_ja": "UEFAカンファレンスリーグ",
+      "competition_category": "european_cup",
+      "competition_flag": "🇪🇺",
+      "kickoff_jst": "2026-05-01T04:00:00+09:00",
+      "status": "FINISHED",
+      "stage": "SEMI_FINALS",
+      "matchday": null,
+      "home_id": null,
+      "home_ja": "シャフタール・ドネツク",
+      "home_en": "Shakhtar Donetsk",
+      "home_crest": null,
+      "away_id": 354,
+      "away_ja": "クリスタル・パレス",
+      "away_en": "Crystal Palace",
+      "away_crest": "https://crests.football-data.org/354.png",
+      "score": {
+        "home": 1,
+        "away": 3
+      },
+      "japanese_players": [
+        {
+          "name_ja": "鎌田大地",
+          "position": "MF",
+          "side": "away"
+        },
+        {
+          "name_ja": "冨安健洋",
+          "position": "DF",
+          "side": "away"
+        }
+      ],
+      "broadcasters": [
+        {
+          "name": "WOWOW",
+          "type": "partial",
+          "url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l",
+          "note": "注目試合"
+        }
+      ],
+      "_source": "wikipedia",
+      "_source_page": "2025–26 UEFA Conference League knockout phase"
+    },
+    {
+      "id": "ECL_2026-04-30_RayoVa_Strasb",
+      "competition_id": 848,
+      "competition_ja": "UEFAカンファレンスリーグ",
+      "competition_category": "european_cup",
+      "competition_flag": "🇪🇺",
+      "kickoff_jst": "2026-05-01T04:00:00+09:00",
+      "status": "FINISHED",
+      "stage": "SEMI_FINALS",
+      "matchday": null,
+      "home_id": null,
+      "home_ja": "ラージョ・バジェカーノ",
+      "home_en": "Rayo Vallecano",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "ストラスブール",
+      "away_en": "Strasbourg",
+      "away_crest": null,
+      "score": {
+        "home": 1,
+        "away": 0
+      },
+      "japanese_players": [],
+      "broadcasters": [
+        {
+          "name": "WOWOW",
+          "type": "partial",
+          "url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l",
+          "note": "注目試合"
+        }
+      ],
+      "_source": "wikipedia",
+      "_source_page": "2025–26 UEFA Conference League knockout phase"
     },
     {
       "id": 537161,
@@ -4220,11 +4210,6 @@
           "name_ja": "長田澪",
           "position": "GK",
           "side": "home"
-        },
-        {
-          "name_ja": "小野田亮汰",
-          "position": "FW",
-          "side": "away"
         }
       ],
       "broadcasters": [
@@ -4364,11 +4349,6 @@
         {
           "name_ja": "小杉啓太",
           "position": "FW/DF",
-          "side": "home"
-        },
-        {
-          "name_ja": "神代慶人",
-          "position": "FW",
           "side": "home"
         }
       ],
@@ -6523,85 +6503,6 @@
       ]
     },
     {
-      "id": "ECL_2026-05-07_Crysta_Shakht",
-      "competition_id": 848,
-      "competition_ja": "UEFAカンファレンスリーグ",
-      "competition_category": "european_cup",
-      "competition_flag": "🇪🇺",
-      "kickoff_jst": "2026-05-08T04:00:00+09:00",
-      "status": "FINISHED",
-      "stage": "SEMI_FINALS",
-      "matchday": null,
-      "home_id": null,
-      "home_ja": "クリスタル・パレス",
-      "home_en": "Crystal Palace",
-      "home_crest": null,
-      "away_id": null,
-      "away_ja": "シャフタール・ドネツク",
-      "away_en": "Shakhtar Donetsk",
-      "away_crest": null,
-      "score": {
-        "home": 2,
-        "away": 1
-      },
-      "japanese_players": [
-        {
-          "name_ja": "鎌田大地",
-          "position": "MF",
-          "side": "home"
-        },
-        {
-          "name_ja": "冨安健洋",
-          "position": "DF",
-          "side": "home"
-        }
-      ],
-      "broadcasters": [
-        {
-          "name": "WOWOW",
-          "type": "partial",
-          "url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l",
-          "note": "注目試合"
-        }
-      ],
-      "_source": "wikipedia",
-      "_source_page": "2025–26 UEFA Conference League knockout phase"
-    },
-    {
-      "id": "ECL_2026-05-07_Strasb_RayoVa",
-      "competition_id": 848,
-      "competition_ja": "UEFAカンファレンスリーグ",
-      "competition_category": "european_cup",
-      "competition_flag": "🇪🇺",
-      "kickoff_jst": "2026-05-08T04:00:00+09:00",
-      "status": "FINISHED",
-      "stage": "SEMI_FINALS",
-      "matchday": null,
-      "home_id": null,
-      "home_ja": "ストラスブール",
-      "home_en": "Strasbourg",
-      "home_crest": null,
-      "away_id": null,
-      "away_ja": "ラージョ・バジェカーノ",
-      "away_en": "Rayo Vallecano",
-      "away_crest": null,
-      "score": {
-        "home": 0,
-        "away": 1
-      },
-      "japanese_players": [],
-      "broadcasters": [
-        {
-          "name": "WOWOW",
-          "type": "partial",
-          "url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l",
-          "note": "注目試合"
-        }
-      ],
-      "_source": "wikipedia",
-      "_source_page": "2025–26 UEFA Conference League knockout phase"
-    },
-    {
       "id": "EL_2026-05-07_SCFrei_Braga",
       "competition_id": 3,
       "competition_ja": "UEFAヨーロッパリーグ",
@@ -6697,6 +6598,85 @@
       "_source_page": "2025–26 UEFA Europa League knockout phase"
     },
     {
+      "id": "ECL_2026-05-07_Crysta_Shakht",
+      "competition_id": 848,
+      "competition_ja": "UEFAカンファレンスリーグ",
+      "competition_category": "european_cup",
+      "competition_flag": "🇪🇺",
+      "kickoff_jst": "2026-05-08T04:00:00+09:00",
+      "status": "FINISHED",
+      "stage": "SEMI_FINALS",
+      "matchday": null,
+      "home_id": null,
+      "home_ja": "クリスタル・パレス",
+      "home_en": "Crystal Palace",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "シャフタール・ドネツク",
+      "away_en": "Shakhtar Donetsk",
+      "away_crest": null,
+      "score": {
+        "home": 2,
+        "away": 1
+      },
+      "japanese_players": [
+        {
+          "name_ja": "鎌田大地",
+          "position": "MF",
+          "side": "home"
+        },
+        {
+          "name_ja": "冨安健洋",
+          "position": "DF",
+          "side": "home"
+        }
+      ],
+      "broadcasters": [
+        {
+          "name": "WOWOW",
+          "type": "partial",
+          "url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l",
+          "note": "注目試合"
+        }
+      ],
+      "_source": "wikipedia",
+      "_source_page": "2025–26 UEFA Conference League knockout phase"
+    },
+    {
+      "id": "ECL_2026-05-07_Strasb_RayoVa",
+      "competition_id": 848,
+      "competition_ja": "UEFAカンファレンスリーグ",
+      "competition_category": "european_cup",
+      "competition_flag": "🇪🇺",
+      "kickoff_jst": "2026-05-08T04:00:00+09:00",
+      "status": "FINISHED",
+      "stage": "SEMI_FINALS",
+      "matchday": null,
+      "home_id": null,
+      "home_ja": "ストラスブール",
+      "home_en": "Strasbourg",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "ラージョ・バジェカーノ",
+      "away_en": "Rayo Vallecano",
+      "away_crest": null,
+      "score": {
+        "home": 0,
+        "away": 1
+      },
+      "japanese_players": [],
+      "broadcasters": [
+        {
+          "name": "WOWOW",
+          "type": "partial",
+          "url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l",
+          "note": "注目試合"
+        }
+      ],
+      "_source": "wikipedia",
+      "_source_page": "2025–26 UEFA Conference League knockout phase"
+    },
+    {
       "id": 540696,
       "competition_id": 78,
       "competition_ja": "ブンデスリーガ",
@@ -6727,11 +6707,6 @@
         {
           "name_ja": "小杉啓太",
           "position": "FW/DF",
-          "side": "away"
-        },
-        {
-          "name_ja": "神代慶人",
-          "position": "FW",
           "side": "away"
         }
       ],
@@ -7185,11 +7160,6 @@
         "away": 1
       },
       "japanese_players": [
-        {
-          "name_ja": "小野田亮汰",
-          "position": "FW",
-          "side": "home"
-        },
         {
           "name_ja": "町野修斗",
           "position": "FW",
@@ -10251,11 +10221,6 @@
           "name_ja": "小杉啓太",
           "position": "FW/DF",
           "side": "home"
-        },
-        {
-          "name_ja": "神代慶人",
-          "position": "FW",
-          "side": "home"
         }
       ],
       "broadcasters": [
@@ -10354,13 +10319,7 @@
         "home": 4,
         "away": 0
       },
-      "japanese_players": [
-        {
-          "name_ja": "小野田亮汰",
-          "position": "FW",
-          "side": "away"
-        }
-      ],
+      "japanese_players": [],
       "broadcasters": [
         {
           "name": "DAZN",
@@ -19264,11 +19223,6 @@
           "name_ja": "小杉啓太",
           "position": "FW/DF",
           "side": "away"
-        },
-        {
-          "name_ja": "神代慶人",
-          "position": "FW",
-          "side": "away"
         }
       ],
       "broadcasters": [
@@ -24611,11 +24565,6 @@
           "name_ja": "小杉啓太",
           "position": "FW/DF",
           "side": "home"
-        },
-        {
-          "name_ja": "神代慶人",
-          "position": "FW",
-          "side": "home"
         }
       ],
       "broadcasters": [
@@ -26924,11 +26873,6 @@
         {
           "name_ja": "小杉啓太",
           "position": "FW/DF",
-          "side": "away"
-        },
-        {
-          "name_ja": "神代慶人",
-          "position": "FW",
           "side": "away"
         }
       ],
@@ -31211,11 +31155,6 @@
           "side": "home"
         },
         {
-          "name_ja": "神代慶人",
-          "position": "FW",
-          "side": "home"
-        },
-        {
           "name_ja": "鈴木唯人",
           "position": "MF/FW",
           "side": "away"
@@ -34916,11 +34855,6 @@
           "name_ja": "小杉啓太",
           "position": "FW/DF",
           "side": "away"
-        },
-        {
-          "name_ja": "神代慶人",
-          "position": "FW",
-          "side": "away"
         }
       ],
       "broadcasters": [
@@ -37231,15 +37165,15 @@
       "broadcasters": [
         {
           "name": "WOWOW",
-          "type": "exclusive",
+          "type": "shared",
           "url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l",
-          "note": "〜2026-27"
+          "note": "2026-27 予選プレーオフ〜決勝 全試合（WOWOW公式 2026-10-21確認）"
         },
         {
           "name": "Lemino",
-          "type": "partial",
+          "type": "shared",
           "url": "https://lemino.docomo.ne.jp/",
-          "note": "厳選30試合ディレイ"
+          "note": "2026-27 リーグフェーズ第2節（10/14）〜決勝 全試合ライブ・Leminoプレミアム（Lemino公式 2026-10-21確認）"
         }
       ],
       "highlights": [
@@ -37284,15 +37218,15 @@
       "broadcasters": [
         {
           "name": "WOWOW",
-          "type": "exclusive",
+          "type": "shared",
           "url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l",
-          "note": "〜2026-27"
+          "note": "2026-27 予選プレーオフ〜決勝 全試合（WOWOW公式 2026-10-21確認）"
         },
         {
           "name": "Lemino",
-          "type": "partial",
+          "type": "shared",
           "url": "https://lemino.docomo.ne.jp/",
-          "note": "厳選30試合ディレイ"
+          "note": "2026-27 リーグフェーズ第2節（10/14）〜決勝 全試合ライブ・Leminoプレミアム（Lemino公式 2026-10-21確認）"
         }
       ]
     },
@@ -37462,15 +37396,15 @@
       "broadcasters": [
         {
           "name": "WOWOW",
-          "type": "exclusive",
+          "type": "shared",
           "url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l",
-          "note": "〜2026-27"
+          "note": "2026-27 予選プレーオフ〜決勝 全試合（WOWOW公式 2026-10-21確認）"
         },
         {
           "name": "Lemino",
-          "type": "partial",
+          "type": "shared",
           "url": "https://lemino.docomo.ne.jp/",
-          "note": "厳選30試合ディレイ"
+          "note": "2026-27 リーグフェーズ第2節（10/14）〜決勝 全試合ライブ・Leminoプレミアム（Lemino公式 2026-10-21確認）"
         }
       ]
     },
@@ -37500,15 +37434,15 @@
       "broadcasters": [
         {
           "name": "WOWOW",
-          "type": "exclusive",
+          "type": "shared",
           "url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l",
-          "note": "〜2026-27"
+          "note": "2026-27 予選プレーオフ〜決勝 全試合（WOWOW公式 2026-10-21確認）"
         },
         {
           "name": "Lemino",
-          "type": "partial",
+          "type": "shared",
           "url": "https://lemino.docomo.ne.jp/",
-          "note": "厳選30試合ディレイ"
+          "note": "2026-27 リーグフェーズ第2節（10/14）〜決勝 全試合ライブ・Leminoプレミアム（Lemino公式 2026-10-21確認）"
         }
       ]
     },
@@ -37538,15 +37472,15 @@
       "broadcasters": [
         {
           "name": "WOWOW",
-          "type": "exclusive",
+          "type": "shared",
           "url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l",
-          "note": "〜2026-27"
+          "note": "2026-27 予選プレーオフ〜決勝 全試合（WOWOW公式 2026-10-21確認）"
         },
         {
           "name": "Lemino",
-          "type": "partial",
+          "type": "shared",
           "url": "https://lemino.docomo.ne.jp/",
-          "note": "厳選30試合ディレイ"
+          "note": "2026-27 リーグフェーズ第2節（10/14）〜決勝 全試合ライブ・Leminoプレミアム（Lemino公式 2026-10-21確認）"
         }
       ]
     },
@@ -37582,15 +37516,15 @@
       "broadcasters": [
         {
           "name": "WOWOW",
-          "type": "exclusive",
+          "type": "shared",
           "url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l",
-          "note": "〜2026-27"
+          "note": "2026-27 予選プレーオフ〜決勝 全試合（WOWOW公式 2026-10-21確認）"
         },
         {
           "name": "Lemino",
-          "type": "partial",
+          "type": "shared",
           "url": "https://lemino.docomo.ne.jp/",
-          "note": "厳選30試合ディレイ"
+          "note": "2026-27 リーグフェーズ第2節（10/14）〜決勝 全試合ライブ・Leminoプレミアム（Lemino公式 2026-10-21確認）"
         }
       ],
       "highlights": [
@@ -37629,15 +37563,15 @@
       "broadcasters": [
         {
           "name": "WOWOW",
-          "type": "exclusive",
+          "type": "shared",
           "url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l",
-          "note": "〜2026-27"
+          "note": "2026-27 予選プレーオフ〜決勝 全試合（WOWOW公式 2026-10-21確認）"
         },
         {
           "name": "Lemino",
-          "type": "partial",
+          "type": "shared",
           "url": "https://lemino.docomo.ne.jp/",
-          "note": "厳選30試合ディレイ"
+          "note": "2026-27 リーグフェーズ第2節（10/14）〜決勝 全試合ライブ・Leminoプレミアム（Lemino公式 2026-10-21確認）"
         }
       ]
     },
@@ -37667,15 +37601,15 @@
       "broadcasters": [
         {
           "name": "WOWOW",
-          "type": "exclusive",
+          "type": "shared",
           "url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l",
-          "note": "〜2026-27"
+          "note": "2026-27 予選プレーオフ〜決勝 全試合（WOWOW公式 2026-10-21確認）"
         },
         {
           "name": "Lemino",
-          "type": "partial",
+          "type": "shared",
           "url": "https://lemino.docomo.ne.jp/",
-          "note": "厳選30試合ディレイ"
+          "note": "2026-27 リーグフェーズ第2節（10/14）〜決勝 全試合ライブ・Leminoプレミアム（Lemino公式 2026-10-21確認）"
         }
       ]
     },
@@ -37705,15 +37639,15 @@
       "broadcasters": [
         {
           "name": "WOWOW",
-          "type": "exclusive",
+          "type": "shared",
           "url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l",
-          "note": "〜2026-27"
+          "note": "2026-27 予選プレーオフ〜決勝 全試合（WOWOW公式 2026-10-21確認）"
         },
         {
           "name": "Lemino",
-          "type": "partial",
+          "type": "shared",
           "url": "https://lemino.docomo.ne.jp/",
-          "note": "厳選30試合ディレイ"
+          "note": "2026-27 リーグフェーズ第2節（10/14）〜決勝 全試合ライブ・Leminoプレミアム（Lemino公式 2026-10-21確認）"
         }
       ]
     },
@@ -38437,11 +38371,6 @@
           "name_ja": "小杉啓太",
           "position": "FW/DF",
           "side": "home"
-        },
-        {
-          "name_ja": "神代慶人",
-          "position": "FW",
-          "side": "home"
         }
       ],
       "broadcasters": [
@@ -38554,7 +38483,13 @@
         "home": 1,
         "away": 2
       },
-      "japanese_players": [],
+      "japanese_players": [
+        {
+          "name_ja": "旗手怜央",
+          "position": "MF",
+          "side": "home"
+        }
+      ],
       "broadcasters": [
         {
           "name": "DAZN",
@@ -39222,6 +39157,11 @@
           "name_ja": "松木玖生",
           "position": "FW/MF",
           "side": "home"
+        },
+        {
+          "name_ja": "伊藤敦樹",
+          "position": "MF",
+          "side": "away"
         }
       ],
       "broadcasters": [
@@ -39297,11 +39237,6 @@
         {
           "name_ja": "岩田智輝",
           "position": "DF",
-          "side": "home"
-        },
-        {
-          "name_ja": "藤本寛也",
-          "position": "MF",
           "side": "home"
         },
         {
@@ -39935,7 +39870,7 @@
       "japanese_players": [
         {
           "name_ja": "佐藤龍之介",
-          "position": "FW",
+          "position": "MF",
           "side": "home"
         }
       ],
@@ -40471,13 +40406,7 @@
         "home": 2,
         "away": 5
       },
-      "japanese_players": [
-        {
-          "name_ja": "板倉滉",
-          "position": "DF",
-          "side": "away"
-        }
-      ],
+      "japanese_players": [],
       "broadcasters": [
         {
           "name": "U-NEXT",
@@ -40684,6 +40613,11 @@
           "side": "home"
         },
         {
+          "name_ja": "板倉滉",
+          "position": "DF",
+          "side": "home"
+        },
+        {
           "name_ja": "橋岡大樹",
           "position": "DF",
           "side": "home"
@@ -40861,13 +40795,7 @@
         "home": 2,
         "away": 2
       },
-      "japanese_players": [
-        {
-          "name_ja": "小川航基",
-          "position": "FW",
-          "side": "home"
-        }
-      ],
+      "japanese_players": [],
       "broadcasters": [
         {
           "name": "U-NEXT",
@@ -41234,15 +41162,15 @@
       "broadcasters": [
         {
           "name": "WOWOW",
-          "type": "exclusive",
+          "type": "shared",
           "url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l",
-          "note": "〜2026-27"
+          "note": "2026-27 予選プレーオフ〜決勝 全試合（WOWOW公式 2026-10-21確認）"
         },
         {
           "name": "Lemino",
-          "type": "partial",
+          "type": "shared",
           "url": "https://lemino.docomo.ne.jp/",
-          "note": "厳選30試合ディレイ"
+          "note": "2026-27 リーグフェーズ第2節（10/14）〜決勝 全試合ライブ・Leminoプレミアム（Lemino公式 2026-10-21確認）"
         }
       ]
     },
@@ -41272,15 +41200,15 @@
       "broadcasters": [
         {
           "name": "WOWOW",
-          "type": "exclusive",
+          "type": "shared",
           "url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l",
-          "note": "〜2026-27"
+          "note": "2026-27 予選プレーオフ〜決勝 全試合（WOWOW公式 2026-10-21確認）"
         },
         {
           "name": "Lemino",
-          "type": "partial",
+          "type": "shared",
           "url": "https://lemino.docomo.ne.jp/",
-          "note": "厳選30試合ディレイ"
+          "note": "2026-27 リーグフェーズ第2節（10/14）〜決勝 全試合ライブ・Leminoプレミアム（Lemino公式 2026-10-21確認）"
         }
       ]
     },
@@ -41342,15 +41270,15 @@
       "broadcasters": [
         {
           "name": "WOWOW",
-          "type": "exclusive",
+          "type": "shared",
           "url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l",
-          "note": "〜2026-27"
+          "note": "2026-27 予選プレーオフ〜決勝 全試合（WOWOW公式 2026-10-21確認）"
         },
         {
           "name": "Lemino",
-          "type": "partial",
+          "type": "shared",
           "url": "https://lemino.docomo.ne.jp/",
-          "note": "厳選30試合ディレイ"
+          "note": "2026-27 リーグフェーズ第2節（10/14）〜決勝 全試合ライブ・Leminoプレミアム（Lemino公式 2026-10-21確認）"
         }
       ]
     },
@@ -41380,15 +41308,15 @@
       "broadcasters": [
         {
           "name": "WOWOW",
-          "type": "exclusive",
+          "type": "shared",
           "url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l",
-          "note": "〜2026-27"
+          "note": "2026-27 予選プレーオフ〜決勝 全試合（WOWOW公式 2026-10-21確認）"
         },
         {
           "name": "Lemino",
-          "type": "partial",
+          "type": "shared",
           "url": "https://lemino.docomo.ne.jp/",
-          "note": "厳選30試合ディレイ"
+          "note": "2026-27 リーグフェーズ第2節（10/14）〜決勝 全試合ライブ・Leminoプレミアム（Lemino公式 2026-10-21確認）"
         }
       ]
     },
@@ -41424,15 +41352,15 @@
       "broadcasters": [
         {
           "name": "WOWOW",
-          "type": "exclusive",
+          "type": "shared",
           "url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l",
-          "note": "〜2026-27"
+          "note": "2026-27 予選プレーオフ〜決勝 全試合（WOWOW公式 2026-10-21確認）"
         },
         {
           "name": "Lemino",
-          "type": "partial",
+          "type": "shared",
           "url": "https://lemino.docomo.ne.jp/",
-          "note": "厳選30試合ディレイ"
+          "note": "2026-27 リーグフェーズ第2節（10/14）〜決勝 全試合ライブ・Leminoプレミアム（Lemino公式 2026-10-21確認）"
         }
       ],
       "highlights": [
@@ -41471,15 +41399,15 @@
       "broadcasters": [
         {
           "name": "WOWOW",
-          "type": "exclusive",
+          "type": "shared",
           "url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l",
-          "note": "〜2026-27"
+          "note": "2026-27 予選プレーオフ〜決勝 全試合（WOWOW公式 2026-10-21確認）"
         },
         {
           "name": "Lemino",
-          "type": "partial",
+          "type": "shared",
           "url": "https://lemino.docomo.ne.jp/",
-          "note": "厳選30試合ディレイ"
+          "note": "2026-27 リーグフェーズ第2節（10/14）〜決勝 全試合ライブ・Leminoプレミアム（Lemino公式 2026-10-21確認）"
         }
       ]
     },
@@ -41515,15 +41443,15 @@
       "broadcasters": [
         {
           "name": "WOWOW",
-          "type": "exclusive",
+          "type": "shared",
           "url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l",
-          "note": "〜2026-27"
+          "note": "2026-27 予選プレーオフ〜決勝 全試合（WOWOW公式 2026-10-21確認）"
         },
         {
           "name": "Lemino",
-          "type": "partial",
+          "type": "shared",
           "url": "https://lemino.docomo.ne.jp/",
-          "note": "厳選30試合ディレイ"
+          "note": "2026-27 リーグフェーズ第2節（10/14）〜決勝 全試合ライブ・Leminoプレミアム（Lemino公式 2026-10-21確認）"
         }
       ]
     },
@@ -41553,15 +41481,15 @@
       "broadcasters": [
         {
           "name": "WOWOW",
-          "type": "exclusive",
+          "type": "shared",
           "url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l",
-          "note": "〜2026-27"
+          "note": "2026-27 予選プレーオフ〜決勝 全試合（WOWOW公式 2026-10-21確認）"
         },
         {
           "name": "Lemino",
-          "type": "partial",
+          "type": "shared",
           "url": "https://lemino.docomo.ne.jp/",
-          "note": "厳選30試合ディレイ"
+          "note": "2026-27 リーグフェーズ第2節（10/14）〜決勝 全試合ライブ・Leminoプレミアム（Lemino公式 2026-10-21確認）"
         }
       ]
     },
@@ -41591,15 +41519,15 @@
       "broadcasters": [
         {
           "name": "WOWOW",
-          "type": "exclusive",
+          "type": "shared",
           "url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l",
-          "note": "〜2026-27"
+          "note": "2026-27 予選プレーオフ〜決勝 全試合（WOWOW公式 2026-10-21確認）"
         },
         {
           "name": "Lemino",
-          "type": "partial",
+          "type": "shared",
           "url": "https://lemino.docomo.ne.jp/",
-          "note": "厳選30試合ディレイ"
+          "note": "2026-27 リーグフェーズ第2節（10/14）〜決勝 全試合ライブ・Leminoプレミアム（Lemino公式 2026-10-21確認）"
         }
       ]
     },
@@ -41626,15 +41554,15 @@
       "broadcasters": [
         {
           "name": "WOWOW",
-          "type": "exclusive",
+          "type": "shared",
           "url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l",
-          "note": "〜2026-27"
+          "note": "2026-27 予選プレーオフ〜決勝 全試合（WOWOW公式 2026-10-21確認）"
         },
         {
           "name": "Lemino",
-          "type": "partial",
+          "type": "shared",
           "url": "https://lemino.docomo.ne.jp/",
-          "note": "厳選30試合ディレイ"
+          "note": "2026-27 リーグフェーズ第2節（10/14）〜決勝 全試合ライブ・Leminoプレミアム（Lemino公式 2026-10-21確認）"
         }
       ]
     },
@@ -41667,15 +41595,15 @@
       "broadcasters": [
         {
           "name": "WOWOW",
-          "type": "exclusive",
+          "type": "shared",
           "url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l",
-          "note": "〜2026-27"
+          "note": "2026-27 予選プレーオフ〜決勝 全試合（WOWOW公式 2026-10-21確認）"
         },
         {
           "name": "Lemino",
-          "type": "partial",
+          "type": "shared",
           "url": "https://lemino.docomo.ne.jp/",
-          "note": "厳選30試合ディレイ"
+          "note": "2026-27 リーグフェーズ第2節（10/14）〜決勝 全試合ライブ・Leminoプレミアム（Lemino公式 2026-10-21確認）"
         }
       ]
     },
@@ -41739,15 +41667,15 @@
       "broadcasters": [
         {
           "name": "WOWOW",
-          "type": "exclusive",
+          "type": "shared",
           "url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l",
-          "note": "〜2026-27"
+          "note": "2026-27 予選プレーオフ〜決勝 全試合（WOWOW公式 2026-10-21確認）"
         },
         {
           "name": "Lemino",
-          "type": "partial",
+          "type": "shared",
           "url": "https://lemino.docomo.ne.jp/",
-          "note": "厳選30試合ディレイ"
+          "note": "2026-27 リーグフェーズ第2節（10/14）〜決勝 全試合ライブ・Leminoプレミアム（Lemino公式 2026-10-21確認）"
         }
       ]
     },
@@ -41774,15 +41702,15 @@
       "broadcasters": [
         {
           "name": "WOWOW",
-          "type": "exclusive",
+          "type": "shared",
           "url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l",
-          "note": "〜2026-27"
+          "note": "2026-27 予選プレーオフ〜決勝 全試合（WOWOW公式 2026-10-21確認）"
         },
         {
           "name": "Lemino",
-          "type": "partial",
+          "type": "shared",
           "url": "https://lemino.docomo.ne.jp/",
-          "note": "厳選30試合ディレイ"
+          "note": "2026-27 リーグフェーズ第2節（10/14）〜決勝 全試合ライブ・Leminoプレミアム（Lemino公式 2026-10-21確認）"
         }
       ]
     },
@@ -41815,15 +41743,15 @@
       "broadcasters": [
         {
           "name": "WOWOW",
-          "type": "exclusive",
+          "type": "shared",
           "url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l",
-          "note": "〜2026-27"
+          "note": "2026-27 予選プレーオフ〜決勝 全試合（WOWOW公式 2026-10-21確認）"
         },
         {
           "name": "Lemino",
-          "type": "partial",
+          "type": "shared",
           "url": "https://lemino.docomo.ne.jp/",
-          "note": "厳選30試合ディレイ"
+          "note": "2026-27 リーグフェーズ第2節（10/14）〜決勝 全試合ライブ・Leminoプレミアム（Lemino公式 2026-10-21確認）"
         }
       ]
     },
@@ -41850,15 +41778,15 @@
       "broadcasters": [
         {
           "name": "WOWOW",
-          "type": "exclusive",
+          "type": "shared",
           "url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l",
-          "note": "〜2026-27"
+          "note": "2026-27 予選プレーオフ〜決勝 全試合（WOWOW公式 2026-10-21確認）"
         },
         {
           "name": "Lemino",
-          "type": "partial",
+          "type": "shared",
           "url": "https://lemino.docomo.ne.jp/",
-          "note": "厳選30試合ディレイ"
+          "note": "2026-27 リーグフェーズ第2節（10/14）〜決勝 全試合ライブ・Leminoプレミアム（Lemino公式 2026-10-21確認）"
         }
       ]
     },
@@ -41891,15 +41819,15 @@
       "broadcasters": [
         {
           "name": "WOWOW",
-          "type": "exclusive",
+          "type": "shared",
           "url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l",
-          "note": "〜2026-27"
+          "note": "2026-27 予選プレーオフ〜決勝 全試合（WOWOW公式 2026-10-21確認）"
         },
         {
           "name": "Lemino",
-          "type": "partial",
+          "type": "shared",
           "url": "https://lemino.docomo.ne.jp/",
-          "note": "厳選30試合ディレイ"
+          "note": "2026-27 リーグフェーズ第2節（10/14）〜決勝 全試合ライブ・Leminoプレミアム（Lemino公式 2026-10-21確認）"
         }
       ]
     },
@@ -41926,15 +41854,15 @@
       "broadcasters": [
         {
           "name": "WOWOW",
-          "type": "exclusive",
+          "type": "shared",
           "url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l",
-          "note": "〜2026-27"
+          "note": "2026-27 予選プレーオフ〜決勝 全試合（WOWOW公式 2026-10-21確認）"
         },
         {
           "name": "Lemino",
-          "type": "partial",
+          "type": "shared",
           "url": "https://lemino.docomo.ne.jp/",
-          "note": "厳選30試合ディレイ"
+          "note": "2026-27 リーグフェーズ第2節（10/14）〜決勝 全試合ライブ・Leminoプレミアム（Lemino公式 2026-10-21確認）"
         }
       ]
     },
@@ -41967,15 +41895,15 @@
       "broadcasters": [
         {
           "name": "WOWOW",
-          "type": "exclusive",
+          "type": "shared",
           "url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l",
-          "note": "〜2026-27"
+          "note": "2026-27 予選プレーオフ〜決勝 全試合（WOWOW公式 2026-10-21確認）"
         },
         {
           "name": "Lemino",
-          "type": "partial",
+          "type": "shared",
           "url": "https://lemino.docomo.ne.jp/",
-          "note": "厳選30試合ディレイ"
+          "note": "2026-27 リーグフェーズ第2節（10/14）〜決勝 全試合ライブ・Leminoプレミアム（Lemino公式 2026-10-21確認）"
         }
       ]
     },
@@ -42637,6 +42565,11 @@
           "side": "away"
         },
         {
+          "name_ja": "板倉滉",
+          "position": "DF",
+          "side": "away"
+        },
+        {
           "name_ja": "橋岡大樹",
           "position": "DF",
           "side": "away"
@@ -42774,7 +42707,13 @@
       "away_en": "Middlesbrough",
       "away_crest": "https://crests.football-data.org/343.png",
       "score": null,
-      "japanese_players": [],
+      "japanese_players": [
+        {
+          "name_ja": "伊藤敦樹",
+          "position": "MF",
+          "side": "home"
+        }
+      ],
       "broadcasters": [
         {
           "name": "DAZN",
@@ -43340,11 +43279,6 @@
           "name_ja": "岩田智輝",
           "position": "DF",
           "side": "away"
-        },
-        {
-          "name_ja": "藤本寛也",
-          "position": "MF",
-          "side": "away"
         }
       ],
       "broadcasters": [
@@ -43474,7 +43408,13 @@
       "away_en": "Burnley",
       "away_crest": "https://crests.football-data.org/328.png",
       "score": null,
-      "japanese_players": [],
+      "japanese_players": [
+        {
+          "name_ja": "旗手怜央",
+          "position": "MF",
+          "side": "away"
+        }
+      ],
       "broadcasters": [
         {
           "name": "DAZN",
@@ -43674,35 +43614,6 @@
       "broadcasters": []
     },
     {
-      "id": 559655,
-      "competition_id": 61,
-      "competition_ja": "リーグ・アン",
-      "competition_category": "league",
-      "competition_flag": "🇫🇷",
-      "kickoff_jst": "2026-10-25T00:15:00+09:00",
-      "status": "TIMED",
-      "stage": "REGULAR_SEASON",
-      "matchday": 8,
-      "home_id": 511,
-      "home_ja": "トゥールーズ",
-      "home_en": "Toulouse",
-      "home_crest": "https://crests.football-data.org/511.png",
-      "away_id": 531,
-      "away_ja": "Troyes",
-      "away_en": "Troyes",
-      "away_crest": "https://crests.football-data.org/531.png",
-      "score": null,
-      "japanese_players": [],
-      "broadcasters": [
-        {
-          "name": "DAZN",
-          "type": "exclusive",
-          "url": "https://www.dazn.com/ja-JP/",
-          "note": "〜2028-29"
-        }
-      ]
-    },
-    {
       "id": 558564,
       "competition_id": 135,
       "competition_ja": "セリエA",
@@ -43782,7 +43693,7 @@
       "japanese_players": [
         {
           "name_ja": "佐藤龍之介",
-          "position": "FW",
+          "position": "MF",
           "side": "home"
         }
       ],
@@ -43828,11 +43739,6 @@
         {
           "name_ja": "小杉啓太",
           "position": "FW/DF",
-          "side": "away"
-        },
-        {
-          "name_ja": "神代慶人",
-          "position": "FW",
           "side": "away"
         }
       ],
@@ -44162,13 +44068,7 @@
       "away_en": "Groningen",
       "away_crest": "https://crests.football-data.org/677.png",
       "score": null,
-      "japanese_players": [
-        {
-          "name_ja": "小川航基",
-          "position": "FW",
-          "side": "home"
-        }
-      ],
+      "japanese_players": [],
       "broadcasters": [
         {
           "name": "U-NEXT",
@@ -44581,11 +44481,6 @@
           "name_ja": "三戸舜介",
           "position": "FW/MF",
           "side": "home"
-        },
-        {
-          "name_ja": "板倉滉",
-          "position": "DF",
-          "side": "away"
         }
       ],
       "broadcasters": [
@@ -44689,6 +44584,35 @@
       "away_ja": "ロリアン",
       "away_en": "Lorient",
       "away_crest": "https://crests.football-data.org/525.png",
+      "score": null,
+      "japanese_players": [],
+      "broadcasters": [
+        {
+          "name": "DAZN",
+          "type": "exclusive",
+          "url": "https://www.dazn.com/ja-JP/",
+          "note": "〜2028-29"
+        }
+      ]
+    },
+    {
+      "id": 559655,
+      "competition_id": 61,
+      "competition_ja": "リーグ・アン",
+      "competition_category": "league",
+      "competition_flag": "🇫🇷",
+      "kickoff_jst": "2026-10-26T01:15:00+09:00",
+      "status": "TIMED",
+      "stage": "REGULAR_SEASON",
+      "matchday": 8,
+      "home_id": 511,
+      "home_ja": "トゥールーズ",
+      "home_en": "Toulouse",
+      "home_crest": "https://crests.football-data.org/511.png",
+      "away_id": 531,
+      "away_ja": "Troyes",
+      "away_en": "Troyes",
+      "away_crest": "https://crests.football-data.org/531.png",
       "score": null,
       "japanese_players": [],
       "broadcasters": [
@@ -45772,11 +45696,6 @@
           "name_ja": "岩田智輝",
           "position": "DF",
           "side": "away"
-        },
-        {
-          "name_ja": "藤本寛也",
-          "position": "MF",
-          "side": "away"
         }
       ],
       "broadcasters": [
@@ -45874,6 +45793,11 @@
         {
           "name_ja": "町野修斗",
           "position": "FW",
+          "side": "home"
+        },
+        {
+          "name_ja": "板倉滉",
+          "position": "DF",
           "side": "home"
         },
         {
@@ -46368,6 +46292,11 @@
       "score": null,
       "japanese_players": [
         {
+          "name_ja": "伊藤敦樹",
+          "position": "MF",
+          "side": "home"
+        },
+        {
           "name_ja": "平河悠",
           "position": "FW/MF",
           "side": "away"
@@ -46430,7 +46359,13 @@
       "away_en": "Portsmouth",
       "away_crest": "https://crests.football-data.org/325.png",
       "score": null,
-      "japanese_players": [],
+      "japanese_players": [
+        {
+          "name_ja": "旗手怜央",
+          "position": "MF",
+          "side": "home"
+        }
+      ],
       "broadcasters": [
         {
           "name": "DAZN",
@@ -46792,13 +46727,7 @@
       "away_en": "NEC",
       "away_crest": "https://crests.football-data.org/1915.png",
       "score": null,
-      "japanese_players": [
-        {
-          "name_ja": "小川航基",
-          "position": "FW",
-          "side": "away"
-        }
-      ],
+      "japanese_players": [],
       "broadcasters": [
         {
           "name": "U-NEXT",
@@ -47083,11 +47012,6 @@
       "away_crest": "https://crests.football-data.org/682.png",
       "score": null,
       "japanese_players": [
-        {
-          "name_ja": "板倉滉",
-          "position": "DF",
-          "side": "home"
-        },
         {
           "name_ja": "毎熊晟矢",
           "position": "DF/MF",
@@ -47604,11 +47528,6 @@
           "name_ja": "小杉啓太",
           "position": "FW/DF",
           "side": "home"
-        },
-        {
-          "name_ja": "神代慶人",
-          "position": "FW",
-          "side": "home"
         }
       ],
       "broadcasters": [
@@ -47677,7 +47596,7 @@
       "japanese_players": [
         {
           "name_ja": "佐藤龍之介",
-          "position": "FW",
+          "position": "MF",
           "side": "away"
         }
       ],
@@ -48047,15 +47966,15 @@
       "broadcasters": [
         {
           "name": "WOWOW",
-          "type": "exclusive",
+          "type": "shared",
           "url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l",
-          "note": "〜2026-27"
+          "note": "2026-27 予選プレーオフ〜決勝 全試合（WOWOW公式 2026-10-21確認）"
         },
         {
           "name": "Lemino",
-          "type": "partial",
+          "type": "shared",
           "url": "https://lemino.docomo.ne.jp/",
-          "note": "厳選30試合ディレイ"
+          "note": "2026-27 リーグフェーズ第2節（10/14）〜決勝 全試合ライブ・Leminoプレミアム（Lemino公式 2026-10-21確認）"
         }
       ]
     },
@@ -48082,15 +48001,15 @@
       "broadcasters": [
         {
           "name": "WOWOW",
-          "type": "exclusive",
+          "type": "shared",
           "url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l",
-          "note": "〜2026-27"
+          "note": "2026-27 予選プレーオフ〜決勝 全試合（WOWOW公式 2026-10-21確認）"
         },
         {
           "name": "Lemino",
-          "type": "partial",
+          "type": "shared",
           "url": "https://lemino.docomo.ne.jp/",
-          "note": "厳選30試合ディレイ"
+          "note": "2026-27 リーグフェーズ第2節（10/14）〜決勝 全試合ライブ・Leminoプレミアム（Lemino公式 2026-10-21確認）"
         }
       ]
     },
@@ -48118,6 +48037,11 @@
           "name_ja": "斉藤光毅",
           "position": "MF",
           "side": "home"
+        },
+        {
+          "name_ja": "旗手怜央",
+          "position": "MF",
+          "side": "away"
         }
       ],
       "broadcasters": [
@@ -48246,7 +48170,13 @@
       "away_en": "Bolton",
       "away_crest": "https://crests.football-data.org/60.png",
       "score": null,
-      "japanese_players": [],
+      "japanese_players": [
+        {
+          "name_ja": "伊藤敦樹",
+          "position": "MF",
+          "side": "away"
+        }
+      ],
       "broadcasters": [
         {
           "name": "DAZN",
@@ -48373,11 +48303,6 @@
           "name_ja": "岩田智輝",
           "position": "DF",
           "side": "home"
-        },
-        {
-          "name_ja": "藤本寛也",
-          "position": "MF",
-          "side": "home"
         }
       ],
       "broadcasters": [
@@ -48418,15 +48343,15 @@
       "broadcasters": [
         {
           "name": "WOWOW",
-          "type": "exclusive",
+          "type": "shared",
           "url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l",
-          "note": "〜2026-27"
+          "note": "2026-27 予選プレーオフ〜決勝 全試合（WOWOW公式 2026-10-21確認）"
         },
         {
           "name": "Lemino",
-          "type": "partial",
+          "type": "shared",
           "url": "https://lemino.docomo.ne.jp/",
-          "note": "厳選30試合ディレイ"
+          "note": "2026-27 リーグフェーズ第2節（10/14）〜決勝 全試合ライブ・Leminoプレミアム（Lemino公式 2026-10-21確認）"
         }
       ]
     },
@@ -48459,15 +48384,15 @@
       "broadcasters": [
         {
           "name": "WOWOW",
-          "type": "exclusive",
+          "type": "shared",
           "url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l",
-          "note": "〜2026-27"
+          "note": "2026-27 予選プレーオフ〜決勝 全試合（WOWOW公式 2026-10-21確認）"
         },
         {
           "name": "Lemino",
-          "type": "partial",
+          "type": "shared",
           "url": "https://lemino.docomo.ne.jp/",
-          "note": "厳選30試合ディレイ"
+          "note": "2026-27 リーグフェーズ第2節（10/14）〜決勝 全試合ライブ・Leminoプレミアム（Lemino公式 2026-10-21確認）"
         }
       ]
     },
@@ -48500,15 +48425,15 @@
       "broadcasters": [
         {
           "name": "WOWOW",
-          "type": "exclusive",
+          "type": "shared",
           "url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l",
-          "note": "〜2026-27"
+          "note": "2026-27 予選プレーオフ〜決勝 全試合（WOWOW公式 2026-10-21確認）"
         },
         {
           "name": "Lemino",
-          "type": "partial",
+          "type": "shared",
           "url": "https://lemino.docomo.ne.jp/",
-          "note": "厳選30試合ディレイ"
+          "note": "2026-27 リーグフェーズ第2節（10/14）〜決勝 全試合ライブ・Leminoプレミアム（Lemino公式 2026-10-21確認）"
         }
       ]
     },
@@ -48535,15 +48460,15 @@
       "broadcasters": [
         {
           "name": "WOWOW",
-          "type": "exclusive",
+          "type": "shared",
           "url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l",
-          "note": "〜2026-27"
+          "note": "2026-27 予選プレーオフ〜決勝 全試合（WOWOW公式 2026-10-21確認）"
         },
         {
           "name": "Lemino",
-          "type": "partial",
+          "type": "shared",
           "url": "https://lemino.docomo.ne.jp/",
-          "note": "厳選30試合ディレイ"
+          "note": "2026-27 リーグフェーズ第2節（10/14）〜決勝 全試合ライブ・Leminoプレミアム（Lemino公式 2026-10-21確認）"
         }
       ]
     },
@@ -48570,15 +48495,15 @@
       "broadcasters": [
         {
           "name": "WOWOW",
-          "type": "exclusive",
+          "type": "shared",
           "url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l",
-          "note": "〜2026-27"
+          "note": "2026-27 予選プレーオフ〜決勝 全試合（WOWOW公式 2026-10-21確認）"
         },
         {
           "name": "Lemino",
-          "type": "partial",
+          "type": "shared",
           "url": "https://lemino.docomo.ne.jp/",
-          "note": "厳選30試合ディレイ"
+          "note": "2026-27 リーグフェーズ第2節（10/14）〜決勝 全試合ライブ・Leminoプレミアム（Lemino公式 2026-10-21確認）"
         }
       ]
     },
@@ -48611,15 +48536,15 @@
       "broadcasters": [
         {
           "name": "WOWOW",
-          "type": "exclusive",
+          "type": "shared",
           "url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l",
-          "note": "〜2026-27"
+          "note": "2026-27 予選プレーオフ〜決勝 全試合（WOWOW公式 2026-10-21確認）"
         },
         {
           "name": "Lemino",
-          "type": "partial",
+          "type": "shared",
           "url": "https://lemino.docomo.ne.jp/",
-          "note": "厳選30試合ディレイ"
+          "note": "2026-27 リーグフェーズ第2節（10/14）〜決勝 全試合ライブ・Leminoプレミアム（Lemino公式 2026-10-21確認）"
         }
       ]
     },
@@ -48646,15 +48571,15 @@
       "broadcasters": [
         {
           "name": "WOWOW",
-          "type": "exclusive",
+          "type": "shared",
           "url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l",
-          "note": "〜2026-27"
+          "note": "2026-27 予選プレーオフ〜決勝 全試合（WOWOW公式 2026-10-21確認）"
         },
         {
           "name": "Lemino",
-          "type": "partial",
+          "type": "shared",
           "url": "https://lemino.docomo.ne.jp/",
-          "note": "厳選30試合ディレイ"
+          "note": "2026-27 リーグフェーズ第2節（10/14）〜決勝 全試合ライブ・Leminoプレミアム（Lemino公式 2026-10-21確認）"
         }
       ]
     },
@@ -48681,15 +48606,15 @@
       "broadcasters": [
         {
           "name": "WOWOW",
-          "type": "exclusive",
+          "type": "shared",
           "url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l",
-          "note": "〜2026-27"
+          "note": "2026-27 予選プレーオフ〜決勝 全試合（WOWOW公式 2026-10-21確認）"
         },
         {
           "name": "Lemino",
-          "type": "partial",
+          "type": "shared",
           "url": "https://lemino.docomo.ne.jp/",
-          "note": "厳選30試合ディレイ"
+          "note": "2026-27 リーグフェーズ第2節（10/14）〜決勝 全試合ライブ・Leminoプレミアム（Lemino公式 2026-10-21確認）"
         }
       ]
     },
@@ -48722,15 +48647,15 @@
       "broadcasters": [
         {
           "name": "WOWOW",
-          "type": "exclusive",
+          "type": "shared",
           "url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l",
-          "note": "〜2026-27"
+          "note": "2026-27 予選プレーオフ〜決勝 全試合（WOWOW公式 2026-10-21確認）"
         },
         {
           "name": "Lemino",
-          "type": "partial",
+          "type": "shared",
           "url": "https://lemino.docomo.ne.jp/",
-          "note": "厳選30試合ディレイ"
+          "note": "2026-27 リーグフェーズ第2節（10/14）〜決勝 全試合ライブ・Leminoプレミアム（Lemino公式 2026-10-21確認）"
         }
       ]
     },
@@ -48850,15 +48775,15 @@
       "broadcasters": [
         {
           "name": "WOWOW",
-          "type": "exclusive",
+          "type": "shared",
           "url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l",
-          "note": "〜2026-27"
+          "note": "2026-27 予選プレーオフ〜決勝 全試合（WOWOW公式 2026-10-21確認）"
         },
         {
           "name": "Lemino",
-          "type": "partial",
+          "type": "shared",
           "url": "https://lemino.docomo.ne.jp/",
-          "note": "厳選30試合ディレイ"
+          "note": "2026-27 リーグフェーズ第2節（10/14）〜決勝 全試合ライブ・Leminoプレミアム（Lemino公式 2026-10-21確認）"
         }
       ]
     },
@@ -48885,15 +48810,15 @@
       "broadcasters": [
         {
           "name": "WOWOW",
-          "type": "exclusive",
+          "type": "shared",
           "url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l",
-          "note": "〜2026-27"
+          "note": "2026-27 予選プレーオフ〜決勝 全試合（WOWOW公式 2026-10-21確認）"
         },
         {
           "name": "Lemino",
-          "type": "partial",
+          "type": "shared",
           "url": "https://lemino.docomo.ne.jp/",
-          "note": "厳選30試合ディレイ"
+          "note": "2026-27 リーグフェーズ第2節（10/14）〜決勝 全試合ライブ・Leminoプレミアム（Lemino公式 2026-10-21確認）"
         }
       ]
     },
@@ -48926,15 +48851,15 @@
       "broadcasters": [
         {
           "name": "WOWOW",
-          "type": "exclusive",
+          "type": "shared",
           "url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l",
-          "note": "〜2026-27"
+          "note": "2026-27 予選プレーオフ〜決勝 全試合（WOWOW公式 2026-10-21確認）"
         },
         {
           "name": "Lemino",
-          "type": "partial",
+          "type": "shared",
           "url": "https://lemino.docomo.ne.jp/",
-          "note": "厳選30試合ディレイ"
+          "note": "2026-27 リーグフェーズ第2節（10/14）〜決勝 全試合ライブ・Leminoプレミアム（Lemino公式 2026-10-21確認）"
         }
       ]
     },
@@ -48961,15 +48886,15 @@
       "broadcasters": [
         {
           "name": "WOWOW",
-          "type": "exclusive",
+          "type": "shared",
           "url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l",
-          "note": "〜2026-27"
+          "note": "2026-27 予選プレーオフ〜決勝 全試合（WOWOW公式 2026-10-21確認）"
         },
         {
           "name": "Lemino",
-          "type": "partial",
+          "type": "shared",
           "url": "https://lemino.docomo.ne.jp/",
-          "note": "厳選30試合ディレイ"
+          "note": "2026-27 リーグフェーズ第2節（10/14）〜決勝 全試合ライブ・Leminoプレミアム（Lemino公式 2026-10-21確認）"
         }
       ]
     },
@@ -48996,15 +48921,15 @@
       "broadcasters": [
         {
           "name": "WOWOW",
-          "type": "exclusive",
+          "type": "shared",
           "url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l",
-          "note": "〜2026-27"
+          "note": "2026-27 予選プレーオフ〜決勝 全試合（WOWOW公式 2026-10-21確認）"
         },
         {
           "name": "Lemino",
-          "type": "partial",
+          "type": "shared",
           "url": "https://lemino.docomo.ne.jp/",
-          "note": "厳選30試合ディレイ"
+          "note": "2026-27 リーグフェーズ第2節（10/14）〜決勝 全試合ライブ・Leminoプレミアム（Lemino公式 2026-10-21確認）"
         }
       ]
     },
@@ -49031,15 +48956,15 @@
       "broadcasters": [
         {
           "name": "WOWOW",
-          "type": "exclusive",
+          "type": "shared",
           "url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l",
-          "note": "〜2026-27"
+          "note": "2026-27 予選プレーオフ〜決勝 全試合（WOWOW公式 2026-10-21確認）"
         },
         {
           "name": "Lemino",
-          "type": "partial",
+          "type": "shared",
           "url": "https://lemino.docomo.ne.jp/",
-          "note": "厳選30試合ディレイ"
+          "note": "2026-27 リーグフェーズ第2節（10/14）〜決勝 全試合ライブ・Leminoプレミアム（Lemino公式 2026-10-21確認）"
         }
       ]
     },
@@ -49066,15 +48991,15 @@
       "broadcasters": [
         {
           "name": "WOWOW",
-          "type": "exclusive",
+          "type": "shared",
           "url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l",
-          "note": "〜2026-27"
+          "note": "2026-27 予選プレーオフ〜決勝 全試合（WOWOW公式 2026-10-21確認）"
         },
         {
           "name": "Lemino",
-          "type": "partial",
+          "type": "shared",
           "url": "https://lemino.docomo.ne.jp/",
-          "note": "厳選30試合ディレイ"
+          "note": "2026-27 リーグフェーズ第2節（10/14）〜決勝 全試合ライブ・Leminoプレミアム（Lemino公式 2026-10-21確認）"
         }
       ]
     },
@@ -52095,6 +52020,6 @@
       "_source_page": "2026–27 UEFA Europa League league phase"
     }
   ],
-  "updated_yt_highlights": "2026-10-21T17:08:17.492125+09:00",
-  "updated_uefa_secondary": "2026-10-21T23:14:04.409843+09:00"
+  "updated_yt_highlights": "2026-10-21T23:30:16.805009+09:00",
+  "updated_uefa_secondary": "2026-10-21T23:51:00.743057+09:00"
 }
