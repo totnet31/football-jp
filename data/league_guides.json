@@ -17,12 +17,42 @@
       "プリメイラ・リーガ": "DAZN（ABEMA de DAZN）"
     },
     "watch_sources": [
-      {"name": "U-NEXT サッカーパック（公式）", "url": "https://www.video.unext.jp/lp/football_pack", "checked": "2026-10-21"},
-      {"name": "ABEMA de DAZN 配信リーグ一覧（公式）", "url": "https://abema.tv/lp/abemadedazn-soccer-leaguelist", "checked": "2026-10-21"}
+      {
+        "name": "U-NEXT サッカーパック（公式）",
+        "url": "https://www.video.unext.jp/lp/football_pack",
+        "checked": "2026-10-21"
+      },
+      {
+        "name": "ABEMA de DAZN 配信リーグ一覧（公式）",
+        "url": "https://abema.tv/lp/abemadedazn-soccer-leaguelist",
+        "checked": "2026-10-21"
+      }
     ],
     "features": [
-      {"title": "チャンピオンズリーグの日本人選手【2026-27】出場選手・日程・結果と見る方法", "url": "/leagues/champions-league/", "search_name": "チャンピオンズリーグの日本人選手", "search_name_en": "Champions League Japanese players", "search_sub": "特集・CLの日本人と見る方法", "text": "2026-27 のCLに登録された日本人6人（鈴木彩艶・伊藤洋輝・渡辺剛・佐野航大・松岡大起・上田綺世）と、日本人が出る次の試合・最近の結果。WOWOW・Lemino の見方つき。"},
-      {"title": "セルティックの日本人選手【2026-27】いまは何人？歴代10人と今の所属", "url": "/column/celtic-japanese-players/", "search_name": "セルティックの日本人選手", "search_name_en": "Celtic Japanese players", "search_sub": "特集・歴代10人と今の所属", "text": "2026-27 のセルティックに日本人は0人。中村俊輔・古橋亨梧・前田大然・旗手怜央ら歴代10人がいまどこでプレーしているかを表で整理（2026-10-21 時点）。"}
+      {
+        "title": "チャンピオンズリーグの日本人選手【2026-27】出場選手・日程・結果と見る方法",
+        "url": "/leagues/champions-league/",
+        "search_name": "チャンピオンズリーグの日本人選手",
+        "search_name_en": "Champions League Japanese players",
+        "search_sub": "特集・CLの日本人と見る方法",
+        "text": "2026-27 のCLに登録された日本人6人（鈴木彩艶・伊藤洋輝・渡辺剛・佐野航大・松岡大起・上田綺世）と、日本人が出る次の試合・最近の結果。WOWOW・Lemino の見方つき。"
+      },
+      {
+        "title": "ヨーロッパリーグの日本人選手【2026-27】出場選手・日程・結果と見る方法",
+        "url": "/leagues/europa-league/",
+        "search_name": "ヨーロッパリーグの日本人選手",
+        "search_name_en": "Europa League Japanese players",
+        "search_sub": "特集・ELの日本人と見る方法",
+        "text": "2026-27 のELに登録された日本人10人（久保建英・鎌田大地・冨安健洋・中村敬斗・町田浩樹・毎熊晟矢・市原吏音・ハーフナー・ニッキ・北野颯太・小林友希）。WOWOW・Lemino の見方つき。"
+      },
+      {
+        "title": "セルティックの日本人選手【2026-27】いまは何人？歴代10人と今の所属",
+        "url": "/column/celtic-japanese-players/",
+        "search_name": "セルティックの日本人選手",
+        "search_name_en": "Celtic Japanese players",
+        "search_sub": "特集・歴代10人と今の所属",
+        "text": "2026-27 のセルティックに日本人は0人。中村俊輔・古橋亨梧・前田大然・旗手怜央ら歴代10人がいまどこでプレーしているかを表で整理（2026-10-21 時点）。"
+      }
     ]
   },
   "leagues": {
@@ -47,7 +77,10 @@
             "source_note": "U-NEXT公式ページ（ページ内の表記：2026年10月現在）"
           }
         ],
-        "more_link": {"href": "/column/broadcast-guide-2025-26/", "text": "海外サッカーの見方まとめ（2025-26版）"}
+        "more_link": {
+          "href": "/column/broadcast-guide-2025-26/",
+          "text": "海外サッカーの見方まとめ（2025-26版）"
+        }
       },
       "faq_watch": {
         "q": "プレミアリーグはどこで見られる？",
@@ -149,7 +182,10 @@
       "lead_extra": "鈴木彩艶・佐野航大・松岡大起は、今季が初めての欧州カップ戦です（ゲキサカ 2026-09-08）。",
       "registration_sources": "ゲキサカ（2026-09-08「本日開幕の26-27欧州CLは日本人6人が登録メンバー入り」）・GOAL日本版（2026-09-07更新「チャンピオンズリーグ2026-27に出場する日本人選手は？」）",
       "excluded": [
-        {"name_ja": "遠藤航", "note": "遠藤航（リバプール）は、リバプールがCLに出ていますが、今季のリーグフェーズの登録メンバーから外れているため、この人数には入れていません（ゲキサカ 2026-09-08・GOAL日本版 2026-09-07）。"}
+        {
+          "name_ja": "遠藤航",
+          "note": "遠藤航（リバプール）は、リバプールがCLに出ていますが、今季のリーグフェーズの登録メンバーから外れているため、この人数には入れていません（ゲキサカ 2026-09-08・GOAL日本版 2026-09-07）。"
+        }
       ],
       "extra_players": [
         {
@@ -200,6 +236,107 @@
       "faq_watch": {
         "q": "チャンピオンズリーグはどこで見られる？",
         "a": "WOWOW が予選プレーオフから決勝まで全試合を配信しています（月額2,530円・シーズンパス12,100円、いずれも税込。WOWOW公式ページで2026年10月21日に確認）。Lemino でも10月14日のリーグフェーズ第2節から決勝まで全試合がライブ配信されます（Leminoプレミアム 月額1,540円・税込、初回初月無料。Lemino公式ニュースで同日に確認）。"
+      },
+      "abbr": "CL"
+    },
+    "europa-league": {
+      "note": "大会ページ。ELは football-data.org の無料枠に無く matches.json に今季の試合が無いため、participant_clubs（出場クラブの日本語名）で players.json と突き合わせる。extra_players＝players.json に居ない登録選手（2つ以上の出どころで確かめた分だけ）。出場36クラブは英語版Wikipedia『2026–27 UEFA Europa League league phase』で照合（2026-10-21）。",
+      "competition_id": 3,
+      "abbr": "EL",
+      "name_ja": "UEFAヨーロッパリーグ",
+      "short_ja": "ヨーロッパリーグ",
+      "name_en": "UEFA Europa League",
+      "flag": "🇪🇺",
+      "season_start": "2026-07-01",
+      "participant_clubs": [
+        "AZアルクマール",
+        "レアル・ソシエダ",
+        "ユニオン・サンジロワーズ",
+        "リヨン",
+        "クリスタル・パレス",
+        "ホッフェンハイム",
+        "ザルツブルク",
+        "ヤギエロニア・ビャウィストク"
+      ],
+      "title": "ヨーロッパリーグの日本人選手【{season}】出場選手・日程・結果と見る方法｜football-jp",
+      "description": "{season}シーズンのUEFAヨーロッパリーグに登録された日本人選手{n}人（{names}）の所属クラブと、ELの日程・見る方法（WOWOW・Lemino）を公式の料金つきでまとめました。",
+      "lead_extra": "中村敬斗は9月にスタッド・ランスからリヨンへ移り、ELの登録メンバーに入りました（GOAL日本版 2026-09-18）。クリスタル・パレスの鎌田大地・冨安健洋、レアル・ソシエダの久保建英もELで戦います。",
+      "registration_sources": "GOAL日本版（2026-09-18「ヨーロッパリーグ2026-27に出場する日本人選手は？」・リーグフェーズ登録10名）・サッカーキング（2026-08-28「EL・リーグフェーズの組み合わせ決定！」／2026-10-16 EL第2節の日本人まとめ）",
+      "excluded": [
+        {
+          "name_ja": "チェイス・アンリ",
+          "note": "チェイス・アンリ（ザルツブルク）は、ザルツブルクがELに出ていますが、今季のリーグフェーズの登録メンバーから外れているため、この人数には入れていません（GOAL日本版 2026-09-18）。"
+        },
+        {
+          "name_ja": "旗手怜央",
+          "note": "組み合わせ抽選の時点で名前が挙がっていた旗手怜央は、9月にセルティックからバーンリー（イングランド2部）へ移ったため、ELには出ません（GOAL日本版 2026-09-18・サッカーキング 2026-08-28）。"
+        }
+      ],
+      "extra_players": [
+        {
+          "name_ja": "北野颯太",
+          "name_en": "Sota Kitano",
+          "position": "FW",
+          "club_ja": "ザルツブルク",
+          "club_id": null,
+          "league_note": "オーストリア1部",
+          "note": "北野颯太（ザルツブルク・オーストリア）はこのサイトの選手一覧にまだ入っていないため、選手ページはありません（ELの登録：GOAL日本版 2026-09-18・サッカーキング 2026-08-28／10-16）。"
+        },
+        {
+          "name_ja": "小林友希",
+          "name_en": "Yuki Kobayashi",
+          "position": "DF",
+          "club_ja": "ヤギエロニア・ビャウィストク",
+          "club_id": null,
+          "league_note": "ポーランド1部",
+          "note": "小林友希（ヤギエロニア・ビャウィストク・ポーランド）はこのサイトの選手一覧にまだ入っていないため、選手ページはありません（ELの登録：GOAL日本版 2026-09-18・サッカーキング 2026-08-28）。"
+        }
+      ],
+      "no_match_data_note": "ELの試合データは、このサイトがふだん使っている試合データ（football-data.org）に入っていないため、クラブの成績・次の試合はまだ表に出せません。日程は下の「次の試合」欄のリンクから確かめられます。",
+      "no_upcoming_note": "ELの今季の試合データは、まだこのサイトに入っていません（ふだん使っている試合データにELが含まれないため）。",
+      "no_results_note": "ELの今季の結果データは、まだこのサイトに入っていません。",
+      "fixtures_link": {
+        "href": "https://lemino.docomo.ne.jp/leminonews/articles/uefa-europa-league-schedule-2026-27",
+        "text": "Lemino公式ニュース「UEFAヨーロッパリーグ2026-27 試合日程・順位表・結果・組み合わせ」"
+      },
+      "watch": {
+        "heading": "ヨーロッパリーグはどこで見られる？",
+        "services": [
+          {
+            "key": "wowow",
+            "name": "WOWOW",
+            "scope": "ヨーロッパリーグをリーグフェーズから決勝まで全試合配信。チャンピオンズリーグ（予選プレーオフ〜決勝の全試合）とカンファレンスリーグ（リーグフェーズ〜決勝の注目試合）も同じ料金で見られます。",
+            "price": "月額2,530円（税込）、またはCL・ELシーズンパス12,100円（税込・販売は2026年10月31日23:59まで・2027年6月30日まで視聴可）",
+            "url_service": "WOWOW",
+            "url": "https://news.wowow.co.jp/5700.html",
+            "checked": "2026-10-21",
+            "source_note": "WOWOW公式ニュース（2026-07-15掲載「CL・EL 2026-27 シーズンパス」）で範囲・シーズンパスを確認。月額はWOWOW公式「UEFAチャンピオンズリーグ／ヨーロッパリーグ」ページ（2026-10-21確認）"
+          },
+          {
+            "key": "lemino",
+            "name": "Lemino（Leminoプレミアム）",
+            "scope": "2026年10月から決勝まで、ヨーロッパリーグの全試合を配信。ただしリーグフェーズの一部の試合は見逃し配信（あとから見る形）のみです。",
+            "price": "Leminoプレミアム：月額1,540円（税込・Web/ドコモショップで申し込み）。App Store・Google Playからは月額1,650円（税込）",
+            "trial": "初めて申し込む人は初月無料（Lemino公式の案内）",
+            "url": "https://lemino.docomo.ne.jp/leminonews/articles/uefa-europa-league-schedule-2026-27",
+            "checked": "2026-10-21",
+            "source_note": "Lemino公式ニュース（2026-10-09掲載のCL全試合配信のお知らせに「UEFAヨーロッパリーグ（10月以降 全試合配信）」、2026-10-17更新の「UEFAヨーロッパリーグ2026-27 試合日程」に「リーグフェーズの一部試合はアーカイブ配信のみ」）"
+          }
+        ],
+        "more_link": {
+          "href": "/column/broadcast-guide-2025-26/",
+          "text": "海外サッカーの見方まとめ（2025-26版）"
+        }
+      },
+      "faq_extra": [
+        {
+          "q": "チェイス・アンリはヨーロッパリーグに出ないの？",
+          "a": "所属するザルツブルクはELに出ていますが、チェイス・アンリは今季のリーグフェーズの登録メンバーから外れています（GOAL日本版 2026-09-18）。"
+        }
+      ],
+      "faq_watch": {
+        "q": "ヨーロッパリーグはどこで見られる？",
+        "a": "WOWOW がリーグフェーズから決勝まで全試合を配信しています（月額2,530円・CL・ELシーズンパス12,100円、いずれも税込。シーズンパスの販売は2026年10月31日まで。WOWOW公式で2026年10月21日に確認）。Lemino でも10月から決勝まで全試合が配信されます（リーグフェーズの一部はアーカイブ配信のみ。Leminoプレミアム 月額1,540円・税込、初回初月無料。Lemino公式ニュースで同日に確認）。"
       }
     }
   }
