@@ -46,6 +46,14 @@
         "text": "2026-27 のELに登録された日本人10人（久保建英・鎌田大地・冨安健洋・中村敬斗・町田浩樹・毎熊晟矢・市原吏音・ハーフナー・ニッキ・北野颯太・小林友希）。WOWOW・Lemino の見方つき。"
       },
       {
+        "title": "カンファレンスリーグの日本人選手【2026-27】出場選手・日程・結果と見る方法",
+        "url": "/leagues/conference-league/",
+        "search_name": "カンファレンスリーグの日本人選手",
+        "search_name_en": "Conference League Japanese players",
+        "search_sub": "特集・ECLの日本人と見る方法",
+        "text": "2026-27 のECLに登録された日本人15人（南野拓実・鈴木唯人・後藤啓介・山本理仁・谷口彰悟・高井幸大・小久保玲央ブライアンほか）と、日本人が出る次の試合・結果。WOWOW の見方つき。"
+      },
+      {
         "title": "セルティックの日本人選手【2026-27】いまは何人？歴代10人と今の所属",
         "url": "/column/celtic-japanese-players/",
         "search_name": "セルティックの日本人選手",
@@ -240,7 +248,7 @@
       "abbr": "CL"
     },
     "europa-league": {
-      "note": "大会ページ。ELは football-data.org の無料枠に無く matches.json に今季の試合が無いため、participant_clubs（出場クラブの日本語名）で players.json と突き合わせる。extra_players＝players.json に居ない登録選手（2つ以上の出どころで確かめた分だけ）。出場36クラブは英語版Wikipedia『2026–27 UEFA Europa League league phase』で照合（2026-10-21）。",
+      "note": "大会ページ。ELは football-data.org の無料枠に無いため、試合データは scripts/fetch_uefa_secondary.py が英語版Wikipedia『2026–27 UEFA Europa League league phase』から取り込む（1日3回）。日本人のクラブとは players.json の club_id、IDが無いクラブは日本語のクラブ名で突き合わせる。participant_clubs（出場クラブの日本語名）は試合データが取れなかったときの予備。extra_players＝players.json に居ない登録選手（2つ以上の出どころで確かめた分だけ）。出場36クラブは英語版Wikipediaで照合（2026-10-21）。",
       "competition_id": 3,
       "abbr": "EL",
       "name_ja": "UEFAヨーロッパリーグ",
@@ -248,6 +256,7 @@
       "name_en": "UEFA Europa League",
       "flag": "🇪🇺",
       "season_start": "2026-07-01",
+      "match_data_source": "英語版Wikipedia『2026–27 UEFA Europa League league phase』の試合記録（UEFA公式の記録が出典）",
       "participant_clubs": [
         "AZアルクマール",
         "レアル・ソシエダ",
@@ -337,6 +346,96 @@
       "faq_watch": {
         "q": "ヨーロッパリーグはどこで見られる？",
         "a": "WOWOW がリーグフェーズから決勝まで全試合を配信しています（月額2,530円・CL・ELシーズンパス12,100円、いずれも税込。シーズンパスの販売は2026年10月31日まで。WOWOW公式で2026年10月21日に確認）。Lemino でも10月から決勝まで全試合が配信されます（リーグフェーズの一部はアーカイブ配信のみ。Leminoプレミアム 月額1,540円・税込、初回初月無料。Lemino公式ニュースで同日に確認）。"
+      }
+    },
+    "conference-league": {
+      "note": "大会ページ。ECLは football-data.org の無料枠に無いため、試合データは scripts/fetch_uefa_secondary.py が英語版Wikipedia『2026–27 UEFA Conference League league phase』から取り込む（1日3回・リーグフェーズは全6節）。日本人のクラブとは players.json の club_id、IDが無いクラブは日本語のクラブ名で突き合わせる。participant_clubs は IDの無い日本人所属クラブの日本語名。extra_players＝players.json に居ない登録選手（2つ以上の出どころで確かめた分だけ）。出場36クラブは英語版Wikipediaで照合（2026-10-22）。",
+      "competition_id": 848,
+      "abbr": "ECL",
+      "name_ja": "UEFAカンファレンスリーグ",
+      "short_ja": "カンファレンスリーグ",
+      "name_en": "UEFA Conference League",
+      "flag": "🇪🇺",
+      "season_start": "2026-07-01",
+      "match_data_source": "英語版Wikipedia『2026–27 UEFA Conference League league phase』の試合記録（UEFA公式の記録が出典）",
+      "participant_clubs": [
+        "シント＝トロイデン",
+        "ツルヴェナ・ズヴェズダ",
+        "カウノ・ジャルギリス"
+      ],
+      "title": "カンファレンスリーグの日本人選手【{season}】出場選手・日程・結果と見る方法｜football-jp",
+      "description": "{season}シーズンのUEFAカンファレンスリーグ（ECL）に登録された日本人選手{n}人（{names}）の所属クラブ、日本人が出るECLの次の試合と結果を日本時間でまとめました。見る方法（WOWOW）も公式の料金つきで紹介。",
+      "lead_extra": "シント＝トロイデンはクラブ創設から102年で初めてのUEFAの大会で、日本人8人が登録メンバーに入りました（サッカーキング 2026-09-16・GOAL日本版 2026-10-16）。フライブルクの鈴木唯人・山本理仁・後藤啓介、モナコの南野拓実もECLで戦います。",
+      "registration_sources": "GOAL日本版（2026-10-16「カンファレンスリーグ2026-27開幕戦はいつ？試合日程・テレビ放送予定」・日本人15人の表）・フットボールチャンネル（2026-09-05「ブライトンMF三笘薫、負傷の影響でECL登録メンバー外に…」）",
+      "excluded": [
+        {
+          "name_ja": "三笘薫",
+          "note": "三笘薫（ブライトン）は、ブライトンがECLに出ていますが、昨季終盤のけがの影響で今季のリーグフェーズの登録メンバーから外れているため、この人数には入れていません（GOAL日本版 2026-09-04・サッカーキング 2026-09-04）。登録の入れ替えができるノックアウトフェーズからは出られる可能性があります（GOAL日本版 2026-10-16）。"
+        },
+        {
+          "name_ja": "長田澪",
+          "note": "長田澪（フライブルク）は、ECLの登録メンバーをまとめた記事（GOAL日本版 2026-10-16・フットボールチャンネル 2026-09-05）に名前が無いため、この人数には入れていません。"
+        }
+      ],
+      "extra_players": [
+        {
+          "name_ja": "鈴木淳之介",
+          "name_en": "Junnosuke Suzuki",
+          "position": "DF",
+          "club_ja": "コペンハーゲン",
+          "club_id": 1876,
+          "league_note": "デンマーク1部",
+          "note": "鈴木淳之介（コペンハーゲン・デンマーク）はこのサイトの選手一覧にまだ入っていないため、選手ページはありません（ECLの登録：GOAL日本版 2026-10-16・フットボールチャンネル 2026-09-05）。"
+        },
+        {
+          "name_ja": "中山雄太",
+          "name_en": "Yuta Nakayama",
+          "position": "DF",
+          "club_ja": "ツルヴェナ・ズヴェズダ",
+          "club_id": null,
+          "league_note": "セルビア1部",
+          "note": "中山雄太は8月に町田からツルヴェナ・ズヴェズダ（セルビア）へ移りました（サッカーキング 2026-08-29）。このサイトの選手一覧にまだ入っていないため、選手ページはありません（ECLの登録：GOAL日本版 2026-10-16・フットボールチャンネル 2026-09-05）。"
+        },
+        {
+          "name_ja": "辛島侑烈",
+          "name_en": "",
+          "position": "MF",
+          "club_ja": "カウノ・ジャルギリス",
+          "club_id": null,
+          "league_note": "リトアニア1部",
+          "note": "辛島侑烈（カウノ・ジャルギリス・リトアニア）はこのサイトの選手一覧にまだ入っていないため、選手ページはありません（ECLの登録：GOAL日本版 2026-10-16・フットボールチャンネル 2026-09-05）。"
+        }
+      ],
+      "no_upcoming_note": "日本人が出るECLの次の試合は、いまのところ入っていません。",
+      "no_results_note": "ECLの今季の結果は、まだありません。",
+      "watch": {
+        "heading": "カンファレンスリーグはどこで見られる？",
+        "services": [
+          {
+            "key": "wowow",
+            "name": "WOWOW",
+            "scope": "カンファレンスリーグは、リーグフェーズから決勝までの「注目試合」を配信（全試合ではありません。日本人の試合が配信されるかは試合ごとに確かめてください）。チャンピオンズリーグ・ヨーロッパリーグ（どちらも全試合）も同じ料金で見られます。",
+            "price": "月額2,530円（税込）、またはCL・ELシーズンパス12,100円（税込・カンファレンスリーグの注目試合も含む・販売は2026年10月31日23:59まで）",
+            "url_service": "WOWOW",
+            "url": "https://news.wowow.co.jp/5700.html",
+            "checked": "2026-10-22",
+            "source_note": "WOWOW公式ニュース（2026-07-15掲載「CL・EL 2026-27 シーズンパス」）で範囲を確認。月額・販売期限は2026-10-21にWOWOW公式で確認した分"
+          }
+        ],
+        "more_link": {
+          "href": "/column/broadcast-guide-2025-26/",
+          "text": "海外サッカーの見方まとめ（2025-26版）"
+        }
+      },
+      "faq_extra": [
+        {
+          "q": "三笘薫はカンファレンスリーグに出ないの？",
+          "a": "所属するブライトンはECLに出ていますが、三笘薫は昨季終盤のけがの影響で今季のリーグフェーズの登録メンバーから外れています（GOAL日本版 2026-09-04・サッカーキング 2026-09-04）。登録の入れ替えができるノックアウトフェーズからは出られる可能性があります（GOAL日本版 2026-10-16）。"
+        }
+      ],
+      "faq_watch": {
+        "q": "カンファレンスリーグはどこで見られる？",
+        "a": "WOWOW がリーグフェーズから決勝までの注目試合を配信しています（全試合ではありません。月額2,530円・CL・ELシーズンパス12,100円、いずれも税込。WOWOW公式ニュースで範囲を2026年10月22日に確認）。"
       }
     }
   }
