@@ -496,7 +496,8 @@ def get_seasoned_stats(player: dict, scorers_comps: dict, player_stats: dict, cu
             as_of = datetime.strptime(e["as_of"], "%Y-%m-%d").replace(tzinfo=JST)
             if (datetime.now(JST) - as_of).days <= CUR_STATS_MAX_AGE_DAYS:
                 cur = {"apps": e.get("apps", 0), "goals": e.get("goals", 0),
-                       "as_of": e["as_of"], "src": "Wikipedia"}
+                       "as_of": e["as_of"],
+                       "src": "Wikipedia選手ページ" if e.get("source") == "wikipedia_player_page" else "Wikipedia"}
         except ValueError:
             pass
     if cur is None:
@@ -889,11 +890,14 @@ def build_quick_table(players: list, seasoned: dict, slug_map: dict, season: str
     rows = []
     as_ofs = set()
     used_fd = False
+    player_page = []
     for p in sorted(players, key=lambda x: (x.get("club_ja", ""), x.get("name_ja", ""))):
         name_en = p.get("name_en", "")
         st = seasoned.get(name_en, {})
         cur, prev = st.get("cur"), st.get("prev")
-        if cur and cur.get("as_of"):
+        if cur and cur.get("src") == "Wikipedia選手ページ":
+            player_page.append((p.get("name_ja", ""), cur.get("as_of", "")))
+        elif cur and cur.get("as_of"):
             as_ofs.add(cur["as_of"])
         if cur and cur.get("src") == "football-data.org":
             used_fd = True
@@ -910,6 +914,11 @@ def build_quick_table(players: list, seasoned: dict, slug_map: dict, season: str
     if as_ofs:
         span = min(as_ofs) if len(as_ofs) == 1 else f"{min(as_ofs)}〜{max(as_ofs)}"
         src.append(f"{season}：Wikipedia（英語版）の各クラブ{season}シーズンページの成績表（{span}の試合まで）")
+    if player_page:
+        pp_dates = sorted({d for _, d in player_page if d})
+        pp_span = (f"（{pp_dates[0]}" + (f"〜{pp_dates[-1]}" if len(pp_dates) > 1 else "") + "の試合まで）") if pp_dates else ""
+        src.append(f"{season}：{'・'.join(n for n, _ in player_page)}は、クラブのページの表が更新されていないため、"
+                   f"選手本人のWikipedia（英語版）ページの成績表{pp_span}")
     if used_fd:
         src.append(f"{season}：一部は football-data.org の得点者一覧")
     src.append(f"{PREV_SEASON}：Wikipedia（英語版）の各クラブ{PREV_SEASON}シーズンページ（リーグ戦）。かっこ内は前季のクラブ")
@@ -927,25 +936,39 @@ def build_quick_table(players: list, seasoned: dict, slug_map: dict, season: str
 
 def build_card_source_note(seasoned: dict) -> str:
     """選手カードの数字の出どころと日付（カードのすぐ上に出す）。"""
-    as_ofs, has_cur, has_prev, used_fd = set(), False, False, False
+    as_ofs, pp_as_ofs, has_cur, has_prev, used_fd, used_pp = set(), set(), False, False, False, False
+    has_club = False
     for st in seasoned.values():
         cur, prev = (st or {}).get("cur"), (st or {}).get("prev")
         if cur:
             has_cur = True
-            if cur.get("as_of"):
-                as_ofs.add(cur["as_of"])
-            if cur.get("src") == "football-data.org":
+            if cur.get("src") == "Wikipedia選手ページ":
+                used_pp = True
+                if cur.get("as_of"):
+                    pp_as_ofs.add(cur["as_of"])
+            elif cur.get("src") == "football-data.org":
                 used_fd = True
+            else:
+                has_club = True
+                if cur.get("as_of"):
+                    as_ofs.add(cur["as_of"])
         if prev:
             has_prev = True
     if not (has_cur or has_prev):
         return ""
     parts = []
     if has_cur:
-        t = f"{CURRENT_SEASON}＝リーグ戦（Wikipedia英語版の各クラブ{CURRENT_SEASON}シーズンページ"
-        if as_ofs:
-            t += f"・{min(as_ofs)}" + (f"〜{max(as_ofs)}" if len(as_ofs) > 1 else "") + "の試合まで"
-        t += "）"
+        def _span(ds):
+            return (f"・{min(ds)}" + (f"〜{max(ds)}" if len(ds) > 1 else "") + "の試合まで") if ds else ""
+        srcs = []
+        if has_club:
+            srcs.append(f"Wikipedia英語版の各クラブ{CURRENT_SEASON}シーズンページ{_span(as_ofs)}")
+        if used_pp:
+            srcs.append(f"{'一部は' if has_club else ''}選手本人のWikipedia英語版ページ{_span(pp_as_ofs)}")
+        if not srcs and used_fd:
+            srcs.append("football-data.org の得点者一覧")
+            used_fd = False
+        t = f"{CURRENT_SEASON}＝リーグ戦（" + "、".join(srcs) + "）"
         if used_fd:
             t += "、一部は football-data.org の得点者一覧"
         parts.append(t)
@@ -1008,11 +1031,13 @@ def build_faq_items(league_ja: str, players: list, seasoned: dict, guide: dict, 
         f"{league_ja}の日本人選手は何人？",
         f"{season}シーズンは{n}人です（{players_updated}時点）。{_player_club_list(players)}。",
     ))
-    best, best_names, as_ofs = 0, [], set()
+    best, best_names, as_ofs, used_pp = 0, [], set(), False
     for p in players:
         cur = (seasoned.get(p.get("name_en", "")) or {}).get("cur")
         if not cur:
             continue
+        if cur.get("src") == "Wikipedia選手ページ":
+            used_pp = True
         if cur.get("as_of"):
             as_ofs.add(cur["as_of"])
         g = cur.get("goals", 0) or 0
@@ -1023,7 +1048,7 @@ def build_faq_items(league_ja: str, players: list, seasoned: dict, guide: dict, 
     when = f"{max(as_ofs)}までの試合" if as_ofs else "取得できた範囲"
     if best > 0:
         a = (f"{season}シーズンのリーグ戦では、{'・'.join(best_names)}の{best}得点が日本人で最多です"
-             f"（{when}・Wikipedia各クラブの今季ページの数字）。")
+             f"（{when}・" + ("Wikipedia英語版のクラブ・選手の今季ページの数字" if used_pp else "Wikipedia各クラブの今季ページの数字") + "）。")
     else:
         a = f"{season}シーズンのリーグ戦で、まだ得点した日本人選手はいません（{when}）。"
     items.append((f"{league_ja}の日本人で一番点を取っているのは？", a))
