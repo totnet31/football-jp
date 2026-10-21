@@ -1394,6 +1394,7 @@ def generate_league_index(league_groups: dict, guides: dict = None, players_upda
 
     if idx:
         html_parts.append(build_index_table(ordered_leagues, league_groups, idx, season))
+        html_parts.append(build_index_features(idx))
 
     html_parts.append(common_footer_ja())
     html_parts.append('</body>')
@@ -1424,6 +1425,25 @@ def build_index_table(ordered_leagues: list, league_groups: dict, idx: dict, sea
         '</tbody></table></div>'
         f'<p class="lg-src">「どこで見られる」は公式ページで確かめた分だけ載せています（「—」はまだ確かめていないもの）。出どころ：{srcs}</p>'
         '<p><a href="/column/broadcast-guide-2025-26/" class="link-more">海外サッカーの見方まとめ（2025-26版） →</a></p>'
+        '</section>'
+    )
+
+
+def build_index_features(idx: dict) -> str:
+    """柱 /leagues/ の「クラブ・大会別の特集」欄（league_guides.json の index.features）。無ければ出さない。"""
+    feats = idx.get("features") or []
+    if not feats:
+        return ""
+    items = "".join(
+        f'<li><a href="{esc(f.get("url", ""))}">{esc(f.get("title", ""))}</a>'
+        + (f'<br><span class="lg-src">{esc(f.get("text", ""))}</span>' if f.get("text") else "")
+        + '</li>'
+        for f in feats
+    )
+    return (
+        '<section class="league-section lg-quick">'
+        '<h2 class="section-title">クラブ・大会別の日本人特集</h2>'
+        f'<ul class="lg-features" style="padding-left:1.2em;line-height:1.8">{items}</ul>'
         '</section>'
     )
 

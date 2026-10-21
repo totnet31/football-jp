@@ -34,9 +34,14 @@ SITE_NAME = "football-jp"
 SITE_URL = "https://football-jp.com"
 
 
+# 選手ページの説明文に出す人数（main() で players.json の数を入れる）
+TOTAL_PLAYERS = 0
+
+
 # ============================
 # broadcaster サービスマップ
 # ============================
+
 def load_services() -> dict:
     """broadcasters.json の services セクションを返す。"""
     if not BROADCASTERS_JSON.exists():
@@ -453,9 +458,9 @@ def build_player_page(player: dict, slug: str, scorer_stats: dict,
     played_val = (wiki_stats or scorer_stats or {}).get("played", 0) if (wiki_stats or scorer_stats) else 0
     if goals_val and played_val:
         season_word = "2025-26シーズン" if wiki_stats else "今シーズン"
-        desc_raw = f"{name_ja}（{position}・{club_ja}）の試合スケジュール・最新成績・配信局情報を日本時間で確認。{season_word}{goals_val}ゴール・{played_val}試合出場。{league_ja}で活躍する日本人海外組の最新データ。三笘薫・久保建英ら68名をまとめてチェックできる国内最速データベース。"
+        desc_raw = f"{name_ja}（{position}・{club_ja}）の試合スケジュール・最新成績・配信局情報を日本時間で確認。{season_word}{goals_val}ゴール・{played_val}試合出場。{league_ja}で活躍する日本人海外組の最新データ。三笘薫・久保建英ら{TOTAL_PLAYERS}名をまとめてチェックできる国内最速データベース。"
     else:
-        desc_raw = f"{name_ja}（{position}・{club_ja}）の試合スケジュール・最新成績・配信局情報を日本時間でチェック。{league_ja}在籍の日本人海外組。三笘薫・久保建英ら全68名の最新データをfootball-jpで一括確認。配信局・次の試合日程も掲載。"
+        desc_raw = f"{name_ja}（{position}・{club_ja}）の試合スケジュール・最新成績・配信局情報を日本時間でチェック。{league_ja}在籍の日本人海外組。三笘薫・久保建英ら全{TOTAL_PLAYERS}名の最新データをfootball-jpで一括確認。配信局・次の試合日程も掲載。"
     # 文字数調整（160字以内）
     if len(desc_raw) > 160:
         desc_raw = desc_raw[:157] + "…"
@@ -1499,8 +1504,9 @@ function trackAffClick(el) {{
 # ============================
 def build_players_index(players: list, slug_map: dict) -> str:
     """選手一覧ページ（/players/index.html）を生成する。"""
-    title = "日本人サッカー選手 一覧 海外組68名｜football-jp"
-    desc = "三笘薫・久保建英・遠藤航など海外組68名の日本人選手一覧。プレミアリーグ・ブンデスリーガ・ラ・リーガ等の試合スケジュール・成績・配信情報を日本時間で確認。"
+    n = len(players)  # 人数は players.json の数から出す（2026-10-21 まで「68名」と手書きだった）
+    title = f"日本人サッカー選手 一覧 海外組{n}名｜football-jp"
+    desc = f"三笘薫・久保建英・遠藤航など海外組{n}名の日本人選手一覧。プレミアリーグ・ブンデスリーガ・ラ・リーガ等の試合スケジュール・成績・配信情報を日本時間で確認。"
     canonical = f"{SITE_URL}/players/"
 
     # ポジション正規化（GK/DF/MF/FW の4分類）
@@ -1846,6 +1852,8 @@ def main():
     players, matches, matches_dict, scorers_comps, events, standings_comps, player_stats, services, player_info, player_videos_data = load_data()
     print(f"  選手数: {len(players)}")
     print(f"  試合数: {len(matches)}")
+    global TOTAL_PLAYERS
+    TOTAL_PLAYERS = len(players)  # 選手ページの説明文の「全◯名」に使う
 
     # slug生成
     slug_map = make_unique_slugs(players)
