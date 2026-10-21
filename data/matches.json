@@ -2,7 +2,7 @@
   "updated": "2026-10-21T17:05:19.966948+09:00",
   "date_from": "2026-10-14",
   "date_to": "2026-11-04",
-  "match_count": 1233,
+  "match_count": 1377,
   "_note": "累積保持モード：フェッチ窓外の過去試合データはそのまま保持される。",
   "matches": [
     {
@@ -3294,12 +3294,91 @@
       "broadcasters": []
     },
     {
+      "id": "ECL_2026-04-30_Shakht_Crysta",
+      "competition_id": 848,
+      "competition_ja": "UEFAカンファレンスリーグ",
+      "competition_category": "european_cup",
+      "competition_flag": "🇪🇺",
+      "kickoff_jst": "2026-05-01T04:00:00+09:00",
+      "status": "FINISHED",
+      "stage": "SEMI_FINALS",
+      "matchday": null,
+      "home_id": null,
+      "home_ja": "シャフタール・ドネツク",
+      "home_en": "Shakhtar Donetsk",
+      "home_crest": null,
+      "away_id": 354,
+      "away_ja": "クリスタル・パレス",
+      "away_en": "Crystal Palace",
+      "away_crest": "https://crests.football-data.org/354.png",
+      "score": {
+        "home": 1,
+        "away": 3
+      },
+      "japanese_players": [
+        {
+          "name_ja": "鎌田大地",
+          "position": "MF",
+          "side": "away"
+        },
+        {
+          "name_ja": "冨安健洋",
+          "position": "DF",
+          "side": "away"
+        }
+      ],
+      "broadcasters": [
+        {
+          "name": "WOWOW",
+          "type": "partial",
+          "url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l",
+          "note": "注目試合"
+        }
+      ],
+      "_source": "wikipedia",
+      "_source_page": "2025–26 UEFA Conference League knockout phase"
+    },
+    {
+      "id": "ECL_2026-04-30_RayoVa_Strasb",
+      "competition_id": 848,
+      "competition_ja": "UEFAカンファレンスリーグ",
+      "competition_category": "european_cup",
+      "competition_flag": "🇪🇺",
+      "kickoff_jst": "2026-05-01T04:00:00+09:00",
+      "status": "FINISHED",
+      "stage": "SEMI_FINALS",
+      "matchday": null,
+      "home_id": null,
+      "home_ja": "ラージョ・バジェカーノ",
+      "home_en": "Rayo Vallecano",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "ストラスブール",
+      "away_en": "Strasbourg",
+      "away_crest": null,
+      "score": {
+        "home": 1,
+        "away": 0
+      },
+      "japanese_players": [],
+      "broadcasters": [
+        {
+          "name": "WOWOW",
+          "type": "partial",
+          "url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l",
+          "note": "注目試合"
+        }
+      ],
+      "_source": "wikipedia",
+      "_source_page": "2025–26 UEFA Conference League knockout phase"
+    },
+    {
       "id": "EL_2026-04-30_Braga_SCFrei",
       "competition_id": 3,
       "competition_ja": "UEFAヨーロッパリーグ",
       "competition_category": "european_cup",
       "competition_flag": "🇪🇺",
-      "kickoff_jst": "2026-05-01T05:00:00+09:00",
+      "kickoff_jst": "2026-05-01T04:00:00+09:00",
       "status": "FINISHED",
       "stage": "SEMI_FINALS",
       "matchday": null,
@@ -3345,7 +3424,8 @@
           "note": "〜2026-27"
         }
       ],
-      "_source": "wikipedia"
+      "_source": "wikipedia",
+      "_source_page": "2025–26 UEFA Europa League knockout phase"
     },
     {
       "id": "EL_2026-04-30_Nottin_AstonV",
@@ -3353,7 +3433,7 @@
       "competition_ja": "UEFAヨーロッパリーグ",
       "competition_category": "european_cup",
       "competition_flag": "🇪🇺",
-      "kickoff_jst": "2026-05-01T05:00:00+09:00",
+      "kickoff_jst": "2026-05-01T04:00:00+09:00",
       "status": "FINISHED",
       "stage": "SEMI_FINALS",
       "matchday": null,
@@ -3384,84 +3464,8 @@
           "note": "〜2026-27"
         }
       ],
-      "_source": "wikipedia"
-    },
-    {
-      "id": "ECL_2026-04-30_Shakht_Crysta",
-      "competition_id": 848,
-      "competition_ja": "UEFAカンファレンスリーグ",
-      "competition_category": "european_cup",
-      "competition_flag": "🇪🇺",
-      "kickoff_jst": "2026-05-01T05:00:00+09:00",
-      "status": "FINISHED",
-      "stage": "SEMI_FINALS",
-      "matchday": null,
-      "home_id": null,
-      "home_ja": "シャフタール・ドネツク",
-      "home_en": "Shakhtar Donetsk",
-      "home_crest": null,
-      "away_id": null,
-      "away_ja": "クリスタル・パレス",
-      "away_en": "Crystal Palace",
-      "away_crest": null,
-      "score": {
-        "home": 1,
-        "away": 3
-      },
-      "japanese_players": [
-        {
-          "name_ja": "鎌田大地",
-          "position": "MF",
-          "side": "away"
-        },
-        {
-          "name_ja": "冨安健洋",
-          "position": "DF",
-          "side": "away"
-        }
-      ],
-      "broadcasters": [
-        {
-          "name": "WOWOW",
-          "type": "partial",
-          "url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l",
-          "note": "注目試合"
-        }
-      ],
-      "_source": "wikipedia"
-    },
-    {
-      "id": "ECL_2026-04-30_RayoVa_Strasb",
-      "competition_id": 848,
-      "competition_ja": "UEFAカンファレンスリーグ",
-      "competition_category": "european_cup",
-      "competition_flag": "🇪🇺",
-      "kickoff_jst": "2026-05-01T05:00:00+09:00",
-      "status": "FINISHED",
-      "stage": "SEMI_FINALS",
-      "matchday": null,
-      "home_id": null,
-      "home_ja": "ラージョ・バジェカーノ",
-      "home_en": "Rayo Vallecano",
-      "home_crest": null,
-      "away_id": null,
-      "away_ja": "ストラスブール",
-      "away_en": "Strasbourg",
-      "away_crest": null,
-      "score": {
-        "home": 1,
-        "away": 0
-      },
-      "japanese_players": [],
-      "broadcasters": [
-        {
-          "name": "WOWOW",
-          "type": "partial",
-          "url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l",
-          "note": "注目試合"
-        }
-      ],
-      "_source": "wikipedia"
+      "_source": "wikipedia",
+      "_source_page": "2025–26 UEFA Europa League knockout phase"
     },
     {
       "id": 537161,
@@ -6519,12 +6523,91 @@
       ]
     },
     {
+      "id": "ECL_2026-05-07_Crysta_Shakht",
+      "competition_id": 848,
+      "competition_ja": "UEFAカンファレンスリーグ",
+      "competition_category": "european_cup",
+      "competition_flag": "🇪🇺",
+      "kickoff_jst": "2026-05-08T04:00:00+09:00",
+      "status": "FINISHED",
+      "stage": "SEMI_FINALS",
+      "matchday": null,
+      "home_id": null,
+      "home_ja": "クリスタル・パレス",
+      "home_en": "Crystal Palace",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "シャフタール・ドネツク",
+      "away_en": "Shakhtar Donetsk",
+      "away_crest": null,
+      "score": {
+        "home": 2,
+        "away": 1
+      },
+      "japanese_players": [
+        {
+          "name_ja": "鎌田大地",
+          "position": "MF",
+          "side": "home"
+        },
+        {
+          "name_ja": "冨安健洋",
+          "position": "DF",
+          "side": "home"
+        }
+      ],
+      "broadcasters": [
+        {
+          "name": "WOWOW",
+          "type": "partial",
+          "url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l",
+          "note": "注目試合"
+        }
+      ],
+      "_source": "wikipedia",
+      "_source_page": "2025–26 UEFA Conference League knockout phase"
+    },
+    {
+      "id": "ECL_2026-05-07_Strasb_RayoVa",
+      "competition_id": 848,
+      "competition_ja": "UEFAカンファレンスリーグ",
+      "competition_category": "european_cup",
+      "competition_flag": "🇪🇺",
+      "kickoff_jst": "2026-05-08T04:00:00+09:00",
+      "status": "FINISHED",
+      "stage": "SEMI_FINALS",
+      "matchday": null,
+      "home_id": null,
+      "home_ja": "ストラスブール",
+      "home_en": "Strasbourg",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "ラージョ・バジェカーノ",
+      "away_en": "Rayo Vallecano",
+      "away_crest": null,
+      "score": {
+        "home": 0,
+        "away": 1
+      },
+      "japanese_players": [],
+      "broadcasters": [
+        {
+          "name": "WOWOW",
+          "type": "partial",
+          "url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l",
+          "note": "注目試合"
+        }
+      ],
+      "_source": "wikipedia",
+      "_source_page": "2025–26 UEFA Conference League knockout phase"
+    },
+    {
       "id": "EL_2026-05-07_SCFrei_Braga",
       "competition_id": 3,
       "competition_ja": "UEFAヨーロッパリーグ",
       "competition_category": "european_cup",
       "competition_flag": "🇪🇺",
-      "kickoff_jst": "2026-05-08T05:00:00+09:00",
+      "kickoff_jst": "2026-05-08T04:00:00+09:00",
       "status": "FINISHED",
       "stage": "SEMI_FINALS",
       "matchday": null,
@@ -6570,7 +6653,8 @@
           "note": "〜2026-27"
         }
       ],
-      "_source": "wikipedia"
+      "_source": "wikipedia",
+      "_source_page": "2025–26 UEFA Europa League knockout phase"
     },
     {
       "id": "EL_2026-05-07_AstonV_Nottin",
@@ -6578,7 +6662,7 @@
       "competition_ja": "UEFAヨーロッパリーグ",
       "competition_category": "european_cup",
       "competition_flag": "🇪🇺",
-      "kickoff_jst": "2026-05-08T05:00:00+09:00",
+      "kickoff_jst": "2026-05-08T04:00:00+09:00",
       "status": "FINISHED",
       "stage": "SEMI_FINALS",
       "matchday": null,
@@ -6609,84 +6693,8 @@
           "note": "〜2026-27"
         }
       ],
-      "_source": "wikipedia"
-    },
-    {
-      "id": "ECL_2026-05-07_Crysta_Shakht",
-      "competition_id": 848,
-      "competition_ja": "UEFAカンファレンスリーグ",
-      "competition_category": "european_cup",
-      "competition_flag": "🇪🇺",
-      "kickoff_jst": "2026-05-08T05:00:00+09:00",
-      "status": "FINISHED",
-      "stage": "SEMI_FINALS",
-      "matchday": null,
-      "home_id": null,
-      "home_ja": "クリスタル・パレス",
-      "home_en": "Crystal Palace",
-      "home_crest": null,
-      "away_id": null,
-      "away_ja": "シャフタール・ドネツク",
-      "away_en": "Shakhtar Donetsk",
-      "away_crest": null,
-      "score": {
-        "home": 2,
-        "away": 1
-      },
-      "japanese_players": [
-        {
-          "name_ja": "鎌田大地",
-          "position": "MF",
-          "side": "home"
-        },
-        {
-          "name_ja": "冨安健洋",
-          "position": "DF",
-          "side": "home"
-        }
-      ],
-      "broadcasters": [
-        {
-          "name": "WOWOW",
-          "type": "partial",
-          "url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l",
-          "note": "注目試合"
-        }
-      ],
-      "_source": "wikipedia"
-    },
-    {
-      "id": "ECL_2026-05-07_Strasb_RayoVa",
-      "competition_id": 848,
-      "competition_ja": "UEFAカンファレンスリーグ",
-      "competition_category": "european_cup",
-      "competition_flag": "🇪🇺",
-      "kickoff_jst": "2026-05-08T05:00:00+09:00",
-      "status": "FINISHED",
-      "stage": "SEMI_FINALS",
-      "matchday": null,
-      "home_id": null,
-      "home_ja": "ストラスブール",
-      "home_en": "Strasbourg",
-      "home_crest": null,
-      "away_id": null,
-      "away_ja": "ラージョ・バジェカーノ",
-      "away_en": "Rayo Vallecano",
-      "away_crest": null,
-      "score": {
-        "home": 0,
-        "away": 1
-      },
-      "japanese_players": [],
-      "broadcasters": [
-        {
-          "name": "WOWOW",
-          "type": "partial",
-          "url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l",
-          "note": "注目試合"
-        }
-      ],
-      "_source": "wikipedia"
+      "_source": "wikipedia",
+      "_source_page": "2025–26 UEFA Europa League knockout phase"
     },
     {
       "id": 540696,
@@ -29621,6 +29629,74 @@
       ]
     },
     {
+      "id": "EL_2026-09-16_Ararat_Sparta",
+      "competition_id": 3,
+      "competition_ja": "UEFAヨーロッパリーグ",
+      "competition_category": "european_cup",
+      "competition_flag": "🇪🇺",
+      "kickoff_jst": "2026-09-17T01:45:00+09:00",
+      "status": "FINISHED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 1,
+      "home_id": null,
+      "home_ja": "アララト・アルメニア",
+      "home_en": "Ararat-Armenia",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "スパルタ・プラハ",
+      "away_en": "Sparta Prague",
+      "away_crest": null,
+      "score": {
+        "home": 1,
+        "away": 4
+      },
+      "japanese_players": [],
+      "broadcasters": [
+        {
+          "name": "WOWOW",
+          "type": "exclusive",
+          "url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l",
+          "note": "〜2026-27"
+        }
+      ],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 UEFA Europa League league phase"
+    },
+    {
+      "id": "EL_2026-09-16_Omonia_CeltaV",
+      "competition_id": 3,
+      "competition_ja": "UEFAヨーロッパリーグ",
+      "competition_category": "european_cup",
+      "competition_flag": "🇪🇺",
+      "kickoff_jst": "2026-09-17T01:45:00+09:00",
+      "status": "FINISHED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 1,
+      "home_id": null,
+      "home_ja": "オモニア",
+      "home_en": "Omonia",
+      "home_crest": null,
+      "away_id": 558,
+      "away_ja": "セルタ",
+      "away_en": "Celta",
+      "away_crest": "https://crests.football-data.org/558.png",
+      "score": {
+        "home": 1,
+        "away": 0
+      },
+      "japanese_players": [],
+      "broadcasters": [
+        {
+          "name": "WOWOW",
+          "type": "exclusive",
+          "url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l",
+          "note": "〜2026-27"
+        }
+      ],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 UEFA Europa League league phase"
+    },
+    {
       "id": 564679,
       "competition_id": 140,
       "competition_ja": "ラ・リーガ",
@@ -29704,6 +29780,261 @@
       ]
     },
     {
+      "id": "EL_2026-09-16_Milan_Benfic",
+      "competition_id": 3,
+      "competition_ja": "UEFAヨーロッパリーグ",
+      "competition_category": "european_cup",
+      "competition_flag": "🇪🇺",
+      "kickoff_jst": "2026-09-17T04:00:00+09:00",
+      "status": "FINISHED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 1,
+      "home_id": 98,
+      "home_ja": "ミラン",
+      "home_en": "Milan",
+      "home_crest": "https://crests.football-data.org/98.png",
+      "away_id": 1903,
+      "away_ja": "ベンフィカ",
+      "away_en": "SL Benfica",
+      "away_crest": "https://crests.football-data.org/1903.png",
+      "score": {
+        "home": 0,
+        "away": 2
+      },
+      "japanese_players": [],
+      "broadcasters": [
+        {
+          "name": "WOWOW",
+          "type": "exclusive",
+          "url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l",
+          "note": "〜2026-27"
+        }
+      ],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 UEFA Europa League league phase"
+    },
+    {
+      "id": "EL_2026-09-16_BayerL_Celje",
+      "competition_id": 3,
+      "competition_ja": "UEFAヨーロッパリーグ",
+      "competition_category": "european_cup",
+      "competition_flag": "🇪🇺",
+      "kickoff_jst": "2026-09-17T04:00:00+09:00",
+      "status": "FINISHED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 1,
+      "home_id": 3,
+      "home_ja": "レバークーゼン",
+      "home_en": "Leverkusen",
+      "home_crest": "https://crests.football-data.org/3.png",
+      "away_id": null,
+      "away_ja": "ツェリェ",
+      "away_en": "Celje",
+      "away_crest": null,
+      "score": {
+        "home": 2,
+        "away": 0
+      },
+      "japanese_players": [],
+      "broadcasters": [
+        {
+          "name": "WOWOW",
+          "type": "exclusive",
+          "url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l",
+          "note": "〜2026-27"
+        }
+      ],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 UEFA Europa League league phase"
+    },
+    {
+      "id": "EL_2026-09-16_Hapoel_Dinamo",
+      "competition_id": 3,
+      "competition_ja": "UEFAヨーロッパリーグ",
+      "competition_category": "european_cup",
+      "competition_flag": "🇪🇺",
+      "kickoff_jst": "2026-09-17T04:00:00+09:00",
+      "status": "FINISHED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 1,
+      "home_id": null,
+      "home_ja": "ハポエル・ベエルシェバ",
+      "home_en": "Hapoel Be'er Sheva",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "ディナモ・ザグレブ",
+      "away_en": "Dinamo Zagreb",
+      "away_crest": null,
+      "score": {
+        "home": 0,
+        "away": 0
+      },
+      "japanese_players": [],
+      "broadcasters": [
+        {
+          "name": "WOWOW",
+          "type": "exclusive",
+          "url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l",
+          "note": "〜2026-27"
+        }
+      ],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 UEFA Europa League league phase"
+    },
+    {
+      "id": "EL_2026-09-16_Olympi_Jagiel",
+      "competition_id": 3,
+      "competition_ja": "UEFAヨーロッパリーグ",
+      "competition_category": "european_cup",
+      "competition_flag": "🇪🇺",
+      "kickoff_jst": "2026-09-17T04:00:00+09:00",
+      "status": "FINISHED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 1,
+      "home_id": 654,
+      "home_ja": "オリンピアコス",
+      "home_en": "Olympiacos",
+      "home_crest": "https://crests.football-data.org/654.png",
+      "away_id": null,
+      "away_ja": "ヤギエロニア・ビャウィストク",
+      "away_en": "Jagiellonia Białystok",
+      "away_crest": null,
+      "score": {
+        "home": 2,
+        "away": 1
+      },
+      "japanese_players": [],
+      "broadcasters": [
+        {
+          "name": "WOWOW",
+          "type": "exclusive",
+          "url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l",
+          "note": "〜2026-27"
+        }
+      ],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 UEFA Europa League league phase"
+    },
+    {
+      "id": "EL_2026-09-16_Anderl_Lyon",
+      "competition_id": 3,
+      "competition_ja": "UEFAヨーロッパリーグ",
+      "competition_category": "european_cup",
+      "competition_flag": "🇪🇺",
+      "kickoff_jst": "2026-09-17T04:00:00+09:00",
+      "status": "FINISHED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 1,
+      "home_id": null,
+      "home_ja": "アンデルレヒト",
+      "home_en": "Anderlecht",
+      "home_crest": null,
+      "away_id": 523,
+      "away_ja": "リヨン",
+      "away_en": "Olympique Lyon",
+      "away_crest": "https://crests.football-data.org/523.png",
+      "score": {
+        "home": 1,
+        "away": 2
+      },
+      "japanese_players": [
+        {
+          "name_ja": "中村敬斗",
+          "position": "MF",
+          "side": "away"
+        }
+      ],
+      "broadcasters": [
+        {
+          "name": "WOWOW",
+          "type": "exclusive",
+          "url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l",
+          "note": "〜2026-27"
+        }
+      ],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 UEFA Europa League league phase"
+    },
+    {
+      "id": "EL_2026-09-16_SturmG_Rennes",
+      "competition_id": 3,
+      "competition_ja": "UEFAヨーロッパリーグ",
+      "competition_category": "european_cup",
+      "competition_flag": "🇪🇺",
+      "kickoff_jst": "2026-09-17T04:00:00+09:00",
+      "status": "FINISHED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 1,
+      "home_id": null,
+      "home_ja": "シュトゥルム・グラーツ",
+      "home_en": "Sturm Graz",
+      "home_crest": null,
+      "away_id": 529,
+      "away_ja": "レンヌ",
+      "away_en": "Stade Rennais",
+      "away_crest": "https://crests.football-data.org/529.png",
+      "score": {
+        "home": 0,
+        "away": 0
+      },
+      "japanese_players": [],
+      "broadcasters": [
+        {
+          "name": "WOWOW",
+          "type": "exclusive",
+          "url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l",
+          "note": "〜2026-27"
+        }
+      ],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 UEFA Europa League league phase"
+    },
+    {
+      "id": "EL_2026-09-16_Sunder_AZ",
+      "competition_id": 3,
+      "competition_ja": "UEFAヨーロッパリーグ",
+      "competition_category": "european_cup",
+      "competition_flag": "🇪🇺",
+      "kickoff_jst": "2026-09-17T04:00:00+09:00",
+      "status": "FINISHED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 1,
+      "home_id": 71,
+      "home_ja": "サンダーランド",
+      "home_en": "Sunderland",
+      "home_crest": "https://crests.football-data.org/71.png",
+      "away_id": 682,
+      "away_ja": "AZ",
+      "away_en": "AZ",
+      "away_crest": "https://crests.football-data.org/682.png",
+      "score": {
+        "home": 1,
+        "away": 0
+      },
+      "japanese_players": [
+        {
+          "name_ja": "毎熊晟矢",
+          "position": "DF/MF",
+          "side": "away"
+        },
+        {
+          "name_ja": "市原吏音",
+          "position": "DF",
+          "side": "away"
+        }
+      ],
+      "broadcasters": [
+        {
+          "name": "WOWOW",
+          "type": "exclusive",
+          "url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l",
+          "note": "〜2026-27"
+        }
+      ],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 UEFA Europa League league phase"
+    },
+    {
       "id": 564687,
       "competition_id": 140,
       "competition_ja": "ラ・リーガ",
@@ -29739,6 +30070,80 @@
           "note": "〜2027-28"
         }
       ]
+    },
+    {
+      "id": "EL_2026-09-17_OFI_TSGHof",
+      "competition_id": 3,
+      "competition_ja": "UEFAヨーロッパリーグ",
+      "competition_category": "european_cup",
+      "competition_flag": "🇪🇺",
+      "kickoff_jst": "2026-09-18T01:45:00+09:00",
+      "status": "FINISHED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 1,
+      "home_id": null,
+      "home_ja": "OFIクレタ",
+      "home_en": "OFI",
+      "home_crest": null,
+      "away_id": 2,
+      "away_ja": "ホッフェンハイム",
+      "away_en": "Hoffenheim",
+      "away_crest": "https://crests.football-data.org/2.png",
+      "score": {
+        "home": 2,
+        "away": 0
+      },
+      "japanese_players": [
+        {
+          "name_ja": "町田浩樹",
+          "position": "DF",
+          "side": "away"
+        }
+      ],
+      "broadcasters": [
+        {
+          "name": "WOWOW",
+          "type": "exclusive",
+          "url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l",
+          "note": "〜2026-27"
+        }
+      ],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 UEFA Europa League league phase"
+    },
+    {
+      "id": "EL_2026-09-17_Levski_RedBul",
+      "competition_id": 3,
+      "competition_ja": "UEFAヨーロッパリーグ",
+      "competition_category": "european_cup",
+      "competition_flag": "🇪🇺",
+      "kickoff_jst": "2026-09-18T01:45:00+09:00",
+      "status": "FINISHED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 1,
+      "home_id": null,
+      "home_ja": "レフスキ・ソフィア",
+      "home_en": "Levski Sofia",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "ザルツブルク",
+      "away_en": "Red Bull Salzburg",
+      "away_crest": null,
+      "score": {
+        "home": 0,
+        "away": 1
+      },
+      "japanese_players": [],
+      "broadcasters": [
+        {
+          "name": "WOWOW",
+          "type": "exclusive",
+          "url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l",
+          "note": "〜2026-27"
+        }
+      ],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 UEFA Europa League league phase"
     },
     {
       "id": 564686,
@@ -29785,6 +30190,267 @@
           "yt_published": "2026-09-17"
         }
       ]
+    },
+    {
+      "id": "EL_2026-09-17_Beikta_Marsei",
+      "competition_id": 3,
+      "competition_ja": "UEFAヨーロッパリーグ",
+      "competition_category": "european_cup",
+      "competition_flag": "🇪🇺",
+      "kickoff_jst": "2026-09-18T04:00:00+09:00",
+      "status": "FINISHED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 1,
+      "home_id": null,
+      "home_ja": "ベシクタシュ",
+      "home_en": "Beşiktaş",
+      "home_crest": null,
+      "away_id": 516,
+      "away_ja": "マルセイユ",
+      "away_en": "Marseille",
+      "away_crest": "https://crests.football-data.org/516.png",
+      "score": {
+        "home": 4,
+        "away": 1
+      },
+      "japanese_players": [],
+      "broadcasters": [
+        {
+          "name": "WOWOW",
+          "type": "exclusive",
+          "url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l",
+          "note": "〜2026-27"
+        }
+      ],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 UEFA Europa League league phase"
+    },
+    {
+      "id": "EL_2026-09-17_Celtic_Ferenc",
+      "competition_id": 3,
+      "competition_ja": "UEFAヨーロッパリーグ",
+      "competition_category": "european_cup",
+      "competition_flag": "🇪🇺",
+      "kickoff_jst": "2026-09-18T04:00:00+09:00",
+      "status": "FINISHED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 1,
+      "home_id": null,
+      "home_ja": "セルティック",
+      "home_en": "Celtic",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "フェレンツヴァーロシュ",
+      "away_en": "Ferencváros",
+      "away_crest": null,
+      "score": {
+        "home": 1,
+        "away": 3
+      },
+      "japanese_players": [],
+      "broadcasters": [
+        {
+          "name": "WOWOW",
+          "type": "exclusive",
+          "url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l",
+          "note": "〜2026-27"
+        }
+      ],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 UEFA Europa League league phase"
+    },
+    {
+      "id": "EL_2026-09-17_Crysta_LechPo",
+      "competition_id": 3,
+      "competition_ja": "UEFAヨーロッパリーグ",
+      "competition_category": "european_cup",
+      "competition_flag": "🇪🇺",
+      "kickoff_jst": "2026-09-18T04:00:00+09:00",
+      "status": "FINISHED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 1,
+      "home_id": 354,
+      "home_ja": "クリスタル・パレス",
+      "home_en": "Crystal Palace",
+      "home_crest": "https://crests.football-data.org/354.png",
+      "away_id": null,
+      "away_ja": "レフ・ポズナン",
+      "away_en": "Lech Poznań",
+      "away_crest": null,
+      "score": {
+        "home": 4,
+        "away": 0
+      },
+      "japanese_players": [
+        {
+          "name_ja": "鎌田大地",
+          "position": "MF",
+          "side": "home"
+        },
+        {
+          "name_ja": "冨安健洋",
+          "position": "DF",
+          "side": "home"
+        }
+      ],
+      "broadcasters": [
+        {
+          "name": "WOWOW",
+          "type": "exclusive",
+          "url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l",
+          "note": "〜2026-27"
+        }
+      ],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 UEFA Europa League league phase"
+    },
+    {
+      "id": "EL_2026-09-17_Viktor_UnionS",
+      "competition_id": 3,
+      "competition_ja": "UEFAヨーロッパリーグ",
+      "competition_category": "european_cup",
+      "competition_flag": "🇪🇺",
+      "kickoff_jst": "2026-09-18T04:00:00+09:00",
+      "status": "FINISHED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 1,
+      "home_id": null,
+      "home_ja": "ヴィクトリア・プルゼニ",
+      "home_en": "Viktoria Plzeň",
+      "home_crest": null,
+      "away_id": 3929,
+      "away_ja": "ユニオン・サンジロワーズ",
+      "away_en": "Union Saint-Gilloise",
+      "away_crest": "https://crests.football-data.org/3929.png",
+      "score": {
+        "home": 0,
+        "away": 3
+      },
+      "japanese_players": [
+        {
+          "name_ja": "ハーフナー・ニッキ",
+          "position": "DF",
+          "side": "away"
+        }
+      ],
+      "broadcasters": [
+        {
+          "name": "WOWOW",
+          "type": "exclusive",
+          "url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l",
+          "note": "〜2026-27"
+        }
+      ],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 UEFA Europa League league phase"
+    },
+    {
+      "id": "EL_2026-09-17_Juvent_NEC",
+      "competition_id": 3,
+      "competition_ja": "UEFAヨーロッパリーグ",
+      "competition_category": "european_cup",
+      "competition_flag": "🇪🇺",
+      "kickoff_jst": "2026-09-18T04:00:00+09:00",
+      "status": "FINISHED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 1,
+      "home_id": 109,
+      "home_ja": "ユヴェントス",
+      "home_en": "Juventus",
+      "home_crest": "https://crests.football-data.org/109.png",
+      "away_id": 1915,
+      "away_ja": "NEC",
+      "away_en": "NEC",
+      "away_crest": "https://crests.football-data.org/1915.png",
+      "score": {
+        "home": 5,
+        "away": 0
+      },
+      "japanese_players": [],
+      "broadcasters": [
+        {
+          "name": "WOWOW",
+          "type": "exclusive",
+          "url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l",
+          "note": "〜2026-27"
+        }
+      ],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 UEFA Europa League league phase"
+    },
+    {
+      "id": "EL_2026-09-17_Lilles_Torree",
+      "competition_id": 3,
+      "competition_ja": "UEFAヨーロッパリーグ",
+      "competition_category": "european_cup",
+      "competition_flag": "🇪🇺",
+      "kickoff_jst": "2026-09-18T04:00:00+09:00",
+      "status": "FINISHED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 1,
+      "home_id": null,
+      "home_ja": "リレストレム",
+      "home_en": "Lillestrøm",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "トレエンセ",
+      "away_en": "Torreense",
+      "away_crest": null,
+      "score": {
+        "home": 1,
+        "away": 2
+      },
+      "japanese_players": [],
+      "broadcasters": [
+        {
+          "name": "WOWOW",
+          "type": "exclusive",
+          "url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l",
+          "note": "〜2026-27"
+        }
+      ],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 UEFA Europa League league phase"
+    },
+    {
+      "id": "EL_2026-09-17_RealSo_Bourne",
+      "competition_id": 3,
+      "competition_ja": "UEFAヨーロッパリーグ",
+      "competition_category": "european_cup",
+      "competition_flag": "🇪🇺",
+      "kickoff_jst": "2026-09-18T04:00:00+09:00",
+      "status": "FINISHED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 1,
+      "home_id": 92,
+      "home_ja": "レアル・ソシエダ",
+      "home_en": "Real Sociedad",
+      "home_crest": "https://crests.football-data.org/92.png",
+      "away_id": 1044,
+      "away_ja": "ボーンマス",
+      "away_en": "Bournemouth",
+      "away_crest": "https://crests.football-data.org/1044.png",
+      "score": {
+        "home": 1,
+        "away": 2
+      },
+      "japanese_players": [
+        {
+          "name_ja": "久保建英",
+          "position": "MF/FW",
+          "side": "home"
+        }
+      ],
+      "broadcasters": [
+        {
+          "name": "WOWOW",
+          "type": "exclusive",
+          "url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l",
+          "note": "〜2026-27"
+        }
+      ],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 UEFA Europa League league phase"
     },
     {
       "id": 564683,
@@ -37052,6 +37718,662 @@
       ]
     },
     {
+      "id": "EL_2026-10-15_Sparta_Lilles",
+      "competition_id": 3,
+      "competition_ja": "UEFAヨーロッパリーグ",
+      "competition_category": "european_cup",
+      "competition_flag": "🇪🇺",
+      "kickoff_jst": "2026-10-16T01:45:00+09:00",
+      "status": "FINISHED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 2,
+      "home_id": null,
+      "home_ja": "スパルタ・プラハ",
+      "home_en": "Sparta Prague",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "リレストレム",
+      "away_en": "Lillestrøm",
+      "away_crest": null,
+      "score": {
+        "home": 1,
+        "away": 1
+      },
+      "japanese_players": [],
+      "broadcasters": [
+        {
+          "name": "WOWOW",
+          "type": "exclusive",
+          "url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l",
+          "note": "〜2026-27"
+        }
+      ],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 UEFA Europa League league phase"
+    },
+    {
+      "id": "EL_2026-10-15_AZ_Hapoel",
+      "competition_id": 3,
+      "competition_ja": "UEFAヨーロッパリーグ",
+      "competition_category": "european_cup",
+      "competition_flag": "🇪🇺",
+      "kickoff_jst": "2026-10-16T01:45:00+09:00",
+      "status": "FINISHED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 2,
+      "home_id": 682,
+      "home_ja": "AZ",
+      "home_en": "AZ",
+      "home_crest": "https://crests.football-data.org/682.png",
+      "away_id": null,
+      "away_ja": "ハポエル・ベエルシェバ",
+      "away_en": "Hapoel Be'er Sheva",
+      "away_crest": null,
+      "score": {
+        "home": 2,
+        "away": 1
+      },
+      "japanese_players": [
+        {
+          "name_ja": "毎熊晟矢",
+          "position": "DF/MF",
+          "side": "home"
+        },
+        {
+          "name_ja": "市原吏音",
+          "position": "DF",
+          "side": "home"
+        }
+      ],
+      "broadcasters": [
+        {
+          "name": "WOWOW",
+          "type": "exclusive",
+          "url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l",
+          "note": "〜2026-27"
+        }
+      ],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 UEFA Europa League league phase"
+    },
+    {
+      "id": "EL_2026-10-15_RedBul_Milan",
+      "competition_id": 3,
+      "competition_ja": "UEFAヨーロッパリーグ",
+      "competition_category": "european_cup",
+      "competition_flag": "🇪🇺",
+      "kickoff_jst": "2026-10-16T01:45:00+09:00",
+      "status": "FINISHED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 2,
+      "home_id": null,
+      "home_ja": "ザルツブルク",
+      "home_en": "Red Bull Salzburg",
+      "home_crest": null,
+      "away_id": 98,
+      "away_ja": "ミラン",
+      "away_en": "Milan",
+      "away_crest": "https://crests.football-data.org/98.png",
+      "score": {
+        "home": 0,
+        "away": 4
+      },
+      "japanese_players": [],
+      "broadcasters": [
+        {
+          "name": "WOWOW",
+          "type": "exclusive",
+          "url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l",
+          "note": "〜2026-27"
+        }
+      ],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 UEFA Europa League league phase"
+    },
+    {
+      "id": "EL_2026-10-15_LechPo_BayerL",
+      "competition_id": 3,
+      "competition_ja": "UEFAヨーロッパリーグ",
+      "competition_category": "european_cup",
+      "competition_flag": "🇪🇺",
+      "kickoff_jst": "2026-10-16T01:45:00+09:00",
+      "status": "FINISHED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 2,
+      "home_id": null,
+      "home_ja": "レフ・ポズナン",
+      "home_en": "Lech Poznań",
+      "home_crest": null,
+      "away_id": 3,
+      "away_ja": "レバークーゼン",
+      "away_en": "Leverkusen",
+      "away_crest": "https://crests.football-data.org/3.png",
+      "score": {
+        "home": 0,
+        "away": 4
+      },
+      "japanese_players": [],
+      "broadcasters": [
+        {
+          "name": "WOWOW",
+          "type": "exclusive",
+          "url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l",
+          "note": "〜2026-27"
+        }
+      ],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 UEFA Europa League league phase"
+    },
+    {
+      "id": "EL_2026-10-15_Celje_Omonia",
+      "competition_id": 3,
+      "competition_ja": "UEFAヨーロッパリーグ",
+      "competition_category": "european_cup",
+      "competition_flag": "🇪🇺",
+      "kickoff_jst": "2026-10-16T01:45:00+09:00",
+      "status": "FINISHED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 2,
+      "home_id": null,
+      "home_ja": "ツェリェ",
+      "home_en": "Celje",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "オモニア",
+      "away_en": "Omonia",
+      "away_crest": null,
+      "score": {
+        "home": 0,
+        "away": 3
+      },
+      "japanese_players": [],
+      "broadcasters": [
+        {
+          "name": "WOWOW",
+          "type": "exclusive",
+          "url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l",
+          "note": "〜2026-27"
+        }
+      ],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 UEFA Europa League league phase"
+    },
+    {
+      "id": "EL_2026-10-15_Lyon_Crysta",
+      "competition_id": 3,
+      "competition_ja": "UEFAヨーロッパリーグ",
+      "competition_category": "european_cup",
+      "competition_flag": "🇪🇺",
+      "kickoff_jst": "2026-10-16T01:45:00+09:00",
+      "status": "FINISHED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 2,
+      "home_id": 523,
+      "home_ja": "リヨン",
+      "home_en": "Olympique Lyon",
+      "home_crest": "https://crests.football-data.org/523.png",
+      "away_id": 354,
+      "away_ja": "クリスタル・パレス",
+      "away_en": "Crystal Palace",
+      "away_crest": "https://crests.football-data.org/354.png",
+      "score": {
+        "home": 3,
+        "away": 2
+      },
+      "japanese_players": [
+        {
+          "name_ja": "中村敬斗",
+          "position": "MF",
+          "side": "home"
+        },
+        {
+          "name_ja": "鎌田大地",
+          "position": "MF",
+          "side": "away"
+        },
+        {
+          "name_ja": "冨安健洋",
+          "position": "DF",
+          "side": "away"
+        }
+      ],
+      "broadcasters": [
+        {
+          "name": "WOWOW",
+          "type": "exclusive",
+          "url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l",
+          "note": "〜2026-27"
+        }
+      ],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 UEFA Europa League league phase"
+    },
+    {
+      "id": "EL_2026-10-15_UnionS_RealSo",
+      "competition_id": 3,
+      "competition_ja": "UEFAヨーロッパリーグ",
+      "competition_category": "european_cup",
+      "competition_flag": "🇪🇺",
+      "kickoff_jst": "2026-10-16T01:45:00+09:00",
+      "status": "FINISHED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 2,
+      "home_id": 3929,
+      "home_ja": "ユニオン・サンジロワーズ",
+      "home_en": "Union Saint-Gilloise",
+      "home_crest": "https://crests.football-data.org/3929.png",
+      "away_id": 92,
+      "away_ja": "レアル・ソシエダ",
+      "away_en": "Real Sociedad",
+      "away_crest": "https://crests.football-data.org/92.png",
+      "score": {
+        "home": 1,
+        "away": 1
+      },
+      "japanese_players": [
+        {
+          "name_ja": "ハーフナー・ニッキ",
+          "position": "DF",
+          "side": "home"
+        },
+        {
+          "name_ja": "久保建英",
+          "position": "MF/FW",
+          "side": "away"
+        }
+      ],
+      "broadcasters": [
+        {
+          "name": "WOWOW",
+          "type": "exclusive",
+          "url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l",
+          "note": "〜2026-27"
+        }
+      ],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 UEFA Europa League league phase"
+    },
+    {
+      "id": "EL_2026-10-15_Torree_Sunder",
+      "competition_id": 3,
+      "competition_ja": "UEFAヨーロッパリーグ",
+      "competition_category": "european_cup",
+      "competition_flag": "🇪🇺",
+      "kickoff_jst": "2026-10-16T01:45:00+09:00",
+      "status": "FINISHED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 2,
+      "home_id": null,
+      "home_ja": "トレエンセ",
+      "home_en": "Torreense",
+      "home_crest": null,
+      "away_id": 71,
+      "away_ja": "サンダーランド",
+      "away_en": "Sunderland",
+      "away_crest": "https://crests.football-data.org/71.png",
+      "score": {
+        "home": 1,
+        "away": 2
+      },
+      "japanese_players": [],
+      "broadcasters": [
+        {
+          "name": "WOWOW",
+          "type": "exclusive",
+          "url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l",
+          "note": "〜2026-27"
+        }
+      ],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 UEFA Europa League league phase"
+    },
+    {
+      "id": "EL_2026-10-15_Bourne_SturmG",
+      "competition_id": 3,
+      "competition_ja": "UEFAヨーロッパリーグ",
+      "competition_category": "european_cup",
+      "competition_flag": "🇪🇺",
+      "kickoff_jst": "2026-10-16T04:00:00+09:00",
+      "status": "FINISHED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 2,
+      "home_id": 1044,
+      "home_ja": "ボーンマス",
+      "home_en": "Bournemouth",
+      "home_crest": "https://crests.football-data.org/1044.png",
+      "away_id": null,
+      "away_ja": "シュトゥルム・グラーツ",
+      "away_en": "Sturm Graz",
+      "away_crest": null,
+      "score": {
+        "home": 3,
+        "away": 0
+      },
+      "japanese_players": [],
+      "broadcasters": [
+        {
+          "name": "WOWOW",
+          "type": "exclusive",
+          "url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l",
+          "note": "〜2026-27"
+        }
+      ],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 UEFA Europa League league phase"
+    },
+    {
+      "id": "EL_2026-10-15_Ferenc_Viktor",
+      "competition_id": 3,
+      "competition_ja": "UEFAヨーロッパリーグ",
+      "competition_category": "european_cup",
+      "competition_flag": "🇪🇺",
+      "kickoff_jst": "2026-10-16T04:00:00+09:00",
+      "status": "FINISHED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 2,
+      "home_id": null,
+      "home_ja": "フェレンツヴァーロシュ",
+      "home_en": "Ferencváros",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "ヴィクトリア・プルゼニ",
+      "away_en": "Viktoria Plzeň",
+      "away_crest": null,
+      "score": {
+        "home": 2,
+        "away": 1
+      },
+      "japanese_players": [],
+      "broadcasters": [
+        {
+          "name": "WOWOW",
+          "type": "exclusive",
+          "url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l",
+          "note": "〜2026-27"
+        }
+      ],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 UEFA Europa League league phase"
+    },
+    {
+      "id": "EL_2026-10-15_Dinamo_Anderl",
+      "competition_id": 3,
+      "competition_ja": "UEFAヨーロッパリーグ",
+      "competition_category": "european_cup",
+      "competition_flag": "🇪🇺",
+      "kickoff_jst": "2026-10-16T04:00:00+09:00",
+      "status": "FINISHED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 2,
+      "home_id": null,
+      "home_ja": "ディナモ・ザグレブ",
+      "home_en": "Dinamo Zagreb",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "アンデルレヒト",
+      "away_en": "Anderlecht",
+      "away_crest": null,
+      "score": {
+        "home": 1,
+        "away": 0
+      },
+      "japanese_players": [],
+      "broadcasters": [
+        {
+          "name": "WOWOW",
+          "type": "exclusive",
+          "url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l",
+          "note": "〜2026-27"
+        }
+      ],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 UEFA Europa League league phase"
+    },
+    {
+      "id": "EL_2026-10-15_Jagiel_Ararat",
+      "competition_id": 3,
+      "competition_ja": "UEFAヨーロッパリーグ",
+      "competition_category": "european_cup",
+      "competition_flag": "🇪🇺",
+      "kickoff_jst": "2026-10-16T04:00:00+09:00",
+      "status": "FINISHED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 2,
+      "home_id": null,
+      "home_ja": "ヤギエロニア・ビャウィストク",
+      "home_en": "Jagiellonia Białystok",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "アララト・アルメニア",
+      "away_en": "Ararat-Armenia",
+      "away_crest": null,
+      "score": {
+        "home": 3,
+        "away": 1
+      },
+      "japanese_players": [],
+      "broadcasters": [
+        {
+          "name": "WOWOW",
+          "type": "exclusive",
+          "url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l",
+          "note": "〜2026-27"
+        }
+      ],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 UEFA Europa League league phase"
+    },
+    {
+      "id": "EL_2026-10-15_NEC_Levski",
+      "competition_id": 3,
+      "competition_ja": "UEFAヨーロッパリーグ",
+      "competition_category": "european_cup",
+      "competition_flag": "🇪🇺",
+      "kickoff_jst": "2026-10-16T04:00:00+09:00",
+      "status": "FINISHED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 2,
+      "home_id": 1915,
+      "home_ja": "NEC",
+      "home_en": "NEC",
+      "home_crest": "https://crests.football-data.org/1915.png",
+      "away_id": null,
+      "away_ja": "レフスキ・ソフィア",
+      "away_en": "Levski Sofia",
+      "away_crest": null,
+      "score": {
+        "home": 1,
+        "away": 1
+      },
+      "japanese_players": [],
+      "broadcasters": [
+        {
+          "name": "WOWOW",
+          "type": "exclusive",
+          "url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l",
+          "note": "〜2026-27"
+        }
+      ],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 UEFA Europa League league phase"
+    },
+    {
+      "id": "EL_2026-10-15_Marsei_Olympi",
+      "competition_id": 3,
+      "competition_ja": "UEFAヨーロッパリーグ",
+      "competition_category": "european_cup",
+      "competition_flag": "🇪🇺",
+      "kickoff_jst": "2026-10-16T04:00:00+09:00",
+      "status": "FINISHED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 2,
+      "home_id": 516,
+      "home_ja": "マルセイユ",
+      "home_en": "Marseille",
+      "home_crest": "https://crests.football-data.org/516.png",
+      "away_id": 654,
+      "away_ja": "オリンピアコス",
+      "away_en": "Olympiacos",
+      "away_crest": "https://crests.football-data.org/654.png",
+      "score": {
+        "home": 0,
+        "away": 1
+      },
+      "japanese_players": [],
+      "broadcasters": [
+        {
+          "name": "WOWOW",
+          "type": "exclusive",
+          "url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l",
+          "note": "〜2026-27"
+        }
+      ],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 UEFA Europa League league phase"
+    },
+    {
+      "id": "EL_2026-10-15_CeltaV_Juvent",
+      "competition_id": 3,
+      "competition_ja": "UEFAヨーロッパリーグ",
+      "competition_category": "european_cup",
+      "competition_flag": "🇪🇺",
+      "kickoff_jst": "2026-10-16T04:00:00+09:00",
+      "status": "FINISHED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 2,
+      "home_id": 558,
+      "home_ja": "セルタ",
+      "home_en": "Celta",
+      "home_crest": "https://crests.football-data.org/558.png",
+      "away_id": 109,
+      "away_ja": "ユヴェントス",
+      "away_en": "Juventus",
+      "away_crest": "https://crests.football-data.org/109.png",
+      "score": {
+        "home": 1,
+        "away": 2
+      },
+      "japanese_players": [],
+      "broadcasters": [
+        {
+          "name": "WOWOW",
+          "type": "exclusive",
+          "url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l",
+          "note": "〜2026-27"
+        }
+      ],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 UEFA Europa League league phase"
+    },
+    {
+      "id": "EL_2026-10-15_Benfic_Celtic",
+      "competition_id": 3,
+      "competition_ja": "UEFAヨーロッパリーグ",
+      "competition_category": "european_cup",
+      "competition_flag": "🇪🇺",
+      "kickoff_jst": "2026-10-16T04:00:00+09:00",
+      "status": "FINISHED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 2,
+      "home_id": 1903,
+      "home_ja": "ベンフィカ",
+      "home_en": "SL Benfica",
+      "home_crest": "https://crests.football-data.org/1903.png",
+      "away_id": null,
+      "away_ja": "セルティック",
+      "away_en": "Celtic",
+      "away_crest": null,
+      "score": {
+        "home": 4,
+        "away": 1
+      },
+      "japanese_players": [],
+      "broadcasters": [
+        {
+          "name": "WOWOW",
+          "type": "exclusive",
+          "url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l",
+          "note": "〜2026-27"
+        }
+      ],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 UEFA Europa League league phase"
+    },
+    {
+      "id": "EL_2026-10-15_Rennes_OFI",
+      "competition_id": 3,
+      "competition_ja": "UEFAヨーロッパリーグ",
+      "competition_category": "european_cup",
+      "competition_flag": "🇪🇺",
+      "kickoff_jst": "2026-10-16T04:00:00+09:00",
+      "status": "FINISHED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 2,
+      "home_id": 529,
+      "home_ja": "レンヌ",
+      "home_en": "Stade Rennais",
+      "home_crest": "https://crests.football-data.org/529.png",
+      "away_id": null,
+      "away_ja": "OFIクレタ",
+      "away_en": "OFI",
+      "away_crest": null,
+      "score": {
+        "home": 2,
+        "away": 1
+      },
+      "japanese_players": [],
+      "broadcasters": [
+        {
+          "name": "WOWOW",
+          "type": "exclusive",
+          "url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l",
+          "note": "〜2026-27"
+        }
+      ],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 UEFA Europa League league phase"
+    },
+    {
+      "id": "EL_2026-10-15_TSGHof_Beikta",
+      "competition_id": 3,
+      "competition_ja": "UEFAヨーロッパリーグ",
+      "competition_category": "european_cup",
+      "competition_flag": "🇪🇺",
+      "kickoff_jst": "2026-10-16T04:00:00+09:00",
+      "status": "FINISHED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 2,
+      "home_id": 2,
+      "home_ja": "ホッフェンハイム",
+      "home_en": "Hoffenheim",
+      "home_crest": "https://crests.football-data.org/2.png",
+      "away_id": null,
+      "away_ja": "ベシクタシュ",
+      "away_en": "Beşiktaş",
+      "away_crest": null,
+      "score": {
+        "home": 2,
+        "away": 3
+      },
+      "japanese_players": [
+        {
+          "name_ja": "町田浩樹",
+          "position": "DF",
+          "side": "home"
+        }
+      ],
+      "broadcasters": [
+        {
+          "name": "WOWOW",
+          "type": "exclusive",
+          "url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l",
+          "note": "〜2026-27"
+        }
+      ],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 UEFA Europa League league phase"
+    },
+    {
       "id": 558872,
       "competition_id": 88,
       "competition_ja": "エールディビジ",
@@ -40656,6 +41978,609 @@
           "note": "厳選30試合ディレイ"
         }
       ]
+    },
+    {
+      "id": "EL_2026-10-22_Ararat_AZ",
+      "competition_id": 3,
+      "competition_ja": "UEFAヨーロッパリーグ",
+      "competition_category": "european_cup",
+      "competition_flag": "🇪🇺",
+      "kickoff_jst": "2026-10-23T01:45:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 3,
+      "home_id": null,
+      "home_ja": "アララト・アルメニア",
+      "home_en": "Ararat-Armenia",
+      "home_crest": null,
+      "away_id": 682,
+      "away_ja": "AZ",
+      "away_en": "AZ",
+      "away_crest": "https://crests.football-data.org/682.png",
+      "score": null,
+      "japanese_players": [
+        {
+          "name_ja": "毎熊晟矢",
+          "position": "DF/MF",
+          "side": "away"
+        },
+        {
+          "name_ja": "市原吏音",
+          "position": "DF",
+          "side": "away"
+        }
+      ],
+      "broadcasters": [
+        {
+          "name": "WOWOW",
+          "type": "exclusive",
+          "url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l",
+          "note": "〜2026-27"
+        }
+      ],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 UEFA Europa League league phase"
+    },
+    {
+      "id": "EL_2026-10-22_Ferenc_Torree",
+      "competition_id": 3,
+      "competition_ja": "UEFAヨーロッパリーグ",
+      "competition_category": "european_cup",
+      "competition_flag": "🇪🇺",
+      "kickoff_jst": "2026-10-23T01:45:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 3,
+      "home_id": null,
+      "home_ja": "フェレンツヴァーロシュ",
+      "home_en": "Ferencváros",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "トレエンセ",
+      "away_en": "Torreense",
+      "away_crest": null,
+      "score": null,
+      "japanese_players": [],
+      "broadcasters": [
+        {
+          "name": "WOWOW",
+          "type": "exclusive",
+          "url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l",
+          "note": "〜2026-27"
+        }
+      ],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 UEFA Europa League league phase"
+    },
+    {
+      "id": "EL_2026-10-22_Dinamo_NEC",
+      "competition_id": 3,
+      "competition_ja": "UEFAヨーロッパリーグ",
+      "competition_category": "european_cup",
+      "competition_flag": "🇪🇺",
+      "kickoff_jst": "2026-10-23T01:45:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 3,
+      "home_id": null,
+      "home_ja": "ディナモ・ザグレブ",
+      "home_en": "Dinamo Zagreb",
+      "home_crest": null,
+      "away_id": 1915,
+      "away_ja": "NEC",
+      "away_en": "NEC",
+      "away_crest": "https://crests.football-data.org/1915.png",
+      "score": null,
+      "japanese_players": [],
+      "broadcasters": [
+        {
+          "name": "WOWOW",
+          "type": "exclusive",
+          "url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l",
+          "note": "〜2026-27"
+        }
+      ],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 UEFA Europa League league phase"
+    },
+    {
+      "id": "EL_2026-10-22_Juvent_Rennes",
+      "competition_id": 3,
+      "competition_ja": "UEFAヨーロッパリーグ",
+      "competition_category": "european_cup",
+      "competition_flag": "🇪🇺",
+      "kickoff_jst": "2026-10-23T01:45:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 3,
+      "home_id": 109,
+      "home_ja": "ユヴェントス",
+      "home_en": "Juventus",
+      "home_crest": "https://crests.football-data.org/109.png",
+      "away_id": 529,
+      "away_ja": "レンヌ",
+      "away_en": "Stade Rennais",
+      "away_crest": "https://crests.football-data.org/529.png",
+      "score": null,
+      "japanese_players": [],
+      "broadcasters": [
+        {
+          "name": "WOWOW",
+          "type": "exclusive",
+          "url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l",
+          "note": "〜2026-27"
+        }
+      ],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 UEFA Europa League league phase"
+    },
+    {
+      "id": "EL_2026-10-22_LechPo_Sunder",
+      "competition_id": 3,
+      "competition_ja": "UEFAヨーロッパリーグ",
+      "competition_category": "european_cup",
+      "competition_flag": "🇪🇺",
+      "kickoff_jst": "2026-10-23T01:45:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 3,
+      "home_id": null,
+      "home_ja": "レフ・ポズナン",
+      "home_en": "Lech Poznań",
+      "home_crest": null,
+      "away_id": 71,
+      "away_ja": "サンダーランド",
+      "away_en": "Sunderland",
+      "away_crest": "https://crests.football-data.org/71.png",
+      "score": null,
+      "japanese_players": [],
+      "broadcasters": [
+        {
+          "name": "WOWOW",
+          "type": "exclusive",
+          "url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l",
+          "note": "〜2026-27"
+        }
+      ],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 UEFA Europa League league phase"
+    },
+    {
+      "id": "EL_2026-10-22_OFI_BayerL",
+      "competition_id": 3,
+      "competition_ja": "UEFAヨーロッパリーグ",
+      "competition_category": "european_cup",
+      "competition_flag": "🇪🇺",
+      "kickoff_jst": "2026-10-23T01:45:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 3,
+      "home_id": null,
+      "home_ja": "OFIクレタ",
+      "home_en": "OFI",
+      "home_crest": null,
+      "away_id": 3,
+      "away_ja": "レバークーゼン",
+      "away_en": "Leverkusen",
+      "away_crest": "https://crests.football-data.org/3.png",
+      "score": null,
+      "japanese_players": [],
+      "broadcasters": [
+        {
+          "name": "WOWOW",
+          "type": "exclusive",
+          "url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l",
+          "note": "〜2026-27"
+        }
+      ],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 UEFA Europa League league phase"
+    },
+    {
+      "id": "EL_2026-10-22_UnionS_Hapoel",
+      "competition_id": 3,
+      "competition_ja": "UEFAヨーロッパリーグ",
+      "competition_category": "european_cup",
+      "competition_flag": "🇪🇺",
+      "kickoff_jst": "2026-10-23T01:45:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 3,
+      "home_id": 3929,
+      "home_ja": "ユニオン・サンジロワーズ",
+      "home_en": "Union Saint-Gilloise",
+      "home_crest": "https://crests.football-data.org/3929.png",
+      "away_id": null,
+      "away_ja": "ハポエル・ベエルシェバ",
+      "away_en": "Hapoel Be'er Sheva",
+      "away_crest": null,
+      "score": null,
+      "japanese_players": [
+        {
+          "name_ja": "ハーフナー・ニッキ",
+          "position": "DF",
+          "side": "home"
+        }
+      ],
+      "broadcasters": [
+        {
+          "name": "WOWOW",
+          "type": "exclusive",
+          "url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l",
+          "note": "〜2026-27"
+        }
+      ],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 UEFA Europa League league phase"
+    },
+    {
+      "id": "EL_2026-10-22_SturmG_Marsei",
+      "competition_id": 3,
+      "competition_ja": "UEFAヨーロッパリーグ",
+      "competition_category": "european_cup",
+      "competition_flag": "🇪🇺",
+      "kickoff_jst": "2026-10-23T01:45:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 3,
+      "home_id": null,
+      "home_ja": "シュトゥルム・グラーツ",
+      "home_en": "Sturm Graz",
+      "home_crest": null,
+      "away_id": 516,
+      "away_ja": "マルセイユ",
+      "away_en": "Marseille",
+      "away_crest": "https://crests.football-data.org/516.png",
+      "score": null,
+      "japanese_players": [],
+      "broadcasters": [
+        {
+          "name": "WOWOW",
+          "type": "exclusive",
+          "url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l",
+          "note": "〜2026-27"
+        }
+      ],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 UEFA Europa League league phase"
+    },
+    {
+      "id": "EL_2026-10-22_Bourne_Milan",
+      "competition_id": 3,
+      "competition_ja": "UEFAヨーロッパリーグ",
+      "competition_category": "european_cup",
+      "competition_flag": "🇪🇺",
+      "kickoff_jst": "2026-10-23T04:00:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 3,
+      "home_id": 1044,
+      "home_ja": "ボーンマス",
+      "home_en": "Bournemouth",
+      "home_crest": "https://crests.football-data.org/1044.png",
+      "away_id": 98,
+      "away_ja": "ミラン",
+      "away_en": "Milan",
+      "away_crest": "https://crests.football-data.org/98.png",
+      "score": null,
+      "japanese_players": [],
+      "broadcasters": [
+        {
+          "name": "WOWOW",
+          "type": "exclusive",
+          "url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l",
+          "note": "〜2026-27"
+        }
+      ],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 UEFA Europa League league phase"
+    },
+    {
+      "id": "EL_2026-10-22_Beikta_Crysta",
+      "competition_id": 3,
+      "competition_ja": "UEFAヨーロッパリーグ",
+      "competition_category": "european_cup",
+      "competition_flag": "🇪🇺",
+      "kickoff_jst": "2026-10-23T04:00:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 3,
+      "home_id": null,
+      "home_ja": "ベシクタシュ",
+      "home_en": "Beşiktaş",
+      "home_crest": null,
+      "away_id": 354,
+      "away_ja": "クリスタル・パレス",
+      "away_en": "Crystal Palace",
+      "away_crest": "https://crests.football-data.org/354.png",
+      "score": null,
+      "japanese_players": [
+        {
+          "name_ja": "鎌田大地",
+          "position": "MF",
+          "side": "away"
+        },
+        {
+          "name_ja": "冨安健洋",
+          "position": "DF",
+          "side": "away"
+        }
+      ],
+      "broadcasters": [
+        {
+          "name": "WOWOW",
+          "type": "exclusive",
+          "url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l",
+          "note": "〜2026-27"
+        }
+      ],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 UEFA Europa League league phase"
+    },
+    {
+      "id": "EL_2026-10-22_Celtic_CeltaV",
+      "competition_id": 3,
+      "competition_ja": "UEFAヨーロッパリーグ",
+      "competition_category": "european_cup",
+      "competition_flag": "🇪🇺",
+      "kickoff_jst": "2026-10-23T04:00:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 3,
+      "home_id": null,
+      "home_ja": "セルティック",
+      "home_en": "Celtic",
+      "home_crest": null,
+      "away_id": 558,
+      "away_ja": "セルタ",
+      "away_en": "Celta",
+      "away_crest": "https://crests.football-data.org/558.png",
+      "score": null,
+      "japanese_players": [],
+      "broadcasters": [
+        {
+          "name": "WOWOW",
+          "type": "exclusive",
+          "url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l",
+          "note": "〜2026-27"
+        }
+      ],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 UEFA Europa League league phase"
+    },
+    {
+      "id": "EL_2026-10-22_Viktor_Levski",
+      "competition_id": 3,
+      "competition_ja": "UEFAヨーロッパリーグ",
+      "competition_category": "european_cup",
+      "competition_flag": "🇪🇺",
+      "kickoff_jst": "2026-10-23T04:00:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 3,
+      "home_id": null,
+      "home_ja": "ヴィクトリア・プルゼニ",
+      "home_en": "Viktoria Plzeň",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "レフスキ・ソフィア",
+      "away_en": "Levski Sofia",
+      "away_crest": null,
+      "score": null,
+      "japanese_players": [],
+      "broadcasters": [
+        {
+          "name": "WOWOW",
+          "type": "exclusive",
+          "url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l",
+          "note": "〜2026-27"
+        }
+      ],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 UEFA Europa League league phase"
+    },
+    {
+      "id": "EL_2026-10-22_Jagiel_Anderl",
+      "competition_id": 3,
+      "competition_ja": "UEFAヨーロッパリーグ",
+      "competition_category": "european_cup",
+      "competition_flag": "🇪🇺",
+      "kickoff_jst": "2026-10-23T04:00:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 3,
+      "home_id": null,
+      "home_ja": "ヤギエロニア・ビャウィストク",
+      "home_en": "Jagiellonia Białystok",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "アンデルレヒト",
+      "away_en": "Anderlecht",
+      "away_crest": null,
+      "score": null,
+      "japanese_players": [],
+      "broadcasters": [
+        {
+          "name": "WOWOW",
+          "type": "exclusive",
+          "url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l",
+          "note": "〜2026-27"
+        }
+      ],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 UEFA Europa League league phase"
+    },
+    {
+      "id": "EL_2026-10-22_Lilles_RealSo",
+      "competition_id": 3,
+      "competition_ja": "UEFAヨーロッパリーグ",
+      "competition_category": "european_cup",
+      "competition_flag": "🇪🇺",
+      "kickoff_jst": "2026-10-23T04:00:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 3,
+      "home_id": null,
+      "home_ja": "リレストレム",
+      "home_en": "Lillestrøm",
+      "home_crest": null,
+      "away_id": 92,
+      "away_ja": "レアル・ソシエダ",
+      "away_en": "Real Sociedad",
+      "away_crest": "https://crests.football-data.org/92.png",
+      "score": null,
+      "japanese_players": [
+        {
+          "name_ja": "久保建英",
+          "position": "MF/FW",
+          "side": "away"
+        }
+      ],
+      "broadcasters": [
+        {
+          "name": "WOWOW",
+          "type": "exclusive",
+          "url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l",
+          "note": "〜2026-27"
+        }
+      ],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 UEFA Europa League league phase"
+    },
+    {
+      "id": "EL_2026-10-22_Celje_RedBul",
+      "competition_id": 3,
+      "competition_ja": "UEFAヨーロッパリーグ",
+      "competition_category": "european_cup",
+      "competition_flag": "🇪🇺",
+      "kickoff_jst": "2026-10-23T04:00:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 3,
+      "home_id": null,
+      "home_ja": "ツェリェ",
+      "home_en": "Celje",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "ザルツブルク",
+      "away_en": "Red Bull Salzburg",
+      "away_crest": null,
+      "score": null,
+      "japanese_players": [],
+      "broadcasters": [
+        {
+          "name": "WOWOW",
+          "type": "exclusive",
+          "url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l",
+          "note": "〜2026-27"
+        }
+      ],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 UEFA Europa League league phase"
+    },
+    {
+      "id": "EL_2026-10-22_Olympi_Sparta",
+      "competition_id": 3,
+      "competition_ja": "UEFAヨーロッパリーグ",
+      "competition_category": "european_cup",
+      "competition_flag": "🇪🇺",
+      "kickoff_jst": "2026-10-23T04:00:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 3,
+      "home_id": 654,
+      "home_ja": "オリンピアコス",
+      "home_en": "Olympiacos",
+      "home_crest": "https://crests.football-data.org/654.png",
+      "away_id": null,
+      "away_ja": "スパルタ・プラハ",
+      "away_en": "Sparta Prague",
+      "away_crest": null,
+      "score": null,
+      "japanese_players": [],
+      "broadcasters": [
+        {
+          "name": "WOWOW",
+          "type": "exclusive",
+          "url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l",
+          "note": "〜2026-27"
+        }
+      ],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 UEFA Europa League league phase"
+    },
+    {
+      "id": "EL_2026-10-22_Omonia_Benfic",
+      "competition_id": 3,
+      "competition_ja": "UEFAヨーロッパリーグ",
+      "competition_category": "european_cup",
+      "competition_flag": "🇪🇺",
+      "kickoff_jst": "2026-10-23T04:00:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 3,
+      "home_id": null,
+      "home_ja": "オモニア",
+      "home_en": "Omonia",
+      "home_crest": null,
+      "away_id": 1903,
+      "away_ja": "ベンフィカ",
+      "away_en": "SL Benfica",
+      "away_crest": "https://crests.football-data.org/1903.png",
+      "score": null,
+      "japanese_players": [],
+      "broadcasters": [
+        {
+          "name": "WOWOW",
+          "type": "exclusive",
+          "url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l",
+          "note": "〜2026-27"
+        }
+      ],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 UEFA Europa League league phase"
+    },
+    {
+      "id": "EL_2026-10-22_TSGHof_Lyon",
+      "competition_id": 3,
+      "competition_ja": "UEFAヨーロッパリーグ",
+      "competition_category": "european_cup",
+      "competition_flag": "🇪🇺",
+      "kickoff_jst": "2026-10-23T04:00:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 3,
+      "home_id": 2,
+      "home_ja": "ホッフェンハイム",
+      "home_en": "Hoffenheim",
+      "home_crest": "https://crests.football-data.org/2.png",
+      "away_id": 523,
+      "away_ja": "リヨン",
+      "away_en": "Olympique Lyon",
+      "away_crest": "https://crests.football-data.org/523.png",
+      "score": null,
+      "japanese_players": [
+        {
+          "name_ja": "町田浩樹",
+          "position": "DF",
+          "side": "home"
+        },
+        {
+          "name_ja": "中村敬斗",
+          "position": "MF",
+          "side": "away"
+        }
+      ],
+      "broadcasters": [
+        {
+          "name": "WOWOW",
+          "type": "exclusive",
+          "url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l",
+          "note": "〜2026-27"
+        }
+      ],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 UEFA Europa League league phase"
     },
     {
       "id": 558863,
@@ -47152,8 +49077,3024 @@
           "note": "厳選30試合ディレイ"
         }
       ]
+    },
+    {
+      "id": "EL_2026-11-05_Milan_Ferenc",
+      "competition_id": 3,
+      "competition_ja": "UEFAヨーロッパリーグ",
+      "competition_category": "european_cup",
+      "competition_flag": "🇪🇺",
+      "kickoff_jst": "2026-11-06T02:45:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 4,
+      "home_id": 98,
+      "home_ja": "ミラン",
+      "home_en": "Milan",
+      "home_crest": "https://crests.football-data.org/98.png",
+      "away_id": null,
+      "away_ja": "フェレンツヴァーロシュ",
+      "away_en": "Ferencváros",
+      "away_crest": null,
+      "score": null,
+      "japanese_players": [],
+      "broadcasters": [
+        {
+          "name": "WOWOW",
+          "type": "exclusive",
+          "url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l",
+          "note": "〜2026-27"
+        }
+      ],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 UEFA Europa League league phase"
+    },
+    {
+      "id": "EL_2026-11-05_Sparta_Bourne",
+      "competition_id": 3,
+      "competition_ja": "UEFAヨーロッパリーグ",
+      "competition_category": "european_cup",
+      "competition_flag": "🇪🇺",
+      "kickoff_jst": "2026-11-06T02:45:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 4,
+      "home_id": null,
+      "home_ja": "スパルタ・プラハ",
+      "home_en": "Sparta Prague",
+      "home_crest": null,
+      "away_id": 1044,
+      "away_ja": "ボーンマス",
+      "away_en": "Bournemouth",
+      "away_crest": "https://crests.football-data.org/1044.png",
+      "score": null,
+      "japanese_players": [],
+      "broadcasters": [
+        {
+          "name": "WOWOW",
+          "type": "exclusive",
+          "url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l",
+          "note": "〜2026-27"
+        }
+      ],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 UEFA Europa League league phase"
+    },
+    {
+      "id": "EL_2026-11-05_Crysta_TSGHof",
+      "competition_id": 3,
+      "competition_ja": "UEFAヨーロッパリーグ",
+      "competition_category": "european_cup",
+      "competition_flag": "🇪🇺",
+      "kickoff_jst": "2026-11-06T02:45:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 4,
+      "home_id": 354,
+      "home_ja": "クリスタル・パレス",
+      "home_en": "Crystal Palace",
+      "home_crest": "https://crests.football-data.org/354.png",
+      "away_id": 2,
+      "away_ja": "ホッフェンハイム",
+      "away_en": "Hoffenheim",
+      "away_crest": "https://crests.football-data.org/2.png",
+      "score": null,
+      "japanese_players": [
+        {
+          "name_ja": "鎌田大地",
+          "position": "MF",
+          "side": "home"
+        },
+        {
+          "name_ja": "冨安健洋",
+          "position": "DF",
+          "side": "home"
+        },
+        {
+          "name_ja": "町田浩樹",
+          "position": "DF",
+          "side": "away"
+        }
+      ],
+      "broadcasters": [
+        {
+          "name": "WOWOW",
+          "type": "exclusive",
+          "url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l",
+          "note": "〜2026-27"
+        }
+      ],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 UEFA Europa League league phase"
+    },
+    {
+      "id": "EL_2026-11-05_Lilles_Viktor",
+      "competition_id": 3,
+      "competition_ja": "UEFAヨーロッパリーグ",
+      "competition_category": "european_cup",
+      "competition_flag": "🇪🇺",
+      "kickoff_jst": "2026-11-06T02:45:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 4,
+      "home_id": null,
+      "home_ja": "リレストレム",
+      "home_en": "Lillestrøm",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "ヴィクトリア・プルゼニ",
+      "away_en": "Viktoria Plzeň",
+      "away_crest": null,
+      "score": null,
+      "japanese_players": [],
+      "broadcasters": [
+        {
+          "name": "WOWOW",
+          "type": "exclusive",
+          "url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l",
+          "note": "〜2026-27"
+        }
+      ],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 UEFA Europa League league phase"
+    },
+    {
+      "id": "EL_2026-11-05_NEC_Omonia",
+      "competition_id": 3,
+      "competition_ja": "UEFAヨーロッパリーグ",
+      "competition_category": "european_cup",
+      "competition_flag": "🇪🇺",
+      "kickoff_jst": "2026-11-06T02:45:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 4,
+      "home_id": 1915,
+      "home_ja": "NEC",
+      "home_en": "NEC",
+      "home_crest": "https://crests.football-data.org/1915.png",
+      "away_id": null,
+      "away_ja": "オモニア",
+      "away_en": "Omonia",
+      "away_crest": null,
+      "score": null,
+      "japanese_players": [],
+      "broadcasters": [
+        {
+          "name": "WOWOW",
+          "type": "exclusive",
+          "url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l",
+          "note": "〜2026-27"
+        }
+      ],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 UEFA Europa League league phase"
+    },
+    {
+      "id": "EL_2026-11-05_Levski_Jagiel",
+      "competition_id": 3,
+      "competition_ja": "UEFAヨーロッパリーグ",
+      "competition_category": "european_cup",
+      "competition_flag": "🇪🇺",
+      "kickoff_jst": "2026-11-06T02:45:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 4,
+      "home_id": null,
+      "home_ja": "レフスキ・ソフィア",
+      "home_en": "Levski Sofia",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "ヤギエロニア・ビャウィストク",
+      "away_en": "Jagiellonia Białystok",
+      "away_crest": null,
+      "score": null,
+      "japanese_players": [],
+      "broadcasters": [
+        {
+          "name": "WOWOW",
+          "type": "exclusive",
+          "url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l",
+          "note": "〜2026-27"
+        }
+      ],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 UEFA Europa League league phase"
+    },
+    {
+      "id": "EL_2026-11-05_RealSo_Lyon",
+      "competition_id": 3,
+      "competition_ja": "UEFAヨーロッパリーグ",
+      "competition_category": "european_cup",
+      "competition_flag": "🇪🇺",
+      "kickoff_jst": "2026-11-06T02:45:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 4,
+      "home_id": 92,
+      "home_ja": "レアル・ソシエダ",
+      "home_en": "Real Sociedad",
+      "home_crest": "https://crests.football-data.org/92.png",
+      "away_id": 523,
+      "away_ja": "リヨン",
+      "away_en": "Olympique Lyon",
+      "away_crest": "https://crests.football-data.org/523.png",
+      "score": null,
+      "japanese_players": [
+        {
+          "name_ja": "久保建英",
+          "position": "MF/FW",
+          "side": "home"
+        },
+        {
+          "name_ja": "中村敬斗",
+          "position": "MF",
+          "side": "away"
+        }
+      ],
+      "broadcasters": [
+        {
+          "name": "WOWOW",
+          "type": "exclusive",
+          "url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l",
+          "note": "〜2026-27"
+        }
+      ],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 UEFA Europa League league phase"
+    },
+    {
+      "id": "EL_2026-11-05_Anderl_RedBul",
+      "competition_id": 3,
+      "competition_ja": "UEFAヨーロッパリーグ",
+      "competition_category": "european_cup",
+      "competition_flag": "🇪🇺",
+      "kickoff_jst": "2026-11-06T02:45:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 4,
+      "home_id": null,
+      "home_ja": "アンデルレヒト",
+      "home_en": "Anderlecht",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "ザルツブルク",
+      "away_en": "Red Bull Salzburg",
+      "away_crest": null,
+      "score": null,
+      "japanese_players": [],
+      "broadcasters": [
+        {
+          "name": "WOWOW",
+          "type": "exclusive",
+          "url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l",
+          "note": "〜2026-27"
+        }
+      ],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 UEFA Europa League league phase"
+    },
+    {
+      "id": "EL_2026-11-05_Rennes_Olympi",
+      "competition_id": 3,
+      "competition_ja": "UEFAヨーロッパリーグ",
+      "competition_category": "european_cup",
+      "competition_flag": "🇪🇺",
+      "kickoff_jst": "2026-11-06T02:45:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 4,
+      "home_id": 529,
+      "home_ja": "レンヌ",
+      "home_en": "Stade Rennais",
+      "home_crest": "https://crests.football-data.org/529.png",
+      "away_id": 654,
+      "away_ja": "オリンピアコス",
+      "away_en": "Olympiacos",
+      "away_crest": "https://crests.football-data.org/654.png",
+      "score": null,
+      "japanese_players": [],
+      "broadcasters": [
+        {
+          "name": "WOWOW",
+          "type": "exclusive",
+          "url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l",
+          "note": "〜2026-27"
+        }
+      ],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 UEFA Europa League league phase"
+    },
+    {
+      "id": "EL_2026-11-05_AZ_Juvent",
+      "competition_id": 3,
+      "competition_ja": "UEFAヨーロッパリーグ",
+      "competition_category": "european_cup",
+      "competition_flag": "🇪🇺",
+      "kickoff_jst": "2026-11-06T05:00:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 4,
+      "home_id": 682,
+      "home_ja": "AZ",
+      "home_en": "AZ",
+      "home_crest": "https://crests.football-data.org/682.png",
+      "away_id": 109,
+      "away_ja": "ユヴェントス",
+      "away_en": "Juventus",
+      "away_crest": "https://crests.football-data.org/109.png",
+      "score": null,
+      "japanese_players": [
+        {
+          "name_ja": "毎熊晟矢",
+          "position": "DF/MF",
+          "side": "home"
+        },
+        {
+          "name_ja": "市原吏音",
+          "position": "DF",
+          "side": "home"
+        }
+      ],
+      "broadcasters": [
+        {
+          "name": "WOWOW",
+          "type": "exclusive",
+          "url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l",
+          "note": "〜2026-27"
+        }
+      ],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 UEFA Europa League league phase"
+    },
+    {
+      "id": "EL_2026-11-05_BayerL_Marsei",
+      "competition_id": 3,
+      "competition_ja": "UEFAヨーロッパリーグ",
+      "competition_category": "european_cup",
+      "competition_flag": "🇪🇺",
+      "kickoff_jst": "2026-11-06T05:00:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 4,
+      "home_id": 3,
+      "home_ja": "レバークーゼン",
+      "home_en": "Leverkusen",
+      "home_crest": "https://crests.football-data.org/3.png",
+      "away_id": 516,
+      "away_ja": "マルセイユ",
+      "away_en": "Marseille",
+      "away_crest": "https://crests.football-data.org/516.png",
+      "score": null,
+      "japanese_players": [],
+      "broadcasters": [
+        {
+          "name": "WOWOW",
+          "type": "exclusive",
+          "url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l",
+          "note": "〜2026-27"
+        }
+      ],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 UEFA Europa League league phase"
+    },
+    {
+      "id": "EL_2026-11-05_Celtic_Beikta",
+      "competition_id": 3,
+      "competition_ja": "UEFAヨーロッパリーグ",
+      "competition_category": "european_cup",
+      "competition_flag": "🇪🇺",
+      "kickoff_jst": "2026-11-06T05:00:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 4,
+      "home_id": null,
+      "home_ja": "セルティック",
+      "home_en": "Celtic",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "ベシクタシュ",
+      "away_en": "Beşiktaş",
+      "away_crest": null,
+      "score": null,
+      "japanese_players": [],
+      "broadcasters": [
+        {
+          "name": "WOWOW",
+          "type": "exclusive",
+          "url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l",
+          "note": "〜2026-27"
+        }
+      ],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 UEFA Europa League league phase"
+    },
+    {
+      "id": "EL_2026-11-05_Hapoel_OFI",
+      "competition_id": 3,
+      "competition_ja": "UEFAヨーロッパリーグ",
+      "competition_category": "european_cup",
+      "competition_flag": "🇪🇺",
+      "kickoff_jst": "2026-11-06T05:00:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 4,
+      "home_id": null,
+      "home_ja": "ハポエル・ベエルシェバ",
+      "home_en": "Hapoel Be'er Sheva",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "OFIクレタ",
+      "away_en": "OFI",
+      "away_crest": null,
+      "score": null,
+      "japanese_players": [],
+      "broadcasters": [
+        {
+          "name": "WOWOW",
+          "type": "exclusive",
+          "url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l",
+          "note": "〜2026-27"
+        }
+      ],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 UEFA Europa League league phase"
+    },
+    {
+      "id": "EL_2026-11-05_CeltaV_UnionS",
+      "competition_id": 3,
+      "competition_ja": "UEFAヨーロッパリーグ",
+      "competition_category": "european_cup",
+      "competition_flag": "🇪🇺",
+      "kickoff_jst": "2026-11-06T05:00:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 4,
+      "home_id": 558,
+      "home_ja": "セルタ",
+      "home_en": "Celta",
+      "home_crest": "https://crests.football-data.org/558.png",
+      "away_id": 3929,
+      "away_ja": "ユニオン・サンジロワーズ",
+      "away_en": "Union Saint-Gilloise",
+      "away_crest": "https://crests.football-data.org/3929.png",
+      "score": null,
+      "japanese_players": [
+        {
+          "name_ja": "ハーフナー・ニッキ",
+          "position": "DF",
+          "side": "away"
+        }
+      ],
+      "broadcasters": [
+        {
+          "name": "WOWOW",
+          "type": "exclusive",
+          "url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l",
+          "note": "〜2026-27"
+        }
+      ],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 UEFA Europa League league phase"
+    },
+    {
+      "id": "EL_2026-11-05_Torree_Ararat",
+      "competition_id": 3,
+      "competition_ja": "UEFAヨーロッパリーグ",
+      "competition_category": "european_cup",
+      "competition_flag": "🇪🇺",
+      "kickoff_jst": "2026-11-06T05:00:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 4,
+      "home_id": null,
+      "home_ja": "トレエンセ",
+      "home_en": "Torreense",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "アララト・アルメニア",
+      "away_en": "Ararat-Armenia",
+      "away_crest": null,
+      "score": null,
+      "japanese_players": [],
+      "broadcasters": [
+        {
+          "name": "WOWOW",
+          "type": "exclusive",
+          "url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l",
+          "note": "〜2026-27"
+        }
+      ],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 UEFA Europa League league phase"
+    },
+    {
+      "id": "EL_2026-11-05_SturmG_Celje",
+      "competition_id": 3,
+      "competition_ja": "UEFAヨーロッパリーグ",
+      "competition_category": "european_cup",
+      "competition_flag": "🇪🇺",
+      "kickoff_jst": "2026-11-06T05:00:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 4,
+      "home_id": null,
+      "home_ja": "シュトゥルム・グラーツ",
+      "home_en": "Sturm Graz",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "ツェリェ",
+      "away_en": "Celje",
+      "away_crest": null,
+      "score": null,
+      "japanese_players": [],
+      "broadcasters": [
+        {
+          "name": "WOWOW",
+          "type": "exclusive",
+          "url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l",
+          "note": "〜2026-27"
+        }
+      ],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 UEFA Europa League league phase"
+    },
+    {
+      "id": "EL_2026-11-05_Benfic_LechPo",
+      "competition_id": 3,
+      "competition_ja": "UEFAヨーロッパリーグ",
+      "competition_category": "european_cup",
+      "competition_flag": "🇪🇺",
+      "kickoff_jst": "2026-11-06T05:00:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 4,
+      "home_id": 1903,
+      "home_ja": "ベンフィカ",
+      "home_en": "SL Benfica",
+      "home_crest": "https://crests.football-data.org/1903.png",
+      "away_id": null,
+      "away_ja": "レフ・ポズナン",
+      "away_en": "Lech Poznań",
+      "away_crest": null,
+      "score": null,
+      "japanese_players": [],
+      "broadcasters": [
+        {
+          "name": "WOWOW",
+          "type": "exclusive",
+          "url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l",
+          "note": "〜2026-27"
+        }
+      ],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 UEFA Europa League league phase"
+    },
+    {
+      "id": "EL_2026-11-05_Sunder_Dinamo",
+      "competition_id": 3,
+      "competition_ja": "UEFAヨーロッパリーグ",
+      "competition_category": "european_cup",
+      "competition_flag": "🇪🇺",
+      "kickoff_jst": "2026-11-06T05:00:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 4,
+      "home_id": 71,
+      "home_ja": "サンダーランド",
+      "home_en": "Sunderland",
+      "home_crest": "https://crests.football-data.org/71.png",
+      "away_id": null,
+      "away_ja": "ディナモ・ザグレブ",
+      "away_en": "Dinamo Zagreb",
+      "away_crest": null,
+      "score": null,
+      "japanese_players": [],
+      "broadcasters": [
+        {
+          "name": "WOWOW",
+          "type": "exclusive",
+          "url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l",
+          "note": "〜2026-27"
+        }
+      ],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 UEFA Europa League league phase"
+    },
+    {
+      "id": "EL_2026-11-26_Beikta_Hapoel",
+      "competition_id": 3,
+      "competition_ja": "UEFAヨーロッパリーグ",
+      "competition_category": "european_cup",
+      "competition_flag": "🇪🇺",
+      "kickoff_jst": "2026-11-27T02:45:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 5,
+      "home_id": null,
+      "home_ja": "ベシクタシュ",
+      "home_en": "Beşiktaş",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "ハポエル・ベエルシェバ",
+      "away_en": "Hapoel Be'er Sheva",
+      "away_crest": null,
+      "score": null,
+      "japanese_players": [],
+      "broadcasters": [
+        {
+          "name": "WOWOW",
+          "type": "exclusive",
+          "url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l",
+          "note": "〜2026-27"
+        }
+      ],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 UEFA Europa League league phase"
+    },
+    {
+      "id": "EL_2026-11-26_RedBul_Ararat",
+      "competition_id": 3,
+      "competition_ja": "UEFAヨーロッパリーグ",
+      "competition_category": "european_cup",
+      "competition_flag": "🇪🇺",
+      "kickoff_jst": "2026-11-27T02:45:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 5,
+      "home_id": null,
+      "home_ja": "ザルツブルク",
+      "home_en": "Red Bull Salzburg",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "アララト・アルメニア",
+      "away_en": "Ararat-Armenia",
+      "away_crest": null,
+      "score": null,
+      "japanese_players": [],
+      "broadcasters": [
+        {
+          "name": "WOWOW",
+          "type": "exclusive",
+          "url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l",
+          "note": "〜2026-27"
+        }
+      ],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 UEFA Europa League league phase"
+    },
+    {
+      "id": "EL_2026-11-26_Viktor_Benfic",
+      "competition_id": 3,
+      "competition_ja": "UEFAヨーロッパリーグ",
+      "competition_category": "european_cup",
+      "competition_flag": "🇪🇺",
+      "kickoff_jst": "2026-11-27T02:45:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 5,
+      "home_id": null,
+      "home_ja": "ヴィクトリア・プルゼニ",
+      "home_en": "Viktoria Plzeň",
+      "home_crest": null,
+      "away_id": 1903,
+      "away_ja": "ベンフィカ",
+      "away_en": "SL Benfica",
+      "away_crest": "https://crests.football-data.org/1903.png",
+      "score": null,
+      "japanese_players": [],
+      "broadcasters": [
+        {
+          "name": "WOWOW",
+          "type": "exclusive",
+          "url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l",
+          "note": "〜2026-27"
+        }
+      ],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 UEFA Europa League league phase"
+    },
+    {
+      "id": "EL_2026-11-26_Dinamo_BayerL",
+      "competition_id": 3,
+      "competition_ja": "UEFAヨーロッパリーグ",
+      "competition_category": "european_cup",
+      "competition_flag": "🇪🇺",
+      "kickoff_jst": "2026-11-27T02:45:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 5,
+      "home_id": null,
+      "home_ja": "ディナモ・ザグレブ",
+      "home_en": "Dinamo Zagreb",
+      "home_crest": null,
+      "away_id": 3,
+      "away_ja": "レバークーゼン",
+      "away_en": "Leverkusen",
+      "away_crest": "https://crests.football-data.org/3.png",
+      "score": null,
+      "japanese_players": [],
+      "broadcasters": [
+        {
+          "name": "WOWOW",
+          "type": "exclusive",
+          "url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l",
+          "note": "〜2026-27"
+        }
+      ],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 UEFA Europa League league phase"
+    },
+    {
+      "id": "EL_2026-11-26_Olympi_Milan",
+      "competition_id": 3,
+      "competition_ja": "UEFAヨーロッパリーグ",
+      "competition_category": "european_cup",
+      "competition_flag": "🇪🇺",
+      "kickoff_jst": "2026-11-27T02:45:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 5,
+      "home_id": 654,
+      "home_ja": "オリンピアコス",
+      "home_en": "Olympiacos",
+      "home_crest": "https://crests.football-data.org/654.png",
+      "away_id": 98,
+      "away_ja": "ミラン",
+      "away_en": "Milan",
+      "away_crest": "https://crests.football-data.org/98.png",
+      "score": null,
+      "japanese_players": [],
+      "broadcasters": [
+        {
+          "name": "WOWOW",
+          "type": "exclusive",
+          "url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l",
+          "note": "〜2026-27"
+        }
+      ],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 UEFA Europa League league phase"
+    },
+    {
+      "id": "EL_2026-11-26_Marsei_Levski",
+      "competition_id": 3,
+      "competition_ja": "UEFAヨーロッパリーグ",
+      "competition_category": "european_cup",
+      "competition_flag": "🇪🇺",
+      "kickoff_jst": "2026-11-27T02:45:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 5,
+      "home_id": 516,
+      "home_ja": "マルセイユ",
+      "home_en": "Marseille",
+      "home_crest": "https://crests.football-data.org/516.png",
+      "away_id": null,
+      "away_ja": "レフスキ・ソフィア",
+      "away_en": "Levski Sofia",
+      "away_crest": null,
+      "score": null,
+      "japanese_players": [],
+      "broadcasters": [
+        {
+          "name": "WOWOW",
+          "type": "exclusive",
+          "url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l",
+          "note": "〜2026-27"
+        }
+      ],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 UEFA Europa League league phase"
+    },
+    {
+      "id": "EL_2026-11-26_UnionS_LechPo",
+      "competition_id": 3,
+      "competition_ja": "UEFAヨーロッパリーグ",
+      "competition_category": "european_cup",
+      "competition_flag": "🇪🇺",
+      "kickoff_jst": "2026-11-27T02:45:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 5,
+      "home_id": 3929,
+      "home_ja": "ユニオン・サンジロワーズ",
+      "home_en": "Union Saint-Gilloise",
+      "home_crest": "https://crests.football-data.org/3929.png",
+      "away_id": null,
+      "away_ja": "レフ・ポズナン",
+      "away_en": "Lech Poznań",
+      "away_crest": null,
+      "score": null,
+      "japanese_players": [
+        {
+          "name_ja": "ハーフナー・ニッキ",
+          "position": "DF",
+          "side": "home"
+        }
+      ],
+      "broadcasters": [
+        {
+          "name": "WOWOW",
+          "type": "exclusive",
+          "url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l",
+          "note": "〜2026-27"
+        }
+      ],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 UEFA Europa League league phase"
+    },
+    {
+      "id": "EL_2026-11-26_CeltaV_Bourne",
+      "competition_id": 3,
+      "competition_ja": "UEFAヨーロッパリーグ",
+      "competition_category": "european_cup",
+      "competition_flag": "🇪🇺",
+      "kickoff_jst": "2026-11-27T02:45:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 5,
+      "home_id": 558,
+      "home_ja": "セルタ",
+      "home_en": "Celta",
+      "home_crest": "https://crests.football-data.org/558.png",
+      "away_id": 1044,
+      "away_ja": "ボーンマス",
+      "away_en": "Bournemouth",
+      "away_crest": "https://crests.football-data.org/1044.png",
+      "score": null,
+      "japanese_players": [],
+      "broadcasters": [
+        {
+          "name": "WOWOW",
+          "type": "exclusive",
+          "url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l",
+          "note": "〜2026-27"
+        }
+      ],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 UEFA Europa League league phase"
+    },
+    {
+      "id": "EL_2026-11-26_Sparta_AZ",
+      "competition_id": 3,
+      "competition_ja": "UEFAヨーロッパリーグ",
+      "competition_category": "european_cup",
+      "competition_flag": "🇪🇺",
+      "kickoff_jst": "2026-11-27T05:00:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 5,
+      "home_id": null,
+      "home_ja": "スパルタ・プラハ",
+      "home_en": "Sparta Prague",
+      "home_crest": null,
+      "away_id": 682,
+      "away_ja": "AZ",
+      "away_en": "AZ",
+      "away_crest": "https://crests.football-data.org/682.png",
+      "score": null,
+      "japanese_players": [
+        {
+          "name_ja": "毎熊晟矢",
+          "position": "DF/MF",
+          "side": "away"
+        },
+        {
+          "name_ja": "市原吏音",
+          "position": "DF",
+          "side": "away"
+        }
+      ],
+      "broadcasters": [
+        {
+          "name": "WOWOW",
+          "type": "exclusive",
+          "url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l",
+          "note": "〜2026-27"
+        }
+      ],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 UEFA Europa League league phase"
+    },
+    {
+      "id": "EL_2026-11-26_Crysta_RealSo",
+      "competition_id": 3,
+      "competition_ja": "UEFAヨーロッパリーグ",
+      "competition_category": "european_cup",
+      "competition_flag": "🇪🇺",
+      "kickoff_jst": "2026-11-27T05:00:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 5,
+      "home_id": 354,
+      "home_ja": "クリスタル・パレス",
+      "home_en": "Crystal Palace",
+      "home_crest": "https://crests.football-data.org/354.png",
+      "away_id": 92,
+      "away_ja": "レアル・ソシエダ",
+      "away_en": "Real Sociedad",
+      "away_crest": "https://crests.football-data.org/92.png",
+      "score": null,
+      "japanese_players": [
+        {
+          "name_ja": "鎌田大地",
+          "position": "MF",
+          "side": "home"
+        },
+        {
+          "name_ja": "冨安健洋",
+          "position": "DF",
+          "side": "home"
+        },
+        {
+          "name_ja": "久保建英",
+          "position": "MF/FW",
+          "side": "away"
+        }
+      ],
+      "broadcasters": [
+        {
+          "name": "WOWOW",
+          "type": "exclusive",
+          "url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l",
+          "note": "〜2026-27"
+        }
+      ],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 UEFA Europa League league phase"
+    },
+    {
+      "id": "EL_2026-11-26_Ferenc_Celje",
+      "competition_id": 3,
+      "competition_ja": "UEFAヨーロッパリーグ",
+      "competition_category": "european_cup",
+      "competition_flag": "🇪🇺",
+      "kickoff_jst": "2026-11-27T05:00:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 5,
+      "home_id": null,
+      "home_ja": "フェレンツヴァーロシュ",
+      "home_en": "Ferencváros",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "ツェリェ",
+      "away_en": "Celje",
+      "away_crest": null,
+      "score": null,
+      "japanese_players": [],
+      "broadcasters": [
+        {
+          "name": "WOWOW",
+          "type": "exclusive",
+          "url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l",
+          "note": "〜2026-27"
+        }
+      ],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 UEFA Europa League league phase"
+    },
+    {
+      "id": "EL_2026-11-26_Juvent_Omonia",
+      "competition_id": 3,
+      "competition_ja": "UEFAヨーロッパリーグ",
+      "competition_category": "european_cup",
+      "competition_flag": "🇪🇺",
+      "kickoff_jst": "2026-11-27T05:00:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 5,
+      "home_id": 109,
+      "home_ja": "ユヴェントス",
+      "home_en": "Juventus",
+      "home_crest": "https://crests.football-data.org/109.png",
+      "away_id": null,
+      "away_ja": "オモニア",
+      "away_en": "Omonia",
+      "away_crest": null,
+      "score": null,
+      "japanese_players": [],
+      "broadcasters": [
+        {
+          "name": "WOWOW",
+          "type": "exclusive",
+          "url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l",
+          "note": "〜2026-27"
+        }
+      ],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 UEFA Europa League league phase"
+    },
+    {
+      "id": "EL_2026-11-26_NEC_Rennes",
+      "competition_id": 3,
+      "competition_ja": "UEFAヨーロッパリーグ",
+      "competition_category": "european_cup",
+      "competition_flag": "🇪🇺",
+      "kickoff_jst": "2026-11-27T05:00:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 5,
+      "home_id": 1915,
+      "home_ja": "NEC",
+      "home_en": "NEC",
+      "home_crest": "https://crests.football-data.org/1915.png",
+      "away_id": 529,
+      "away_ja": "レンヌ",
+      "away_en": "Stade Rennais",
+      "away_crest": "https://crests.football-data.org/529.png",
+      "score": null,
+      "japanese_players": [],
+      "broadcasters": [
+        {
+          "name": "WOWOW",
+          "type": "exclusive",
+          "url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l",
+          "note": "〜2026-27"
+        }
+      ],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 UEFA Europa League league phase"
+    },
+    {
+      "id": "EL_2026-11-26_OFI_Anderl",
+      "competition_id": 3,
+      "competition_ja": "UEFAヨーロッパリーグ",
+      "competition_category": "european_cup",
+      "competition_flag": "🇪🇺",
+      "kickoff_jst": "2026-11-27T05:00:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 5,
+      "home_id": null,
+      "home_ja": "OFIクレタ",
+      "home_en": "OFI",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "アンデルレヒト",
+      "away_en": "Anderlecht",
+      "away_crest": null,
+      "score": null,
+      "japanese_players": [],
+      "broadcasters": [
+        {
+          "name": "WOWOW",
+          "type": "exclusive",
+          "url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l",
+          "note": "〜2026-27"
+        }
+      ],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 UEFA Europa League league phase"
+    },
+    {
+      "id": "EL_2026-11-26_Lyon_Lilles",
+      "competition_id": 3,
+      "competition_ja": "UEFAヨーロッパリーグ",
+      "competition_category": "european_cup",
+      "competition_flag": "🇪🇺",
+      "kickoff_jst": "2026-11-27T05:00:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 5,
+      "home_id": 523,
+      "home_ja": "リヨン",
+      "home_en": "Olympique Lyon",
+      "home_crest": "https://crests.football-data.org/523.png",
+      "away_id": null,
+      "away_ja": "リレストレム",
+      "away_en": "Lillestrøm",
+      "away_crest": null,
+      "score": null,
+      "japanese_players": [
+        {
+          "name_ja": "中村敬斗",
+          "position": "MF",
+          "side": "home"
+        }
+      ],
+      "broadcasters": [
+        {
+          "name": "WOWOW",
+          "type": "exclusive",
+          "url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l",
+          "note": "〜2026-27"
+        }
+      ],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 UEFA Europa League league phase"
+    },
+    {
+      "id": "EL_2026-11-26_Torree_Celtic",
+      "competition_id": 3,
+      "competition_ja": "UEFAヨーロッパリーグ",
+      "competition_category": "european_cup",
+      "competition_flag": "🇪🇺",
+      "kickoff_jst": "2026-11-27T05:00:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 5,
+      "home_id": null,
+      "home_ja": "トレエンセ",
+      "home_en": "Torreense",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "セルティック",
+      "away_en": "Celtic",
+      "away_crest": null,
+      "score": null,
+      "japanese_players": [],
+      "broadcasters": [
+        {
+          "name": "WOWOW",
+          "type": "exclusive",
+          "url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l",
+          "note": "〜2026-27"
+        }
+      ],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 UEFA Europa League league phase"
+    },
+    {
+      "id": "EL_2026-11-26_Sunder_Jagiel",
+      "competition_id": 3,
+      "competition_ja": "UEFAヨーロッパリーグ",
+      "competition_category": "european_cup",
+      "competition_flag": "🇪🇺",
+      "kickoff_jst": "2026-11-27T05:00:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 5,
+      "home_id": 71,
+      "home_ja": "サンダーランド",
+      "home_en": "Sunderland",
+      "home_crest": "https://crests.football-data.org/71.png",
+      "away_id": null,
+      "away_ja": "ヤギエロニア・ビャウィストク",
+      "away_en": "Jagiellonia Białystok",
+      "away_crest": null,
+      "score": null,
+      "japanese_players": [],
+      "broadcasters": [
+        {
+          "name": "WOWOW",
+          "type": "exclusive",
+          "url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l",
+          "note": "〜2026-27"
+        }
+      ],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 UEFA Europa League league phase"
+    },
+    {
+      "id": "EL_2026-11-26_TSGHof_SturmG",
+      "competition_id": 3,
+      "competition_ja": "UEFAヨーロッパリーグ",
+      "competition_category": "european_cup",
+      "competition_flag": "🇪🇺",
+      "kickoff_jst": "2026-11-27T05:00:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 5,
+      "home_id": 2,
+      "home_ja": "ホッフェンハイム",
+      "home_en": "Hoffenheim",
+      "home_crest": "https://crests.football-data.org/2.png",
+      "away_id": null,
+      "away_ja": "シュトゥルム・グラーツ",
+      "away_en": "Sturm Graz",
+      "away_crest": null,
+      "score": null,
+      "japanese_players": [
+        {
+          "name_ja": "町田浩樹",
+          "position": "DF",
+          "side": "home"
+        }
+      ],
+      "broadcasters": [
+        {
+          "name": "WOWOW",
+          "type": "exclusive",
+          "url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l",
+          "note": "〜2026-27"
+        }
+      ],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 UEFA Europa League league phase"
+    },
+    {
+      "id": "EL_2026-12-10_AZ_SturmG",
+      "competition_id": 3,
+      "competition_ja": "UEFAヨーロッパリーグ",
+      "competition_category": "european_cup",
+      "competition_flag": "🇪🇺",
+      "kickoff_jst": "2026-12-11T02:45:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 6,
+      "home_id": 682,
+      "home_ja": "AZ",
+      "home_en": "AZ",
+      "home_crest": "https://crests.football-data.org/682.png",
+      "away_id": null,
+      "away_ja": "シュトゥルム・グラーツ",
+      "away_en": "Sturm Graz",
+      "away_crest": null,
+      "score": null,
+      "japanese_players": [
+        {
+          "name_ja": "毎熊晟矢",
+          "position": "DF/MF",
+          "side": "home"
+        },
+        {
+          "name_ja": "市原吏音",
+          "position": "DF",
+          "side": "home"
+        }
+      ],
+      "broadcasters": [
+        {
+          "name": "WOWOW",
+          "type": "exclusive",
+          "url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l",
+          "note": "〜2026-27"
+        }
+      ],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 UEFA Europa League league phase"
+    },
+    {
+      "id": "EL_2026-12-10_Ararat_NEC",
+      "competition_id": 3,
+      "competition_ja": "UEFAヨーロッパリーグ",
+      "competition_category": "european_cup",
+      "competition_flag": "🇪🇺",
+      "kickoff_jst": "2026-12-11T02:45:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 6,
+      "home_id": null,
+      "home_ja": "アララト・アルメニア",
+      "home_en": "Ararat-Armenia",
+      "home_crest": null,
+      "away_id": 1915,
+      "away_ja": "NEC",
+      "away_en": "NEC",
+      "away_crest": "https://crests.football-data.org/1915.png",
+      "score": null,
+      "japanese_players": [],
+      "broadcasters": [
+        {
+          "name": "WOWOW",
+          "type": "exclusive",
+          "url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l",
+          "note": "〜2026-27"
+        }
+      ],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 UEFA Europa League league phase"
+    },
+    {
+      "id": "EL_2026-12-10_Hapoel_Juvent",
+      "competition_id": 3,
+      "competition_ja": "UEFAヨーロッパリーグ",
+      "competition_category": "european_cup",
+      "competition_flag": "🇪🇺",
+      "kickoff_jst": "2026-12-11T02:45:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 6,
+      "home_id": null,
+      "home_ja": "ハポエル・ベエルシェバ",
+      "home_en": "Hapoel Be'er Sheva",
+      "home_crest": null,
+      "away_id": 109,
+      "away_ja": "ユヴェントス",
+      "away_en": "Juventus",
+      "away_crest": "https://crests.football-data.org/109.png",
+      "score": null,
+      "japanese_players": [],
+      "broadcasters": [
+        {
+          "name": "WOWOW",
+          "type": "exclusive",
+          "url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l",
+          "note": "〜2026-27"
+        }
+      ],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 UEFA Europa League league phase"
+    },
+    {
+      "id": "EL_2026-12-10_Jagiel_Crysta",
+      "competition_id": 3,
+      "competition_ja": "UEFAヨーロッパリーグ",
+      "competition_category": "european_cup",
+      "competition_flag": "🇪🇺",
+      "kickoff_jst": "2026-12-11T02:45:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 6,
+      "home_id": null,
+      "home_ja": "ヤギエロニア・ビャウィストク",
+      "home_en": "Jagiellonia Białystok",
+      "home_crest": null,
+      "away_id": 354,
+      "away_ja": "クリスタル・パレス",
+      "away_en": "Crystal Palace",
+      "away_crest": "https://crests.football-data.org/354.png",
+      "score": null,
+      "japanese_players": [
+        {
+          "name_ja": "鎌田大地",
+          "position": "MF",
+          "side": "away"
+        },
+        {
+          "name_ja": "冨安健洋",
+          "position": "DF",
+          "side": "away"
+        }
+      ],
+      "broadcasters": [
+        {
+          "name": "WOWOW",
+          "type": "exclusive",
+          "url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l",
+          "note": "〜2026-27"
+        }
+      ],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 UEFA Europa League league phase"
+    },
+    {
+      "id": "EL_2026-12-10_Marsei_CeltaV",
+      "competition_id": 3,
+      "competition_ja": "UEFAヨーロッパリーグ",
+      "competition_category": "european_cup",
+      "competition_flag": "🇪🇺",
+      "kickoff_jst": "2026-12-11T02:45:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 6,
+      "home_id": 516,
+      "home_ja": "マルセイユ",
+      "home_en": "Marseille",
+      "home_crest": "https://crests.football-data.org/516.png",
+      "away_id": 558,
+      "away_ja": "セルタ",
+      "away_en": "Celta",
+      "away_crest": "https://crests.football-data.org/558.png",
+      "score": null,
+      "japanese_players": [],
+      "broadcasters": [
+        {
+          "name": "WOWOW",
+          "type": "exclusive",
+          "url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l",
+          "note": "〜2026-27"
+        }
+      ],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 UEFA Europa League league phase"
+    },
+    {
+      "id": "EL_2026-12-10_Omonia_Celtic",
+      "competition_id": 3,
+      "competition_ja": "UEFAヨーロッパリーグ",
+      "competition_category": "european_cup",
+      "competition_flag": "🇪🇺",
+      "kickoff_jst": "2026-12-11T02:45:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 6,
+      "home_id": null,
+      "home_ja": "オモニア",
+      "home_en": "Omonia",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "セルティック",
+      "away_en": "Celtic",
+      "away_crest": null,
+      "score": null,
+      "japanese_players": [],
+      "broadcasters": [
+        {
+          "name": "WOWOW",
+          "type": "exclusive",
+          "url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l",
+          "note": "〜2026-27"
+        }
+      ],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 UEFA Europa League league phase"
+    },
+    {
+      "id": "EL_2026-12-10_Anderl_TSGHof",
+      "competition_id": 3,
+      "competition_ja": "UEFAヨーロッパリーグ",
+      "competition_category": "european_cup",
+      "competition_flag": "🇪🇺",
+      "kickoff_jst": "2026-12-11T02:45:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 6,
+      "home_id": null,
+      "home_ja": "アンデルレヒト",
+      "home_en": "Anderlecht",
+      "home_crest": null,
+      "away_id": 2,
+      "away_ja": "ホッフェンハイム",
+      "away_en": "Hoffenheim",
+      "away_crest": "https://crests.football-data.org/2.png",
+      "score": null,
+      "japanese_players": [
+        {
+          "name_ja": "町田浩樹",
+          "position": "DF",
+          "side": "away"
+        }
+      ],
+      "broadcasters": [
+        {
+          "name": "WOWOW",
+          "type": "exclusive",
+          "url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l",
+          "note": "〜2026-27"
+        }
+      ],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 UEFA Europa League league phase"
+    },
+    {
+      "id": "EL_2026-12-10_Rennes_Dinamo",
+      "competition_id": 3,
+      "competition_ja": "UEFAヨーロッパリーグ",
+      "competition_category": "european_cup",
+      "competition_flag": "🇪🇺",
+      "kickoff_jst": "2026-12-11T02:45:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 6,
+      "home_id": 529,
+      "home_ja": "レンヌ",
+      "home_en": "Stade Rennais",
+      "home_crest": "https://crests.football-data.org/529.png",
+      "away_id": null,
+      "away_ja": "ディナモ・ザグレブ",
+      "away_en": "Dinamo Zagreb",
+      "away_crest": null,
+      "score": null,
+      "japanese_players": [],
+      "broadcasters": [
+        {
+          "name": "WOWOW",
+          "type": "exclusive",
+          "url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l",
+          "note": "〜2026-27"
+        }
+      ],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 UEFA Europa League league phase"
+    },
+    {
+      "id": "EL_2026-12-10_Milan_Sunder",
+      "competition_id": 3,
+      "competition_ja": "UEFAヨーロッパリーグ",
+      "competition_category": "european_cup",
+      "competition_flag": "🇪🇺",
+      "kickoff_jst": "2026-12-11T05:00:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 6,
+      "home_id": 98,
+      "home_ja": "ミラン",
+      "home_en": "Milan",
+      "home_crest": "https://crests.football-data.org/98.png",
+      "away_id": 71,
+      "away_ja": "サンダーランド",
+      "away_en": "Sunderland",
+      "away_crest": "https://crests.football-data.org/71.png",
+      "score": null,
+      "japanese_players": [],
+      "broadcasters": [
+        {
+          "name": "WOWOW",
+          "type": "exclusive",
+          "url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l",
+          "note": "〜2026-27"
+        }
+      ],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 UEFA Europa League league phase"
+    },
+    {
+      "id": "EL_2026-12-10_Bourne_Viktor",
+      "competition_id": 3,
+      "competition_ja": "UEFAヨーロッパリーグ",
+      "competition_category": "european_cup",
+      "competition_flag": "🇪🇺",
+      "kickoff_jst": "2026-12-11T05:00:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 6,
+      "home_id": 1044,
+      "home_ja": "ボーンマス",
+      "home_en": "Bournemouth",
+      "home_crest": "https://crests.football-data.org/1044.png",
+      "away_id": null,
+      "away_ja": "ヴィクトリア・プルゼニ",
+      "away_en": "Viktoria Plzeň",
+      "away_crest": null,
+      "score": null,
+      "japanese_players": [],
+      "broadcasters": [
+        {
+          "name": "WOWOW",
+          "type": "exclusive",
+          "url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l",
+          "note": "〜2026-27"
+        }
+      ],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 UEFA Europa League league phase"
+    },
+    {
+      "id": "EL_2026-12-10_BayerL_Beikta",
+      "competition_id": 3,
+      "competition_ja": "UEFAヨーロッパリーグ",
+      "competition_category": "european_cup",
+      "competition_flag": "🇪🇺",
+      "kickoff_jst": "2026-12-11T05:00:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 6,
+      "home_id": 3,
+      "home_ja": "レバークーゼン",
+      "home_en": "Leverkusen",
+      "home_crest": "https://crests.football-data.org/3.png",
+      "away_id": null,
+      "away_ja": "ベシクタシュ",
+      "away_en": "Beşiktaş",
+      "away_crest": null,
+      "score": null,
+      "japanese_players": [],
+      "broadcasters": [
+        {
+          "name": "WOWOW",
+          "type": "exclusive",
+          "url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l",
+          "note": "〜2026-27"
+        }
+      ],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 UEFA Europa League league phase"
+    },
+    {
+      "id": "EL_2026-12-10_RedBul_Sparta",
+      "competition_id": 3,
+      "competition_ja": "UEFAヨーロッパリーグ",
+      "competition_category": "european_cup",
+      "competition_flag": "🇪🇺",
+      "kickoff_jst": "2026-12-11T05:00:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 6,
+      "home_id": null,
+      "home_ja": "ザルツブルク",
+      "home_en": "Red Bull Salzburg",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "スパルタ・プラハ",
+      "away_en": "Sparta Prague",
+      "away_crest": null,
+      "score": null,
+      "japanese_players": [],
+      "broadcasters": [
+        {
+          "name": "WOWOW",
+          "type": "exclusive",
+          "url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l",
+          "note": "〜2026-27"
+        }
+      ],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 UEFA Europa League league phase"
+    },
+    {
+      "id": "EL_2026-12-10_LechPo_Ferenc",
+      "competition_id": 3,
+      "competition_ja": "UEFAヨーロッパリーグ",
+      "competition_category": "european_cup",
+      "competition_flag": "🇪🇺",
+      "kickoff_jst": "2026-12-11T05:00:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 6,
+      "home_id": null,
+      "home_ja": "レフ・ポズナン",
+      "home_en": "Lech Poznań",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "フェレンツヴァーロシュ",
+      "away_en": "Ferencváros",
+      "away_crest": null,
+      "score": null,
+      "japanese_players": [],
+      "broadcasters": [
+        {
+          "name": "WOWOW",
+          "type": "exclusive",
+          "url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l",
+          "note": "〜2026-27"
+        }
+      ],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 UEFA Europa League league phase"
+    },
+    {
+      "id": "EL_2026-12-10_Celje_Olympi",
+      "competition_id": 3,
+      "competition_ja": "UEFAヨーロッパリーグ",
+      "competition_category": "european_cup",
+      "competition_flag": "🇪🇺",
+      "kickoff_jst": "2026-12-11T05:00:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 6,
+      "home_id": null,
+      "home_ja": "ツェリェ",
+      "home_en": "Celje",
+      "home_crest": null,
+      "away_id": 654,
+      "away_ja": "オリンピアコス",
+      "away_en": "Olympiacos",
+      "away_crest": "https://crests.football-data.org/654.png",
+      "score": null,
+      "japanese_players": [],
+      "broadcasters": [
+        {
+          "name": "WOWOW",
+          "type": "exclusive",
+          "url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l",
+          "note": "〜2026-27"
+        }
+      ],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 UEFA Europa League league phase"
+    },
+    {
+      "id": "EL_2026-12-10_Lyon_UnionS",
+      "competition_id": 3,
+      "competition_ja": "UEFAヨーロッパリーグ",
+      "competition_category": "european_cup",
+      "competition_flag": "🇪🇺",
+      "kickoff_jst": "2026-12-11T05:00:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 6,
+      "home_id": 523,
+      "home_ja": "リヨン",
+      "home_en": "Olympique Lyon",
+      "home_crest": "https://crests.football-data.org/523.png",
+      "away_id": 3929,
+      "away_ja": "ユニオン・サンジロワーズ",
+      "away_en": "Union Saint-Gilloise",
+      "away_crest": "https://crests.football-data.org/3929.png",
+      "score": null,
+      "japanese_players": [
+        {
+          "name_ja": "中村敬斗",
+          "position": "MF",
+          "side": "home"
+        },
+        {
+          "name_ja": "ハーフナー・ニッキ",
+          "position": "DF",
+          "side": "away"
+        }
+      ],
+      "broadcasters": [
+        {
+          "name": "WOWOW",
+          "type": "exclusive",
+          "url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l",
+          "note": "〜2026-27"
+        }
+      ],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 UEFA Europa League league phase"
+    },
+    {
+      "id": "EL_2026-12-10_Levski_Lilles",
+      "competition_id": 3,
+      "competition_ja": "UEFAヨーロッパリーグ",
+      "competition_category": "european_cup",
+      "competition_flag": "🇪🇺",
+      "kickoff_jst": "2026-12-11T05:00:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 6,
+      "home_id": null,
+      "home_ja": "レフスキ・ソフィア",
+      "home_en": "Levski Sofia",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "リレストレム",
+      "away_en": "Lillestrøm",
+      "away_crest": null,
+      "score": null,
+      "japanese_players": [],
+      "broadcasters": [
+        {
+          "name": "WOWOW",
+          "type": "exclusive",
+          "url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l",
+          "note": "〜2026-27"
+        }
+      ],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 UEFA Europa League league phase"
+    },
+    {
+      "id": "EL_2026-12-10_RealSo_Torree",
+      "competition_id": 3,
+      "competition_ja": "UEFAヨーロッパリーグ",
+      "competition_category": "european_cup",
+      "competition_flag": "🇪🇺",
+      "kickoff_jst": "2026-12-11T05:00:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 6,
+      "home_id": 92,
+      "home_ja": "レアル・ソシエダ",
+      "home_en": "Real Sociedad",
+      "home_crest": "https://crests.football-data.org/92.png",
+      "away_id": null,
+      "away_ja": "トレエンセ",
+      "away_en": "Torreense",
+      "away_crest": null,
+      "score": null,
+      "japanese_players": [
+        {
+          "name_ja": "久保建英",
+          "position": "MF/FW",
+          "side": "home"
+        }
+      ],
+      "broadcasters": [
+        {
+          "name": "WOWOW",
+          "type": "exclusive",
+          "url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l",
+          "note": "〜2026-27"
+        }
+      ],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 UEFA Europa League league phase"
+    },
+    {
+      "id": "EL_2026-12-10_Benfic_OFI",
+      "competition_id": 3,
+      "competition_ja": "UEFAヨーロッパリーグ",
+      "competition_category": "european_cup",
+      "competition_flag": "🇪🇺",
+      "kickoff_jst": "2026-12-11T05:00:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 6,
+      "home_id": 1903,
+      "home_ja": "ベンフィカ",
+      "home_en": "SL Benfica",
+      "home_crest": "https://crests.football-data.org/1903.png",
+      "away_id": null,
+      "away_ja": "OFIクレタ",
+      "away_en": "OFI",
+      "away_crest": null,
+      "score": null,
+      "japanese_players": [],
+      "broadcasters": [
+        {
+          "name": "WOWOW",
+          "type": "exclusive",
+          "url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l",
+          "note": "〜2026-27"
+        }
+      ],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 UEFA Europa League league phase"
+    },
+    {
+      "id": "EL_2027-01-21_Beikta_UnionS",
+      "competition_id": 3,
+      "competition_ja": "UEFAヨーロッパリーグ",
+      "competition_category": "european_cup",
+      "competition_flag": "🇪🇺",
+      "kickoff_jst": "2027-01-22T02:45:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 7,
+      "home_id": null,
+      "home_ja": "ベシクタシュ",
+      "home_en": "Beşiktaş",
+      "home_crest": null,
+      "away_id": 3929,
+      "away_ja": "ユニオン・サンジロワーズ",
+      "away_en": "Union Saint-Gilloise",
+      "away_crest": "https://crests.football-data.org/3929.png",
+      "score": null,
+      "japanese_players": [
+        {
+          "name_ja": "ハーフナー・ニッキ",
+          "position": "DF",
+          "side": "away"
+        }
+      ],
+      "broadcasters": [
+        {
+          "name": "WOWOW",
+          "type": "exclusive",
+          "url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l",
+          "note": "〜2026-27"
+        }
+      ],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 UEFA Europa League league phase"
+    },
+    {
+      "id": "EL_2027-01-21_Ararat_Celje",
+      "competition_id": 3,
+      "competition_ja": "UEFAヨーロッパリーグ",
+      "competition_category": "european_cup",
+      "competition_flag": "🇪🇺",
+      "kickoff_jst": "2027-01-22T02:45:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 7,
+      "home_id": null,
+      "home_ja": "アララト・アルメニア",
+      "home_en": "Ararat-Armenia",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "ツェリェ",
+      "away_en": "Celje",
+      "away_crest": null,
+      "score": null,
+      "japanese_players": [],
+      "broadcasters": [
+        {
+          "name": "WOWOW",
+          "type": "exclusive",
+          "url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l",
+          "note": "〜2026-27"
+        }
+      ],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 UEFA Europa League league phase"
+    },
+    {
+      "id": "EL_2027-01-21_Ferenc_Juvent",
+      "competition_id": 3,
+      "competition_ja": "UEFAヨーロッパリーグ",
+      "competition_category": "european_cup",
+      "competition_flag": "🇪🇺",
+      "kickoff_jst": "2027-01-22T02:45:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 7,
+      "home_id": null,
+      "home_ja": "フェレンツヴァーロシュ",
+      "home_en": "Ferencváros",
+      "home_crest": null,
+      "away_id": 109,
+      "away_ja": "ユヴェントス",
+      "away_en": "Juventus",
+      "away_crest": "https://crests.football-data.org/109.png",
+      "score": null,
+      "japanese_players": [],
+      "broadcasters": [
+        {
+          "name": "WOWOW",
+          "type": "exclusive",
+          "url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l",
+          "note": "〜2026-27"
+        }
+      ],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 UEFA Europa League league phase"
+    },
+    {
+      "id": "EL_2027-01-21_Jagiel_Lyon",
+      "competition_id": 3,
+      "competition_ja": "UEFAヨーロッパリーグ",
+      "competition_category": "european_cup",
+      "competition_flag": "🇪🇺",
+      "kickoff_jst": "2027-01-22T02:45:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 7,
+      "home_id": null,
+      "home_ja": "ヤギエロニア・ビャウィストク",
+      "home_en": "Jagiellonia Białystok",
+      "home_crest": null,
+      "away_id": 523,
+      "away_ja": "リヨン",
+      "away_en": "Olympique Lyon",
+      "away_crest": "https://crests.football-data.org/523.png",
+      "score": null,
+      "japanese_players": [
+        {
+          "name_ja": "中村敬斗",
+          "position": "MF",
+          "side": "away"
+        }
+      ],
+      "broadcasters": [
+        {
+          "name": "WOWOW",
+          "type": "exclusive",
+          "url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l",
+          "note": "〜2026-27"
+        }
+      ],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 UEFA Europa League league phase"
+    },
+    {
+      "id": "EL_2027-01-21_Lilles_Bourne",
+      "competition_id": 3,
+      "competition_ja": "UEFAヨーロッパリーグ",
+      "competition_category": "european_cup",
+      "competition_flag": "🇪🇺",
+      "kickoff_jst": "2027-01-22T02:45:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 7,
+      "home_id": null,
+      "home_ja": "リレストレム",
+      "home_en": "Lillestrøm",
+      "home_crest": null,
+      "away_id": 1044,
+      "away_ja": "ボーンマス",
+      "away_en": "Bournemouth",
+      "away_crest": "https://crests.football-data.org/1044.png",
+      "score": null,
+      "japanese_players": [],
+      "broadcasters": [
+        {
+          "name": "WOWOW",
+          "type": "exclusive",
+          "url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l",
+          "note": "〜2026-27"
+        }
+      ],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 UEFA Europa League league phase"
+    },
+    {
+      "id": "EL_2027-01-21_NEC_Benfic",
+      "competition_id": 3,
+      "competition_ja": "UEFAヨーロッパリーグ",
+      "competition_category": "european_cup",
+      "competition_flag": "🇪🇺",
+      "kickoff_jst": "2027-01-22T02:45:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 7,
+      "home_id": 1915,
+      "home_ja": "NEC",
+      "home_en": "NEC",
+      "home_crest": "https://crests.football-data.org/1915.png",
+      "away_id": 1903,
+      "away_ja": "ベンフィカ",
+      "away_en": "SL Benfica",
+      "away_crest": "https://crests.football-data.org/1903.png",
+      "score": null,
+      "japanese_players": [],
+      "broadcasters": [
+        {
+          "name": "WOWOW",
+          "type": "exclusive",
+          "url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l",
+          "note": "〜2026-27"
+        }
+      ],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 UEFA Europa League league phase"
+    },
+    {
+      "id": "EL_2027-01-21_Olympi_TSGHof",
+      "competition_id": 3,
+      "competition_ja": "UEFAヨーロッパリーグ",
+      "competition_category": "european_cup",
+      "competition_flag": "🇪🇺",
+      "kickoff_jst": "2027-01-22T02:45:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 7,
+      "home_id": 654,
+      "home_ja": "オリンピアコス",
+      "home_en": "Olympiacos",
+      "home_crest": "https://crests.football-data.org/654.png",
+      "away_id": 2,
+      "away_ja": "ホッフェンハイム",
+      "away_en": "Hoffenheim",
+      "away_crest": "https://crests.football-data.org/2.png",
+      "score": null,
+      "japanese_players": [
+        {
+          "name_ja": "町田浩樹",
+          "position": "DF",
+          "side": "away"
+        }
+      ],
+      "broadcasters": [
+        {
+          "name": "WOWOW",
+          "type": "exclusive",
+          "url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l",
+          "note": "〜2026-27"
+        }
+      ],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 UEFA Europa League league phase"
+    },
+    {
+      "id": "EL_2027-01-21_RealSo_Viktor",
+      "competition_id": 3,
+      "competition_ja": "UEFAヨーロッパリーグ",
+      "competition_category": "european_cup",
+      "competition_flag": "🇪🇺",
+      "kickoff_jst": "2027-01-22T02:45:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 7,
+      "home_id": 92,
+      "home_ja": "レアル・ソシエダ",
+      "home_en": "Real Sociedad",
+      "home_crest": "https://crests.football-data.org/92.png",
+      "away_id": null,
+      "away_ja": "ヴィクトリア・プルゼニ",
+      "away_en": "Viktoria Plzeň",
+      "away_crest": null,
+      "score": null,
+      "japanese_players": [
+        {
+          "name_ja": "久保建英",
+          "position": "MF/FW",
+          "side": "home"
+        }
+      ],
+      "broadcasters": [
+        {
+          "name": "WOWOW",
+          "type": "exclusive",
+          "url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l",
+          "note": "〜2026-27"
+        }
+      ],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 UEFA Europa League league phase"
+    },
+    {
+      "id": "EL_2027-01-21_SturmG_OFI",
+      "competition_id": 3,
+      "competition_ja": "UEFAヨーロッパリーグ",
+      "competition_category": "european_cup",
+      "competition_flag": "🇪🇺",
+      "kickoff_jst": "2027-01-22T02:45:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 7,
+      "home_id": null,
+      "home_ja": "シュトゥルム・グラーツ",
+      "home_en": "Sturm Graz",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "OFIクレタ",
+      "away_en": "OFI",
+      "away_crest": null,
+      "score": null,
+      "japanese_players": [],
+      "broadcasters": [
+        {
+          "name": "WOWOW",
+          "type": "exclusive",
+          "url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l",
+          "note": "〜2026-27"
+        }
+      ],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 UEFA Europa League league phase"
+    },
+    {
+      "id": "EL_2027-01-21_AZ_Dinamo",
+      "competition_id": 3,
+      "competition_ja": "UEFAヨーロッパリーグ",
+      "competition_category": "european_cup",
+      "competition_flag": "🇪🇺",
+      "kickoff_jst": "2027-01-22T05:00:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 7,
+      "home_id": 682,
+      "home_ja": "AZ",
+      "home_en": "AZ",
+      "home_crest": "https://crests.football-data.org/682.png",
+      "away_id": null,
+      "away_ja": "ディナモ・ザグレブ",
+      "away_en": "Dinamo Zagreb",
+      "away_crest": null,
+      "score": null,
+      "japanese_players": [
+        {
+          "name_ja": "毎熊晟矢",
+          "position": "DF/MF",
+          "side": "home"
+        },
+        {
+          "name_ja": "市原吏音",
+          "position": "DF",
+          "side": "home"
+        }
+      ],
+      "broadcasters": [
+        {
+          "name": "WOWOW",
+          "type": "exclusive",
+          "url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l",
+          "note": "〜2026-27"
+        }
+      ],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 UEFA Europa League league phase"
+    },
+    {
+      "id": "EL_2027-01-21_BayerL_RedBul",
+      "competition_id": 3,
+      "competition_ja": "UEFAヨーロッパリーグ",
+      "competition_category": "european_cup",
+      "competition_flag": "🇪🇺",
+      "kickoff_jst": "2027-01-22T05:00:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 7,
+      "home_id": 3,
+      "home_ja": "レバークーゼン",
+      "home_en": "Leverkusen",
+      "home_crest": "https://crests.football-data.org/3.png",
+      "away_id": null,
+      "away_ja": "ザルツブルク",
+      "away_en": "Red Bull Salzburg",
+      "away_crest": null,
+      "score": null,
+      "japanese_players": [],
+      "broadcasters": [
+        {
+          "name": "WOWOW",
+          "type": "exclusive",
+          "url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l",
+          "note": "〜2026-27"
+        }
+      ],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 UEFA Europa League league phase"
+    },
+    {
+      "id": "EL_2027-01-21_Celtic_Marsei",
+      "competition_id": 3,
+      "competition_ja": "UEFAヨーロッパリーグ",
+      "competition_category": "european_cup",
+      "competition_flag": "🇪🇺",
+      "kickoff_jst": "2027-01-22T05:00:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 7,
+      "home_id": null,
+      "home_ja": "セルティック",
+      "home_en": "Celtic",
+      "home_crest": null,
+      "away_id": 516,
+      "away_ja": "マルセイユ",
+      "away_en": "Marseille",
+      "away_crest": "https://crests.football-data.org/516.png",
+      "score": null,
+      "japanese_players": [],
+      "broadcasters": [
+        {
+          "name": "WOWOW",
+          "type": "exclusive",
+          "url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l",
+          "note": "〜2026-27"
+        }
+      ],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 UEFA Europa League league phase"
+    },
+    {
+      "id": "EL_2027-01-21_Crysta_Sparta",
+      "competition_id": 3,
+      "competition_ja": "UEFAヨーロッパリーグ",
+      "competition_category": "european_cup",
+      "competition_flag": "🇪🇺",
+      "kickoff_jst": "2027-01-22T05:00:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 7,
+      "home_id": 354,
+      "home_ja": "クリスタル・パレス",
+      "home_en": "Crystal Palace",
+      "home_crest": "https://crests.football-data.org/354.png",
+      "away_id": null,
+      "away_ja": "スパルタ・プラハ",
+      "away_en": "Sparta Prague",
+      "away_crest": null,
+      "score": null,
+      "japanese_players": [
+        {
+          "name_ja": "鎌田大地",
+          "position": "MF",
+          "side": "home"
+        },
+        {
+          "name_ja": "冨安健洋",
+          "position": "DF",
+          "side": "home"
+        }
+      ],
+      "broadcasters": [
+        {
+          "name": "WOWOW",
+          "type": "exclusive",
+          "url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l",
+          "note": "〜2026-27"
+        }
+      ],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 UEFA Europa League league phase"
+    },
+    {
+      "id": "EL_2027-01-21_Hapoel_CeltaV",
+      "competition_id": 3,
+      "competition_ja": "UEFAヨーロッパリーグ",
+      "competition_category": "european_cup",
+      "competition_flag": "🇪🇺",
+      "kickoff_jst": "2027-01-22T05:00:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 7,
+      "home_id": null,
+      "home_ja": "ハポエル・ベエルシェバ",
+      "home_en": "Hapoel Be'er Sheva",
+      "home_crest": null,
+      "away_id": 558,
+      "away_ja": "セルタ",
+      "away_en": "Celta",
+      "away_crest": "https://crests.football-data.org/558.png",
+      "score": null,
+      "japanese_players": [],
+      "broadcasters": [
+        {
+          "name": "WOWOW",
+          "type": "exclusive",
+          "url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l",
+          "note": "〜2026-27"
+        }
+      ],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 UEFA Europa League league phase"
+    },
+    {
+      "id": "EL_2027-01-21_LechPo_Torree",
+      "competition_id": 3,
+      "competition_ja": "UEFAヨーロッパリーグ",
+      "competition_category": "european_cup",
+      "competition_flag": "🇪🇺",
+      "kickoff_jst": "2027-01-22T05:00:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 7,
+      "home_id": null,
+      "home_ja": "レフ・ポズナン",
+      "home_en": "Lech Poznań",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "トレエンセ",
+      "away_en": "Torreense",
+      "away_crest": null,
+      "score": null,
+      "japanese_players": [],
+      "broadcasters": [
+        {
+          "name": "WOWOW",
+          "type": "exclusive",
+          "url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l",
+          "note": "〜2026-27"
+        }
+      ],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 UEFA Europa League league phase"
+    },
+    {
+      "id": "EL_2027-01-21_Levski_Milan",
+      "competition_id": 3,
+      "competition_ja": "UEFAヨーロッパリーグ",
+      "competition_category": "european_cup",
+      "competition_flag": "🇪🇺",
+      "kickoff_jst": "2027-01-22T05:00:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 7,
+      "home_id": null,
+      "home_ja": "レフスキ・ソフィア",
+      "home_en": "Levski Sofia",
+      "home_crest": null,
+      "away_id": 98,
+      "away_ja": "ミラン",
+      "away_en": "Milan",
+      "away_crest": "https://crests.football-data.org/98.png",
+      "score": null,
+      "japanese_players": [],
+      "broadcasters": [
+        {
+          "name": "WOWOW",
+          "type": "exclusive",
+          "url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l",
+          "note": "〜2026-27"
+        }
+      ],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 UEFA Europa League league phase"
+    },
+    {
+      "id": "EL_2027-01-21_Anderl_Sunder",
+      "competition_id": 3,
+      "competition_ja": "UEFAヨーロッパリーグ",
+      "competition_category": "european_cup",
+      "competition_flag": "🇪🇺",
+      "kickoff_jst": "2027-01-22T05:00:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 7,
+      "home_id": null,
+      "home_ja": "アンデルレヒト",
+      "home_en": "Anderlecht",
+      "home_crest": null,
+      "away_id": 71,
+      "away_ja": "サンダーランド",
+      "away_en": "Sunderland",
+      "away_crest": "https://crests.football-data.org/71.png",
+      "score": null,
+      "japanese_players": [],
+      "broadcasters": [
+        {
+          "name": "WOWOW",
+          "type": "exclusive",
+          "url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l",
+          "note": "〜2026-27"
+        }
+      ],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 UEFA Europa League league phase"
+    },
+    {
+      "id": "EL_2027-01-21_Rennes_Omonia",
+      "competition_id": 3,
+      "competition_ja": "UEFAヨーロッパリーグ",
+      "competition_category": "european_cup",
+      "competition_flag": "🇪🇺",
+      "kickoff_jst": "2027-01-22T05:00:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 7,
+      "home_id": 529,
+      "home_ja": "レンヌ",
+      "home_en": "Stade Rennais",
+      "home_crest": "https://crests.football-data.org/529.png",
+      "away_id": null,
+      "away_ja": "オモニア",
+      "away_en": "Omonia",
+      "away_crest": null,
+      "score": null,
+      "japanese_players": [],
+      "broadcasters": [
+        {
+          "name": "WOWOW",
+          "type": "exclusive",
+          "url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l",
+          "note": "〜2026-27"
+        }
+      ],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 UEFA Europa League league phase"
+    },
+    {
+      "id": "EL_2027-01-28_Milan_Ararat",
+      "competition_id": 3,
+      "competition_ja": "UEFAヨーロッパリーグ",
+      "competition_category": "european_cup",
+      "competition_flag": "🇪🇺",
+      "kickoff_jst": "2027-01-29T05:00:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 8,
+      "home_id": 98,
+      "home_ja": "ミラン",
+      "home_en": "Milan",
+      "home_crest": "https://crests.football-data.org/98.png",
+      "away_id": null,
+      "away_ja": "アララト・アルメニア",
+      "away_en": "Ararat-Armenia",
+      "away_crest": null,
+      "score": null,
+      "japanese_players": [],
+      "broadcasters": [
+        {
+          "name": "WOWOW",
+          "type": "exclusive",
+          "url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l",
+          "note": "〜2026-27"
+        }
+      ],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 UEFA Europa League league phase"
+    },
+    {
+      "id": "EL_2027-01-28_Sparta_Rennes",
+      "competition_id": 3,
+      "competition_ja": "UEFAヨーロッパリーグ",
+      "competition_category": "european_cup",
+      "competition_flag": "🇪🇺",
+      "kickoff_jst": "2027-01-29T05:00:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 8,
+      "home_id": null,
+      "home_ja": "スパルタ・プラハ",
+      "home_en": "Sparta Prague",
+      "home_crest": null,
+      "away_id": 529,
+      "away_ja": "レンヌ",
+      "away_en": "Stade Rennais",
+      "away_crest": "https://crests.football-data.org/529.png",
+      "score": null,
+      "japanese_players": [],
+      "broadcasters": [
+        {
+          "name": "WOWOW",
+          "type": "exclusive",
+          "url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l",
+          "note": "〜2026-27"
+        }
+      ],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 UEFA Europa League league phase"
+    },
+    {
+      "id": "EL_2027-01-28_Bourne_Hapoel",
+      "competition_id": 3,
+      "competition_ja": "UEFAヨーロッパリーグ",
+      "competition_category": "european_cup",
+      "competition_flag": "🇪🇺",
+      "kickoff_jst": "2027-01-29T05:00:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 8,
+      "home_id": 1044,
+      "home_ja": "ボーンマス",
+      "home_en": "Bournemouth",
+      "home_crest": "https://crests.football-data.org/1044.png",
+      "away_id": null,
+      "away_ja": "ハポエル・ベエルシェバ",
+      "away_en": "Hapoel Be'er Sheva",
+      "away_crest": null,
+      "score": null,
+      "japanese_players": [],
+      "broadcasters": [
+        {
+          "name": "WOWOW",
+          "type": "exclusive",
+          "url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l",
+          "note": "〜2026-27"
+        }
+      ],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 UEFA Europa League league phase"
+    },
+    {
+      "id": "EL_2027-01-28_RedBul_Crysta",
+      "competition_id": 3,
+      "competition_ja": "UEFAヨーロッパリーグ",
+      "competition_category": "european_cup",
+      "competition_flag": "🇪🇺",
+      "kickoff_jst": "2027-01-29T05:00:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 8,
+      "home_id": null,
+      "home_ja": "ザルツブルク",
+      "home_en": "Red Bull Salzburg",
+      "home_crest": null,
+      "away_id": 354,
+      "away_ja": "クリスタル・パレス",
+      "away_en": "Crystal Palace",
+      "away_crest": "https://crests.football-data.org/354.png",
+      "score": null,
+      "japanese_players": [
+        {
+          "name_ja": "鎌田大地",
+          "position": "MF",
+          "side": "away"
+        },
+        {
+          "name_ja": "冨安健洋",
+          "position": "DF",
+          "side": "away"
+        }
+      ],
+      "broadcasters": [
+        {
+          "name": "WOWOW",
+          "type": "exclusive",
+          "url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l",
+          "note": "〜2026-27"
+        }
+      ],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 UEFA Europa League league phase"
+    },
+    {
+      "id": "EL_2027-01-28_Viktor_Jagiel",
+      "competition_id": 3,
+      "competition_ja": "UEFAヨーロッパリーグ",
+      "competition_category": "european_cup",
+      "competition_flag": "🇪🇺",
+      "kickoff_jst": "2027-01-29T05:00:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 8,
+      "home_id": null,
+      "home_ja": "ヴィクトリア・プルゼニ",
+      "home_en": "Viktoria Plzeň",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "ヤギエロニア・ビャウィストク",
+      "away_en": "Jagiellonia Białystok",
+      "away_crest": null,
+      "score": null,
+      "japanese_players": [],
+      "broadcasters": [
+        {
+          "name": "WOWOW",
+          "type": "exclusive",
+          "url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l",
+          "note": "〜2026-27"
+        }
+      ],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 UEFA Europa League league phase"
+    },
+    {
+      "id": "EL_2027-01-28_Dinamo_SturmG",
+      "competition_id": 3,
+      "competition_ja": "UEFAヨーロッパリーグ",
+      "competition_category": "european_cup",
+      "competition_flag": "🇪🇺",
+      "kickoff_jst": "2027-01-29T05:00:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 8,
+      "home_id": null,
+      "home_ja": "ディナモ・ザグレブ",
+      "home_en": "Dinamo Zagreb",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "シュトゥルム・グラーツ",
+      "away_en": "Sturm Graz",
+      "away_crest": null,
+      "score": null,
+      "japanese_players": [],
+      "broadcasters": [
+        {
+          "name": "WOWOW",
+          "type": "exclusive",
+          "url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l",
+          "note": "〜2026-27"
+        }
+      ],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 UEFA Europa League league phase"
+    },
+    {
+      "id": "EL_2027-01-28_Juvent_RealSo",
+      "competition_id": 3,
+      "competition_ja": "UEFAヨーロッパリーグ",
+      "competition_category": "european_cup",
+      "competition_flag": "🇪🇺",
+      "kickoff_jst": "2027-01-29T05:00:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 8,
+      "home_id": 109,
+      "home_ja": "ユヴェントス",
+      "home_en": "Juventus",
+      "home_crest": "https://crests.football-data.org/109.png",
+      "away_id": 92,
+      "away_ja": "レアル・ソシエダ",
+      "away_en": "Real Sociedad",
+      "away_crest": "https://crests.football-data.org/92.png",
+      "score": null,
+      "japanese_players": [
+        {
+          "name_ja": "久保建英",
+          "position": "MF/FW",
+          "side": "away"
+        }
+      ],
+      "broadcasters": [
+        {
+          "name": "WOWOW",
+          "type": "exclusive",
+          "url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l",
+          "note": "〜2026-27"
+        }
+      ],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 UEFA Europa League league phase"
+    },
+    {
+      "id": "EL_2027-01-28_Celje_NEC",
+      "competition_id": 3,
+      "competition_ja": "UEFAヨーロッパリーグ",
+      "competition_category": "european_cup",
+      "competition_flag": "🇪🇺",
+      "kickoff_jst": "2027-01-29T05:00:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 8,
+      "home_id": null,
+      "home_ja": "ツェリェ",
+      "home_en": "Celje",
+      "home_crest": null,
+      "away_id": 1915,
+      "away_ja": "NEC",
+      "away_en": "NEC",
+      "away_crest": "https://crests.football-data.org/1915.png",
+      "score": null,
+      "japanese_players": [],
+      "broadcasters": [
+        {
+          "name": "WOWOW",
+          "type": "exclusive",
+          "url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l",
+          "note": "〜2026-27"
+        }
+      ],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 UEFA Europa League league phase"
+    },
+    {
+      "id": "EL_2027-01-28_OFI_LechPo",
+      "competition_id": 3,
+      "competition_ja": "UEFAヨーロッパリーグ",
+      "competition_category": "european_cup",
+      "competition_flag": "🇪🇺",
+      "kickoff_jst": "2027-01-29T05:00:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 8,
+      "home_id": null,
+      "home_ja": "OFIクレタ",
+      "home_en": "OFI",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "レフ・ポズナン",
+      "away_en": "Lech Poznań",
+      "away_crest": null,
+      "score": null,
+      "japanese_players": [],
+      "broadcasters": [
+        {
+          "name": "WOWOW",
+          "type": "exclusive",
+          "url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l",
+          "note": "〜2026-27"
+        }
+      ],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 UEFA Europa League league phase"
+    },
+    {
+      "id": "EL_2027-01-28_Marsei_Anderl",
+      "competition_id": 3,
+      "competition_ja": "UEFAヨーロッパリーグ",
+      "competition_category": "european_cup",
+      "competition_flag": "🇪🇺",
+      "kickoff_jst": "2027-01-29T05:00:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 8,
+      "home_id": 516,
+      "home_ja": "マルセイユ",
+      "home_en": "Marseille",
+      "home_crest": "https://crests.football-data.org/516.png",
+      "away_id": null,
+      "away_ja": "アンデルレヒト",
+      "away_en": "Anderlecht",
+      "away_crest": null,
+      "score": null,
+      "japanese_players": [],
+      "broadcasters": [
+        {
+          "name": "WOWOW",
+          "type": "exclusive",
+          "url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l",
+          "note": "〜2026-27"
+        }
+      ],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 UEFA Europa League league phase"
+    },
+    {
+      "id": "EL_2027-01-28_Lyon_BayerL",
+      "competition_id": 3,
+      "competition_ja": "UEFAヨーロッパリーグ",
+      "competition_category": "european_cup",
+      "competition_flag": "🇪🇺",
+      "kickoff_jst": "2027-01-29T05:00:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 8,
+      "home_id": 523,
+      "home_ja": "リヨン",
+      "home_en": "Olympique Lyon",
+      "home_crest": "https://crests.football-data.org/523.png",
+      "away_id": 3,
+      "away_ja": "レバークーゼン",
+      "away_en": "Leverkusen",
+      "away_crest": "https://crests.football-data.org/3.png",
+      "score": null,
+      "japanese_players": [
+        {
+          "name_ja": "中村敬斗",
+          "position": "MF",
+          "side": "home"
+        }
+      ],
+      "broadcasters": [
+        {
+          "name": "WOWOW",
+          "type": "exclusive",
+          "url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l",
+          "note": "〜2026-27"
+        }
+      ],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 UEFA Europa League league phase"
+    },
+    {
+      "id": "EL_2027-01-28_Omonia_Beikta",
+      "competition_id": 3,
+      "competition_ja": "UEFAヨーロッパリーグ",
+      "competition_category": "european_cup",
+      "competition_flag": "🇪🇺",
+      "kickoff_jst": "2027-01-29T05:00:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 8,
+      "home_id": null,
+      "home_ja": "オモニア",
+      "home_en": "Omonia",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "ベシクタシュ",
+      "away_en": "Beşiktaş",
+      "away_crest": null,
+      "score": null,
+      "japanese_players": [],
+      "broadcasters": [
+        {
+          "name": "WOWOW",
+          "type": "exclusive",
+          "url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l",
+          "note": "〜2026-27"
+        }
+      ],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 UEFA Europa League league phase"
+    },
+    {
+      "id": "EL_2027-01-28_UnionS_Celtic",
+      "competition_id": 3,
+      "competition_ja": "UEFAヨーロッパリーグ",
+      "competition_category": "european_cup",
+      "competition_flag": "🇪🇺",
+      "kickoff_jst": "2027-01-29T05:00:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 8,
+      "home_id": 3929,
+      "home_ja": "ユニオン・サンジロワーズ",
+      "home_en": "Union Saint-Gilloise",
+      "home_crest": "https://crests.football-data.org/3929.png",
+      "away_id": null,
+      "away_ja": "セルティック",
+      "away_en": "Celtic",
+      "away_crest": null,
+      "score": null,
+      "japanese_players": [
+        {
+          "name_ja": "ハーフナー・ニッキ",
+          "position": "DF",
+          "side": "home"
+        }
+      ],
+      "broadcasters": [
+        {
+          "name": "WOWOW",
+          "type": "exclusive",
+          "url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l",
+          "note": "〜2026-27"
+        }
+      ],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 UEFA Europa League league phase"
+    },
+    {
+      "id": "EL_2027-01-28_CeltaV_Lilles",
+      "competition_id": 3,
+      "competition_ja": "UEFAヨーロッパリーグ",
+      "competition_category": "european_cup",
+      "competition_flag": "🇪🇺",
+      "kickoff_jst": "2027-01-29T05:00:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 8,
+      "home_id": 558,
+      "home_ja": "セルタ",
+      "home_en": "Celta",
+      "home_crest": "https://crests.football-data.org/558.png",
+      "away_id": null,
+      "away_ja": "リレストレム",
+      "away_en": "Lillestrøm",
+      "away_crest": null,
+      "score": null,
+      "japanese_players": [],
+      "broadcasters": [
+        {
+          "name": "WOWOW",
+          "type": "exclusive",
+          "url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l",
+          "note": "〜2026-27"
+        }
+      ],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 UEFA Europa League league phase"
+    },
+    {
+      "id": "EL_2027-01-28_Torree_Olympi",
+      "competition_id": 3,
+      "competition_ja": "UEFAヨーロッパリーグ",
+      "competition_category": "european_cup",
+      "competition_flag": "🇪🇺",
+      "kickoff_jst": "2027-01-29T05:00:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 8,
+      "home_id": null,
+      "home_ja": "トレエンセ",
+      "home_en": "Torreense",
+      "home_crest": null,
+      "away_id": 654,
+      "away_ja": "オリンピアコス",
+      "away_en": "Olympiacos",
+      "away_crest": "https://crests.football-data.org/654.png",
+      "score": null,
+      "japanese_players": [],
+      "broadcasters": [
+        {
+          "name": "WOWOW",
+          "type": "exclusive",
+          "url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l",
+          "note": "〜2026-27"
+        }
+      ],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 UEFA Europa League league phase"
+    },
+    {
+      "id": "EL_2027-01-28_Benfic_AZ",
+      "competition_id": 3,
+      "competition_ja": "UEFAヨーロッパリーグ",
+      "competition_category": "european_cup",
+      "competition_flag": "🇪🇺",
+      "kickoff_jst": "2027-01-29T05:00:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 8,
+      "home_id": 1903,
+      "home_ja": "ベンフィカ",
+      "home_en": "SL Benfica",
+      "home_crest": "https://crests.football-data.org/1903.png",
+      "away_id": 682,
+      "away_ja": "AZ",
+      "away_en": "AZ",
+      "away_crest": "https://crests.football-data.org/682.png",
+      "score": null,
+      "japanese_players": [
+        {
+          "name_ja": "毎熊晟矢",
+          "position": "DF/MF",
+          "side": "away"
+        },
+        {
+          "name_ja": "市原吏音",
+          "position": "DF",
+          "side": "away"
+        }
+      ],
+      "broadcasters": [
+        {
+          "name": "WOWOW",
+          "type": "exclusive",
+          "url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l",
+          "note": "〜2026-27"
+        }
+      ],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 UEFA Europa League league phase"
+    },
+    {
+      "id": "EL_2027-01-28_Sunder_Levski",
+      "competition_id": 3,
+      "competition_ja": "UEFAヨーロッパリーグ",
+      "competition_category": "european_cup",
+      "competition_flag": "🇪🇺",
+      "kickoff_jst": "2027-01-29T05:00:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 8,
+      "home_id": 71,
+      "home_ja": "サンダーランド",
+      "home_en": "Sunderland",
+      "home_crest": "https://crests.football-data.org/71.png",
+      "away_id": null,
+      "away_ja": "レフスキ・ソフィア",
+      "away_en": "Levski Sofia",
+      "away_crest": null,
+      "score": null,
+      "japanese_players": [],
+      "broadcasters": [
+        {
+          "name": "WOWOW",
+          "type": "exclusive",
+          "url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l",
+          "note": "〜2026-27"
+        }
+      ],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 UEFA Europa League league phase"
+    },
+    {
+      "id": "EL_2027-01-28_TSGHof_Ferenc",
+      "competition_id": 3,
+      "competition_ja": "UEFAヨーロッパリーグ",
+      "competition_category": "european_cup",
+      "competition_flag": "🇪🇺",
+      "kickoff_jst": "2027-01-29T05:00:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 8,
+      "home_id": 2,
+      "home_ja": "ホッフェンハイム",
+      "home_en": "Hoffenheim",
+      "home_crest": "https://crests.football-data.org/2.png",
+      "away_id": null,
+      "away_ja": "フェレンツヴァーロシュ",
+      "away_en": "Ferencváros",
+      "away_crest": null,
+      "score": null,
+      "japanese_players": [
+        {
+          "name_ja": "町田浩樹",
+          "position": "DF",
+          "side": "home"
+        }
+      ],
+      "broadcasters": [
+        {
+          "name": "WOWOW",
+          "type": "exclusive",
+          "url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l",
+          "note": "〜2026-27"
+        }
+      ],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 UEFA Europa League league phase"
     }
   ],
   "updated_yt_highlights": "2026-10-21T17:08:17.492125+09:00",
-  "updated_uefa_secondary": "2026-10-21T17:08:47.522020+09:00"
+  "updated_uefa_secondary": "2026-10-21T23:14:04.409843+09:00"
 }

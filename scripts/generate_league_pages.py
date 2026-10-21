@@ -1336,11 +1336,15 @@ def collect_competition_players(cfg: dict, all_players: list, all_matches: list)
     season_matches = [m for m in all_matches
                       if m.get("competition_id") == comp_id and (m.get("kickoff_jst") or "") >= start]
     team_ids = set()
+    team_jas = set()
     for m in season_matches:
         team_ids.add(m.get("home_id"))
         team_ids.add(m.get("away_id"))
+        team_jas.add(m.get("home_ja"))
+        team_jas.add(m.get("away_ja"))
     team_ids.discard(None)
-    # participant_clubs：試合データが無い大会（EL など）用。出場クラブの日本語名を手で書き、players.json の club_ja と突き合わせる
+    # participant_clubs：出場クラブの日本語名を手で書き、players.json の club_ja と突き合わせる
+    # （EL のように、試合データのクラブにIDが無い・players.json 側の club_id が無いクラブ用）
     part_clubs = set(cfg.get("participant_clubs") or [])
 
     def in_comp(p):
@@ -1358,35 +1362,43 @@ def collect_competition_players(cfg: dict, all_players: list, all_matches: list)
             q = dict(ep)
             q["extra"] = True
             players.append(q)
-    by_club = defaultdict(list)
-    for p in players:
-        by_club[p.get("club_id")].append(p)
     out = []
     for m in season_matches:
         m2 = dict(m)
         jp = []
         for side in ("home", "away"):
-            for p in by_club.get(m.get(f"{side}_id"), []):
-                jp.append({"name_ja": p.get("name_ja", ""), "position": p.get("position", ""), "side": side})
+            for p in players:
+                if player_in_match_side(p, m, side):
+                    jp.append({"name_ja": p.get("name_ja", ""), "position": p.get("position", ""), "side": side})
         m2["japanese_players"] = jp
         # players.json に居ないクラブ（extra_players）は、取り寄せ元の英語略称のかわりに日本語名を出す
         for side in ("home", "away"):
-            for p in by_club.get(m.get(f"{side}_id"), []):
-                if p.get("extra") and p.get("club_ja"):
+            for p in players:
+                if p.get("extra") and p.get("club_ja") and player_in_match_side(p, m, side):
                     m2[f"{side}_ja"] = p["club_ja"]
         out.append(m2)
     return players, out
 
 
-def club_competition_record(club_id, season_matches: list) -> str:
+def player_in_match_side(p: dict, m: dict, side: str) -> bool:
+    """選手 p のクラブが試合 m の side（home/away）か。
+    両方にIDがあればIDで、どちらかに無ければ日本語のクラブ名で突き合わせる（EL の Wikipedia 由来の試合用）。"""
+    pid, mid = p.get("club_id"), m.get(f"{side}_id")
+    if pid is not None and mid is not None:
+        return pid == mid
+    cj = p.get("club_ja")
+    return bool(cj) and cj == m.get(f"{side}_ja")
+
+
+def club_competition_record(p: dict, season_matches: list) -> str:
     w = d = l = 0
     for m in season_matches:
         sc = m.get("score") or {}
         if m.get("status") != "FINISHED" or sc.get("home") is None or sc.get("away") is None:
             continue
-        if m.get("home_id") == club_id:
+        if player_in_match_side(p, m, "home"):
             mine, other = sc["home"], sc["away"]
-        elif m.get("away_id") == club_id:
+        elif player_in_match_side(p, m, "away"):
             mine, other = sc["away"], sc["home"]
         else:
             continue
@@ -1398,11 +1410,11 @@ def club_competition_record(club_id, season_matches: list) -> str:
     return f"{w}勝{d}分{l}敗"
 
 
-def club_next_match(club_id, upcoming: list) -> str:
+def club_next_match(p: dict, upcoming: list) -> str:
     for m in upcoming:
-        if m.get("home_id") == club_id:
+        if player_in_match_side(p, m, "home"):
             return f'{format_kickoff_ja(m.get("kickoff_jst", ""))} 対{m.get("away_ja", "")}（ホーム）'
-        if m.get("away_id") == club_id:
+        if player_in_match_side(p, m, "away"):
             return f'{format_kickoff_ja(m.get("kickoff_jst", ""))} 対{m.get("home_ja", "")}（アウェー）'
     return "—"
 
@@ -1528,11 +1540,10 @@ def generate_competition_page(c_slug: str, cfg: dict, all_players: list, all_mat
     rows = []
     if season_matches:
         for p in players:
-            cid = p.get("club_id")
             rows.append(f'<tr><td>{plink(p)}</td><td>{esc(p.get("club_ja", ""))}</td><td>{esc(p.get("position", ""))}</td>'
-                        f'<td>{esc(club_competition_record(cid, season_matches))}</td><td>{esc(club_next_match(cid, upcoming))}</td></tr>')
+                        f'<td>{esc(club_competition_record(p, season_matches))}</td><td>{esc(club_next_match(p, upcoming))}</td></tr>')
         heads = f'<th>選手</th><th>クラブ</th><th>ポジション</th><th>クラブの今季<br>{esc(abbr)}成績</th><th>次の{esc(abbr)}試合<br>（日本時間）</th>'
-        src = ('出どころ：クラブの成績・日程は football-data.org の試合データ（' + esc(get_lastmod_jst())
+        src = ('出どころ：クラブの成績・日程は ' + esc(cfg.get("match_data_source", "football-data.org の試合データ")) + '（' + esc(get_lastmod_jst())
                + '時点）。選手ごとの出場数はまだ取れていないため、クラブの成績を出しています。「—」は試合が無い・まだ入っていないもの')
     else:
         # 試合データが無い大会：所属リーグを出す
