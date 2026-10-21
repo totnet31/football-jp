@@ -456,7 +456,133 @@ CLUB_WIKI_PAGES = {
 }
 
 
+# ─────────────────────────────────────────────
+# 今季（2026-27）用：--season 2026-27 で別ファイルに出す
+#   出力: data/player_stats_2026-27.json（既定の player_stats.json＝2025-26 は触らない）
+#   2025-26 の表題の「2025–26」を「2026–27」に置き換え、今季に新しく入ったクラブを足す
+# ─────────────────────────────────────────────
+CURRENT_SEASON = "2026-27"
+CLUB_WIKI_PAGES_EXTRA_2026_27 = {
+    "Aston Villa": "2026–27 Aston Villa F.C. season",
+    "Ipswich Town": "2026–27 Ipswich Town F.C. season",
+    "Bolton": "2026–27 Bolton Wanderers F.C. season",
+    "Bristol City": "2026–27 Bristol City F.C. season",
+    "Cagliari": "2026–27 Cagliari Calcio season",
+    "FC Schalke 04": "2026–27 FC Schalke 04 season",
+    "LOSC Lille": "2026–27 Lille OSC season",
+    "Olympique Lyonnais": "2026–27 Olympique Lyonnais season",
+    "PSV Eindhoven": "2026–27 PSV Eindhoven season",
+    "Valencia CF": "2026–27 Valencia CF season",
+    "Royale Union Saint-Gilloise": "2026–27 Royale Union Saint-Gilloise season",
+}
+
+
+def club_wiki_pages_for(season: str) -> dict:
+    if season == "2025-26":
+        return CLUB_WIKI_PAGES
+    a, b = season.split("-")
+    wiki_season = f"{a}–{b}"
+    pages = {k: v.replace("2025–26", wiki_season) for k, v in CLUB_WIKI_PAGES.items()}
+    if season == CURRENT_SEASON:
+        pages.update(CLUB_WIKI_PAGES_EXTRA_2026_27)
+    return pages
+
+
+def normalize_season_wikitext(wikitext: str) -> str:
+    """今季用：表の書き方の揺れ（小文字の efs・Extended football squad・Efs start 無し）をそろえる。"""
+    w = re.sub(r'\{\{\s*Extended football squad player', '{{Efs player', wikitext, flags=re.I)
+    w = re.sub(r'\{\{\s*Extended football squad start', '{{Efs start', w, flags=re.I)
+    w = re.sub(r'\{\{\s*efs player', '{{Efs player', w, flags=re.I)
+    w = re.sub(r'\{\{\s*efs start', '{{Efs start', w, flags=re.I)
+    if '{{Efs player' in w and '{{Efs start' not in w:
+        w = '{{Efs start|League}}\n' + w
+    return w
+
+
+_MONTHS = {m: i for i, m in enumerate(
+    ["January", "February", "March", "April", "May", "June", "July",
+     "August", "September", "October", "November", "December"], 1)}
+
+
+def wiki_as_of(wikitext: str) -> str:
+    """{{Updated|match played 18 October 2026}} などから一番新しい日付を YYYY-MM-DD で返す。"""
+    best = ""
+    for m in re.finditer(r'\{\{\s*updated\s*\|(?:match played\s*)?(\d{1,2}) (\w+) (\d{4})', wikitext, re.I):
+        mon = _MONTHS.get(m.group(2).capitalize())
+        if mon:
+            d = f"{int(m.group(3)):04d}-{mon:02d}-{int(m.group(1)):02d}"
+            best = max(best, d)
+    return best
+
+
+def main_season(season: str):
+    """今季の数字を別ファイルに出す（リーグ戦の出場・得点）。"""
+    out_name = f"player_stats_{season}.json"
+    players = load_json("players.json", {}).get("players", [])
+    existing = load_json(out_name, {}).get("stats", {})
+    pages = club_wiki_pages_for(season)
+    by_club = {}
+    for p in players:
+        by_club.setdefault(p.get("club_en", ""), []).append(p)
+
+    stats = {}
+    for club_en, club_players in by_club.items():
+        title = pages.get(club_en)
+        if not title:
+            print(f"  {club_en}: Wikipediaページ未登録、スキップ")
+            continue
+        print(f"  {club_en}: {title}")
+        wikitext = fetch_wikitext(title)
+        if not wikitext:
+            for p in club_players:
+                if p["name_en"] in existing and existing[p["name_en"]].get("club") == club_en:
+                    stats[p["name_en"]] = dict(existing[p["name_en"]], source="wikipedia_cached")
+            time.sleep(1)
+            continue
+        as_of = wiki_as_of(wikitext)
+        rows = parse_player_stats(normalize_season_wikitext(wikitext), club_en)
+        for p in club_players:
+            last = normalize_name(p["name_en"].split()[-1])
+            full = normalize_name(p["name_en"])
+            hit = None
+            for r in rows:
+                rn = normalize_name(r.get("name", ""))
+                if rn == full or (rn.split() and rn.split()[-1] == last):
+                    hit = r
+                    break
+            if hit:
+                stats[p["name_en"]] = {
+                    "apps": hit.get("league_apps", 0),
+                    "goals": hit.get("league_goals", 0),
+                    "total_apps": hit.get("total_apps", 0),
+                    "total_goals": hit.get("total_goals", 0),
+                    "club": club_en,
+                    "name_ja": p.get("name_ja", ""),
+                    "source": "wikipedia",
+                    "wiki_page": title,
+                    "as_of": as_of,
+                }
+                print(f"      ✅ {p['name_en']}: L {hit.get('league_apps', 0)}試合/{hit.get('league_goals', 0)}G（{as_of}時点）")
+        time.sleep(1.5)
+
+    output = {
+        "updated": datetime.now(JST).strftime("%Y-%m-%dT%H:%M:%S+09:00"),
+        "season": season,
+        "note": (f"{season}シーズンの数字。Wikipediaの各クラブ{season}シーズンページの成績表から取得。"
+                 "apps/goals はリーグ戦、total_* は全大会。as_of はページに書かれた『○日の試合まで』の日付。"
+                 "表に名前が無い選手（出場0など）は入らない。"),
+        "total_players": len(stats),
+        "stats": stats,
+    }
+    save_json(out_name, output)
+    print(f"\n完了！ {len(stats)} 選手分を data/{out_name} に保存しました。")
+
+
 def main():
+    if "--season" in sys.argv:
+        season = sys.argv[sys.argv.index("--season") + 1]
+        if season != "2025-26":
+            return main_season(season)
     print("players.json 読み込み中...")
     players_raw = load_json("players.json", {})
     players = players_raw.get("players", [])

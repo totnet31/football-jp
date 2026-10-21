@@ -356,7 +356,7 @@ def build_player_page_en(player: dict, slug: str, scorer_stats: dict,
     goals_val = (wiki_stats or scorer_stats or {}).get("goals", 0) if (wiki_stats or scorer_stats) else 0
     played_val = (wiki_stats or scorer_stats or {}).get("played", 0) if (wiki_stats or scorer_stats) else 0
     if goals_val and played_val:
-        desc = f"{name_en} ({position_en}, {club_en}) – {goals_val} goals in {played_val} apps this season. Match schedule, stats, and broadcaster info in JST. Japanese overseas player tracker."
+        desc = f"{name_en} ({position_en}, {club_en}) – {goals_val} goals in {played_val} apps {"in 2025-26" if wiki_stats else "this season"}. Match schedule, stats, and broadcaster info in JST. Japanese overseas player tracker."
     else:
         desc = f"{name_en} ({position_en}) plays for {club_en} in the {league_en}. Match schedule, stats, broadcasters, and career info updated in Japan Standard Time."
     if len(desc) > 160:
@@ -404,7 +404,7 @@ def build_player_page_en(player: dict, slug: str, scorer_stats: dict,
     if active_stats:
         stats_html = f"""
     <section class="player-section">
-      <h3>📊 Season Stats</h3>
+      <h3>📊 {"2025-26 Season Stats (League)" if wiki_stats else "2026-27 Season Stats"}</h3>
       <div class="stats-grid">
         <div class="stat-card">
           <div class="stat-label">Apps</div>
@@ -1294,6 +1294,24 @@ def main():
         size = out_path.stat().st_size
         generated.append((name_en, slug, size))
         print(f"  ✅ {name_en} ({name_ja}) → /en/players/{slug}/ ({size:,} bytes)")
+
+    # Players who returned to Japan (left_overseas): keep their pages with a note
+    from left_overseas import load_left, adjust_html, banner_text
+    left = load_left()
+    if left:
+        left_slugs = make_unique_slugs(players + left)
+        for j, entry in enumerate(left):
+            slug = left_slugs[len(players) + j]
+            p = dict(entry, note=banner_text(entry, "en"))
+            html = build_player_page_en(p, slug, get_player_scorer_stats(p, scorers_comps), [], [], {},
+                                        wiki_stats=get_player_wiki_stats(p, player_stats), services=services,
+                                        related_players=[], player_info=player_info.get(p.get("name_en")) or None,
+                                        highlights=[], player_videos=None)
+            html = adjust_html(html, entry, "en")
+            out_dir = OUTPUT_DIR / slug
+            out_dir.mkdir(parents=True, exist_ok=True)
+            (out_dir / "index.html").write_text(html, encoding="utf-8")
+            print(f"  ✅ {p.get('name_en')} (returned to Japan) → /en/players/{slug}/")
 
     print(f"\nTotal: {len(generated)} English player pages generated")
     return len(generated)
