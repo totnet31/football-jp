@@ -21,11 +21,12 @@
       club:    isEn ? '⚽ Club'    : '⚽ クラブ',
       league:  isEn ? '📋 League'  : '📋 リーグ',
       country: isEn ? '🏆 Country' : '🏆 国',
+      column:  isEn ? '📰 Feature' : '📰 特集',
     },
   };
 
   function getTypeIcon(type) {
-    return { player:'👤', club:'⚽', league:'📋', country:'🏆' }[type] || '🔎';
+    return { player:'👤', club:'⚽', league:'📋', country:'🏆', column:'📰' }[type] || '🔎';
   }
 
   function renderItem(item, query) {

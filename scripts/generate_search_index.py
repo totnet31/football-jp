@@ -302,6 +302,25 @@ def build_items():
             "url": url,
         })
 
+    # ---- 5. 特集（手書きのコラム。日本語のみ） ----
+    # data/league_guides.json の index.features に書いたページを入れる（/leagues/ の特集欄と同じ並び）
+    guides_path = os.path.join(DATA, "league_guides.json")
+    if os.path.exists(guides_path):
+        feats = (json.load(open(guides_path, encoding="utf-8")).get("index") or {}).get("features") or []
+        for f in feats:
+            url = f.get("url", "")
+            page = os.path.join(ROOT, url.strip("/"), "index.html")
+            if not url or not os.path.exists(page):
+                continue
+            items_ja.append({
+                "type": "column",
+                "id": url.strip("/").split("/")[-1],
+                "name_ja": f.get("search_name") or f.get("title", ""),
+                "name_en": f.get("search_name_en", ""),
+                "subtitle": f.get("search_sub", "特集"),
+                "url": url,
+            })
+
     return items_ja, items_en
 
 def main():
@@ -333,7 +352,8 @@ def main():
     print(f"\n内訳: 選手={sum(1 for i in items_ja if i['type']=='player')}, "
           f"クラブ={sum(1 for i in items_ja if i['type']=='club')}, "
           f"リーグ={sum(1 for i in items_ja if i['type']=='league')}, "
-          f"国={sum(1 for i in items_ja if i['type']=='country')}")
+          f"国={sum(1 for i in items_ja if i['type']=='country')}, "
+          f"特集={sum(1 for i in items_ja if i['type']=='column')}")
 
 if __name__ == "__main__":
     main()

@@ -33,9 +33,14 @@ SITE_NAME = "football-jp"
 SITE_URL = "https://football-jp.com"
 
 
+# クラブ一覧の案内リンクに出す人数（main() で players.json の数を入れる。2026-10-21 まで 68名 の手書きだった）
+TOTAL_PLAYERS = 0
+
+
 # ============================
 # broadcaster サービスマップ
 # ============================
+
 def load_services() -> dict:
     """broadcasters.json の services セクションを返す。"""
     if not BROADCASTERS_JSON.exists():
@@ -1530,7 +1535,7 @@ def build_clubs_index(clubs: dict, club_crest_map: dict) -> str:
     <p>データ提供: <a href="https://www.football-data.org/" target="_blank" rel="noopener">Football-Data.org</a></p>
     <p class="footer-links">
       <a href="/">football-jp トップへ</a> |
-      <a href="/players/">日本人選手一覧（68名）</a> |
+      <a href="/players/">日本人選手一覧（{TOTAL_PLAYERS}名）</a> |
       <a href="/privacy">プライバシーポリシー</a>
     </p>
   </footer>
@@ -1561,6 +1566,8 @@ def main():
     print(f"データ読み込み中...")
     players, matches, standings_comps, services, local_crests, news_items, club_info_data, standings_history = load_data()
     print(f"  選手数: {len(players)}")
+    global TOTAL_PLAYERS
+    TOTAL_PLAYERS = len(players)  # クラブ一覧の案内リンク「日本人選手一覧（◯名）」に使う
     print(f"  試合数: {len(matches)}")
     print(f"  ローカルエンブレム: {len(local_crests)} クラブ")
     print(f"  ニュース件数: {len(news_items)}")
