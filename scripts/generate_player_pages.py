@@ -1499,6 +1499,23 @@ function trackAffClick(el) {{
 """
 
 
+# 手書きの4ページにある案内リンク「日本人選手一覧（◯名）」。数は players.json から出す（2026-10-21 まで 68名 の手書きだった）
+STATIC_COUNT_PAGES = ["index.html", "calendar/index.html", "results/index.html", "standings/index.html"]
+_COUNT_LINK_RE = re.compile(r"日本人選手一覧（\d+名）")
+
+
+def update_static_player_count_links(n: int) -> None:
+    for rel in STATIC_COUNT_PAGES:
+        path = REPO_ROOT / rel
+        if not path.exists():
+            continue
+        text = path.read_text(encoding="utf-8")
+        new_text = _COUNT_LINK_RE.sub(f"日本人選手一覧（{n}名）", text)
+        if new_text != text:
+            path.write_text(new_text, encoding="utf-8")
+            print(f"  ✅ /{rel} の選手数リンク → {n}名")
+
+
 # ============================
 # 一覧ページHTML生成
 # ============================
@@ -1935,6 +1952,9 @@ def main():
     with open(index_path, "w", encoding="utf-8") as f:
         f.write(index_html)
     print(f"  ✅ /players/index.html → {index_path.stat().st_size:,} bytes")
+
+    # 手書きページ（トップ・カレンダー・結果・順位）の案内リンク「日本人選手一覧（◯名）」を人数に合わせる
+    update_static_player_count_links(len(players))
 
     print("\n完了！")
     return slug_map
