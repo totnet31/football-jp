@@ -196,7 +196,7 @@
     },
     {
       "name_ja": "神代慶人",
-      "name_en": "Yoshito Kamishiro",
+      "name_en": "Keito Kumashiro",
       "position": "FW",
       "club_ja": "フランクフルト",
       "club_en": "Eintracht Frankfurt",
@@ -204,13 +204,16 @@
       "league_ja": "ブンデスリーガ",
       "competition_id": 78,
       "api_player_id": null,
-      "note": "2026-27はセカンドチーム（フランクフルトU-21＝フランクフルトII・レギオナルリーガ南西＝4部）でプレー。トップチームの登録一覧に名前なし（2026-10-21確認）。ブンデスリーガ1部の人数には入れない",
+      "note": "2026-27シーズンはトップチームではなく、セカンドチームのアイントラハト・フランクフルトU-21（レギオナルリーガ南西＝ドイツ4部）でプレーしています（フランクフルト公式のU-21登録一覧・2026-10-21確認）。",
       "second_team": {
-        "team_ja": "フランクフルトII（U-21）",
-        "team_en": "Eintracht Frankfurt II (U21)",
-        "league_ja": "レギオナルリーガ南西（4部）",
-        "league_en": "Regionalliga Südwest (tier 4)",
-        "checked": "2026-10-21"
+        "team_ja": "アイントラハト・フランクフルトU-21",
+        "team_en": "Eintracht Frankfurt U21",
+        "league_ja": "レギオナルリーガ南西（ドイツ4部）",
+        "league_en": "Regionalliga Südwest (German 4th tier)",
+        "note_en": "In 2026-27 he plays for Eintracht Frankfurt's second team, Eintracht Frankfurt U21 (Regionalliga Südwest, German 4th tier), not the Bundesliga first team (club's official U21 squad list, checked 21 Oct 2026).",
+        "checked": "2026-10-21",
+        "parent_ja": "アイントラハト・フランクフルト",
+        "parent_en": "Eintracht Frankfurt"
       }
     },
     {
@@ -307,13 +310,16 @@
       "league_ja": "ブンデスリーガ",
       "competition_id": 78,
       "api_player_id": null,
-      "note": "2026-27はセカンドチーム（アウクスブルクII＝U23・レギオナルリーガ・バイエルン＝4部）でプレー。トップチームの登録一覧に名前なし（2026-10-21確認）。ブンデスリーガ1部の人数には入れない",
+      "note": "2026-27シーズンはトップチームではなく、セカンドチームのFCアウクスブルクII（U23・レギオナルリーガ・バイエルン＝ドイツ4部）でプレーしています（アウクスブルク公式のU23登録一覧・2026-10-21確認）。",
       "second_team": {
-        "team_ja": "アウクスブルクII（U23）",
-        "team_en": "FC Augsburg II (U23)",
-        "league_ja": "レギオナルリーガ・バイエルン（4部）",
-        "league_en": "Regionalliga Bayern (tier 4)",
-        "checked": "2026-10-21"
+        "team_ja": "FCアウクスブルクII",
+        "team_en": "FC Augsburg II",
+        "league_ja": "レギオナルリーガ・バイエルン（ドイツ4部）",
+        "league_en": "Regionalliga Bayern (German 4th tier)",
+        "note_en": "In 2026-27 he plays for FC Augsburg's second team, FC Augsburg II (U23, Regionalliga Bayern, German 4th tier), not the Bundesliga first team (club's official U23 squad list, checked 21 Oct 2026).",
+        "checked": "2026-10-21",
+        "parent_ja": "FCアウクスブルク",
+        "parent_en": "FC Augsburg"
       }
     },
     {

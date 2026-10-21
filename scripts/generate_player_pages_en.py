@@ -8,6 +8,7 @@ generate_player_pages_en.py
 
 from utils import is_result_pending, fix_unplayed_finished
 from translation_dict import has_japanese
+from second_team import is_second_team, page_player, adjust_html as adjust_second_team
 import json
 import os
 import re
@@ -1265,8 +1266,11 @@ def main():
         goal_events = get_player_goals(player, events, matches_dict)
         club_matches = get_club_matches(player, matches)
         standing = get_club_standing(player, standings_comps)
+        if is_second_team(player):
+            # セカンドチームの選手には、トップチームの試合・順位を出さない
+            goal_events, club_matches, standing = [], [], {}
         related = get_related_players(player, players, slug_map)
-        highlights = get_club_highlights(player, matches)
+        highlights = [] if is_second_team(player) else get_club_highlights(player, matches)
         pinfo = player_info.get(name_en, {})
         pvideos_raw = player_videos.get(name_en, {})
         if isinstance(pvideos_raw, dict):
@@ -1277,13 +1281,15 @@ def main():
             pvideos = []
 
         html = build_player_page_en(
-            player, slug, scorer_stats, goal_events, club_matches, standing,
+            page_player(player, "en"), slug, scorer_stats, goal_events, club_matches, standing,
             wiki_stats=wiki_stats, services=services,
             related_players=related,
             player_info=pinfo if pinfo else None,
             highlights=highlights,
             player_videos=pvideos if pvideos else None,
         )
+        if is_second_team(player):
+            html = adjust_second_team(html, player, "en")
 
         out_dir = OUTPUT_DIR / slug
         out_dir.mkdir(parents=True, exist_ok=True)

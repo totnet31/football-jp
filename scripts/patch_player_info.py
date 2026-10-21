@@ -114,7 +114,7 @@ PATCHES = {
             {"years": "2024–", "club": "Stoke City"},
         ],
     },
-    "Yoshito Kamishiro": {
+    "Keito Kumashiro": {
         "birth_date": "2007-10-25",
         "birth_place": "Kumamoto, Kumamoto, Japan",
         "birth_place_ja": "熊本県熊本市",
