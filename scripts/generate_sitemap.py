@@ -220,6 +220,15 @@ def build_sitemap() -> str:
                 league_urls.append((f"/leagues/{slug}/", "0.7", "weekly"))
     except Exception as e:
         print(f"[WARN] リーグURLの取得エラー: {e}")
+    # 大会ページ（data/league_guides.json の competitions・日本語のみ。英語版は無いので en には入れない）
+    comp_urls = []
+    try:
+        _g = json.loads((REPO_ROOT / "data" / "league_guides.json").read_text(encoding="utf-8"))
+        for _slug in (_g.get("competitions") or {}):
+            if (REPO_ROOT / "leagues" / _slug / "index.html").exists():
+                comp_urls.append((f"/leagues/{_slug}/", "0.7", "weekly"))
+    except Exception as e:
+        print(f"[WARN] 大会ページURLの取得エラー: {e}")
 
     en_league_urls = [(f"/en{path}", "0.6", "weekly") for path, _, _ in league_urls]
 
@@ -235,7 +244,7 @@ def build_sitemap() -> str:
         + sorted(country_urls, key=lambda x: x[0])
         + sorted(player_urls, key=lambda x: x[0])
         + sorted(club_urls, key=lambda x: x[0])
-        + sorted(league_urls, key=lambda x: x[0])
+        + sorted(league_urls + comp_urls, key=lambda x: x[0])
         + sorted(en_player_urls, key=lambda x: x[0])
         + sorted(en_club_urls, key=lambda x: x[0])
         + sorted(en_league_urls, key=lambda x: x[0])
