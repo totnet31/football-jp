@@ -451,7 +451,8 @@ def build_player_page(player: dict, slug: str, scorer_stats: dict,
     goals_val = (wiki_stats or scorer_stats or {}).get("goals", 0) if (wiki_stats or scorer_stats) else 0
     played_val = (wiki_stats or scorer_stats or {}).get("played", 0) if (wiki_stats or scorer_stats) else 0
     if goals_val and played_val:
-        desc_raw = f"{name_ja}（{position}・{club_ja}）の試合スケジュール・最新成績・配信局情報を日本時間で確認。今シーズン{goals_val}ゴール・{played_val}試合出場。{league_ja}で活躍する日本人海外組の最新データ。三笘薫・久保建英ら68名をまとめてチェックできる国内最速データベース。"
+        season_word = "2025-26シーズン" if wiki_stats else "今シーズン"
+        desc_raw = f"{name_ja}（{position}・{club_ja}）の試合スケジュール・最新成績・配信局情報を日本時間で確認。{season_word}{goals_val}ゴール・{played_val}試合出場。{league_ja}で活躍する日本人海外組の最新データ。三笘薫・久保建英ら68名をまとめてチェックできる国内最速データベース。"
     else:
         desc_raw = f"{name_ja}（{position}・{club_ja}）の試合スケジュール・最新成績・配信局情報を日本時間でチェック。{league_ja}在籍の日本人海外組。三笘薫・久保建英ら全68名の最新データをfootball-jpで一括確認。配信局・次の試合日程も掲載。"
     # 文字数調整（160字以内）
@@ -504,7 +505,7 @@ def build_player_page(player: dict, slug: str, scorer_stats: dict,
     if active_stats:
         stats_html = f"""
     <section class="player-section">
-      <h3>📊 今シーズン成績</h3>
+      <h3>📊 {"2025-26シーズン成績（リーグ戦）" if wiki_stats else "今シーズン（2026-27）成績"}</h3>
       <div class="stats-grid">
         <div class="stat-card">
           <div class="stat-label">出場試合</div>
@@ -1887,6 +1888,24 @@ def main():
         size = out_path.stat().st_size
         generated.append((name_ja, name_en, slug, size))
         print(f"  ✅ {name_ja} ({name_en}) → /players/{slug}/ ({size:,} bytes)")
+
+    # 日本に戻った選手（left_overseas）のページも残す（一覧・サイトマップには入れない）
+    from left_overseas import load_left, adjust_html, banner_text
+    left = load_left()
+    if left:
+        left_slugs = make_unique_slugs(players + left)
+        for j, entry in enumerate(left):
+            slug = left_slugs[len(players) + j]
+            p = dict(entry, note=banner_text(entry, "ja"))
+            html = build_player_page(p, slug, get_player_scorer_stats(p, scorers_comps), [], [], {},
+                                     wiki_stats=get_player_wiki_stats(p, player_stats), services=services,
+                                     related_players=[], player_info=player_info.get(p.get("name_en")),
+                                     highlights=[], player_videos=None)
+            html = adjust_html(html, entry, "ja")
+            out_dir = OUTPUT_DIR / slug
+            out_dir.mkdir(parents=True, exist_ok=True)
+            (out_dir / "index.html").write_text(html, encoding="utf-8")
+            print(f"  ✅ {p.get('name_ja')}（日本に復帰）→ /players/{slug}/")
 
     print(f"\n合計 {len(generated)} 選手ページ生成完了")
 

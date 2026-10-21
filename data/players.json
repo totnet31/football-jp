@@ -865,6 +865,78 @@
       "competition_id": 144,
       "api_player_id": null,
       "note": "2026年5月にSVリート（オーストリア）から加入（契約満了によるフリー・2029年まで）。ベルギーは無料プラン対象外"
+    },
+    {
+      "name_ja": "旗手怜央",
+      "name_en": "Reo Hatate",
+      "position": "MF",
+      "club_ja": "バーンリー",
+      "club_en": "Burnley",
+      "club_id": 328,
+      "league_ja": "チャンピオンシップ",
+      "competition_id": 40,
+      "api_player_id": null,
+      "note": "2026年9月1日にセルティックから完全移籍"
+    },
+    {
+      "name_ja": "髙橋仁胡",
+      "name_en": "Niko Takahashi",
+      "position": "DF",
+      "club_ja": "ホルシュタイン・キール",
+      "club_en": "Holstein Kiel",
+      "club_id": null,
+      "league_ja": "ブンデスリーガ2部",
+      "competition_id": 79,
+      "api_player_id": null,
+      "note": "2026年8月にセレッソ大阪から期限付き移籍"
+    },
+    {
+      "name_ja": "安部大晴",
+      "name_en": "Taisei Abe",
+      "position": "MF",
+      "club_ja": "ホルシュタイン・キール",
+      "club_en": "Holstein Kiel",
+      "club_id": null,
+      "league_ja": "ブンデスリーガ2部",
+      "competition_id": 79,
+      "api_player_id": null,
+      "note": "2026年7月にV・ファーレン長崎から期限付き移籍"
+    },
+    {
+      "name_ja": "関根大輝",
+      "name_en": "Hiroki Sekine",
+      "position": "DF",
+      "club_ja": "ホルシュタイン・キール",
+      "club_en": "Holstein Kiel",
+      "club_id": null,
+      "league_ja": "ブンデスリーガ2部",
+      "competition_id": 79,
+      "api_player_id": null,
+      "note": "2026年7月にスタッド・ランスから期限付き移籍"
+    },
+    {
+      "name_ja": "福田師王",
+      "name_en": "Shio Fukuda",
+      "position": "FW",
+      "club_ja": "カールスルーエ",
+      "club_en": "Karlsruher SC",
+      "club_id": null,
+      "league_ja": "ブンデスリーガ2部",
+      "competition_id": 79,
+      "api_player_id": null,
+      "note": "2026年7月にボルシアMGから完全移籍（2025-26は期限付きで在籍）"
+    },
+    {
+      "name_ja": "秋山裕紀",
+      "name_en": "Hiroki Akiyama",
+      "position": "MF",
+      "club_ja": "ダルムシュタット",
+      "club_en": "Darmstadt 98",
+      "club_id": null,
+      "league_ja": "ブンデスリーガ2部",
+      "competition_id": 79,
+      "api_player_id": null,
+      "note": "2026年7月にアルビレックス新潟から完全移籍（2025-26は期限付きで在籍）"
     }
   ],
   "left_overseas": [
@@ -879,7 +951,12 @@
       "competition_id": 40,
       "api_player_id": null,
       "note": "2025年7月にジル・ヴィセンテから移籍。リストの記載誤りを修正",
-      "left_note": "2026年9月17日に東京ヴェルディ（J1）へ期限付き移籍（2027年6月30日まで）"
+      "left_note": "2026年9月17日に東京ヴェルディ（J1）へ期限付き移籍（2027年6月30日まで）",
+      "current_club_ja": "東京ヴェルディ",
+      "current_club_en": "Tokyo Verdy",
+      "current_league_ja": "J1リーグ",
+      "current_league_en": "J1 League",
+      "left_note_en": "Now plays in the J.League for Tokyo Verdy (J1), on loan from Birmingham City since 17 September 2026 (until 30 June 2027)."
     },
     {
       "name_ja": "小川航基",
@@ -892,7 +969,12 @@
       "competition_id": 88,
       "api_player_id": null,
       "note": "",
-      "left_note": "2026年8月24日にFC町田ゼルビア（J1）へ完全移籍"
+      "left_note": "2026年8月24日にFC町田ゼルビア（J1）へ完全移籍",
+      "current_club_ja": "FC町田ゼルビア",
+      "current_club_en": "FC Machida Zelvia",
+      "current_league_ja": "J1リーグ",
+      "current_league_en": "J1 League",
+      "left_note_en": "Now plays in the J.League for FC Machida Zelvia (J1), after a permanent move from NEC Nijmegen on 24 August 2026."
     }
   ],
   "left_overseas_note": "海外クラブを離れて日本でプレー中の選手。リーグ・選手ページの作り手は players だけを読む。出どころは plan_leagues_20261021/players_update_20261021.md"

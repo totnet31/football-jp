@@ -831,7 +831,7 @@ def build_player_card(player: dict, player_slug: str, stats: dict) -> str:
       <div class="player-card-name-en">{esc(name_en)}</div>
       <div class="player-card-meta">
         <span class="player-pos-tag" style="background:{esc(pos_color)}20;color:{esc(pos_color)}">{esc(position)}</span>
-        <a href="{esc(club_link)}" class="player-club-link" onclick="event.stopPropagation()">{esc(club_ja)}</a>
+        <span class="player-club-link">{esc(club_ja)}</span>
       </div>
       {stats_html}
     </div>
@@ -853,6 +853,7 @@ GUIDE_CSS = (
     ".lg-watch-link{display:inline-block;margin-top:6px;padding:6px 12px;border-radius:6px;background:#0b1220;color:#fff;text-decoration:none}"
     ".lg-faq details{border-bottom:1px solid var(--c-border,#e5e7eb);padding:8px 0}.lg-faq summary{font-weight:600;cursor:pointer}"
     ".lg-faq p{margin:6px 0 0;line-height:1.8}"
+    "@media (max-width:600px){.lg-quick th,.lg-quick td{white-space:normal;font-size:13px;padding:6px 5px;min-width:3.5em}.lg-quick td:first-child{white-space:nowrap}}"
 )
 
 
@@ -912,6 +913,36 @@ def build_quick_table(players: list, seasoned: dict, slug_map: dict, season: str
         '<p class="lg-src">出どころ：' + esc("／".join(src)) + '</p>'
         '</section>'
     )
+
+
+def build_card_source_note(seasoned: dict) -> str:
+    """選手カードの数字の出どころと日付（カードのすぐ上に出す）。"""
+    as_ofs, has_cur, has_prev, used_fd = set(), False, False, False
+    for st in seasoned.values():
+        cur, prev = (st or {}).get("cur"), (st or {}).get("prev")
+        if cur:
+            has_cur = True
+            if cur.get("as_of"):
+                as_ofs.add(cur["as_of"])
+            if cur.get("src") == "football-data.org":
+                used_fd = True
+        if prev:
+            has_prev = True
+    if not (has_cur or has_prev):
+        return ""
+    parts = []
+    if has_cur:
+        t = f"{CURRENT_SEASON}＝リーグ戦（Wikipedia英語版の各クラブ{CURRENT_SEASON}シーズンページ"
+        if as_ofs:
+            t += f"・{min(as_ofs)}" + (f"〜{max(as_ofs)}" if len(as_ofs) > 1 else "") + "の試合まで"
+        t += "）"
+        if used_fd:
+            t += "、一部は football-data.org の得点者一覧"
+        parts.append(t)
+    if has_prev:
+        parts.append(f"{PREV_SEASON}＝前季のリーグ戦（Wikipedia英語版の各クラブ{PREV_SEASON}シーズンページ）")
+    return ('<p class="section-note" style="font-size:12px;color:#666;line-height:1.7;">カードの数字：'
+            + esc("／".join(parts)) + '</p>')
 
 
 def build_upcoming_section(upcoming_matches: list, services: dict, lg_slug: str, league_ja: str) -> str:
@@ -1140,6 +1171,7 @@ def generate_league_page(
     # ============================
     html_parts.append('<section class="league-section">')
     html_parts.append('<h2 class="section-title">在籍日本人選手</h2>')
+    html_parts.append(build_card_source_note(seasoned))
 
     sorted_clubs = sorted(clubs_grouped.keys())
     for club_en_key in sorted_clubs:

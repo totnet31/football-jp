@@ -172,7 +172,7 @@ def build_player_card_en(player: dict, player_slug: str, stats: dict) -> str:
       <div class="player-card-name-ja">{esc(name_en)}</div>
       <div class="player-card-meta">
         <span class="player-pos-tag" style="background:{esc(pos_color)}20;color:{esc(pos_color)}">{esc(position)}</span>
-        <a href="{esc(club_link)}" class="player-club-link" onclick="event.stopPropagation()">{esc(club_en)}</a>
+        <span class="player-club-link">{esc(club_en)}</span>
       </div>
       {stats_html}
     </div>
