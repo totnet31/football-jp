@@ -1,0 +1,54 @@
+{
+  "updated": "2026-10-21",
+  "note": "リーグページの手書きの文章（リード・どこで見られるか・よくある質問）。scripts/generate_league_pages.py が読む。ここに無いリーグは、これまでの形のまま出る。配信は公式ページで確かめた分だけ書く（checked＝確かめた日）。広告コードが来たら <!--AD-SLOT:キー--> の場所に差し込む。{n}＝人数、{season}＝シーズン、{names}＝選手名（自動）。",
+  "season": "2026-27",
+  "prev_season": "2025-26",
+  "index": {
+    "title": "海外サッカーの日本人選手一覧【{season}】リーグ別の人数・成績・見方｜football-jp",
+    "description": "{season}シーズン、football-jpで追いかけている海外リーグの日本人選手{n}人をリーグ別に一覧。プレミアリーグ・ブンデスリーガ・ラ・リーガなどの人数、主な選手、どこで見られるかを日本時間でまとめています。",
+    "watch_short": {
+      "プレミアリーグ": "U-NEXT",
+      "ラ・リーガ": "U-NEXT・DAZN（ABEMA de DAZN）",
+      "エールディビジ": "U-NEXT",
+      "ブンデスリーガ": "DAZN（ABEMA de DAZN）",
+      "セリエA": "DAZN（ABEMA de DAZN）",
+      "リーグ・アン": "DAZN（ABEMA de DAZN）",
+      "ジュピラー・プロ・リーグ": "DAZN（ABEMA de DAZN）",
+      "プリメイラ・リーガ": "DAZN（ABEMA de DAZN）"
+    },
+    "watch_sources": [
+      {"name": "U-NEXT サッカーパック（公式）", "url": "https://www.video.unext.jp/lp/football_pack", "checked": "2026-10-21"},
+      {"name": "ABEMA de DAZN 配信リーグ一覧（公式）", "url": "https://abema.tv/lp/abemadedazn-soccer-leaguelist", "checked": "2026-10-21"}
+    ]
+  },
+  "leagues": {
+    "premier-league": {
+      "title": "プレミアリーグの日本人選手一覧【{season}】{n}人の成績・次の試合・どこで見れる｜football-jp",
+      "description": "{season}シーズンのプレミアリーグでプレーする日本人選手{n}人（{names}）の所属クラブ、今季と2025-26の成績、次の試合を日本時間でまとめました。どこで見られるか（U-NEXT サッカーパック）も公式の料金つきで紹介。",
+      "lead_extra": "今季は鈴木彩艶（アストン・ヴィラ）・冨安健洋（クリスタル・パレス）・守田英正（ハル・シティ）・前田大然（イプスウィッチ）が新しくプレミアリーグのクラブに加わりました。",
+      "roster_notes": [
+        "高井幸大はトッテナム所属ですが、2026年9月1日から今季終わりまでシント＝トロイデン（ベルギー）へ期限付き移籍中のため、ベルギーリーグの人数に入れています（トッテナム公式・2026-09-01発表）。"
+      ],
+      "watch": {
+        "heading": "プレミアリーグはどこで見られる？",
+        "services": [
+          {
+            "key": "unext",
+            "name": "U-NEXT サッカーパック",
+            "scope": "プレミアリーグを全試合ライブ配信（見逃し配信あり）",
+            "price": "月額2,600円（税込）",
+            "trial": "サッカーパックだけの無料お試しはありません。U-NEXTの「月額プラン」（31日間無料トライアル）と一緒に申し込むと、初月のサッカーパックが1,400円になる案内があります。",
+            "url": "https://www.video.unext.jp/lp/football_pack",
+            "checked": "2026-10-21",
+            "source_note": "U-NEXT公式ページ（ページ内の表記：2026年10月現在）"
+          }
+        ],
+        "more_link": {"href": "/column/broadcast-guide-2025-26/", "text": "海外サッカーの見方まとめ（2025-26版）"}
+      },
+      "faq_watch": {
+        "q": "プレミアリーグはどこで見られる？",
+        "a": "日本では U-NEXT の「サッカーパック」（月額2,600円・税込）で全試合ライブ配信されています（U-NEXT公式ページで2026年10月21日に確認）。"
+      }
+    }
+  }
+}

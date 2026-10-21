@@ -26,7 +26,12 @@ MATCHES_JSON    = REPO_ROOT / "data" / "matches.json"
 STANDINGS_JSON  = REPO_ROOT / "data" / "standings.json"
 SCORERS_JSON    = REPO_ROOT / "data" / "scorers.json"
 BROADCASTERS_JSON = REPO_ROOT / "data" / "broadcasters.json"
-PLAYER_STATS_JSON = REPO_ROOT / "data" / "player_stats.json"
+PLAYER_STATS_JSON = REPO_ROOT / "data" / "player_stats.json"          # 2025-26（前季）の数字
+PLAYER_STATS_CUR_JSON = REPO_ROOT / "data" / "player_stats_2026-27.json"  # 2026-27（今季）の数字
+LEAGUE_GUIDES_JSON = REPO_ROOT / "data" / "league_guides.json"         # 手書きの文章（リード・見方・よくある質問）
+CURRENT_SEASON = "2026-27"
+PREV_SEASON = "2025-26"
+CUR_STATS_MAX_AGE_DAYS = 14  # 今季の数字は「○日時点」がこれより古ければ出さない
 OUTPUT_DIR      = REPO_ROOT / "leagues"
 
 GA4_ID    = "G-39G8CVXRW0"
@@ -452,6 +457,64 @@ def get_player_stats_data(player: dict, scorers_comps: dict, player_stats: dict)
 
 
 # ============================
+# シーズンの印つき成績（日本語ページ用。英語版は get_player_stats_data のまま）
+# ============================
+def load_cur_stats() -> dict:
+    if not PLAYER_STATS_CUR_JSON.exists():
+        return {}
+    with open(PLAYER_STATS_CUR_JSON, encoding="utf-8") as f:
+        return json.load(f).get("stats", {})
+
+
+def load_league_guides() -> dict:
+    if not LEAGUE_GUIDES_JSON.exists():
+        return {}
+    with open(LEAGUE_GUIDES_JSON, encoding="utf-8") as f:
+        return json.load(f)
+
+
+def get_seasoned_stats(player: dict, scorers_comps: dict, player_stats: dict, cur_stats: dict) -> dict:
+    """{"cur": {...} or None, "prev": {...} or None} を返す。
+    cur  = 今季（2026-27）リーグ戦。Wikipedia の今季ページ（as_of が新しいものだけ）→ 無ければ football-data.org の得点者一覧
+    prev = 前季（2025-26）リーグ戦。player_stats.json（Wikipedia 2025–26 ページ）
+    """
+    name_en = player.get("name_en", "")
+    cur = None
+    e = cur_stats.get(name_en)
+    if e and e.get("as_of"):
+        try:
+            as_of = datetime.strptime(e["as_of"], "%Y-%m-%d").replace(tzinfo=JST)
+            if (datetime.now(JST) - as_of).days <= CUR_STATS_MAX_AGE_DAYS:
+                cur = {"apps": e.get("apps", 0), "goals": e.get("goals", 0),
+                       "as_of": e["as_of"], "src": "Wikipedia"}
+        except ValueError:
+            pass
+    if cur is None:
+        comp_id = str(player.get("competition_id", ""))
+        club_id = player.get("club_id")
+        if comp_id in scorers_comps and name_en:
+            last_en = name_en.lower().split()[-1]
+            for s in scorers_comps[comp_id].get("scorers", []):
+                parts = (s.get("player_name") or "").lower().split()
+                if parts and parts[-1] == last_en and (not club_id or s.get("team_id") == club_id):
+                    cur = {"apps": s.get("playedMatches", 0), "goals": s.get("goals", 0),
+                           "as_of": "", "src": "football-data.org"}
+                    break
+    prev = None
+    pe = player_stats.get(name_en)
+    if pe and str(pe.get("wiki_page", "")).startswith("2025–26"):
+        prev = {"apps": pe.get("apps", 0), "goals": pe.get("goals", 0),
+                "club_ja": pe.get("club_ja", ""), "club_en": pe.get("club", "")}
+    return {"cur": cur, "prev": prev}
+
+
+def fmt_stat(st: dict) -> str:
+    if not st:
+        return "—"
+    return f'{st.get("apps", 0)}試合{st.get("goals", 0)}得点'
+
+
+# ============================
 # 試合データをリーグ別・日付別に整理
 # ============================
 def get_league_matches(matches: list, comp_id: int) -> dict:
@@ -734,6 +797,7 @@ def build_match_card(m: dict, services: dict, league_slug_str: str, is_result: b
 # 選手カード生成
 # ============================
 def build_player_card(player: dict, player_slug: str, stats: dict) -> str:
+    """stats は get_seasoned_stats() の戻り値（シーズンの印つきで出す）。"""
     name_ja = player.get("name_ja", "")
     name_en = player.get("name_en", "")
     position = player.get("position", "")
@@ -744,21 +808,18 @@ def build_player_card(player: dict, player_slug: str, stats: dict) -> str:
     initials = player_initials(name_en)
     pos_color = position_color(position)
 
-    goals = stats.get("goals", "")
-    assists = stats.get("assists", "")
-    played = stats.get("played", "")
-
-    stats_html = ""
-    if played or goals or assists:
-        stats_parts = []
-        if played:
-            stats_parts.append(f'<span class="stat-item">{esc(str(played))}試合</span>')
-        if goals:
-            stats_parts.append(f'<span class="stat-item stat-goal">{esc(str(goals))}G</span>')
-        if assists:
-            stats_parts.append(f'<span class="stat-item stat-assist">{esc(str(assists))}A</span>')
-        if stats_parts:
-            stats_html = f'<div class="player-card-stats">{"".join(stats_parts)}</div>'
+    stats_parts = []
+    for key, label in (("cur", CURRENT_SEASON), ("prev", PREV_SEASON)):
+        st = (stats or {}).get(key)
+        if not st:
+            continue
+        txt = f'{label} {st.get("apps", 0)}試合'
+        if st.get("goals"):
+            txt += f' {st.get("goals")}G'
+        if key == "prev" and st.get("club_ja") and st.get("club_en") != club_en:
+            txt += f'（{st.get("club_ja")}）'
+        stats_parts.append(f'<span class="stat-item">{esc(txt)}</span>')
+    stats_html = f'<div class="player-card-stats">{"".join(stats_parts)}</div>' if stats_parts else ""
 
     club_link = f'/clubs/{esc(club_slug)}/' if club_slug else "#"
 
@@ -779,6 +840,159 @@ def build_player_card(player: dict, player_slug: str, stats: dict) -> str:
 
 
 # ============================
+# 手書きの文章（league_guides.json）があるリーグ用の欄
+# ============================
+GUIDE_CSS = (
+    ".lg-lead{padding:14px 16px;line-height:1.8}.lg-lead p{margin:0 0 8px}"
+    ".lg-lead .lg-note{font-size:13px;color:#666}"
+    ".lg-quick .table-scroll{overflow-x:auto}.lg-quick table{width:100%;border-collapse:collapse;font-size:14px}"
+    ".lg-quick th,.lg-quick td{border-bottom:1px solid var(--c-border,#e5e7eb);padding:6px 8px;text-align:left;white-space:nowrap}"
+    ".lg-quick th{background:#f3f4f6;font-weight:600}.lg-src{font-size:12px;color:#666;line-height:1.7;margin-top:6px}"
+    ".lg-watch-card{border:1px solid var(--c-border,#e5e7eb);border-radius:8px;padding:12px 14px;margin:10px 0}"
+    ".lg-watch-card h3{margin:0 0 6px;font-size:16px}.lg-watch-card p{margin:4px 0;line-height:1.7}"
+    ".lg-watch-link{display:inline-block;margin-top:6px;padding:6px 12px;border-radius:6px;background:#0b1220;color:#fff;text-decoration:none}"
+    ".lg-faq details{border-bottom:1px solid var(--c-border,#e5e7eb);padding:8px 0}.lg-faq summary{font-weight:600;cursor:pointer}"
+    ".lg-faq p{margin:6px 0 0;line-height:1.8}"
+)
+
+
+def _player_club_list(players: list) -> str:
+    return "、".join(f'{p.get("name_ja", "")}（{p.get("club_ja", "")}）' for p in players)
+
+
+def build_guide_lead(league_ja: str, players: list, guide: dict, season: str, players_updated: str) -> str:
+    n = len(players)
+    parts = ['<section class="league-section lg-lead">']
+    parts.append(f'<p><strong>{esc(season)}シーズン、{esc(league_ja)}でプレーする日本人選手は{n}人です。</strong>'
+                 f'{esc(_player_club_list(players))}。</p>')
+    if guide.get("lead_extra"):
+        parts.append(f'<p>{esc(guide["lead_extra"])}</p>')
+    for note in guide.get("roster_notes", []):
+        parts.append(f'<p class="lg-note">※{esc(note)}</p>')
+    parts.append(f'<p class="lg-note">所属の確認日：{esc(players_updated)}／ページの更新日：{esc(get_lastmod_jst())}</p>')
+    parts.append('</section>')
+    return "\n".join(parts)
+
+
+def build_quick_table(players: list, seasoned: dict, slug_map: dict, season: str, cur_stats: dict) -> str:
+    rows = []
+    as_ofs = set()
+    used_fd = False
+    for p in sorted(players, key=lambda x: (x.get("club_ja", ""), x.get("name_ja", ""))):
+        name_en = p.get("name_en", "")
+        st = seasoned.get(name_en, {})
+        cur, prev = st.get("cur"), st.get("prev")
+        if cur and cur.get("as_of"):
+            as_ofs.add(cur["as_of"])
+        if cur and cur.get("src") == "football-data.org":
+            used_fd = True
+        prev_txt = fmt_stat(prev)
+        if prev and prev.get("club_ja") and prev.get("club_en") != p.get("club_en"):
+            prev_txt += f'（{prev["club_ja"]}）'
+        p_slug = slug_map.get(name_en, make_slug(name_en))
+        rows.append(
+            f'<tr><td><a href="/players/{esc(p_slug)}/">{esc(p.get("name_ja", ""))}</a></td>'
+            f'<td>{esc(p.get("club_ja", ""))}</td><td>{esc(p.get("position", ""))}</td>'
+            f'<td>{esc(fmt_stat(cur))}</td><td>{esc(prev_txt)}</td></tr>'
+        )
+    src = []
+    if as_ofs:
+        span = min(as_ofs) if len(as_ofs) == 1 else f"{min(as_ofs)}〜{max(as_ofs)}"
+        src.append(f"{season}：Wikipedia（英語版）の各クラブ{season}シーズンページの成績表（{span}の試合まで）")
+    if used_fd:
+        src.append(f"{season}：一部は football-data.org の得点者一覧")
+    src.append(f"{PREV_SEASON}：Wikipedia（英語版）の各クラブ{PREV_SEASON}シーズンページ（リーグ戦）。かっこ内は前季のクラブ")
+    src.append("「—」は数字が取れていない（出場なし・データ未掲載を含む）")
+    return (
+        '<section class="league-section lg-quick">'
+        f'<h2 class="section-title">日本人選手の早見表（{esc(season)}）</h2>'
+        '<div class="table-scroll"><table><thead><tr>'
+        f'<th>選手</th><th>クラブ</th><th>ポジション</th><th>今季 {esc(season)}<br>リーグ戦</th><th>前季 {esc(PREV_SEASON)}<br>リーグ戦</th>'
+        '</tr></thead><tbody>' + "".join(rows) + '</tbody></table></div>'
+        '<p class="lg-src">出どころ：' + esc("／".join(src)) + '</p>'
+        '</section>'
+    )
+
+
+def build_upcoming_section(upcoming_matches: list, services: dict, lg_slug: str, league_ja: str) -> str:
+    parts = ['<section class="league-section">',
+             f'<h2 class="section-title">{esc(league_ja)}の日本人選手 次の試合（日本時間）</h2>']
+    if upcoming_matches:
+        parts.append('<div class="match-cards-list">')
+        for m in upcoming_matches[:10]:
+            parts.append(build_match_card(m, services, lg_slug, is_result=False))
+        parts.append('</div>')
+    else:
+        parts.append('<p>この先2週間の試合予定は、まだ入っていません。</p>')
+    parts.append('<p style="text-align:right;margin-top:8px;"><a href="/" class="link-more">全試合スケジュール →</a></p>')
+    parts.append('</section>')
+    return "\n".join(parts)
+
+
+def build_watch_section(guide: dict, lg_slug: str) -> str:
+    w = guide.get("watch") or {}
+    services = w.get("services") or []
+    if not services:
+        return ""
+    parts = ['<section class="league-section lg-watch">',
+             f'<h2 class="section-title">{esc(w.get("heading", "どこで見られる？"))}</h2>']
+    for sv in services:
+        key = sv.get("key", "")
+        parts.append('<div class="lg-watch-card">')
+        parts.append(f'<h3>{esc(sv.get("name", ""))}</h3>')
+        for k in ("scope", "price", "trial"):
+            if sv.get(k):
+                parts.append(f'<p>{esc(sv[k])}</p>')
+        parts.append(f'<p class="lg-src">確認日：{esc(sv.get("checked", ""))}（{esc(sv.get("source_note", ""))}）</p>')
+        # 広告コードが来たら AD-SLOT の間を差し替える
+        parts.append(f'<!--AD-SLOT:{esc(key)}-->')
+        parts.append(
+            f'<a class="lg-watch-link" href="{esc(sv.get("url", ""))}" target="_blank" rel="nofollow noopener" '
+            f'data-svc="{esc(sv.get("name", ""))}" data-pagetype="league_watch" data-pageid="{esc(lg_slug)}" '
+            f'onclick="trackAffClick(this)">{esc(sv.get("name", ""))}の公式ページを見る</a>'
+        )
+        parts.append(f'<!--/AD-SLOT:{esc(key)}-->')
+        parts.append('</div>')
+    more = w.get("more_link")
+    if more:
+        parts.append(f'<p><a href="{esc(more["href"])}" class="link-more">{esc(more["text"])} →</a></p>')
+    parts.append('</section>')
+    return "\n".join(parts)
+
+
+def build_faq_items(league_ja: str, players: list, seasoned: dict, guide: dict, season: str, players_updated: str) -> list:
+    items = []
+    n = len(players)
+    items.append((
+        f"{league_ja}の日本人選手は何人？",
+        f"{season}シーズンは{n}人です（{players_updated}時点）。{_player_club_list(players)}。",
+    ))
+    best, best_names, as_ofs = 0, [], set()
+    for p in players:
+        cur = (seasoned.get(p.get("name_en", "")) or {}).get("cur")
+        if not cur:
+            continue
+        if cur.get("as_of"):
+            as_ofs.add(cur["as_of"])
+        g = cur.get("goals", 0) or 0
+        if g > best:
+            best, best_names = g, [p.get("name_ja", "")]
+        elif g == best and g > 0:
+            best_names.append(p.get("name_ja", ""))
+    when = f"{max(as_ofs)}までの試合" if as_ofs else "取得できた範囲"
+    if best > 0:
+        a = (f"{season}シーズンのリーグ戦では、{'・'.join(best_names)}の{best}得点が日本人で最多です"
+             f"（{when}・Wikipedia各クラブの今季ページの数字）。")
+    else:
+        a = f"{season}シーズンのリーグ戦で、まだ得点した日本人選手はいません（{when}）。"
+    items.append((f"{league_ja}の日本人で一番点を取っているのは？", a))
+    fw = guide.get("faq_watch")
+    if fw:
+        items.append((fw["q"], fw["a"]))
+    return items
+
+
+# ============================
 # リーグ別ページ生成
 # ============================
 def generate_league_page(
@@ -790,8 +1004,14 @@ def generate_league_page(
     player_stats: dict,
     services: dict,
     all_players: list,
+    cur_stats: dict = None,
+    guides: dict = None,
+    players_updated: str = "",
 ) -> str:
-    """1リーグ分のHTMLを返す。"""
+    """1リーグ分のHTMLを返す。guides（league_guides.json）にこのリーグの文章があれば、
+    リード・早見表・次の試合・どこで見られるか・よくある質問の形で出す。"""
+    cur_stats = cur_stats or {}
+    guides = guides or {}
     lg_en = league_en(league_ja)
     lg_slug = league_slug(league_ja)
     lg_flag = league_flag(league_ja)
@@ -813,14 +1033,24 @@ def generate_league_page(
 
     canonical = f"{SITE_URL}/leagues/{lg_slug}/"
     en_url = f"{SITE_URL}/en/leagues/{lg_slug}/"
+    guide = (guides.get("leagues") or {}).get(lg_slug)
+    season = guides.get("season", CURRENT_SEASON)
     title = f"{league_ja} の日本人選手 - 試合・配信情報 | football-jp"
     # メタdesc生成（100-160字）
     top_players = [p.get("name_ja", "") for p in players[:3]]
     top_names = "・".join(top_players) if top_players else ""
     desc_raw = f"{league_ja}に在籍する日本人選手{num_players}名の試合スケジュール・成績・配信局情報を日本時間で確認できる総合ハブページ。{top_names}などの最新ゴール数・出場試合・次の試合日程を一括チェック。海外サッカーファン必見。"
+    if guide:
+        all_names = "・".join(p.get("name_ja", "") for p in players)
+        fmt = {"n": num_players, "season": season, "names": all_names}
+        title = guide.get("title", title).format(**fmt)
+        desc_raw = guide.get("description", desc_raw).format(**fmt)
     if len(desc_raw) > 160:
         desc_raw = desc_raw[:157] + "…"
     description = desc_raw
+
+    # シーズンの印つき成績（選手ごと）
+    seasoned = {p.get("name_en", ""): get_seasoned_stats(p, scorers_comps, player_stats, cur_stats) for p in players}
 
     # Schema.org SportsLeague（強化版）
     schema_league = {
@@ -858,6 +1088,19 @@ def generate_league_page(
     html_parts = [common_head_ja(title, description, canonical, en_url)]
     html_parts.append(f'  <script type="application/ld+json">\n{schema}\n  </script>')
     html_parts.append(f'  <script type="application/ld+json">\n{schema_breadcrumb}\n  </script>')
+    faq_items = build_faq_items(league_ja, players, seasoned, guide, season, players_updated) if guide else []
+    if faq_items:
+        schema_faq = json.dumps({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+                {"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}}
+                for q, a in faq_items
+            ],
+        }, ensure_ascii=False, indent=2)
+        html_parts.append(f'  <script type="application/ld+json">\n{schema_faq}\n  </script>')
+    if guide:
+        html_parts.append(f'  <style>{GUIDE_CSS}</style>')
     html_parts.append('  <style>.breadcrumb{font-size:12px;color:#888;padding:8px 16px;background:#f8f9fa;border-bottom:1px solid var(--c-border,#e5e7eb)}.breadcrumb a{color:#555;text-decoration:none}.breadcrumb a:hover{color:var(--c-accent,#0047ab);text-decoration:underline}</style>')
     html_parts.append("</head>")
     html_parts.append('<body data-view="leagues">')
@@ -884,6 +1127,15 @@ def generate_league_page(
 </div>""")
 
     # ============================
+    # 手書きの文章があるリーグ：リード → 早見表 → 次の試合 → どこで見られるか
+    # ============================
+    if guide:
+        html_parts.append(build_guide_lead(league_ja, players, guide, season, players_updated))
+        html_parts.append(build_quick_table(players, seasoned, slug_map, season, cur_stats))
+        html_parts.append(build_upcoming_section(upcoming_matches, services, lg_slug, league_ja))
+        html_parts.append(build_watch_section(guide, lg_slug))
+
+    # ============================
     # 選手一覧（クラブ別グループ）
     # ============================
     html_parts.append('<section class="league-section">')
@@ -903,8 +1155,7 @@ def generate_league_page(
         html_parts.append('<div class="player-cards-grid">')
         for p in club_players:
             p_slug = slug_map.get(p.get("name_en", ""), make_slug(p.get("name_en", "")))
-            stats = get_player_stats_data(p, scorers_comps, player_stats)
-            html_parts.append(build_player_card(p, p_slug, stats))
+            html_parts.append(build_player_card(p, p_slug, seasoned.get(p.get("name_en", ""), {})))
         html_parts.append('</div>')
         html_parts.append('</div>')
 
@@ -934,7 +1185,7 @@ def generate_league_page(
     # ============================
     # 次節以降の予定
     # ============================
-    if upcoming_matches:
+    if upcoming_matches and not guide:
         html_parts.append('<section class="league-section">')
         html_parts.append('<h2 class="section-title">次節以降の試合予定</h2>')
         html_parts.append('<div class="match-cards-list">')
@@ -945,11 +1196,26 @@ def generate_league_page(
         html_parts.append('</section>')
 
     # ============================
+    # よくある質問
+    # ============================
+    if faq_items:
+        html_parts.append('<section class="league-section lg-faq">')
+        html_parts.append('<h2 class="section-title">よくある質問</h2>')
+        for q, a in faq_items:
+            html_parts.append(f'<details open><summary>{esc(q)}</summary><p>{esc(a)}</p></details>')
+        html_parts.append('</section>')
+
+    # ============================
     # 関連リンク
     # ============================
     html_parts.append('<section class="league-section">')
     html_parts.append('<h2 class="section-title">関連リンク</h2>')
     html_parts.append('<ul class="related-links">')
+    if guide:
+        more = (guide.get("watch") or {}).get("more_link")
+        if more:
+            html_parts.append(f'<li><a href="{esc(more["href"])}">{esc(more["text"])}</a></li>')
+        html_parts.append('<li><a href="/leagues/">海外サッカーの日本人選手一覧（リーグ別）</a></li>')
 
     # 選手リンク
     seen_slugs = set()
@@ -985,8 +1251,12 @@ def generate_league_page(
 # ============================
 # リーグ一覧ページ生成
 # ============================
-def generate_league_index(league_groups: dict) -> str:
+def generate_league_index(league_groups: dict, guides: dict = None, players_updated: str = "") -> str:
     """leagues/index.html のHTMLを返す。"""
+    guides = guides or {}
+    idx = guides.get("index") or {}
+    season = guides.get("season", CURRENT_SEASON)
+    total = sum(len(v) for v in league_groups.values())
     canonical = f"{SITE_URL}/leagues/"
     en_url = f"{SITE_URL}/en/leagues/"
     title = "リーグ別 日本人選手一覧 | football-jp"
@@ -994,6 +1264,9 @@ def generate_league_index(league_groups: dict) -> str:
         "プレミアリーグ・ブンデスリーガ・エールディビジ等、海外リーグに在籍する日本人選手をリーグ別に一覧。"
         "試合日程・リーグ順位・配信情報を日本時間でチェック。"
     )
+    if idx:
+        title = idx.get("title", title).format(season=season, n=total)
+        description = idx.get("description", description).format(season=season, n=total)
 
     html_parts = [common_head_ja(title, description, canonical, en_url)]
     html_parts.append('  <style>.breadcrumb{font-size:12px;color:#888;padding:8px 16px;background:#f8f9fa;border-bottom:1px solid var(--c-border,#e5e7eb)}.breadcrumb a{color:#555;text-decoration:none}.breadcrumb a:hover{color:var(--c-accent,#0047ab);text-decoration:underline}</style>')
@@ -1009,7 +1282,11 @@ def generate_league_index(league_groups: dict) -> str:
 
     html_parts.append('<div class="league-index-hero">')
     html_parts.append('<h2>リーグ一覧</h2>')
-    html_parts.append('<p>海外サッカーリーグに在籍する日本人選手をリーグ別に確認できます。</p>')
+    if idx:
+        html_parts.append(f'<p><strong>{esc(season)}シーズン、このサイトで追いかけている海外リーグの日本人選手は計{total}人です'
+                          f'（所属の確認日：{esc(players_updated)}）。</strong>リーグを選ぶと、選手ごとの成績・次の試合・どこで見られるかが分かります。</p>')
+    else:
+        html_parts.append('<p>海外サッカーリーグに在籍する日本人選手をリーグ別に確認できます。</p>')
     html_parts.append('</div>')
 
     html_parts.append('<section class="league-index-grid-section">')
@@ -1048,11 +1325,40 @@ def generate_league_index(league_groups: dict) -> str:
     html_parts.append('</div>')
     html_parts.append('</section>')
 
+    if idx:
+        html_parts.append(build_index_table(ordered_leagues, league_groups, idx, season))
+
     html_parts.append(common_footer_ja())
     html_parts.append('</body>')
     html_parts.append('</html>')
 
     return "\n".join(html_parts)
+
+
+def build_index_table(ordered_leagues: list, league_groups: dict, idx: dict, season: str) -> str:
+    """柱 /leagues/ の「リーグ別の人数・主な選手・どこで見られるか」表。"""
+    watch = idx.get("watch_short") or {}
+    rows = []
+    for lg in ordered_leagues:
+        ps = league_groups[lg]
+        names = "・".join(p.get("name_ja", "") for p in ps[:3]) + ("ほか" if len(ps) > 3 else "")
+        rows.append(
+            f'<tr><td><a href="/leagues/{esc(league_slug(lg))}/">{esc(lg)}</a></td><td>{len(ps)}人</td>'
+            f'<td>{esc(names)}</td><td>{esc(watch.get(lg, "—"))}</td></tr>'
+        )
+    srcs = "／".join(f'<a href="{esc(s["url"])}" target="_blank" rel="nofollow noopener">{esc(s["name"])}</a>（{esc(s["checked"])}確認）'
+                    for s in idx.get("watch_sources", []))
+    return (
+        '<section class="league-section lg-quick">'
+        f'<style>{GUIDE_CSS}</style>'
+        f'<h2 class="section-title">リーグ別の日本人選手の人数（{esc(season)}）</h2>'
+        '<div class="table-scroll"><table><thead><tr><th>リーグ</th><th>人数</th><th>主な選手</th><th>どこで見られる</th></tr></thead><tbody>'
+        + "".join(rows) +
+        '</tbody></table></div>'
+        f'<p class="lg-src">「どこで見られる」は公式ページで確かめた分だけ載せています（「—」はまだ確かめていないもの）。出どころ：{srcs}</p>'
+        '<p><a href="/column/broadcast-guide-2025-26/" class="link-more">海外サッカーの見方まとめ（2025-26版） →</a></p>'
+        '</section>'
+    )
 
 
 # ============================
@@ -1062,6 +1368,10 @@ def main():
     print("=== generate_league_pages.py 開始 ===")
     players, matches, standings_comps, scorers_comps, player_stats, services = load_all_data()
     print(f"  選手数: {len(players)}, 試合数: {len(matches)}")
+    cur_stats = load_cur_stats()
+    guides = load_league_guides()
+    with open(PLAYERS_JSON, encoding="utf-8") as f:
+        players_updated = json.load(f).get("updated", "")
 
     league_groups = group_players_by_league(players)
     print(f"  リーグ数: {len(league_groups)}")
@@ -1085,7 +1395,8 @@ def main():
             html = generate_league_page(
                 league_ja, lg_players, matches,
                 standings_comps, scorers_comps, player_stats, services,
-                players  # 全選手（slug重複管理用）
+                players,  # 全選手（slug重複管理用）
+                cur_stats=cur_stats, guides=guides, players_updated=players_updated,
             )
             out_path.write_text(html, encoding="utf-8")
             print(f"  [生成] {out_path}")
@@ -1098,7 +1409,7 @@ def main():
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
     index_path = OUTPUT_DIR / "index.html"
     try:
-        html = generate_league_index(league_groups)
+        html = generate_league_index(league_groups, guides=guides, players_updated=players_updated)
         index_path.write_text(html, encoding="utf-8")
         print(f"  [生成] {index_path}")
         generated += 1
