@@ -1339,15 +1339,22 @@ def collect_competition_players(cfg: dict, all_players: list, all_matches: list)
     for m in season_matches:
         team_ids.add(m.get("home_id"))
         team_ids.add(m.get("away_id"))
+    team_ids.discard(None)
+    # participant_clubs：試合データが無い大会（EL など）用。出場クラブの日本語名を手で書き、players.json の club_ja と突き合わせる
+    part_clubs = set(cfg.get("participant_clubs") or [])
+
+    def in_comp(p):
+        return p.get("club_id") in team_ids or (p.get("club_ja") in part_clubs)
+
     excluded = {e.get("name_ja") for e in cfg.get("excluded", [])}
     players = []
     for p in all_players:
         if p.get("second_team") or p.get("name_ja") in excluded:
             continue
-        if p.get("club_id") in team_ids:
+        if in_comp(p):
             players.append(dict(p))
     for ep in cfg.get("extra_players", []):
-        if ep.get("club_id") in team_ids:
+        if in_comp(ep):
             q = dict(ep)
             q["extra"] = True
             players.append(q)
@@ -1430,8 +1437,9 @@ def generate_competition_page(c_slug: str, cfg: dict, all_players: list, all_mat
     n = len(players)
     clubs = []
     for p in players:
-        if p.get("club_id") not in [c for c, _ in clubs]:
-            clubs.append((p.get("club_id"), p.get("club_ja", "")))
+        ck = p.get("club_id") or p.get("club_ja", "")
+        if ck not in [c for c, _ in clubs]:
+            clubs.append((ck, p.get("club_ja", "")))
     names = "・".join(p.get("name_ja", "") for p in players)
     fmt = {"n": n, "season": season, "names": names}
     title = cfg.get("title", f"{short}の日本人選手").format(**fmt)
@@ -1516,18 +1524,30 @@ def generate_competition_page(c_slug: str, cfg: dict, all_players: list, all_mat
     hp.append("\n".join(lead))
 
     # B 早見表
+    abbr = cfg.get("abbr", "CL")
     rows = []
-    for p in players:
-        cid = p.get("club_id")
-        rows.append(f'<tr><td>{plink(p)}</td><td>{esc(p.get("club_ja", ""))}</td><td>{esc(p.get("position", ""))}</td>'
-                    f'<td>{esc(club_competition_record(cid, season_matches))}</td><td>{esc(club_next_match(cid, upcoming))}</td></tr>')
+    if season_matches:
+        for p in players:
+            cid = p.get("club_id")
+            rows.append(f'<tr><td>{plink(p)}</td><td>{esc(p.get("club_ja", ""))}</td><td>{esc(p.get("position", ""))}</td>'
+                        f'<td>{esc(club_competition_record(cid, season_matches))}</td><td>{esc(club_next_match(cid, upcoming))}</td></tr>')
+        heads = f'<th>選手</th><th>クラブ</th><th>ポジション</th><th>クラブの今季<br>{esc(abbr)}成績</th><th>次の{esc(abbr)}試合<br>（日本時間）</th>'
+        src = ('出どころ：クラブの成績・日程は football-data.org の試合データ（' + esc(get_lastmod_jst())
+               + '時点）。選手ごとの出場数はまだ取れていないため、クラブの成績を出しています。「—」は試合が無い・まだ入っていないもの')
+    else:
+        # 試合データが無い大会：所属リーグを出す
+        for p in players:
+            lg = p.get("league_ja") or p.get("league_note", "")
+            lg_html = (f'<a href="/leagues/{esc(league_slug(p["league_ja"]))}/">{esc(lg)}</a>'
+                       if p.get("league_ja") and not p.get("extra") else esc(lg))
+            rows.append(f'<tr><td>{plink(p)}</td><td>{esc(p.get("club_ja", ""))}</td><td>{esc(p.get("position", ""))}</td><td>{lg_html}</td></tr>')
+        heads = '<th>選手</th><th>クラブ</th><th>ポジション</th><th>ふだんのリーグ</th>'
+        src = esc(cfg.get("no_match_data_note", "この大会の試合データはまだ取れていません。"))
     hp.append('<section class="league-section lg-quick">'
               f'<h2 class="section-title">{esc(short)}の日本人選手 早見表（{esc(season)}）</h2>'
-              '<div class="table-scroll"><table><thead><tr>'
-              f'<th>選手</th><th>クラブ</th><th>ポジション</th><th>クラブの今季<br>CL成績</th><th>次のCL試合<br>（日本時間）</th>'
+              '<div class="table-scroll"><table><thead><tr>' + heads +
               '</tr></thead><tbody>' + "".join(rows) + '</tbody></table></div>'
-              '<p class="lg-src">出どころ：クラブの成績・日程は football-data.org の試合データ（'
-              + esc(get_lastmod_jst()) + '時点）。選手ごとの出場数はまだ取れていないため、クラブの成績を出しています。「—」は試合が無い・まだ入っていないもの</p>'
+              '<p class="lg-src">' + src + '</p>'
               '</section>')
 
     # C 次の試合
@@ -1540,7 +1560,10 @@ def generate_competition_page(c_slug: str, cfg: dict, all_players: list, all_mat
             parts.append(build_match_card(m, services, c_slug, is_result=False))
         parts.append('</div>')
     else:
-        parts.append('<p>次の試合の日程は、まだ入っていません。</p>')
+        parts.append(f'<p>{esc(cfg.get("no_upcoming_note", "次の試合の日程は、まだ入っていません。"))}</p>')
+        if cfg.get("fixtures_link"):
+            fl = cfg["fixtures_link"]
+            parts.append(f'<p class="lg-src">日程は <a href="{esc(fl["href"])}" target="_blank" rel="nofollow noopener">{esc(fl["text"])}</a> で確かめられます。</p>')
     parts.append('</section>')
     hp.append("\n".join(parts))
 
@@ -1557,7 +1580,7 @@ def generate_competition_page(c_slug: str, cfg: dict, all_players: list, all_mat
         parts.append('</div>')
         parts.append('<p style="text-align:right;margin-top:8px;"><a href="/results/" class="link-more">すべての試合結果 →</a></p>')
     else:
-        parts.append('<p>今季の結果はまだありません。</p>')
+        parts.append(f'<p>{esc(cfg.get("no_results_note", "今季の結果はまだありません。"))}</p>')
     parts.append('</section>')
     hp.append("\n".join(parts))
 
@@ -1587,6 +1610,9 @@ def generate_competition_page(c_slug: str, cfg: dict, all_players: list, all_mat
             continue
         s = slug_map.get(p.get("name_en", ""), make_slug(p.get("name_en", "")))
         hp.append(f'<li><a href="/players/{esc(s)}/">{esc(p.get("name_ja", ""))} 選手ページ</a></li>')
+    for o_slug, o in (guides.get("competitions") or {}).items():
+        if o_slug != c_slug:
+            hp.append(f'<li><a href="/leagues/{esc(o_slug)}/">{esc(o.get("short_ja", o.get("name_ja", "")))}の日本人選手</a></li>')
     hp.append('<li><a href="/standings/">リーグ順位一覧</a></li>')
     hp.append('</ul>')
     hp.append('</section>')
