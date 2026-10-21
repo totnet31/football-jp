@@ -9,6 +9,7 @@ Wikipedia の league phase / knockout phase ページから Football box を抽�
 
 実装範囲：
 - EL 2026-27：リーグフェーズ（第1〜8節）＋ノックアウト（ページができ次第・全ラウンド）
+- ECL 2026-27：リーグフェーズ（第1〜6節）＋ノックアウト（ページができ次第・全ラウンド）
 - EL/ECL 2025-26：準決勝・決勝（従来どおり）
 - 試合終了後はスコアも取り込む
 
@@ -60,6 +61,8 @@ COMPETITIONS = [
         "flag": "🇪🇺",
         "sources": [
             {"page": "2025–26 UEFA Conference League knockout phase", "stages": ["SEMI_FINALS", "FINAL"], "legacy": True},
+            {"page": "2026–27 UEFA Conference League league phase", "stages": None},
+            {"page": "2026–27 UEFA Conference League knockout phase", "stages": None, "optional": True},
         ],
         "broadcasters": [
             {"name": "WOWOW", "type": "partial", "url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l", "note": "注目試合"},
@@ -108,6 +111,43 @@ WIKI_CLUBS = {
     "Stade Rennais FC": ("レンヌ", 529),
     "Sunderland A.F.C.": ("サンダーランド", 71),
     "TSG 1899 Hoffenheim": ("ホッフェンハイム", 2),
+    # 2026-27 ECL リーグフェーズ 36クラブ（2026-10-22 英語版Wikipediaで確認。全6節）
+    "AFC Ajax": ("アヤックス", 678),
+    "AS Monaco FC": ("モナコ", 548),
+    "Aarhus Gymnastikforening": ("AGFオーフス", None),
+    "Atalanta BC": ("アタランタ", 102),
+    "Brighton & Hove Albion F.C.": ("ブライトン", 397),
+    "CS Universitatea Craiova": ("ウニヴェルシタテア・クラヨーヴァ", None),
+    "F.C. Copenhagen": ("コペンハーゲン", 1876),
+    "FC Iberia 1999": ("イベリア1999", None),
+    "FC Kairat": ("カイラト", None),
+    "FC Lugano": ("ルガーノ", None),
+    "FC Midtjylland": ("ミッティラン", None),
+    "FC Nordsjælland": ("ノアシェラン", None),
+    "FC Thun": ("トゥーン", None),
+    "FC Twente": ("トゥエンテ", 666),
+    "FK Borac Banja Luka": ("ボラツ・バニャ・ルカ", None),
+    "FK Jablonec": ("ヤブロネツ", None),
+    "FK Kauno Žalgiris": ("カウノ・ジャルギリス", None),
+    "Getafe CF": ("ヘタフェ", 82),
+    "HNK Hajduk Split": ("ハイドゥク・スプリト", None),
+    "Heart of Midlothian F.C.": ("ハーツ", None),
+    "Inter Club d'Escaldes": ("インテル・クルブ・デスカルデス", None),
+    "KAA Gent": ("ヘント", None),
+    "KF Egnatia": ("エグナティア", None),
+    "Kuopion Palloseura": ("KuPS", None),
+    "Lincoln Red Imps F.C.": ("リンカーン・レッドインプス", None),
+    "Mjällby AIF": ("ミエルビー", None),
+    "PFC CSKA Sofia": ("CSKAソフィア", None),
+    "Pafos FC": ("パフォス", None),
+    "Panathinaikos F.C.": ("パナシナイコス", None),
+    "Red Star Belgrade": ("ツルヴェナ・ズヴェズダ", None),
+    "Riga FC": ("リガFC", None),
+    "S.C. Braga": ("ブラガ", 5613),
+    "SC Freiburg": ("フライブルク", 17),
+    "SK Brann": ("ブラン", None),
+    "Sint-Truidense VV": ("シント＝トロイデン", None),
+    "Trabzonspor": ("トラブゾンスポル", None),
 }
 
 # IDのあるクラブは、ほかのページと表記がずれないよう、football-data.org 由来の試合の名前（英語・日本語）を優先して使う
@@ -246,9 +286,10 @@ def to_jst_iso(date_str, time_str):
 
 
 def parse_score(s):
-    """'2–1' / '1–3' / '1–1 (a.e.t.)' → {home, away}"""
+    """'2–1' / '1−3' / '1–1 (a.e.t.)' → {home, away}"""
     s = re.sub(r"<ref.*?(</ref>|/>)", "", s, flags=re.DOTALL)
-    s = s.strip().replace("–", "-").replace("—", "-")
+    # ダッシュの書き方がページごとに違う（– en dash・— em dash・− マイナス記号。ECL は − を使う）
+    s = s.strip().replace("–", "-").replace("—", "-").replace("−", "-")
     m = re.match(r"^\s*(\d+)\s*-\s*(\d+)(?:\s|$|&nbsp;|\()", s + " ")
     if m:
         return {"home": int(m.group(1)), "away": int(m.group(2))}
