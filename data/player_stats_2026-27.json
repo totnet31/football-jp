@@ -1,8 +1,8 @@
 {
-  "updated": "2026-10-21T19:08:48+09:00",
+  "updated": "2026-10-21T19:51:33+09:00",
   "season": "2026-27",
   "note": "2026-27シーズンの数字。Wikipediaの各クラブ2026-27シーズンページの成績表から取得。apps/goals はリーグ戦、total_* は全大会。as_of はページに書かれた『○日の試合まで』の日付。表に名前が無い選手（出場0など）は入らない。",
-  "total_players": 27,
+  "total_players": 28,
   "stats": {
     "Wataru Endo": {
       "apps": 0,
@@ -278,6 +278,17 @@
       "source": "wikipedia",
       "wiki_page": "2026–27 Ipswich Town F.C. season",
       "as_of": "2026-10-17"
+    },
+    "Satoshi Tanaka": {
+      "apps": 5,
+      "goals": 0,
+      "total_apps": 6,
+      "total_goals": 0,
+      "club": "FC Schalke 04",
+      "name_ja": "田中聡",
+      "source": "wikipedia",
+      "wiki_page": "2026–27 FC Schalke 04 season",
+      "as_of": "2026-10-19"
     },
     "Takuya Ogiwara": {
       "apps": 1,

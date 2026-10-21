@@ -75,7 +75,7 @@ def build_player_index(players_data):
     idx = {}
     for p in players_data["players"]:
         cid = p.get("club_id")
-        if cid is None:
+        if cid is None or p.get("second_team"):  # セカンドチームの選手はトップチームの試合に載せない
             continue
         idx.setdefault(int(cid), []).append({
             "name_ja": p["name_ja"],
@@ -222,6 +222,14 @@ def main():
     # 新+旧をマージしてソート
     accumulated_matches.extend(all_matches)
     accumulated_matches.sort(key=lambda m: m["kickoff_jst"])
+
+    # セカンドチームでプレー中の選手（players.json の second_team）は、前回までのデータに残っていても外す
+    second_team_names = {p["name_ja"] for p in players["players"] if p.get("second_team")}
+    if second_team_names:
+        for m in accumulated_matches:
+            jp = m.get("japanese_players") or []
+            if any(p.get("name_ja") in second_team_names for p in jp):
+                m["japanese_players"] = [p for p in jp if p.get("name_ja") not in second_team_names]
 
     if preserved_tbd:
         print(f"[INFO] APIがnull返却した {preserved_tbd}件 のチーム情報を、前回データから補完しました。")

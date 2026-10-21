@@ -202,11 +202,15 @@ def _get_wikitable_section(wikitext: str) -> str:
         r'==\s*Statistics\s*==(.*?)(?===|\Z)',
         r'==\s*Squad statistics\s*==(.*?)(?===|\Z)',
     ]
+    first = ""
     for pat in patterns:
         m = re.search(pat, wikitext, re.DOTALL)
         if m:
-            return m.group(1)
-    return ""
+            # 見出しだけで中身が下の小見出し（===Squad statistics=== など）にある場合は、表を含む節を優先する
+            if "wikitable" in m.group(1):
+                return m.group(1)
+            first = first or m.group(1)
+    return first
 
 
 def _parse_header_cols(table_body: str):
@@ -281,6 +285,8 @@ def parse_wikitable_format(wikitext: str) -> list:
 
     table_body = table_match.group(1)
     has_goals, col_labels = _parse_header_cols(table_body)
+    # 「A（出場）・S（先発）・G（得点）・警告・退場」の5列で大会ごとに並ぶ表（例：2026–27 FC Schalke 04 season）
+    ass_layout = bool(re.search(r'\{\{abbr\|S\|Starts\}\}', table_body))
 
     # 行ごとに解析
     rows = re.split(r'\n\|-', table_body)
@@ -333,7 +339,13 @@ def parse_wikitable_format(wikitext: str) -> list:
         if not raw_values:
             continue
 
-        if has_goals:
+        if ass_layout and len(raw_values) >= 5 and len(raw_values) % 5 == 0:
+            # 先頭の5列＝リーグ戦、最後の5列＝全大会（Total）
+            league_apps = parse_apps(raw_values[0])
+            league_goals = parse_goals(raw_values[2])
+            total_apps = parse_apps(raw_values[-5])
+            total_goals = parse_goals(raw_values[-3])
+        elif has_goals:
             # Apps+Goalsペア型: [LeagueApps, LeagueGoals, CupApps, CupGoals, ..., TotalApps, TotalGoals, Yellow, Red]
             league_apps = parse_apps(raw_values[0])
             league_goals = parse_goals(raw_values[1]) if len(raw_values) > 1 else 0
