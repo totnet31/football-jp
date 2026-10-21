@@ -240,7 +240,7 @@
       "abbr": "CL"
     },
     "europa-league": {
-      "note": "大会ページ。ELは football-data.org の無料枠に無く matches.json に今季の試合が無いため、participant_clubs（出場クラブの日本語名）で players.json と突き合わせる。extra_players＝players.json に居ない登録選手（2つ以上の出どころで確かめた分だけ）。出場36クラブは英語版Wikipedia『2026–27 UEFA Europa League league phase』で照合（2026-10-21）。",
+      "note": "大会ページ。ELは football-data.org の無料枠に無いため、試合データは scripts/fetch_uefa_secondary.py が英語版Wikipedia『2026–27 UEFA Europa League league phase』から取り込む（1日3回）。日本人のクラブとは players.json の club_id、IDが無いクラブは日本語のクラブ名で突き合わせる。participant_clubs（出場クラブの日本語名）は試合データが取れなかったときの予備。extra_players＝players.json に居ない登録選手（2つ以上の出どころで確かめた分だけ）。出場36クラブは英語版Wikipediaで照合（2026-10-21）。",
       "competition_id": 3,
       "abbr": "EL",
       "name_ja": "UEFAヨーロッパリーグ",
@@ -248,6 +248,7 @@
       "name_en": "UEFA Europa League",
       "flag": "🇪🇺",
       "season_start": "2026-07-01",
+      "match_data_source": "英語版Wikipedia『2026–27 UEFA Europa League league phase』の試合記録（UEFA公式の記録が出典）",
       "participant_clubs": [
         "AZアルクマール",
         "レアル・ソシエダ",
