@@ -674,14 +674,11 @@ def parse_national_team_history(wikitext):
             continue
 
         # caps/goals を数値に変換
-        try:
-            caps = int(re.sub(r'[^\d]', '', caps_raw)) if caps_raw and re.sub(r'[^\d]', '', caps_raw) else None
-        except ValueError:
-            caps = None
-        try:
-            goals = int(re.sub(r'[^\d]', '', goals_raw)) if goals_raw and re.sub(r'[^\d]', '', goals_raw) else None
-        except ValueError:
-            goals = None
+        # 先頭の数字だけを使う（後ろに更新日などが続いていると数字がつながってしまうため）
+        _cm = re.match(r'\s*(\d+)', caps_raw or "")
+        caps = int(_cm.group(1)) if _cm else None
+        _gm = re.match(r'\s*(\d+)', goals_raw or "")
+        goals = int(_gm.group(1)) if _gm else None
 
         # team_ja 変換
         team_info = NATIONAL_TEAM_TRANSLATIONS.get(team_clean, {})
@@ -1032,7 +1029,8 @@ def extract_ja_career(ja_wikitext):
         for ck in club_keys:
             v = _extract_ja_field(ja_wikitext, ck)
             if v:
-                club = v
+                # 最後の項目で本文まで続けて拾うことがあるので、1行目だけを使う
+                club = v.split("\n")[0].strip()
                 break
 
         if club:

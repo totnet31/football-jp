@@ -7,6 +7,7 @@ generate_player_pages.py
 """
 
 from utils import is_result_pending, fix_unplayed_finished
+from second_team import is_second_team, page_player, adjust_html as adjust_second_team
 import json
 import os
 import re
@@ -1863,20 +1864,25 @@ def main():
         goal_events = get_player_goals(player, events, matches_dict)
         club_matches = get_club_matches(player, matches)
         standing = get_club_standing(player, standings_comps)
+        if is_second_team(player):
+            # セカンドチームの選手には、トップチームの試合・順位を出さない
+            goal_events, club_matches, standing = [], [], {}
         related_players = get_related_players(player, players, slug_map)
         pinfo = player_info.get(name_en)
-        highlights = get_club_highlights(player, matches)
+        highlights = [] if is_second_team(player) else get_club_highlights(player, matches)
         # 選手別ゴール集動画（player_videos.json）
         pv_entry = player_videos_data.get(name_en, {})
         player_vids = pv_entry.get("videos", []) if pv_entry else []
 
         # HTMLページ生成
-        html = build_player_page(player, slug, scorer_stats, goal_events, club_matches, standing,
+        html = build_player_page(page_player(player, "ja"), slug, scorer_stats, goal_events, club_matches, standing,
                                  wiki_stats=wiki_stats, services=services,
                                  related_players=related_players,
                                  player_info=pinfo,
                                  highlights=highlights,
                                  player_videos=player_vids if player_vids else None)
+        if is_second_team(player):
+            html = adjust_second_team(html, player, "ja")
 
         # 出力
         out_dir = OUTPUT_DIR / slug

@@ -152,7 +152,7 @@ def build_clubs(players: list) -> dict:
             "name_en": p.get("name_en", ""),
             "position": p.get("position", ""),
             "position_en": translate_position(p.get("position", "")),
-            "note": p.get("note", ""),
+            "note": (p.get("second_team") or {}).get("note_en") or p.get("note", ""),  # セカンドチームの選手は英語のメモを出す
         })
     return clubs
 
