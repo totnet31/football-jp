@@ -489,6 +489,58 @@ CLUB_WIKI_PAGES_EXTRA_2026_27 = {
 }
 
 
+# クラブの今季ページに成績表が無い・更新が止まっている選手は、選手本人の Wikipedia ページの
+# 「Career statistics」（クラブ別の表）の今季の行を使う。as_of はその表の {{updated|...}} の日付。
+# クラブページと選手ページの両方が取れたら、as_of が新しいほうを使う。
+#   キー＝players.json の name_en、値＝英語版 Wikipedia の選手ページ名
+PLAYER_WIKI_PAGES_2026_27 = {
+    "Takefusa Kubo": "Takefusa Kubo",      # 2026–27 Real Sociedad season の成績表が 9/5 で止まっている（2026-10-21 確認）
+    "Ryunosuke Sato": "Ryūnosuke Satō",    # 2026–27 Valencia CF season に成績表が無い（2026-10-21 確認）
+}
+
+
+def _wiki_date(text: str) -> str:
+    m = re.search(r'\{\{\s*updated\s*\|(?:match played\s*)?(\d{1,2}) (\w+) (\d{4})', text, re.I)
+    if not m:
+        return ""
+    mon = _MONTHS.get(m.group(2).capitalize())
+    return f"{int(m.group(3)):04d}-{mon:02d}-{int(m.group(1)):02d}" if mon else ""
+
+
+def _num(cell: str):
+    cell = re.sub(r'\{\{[^{}]*\}\}', '', cell)          # {{efn|...}} などを外す
+    cell = re.sub(r'<ref[^>]*/>|<ref[^>]*>.*?</ref>', '', cell)
+    cell = cell.split('|')[-1].strip()                   # colspan="2"|— の「—」側
+    return int(cell) if cell.isdigit() else None
+
+
+def parse_player_career_row(wikitext: str, season: str):
+    """選手ページの Career statistics（クラブ）表から、今季の行の
+    リーグ戦（先頭の2つ）と合計（最後の2つ）を返す。見つからなければ None。"""
+    a, b = season.split("-")
+    wiki_season = f"{a}–{b}"
+    head = re.search(r'==\s*Career statistics\s*==', wikitext, re.I)
+    if not head:
+        return None
+    body = wikitext[head.end():]
+    nxt = re.search(r'\n===?\s*International', body)
+    club_part = body[:nxt.start()] if nxt else body
+    as_of = _wiki_date(club_part)
+    m = re.search(r'\|\s*\[\[[^\]|]*' + re.escape(wiki_season) + r'[^\]]*\|\s*' + re.escape(wiki_season) + r'\s*\]\]', club_part)
+    if not m:
+        return None
+    rest = club_part[m.end():].split("\n|-", 1)[0]       # 今季の行（次の行区切りまで）
+    lines = [ln for ln in rest.split("\n") if "||" in ln]
+    if not lines:
+        return None
+    cells = [_num(c) for c in lines[0].lstrip("|").split("||")]
+    nums = [c for c in cells if c is not None]
+    if len(nums) < 4:
+        return None
+    return {"league_apps": nums[0], "league_goals": nums[1],
+            "total_apps": nums[-2], "total_goals": nums[-1], "as_of": as_of}
+
+
 def club_wiki_pages_for(season: str) -> dict:
     if season == "2025-26":
         return CLUB_WIKI_PAGES
@@ -576,6 +628,31 @@ def main_season(season: str):
                 }
                 print(f"      ✅ {p['name_en']}: L {hit.get('league_apps', 0)}試合/{hit.get('league_goals', 0)}G（{as_of}時点）")
         time.sleep(1.5)
+
+    # 選手ページでの補い（PLAYER_WIKI_PAGES_2026_27・as_of が新しいほうを使う）
+    if season == CURRENT_SEASON:
+        names_in_list = {p["name_en"]: p for p in players}
+        for name_en, title in PLAYER_WIKI_PAGES_2026_27.items():
+            p = names_in_list.get(name_en)
+            if not p:
+                continue
+            wikitext = fetch_wikitext(title)
+            row = parse_player_career_row(wikitext or "", season)
+            time.sleep(1.5)
+            if not row or (row.get("as_of") or "") < f"{season.split('-')[0]}-07-01":
+                # 日付が今季より前＝表がまだ今季の試合で更新されていない（数字を信じない）
+                print(f"  {name_en}: 選手ページ（{title}）に今季の数字なし（日付 {(row or {}).get('as_of') or '不明'}）")
+                continue
+            have = stats.get(name_en)
+            if have and (have.get("as_of") or "") >= row["as_of"]:
+                continue
+            stats[name_en] = {
+                "apps": row["league_apps"], "goals": row["league_goals"],
+                "total_apps": row["total_apps"], "total_goals": row["total_goals"],
+                "club": p.get("club_en", ""), "name_ja": p.get("name_ja", ""),
+                "source": "wikipedia_player_page", "wiki_page": title, "as_of": row["as_of"],
+            }
+            print(f"      ✅ {name_en}（選手ページ）: L {row['league_apps']}試合/{row['league_goals']}G（{row['as_of']}時点）")
 
     output = {
         "updated": datetime.now(JST).strftime("%Y-%m-%dT%H:%M:%S+09:00"),
