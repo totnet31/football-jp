@@ -21,6 +21,7 @@
       {"name": "ABEMA de DAZN 配信リーグ一覧（公式）", "url": "https://abema.tv/lp/abemadedazn-soccer-leaguelist", "checked": "2026-10-21"}
     ],
     "features": [
+      {"title": "チャンピオンズリーグの日本人選手【2026-27】出場選手・日程・結果と見る方法", "url": "/leagues/champions-league/", "search_name": "チャンピオンズリーグの日本人選手", "search_name_en": "Champions League Japanese players", "search_sub": "特集・CLの日本人と見る方法", "text": "2026-27 のCLに登録された日本人6人（鈴木彩艶・伊藤洋輝・渡辺剛・佐野航大・松岡大起・上田綺世）と、日本人が出る次の試合・最近の結果。WOWOW・Lemino の見方つき。"},
       {"title": "セルティックの日本人選手【2026-27】いまは何人？歴代10人と今の所属", "url": "/column/celtic-japanese-players/", "search_name": "セルティックの日本人選手", "search_name_en": "Celtic Japanese players", "search_sub": "特集・歴代10人と今の所属", "text": "2026-27 のセルティックに日本人は0人。中村俊輔・古橋亨梧・前田大然・旗手怜央ら歴代10人がいまどこでプレーしているかを表で整理（2026-10-21 時点）。"}
     ]
   },
@@ -131,6 +132,74 @@
       "faq_watch": {
         "q": "ラ・リーガはどこで見られる？",
         "a": "日本では U-NEXT の「サッカーパック」（月額2,600円・税込）で全試合ライブ配信されています（U-NEXT公式ページで2026年10月21日に確認）。DAZN（DAZN Standard 月額4,200円・税込）でもラ・リーガがライブ配信されていて、久保建英のレアル・ソシエダの試合はDAZNとU-NEXTの両方で見られます（DAZN公式ページ・公式ニュースで同日に確認）。"
+      }
+    }
+  },
+  "competitions": {
+    "champions-league": {
+      "note": "大会ページ（試合の大会で選手を集める）。matches.json の competition_id の今季の試合に出るクラブ × players.json のクラブで日本人を自動で集める。excluded＝クラブにいるが大会の登録から外れた選手、extra_players＝players.json に居ない登録選手（2つ以上の出どころで確かめた分だけ）。",
+      "competition_id": 2,
+      "name_ja": "UEFAチャンピオンズリーグ",
+      "short_ja": "チャンピオンズリーグ",
+      "name_en": "UEFA Champions League",
+      "flag": "🇪🇺",
+      "season_start": "2026-07-01",
+      "title": "チャンピオンズリーグの日本人選手【{season}】出場選手・日程・結果と見る方法｜football-jp",
+      "description": "{season}シーズンのUEFAチャンピオンズリーグに登録された日本人選手{n}人（{names}）の所属クラブ、日本人が出るCLの次の試合と最近の結果を日本時間でまとめました。どこで見られるか（WOWOW・Lemino）も公式の料金つきで紹介。",
+      "lead_extra": "鈴木彩艶・佐野航大・松岡大起は、今季が初めての欧州カップ戦です（ゲキサカ 2026-09-08）。",
+      "registration_sources": "ゲキサカ（2026-09-08「本日開幕の26-27欧州CLは日本人6人が登録メンバー入り」）・GOAL日本版（2026-09-07更新「チャンピオンズリーグ2026-27に出場する日本人選手は？」）",
+      "excluded": [
+        {"name_ja": "遠藤航", "note": "遠藤航（リバプール）は、リバプールがCLに出ていますが、今季のリーグフェーズの登録メンバーから外れているため、この人数には入れていません（ゲキサカ 2026-09-08・GOAL日本版 2026-09-07）。"}
+      ],
+      "extra_players": [
+        {
+          "name_ja": "松岡大起",
+          "name_en": "Daiki Matsuoka",
+          "position": "MF",
+          "club_ja": "スロヴァン・ブラチスラヴァ",
+          "club_id": 7509,
+          "league_note": "スロバキア1部",
+          "note": "松岡大起はアビスパ福岡からスロヴァン・ブラチスラヴァ（スロバキア）へ期限付き移籍中です（ゲキサカ 2026-09-08・GOAL日本版 2026-09-07・サッカーキング 2026-09-10）。このサイトの選手一覧にはまだ入っていないため、選手ページはありません。"
+        }
+      ],
+      "watch": {
+        "heading": "チャンピオンズリーグはどこで見られる？",
+        "services": [
+          {
+            "key": "wowow",
+            "name": "WOWOW",
+            "scope": "チャンピオンズリーグを予選プレーオフから決勝まで全試合配信。ヨーロッパリーグ（リーグフェーズ〜決勝の全試合）とカンファレンスリーグ（リーグフェーズ〜決勝の注目試合）も同じ料金で見られます。",
+            "price": "月額2,530円（税込）、またはシーズンパス12,100円（税込）",
+            "url_service": "WOWOW",
+            "url": "https://www.wowow.co.jp/sports/clel/",
+            "checked": "2026-10-21",
+            "source_note": "WOWOW公式「UEFAチャンピオンズリーグ／ヨーロッパリーグ」ページ"
+          },
+          {
+            "key": "lemino",
+            "name": "Lemino（Leminoプレミアム）",
+            "scope": "2026年10月14日のリーグフェーズ第2節から決勝まで、全試合をライブ配信。ヨーロッパリーグも10月以降は全試合配信。",
+            "price": "Leminoプレミアム：月額1,540円（税込・Web/ドコモショップで申し込み）。App Store・Google Playからは月額1,650円（税込）",
+            "trial": "初めて申し込む人は初月無料（Lemino公式の案内）",
+            "url": "https://lemino.docomo.ne.jp/leminonews/articles/lemino-uefa-champions-league-2026-27-livestreaming-all-matches-announcement",
+            "checked": "2026-10-21",
+            "source_note": "Lemino公式ニュース（2026-10-09掲載「UEFAチャンピオンズリーグ2026-27シーズンを10月よりLeminoで全試合ライブ配信決定」）"
+          }
+        ],
+        "more_link": {
+          "href": "/column/broadcast-guide-2025-26/",
+          "text": "海外サッカーの見方まとめ（2025-26版）"
+        }
+      },
+      "faq_extra": [
+        {
+          "q": "遠藤航はチャンピオンズリーグに出ないの？",
+          "a": "所属するリバプールはCLに出ていますが、遠藤航は今季のリーグフェーズの登録メンバーから外れています（ゲキサカ 2026-09-08・GOAL日本版 2026-09-07）。"
+        }
+      ],
+      "faq_watch": {
+        "q": "チャンピオンズリーグはどこで見られる？",
+        "a": "WOWOW が予選プレーオフから決勝まで全試合を配信しています（月額2,530円・シーズンパス12,100円、いずれも税込。WOWOW公式ページで2026年10月21日に確認）。Lemino でも10月14日のリーグフェーズ第2節から決勝まで全試合がライブ配信されます（Leminoプレミアム 月額1,540円・税込、初回初月無料。Lemino公式ニュースで同日に確認）。"
       }
     }
   }
