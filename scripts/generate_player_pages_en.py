@@ -6,7 +6,7 @@ generate_player_pages_en.py
 使い方: python3 scripts/generate_player_pages_en.py
 """
 
-from utils import is_result_pending, fix_unplayed_finished
+from utils import is_result_pending, fix_unplayed_finished, openligadb_matches_for_names
 from translation_dict import has_japanese
 from second_team import is_second_team, page_player, adjust_html as adjust_second_team
 import json
@@ -236,7 +236,8 @@ def get_player_goals(player: dict, events: dict, matches_dict: dict) -> list:
 def get_club_matches(player: dict, matches: list) -> list:
     club_id = player.get("club_id")
     if not club_id:
-        return []
+        # クラブ番号の無いブンデス2部の選手は、OpenLigaDB の試合を名前で選ぶ（日本語版と同じ・2026-10-22）
+        return [m for m, _side in openligadb_matches_for_names([player.get("name_ja")], matches)]
     club_matches = [m for m in matches if m.get("home_id") == club_id or m.get("away_id") == club_id]
     club_matches.sort(key=lambda x: x.get("kickoff_jst", ""), reverse=True)
     return club_matches
@@ -465,7 +466,12 @@ def build_player_page_en(player: dict, slug: str, scorer_stats: dict,
             comp_en_m = LEAGUE_JA_TO_EN.get(comp_ja_m, comp_ja_m)
             home_id = m.get("home_id")
             club_id = player.get("club_id")
-            is_home = home_id == club_id
+            if club_id:
+                is_home = home_id == club_id
+            else:
+                # クラブ番号の無い選手（ブンデス2部）は、試合データの日本人選手の側で決める
+                is_home = any(jp.get("name_ja") == player.get("name_ja") and jp.get("side") == "home"
+                              for jp in (m.get("japanese_players") or []))
             extra_cls = " hidden-extra" if idx >= 10 else ""
 
             date_display = ""
@@ -1196,6 +1202,7 @@ def build_player_page_en(player: dict, slug: str, scorer_stats: dict,
 
   <footer class="site-footer">
     <p>Data: <a href="https://www.football-data.org/" target="_blank" rel="noopener">Football-Data.org</a></p>
+    <p class="oldb-credit">2. Bundesliga fixtures &amp; results: <a href="https://www.openligadb.de/" target="_blank" rel="noopener">OpenLigaDB</a> (www.openligadb.de), licensed under <a href="https://opendatacommons.org/licenses/odbl/1-0/" target="_blank" rel="noopener">ODbL 1.0</a></p>
     <p class="footer-links">
       <a href="/en/">football-jp (English)</a> |
       <a href="/en/players/">Players</a> |
