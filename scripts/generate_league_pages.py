@@ -1107,6 +1107,8 @@ def generate_league_page(
     canonical = f"{SITE_URL}/leagues/{lg_slug}/"
     en_url = f"{SITE_URL}/en/leagues/{lg_slug}/"
     guide = (guides.get("leagues") or {}).get(lg_slug)
+    # 手書きの文章がまだ無いリーグでも「どこで見られる？」欄だけは出す（league_guides.json の watch_only）
+    watch_only = None if guide else (guides.get("watch_only") or {}).get(lg_slug)
     season = guides.get("season", CURRENT_SEASON)
     title = f"{league_ja} の日本人選手 - 試合・配信情報 | football-jp"
     # メタdesc生成（100-160字）
@@ -1172,7 +1174,7 @@ def generate_league_page(
             ],
         }, ensure_ascii=False, indent=2)
         html_parts.append(f'  <script type="application/ld+json">\n{schema_faq}\n  </script>')
-    if guide:
+    if guide or watch_only:
         html_parts.append(f'  <style>{GUIDE_CSS}</style>')
     html_parts.append('  <style>.breadcrumb{font-size:12px;color:#888;padding:8px 16px;background:#f8f9fa;border-bottom:1px solid var(--c-border,#e5e7eb)}.breadcrumb a{color:#555;text-decoration:none}.breadcrumb a:hover{color:var(--c-accent,#0047ab);text-decoration:underline}</style>')
     html_parts.append("</head>")
@@ -1207,6 +1209,8 @@ def generate_league_page(
         html_parts.append(build_quick_table(players, seasoned, slug_map, season, cur_stats))
         html_parts.append(build_upcoming_section(upcoming_matches, services, lg_slug, league_ja))
         html_parts.append(build_watch_section(guide, lg_slug, services))
+    elif watch_only:
+        html_parts.append(build_watch_section(watch_only, lg_slug, services))
 
     # ============================
     # 選手一覧（クラブ別グループ）

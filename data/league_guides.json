@@ -438,5 +438,138 @@
         "a": "WOWOW がリーグフェーズから決勝までの注目試合を配信しています（全試合ではありません。月額2,530円・CL・ELシーズンパス12,100円、いずれも税込。WOWOW公式ニュースで範囲を2026年10月22日に確認）。"
       }
     }
+  },
+  "watch_only": {
+    "_note": "手書きの文章（リード・早見表）がまだ無いリーグに「どこで見られる？」欄だけを出す。形は leagues の watch と同じ。公式ページで確かめた分だけ書く。確かめられなかったリーグ（ブンデスリーガ2部・リーグ・ドゥ）は入れない（2026-10-22 確認・根拠は 03_football-jp/plan_watch_20261022/broadcasters_check.md）。",
+    "serie-a": {
+      "watch": {
+        "heading": "セリエAはどこで見られる？",
+        "services": [
+          {
+            "key": "dazn",
+            "name": "DAZN",
+            "scope": "セリエAをライブ配信しています（全試合かどうかは公式ページに書かれていません）。ABEMAの中で見る「ABEMA de DAZN」でも、2026-27のセリエA（2026年8月23日開幕）が見られます。",
+            "price": "DAZN Standard：月額4,200円（税込）／年間プラン一括払い32,000円（税込）・月々払い3,200円（税込）。ABEMAの中で見る「ABEMA de DAZN」は月額3,800円（税込）・年間一括30,000円（税込）。",
+            "url": "https://www.dazn.com/ja-JP/welcome",
+            "checked": "2026-10-22",
+            "source_note": "DAZN公式ページ（スタンダードの内容に「セリエA」・料金）・ABEMA公式の「ABEMA de DAZN」配信リーグ一覧"
+          }
+        ],
+        "more_link": {
+          "href": "/column/broadcast-guide-2025-26/",
+          "text": "海外サッカーの見方まとめ（2025-26版）"
+        }
+      }
+    },
+    "ligue-1": {
+      "watch": {
+        "heading": "リーグ・アンはどこで見られる？",
+        "services": [
+          {
+            "key": "dazn",
+            "name": "DAZN",
+            "scope": "リーグ・アン（フランス1部）をライブ配信しています（全試合かどうかは公式ページに書かれていません）。ABEMAの中で見る「ABEMA de DAZN」でも、2026-27のリーグ・アン（2026年8月22日開幕）が見られます。",
+            "price": "DAZN Standard：月額4,200円（税込）／年間プラン一括払い32,000円（税込）・月々払い3,200円（税込）。ABEMAの中で見る「ABEMA de DAZN」は月額3,800円（税込）・年間一括30,000円（税込）。",
+            "url": "https://www.dazn.com/ja-JP/welcome",
+            "checked": "2026-10-22",
+            "source_note": "DAZN公式ページ（スタンダードの内容に「リーグアン」・料金）・ABEMA公式の「ABEMA de DAZN」配信リーグ一覧"
+          }
+        ],
+        "more_link": {
+          "href": "/column/broadcast-guide-2025-26/",
+          "text": "海外サッカーの見方まとめ（2025-26版）"
+        }
+      }
+    },
+    "jupiler-pro-league": {
+      "watch": {
+        "heading": "ジュピラー・プロ・リーグ（ベルギー）はどこで見られる？",
+        "services": [
+          {
+            "key": "dazn",
+            "name": "DAZN",
+            "scope": "ベルギーリーグをライブ配信しています（全試合かどうかは公式ページに書かれていません。例：10月26日 第9節 クルブ・ブルッヘ対シント=トロイデン）。ABEMAの中で見る「ABEMA de DAZN」でも、2026-27のベルギーリーグ（2026年8月7日開幕）が見られます。",
+            "price": "DAZN Standard：月額4,200円（税込）／年間プラン一括払い32,000円（税込）・月々払い3,200円（税込）。ABEMAの中で見る「ABEMA de DAZN」は月額3,800円（税込）・年間一括30,000円（税込）。",
+            "url": "https://www.dazn.com/ja-JP/welcome",
+            "checked": "2026-10-22",
+            "source_note": "DAZN公式ページ（スタンダードの内容に「ベルギーリーグ」・料金）・DAZN公式の番組表（2026-10-20掲載）・ABEMA公式の「ABEMA de DAZN」配信リーグ一覧"
+          },
+          {
+            "key": "bs10",
+            "name": "BS10（無料のBS放送）",
+            "scope": "日本人選手が多く所属するシント＝トロイデンVVの試合を、全国無料のBS放送で中継しています（全試合かどうかは公式ページに書かれていません）。",
+            "price": "無料",
+            "url": "https://www.bs10.jp/program/sports/soccer_basketball/gogo_stvv/",
+            "checked": "2026-10-22",
+            "source_note": "BS10公式「全力応援！シント＝トロイデン」ページの表記「BS10では『シント＝トロイデンVV（STVV）』の試合も中継！」"
+          }
+        ],
+        "more_link": {
+          "href": "/column/broadcast-guide-2025-26/",
+          "text": "海外サッカーの見方まとめ（2025-26版）"
+        }
+      }
+    },
+    "primeira-liga": {
+      "watch": {
+        "heading": "プリメイラ・リーガ（ポルトガル）はどこで見られる？",
+        "services": [
+          {
+            "key": "dazn",
+            "name": "DAZN",
+            "scope": "ポルトガルリーグの試合をライブ配信しています（全試合ではなく、番組表に載った試合。例：10月25日 第9節 ジウ・ヴィセンテ対ポルト）。ABEMAの中で見る「ABEMA de DAZN」でも、2026-27のポルトガルリーグ（2026年8月9日開幕）が見られます。",
+            "price": "DAZN Standard：月額4,200円（税込）／年間プラン一括払い32,000円（税込）・月々払い3,200円（税込）。ABEMAの中で見る「ABEMA de DAZN」は月額3,800円（税込）・年間一括30,000円（税込）。",
+            "url": "https://www.dazn.com/ja-JP/welcome",
+            "checked": "2026-10-22",
+            "source_note": "DAZN公式の番組表（2026-10-20掲載）・DAZN公式ページ（料金）・ABEMA公式の「ABEMA de DAZN」配信リーグ一覧"
+          }
+        ],
+        "more_link": {
+          "href": "/column/broadcast-guide-2025-26/",
+          "text": "海外サッカーの見方まとめ（2025-26版）"
+        }
+      }
+    },
+    "eredivisie": {
+      "watch": {
+        "heading": "エールディビジはどこで見られる？",
+        "services": [
+          {
+            "key": "unext",
+            "name": "U-NEXT サッカーパック",
+            "scope": "エールディヴィジ（オランダ1部）をライブ配信（見逃し配信あり。全試合かどうかは公式ページに書かれていません）。プレミアリーグ・ラ・リーガも同じパックで見られます。",
+            "price": "月額2,600円（税込）",
+            "trial": "サッカーパックだけの無料お試しはありません。U-NEXTの「月額プラン」（31日間無料トライアル）と一緒に申し込むと、初月のサッカーパックが1,400円になる案内があります。",
+            "url": "https://www.video.unext.jp/lp/football_pack",
+            "checked": "2026-10-22",
+            "source_note": "U-NEXT公式ページの「ライブ配信（見逃し配信あり）」に「エールディヴィジ（オランダ1部）」（ページ内の表記：2026年10月現在）"
+          }
+        ],
+        "more_link": {
+          "href": "/column/broadcast-guide-2025-26/",
+          "text": "海外サッカーの見方まとめ（2025-26版）"
+        }
+      }
+    },
+    "championship": {
+      "watch": {
+        "heading": "チャンピオンシップはどこで見られる？",
+        "services": [
+          {
+            "key": "dazn",
+            "name": "DAZN",
+            "scope": "EFLチャンピオンシップ（イングランド2部）をライブ配信しています（全試合かどうかは公式ページに書かれていません。例：10月24日 第12節 チャールトン対ノリッジ）。",
+            "price": "DAZN Standard：月額4,200円（税込）／年間プラン一括払い32,000円（税込）・月々払い3,200円（税込）。",
+            "url": "https://www.dazn.com/ja-JP/welcome",
+            "checked": "2026-10-22",
+            "source_note": "DAZN公式ページ（スタンダードの内容に「EFLチャンピオンシップ」・料金）・DAZN公式の番組表（2026-10-20掲載）"
+          }
+        ],
+        "more_link": {
+          "href": "/column/broadcast-guide-2025-26/",
+          "text": "海外サッカーの見方まとめ（2025-26版）"
+        }
+      }
+    }
   }
 }
