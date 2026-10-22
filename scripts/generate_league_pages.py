@@ -1317,6 +1317,11 @@ def generate_league_page(
         html_parts.append('<li><a href="/leagues/">海外サッカーの日本人選手一覧（リーグ別）</a></li>')
         for c_slug, c in (guides.get("competitions") or {}).items():
             html_parts.append(f'<li><a href="/leagues/{esc(c_slug)}/">{esc(c.get("short_ja", c.get("name_ja", "")))}の日本人選手</a></li>')
+    elif watch_only:
+        # 「どこで見られる？」欄だけのリーグも、続きリンク（見方コラム）を関連リンクの先頭に出す
+        more = (watch_only.get("watch") or {}).get("more_link")
+        if more and more.get("href") != "/column/broadcast-guide-2025-26/":
+            html_parts.append(f'<li><a href="{esc(more["href"])}">{esc(more["text"])}</a></li>')
 
     # 選手リンク
     seen_slugs = set()
