@@ -544,6 +544,12 @@ def main():
     if fixed:
         print(f"[INFO] status='FINISHED' に補正: {fixed}件")
 
+    # 配信先：全試合を league_guides.json の欄（公式確認済み）で書き直す（2026-10-22。下の WOWOW_EL 等の手書きは使われない）
+    sys.path.insert(0, str(Path(__file__).resolve().parent))
+    from watch_source import apply_to_matches
+    n_bc = apply_to_matches(matches)
+    print(f"[INFO] 配信先を league_guides.json の欄から書き直し: {n_bc}試合")
+
     matches_data["matches"] = matches
     matches_data["match_count"] = len(matches)
     matches_data["updated_uefa_secondary"] = datetime.now(JST).isoformat()

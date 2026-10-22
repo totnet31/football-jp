@@ -126,33 +126,8 @@ NEXT_WATCH_SPARE = 1     # 作ったあとに試合が終わったとき用の�
 _WD_JA = ["月", "火", "水", "木", "金", "土", "日"]
 
 
-def load_league_guides() -> dict:
-    if not LEAGUE_GUIDES_JSON.exists():
-        return {}
-    with open(LEAGUE_GUIDES_JSON, encoding="utf-8") as f:
-        return json.load(f)
-
-
-def _league_slug_of(name_ja: str) -> str:
-    try:
-        from generate_league_pages import league_slug
-        return league_slug(name_ja)
-    except Exception:
-        return ""
-
-
-def find_watch_guide(guides: dict, competition_id=None, competition_ja: str = "") -> dict:
-    """大会 → league_guides.json の watch（無ければ {}）。"""
-    if not guides:
-        return {}
-    for cfg in (guides.get("competitions") or {}).values():
-        if competition_id is not None and cfg.get("competition_id") == competition_id:
-            return cfg.get("watch") or {}
-    slug = _league_slug_of(competition_ja) if competition_ja else ""
-    if not slug:
-        return {}
-    g = (guides.get("leagues") or {}).get(slug) or (guides.get("watch_only") or {}).get(slug) or {}
-    return g.get("watch") or {}
+# 取り出し方は scripts/watch_source.py に共通化（クラブ・リーグページ・matches.json と同じ。2026-10-22）
+from watch_source import load_league_guides, find_watch_guide, build_watch_cell, affiliate_for  # noqa: E402
 
 
 def _parse_ko(kickoff: str):
@@ -190,7 +165,7 @@ def _watch_services_html(watch: dict, bc_services: dict, slug: str) -> tuple:
         name = sv.get("name", "")
         href = sv.get("url", "")
         rel = "nofollow noopener"
-        aff = (bc_services.get(sv.get("url_service", "")) or {}).get("affiliate_url") if sv.get("url_service") else None
+        aff = affiliate_for(sv, bc_services)
         if aff:
             href, rel = aff, "sponsored nofollow noopener"
             has_aff = True
@@ -215,35 +190,9 @@ def _watch_services_html(watch: dict, bc_services: dict, slug: str) -> tuple:
 
 def build_table_watch_cell(guides: dict, bc_services: dict, competition_id, competition_ja: str, slug: str) -> tuple:
     """「直近の試合」表の配信の列（2026-10-22）。上の「次の試合・どこで見れる」欄と同じ
-    league_guides.json の欄から出す（古い broadcasters.json の試合ごとの配信は使わない）。
-    欄が無い大会は「確認中」。報酬リンクは上の欄と同じ条件（url_service が affiliate_url を持つときだけ）。
+    league_guides.json の欄から出す（共通の取り出し方：scripts/watch_source.py）。
     返り値：(html, 報酬リンクの数)"""
-    watch = find_watch_guide(guides, competition_id, competition_ja)
-    svcs = watch.get("services") or []
-    if not svcs:
-        return '<span class="bc-unconfirmed">確認中</span>', 0
-    n_aff = 0
-    tags = []
-    for sv in svcs:
-        name = sv.get("name", "")
-        short = name.split("（")[0].split(" ")[0].strip() or name
-        brand_cls = bc_brand_class(short)
-        logo_file = (bc_services.get(short) or {}).get("logo", "")
-        logo_html = (f'<img class="bc-logo" src="/assets/broadcasters/{esc(logo_file)}" alt="" width="16" height="16">'
-                     if logo_file else "")
-        href = sv.get("url", "")
-        rel = "nofollow noopener"
-        aff = (bc_services.get(sv.get("url_service", "")) or {}).get("affiliate_url") if sv.get("url_service") else None
-        if aff:
-            href, rel = aff, "sponsored nofollow noopener"
-            n_aff += 1
-        if href:
-            tags.append(f'<a class="bc-tag {esc(brand_cls)}" href="{esc(href)}" target="_blank" rel="{rel}" '
-                        f'title="{esc(name)}" data-svc="{esc(short)}" data-pagetype="player_table" data-pageid="{esc(slug)}" '
-                        f'onclick="trackAffClick(this)">{logo_html}{esc(short)}</a>')
-        else:
-            tags.append(f'<span class="bc-tag {esc(brand_cls)}" title="{esc(name)}">{logo_html}{esc(short)}</span>')
-    return " ".join(tags), n_aff
+    return build_watch_cell(guides, bc_services, competition_id, competition_ja, "player_table", slug)
 
 
 TABLE_WATCH_STATS = {"affiliate_links": 0, "unconfirmed_rows": 0}

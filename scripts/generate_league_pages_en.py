@@ -30,6 +30,7 @@ from generate_league_pages import (
     format_kickoff_ja, player_initials, position_color,
     build_standings_html, build_match_card,
     load_league_guides, GUIDE_CSS,
+    match_watch_html, WATCH_STATS, affiliate_for,
 )
 
 OUTPUT_DIR = REPO_ROOT / "en" / "leagues"
@@ -321,7 +322,6 @@ def build_match_card_en(m: dict, services: dict, league_slug_str: str, is_result
     home_score = score.get("home")
     away_score = score.get("away")
     jp_players = m.get("japanese_players", [])
-    broadcasters = m.get("broadcasters", [])
 
     jp_names = [
         f'<span class="jp-player-badge">{esc(jp_name_en(jp.get("name_ja","")))}</span>'
@@ -329,8 +329,8 @@ def build_match_card_en(m: dict, services: dict, league_slug_str: str, is_result
     ]
     jp_html = f'<div class="jp-players-row">{"".join(jp_names)}</div>' if jp_names else ""
 
-    bc_tags = [build_bc_tag(bc, services, "league", league_slug_str, league_slug_str) for bc in broadcasters]
-    bc_html = f'<div class="bc-tags">{"".join(bc_tags)}</div>' if bc_tags else ""
+    # 配信は日本語版と同じ情報源（league_guides.json の欄）。欄が無い大会は「TBC」（2026-10-22）
+    bc_html = match_watch_html(m, services, league_slug_str, is_result, "TBC")
 
     if is_result and home_score is not None and away_score is not None:
         score_html = f'<span class="match-score">{esc(str(home_score))} - {esc(str(away_score))}</span>'
@@ -396,7 +396,7 @@ def build_watch_section_en(w: dict, lg_slug_str: str, bc_services: dict = None) 
         parts.append(f'<!--AD-SLOT:{esc(key)}-->')
         href = sv.get("url", "")
         rel = "nofollow noopener"
-        aff = (bc_services.get(sv.get("url_service", "")) or {}).get("affiliate_url") if sv.get("url_service") else None
+        aff = affiliate_for(sv, bc_services)
         if aff:
             href, rel = aff, "sponsored nofollow noopener"
         link_name = re.sub(r"\s*\([^)]*\)", "", sv.get("name", ""))  # 「BS10 (free satellite TV)」→「BS10」
@@ -691,6 +691,7 @@ def main():
     except Exception as e:
         print(f"  [ERROR] リーグ一覧（英語）: {e}", file=sys.stderr)
 
+    print(f"  試合カードの配信: 報酬リンク {WATCH_STATS['affiliate_links']}本・確認中 {WATCH_STATS['unconfirmed_cards']}枚")
     print(f"=== 完了: {generated} ファイル生成 ===")
 
 
