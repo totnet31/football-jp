@@ -443,6 +443,31 @@
       border-left: 3px solid #d4af37;
       border-radius: 2px;
     }
+
+    .nw-section { background: #f5f8ff; }
+    .nw-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 12px; }
+    .nw-card { background: #fff; border: 1px solid var(--c-border, #e5e7eb); border-radius: 8px; padding: 12px 14px; min-width: 0; overflow-wrap: anywhere; }
+    .nw-spare { display: none; }
+    .nw-label { font-size: 12px; font-weight: 700; color: var(--c-accent, #0047ab); display: flex; gap: 8px; align-items: center; }
+    .nw-when-rel { background: #0047ab; color: #fff; border-radius: 10px; padding: 0 8px; font-size: 11px; }
+    .nw-when-rel:empty { display: none; }
+    .nw-when { font-size: 18px; font-weight: 700; margin-top: 4px; }
+    .nw-jst { font-size: 11px; font-weight: 400; color: #666; margin-left: 2px; }
+    .nw-match { font-size: 15px; font-weight: 700; margin-top: 2px; }
+    .nw-venue { font-size: 11px; font-weight: 400; color: #666; margin-left: 6px; }
+    .nw-comp { font-size: 12px; color: #555; margin-top: 2px; }
+    .nw-watch-h { font-size: 12px; font-weight: 700; margin: 10px 0 6px; padding-top: 8px; border-top: 1px dashed var(--c-border, #e5e7eb); }
+    .nw-card-league .nw-watch-h { border-top: none; padding-top: 0; margin-top: 0; }
+    .nw-svc { margin-bottom: 10px; }
+    .nw-svc-name { font-weight: 700; font-size: 14px; }
+    .nw-scope, .nw-price { font-size: 12px; color: #444; margin: 2px 0; line-height: 1.5; }
+    .nw-src { font-size: 11px; color: #888; margin: 2px 0; }
+    .nw-link { display: inline-block; margin-top: 4px; padding: 6px 12px; border-radius: 6px; background: var(--c-accent, #0047ab); color: #fff; font-size: 13px; font-weight: 700; text-decoration: none; }
+    .nw-more { font-size: 13px; margin: 6px 0 0; }
+    .nw-more a { color: var(--c-accent, #0047ab); }
+    .nw-unconfirmed { font-size: 13px; color: #555; margin: 0; }
+    .nw-none { font-size: 13px; color: #444; margin: 0 0 10px; }
+    .nw-note { font-size: 11px; color: #888; margin: 10px 0 0; line-height: 1.5; }
     @media (max-width: 600px) {
       .stats-grid { grid-template-columns: repeat(2, 1fr); }
       .match-header, .match-row {
@@ -501,6 +526,11 @@
 <div style="max-width: 860px; margin: 0 auto;">
 
   
+    <section class="player-section nw-section" id="next-watch">
+      <h3>📺 三戸舜介の次の試合・どこで見れる</h3>
+      <div class="nw-cards"><div class="nw-card" data-ko="2026-10-26T00:45:00+09:00"><div class="nw-label"><span class="nw-label-text">次の試合</span><span class="nw-when-rel"></span></div><div class="nw-when">10月26日（月）00:45<span class="nw-jst">（日本時間）</span></div><div class="nw-match">vs アヤックス<span class="nw-venue">ホーム</span></div><div class="nw-comp">エールディビジ</div><div class="nw-watch-h">日本で見られるところ</div><div class="nw-svc"><div class="nw-svc-name">U-NEXT サッカーパック</div><p class="nw-scope">エールディヴィジ（オランダ1部）をライブ配信（見逃し配信あり。全試合かどうかは公式ページに書かれていません）。プレミアリーグ・ラ・リーガも同じパックで見られます。</p><p class="nw-price">料金：月額2,600円（税込）</p><p class="nw-src">公式ページで確認：2026-10-22</p><a class="nw-link" href="https://www.video.unext.jp/lp/football_pack" target="_blank" rel="nofollow noopener" data-svc="U-NEXT サッカーパック" data-pagetype="player_next_watch" data-pageid="shunsuke-mito" onclick="trackAffClick(this)">U-NEXT サッカーパックの公式ページへ</a></div><p class="nw-more"><a href="/column/broadcast-guide-2025-26/">海外サッカーの見方まとめ（2026-27版） →</a></p></div><div class="nw-card" data-ko="2026-11-02T00:45:00+09:00"><div class="nw-label"><span class="nw-label-text">その次の試合</span><span class="nw-when-rel"></span></div><div class="nw-when">11月2日（月）00:45<span class="nw-jst">（日本時間）</span></div><div class="nw-match">vs フローニンゲン<span class="nw-venue">アウェイ</span></div><div class="nw-comp">エールディビジ</div><div class="nw-watch-h">日本で見られるところ</div><div class="nw-svc"><div class="nw-svc-name">U-NEXT サッカーパック</div><p class="nw-scope">エールディヴィジ（オランダ1部）をライブ配信（見逃し配信あり。全試合かどうかは公式ページに書かれていません）。プレミアリーグ・ラ・リーガも同じパックで見られます。</p><p class="nw-price">料金：月額2,600円（税込）</p><p class="nw-src">公式ページで確認：2026-10-22</p><a class="nw-link" href="https://www.video.unext.jp/lp/football_pack" target="_blank" rel="nofollow noopener" data-svc="U-NEXT サッカーパック" data-pagetype="player_next_watch" data-pageid="shunsuke-mito" onclick="trackAffClick(this)">U-NEXT サッカーパックの公式ページへ</a></div><p class="nw-more"><a href="/column/broadcast-guide-2025-26/">海外サッカーの見方まとめ（2026-27版） →</a></p></div><p class="nw-none nw-none-js" hidden>次の試合の日程は、まだこのサイトに入っていません。日程が出たら、1日3回の自動更新でここに載ります。</p></div>
+      <p class="nw-note">リーグ戦と欧州の大会（CL・EL・ECL）の日程から出しています。国内のカップ戦などは入っていないことがあります。配信先は大会ごとの案内で、その試合を必ず中継するとは限りません。</p>
+    </section>
     <section class="player-section">
       <h3>👤 プロフィール <a href="https://en.wikipedia.org/wiki/Shunsuke_Mito" target="_blank" rel="noopener" style="font-size:11px;color:#888;">Wikipedia →</a></h3>
       <table class="profile-table">
@@ -808,6 +838,34 @@
 </div>
 
 <script>
+
+(function() {
+  var sec = document.getElementById('next-watch');
+  if (!sec) return;
+  var now = Date.now();
+  var cards = Array.prototype.slice.call(sec.querySelectorAll('.nw-card[data-ko]'));
+  var shown = 0;
+  cards.forEach(function(c) {
+    var ko = Date.parse(c.getAttribute('data-ko'));
+    if (isNaN(ko)) return;
+    if (now > ko + 2 * 3600 * 1000) { c.style.display = 'none'; return; }
+    if (shown >= 2) { c.style.display = 'none'; return; }
+    c.style.display = 'block';
+    var lt = c.querySelector('.nw-label-text');
+    if (lt) lt.textContent = shown === 0 ? '次の試合' : 'その次の試合';
+    shown++;
+    var rel = c.querySelector('.nw-when-rel');
+    if (!rel) return;
+    if (now >= ko) { rel.textContent = '試合中'; return; }
+    var j = function(t) { var d = new Date(t + 9 * 3600 * 1000); return Date.UTC(d.getUTCFullYear(), d.getUTCMonth(), d.getUTCDate()); };
+    var days = Math.round((j(ko) - j(now)) / 86400000);
+    rel.textContent = days === 0 ? '今日' : (days === 1 ? '明日' : 'あと' + days + '日');
+  });
+  if (cards.length && shown === 0) {
+    var n = sec.querySelector('.nw-none-js');
+    if (n) n.hidden = false;
+  }
+})();
 function toggleMoreMatches(btn) {
   var list = btn.previousElementSibling;
   list.querySelectorAll('.hidden-extra').forEach(function(r) {
