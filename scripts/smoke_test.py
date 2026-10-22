@@ -162,6 +162,42 @@ def check_wc2026():
             fail(f"wc2026/{fn} JSON文法エラー: {e}")
 
 
+def check_player_links():
+    """サイト内の選手ページへのリンク（日・英）が、実在するページか 301 の転送先を指しているか（警告のみ）。"""
+    import os
+    import re
+    print("\n[6] 選手ページへのリンク")
+    redirects = set()
+    rpath = ROOT / "_redirects"
+    if rpath.exists():
+        for line in rpath.read_text(encoding="utf-8").splitlines():
+            parts = line.split()
+            if len(parts) >= 2 and parts[0].startswith("/"):
+                redirects.add(parts[0].rstrip("/"))
+    pat = re.compile(r'''(?:href=["']|["'`])(?:https://football-jp\.com)?(/(?:en/)?players/[a-z0-9\-]+)/?["']''')
+    dead = {}
+    for dp, dn, fn in os.walk(ROOT):
+        dn[:] = [d for d in dn if not d.startswith(".") and d != "node_modules"]
+        for f in fn:
+            if not f.endswith((".html", ".js", ".json", ".xml")):
+                continue
+            fp = Path(dp) / f
+            try:
+                text = fp.read_text(encoding="utf-8")
+            except Exception:
+                continue
+            for m in pat.finditer(text):
+                path = m.group(1)
+                if (ROOT / path.lstrip("/") / "index.html").exists() or path in redirects:
+                    continue
+                dead.setdefault(path, str(fp.relative_to(ROOT)))
+    if dead:
+        for path, src in sorted(dead.items()):
+            warn(f"存在しない選手ページへのリンク: {path}/ （{src} ほか）")
+    else:
+        ok("選手ページへのリンク: 壊れたリンク 0")
+
+
 def main():
     print("=== football-jp データ整合性スモークテスト ===")
     check_matches()
@@ -169,6 +205,7 @@ def main():
     check_scorers()
     check_players()
     check_wc2026()
+    check_player_links()
     print()
     print(f"=== 結果: ERRORS={len(errors)} / WARNINGS={len(warnings)} ===")
     if errors:
