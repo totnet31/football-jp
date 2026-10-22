@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-21",
+  "updated": "2026-10-22",
   "note": "リーグページの手書きの文章（リード・どこで見られるか・よくある質問）。scripts/generate_league_pages.py が読む。ここに無いリーグは、これまでの形のまま出る。配信は公式ページで確かめた分だけ書く（checked＝確かめた日）。広告コードが来たら <!--AD-SLOT:キー--> の場所に差し込む。{n}＝人数、{season}＝シーズン、{names}＝選手名（自動）。",
   "season": "2026-27",
   "prev_season": "2025-26",
@@ -518,8 +518,8 @@
           }
         ],
         "more_link": {
-          "href": "/column/broadcast-guide-2025-26/",
-          "text": "海外サッカーの見方まとめ（2026-27版）"
+          "href": "/column/serie-a-how-to-watch-2026-27/",
+          "text": "セリエAの見方 2026-27（DAZNとABEMA de DAZNの料金・無料で見られる試合）"
         }
       },
       "watch_en": {
@@ -552,8 +552,8 @@
           }
         ],
         "more_link": {
-          "href": "/column/broadcast-guide-2025-26/",
-          "text": "海外サッカーの見方まとめ（2026-27版）"
+          "href": "/column/ligue-1-how-to-watch-2026-27/",
+          "text": "リーグ・アンの見方 2026-27（DAZNとABEMA de DAZNの料金・無料で見られる試合）"
         }
       },
       "watch_en": {
@@ -595,8 +595,8 @@
           }
         ],
         "more_link": {
-          "href": "/column/broadcast-guide-2025-26/",
-          "text": "海外サッカーの見方まとめ（2026-27版）"
+          "href": "/column/jupiler-pro-league-how-to-watch-2026-27/",
+          "text": "ベルギーリーグの見方 2026-27（DAZN・ABEMA de DAZNの料金・STVVはBS10で無料）"
         }
       },
       "watch_en": {
@@ -673,8 +673,8 @@
           }
         ],
         "more_link": {
-          "href": "/column/broadcast-guide-2025-26/",
-          "text": "海外サッカーの見方まとめ（2026-27版）"
+          "href": "/column/eredivisie-how-to-watch-2026-27/",
+          "text": "エールディビジの見方 2026-27（U-NEXTの料金・初月1,400円の入り方）"
         }
       },
       "watch_en": {
@@ -708,8 +708,8 @@
           }
         ],
         "more_link": {
-          "href": "/column/broadcast-guide-2025-26/",
-          "text": "海外サッカーの見方まとめ（2026-27版）"
+          "href": "/column/championship-how-to-watch-2026-27/",
+          "text": "チャンピオンシップの見方 2026-27（DAZNの料金・番組表に載る試合）"
         }
       },
       "watch_en": {
