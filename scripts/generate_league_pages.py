@@ -1049,6 +1049,9 @@ def build_watch_section(guide: dict, lg_slug: str, bc_services: dict = None) -> 
     more = w.get("more_link")
     if more:
         parts.append(f'<p><a href="{esc(more["href"])}" class="link-more">{esc(more["text"])} →</a></p>')
+    # 続きリンクの2本目以降（例：ブンデスリーガ → ABEMAで見られるサッカー・2026-10-23）
+    for ex in w.get("more_links_extra") or []:
+        parts.append(f'<p><a href="{esc(ex["href"])}" class="link-more">{esc(ex["text"])} →</a></p>')
     parts.append('</section>')
     return "\n".join(parts)
 
@@ -1315,6 +1318,8 @@ def generate_league_page(
         more = (guide.get("watch") or {}).get("more_link")
         if more:
             html_parts.append(f'<li><a href="{esc(more["href"])}">{esc(more["text"])}</a></li>')
+        for ex in (guide.get("watch") or {}).get("more_links_extra") or []:
+            html_parts.append(f'<li><a href="{esc(ex["href"])}">{esc(ex["text"])}</a></li>')
         html_parts.append('<li><a href="/leagues/">海外サッカーの日本人選手一覧（リーグ別）</a></li>')
         for c_slug, c in (guides.get("competitions") or {}).items():
             html_parts.append(f'<li><a href="/leagues/{esc(c_slug)}/">{esc(c.get("short_ja", c.get("name_ja", "")))}の日本人選手</a></li>')
