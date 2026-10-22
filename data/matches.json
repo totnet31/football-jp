@@ -2,7 +2,7 @@
   "updated": "2026-10-22T17:04:07.458681+09:00",
   "date_from": "2026-10-15",
   "date_to": "2026-11-05",
-  "match_count": 1485,
+  "match_count": 1635,
   "_note": "累積保持モード：フェッチ窓外の過去試合データはそのまま保持される。",
   "matches": [
     {
@@ -14518,6 +14518,85 @@
       ]
     },
     {
+      "id": "BL2_83516",
+      "competition_id": 79,
+      "competition_ja": "ブンデスリーガ2部",
+      "competition_category": "league",
+      "competition_flag": "🇩🇪",
+      "kickoff_jst": "2026-08-08T20:00:00+09:00",
+      "status": "FINISHED",
+      "stage": "REGULAR_SEASON",
+      "matchday": 1,
+      "home_id": null,
+      "home_ja": "ダルムシュタット",
+      "home_en": "Darmstadt 98",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "ホルシュタイン・キール",
+      "away_en": "Holstein Kiel",
+      "away_crest": null,
+      "score": {
+        "home": 2,
+        "away": 2
+      },
+      "japanese_players": [
+        {
+          "name_ja": "秋山裕紀",
+          "position": "MF",
+          "side": "home"
+        },
+        {
+          "name_ja": "髙橋仁胡",
+          "position": "DF",
+          "side": "away"
+        },
+        {
+          "name_ja": "安部大晴",
+          "position": "MF",
+          "side": "away"
+        },
+        {
+          "name_ja": "関根大輝",
+          "position": "DF",
+          "side": "away"
+        }
+      ],
+      "broadcasters": [],
+      "_source": "openligadb"
+    },
+    {
+      "id": "BL2_83522",
+      "competition_id": 79,
+      "competition_ja": "ブンデスリーガ2部",
+      "competition_category": "league",
+      "competition_flag": "🇩🇪",
+      "kickoff_jst": "2026-08-08T20:00:00+09:00",
+      "status": "FINISHED",
+      "stage": "REGULAR_SEASON",
+      "matchday": 1,
+      "home_id": null,
+      "home_ja": "カールスルーエ",
+      "home_en": "Karlsruher SC",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "ビーレフェルト",
+      "away_en": "Arminia Bielefeld",
+      "away_crest": null,
+      "score": {
+        "home": 2,
+        "away": 1
+      },
+      "japanese_players": [
+        {
+          "name_ja": "福田師王",
+          "position": "FW",
+          "side": "home"
+        }
+      ],
+      "broadcasters": [],
+      "_source": "openligadb"
+    },
+    {
       "id": 558215,
       "competition_id": 88,
       "competition_ja": "エールディビジ",
@@ -14707,6 +14786,38 @@
       ]
     },
     {
+      "id": "BL2_83510",
+      "competition_id": 79,
+      "competition_ja": "ブンデスリーガ2部",
+      "competition_category": "league",
+      "competition_flag": "🇩🇪",
+      "kickoff_jst": "2026-08-09T03:30:00+09:00",
+      "status": "FINISHED",
+      "stage": "REGULAR_SEASON",
+      "matchday": 1,
+      "home_id": null,
+      "home_ja": "ヴォルフスブルク",
+      "home_en": "VfL Wolfsburg",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "カイザースラウテルン",
+      "away_en": "1. FC Kaiserslautern",
+      "away_crest": null,
+      "score": {
+        "home": 0,
+        "away": 0
+      },
+      "japanese_players": [
+        {
+          "name_ja": "塩貝健人",
+          "position": "FW",
+          "side": "home"
+        }
+      ],
+      "broadcasters": [],
+      "_source": "openligadb"
+    },
+    {
       "id": 558218,
       "competition_id": 88,
       "competition_ja": "エールディビジ",
@@ -14843,6 +14954,48 @@
           "yt_published": "2026-08-09"
         }
       ]
+    },
+    {
+      "id": "BL2_83511",
+      "competition_id": 79,
+      "competition_ja": "ブンデスリーガ2部",
+      "competition_category": "league",
+      "competition_flag": "🇩🇪",
+      "kickoff_jst": "2026-08-09T20:30:00+09:00",
+      "status": "FINISHED",
+      "stage": "REGULAR_SEASON",
+      "matchday": 1,
+      "home_id": null,
+      "home_ja": "ザンクト・パウリ",
+      "home_en": "FC St. Pauli",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "グロイター・フュルト",
+      "away_en": "Greuther Fürth",
+      "away_crest": null,
+      "score": {
+        "home": 1,
+        "away": 1
+      },
+      "japanese_players": [
+        {
+          "name_ja": "藤田譲瑠チマ",
+          "position": "MF",
+          "side": "home"
+        },
+        {
+          "name_ja": "安藤智哉",
+          "position": "DF",
+          "side": "home"
+        },
+        {
+          "name_ja": "原大智",
+          "position": "FW",
+          "side": "home"
+        }
+      ],
+      "broadcasters": [],
+      "_source": "openligadb"
     },
     {
       "id": 558220,
@@ -15116,6 +15269,63 @@
           "source": "league_guides"
         }
       ]
+    },
+    {
+      "id": "BL2_83533",
+      "competition_id": 79,
+      "competition_ja": "ブンデスリーガ2部",
+      "competition_category": "league",
+      "competition_flag": "🇩🇪",
+      "kickoff_jst": "2026-08-15T01:30:00+09:00",
+      "status": "FINISHED",
+      "stage": "REGULAR_SEASON",
+      "matchday": 2,
+      "home_id": null,
+      "home_ja": "ホルシュタイン・キール",
+      "home_en": "Holstein Kiel",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "ザンクト・パウリ",
+      "away_en": "FC St. Pauli",
+      "away_crest": null,
+      "score": {
+        "home": 2,
+        "away": 2
+      },
+      "japanese_players": [
+        {
+          "name_ja": "髙橋仁胡",
+          "position": "DF",
+          "side": "home"
+        },
+        {
+          "name_ja": "安部大晴",
+          "position": "MF",
+          "side": "home"
+        },
+        {
+          "name_ja": "関根大輝",
+          "position": "DF",
+          "side": "home"
+        },
+        {
+          "name_ja": "藤田譲瑠チマ",
+          "position": "MF",
+          "side": "away"
+        },
+        {
+          "name_ja": "安藤智哉",
+          "position": "DF",
+          "side": "away"
+        },
+        {
+          "name_ja": "原大智",
+          "position": "FW",
+          "side": "away"
+        }
+      ],
+      "broadcasters": [],
+      "_source": "openligadb"
     },
     {
       "id": 558223,
@@ -15740,6 +15950,38 @@
       ]
     },
     {
+      "id": "BL2_83527",
+      "competition_id": 79,
+      "competition_ja": "ブンデスリーガ2部",
+      "competition_category": "league",
+      "competition_flag": "🇩🇪",
+      "kickoff_jst": "2026-08-16T03:30:00+09:00",
+      "status": "FINISHED",
+      "stage": "REGULAR_SEASON",
+      "matchday": 2,
+      "home_id": null,
+      "home_ja": "カイザースラウテルン",
+      "home_en": "1. FC Kaiserslautern",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "カールスルーエ",
+      "away_en": "Karlsruher SC",
+      "away_crest": null,
+      "score": {
+        "home": 0,
+        "away": 0
+      },
+      "japanese_players": [
+        {
+          "name_ja": "福田師王",
+          "position": "FW",
+          "side": "away"
+        }
+      ],
+      "broadcasters": [],
+      "_source": "openligadb"
+    },
+    {
       "id": 558227,
       "competition_id": 88,
       "competition_ja": "エールディビジ",
@@ -15872,6 +16114,70 @@
           "source": "league_guides"
         }
       ]
+    },
+    {
+      "id": "BL2_83526",
+      "competition_id": 79,
+      "competition_ja": "ブンデスリーガ2部",
+      "competition_category": "league",
+      "competition_flag": "🇩🇪",
+      "kickoff_jst": "2026-08-16T20:30:00+09:00",
+      "status": "FINISHED",
+      "stage": "REGULAR_SEASON",
+      "matchday": 2,
+      "home_id": null,
+      "home_ja": "ハノーファー96",
+      "home_en": "Hannover 96",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "ヴォルフスブルク",
+      "away_en": "VfL Wolfsburg",
+      "away_crest": null,
+      "score": {
+        "home": 0,
+        "away": 1
+      },
+      "japanese_players": [
+        {
+          "name_ja": "塩貝健人",
+          "position": "FW",
+          "side": "away"
+        }
+      ],
+      "broadcasters": [],
+      "_source": "openligadb"
+    },
+    {
+      "id": "BL2_83530",
+      "competition_id": 79,
+      "competition_ja": "ブンデスリーガ2部",
+      "competition_category": "league",
+      "competition_flag": "🇩🇪",
+      "kickoff_jst": "2026-08-16T20:30:00+09:00",
+      "status": "FINISHED",
+      "stage": "REGULAR_SEASON",
+      "matchday": 2,
+      "home_id": null,
+      "home_ja": "ディナモ・ドレスデン",
+      "home_en": "Dynamo Dresden",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "ダルムシュタット",
+      "away_en": "Darmstadt 98",
+      "away_crest": null,
+      "score": {
+        "home": 1,
+        "away": 0
+      },
+      "japanese_players": [
+        {
+          "name_ja": "秋山裕紀",
+          "position": "MF",
+          "side": "away"
+        }
+      ],
+      "broadcasters": [],
+      "_source": "openligadb"
     },
     {
       "id": 561770,
@@ -19509,6 +19815,43 @@
       ]
     },
     {
+      "id": "BL2_83544",
+      "competition_id": 79,
+      "competition_ja": "ブンデスリーガ2部",
+      "competition_category": "league",
+      "competition_flag": "🇩🇪",
+      "kickoff_jst": "2026-08-29T20:00:00+09:00",
+      "status": "FINISHED",
+      "stage": "REGULAR_SEASON",
+      "matchday": 3,
+      "home_id": null,
+      "home_ja": "カールスルーエ",
+      "home_en": "Karlsruher SC",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "ヴォルフスブルク",
+      "away_en": "VfL Wolfsburg",
+      "away_crest": null,
+      "score": {
+        "home": 2,
+        "away": 5
+      },
+      "japanese_players": [
+        {
+          "name_ja": "福田師王",
+          "position": "FW",
+          "side": "home"
+        },
+        {
+          "name_ja": "塩貝健人",
+          "position": "FW",
+          "side": "away"
+        }
+      ],
+      "broadcasters": [],
+      "_source": "openligadb"
+    },
+    {
       "id": 560552,
       "competition_id": 39,
       "competition_ja": "プレミアリーグ",
@@ -21100,6 +21443,122 @@
           "yt_published": "2026-08-31"
         }
       ]
+    },
+    {
+      "id": "BL2_83539",
+      "competition_id": 79,
+      "competition_ja": "ブンデスリーガ2部",
+      "competition_category": "league",
+      "competition_flag": "🇩🇪",
+      "kickoff_jst": "2026-08-30T20:30:00+09:00",
+      "status": "FINISHED",
+      "stage": "REGULAR_SEASON",
+      "matchday": 3,
+      "home_id": null,
+      "home_ja": "ザンクト・パウリ",
+      "home_en": "FC St. Pauli",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "カイザースラウテルン",
+      "away_en": "1. FC Kaiserslautern",
+      "away_crest": null,
+      "score": {
+        "home": 1,
+        "away": 2
+      },
+      "japanese_players": [
+        {
+          "name_ja": "藤田譲瑠チマ",
+          "position": "MF",
+          "side": "home"
+        },
+        {
+          "name_ja": "安藤智哉",
+          "position": "DF",
+          "side": "home"
+        },
+        {
+          "name_ja": "原大智",
+          "position": "FW",
+          "side": "home"
+        }
+      ],
+      "broadcasters": [],
+      "_source": "openligadb"
+    },
+    {
+      "id": "BL2_83541",
+      "competition_id": 79,
+      "competition_ja": "ブンデスリーガ2部",
+      "competition_category": "league",
+      "competition_flag": "🇩🇪",
+      "kickoff_jst": "2026-08-30T20:30:00+09:00",
+      "status": "FINISHED",
+      "stage": "REGULAR_SEASON",
+      "matchday": 3,
+      "home_id": null,
+      "home_ja": "ダルムシュタット",
+      "home_en": "Darmstadt 98",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "ハノーファー96",
+      "away_en": "Hannover 96",
+      "away_crest": null,
+      "score": {
+        "home": 0,
+        "away": 1
+      },
+      "japanese_players": [
+        {
+          "name_ja": "秋山裕紀",
+          "position": "MF",
+          "side": "home"
+        }
+      ],
+      "broadcasters": [],
+      "_source": "openligadb"
+    },
+    {
+      "id": "BL2_83545",
+      "competition_id": 79,
+      "competition_ja": "ブンデスリーガ2部",
+      "competition_category": "league",
+      "competition_flag": "🇩🇪",
+      "kickoff_jst": "2026-08-30T20:30:00+09:00",
+      "status": "FINISHED",
+      "stage": "REGULAR_SEASON",
+      "matchday": 3,
+      "home_id": null,
+      "home_ja": "マクデブルク",
+      "home_en": "1. FC Magdeburg",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "ホルシュタイン・キール",
+      "away_en": "Holstein Kiel",
+      "away_crest": null,
+      "score": {
+        "home": 2,
+        "away": 0
+      },
+      "japanese_players": [
+        {
+          "name_ja": "髙橋仁胡",
+          "position": "DF",
+          "side": "away"
+        },
+        {
+          "name_ja": "安部大晴",
+          "position": "MF",
+          "side": "away"
+        },
+        {
+          "name_ja": "関根大輝",
+          "position": "DF",
+          "side": "away"
+        }
+      ],
+      "broadcasters": [],
+      "_source": "openligadb"
     },
     {
       "id": 558246,
@@ -22748,6 +23207,80 @@
       ]
     },
     {
+      "id": "BL2_83550",
+      "competition_id": 79,
+      "competition_ja": "ブンデスリーガ2部",
+      "competition_category": "league",
+      "competition_flag": "🇩🇪",
+      "kickoff_jst": "2026-09-05T01:30:00+09:00",
+      "status": "FINISHED",
+      "stage": "REGULAR_SEASON",
+      "matchday": 4,
+      "home_id": null,
+      "home_ja": "ハノーファー96",
+      "home_en": "Hannover 96",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "カールスルーエ",
+      "away_en": "Karlsruher SC",
+      "away_crest": null,
+      "score": {
+        "home": 2,
+        "away": 2
+      },
+      "japanese_players": [
+        {
+          "name_ja": "福田師王",
+          "position": "FW",
+          "side": "away"
+        }
+      ],
+      "broadcasters": [],
+      "_source": "openligadb"
+    },
+    {
+      "id": "BL2_83559",
+      "competition_id": 79,
+      "competition_ja": "ブンデスリーガ2部",
+      "competition_category": "league",
+      "competition_flag": "🇩🇪",
+      "kickoff_jst": "2026-09-05T01:30:00+09:00",
+      "status": "FINISHED",
+      "stage": "REGULAR_SEASON",
+      "matchday": 4,
+      "home_id": null,
+      "home_ja": "ビーレフェルト",
+      "home_en": "Arminia Bielefeld",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "ザンクト・パウリ",
+      "away_en": "FC St. Pauli",
+      "away_crest": null,
+      "score": {
+        "home": 2,
+        "away": 2
+      },
+      "japanese_players": [
+        {
+          "name_ja": "藤田譲瑠チマ",
+          "position": "MF",
+          "side": "away"
+        },
+        {
+          "name_ja": "安藤智哉",
+          "position": "DF",
+          "side": "away"
+        },
+        {
+          "name_ja": "原大智",
+          "position": "FW",
+          "side": "away"
+        }
+      ],
+      "broadcasters": [],
+      "_source": "openligadb"
+    },
+    {
       "id": 559699,
       "competition_id": 61,
       "competition_ja": "リーグ・アン",
@@ -23079,6 +23612,112 @@
           "source": "league_guides"
         }
       ]
+    },
+    {
+      "id": "BL2_83548",
+      "competition_id": 79,
+      "competition_ja": "ブンデスリーガ2部",
+      "competition_category": "league",
+      "competition_flag": "🇩🇪",
+      "kickoff_jst": "2026-09-05T20:00:00+09:00",
+      "status": "FINISHED",
+      "stage": "REGULAR_SEASON",
+      "matchday": 4,
+      "home_id": null,
+      "home_ja": "ヴォルフスブルク",
+      "home_en": "VfL Wolfsburg",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "コットブス",
+      "away_en": "Energie Cottbus",
+      "away_crest": null,
+      "score": {
+        "home": 4,
+        "away": 4
+      },
+      "japanese_players": [
+        {
+          "name_ja": "塩貝健人",
+          "position": "FW",
+          "side": "home"
+        }
+      ],
+      "broadcasters": [],
+      "_source": "openligadb"
+    },
+    {
+      "id": "BL2_83554",
+      "competition_id": 79,
+      "competition_ja": "ブンデスリーガ2部",
+      "competition_category": "league",
+      "competition_flag": "🇩🇪",
+      "kickoff_jst": "2026-09-05T20:00:00+09:00",
+      "status": "FINISHED",
+      "stage": "REGULAR_SEASON",
+      "matchday": 4,
+      "home_id": null,
+      "home_ja": "カイザースラウテルン",
+      "home_en": "1. FC Kaiserslautern",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "ダルムシュタット",
+      "away_en": "Darmstadt 98",
+      "away_crest": null,
+      "score": {
+        "home": 3,
+        "away": 0
+      },
+      "japanese_players": [
+        {
+          "name_ja": "秋山裕紀",
+          "position": "MF",
+          "side": "away"
+        }
+      ],
+      "broadcasters": [],
+      "_source": "openligadb"
+    },
+    {
+      "id": "BL2_83558",
+      "competition_id": 79,
+      "competition_ja": "ブンデスリーガ2部",
+      "competition_category": "league",
+      "competition_flag": "🇩🇪",
+      "kickoff_jst": "2026-09-05T20:00:00+09:00",
+      "status": "FINISHED",
+      "stage": "REGULAR_SEASON",
+      "matchday": 4,
+      "home_id": null,
+      "home_ja": "ホルシュタイン・キール",
+      "home_en": "Holstein Kiel",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "ニュルンベルク",
+      "away_en": "1. FC Nürnberg",
+      "away_crest": null,
+      "score": {
+        "home": 2,
+        "away": 2
+      },
+      "japanese_players": [
+        {
+          "name_ja": "髙橋仁胡",
+          "position": "DF",
+          "side": "home"
+        },
+        {
+          "name_ja": "安部大晴",
+          "position": "MF",
+          "side": "home"
+        },
+        {
+          "name_ja": "関根大輝",
+          "position": "DF",
+          "side": "home"
+        }
+      ],
+      "broadcasters": [],
+      "_source": "openligadb"
     },
     {
       "id": 560571,
@@ -27011,6 +27650,38 @@
       ]
     },
     {
+      "id": "BL2_83569",
+      "competition_id": 79,
+      "competition_ja": "ブンデスリーガ2部",
+      "competition_category": "league",
+      "competition_flag": "🇩🇪",
+      "kickoff_jst": "2026-09-12T01:30:00+09:00",
+      "status": "FINISHED",
+      "stage": "REGULAR_SEASON",
+      "matchday": 5,
+      "home_id": null,
+      "home_ja": "ダルムシュタット",
+      "home_en": "Darmstadt 98",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "ビーレフェルト",
+      "away_en": "Arminia Bielefeld",
+      "away_crest": null,
+      "score": {
+        "home": 2,
+        "away": 1
+      },
+      "japanese_players": [
+        {
+          "name_ja": "秋山裕紀",
+          "position": "MF",
+          "side": "home"
+        }
+      ],
+      "broadcasters": [],
+      "_source": "openligadb"
+    },
+    {
       "id": 558899,
       "competition_id": 88,
       "competition_ja": "エールディビジ",
@@ -28595,6 +29266,53 @@
       ]
     },
     {
+      "id": "BL2_83565",
+      "competition_id": 79,
+      "competition_ja": "ブンデスリーガ2部",
+      "competition_category": "league",
+      "competition_flag": "🇩🇪",
+      "kickoff_jst": "2026-09-13T03:30:00+09:00",
+      "status": "FINISHED",
+      "stage": "REGULAR_SEASON",
+      "matchday": 5,
+      "home_id": null,
+      "home_ja": "ザンクト・パウリ",
+      "home_en": "FC St. Pauli",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "ヴォルフスブルク",
+      "away_en": "VfL Wolfsburg",
+      "away_crest": null,
+      "score": {
+        "home": 1,
+        "away": 0
+      },
+      "japanese_players": [
+        {
+          "name_ja": "藤田譲瑠チマ",
+          "position": "MF",
+          "side": "home"
+        },
+        {
+          "name_ja": "安藤智哉",
+          "position": "DF",
+          "side": "home"
+        },
+        {
+          "name_ja": "原大智",
+          "position": "FW",
+          "side": "home"
+        },
+        {
+          "name_ja": "塩貝健人",
+          "position": "FW",
+          "side": "away"
+        }
+      ],
+      "broadcasters": [],
+      "_source": "openligadb"
+    },
+    {
       "id": 558607,
       "competition_id": 135,
       "competition_ja": "セリエA",
@@ -29030,6 +29748,80 @@
           "source": "league_guides"
         }
       ]
+    },
+    {
+      "id": "BL2_83567",
+      "competition_id": 79,
+      "competition_ja": "ブンデスリーガ2部",
+      "competition_category": "league",
+      "competition_flag": "🇩🇪",
+      "kickoff_jst": "2026-09-13T20:30:00+09:00",
+      "status": "FINISHED",
+      "stage": "REGULAR_SEASON",
+      "matchday": 5,
+      "home_id": null,
+      "home_ja": "ハイデンハイム",
+      "home_en": "1. FC Heidenheim",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "ホルシュタイン・キール",
+      "away_en": "Holstein Kiel",
+      "away_crest": null,
+      "score": {
+        "home": 1,
+        "away": 0
+      },
+      "japanese_players": [
+        {
+          "name_ja": "髙橋仁胡",
+          "position": "DF",
+          "side": "away"
+        },
+        {
+          "name_ja": "安部大晴",
+          "position": "MF",
+          "side": "away"
+        },
+        {
+          "name_ja": "関根大輝",
+          "position": "DF",
+          "side": "away"
+        }
+      ],
+      "broadcasters": [],
+      "_source": "openligadb"
+    },
+    {
+      "id": "BL2_83582",
+      "competition_id": 79,
+      "competition_ja": "ブンデスリーガ2部",
+      "competition_category": "league",
+      "competition_flag": "🇩🇪",
+      "kickoff_jst": "2026-09-13T20:30:00+09:00",
+      "status": "FINISHED",
+      "stage": "REGULAR_SEASON",
+      "matchday": 5,
+      "home_id": null,
+      "home_ja": "カールスルーエ",
+      "home_en": "Karlsruher SC",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "コットブス",
+      "away_en": "Energie Cottbus",
+      "away_crest": null,
+      "score": {
+        "home": 0,
+        "away": 3
+      },
+      "japanese_players": [
+        {
+          "name_ja": "福田師王",
+          "position": "FW",
+          "side": "home"
+        }
+      ],
+      "broadcasters": [],
+      "_source": "openligadb"
     },
     {
       "id": 564672,
@@ -31374,6 +32166,43 @@
       ]
     },
     {
+      "id": "BL2_83591",
+      "competition_id": 79,
+      "competition_ja": "ブンデスリーガ2部",
+      "competition_category": "league",
+      "competition_flag": "🇩🇪",
+      "kickoff_jst": "2026-09-19T01:30:00+09:00",
+      "status": "FINISHED",
+      "stage": "REGULAR_SEASON",
+      "matchday": 6,
+      "home_id": null,
+      "home_ja": "ヴォルフスブルク",
+      "home_en": "VfL Wolfsburg",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "ダルムシュタット",
+      "away_en": "Darmstadt 98",
+      "away_crest": null,
+      "score": {
+        "home": 5,
+        "away": 1
+      },
+      "japanese_players": [
+        {
+          "name_ja": "塩貝健人",
+          "position": "FW",
+          "side": "home"
+        },
+        {
+          "name_ja": "秋山裕紀",
+          "position": "MF",
+          "side": "away"
+        }
+      ],
+      "broadcasters": [],
+      "_source": "openligadb"
+    },
+    {
       "id": 558888,
       "competition_id": 88,
       "competition_ja": "エールディビジ",
@@ -31653,6 +32482,80 @@
           "source": "league_guides"
         }
       ]
+    },
+    {
+      "id": "BL2_83597",
+      "competition_id": 79,
+      "competition_ja": "ブンデスリーガ2部",
+      "competition_category": "league",
+      "competition_flag": "🇩🇪",
+      "kickoff_jst": "2026-09-19T20:00:00+09:00",
+      "status": "FINISHED",
+      "stage": "REGULAR_SEASON",
+      "matchday": 6,
+      "home_id": null,
+      "home_ja": "カールスルーエ",
+      "home_en": "Karlsruher SC",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "ニュルンベルク",
+      "away_en": "1. FC Nürnberg",
+      "away_crest": null,
+      "score": {
+        "home": 0,
+        "away": 1
+      },
+      "japanese_players": [
+        {
+          "name_ja": "福田師王",
+          "position": "FW",
+          "side": "home"
+        }
+      ],
+      "broadcasters": [],
+      "_source": "openligadb"
+    },
+    {
+      "id": "BL2_83600",
+      "competition_id": 79,
+      "competition_ja": "ブンデスリーガ2部",
+      "competition_category": "league",
+      "competition_flag": "🇩🇪",
+      "kickoff_jst": "2026-09-19T20:00:00+09:00",
+      "status": "FINISHED",
+      "stage": "REGULAR_SEASON",
+      "matchday": 6,
+      "home_id": null,
+      "home_ja": "ホルシュタイン・キール",
+      "home_en": "Holstein Kiel",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "オスナブリュック",
+      "away_en": "VfL Osnabrück",
+      "away_crest": null,
+      "score": {
+        "home": 1,
+        "away": 1
+      },
+      "japanese_players": [
+        {
+          "name_ja": "髙橋仁胡",
+          "position": "DF",
+          "side": "home"
+        },
+        {
+          "name_ja": "安部大晴",
+          "position": "MF",
+          "side": "home"
+        },
+        {
+          "name_ja": "関根大輝",
+          "position": "DF",
+          "side": "home"
+        }
+      ],
+      "broadcasters": [],
+      "_source": "openligadb"
     },
     {
       "id": 560587,
@@ -33339,6 +34242,48 @@
       ]
     },
     {
+      "id": "BL2_83607",
+      "competition_id": 79,
+      "competition_ja": "ブンデスリーガ2部",
+      "competition_category": "league",
+      "competition_flag": "🇩🇪",
+      "kickoff_jst": "2026-09-20T20:30:00+09:00",
+      "status": "FINISHED",
+      "stage": "REGULAR_SEASON",
+      "matchday": 6,
+      "home_id": null,
+      "home_ja": "コットブス",
+      "home_en": "Energie Cottbus",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "ザンクト・パウリ",
+      "away_en": "FC St. Pauli",
+      "away_crest": null,
+      "score": {
+        "home": 1,
+        "away": 1
+      },
+      "japanese_players": [
+        {
+          "name_ja": "藤田譲瑠チマ",
+          "position": "MF",
+          "side": "away"
+        },
+        {
+          "name_ja": "安藤智哉",
+          "position": "DF",
+          "side": "away"
+        },
+        {
+          "name_ja": "原大智",
+          "position": "FW",
+          "side": "away"
+        }
+      ],
+      "broadcasters": [],
+      "_source": "openligadb"
+    },
+    {
       "id": 564697,
       "competition_id": 140,
       "competition_ja": "ラ・リーガ",
@@ -34465,6 +35410,48 @@
       ]
     },
     {
+      "id": "BL2_83620",
+      "competition_id": 79,
+      "competition_ja": "ブンデスリーガ2部",
+      "competition_category": "league",
+      "competition_flag": "🇩🇪",
+      "kickoff_jst": "2026-10-10T01:30:00+09:00",
+      "status": "FINISHED",
+      "stage": "REGULAR_SEASON",
+      "matchday": 7,
+      "home_id": null,
+      "home_ja": "ブラウンシュヴァイク",
+      "home_en": "Eintracht Braunschweig",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "ホルシュタイン・キール",
+      "away_en": "Holstein Kiel",
+      "away_crest": null,
+      "score": {
+        "home": 1,
+        "away": 0
+      },
+      "japanese_players": [
+        {
+          "name_ja": "髙橋仁胡",
+          "position": "DF",
+          "side": "away"
+        },
+        {
+          "name_ja": "安部大晴",
+          "position": "MF",
+          "side": "away"
+        },
+        {
+          "name_ja": "関根大輝",
+          "position": "DF",
+          "side": "away"
+        }
+      ],
+      "broadcasters": [],
+      "_source": "openligadb"
+    },
+    {
       "id": 567327,
       "competition_id": 94,
       "competition_ja": "プリメイラ・リーガ",
@@ -34735,6 +35722,38 @@
           "source": "league_guides"
         }
       ]
+    },
+    {
+      "id": "BL2_83611",
+      "competition_id": 79,
+      "competition_ja": "ブンデスリーガ2部",
+      "competition_category": "league",
+      "competition_flag": "🇩🇪",
+      "kickoff_jst": "2026-10-10T20:00:00+09:00",
+      "status": "FINISHED",
+      "stage": "REGULAR_SEASON",
+      "matchday": 7,
+      "home_id": null,
+      "home_ja": "ダルムシュタット",
+      "home_en": "Darmstadt 98",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "コットブス",
+      "away_en": "Energie Cottbus",
+      "away_crest": null,
+      "score": {
+        "home": 3,
+        "away": 1
+      },
+      "japanese_players": [
+        {
+          "name_ja": "秋山裕紀",
+          "position": "MF",
+          "side": "home"
+        }
+      ],
+      "broadcasters": [],
+      "_source": "openligadb"
     },
     {
       "id": 560593,
@@ -36025,6 +37044,38 @@
       ]
     },
     {
+      "id": "BL2_83615",
+      "competition_id": 79,
+      "competition_ja": "ブンデスリーガ2部",
+      "competition_category": "league",
+      "competition_flag": "🇩🇪",
+      "kickoff_jst": "2026-10-11T03:30:00+09:00",
+      "status": "FINISHED",
+      "stage": "REGULAR_SEASON",
+      "matchday": 7,
+      "home_id": null,
+      "home_ja": "ニュルンベルク",
+      "home_en": "1. FC Nürnberg",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "ヴォルフスブルク",
+      "away_en": "VfL Wolfsburg",
+      "away_crest": null,
+      "score": {
+        "home": 4,
+        "away": 4
+      },
+      "japanese_players": [
+        {
+          "name_ja": "塩貝健人",
+          "position": "FW",
+          "side": "away"
+        }
+      ],
+      "broadcasters": [],
+      "_source": "openligadb"
+    },
+    {
       "id": 558586,
       "competition_id": 135,
       "competition_ja": "セリエA",
@@ -36490,6 +37541,53 @@
           "yt_published": "2026-10-11"
         }
       ]
+    },
+    {
+      "id": "BL2_83608",
+      "competition_id": 79,
+      "competition_ja": "ブンデスリーガ2部",
+      "competition_category": "league",
+      "competition_flag": "🇩🇪",
+      "kickoff_jst": "2026-10-11T20:30:00+09:00",
+      "status": "FINISHED",
+      "stage": "REGULAR_SEASON",
+      "matchday": 7,
+      "home_id": null,
+      "home_ja": "ザンクト・パウリ",
+      "home_en": "FC St. Pauli",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "カールスルーエ",
+      "away_en": "Karlsruher SC",
+      "away_crest": null,
+      "score": {
+        "home": 2,
+        "away": 0
+      },
+      "japanese_players": [
+        {
+          "name_ja": "藤田譲瑠チマ",
+          "position": "MF",
+          "side": "home"
+        },
+        {
+          "name_ja": "安藤智哉",
+          "position": "DF",
+          "side": "home"
+        },
+        {
+          "name_ja": "原大智",
+          "position": "FW",
+          "side": "home"
+        },
+        {
+          "name_ja": "福田師王",
+          "position": "FW",
+          "side": "away"
+        }
+      ],
+      "broadcasters": [],
+      "_source": "openligadb"
     },
     {
       "id": 564703,
@@ -40260,6 +41358,48 @@
       "_source_page": "2026–27 UEFA Europa League league phase"
     },
     {
+      "id": "BL2_83632",
+      "competition_id": 79,
+      "competition_ja": "ブンデスリーガ2部",
+      "competition_category": "league",
+      "competition_flag": "🇩🇪",
+      "kickoff_jst": "2026-10-17T01:30:00+09:00",
+      "status": "FINISHED",
+      "stage": "REGULAR_SEASON",
+      "matchday": 8,
+      "home_id": null,
+      "home_ja": "ホルシュタイン・キール",
+      "home_en": "Holstein Kiel",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "ヘルタ・ベルリン",
+      "away_en": "Hertha BSC",
+      "away_crest": null,
+      "score": {
+        "home": 0,
+        "away": 0
+      },
+      "japanese_players": [
+        {
+          "name_ja": "髙橋仁胡",
+          "position": "DF",
+          "side": "home"
+        },
+        {
+          "name_ja": "安部大晴",
+          "position": "MF",
+          "side": "home"
+        },
+        {
+          "name_ja": "関根大輝",
+          "position": "DF",
+          "side": "home"
+        }
+      ],
+      "broadcasters": [],
+      "_source": "openligadb"
+    },
+    {
       "id": 558872,
       "competition_id": 88,
       "competition_ja": "エールディビジ",
@@ -40488,6 +41628,38 @@
           "source": "league_guides"
         }
       ]
+    },
+    {
+      "id": "BL2_83626",
+      "competition_id": 79,
+      "competition_ja": "ブンデスリーガ2部",
+      "competition_category": "league",
+      "competition_flag": "🇩🇪",
+      "kickoff_jst": "2026-10-17T20:00:00+09:00",
+      "status": "FINISHED",
+      "stage": "REGULAR_SEASON",
+      "matchday": 8,
+      "home_id": null,
+      "home_ja": "ヴォルフスブルク",
+      "home_en": "VfL Wolfsburg",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "ハイデンハイム",
+      "away_en": "1. FC Heidenheim",
+      "away_crest": null,
+      "score": {
+        "home": 3,
+        "away": 1
+      },
+      "japanese_players": [
+        {
+          "name_ja": "塩貝健人",
+          "position": "FW",
+          "side": "home"
+        }
+      ],
+      "broadcasters": [],
+      "_source": "openligadb"
     },
     {
       "id": 560603,
@@ -41682,6 +42854,48 @@
       ]
     },
     {
+      "id": "BL2_83627",
+      "competition_id": 79,
+      "competition_ja": "ブンデスリーガ2部",
+      "competition_category": "league",
+      "competition_flag": "🇩🇪",
+      "kickoff_jst": "2026-10-18T03:30:00+09:00",
+      "status": "FINISHED",
+      "stage": "REGULAR_SEASON",
+      "matchday": 8,
+      "home_id": null,
+      "home_ja": "ハノーファー96",
+      "home_en": "Hannover 96",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "ザンクト・パウリ",
+      "away_en": "FC St. Pauli",
+      "away_crest": null,
+      "score": {
+        "home": 1,
+        "away": 1
+      },
+      "japanese_players": [
+        {
+          "name_ja": "藤田譲瑠チマ",
+          "position": "MF",
+          "side": "away"
+        },
+        {
+          "name_ja": "安藤智哉",
+          "position": "DF",
+          "side": "away"
+        },
+        {
+          "name_ja": "原大智",
+          "position": "FW",
+          "side": "away"
+        }
+      ],
+      "broadcasters": [],
+      "_source": "openligadb"
+    },
+    {
       "id": 558572,
       "competition_id": 135,
       "competition_ja": "セリエA",
@@ -41955,6 +43169,43 @@
           "yt_published": "2026-10-18"
         }
       ]
+    },
+    {
+      "id": "BL2_83629",
+      "competition_id": 79,
+      "competition_ja": "ブンデスリーガ2部",
+      "competition_category": "league",
+      "competition_flag": "🇩🇪",
+      "kickoff_jst": "2026-10-18T20:30:00+09:00",
+      "status": "FINISHED",
+      "stage": "REGULAR_SEASON",
+      "matchday": 8,
+      "home_id": null,
+      "home_ja": "カールスルーエ",
+      "home_en": "Karlsruher SC",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "ダルムシュタット",
+      "away_en": "Darmstadt 98",
+      "away_crest": null,
+      "score": {
+        "home": 4,
+        "away": 0
+      },
+      "japanese_players": [
+        {
+          "name_ja": "福田師王",
+          "position": "FW",
+          "side": "home"
+        },
+        {
+          "name_ja": "秋山裕紀",
+          "position": "MF",
+          "side": "away"
+        }
+      ],
+      "broadcasters": [],
+      "_source": "openligadb"
     },
     {
       "id": 564715,
@@ -45319,6 +46570,79 @@
       "_source_page": "2026–27 UEFA Europa League league phase"
     },
     {
+      "id": "BL2_83648",
+      "competition_id": 79,
+      "competition_ja": "ブンデスリーガ2部",
+      "competition_category": "league",
+      "competition_flag": "🇩🇪",
+      "kickoff_jst": "2026-10-24T01:30:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "REGULAR_SEASON",
+      "matchday": 9,
+      "home_id": null,
+      "home_ja": "ダルムシュタット",
+      "home_en": "Darmstadt 98",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "ザンクト・パウリ",
+      "away_en": "FC St. Pauli",
+      "away_crest": null,
+      "score": null,
+      "japanese_players": [
+        {
+          "name_ja": "秋山裕紀",
+          "position": "MF",
+          "side": "home"
+        },
+        {
+          "name_ja": "藤田譲瑠チマ",
+          "position": "MF",
+          "side": "away"
+        },
+        {
+          "name_ja": "安藤智哉",
+          "position": "DF",
+          "side": "away"
+        },
+        {
+          "name_ja": "原大智",
+          "position": "FW",
+          "side": "away"
+        }
+      ],
+      "broadcasters": [],
+      "_source": "openligadb"
+    },
+    {
+      "id": "BL2_83655",
+      "competition_id": 79,
+      "competition_ja": "ブンデスリーガ2部",
+      "competition_category": "league",
+      "competition_flag": "🇩🇪",
+      "kickoff_jst": "2026-10-24T01:30:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "REGULAR_SEASON",
+      "matchday": 9,
+      "home_id": null,
+      "home_ja": "ボーフム",
+      "home_en": "VfL Bochum",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "ヴォルフスブルク",
+      "away_en": "VfL Wolfsburg",
+      "away_crest": null,
+      "score": null,
+      "japanese_players": [
+        {
+          "name_ja": "塩貝健人",
+          "position": "FW",
+          "side": "away"
+        }
+      ],
+      "broadcasters": [],
+      "_source": "openligadb"
+    },
+    {
       "id": 558863,
       "competition_id": 88,
       "competition_ja": "エールディビジ",
@@ -45594,6 +46918,35 @@
           "source": "league_guides"
         }
       ]
+    },
+    {
+      "id": "BL2_83659",
+      "competition_id": 79,
+      "competition_ja": "ブンデスリーガ2部",
+      "competition_category": "league",
+      "competition_flag": "🇩🇪",
+      "kickoff_jst": "2026-10-24T20:00:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "REGULAR_SEASON",
+      "matchday": 9,
+      "home_id": null,
+      "home_ja": "マクデブルク",
+      "home_en": "1. FC Magdeburg",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "カールスルーエ",
+      "away_en": "Karlsruher SC",
+      "away_crest": null,
+      "score": null,
+      "japanese_players": [
+        {
+          "name_ja": "福田師王",
+          "position": "FW",
+          "side": "away"
+        }
+      ],
+      "broadcasters": [],
+      "_source": "openligadb"
     },
     {
       "id": 560614,
@@ -46855,6 +48208,45 @@
           "source": "league_guides"
         }
       ]
+    },
+    {
+      "id": "BL2_83658",
+      "competition_id": 79,
+      "competition_ja": "ブンデスリーガ2部",
+      "competition_category": "league",
+      "competition_flag": "🇩🇪",
+      "kickoff_jst": "2026-10-25T21:30:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "REGULAR_SEASON",
+      "matchday": 9,
+      "home_id": null,
+      "home_ja": "ホルシュタイン・キール",
+      "home_en": "Holstein Kiel",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "ディナモ・ドレスデン",
+      "away_en": "Dynamo Dresden",
+      "away_crest": null,
+      "score": null,
+      "japanese_players": [
+        {
+          "name_ja": "髙橋仁胡",
+          "position": "DF",
+          "side": "home"
+        },
+        {
+          "name_ja": "安部大晴",
+          "position": "MF",
+          "side": "home"
+        },
+        {
+          "name_ja": "関根大輝",
+          "position": "DF",
+          "side": "home"
+        }
+      ],
+      "broadcasters": [],
+      "_source": "openligadb"
     },
     {
       "id": 564720,
@@ -48475,6 +49867,64 @@
       ]
     },
     {
+      "id": "BL2_83663",
+      "competition_id": 79,
+      "competition_ja": "ブンデスリーガ2部",
+      "competition_category": "league",
+      "competition_flag": "🇩🇪",
+      "kickoff_jst": "2026-10-31T21:00:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "REGULAR_SEASON",
+      "matchday": 10,
+      "home_id": null,
+      "home_ja": "ヴォルフスブルク",
+      "home_en": "VfL Wolfsburg",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "オスナブリュック",
+      "away_en": "VfL Osnabrück",
+      "away_crest": null,
+      "score": null,
+      "japanese_players": [
+        {
+          "name_ja": "塩貝健人",
+          "position": "FW",
+          "side": "home"
+        }
+      ],
+      "broadcasters": [],
+      "_source": "openligadb"
+    },
+    {
+      "id": "BL2_83667",
+      "competition_id": 79,
+      "competition_ja": "ブンデスリーガ2部",
+      "competition_category": "league",
+      "competition_flag": "🇩🇪",
+      "kickoff_jst": "2026-10-31T21:00:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "REGULAR_SEASON",
+      "matchday": 10,
+      "home_id": null,
+      "home_ja": "ダルムシュタット",
+      "home_en": "Darmstadt 98",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "マクデブルク",
+      "away_en": "1. FC Magdeburg",
+      "away_crest": null,
+      "score": null,
+      "japanese_players": [
+        {
+          "name_ja": "秋山裕紀",
+          "position": "MF",
+          "side": "home"
+        }
+      ],
+      "broadcasters": [],
+      "_source": "openligadb"
+    },
+    {
       "id": 560626,
       "competition_id": 39,
       "competition_ja": "プレミアリーグ",
@@ -49672,6 +51122,35 @@
       ]
     },
     {
+      "id": "BL2_83669",
+      "competition_id": 79,
+      "competition_ja": "ブンデスリーガ2部",
+      "competition_category": "league",
+      "competition_flag": "🇩🇪",
+      "kickoff_jst": "2026-11-01T04:30:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "REGULAR_SEASON",
+      "matchday": 10,
+      "home_id": null,
+      "home_ja": "カールスルーエ",
+      "home_en": "Karlsruher SC",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "ハイデンハイム",
+      "away_en": "1. FC Heidenheim",
+      "away_crest": null,
+      "score": null,
+      "japanese_players": [
+        {
+          "name_ja": "福田師王",
+          "position": "FW",
+          "side": "home"
+        }
+      ],
+      "broadcasters": [],
+      "_source": "openligadb"
+    },
+    {
       "id": 558548,
       "competition_id": 135,
       "competition_ja": "セリエA",
@@ -50018,6 +51497,84 @@
           "source": "league_guides"
         }
       ]
+    },
+    {
+      "id": "BL2_83664",
+      "competition_id": 79,
+      "competition_ja": "ブンデスリーガ2部",
+      "competition_category": "league",
+      "competition_flag": "🇩🇪",
+      "kickoff_jst": "2026-11-01T21:30:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "REGULAR_SEASON",
+      "matchday": 10,
+      "home_id": null,
+      "home_ja": "ザンクト・パウリ",
+      "home_en": "FC St. Pauli",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "ニュルンベルク",
+      "away_en": "1. FC Nürnberg",
+      "away_crest": null,
+      "score": null,
+      "japanese_players": [
+        {
+          "name_ja": "藤田譲瑠チマ",
+          "position": "MF",
+          "side": "home"
+        },
+        {
+          "name_ja": "安藤智哉",
+          "position": "DF",
+          "side": "home"
+        },
+        {
+          "name_ja": "原大智",
+          "position": "FW",
+          "side": "home"
+        }
+      ],
+      "broadcasters": [],
+      "_source": "openligadb"
+    },
+    {
+      "id": "BL2_83673",
+      "competition_id": 79,
+      "competition_ja": "ブンデスリーガ2部",
+      "competition_category": "league",
+      "competition_flag": "🇩🇪",
+      "kickoff_jst": "2026-11-01T21:30:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "REGULAR_SEASON",
+      "matchday": 10,
+      "home_id": null,
+      "home_ja": "グロイター・フュルト",
+      "home_en": "Greuther Fürth",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "ホルシュタイン・キール",
+      "away_en": "Holstein Kiel",
+      "away_crest": null,
+      "score": null,
+      "japanese_players": [
+        {
+          "name_ja": "髙橋仁胡",
+          "position": "DF",
+          "side": "away"
+        },
+        {
+          "name_ja": "安部大晴",
+          "position": "MF",
+          "side": "away"
+        },
+        {
+          "name_ja": "関根大輝",
+          "position": "DF",
+          "side": "away"
+        }
+      ],
+      "broadcasters": [],
+      "_source": "openligadb"
     },
     {
       "id": 564733,
@@ -53354,6 +54911,312 @@
       "_source_page": "2026–27 UEFA Europa League league phase"
     },
     {
+      "id": "BL2_83682",
+      "competition_id": 79,
+      "competition_ja": "ブンデスリーガ2部",
+      "competition_category": "league",
+      "competition_flag": "🇩🇪",
+      "kickoff_jst": "2026-11-07T21:00:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "REGULAR_SEASON",
+      "matchday": 11,
+      "home_id": null,
+      "home_ja": "ニュルンベルク",
+      "home_en": "1. FC Nürnberg",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "ダルムシュタット",
+      "away_en": "Darmstadt 98",
+      "away_crest": null,
+      "score": null,
+      "japanese_players": [
+        {
+          "name_ja": "秋山裕紀",
+          "position": "MF",
+          "side": "away"
+        }
+      ],
+      "broadcasters": [],
+      "_source": "openligadb"
+    },
+    {
+      "id": "BL2_83685",
+      "competition_id": 79,
+      "competition_ja": "ブンデスリーガ2部",
+      "competition_category": "league",
+      "competition_flag": "🇩🇪",
+      "kickoff_jst": "2026-11-07T21:00:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "REGULAR_SEASON",
+      "matchday": 11,
+      "home_id": null,
+      "home_ja": "ホルシュタイン・キール",
+      "home_en": "Holstein Kiel",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "ビーレフェルト",
+      "away_en": "Arminia Bielefeld",
+      "away_crest": null,
+      "score": null,
+      "japanese_players": [
+        {
+          "name_ja": "髙橋仁胡",
+          "position": "DF",
+          "side": "home"
+        },
+        {
+          "name_ja": "安部大晴",
+          "position": "MF",
+          "side": "home"
+        },
+        {
+          "name_ja": "関根大輝",
+          "position": "DF",
+          "side": "home"
+        }
+      ],
+      "broadcasters": [],
+      "_source": "openligadb"
+    },
+    {
+      "id": "BL2_83681",
+      "competition_id": 79,
+      "competition_ja": "ブンデスリーガ2部",
+      "competition_category": "league",
+      "competition_flag": "🇩🇪",
+      "kickoff_jst": "2026-11-08T04:30:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "REGULAR_SEASON",
+      "matchday": 11,
+      "home_id": null,
+      "home_ja": "ヘルタ・ベルリン",
+      "home_en": "Hertha BSC",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "ヴォルフスブルク",
+      "away_en": "VfL Wolfsburg",
+      "away_crest": null,
+      "score": null,
+      "japanese_players": [
+        {
+          "name_ja": "塩貝健人",
+          "position": "FW",
+          "side": "away"
+        }
+      ],
+      "broadcasters": [],
+      "_source": "openligadb"
+    },
+    {
+      "id": "BL2_83683",
+      "competition_id": 79,
+      "competition_ja": "ブンデスリーガ2部",
+      "competition_category": "league",
+      "competition_flag": "🇩🇪",
+      "kickoff_jst": "2026-11-08T21:30:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "REGULAR_SEASON",
+      "matchday": 11,
+      "home_id": null,
+      "home_ja": "ボーフム",
+      "home_en": "VfL Bochum",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "カールスルーエ",
+      "away_en": "Karlsruher SC",
+      "away_crest": null,
+      "score": null,
+      "japanese_players": [
+        {
+          "name_ja": "福田師王",
+          "position": "FW",
+          "side": "away"
+        }
+      ],
+      "broadcasters": [],
+      "_source": "openligadb"
+    },
+    {
+      "id": "BL2_83686",
+      "competition_id": 79,
+      "competition_ja": "ブンデスリーガ2部",
+      "competition_category": "league",
+      "competition_flag": "🇩🇪",
+      "kickoff_jst": "2026-11-08T21:30:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "REGULAR_SEASON",
+      "matchday": 11,
+      "home_id": null,
+      "home_ja": "マクデブルク",
+      "home_en": "1. FC Magdeburg",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "ザンクト・パウリ",
+      "away_en": "FC St. Pauli",
+      "away_crest": null,
+      "score": null,
+      "japanese_players": [
+        {
+          "name_ja": "藤田譲瑠チマ",
+          "position": "MF",
+          "side": "away"
+        },
+        {
+          "name_ja": "安藤智哉",
+          "position": "DF",
+          "side": "away"
+        },
+        {
+          "name_ja": "原大智",
+          "position": "FW",
+          "side": "away"
+        }
+      ],
+      "broadcasters": [],
+      "_source": "openligadb"
+    },
+    {
+      "id": "BL2_83697",
+      "competition_id": 79,
+      "competition_ja": "ブンデスリーガ2部",
+      "competition_category": "league",
+      "competition_flag": "🇩🇪",
+      "kickoff_jst": "2026-11-21T02:30:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "REGULAR_SEASON",
+      "matchday": 12,
+      "home_id": null,
+      "home_ja": "ダルムシュタット",
+      "home_en": "Darmstadt 98",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "ハイデンハイム",
+      "away_en": "1. FC Heidenheim",
+      "away_crest": null,
+      "score": null,
+      "japanese_players": [
+        {
+          "name_ja": "秋山裕紀",
+          "position": "MF",
+          "side": "home"
+        }
+      ],
+      "broadcasters": [],
+      "_source": "openligadb"
+    },
+    {
+      "id": "BL2_83689",
+      "competition_id": 79,
+      "competition_ja": "ブンデスリーガ2部",
+      "competition_category": "league",
+      "competition_flag": "🇩🇪",
+      "kickoff_jst": "2026-11-21T21:00:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "REGULAR_SEASON",
+      "matchday": 12,
+      "home_id": null,
+      "home_ja": "ヴォルフスブルク",
+      "home_en": "VfL Wolfsburg",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "ホルシュタイン・キール",
+      "away_en": "Holstein Kiel",
+      "away_crest": null,
+      "score": null,
+      "japanese_players": [
+        {
+          "name_ja": "塩貝健人",
+          "position": "FW",
+          "side": "home"
+        },
+        {
+          "name_ja": "髙橋仁胡",
+          "position": "DF",
+          "side": "away"
+        },
+        {
+          "name_ja": "安部大晴",
+          "position": "MF",
+          "side": "away"
+        },
+        {
+          "name_ja": "関根大輝",
+          "position": "DF",
+          "side": "away"
+        }
+      ],
+      "broadcasters": [],
+      "_source": "openligadb"
+    },
+    {
+      "id": "BL2_83691",
+      "competition_id": 79,
+      "competition_ja": "ブンデスリーガ2部",
+      "competition_category": "league",
+      "competition_flag": "🇩🇪",
+      "kickoff_jst": "2026-11-22T04:30:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "REGULAR_SEASON",
+      "matchday": 12,
+      "home_id": null,
+      "home_ja": "ザンクト・パウリ",
+      "home_en": "FC St. Pauli",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "ボーフム",
+      "away_en": "VfL Bochum",
+      "away_crest": null,
+      "score": null,
+      "japanese_players": [
+        {
+          "name_ja": "藤田譲瑠チマ",
+          "position": "MF",
+          "side": "home"
+        },
+        {
+          "name_ja": "安藤智哉",
+          "position": "DF",
+          "side": "home"
+        },
+        {
+          "name_ja": "原大智",
+          "position": "FW",
+          "side": "home"
+        }
+      ],
+      "broadcasters": [],
+      "_source": "openligadb"
+    },
+    {
+      "id": "BL2_83702",
+      "competition_id": 79,
+      "competition_ja": "ブンデスリーガ2部",
+      "competition_category": "league",
+      "competition_flag": "🇩🇪",
+      "kickoff_jst": "2026-11-22T21:30:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "REGULAR_SEASON",
+      "matchday": 12,
+      "home_id": null,
+      "home_ja": "カールスルーエ",
+      "home_en": "Karlsruher SC",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "オスナブリュック",
+      "away_en": "VfL Osnabrück",
+      "away_crest": null,
+      "score": null,
+      "japanese_players": [
+        {
+          "name_ja": "福田師王",
+          "position": "FW",
+          "side": "home"
+        }
+      ],
+      "broadcasters": [],
+      "_source": "openligadb"
+    },
+    {
       "id": "ECL_2026-11-26_Kairat_Mjllby",
       "competition_id": 848,
       "competition_ja": "UEFAカンファレンスリーグ",
@@ -54731,6 +56594,312 @@
       ],
       "_source": "wikipedia",
       "_source_page": "2026–27 UEFA Europa League league phase"
+    },
+    {
+      "id": "BL2_83709",
+      "competition_id": 79,
+      "competition_ja": "ブンデスリーガ2部",
+      "competition_category": "league",
+      "competition_flag": "🇩🇪",
+      "kickoff_jst": "2026-11-28T02:30:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "REGULAR_SEASON",
+      "matchday": 13,
+      "home_id": null,
+      "home_ja": "ボーフム",
+      "home_en": "VfL Bochum",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "ダルムシュタット",
+      "away_en": "Darmstadt 98",
+      "away_crest": null,
+      "score": null,
+      "japanese_players": [
+        {
+          "name_ja": "秋山裕紀",
+          "position": "MF",
+          "side": "away"
+        }
+      ],
+      "broadcasters": [],
+      "_source": "openligadb"
+    },
+    {
+      "id": "BL2_83708",
+      "competition_id": 79,
+      "competition_ja": "ブンデスリーガ2部",
+      "competition_category": "league",
+      "competition_flag": "🇩🇪",
+      "kickoff_jst": "2026-11-28T21:00:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "REGULAR_SEASON",
+      "matchday": 13,
+      "home_id": null,
+      "home_ja": "ヘルタ・ベルリン",
+      "home_en": "Hertha BSC",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "カールスルーエ",
+      "away_en": "Karlsruher SC",
+      "away_crest": null,
+      "score": null,
+      "japanese_players": [
+        {
+          "name_ja": "福田師王",
+          "position": "FW",
+          "side": "away"
+        }
+      ],
+      "broadcasters": [],
+      "_source": "openligadb"
+    },
+    {
+      "id": "BL2_83710",
+      "competition_id": 79,
+      "competition_ja": "ブンデスリーガ2部",
+      "competition_category": "league",
+      "competition_flag": "🇩🇪",
+      "kickoff_jst": "2026-11-28T21:00:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "REGULAR_SEASON",
+      "matchday": 13,
+      "home_id": null,
+      "home_ja": "ディナモ・ドレスデン",
+      "home_en": "Dynamo Dresden",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "ザンクト・パウリ",
+      "away_en": "FC St. Pauli",
+      "away_crest": null,
+      "score": null,
+      "japanese_players": [
+        {
+          "name_ja": "藤田譲瑠チマ",
+          "position": "MF",
+          "side": "away"
+        },
+        {
+          "name_ja": "安藤智哉",
+          "position": "DF",
+          "side": "away"
+        },
+        {
+          "name_ja": "原大智",
+          "position": "FW",
+          "side": "away"
+        }
+      ],
+      "broadcasters": [],
+      "_source": "openligadb"
+    },
+    {
+      "id": "BL2_83712",
+      "competition_id": 79,
+      "competition_ja": "ブンデスリーガ2部",
+      "competition_category": "league",
+      "competition_flag": "🇩🇪",
+      "kickoff_jst": "2026-11-28T21:00:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "REGULAR_SEASON",
+      "matchday": 13,
+      "home_id": null,
+      "home_ja": "ホルシュタイン・キール",
+      "home_en": "Holstein Kiel",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "カイザースラウテルン",
+      "away_en": "1. FC Kaiserslautern",
+      "away_crest": null,
+      "score": null,
+      "japanese_players": [
+        {
+          "name_ja": "髙橋仁胡",
+          "position": "DF",
+          "side": "home"
+        },
+        {
+          "name_ja": "安部大晴",
+          "position": "MF",
+          "side": "home"
+        },
+        {
+          "name_ja": "関根大輝",
+          "position": "DF",
+          "side": "home"
+        }
+      ],
+      "broadcasters": [],
+      "_source": "openligadb"
+    },
+    {
+      "id": "BL2_83717",
+      "competition_id": 79,
+      "competition_ja": "ブンデスリーガ2部",
+      "competition_category": "league",
+      "competition_flag": "🇩🇪",
+      "kickoff_jst": "2026-11-29T21:30:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "REGULAR_SEASON",
+      "matchday": 13,
+      "home_id": null,
+      "home_ja": "ブラウンシュヴァイク",
+      "home_en": "Eintracht Braunschweig",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "ヴォルフスブルク",
+      "away_en": "VfL Wolfsburg",
+      "away_crest": null,
+      "score": null,
+      "japanese_players": [
+        {
+          "name_ja": "塩貝健人",
+          "position": "FW",
+          "side": "away"
+        }
+      ],
+      "broadcasters": [],
+      "_source": "openligadb"
+    },
+    {
+      "id": "BL2_83726",
+      "competition_id": 79,
+      "competition_ja": "ブンデスリーガ2部",
+      "competition_category": "league",
+      "competition_flag": "🇩🇪",
+      "kickoff_jst": "2026-12-06T21:30:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "REGULAR_SEASON",
+      "matchday": 14,
+      "home_id": null,
+      "home_ja": "ヴォルフスブルク",
+      "home_en": "VfL Wolfsburg",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "マクデブルク",
+      "away_en": "1. FC Magdeburg",
+      "away_crest": null,
+      "score": null,
+      "japanese_players": [
+        {
+          "name_ja": "塩貝健人",
+          "position": "FW",
+          "side": "home"
+        }
+      ],
+      "broadcasters": [],
+      "_source": "openligadb"
+    },
+    {
+      "id": "BL2_83729",
+      "competition_id": 79,
+      "competition_ja": "ブンデスリーガ2部",
+      "competition_category": "league",
+      "competition_flag": "🇩🇪",
+      "kickoff_jst": "2026-12-06T21:30:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "REGULAR_SEASON",
+      "matchday": 14,
+      "home_id": null,
+      "home_ja": "ザンクト・パウリ",
+      "home_en": "FC St. Pauli",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "ハイデンハイム",
+      "away_en": "1. FC Heidenheim",
+      "away_crest": null,
+      "score": null,
+      "japanese_players": [
+        {
+          "name_ja": "藤田譲瑠チマ",
+          "position": "MF",
+          "side": "home"
+        },
+        {
+          "name_ja": "安藤智哉",
+          "position": "DF",
+          "side": "home"
+        },
+        {
+          "name_ja": "原大智",
+          "position": "FW",
+          "side": "home"
+        }
+      ],
+      "broadcasters": [],
+      "_source": "openligadb"
+    },
+    {
+      "id": "BL2_83732",
+      "competition_id": 79,
+      "competition_ja": "ブンデスリーガ2部",
+      "competition_category": "league",
+      "competition_flag": "🇩🇪",
+      "kickoff_jst": "2026-12-06T21:30:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "REGULAR_SEASON",
+      "matchday": 14,
+      "home_id": null,
+      "home_ja": "ダルムシュタット",
+      "home_en": "Darmstadt 98",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "ブラウンシュヴァイク",
+      "away_en": "Eintracht Braunschweig",
+      "away_crest": null,
+      "score": null,
+      "japanese_players": [
+        {
+          "name_ja": "秋山裕紀",
+          "position": "MF",
+          "side": "home"
+        }
+      ],
+      "broadcasters": [],
+      "_source": "openligadb"
+    },
+    {
+      "id": "BL2_83738",
+      "competition_id": 79,
+      "competition_ja": "ブンデスリーガ2部",
+      "competition_category": "league",
+      "competition_flag": "🇩🇪",
+      "kickoff_jst": "2026-12-06T21:30:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "REGULAR_SEASON",
+      "matchday": 14,
+      "home_id": null,
+      "home_ja": "カールスルーエ",
+      "home_en": "Karlsruher SC",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "ホルシュタイン・キール",
+      "away_en": "Holstein Kiel",
+      "away_crest": null,
+      "score": null,
+      "japanese_players": [
+        {
+          "name_ja": "福田師王",
+          "position": "FW",
+          "side": "home"
+        },
+        {
+          "name_ja": "髙橋仁胡",
+          "position": "DF",
+          "side": "away"
+        },
+        {
+          "name_ja": "安部大晴",
+          "position": "MF",
+          "side": "away"
+        },
+        {
+          "name_ja": "関根大輝",
+          "position": "DF",
+          "side": "away"
+        }
+      ],
+      "broadcasters": [],
+      "_source": "openligadb"
     },
     {
       "id": "ECL_2026-12-10_Kairat_Univer",
@@ -56111,6 +58280,171 @@
       "_source_page": "2026–27 UEFA Europa League league phase"
     },
     {
+      "id": "BL2_83743",
+      "competition_id": 79,
+      "competition_ja": "ブンデスリーガ2部",
+      "competition_category": "league",
+      "competition_flag": "🇩🇪",
+      "kickoff_jst": "2026-12-13T21:30:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "REGULAR_SEASON",
+      "matchday": 15,
+      "home_id": null,
+      "home_ja": "ヘルタ・ベルリン",
+      "home_en": "Hertha BSC",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "ダルムシュタット",
+      "away_en": "Darmstadt 98",
+      "away_crest": null,
+      "score": null,
+      "japanese_players": [
+        {
+          "name_ja": "秋山裕紀",
+          "position": "MF",
+          "side": "away"
+        }
+      ],
+      "broadcasters": [],
+      "_source": "openligadb"
+    },
+    {
+      "id": "BL2_83746",
+      "competition_id": 79,
+      "competition_ja": "ブンデスリーガ2部",
+      "competition_category": "league",
+      "competition_flag": "🇩🇪",
+      "kickoff_jst": "2026-12-13T21:30:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "REGULAR_SEASON",
+      "matchday": 15,
+      "home_id": null,
+      "home_ja": "ホルシュタイン・キール",
+      "home_en": "Holstein Kiel",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "ハノーファー96",
+      "away_en": "Hannover 96",
+      "away_crest": null,
+      "score": null,
+      "japanese_players": [
+        {
+          "name_ja": "髙橋仁胡",
+          "position": "DF",
+          "side": "home"
+        },
+        {
+          "name_ja": "安部大晴",
+          "position": "MF",
+          "side": "home"
+        },
+        {
+          "name_ja": "関根大輝",
+          "position": "DF",
+          "side": "home"
+        }
+      ],
+      "broadcasters": [],
+      "_source": "openligadb"
+    },
+    {
+      "id": "BL2_83749",
+      "competition_id": 79,
+      "competition_ja": "ブンデスリーガ2部",
+      "competition_category": "league",
+      "competition_flag": "🇩🇪",
+      "kickoff_jst": "2026-12-13T21:30:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "REGULAR_SEASON",
+      "matchday": 15,
+      "home_id": null,
+      "home_ja": "ブラウンシュヴァイク",
+      "home_en": "Eintracht Braunschweig",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "カールスルーエ",
+      "away_en": "Karlsruher SC",
+      "away_crest": null,
+      "score": null,
+      "japanese_players": [
+        {
+          "name_ja": "福田師王",
+          "position": "FW",
+          "side": "away"
+        }
+      ],
+      "broadcasters": [],
+      "_source": "openligadb"
+    },
+    {
+      "id": "BL2_83750",
+      "competition_id": 79,
+      "competition_ja": "ブンデスリーガ2部",
+      "competition_category": "league",
+      "competition_flag": "🇩🇪",
+      "kickoff_jst": "2026-12-13T21:30:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "REGULAR_SEASON",
+      "matchday": 15,
+      "home_id": null,
+      "home_ja": "グロイター・フュルト",
+      "home_en": "Greuther Fürth",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "ヴォルフスブルク",
+      "away_en": "VfL Wolfsburg",
+      "away_crest": null,
+      "score": null,
+      "japanese_players": [
+        {
+          "name_ja": "塩貝健人",
+          "position": "FW",
+          "side": "away"
+        }
+      ],
+      "broadcasters": [],
+      "_source": "openligadb"
+    },
+    {
+      "id": "BL2_83751",
+      "competition_id": 79,
+      "competition_ja": "ブンデスリーガ2部",
+      "competition_category": "league",
+      "competition_flag": "🇩🇪",
+      "kickoff_jst": "2026-12-13T21:30:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "REGULAR_SEASON",
+      "matchday": 15,
+      "home_id": null,
+      "home_ja": "オスナブリュック",
+      "home_en": "VfL Osnabrück",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "ザンクト・パウリ",
+      "away_en": "FC St. Pauli",
+      "away_crest": null,
+      "score": null,
+      "japanese_players": [
+        {
+          "name_ja": "藤田譲瑠チマ",
+          "position": "MF",
+          "side": "away"
+        },
+        {
+          "name_ja": "安藤智哉",
+          "position": "DF",
+          "side": "away"
+        },
+        {
+          "name_ja": "原大智",
+          "position": "FW",
+          "side": "away"
+        }
+      ],
+      "broadcasters": [],
+      "_source": "openligadb"
+    },
+    {
       "id": "ECL_2026-12-17_Ajax_Getafe",
       "competition_id": 848,
       "competition_ja": "UEFAカンファレンスリーグ",
@@ -56759,6 +59093,336 @@
       ],
       "_source": "wikipedia",
       "_source_page": "2026–27 UEFA Conference League league phase"
+    },
+    {
+      "id": "BL2_83752",
+      "competition_id": 79,
+      "competition_ja": "ブンデスリーガ2部",
+      "competition_category": "league",
+      "competition_flag": "🇩🇪",
+      "kickoff_jst": "2026-12-20T21:30:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "REGULAR_SEASON",
+      "matchday": 16,
+      "home_id": null,
+      "home_ja": "ヴォルフスブルク",
+      "home_en": "VfL Wolfsburg",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "ビーレフェルト",
+      "away_en": "Arminia Bielefeld",
+      "away_crest": null,
+      "score": null,
+      "japanese_players": [
+        {
+          "name_ja": "塩貝健人",
+          "position": "FW",
+          "side": "home"
+        }
+      ],
+      "broadcasters": [],
+      "_source": "openligadb"
+    },
+    {
+      "id": "BL2_83753",
+      "competition_id": 79,
+      "competition_ja": "ブンデスリーガ2部",
+      "competition_category": "league",
+      "competition_flag": "🇩🇪",
+      "kickoff_jst": "2026-12-20T21:30:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "REGULAR_SEASON",
+      "matchday": 16,
+      "home_id": null,
+      "home_ja": "ザンクト・パウリ",
+      "home_en": "FC St. Pauli",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "ヘルタ・ベルリン",
+      "away_en": "Hertha BSC",
+      "away_crest": null,
+      "score": null,
+      "japanese_players": [
+        {
+          "name_ja": "藤田譲瑠チマ",
+          "position": "MF",
+          "side": "home"
+        },
+        {
+          "name_ja": "安藤智哉",
+          "position": "DF",
+          "side": "home"
+        },
+        {
+          "name_ja": "原大智",
+          "position": "FW",
+          "side": "home"
+        }
+      ],
+      "broadcasters": [],
+      "_source": "openligadb"
+    },
+    {
+      "id": "BL2_83757",
+      "competition_id": 79,
+      "competition_ja": "ブンデスリーガ2部",
+      "competition_category": "league",
+      "competition_flag": "🇩🇪",
+      "kickoff_jst": "2026-12-20T21:30:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "REGULAR_SEASON",
+      "matchday": 16,
+      "home_id": null,
+      "home_ja": "ダルムシュタット",
+      "home_en": "Darmstadt 98",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "グロイター・フュルト",
+      "away_en": "Greuther Fürth",
+      "away_crest": null,
+      "score": null,
+      "japanese_players": [
+        {
+          "name_ja": "秋山裕紀",
+          "position": "MF",
+          "side": "home"
+        }
+      ],
+      "broadcasters": [],
+      "_source": "openligadb"
+    },
+    {
+      "id": "BL2_83765",
+      "competition_id": 79,
+      "competition_ja": "ブンデスリーガ2部",
+      "competition_category": "league",
+      "competition_flag": "🇩🇪",
+      "kickoff_jst": "2026-12-20T21:30:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "REGULAR_SEASON",
+      "matchday": 16,
+      "home_id": null,
+      "home_ja": "カールスルーエ",
+      "home_en": "Karlsruher SC",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "ディナモ・ドレスデン",
+      "away_en": "Dynamo Dresden",
+      "away_crest": null,
+      "score": null,
+      "japanese_players": [
+        {
+          "name_ja": "福田師王",
+          "position": "FW",
+          "side": "home"
+        }
+      ],
+      "broadcasters": [],
+      "_source": "openligadb"
+    },
+    {
+      "id": "BL2_83766",
+      "competition_id": 79,
+      "competition_ja": "ブンデスリーガ2部",
+      "competition_category": "league",
+      "competition_flag": "🇩🇪",
+      "kickoff_jst": "2026-12-20T21:30:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "REGULAR_SEASON",
+      "matchday": 16,
+      "home_id": null,
+      "home_ja": "コットブス",
+      "home_en": "Energie Cottbus",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "ホルシュタイン・キール",
+      "away_en": "Holstein Kiel",
+      "away_crest": null,
+      "score": null,
+      "japanese_players": [
+        {
+          "name_ja": "髙橋仁胡",
+          "position": "DF",
+          "side": "away"
+        },
+        {
+          "name_ja": "安部大晴",
+          "position": "MF",
+          "side": "away"
+        },
+        {
+          "name_ja": "関根大輝",
+          "position": "DF",
+          "side": "away"
+        }
+      ],
+      "broadcasters": [],
+      "_source": "openligadb"
+    },
+    {
+      "id": "BL2_83772",
+      "competition_id": 79,
+      "competition_ja": "ブンデスリーガ2部",
+      "competition_category": "league",
+      "competition_flag": "🇩🇪",
+      "kickoff_jst": "2027-01-17T21:30:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "REGULAR_SEASON",
+      "matchday": 17,
+      "home_id": null,
+      "home_ja": "ディナモ・ドレスデン",
+      "home_en": "Dynamo Dresden",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "ヴォルフスブルク",
+      "away_en": "VfL Wolfsburg",
+      "away_crest": null,
+      "score": null,
+      "japanese_players": [
+        {
+          "name_ja": "塩貝健人",
+          "position": "FW",
+          "side": "away"
+        }
+      ],
+      "broadcasters": [],
+      "_source": "openligadb"
+    },
+    {
+      "id": "BL2_83773",
+      "competition_id": 79,
+      "competition_ja": "ブンデスリーガ2部",
+      "competition_category": "league",
+      "competition_flag": "🇩🇪",
+      "kickoff_jst": "2027-01-17T21:30:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "REGULAR_SEASON",
+      "matchday": 17,
+      "home_id": null,
+      "home_ja": "ホルシュタイン・キール",
+      "home_en": "Holstein Kiel",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "ボーフム",
+      "away_en": "VfL Bochum",
+      "away_crest": null,
+      "score": null,
+      "japanese_players": [
+        {
+          "name_ja": "髙橋仁胡",
+          "position": "DF",
+          "side": "home"
+        },
+        {
+          "name_ja": "安部大晴",
+          "position": "MF",
+          "side": "home"
+        },
+        {
+          "name_ja": "関根大輝",
+          "position": "DF",
+          "side": "home"
+        }
+      ],
+      "broadcasters": [],
+      "_source": "openligadb"
+    },
+    {
+      "id": "BL2_83776",
+      "competition_id": 79,
+      "competition_ja": "ブンデスリーガ2部",
+      "competition_category": "league",
+      "competition_flag": "🇩🇪",
+      "kickoff_jst": "2027-01-17T21:30:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "REGULAR_SEASON",
+      "matchday": 17,
+      "home_id": null,
+      "home_ja": "ブラウンシュヴァイク",
+      "home_en": "Eintracht Braunschweig",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "ザンクト・パウリ",
+      "away_en": "FC St. Pauli",
+      "away_crest": null,
+      "score": null,
+      "japanese_players": [
+        {
+          "name_ja": "藤田譲瑠チマ",
+          "position": "MF",
+          "side": "away"
+        },
+        {
+          "name_ja": "安藤智哉",
+          "position": "DF",
+          "side": "away"
+        },
+        {
+          "name_ja": "原大智",
+          "position": "FW",
+          "side": "away"
+        }
+      ],
+      "broadcasters": [],
+      "_source": "openligadb"
+    },
+    {
+      "id": "BL2_83777",
+      "competition_id": 79,
+      "competition_ja": "ブンデスリーガ2部",
+      "competition_category": "league",
+      "competition_flag": "🇩🇪",
+      "kickoff_jst": "2027-01-17T21:30:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "REGULAR_SEASON",
+      "matchday": 17,
+      "home_id": null,
+      "home_ja": "グロイター・フュルト",
+      "home_en": "Greuther Fürth",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "カールスルーエ",
+      "away_en": "Karlsruher SC",
+      "away_crest": null,
+      "score": null,
+      "japanese_players": [
+        {
+          "name_ja": "福田師王",
+          "position": "FW",
+          "side": "away"
+        }
+      ],
+      "broadcasters": [],
+      "_source": "openligadb"
+    },
+    {
+      "id": "BL2_83778",
+      "competition_id": 79,
+      "competition_ja": "ブンデスリーガ2部",
+      "competition_category": "league",
+      "competition_flag": "🇩🇪",
+      "kickoff_jst": "2027-01-17T21:30:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "REGULAR_SEASON",
+      "matchday": 17,
+      "home_id": null,
+      "home_ja": "オスナブリュック",
+      "home_en": "VfL Osnabrück",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "ダルムシュタット",
+      "away_en": "Darmstadt 98",
+      "away_crest": null,
+      "score": null,
+      "japanese_players": [
+        {
+          "name_ja": "秋山裕紀",
+          "position": "MF",
+          "side": "away"
+        }
+      ],
+      "broadcasters": [],
+      "_source": "openligadb"
     },
     {
       "id": "EL_2027-01-21_Beikta_UnionS",
@@ -57491,6 +60155,147 @@
       "_source_page": "2026–27 UEFA Europa League league phase"
     },
     {
+      "id": "BL2_83859",
+      "competition_id": 79,
+      "competition_ja": "ブンデスリーガ2部",
+      "competition_category": "league",
+      "competition_flag": "🇩🇪",
+      "kickoff_jst": "2027-01-24T21:30:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "REGULAR_SEASON",
+      "matchday": 18,
+      "home_id": null,
+      "home_ja": "カイザースラウテルン",
+      "home_en": "1. FC Kaiserslautern",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "ヴォルフスブルク",
+      "away_en": "VfL Wolfsburg",
+      "away_crest": null,
+      "score": null,
+      "japanese_players": [
+        {
+          "name_ja": "塩貝健人",
+          "position": "FW",
+          "side": "away"
+        }
+      ],
+      "broadcasters": [],
+      "_source": "openligadb"
+    },
+    {
+      "id": "BL2_83862",
+      "competition_id": 79,
+      "competition_ja": "ブンデスリーガ2部",
+      "competition_category": "league",
+      "competition_flag": "🇩🇪",
+      "kickoff_jst": "2027-01-24T21:30:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "REGULAR_SEASON",
+      "matchday": 18,
+      "home_id": null,
+      "home_ja": "ホルシュタイン・キール",
+      "home_en": "Holstein Kiel",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "ダルムシュタット",
+      "away_en": "Darmstadt 98",
+      "away_crest": null,
+      "score": null,
+      "japanese_players": [
+        {
+          "name_ja": "髙橋仁胡",
+          "position": "DF",
+          "side": "home"
+        },
+        {
+          "name_ja": "安部大晴",
+          "position": "MF",
+          "side": "home"
+        },
+        {
+          "name_ja": "関根大輝",
+          "position": "DF",
+          "side": "home"
+        },
+        {
+          "name_ja": "秋山裕紀",
+          "position": "MF",
+          "side": "away"
+        }
+      ],
+      "broadcasters": [],
+      "_source": "openligadb"
+    },
+    {
+      "id": "BL2_83863",
+      "competition_id": 79,
+      "competition_ja": "ブンデスリーガ2部",
+      "competition_category": "league",
+      "competition_flag": "🇩🇪",
+      "kickoff_jst": "2027-01-24T21:30:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "REGULAR_SEASON",
+      "matchday": 18,
+      "home_id": null,
+      "home_ja": "ビーレフェルト",
+      "home_en": "Arminia Bielefeld",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "カールスルーエ",
+      "away_en": "Karlsruher SC",
+      "away_crest": null,
+      "score": null,
+      "japanese_players": [
+        {
+          "name_ja": "福田師王",
+          "position": "FW",
+          "side": "away"
+        }
+      ],
+      "broadcasters": [],
+      "_source": "openligadb"
+    },
+    {
+      "id": "BL2_83867",
+      "competition_id": 79,
+      "competition_ja": "ブンデスリーガ2部",
+      "competition_category": "league",
+      "competition_flag": "🇩🇪",
+      "kickoff_jst": "2027-01-24T21:30:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "REGULAR_SEASON",
+      "matchday": 18,
+      "home_id": null,
+      "home_ja": "グロイター・フュルト",
+      "home_en": "Greuther Fürth",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "ザンクト・パウリ",
+      "away_en": "FC St. Pauli",
+      "away_crest": null,
+      "score": null,
+      "japanese_players": [
+        {
+          "name_ja": "藤田譲瑠チマ",
+          "position": "MF",
+          "side": "away"
+        },
+        {
+          "name_ja": "安藤智哉",
+          "position": "DF",
+          "side": "away"
+        },
+        {
+          "name_ja": "原大智",
+          "position": "FW",
+          "side": "away"
+        }
+      ],
+      "broadcasters": [],
+      "_source": "openligadb"
+    },
+    {
       "id": "EL_2027-01-28_Milan_Ararat",
       "competition_id": 3,
       "competition_ja": "UEFAヨーロッパリーグ",
@@ -58219,8 +61024,2433 @@
       ],
       "_source": "wikipedia",
       "_source_page": "2026–27 UEFA Europa League league phase"
+    },
+    {
+      "id": "BL2_83869",
+      "competition_id": 79,
+      "competition_ja": "ブンデスリーガ2部",
+      "competition_category": "league",
+      "competition_flag": "🇩🇪",
+      "kickoff_jst": "2027-01-31T21:30:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "REGULAR_SEASON",
+      "matchday": 19,
+      "home_id": null,
+      "home_ja": "ヴォルフスブルク",
+      "home_en": "VfL Wolfsburg",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "ハノーファー96",
+      "away_en": "Hannover 96",
+      "away_crest": null,
+      "score": null,
+      "japanese_players": [
+        {
+          "name_ja": "塩貝健人",
+          "position": "FW",
+          "side": "home"
+        }
+      ],
+      "broadcasters": [],
+      "_source": "openligadb"
+    },
+    {
+      "id": "BL2_83870",
+      "competition_id": 79,
+      "competition_ja": "ブンデスリーガ2部",
+      "competition_category": "league",
+      "competition_flag": "🇩🇪",
+      "kickoff_jst": "2027-01-31T21:30:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "REGULAR_SEASON",
+      "matchday": 19,
+      "home_id": null,
+      "home_ja": "ザンクト・パウリ",
+      "home_en": "FC St. Pauli",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "ホルシュタイン・キール",
+      "away_en": "Holstein Kiel",
+      "away_crest": null,
+      "score": null,
+      "japanese_players": [
+        {
+          "name_ja": "藤田譲瑠チマ",
+          "position": "MF",
+          "side": "home"
+        },
+        {
+          "name_ja": "安藤智哉",
+          "position": "DF",
+          "side": "home"
+        },
+        {
+          "name_ja": "原大智",
+          "position": "FW",
+          "side": "home"
+        },
+        {
+          "name_ja": "髙橋仁胡",
+          "position": "DF",
+          "side": "away"
+        },
+        {
+          "name_ja": "安部大晴",
+          "position": "MF",
+          "side": "away"
+        },
+        {
+          "name_ja": "関根大輝",
+          "position": "DF",
+          "side": "away"
+        }
+      ],
+      "broadcasters": [],
+      "_source": "openligadb"
+    },
+    {
+      "id": "BL2_83872",
+      "competition_id": 79,
+      "competition_ja": "ブンデスリーガ2部",
+      "competition_category": "league",
+      "competition_flag": "🇩🇪",
+      "kickoff_jst": "2027-01-31T21:30:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "REGULAR_SEASON",
+      "matchday": 19,
+      "home_id": null,
+      "home_ja": "ダルムシュタット",
+      "home_en": "Darmstadt 98",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "ディナモ・ドレスデン",
+      "away_en": "Dynamo Dresden",
+      "away_crest": null,
+      "score": null,
+      "japanese_players": [
+        {
+          "name_ja": "秋山裕紀",
+          "position": "MF",
+          "side": "home"
+        }
+      ],
+      "broadcasters": [],
+      "_source": "openligadb"
+    },
+    {
+      "id": "BL2_83879",
+      "competition_id": 79,
+      "competition_ja": "ブンデスリーガ2部",
+      "competition_category": "league",
+      "competition_flag": "🇩🇪",
+      "kickoff_jst": "2027-01-31T21:30:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "REGULAR_SEASON",
+      "matchday": 19,
+      "home_id": null,
+      "home_ja": "カールスルーエ",
+      "home_en": "Karlsruher SC",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "カイザースラウテルン",
+      "away_en": "1. FC Kaiserslautern",
+      "away_crest": null,
+      "score": null,
+      "japanese_players": [
+        {
+          "name_ja": "福田師王",
+          "position": "FW",
+          "side": "home"
+        }
+      ],
+      "broadcasters": [],
+      "_source": "openligadb"
+    },
+    {
+      "id": "BL2_83887",
+      "competition_id": 79,
+      "competition_ja": "ブンデスリーガ2部",
+      "competition_category": "league",
+      "competition_flag": "🇩🇪",
+      "kickoff_jst": "2027-02-07T21:30:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "REGULAR_SEASON",
+      "matchday": 20,
+      "home_id": null,
+      "home_ja": "ヴォルフスブルク",
+      "home_en": "VfL Wolfsburg",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "カールスルーエ",
+      "away_en": "Karlsruher SC",
+      "away_crest": null,
+      "score": null,
+      "japanese_players": [
+        {
+          "name_ja": "塩貝健人",
+          "position": "FW",
+          "side": "home"
+        },
+        {
+          "name_ja": "福田師王",
+          "position": "FW",
+          "side": "away"
+        }
+      ],
+      "broadcasters": [],
+      "_source": "openligadb"
+    },
+    {
+      "id": "BL2_83888",
+      "competition_id": 79,
+      "competition_ja": "ブンデスリーガ2部",
+      "competition_category": "league",
+      "competition_flag": "🇩🇪",
+      "kickoff_jst": "2027-02-07T21:30:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "REGULAR_SEASON",
+      "matchday": 20,
+      "home_id": null,
+      "home_ja": "ハノーファー96",
+      "home_en": "Hannover 96",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "ダルムシュタット",
+      "away_en": "Darmstadt 98",
+      "away_crest": null,
+      "score": null,
+      "japanese_players": [
+        {
+          "name_ja": "秋山裕紀",
+          "position": "MF",
+          "side": "away"
+        }
+      ],
+      "broadcasters": [],
+      "_source": "openligadb"
+    },
+    {
+      "id": "BL2_83889",
+      "competition_id": 79,
+      "competition_ja": "ブンデスリーガ2部",
+      "competition_category": "league",
+      "competition_flag": "🇩🇪",
+      "kickoff_jst": "2027-02-07T21:30:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "REGULAR_SEASON",
+      "matchday": 20,
+      "home_id": null,
+      "home_ja": "カイザースラウテルン",
+      "home_en": "1. FC Kaiserslautern",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "ザンクト・パウリ",
+      "away_en": "FC St. Pauli",
+      "away_crest": null,
+      "score": null,
+      "japanese_players": [
+        {
+          "name_ja": "藤田譲瑠チマ",
+          "position": "MF",
+          "side": "away"
+        },
+        {
+          "name_ja": "安藤智哉",
+          "position": "DF",
+          "side": "away"
+        },
+        {
+          "name_ja": "原大智",
+          "position": "FW",
+          "side": "away"
+        }
+      ],
+      "broadcasters": [],
+      "_source": "openligadb"
+    },
+    {
+      "id": "BL2_83892",
+      "competition_id": 79,
+      "competition_ja": "ブンデスリーガ2部",
+      "competition_category": "league",
+      "competition_flag": "🇩🇪",
+      "kickoff_jst": "2027-02-07T21:30:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "REGULAR_SEASON",
+      "matchday": 20,
+      "home_id": null,
+      "home_ja": "ホルシュタイン・キール",
+      "home_en": "Holstein Kiel",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "マクデブルク",
+      "away_en": "1. FC Magdeburg",
+      "away_crest": null,
+      "score": null,
+      "japanese_players": [
+        {
+          "name_ja": "髙橋仁胡",
+          "position": "DF",
+          "side": "home"
+        },
+        {
+          "name_ja": "安部大晴",
+          "position": "MF",
+          "side": "home"
+        },
+        {
+          "name_ja": "関根大輝",
+          "position": "DF",
+          "side": "home"
+        }
+      ],
+      "broadcasters": [],
+      "_source": "openligadb"
+    },
+    {
+      "id": "BL2_83896",
+      "competition_id": 79,
+      "competition_ja": "ブンデスリーガ2部",
+      "competition_category": "league",
+      "competition_flag": "🇩🇪",
+      "kickoff_jst": "2027-02-14T21:30:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "REGULAR_SEASON",
+      "matchday": 21,
+      "home_id": null,
+      "home_ja": "ザンクト・パウリ",
+      "home_en": "FC St. Pauli",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "ビーレフェルト",
+      "away_en": "Arminia Bielefeld",
+      "away_crest": null,
+      "score": null,
+      "japanese_players": [
+        {
+          "name_ja": "藤田譲瑠チマ",
+          "position": "MF",
+          "side": "home"
+        },
+        {
+          "name_ja": "安藤智哉",
+          "position": "DF",
+          "side": "home"
+        },
+        {
+          "name_ja": "原大智",
+          "position": "FW",
+          "side": "home"
+        }
+      ],
+      "broadcasters": [],
+      "_source": "openligadb"
+    },
+    {
+      "id": "BL2_83898",
+      "competition_id": 79,
+      "competition_ja": "ブンデスリーガ2部",
+      "competition_category": "league",
+      "competition_flag": "🇩🇪",
+      "kickoff_jst": "2027-02-14T21:30:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "REGULAR_SEASON",
+      "matchday": 21,
+      "home_id": null,
+      "home_ja": "ダルムシュタット",
+      "home_en": "Darmstadt 98",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "カイザースラウテルン",
+      "away_en": "1. FC Kaiserslautern",
+      "away_crest": null,
+      "score": null,
+      "japanese_players": [
+        {
+          "name_ja": "秋山裕紀",
+          "position": "MF",
+          "side": "home"
+        }
+      ],
+      "broadcasters": [],
+      "_source": "openligadb"
+    },
+    {
+      "id": "BL2_83899",
+      "competition_id": 79,
+      "competition_ja": "ブンデスリーガ2部",
+      "competition_category": "league",
+      "competition_flag": "🇩🇪",
+      "kickoff_jst": "2027-02-14T21:30:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "REGULAR_SEASON",
+      "matchday": 21,
+      "home_id": null,
+      "home_ja": "ニュルンベルク",
+      "home_en": "1. FC Nürnberg",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "ホルシュタイン・キール",
+      "away_en": "Holstein Kiel",
+      "away_crest": null,
+      "score": null,
+      "japanese_players": [
+        {
+          "name_ja": "髙橋仁胡",
+          "position": "DF",
+          "side": "away"
+        },
+        {
+          "name_ja": "安部大晴",
+          "position": "MF",
+          "side": "away"
+        },
+        {
+          "name_ja": "関根大輝",
+          "position": "DF",
+          "side": "away"
+        }
+      ],
+      "broadcasters": [],
+      "_source": "openligadb"
+    },
+    {
+      "id": "BL2_83901",
+      "competition_id": 79,
+      "competition_ja": "ブンデスリーガ2部",
+      "competition_category": "league",
+      "competition_flag": "🇩🇪",
+      "kickoff_jst": "2027-02-14T21:30:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "REGULAR_SEASON",
+      "matchday": 21,
+      "home_id": null,
+      "home_ja": "カールスルーエ",
+      "home_en": "Karlsruher SC",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "ハノーファー96",
+      "away_en": "Hannover 96",
+      "away_crest": null,
+      "score": null,
+      "japanese_players": [
+        {
+          "name_ja": "福田師王",
+          "position": "FW",
+          "side": "home"
+        }
+      ],
+      "broadcasters": [],
+      "_source": "openligadb"
+    },
+    {
+      "id": "BL2_83904",
+      "competition_id": 79,
+      "competition_ja": "ブンデスリーガ2部",
+      "competition_category": "league",
+      "competition_flag": "🇩🇪",
+      "kickoff_jst": "2027-02-14T21:30:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "REGULAR_SEASON",
+      "matchday": 21,
+      "home_id": null,
+      "home_ja": "コットブス",
+      "home_en": "Energie Cottbus",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "ヴォルフスブルク",
+      "away_en": "VfL Wolfsburg",
+      "away_crest": null,
+      "score": null,
+      "japanese_players": [
+        {
+          "name_ja": "塩貝健人",
+          "position": "FW",
+          "side": "away"
+        }
+      ],
+      "broadcasters": [],
+      "_source": "openligadb"
+    },
+    {
+      "id": "BL2_83905",
+      "competition_id": 79,
+      "competition_ja": "ブンデスリーガ2部",
+      "competition_category": "league",
+      "competition_flag": "🇩🇪",
+      "kickoff_jst": "2027-02-21T21:30:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "REGULAR_SEASON",
+      "matchday": 22,
+      "home_id": null,
+      "home_ja": "ヴォルフスブルク",
+      "home_en": "VfL Wolfsburg",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "ザンクト・パウリ",
+      "away_en": "FC St. Pauli",
+      "away_crest": null,
+      "score": null,
+      "japanese_players": [
+        {
+          "name_ja": "塩貝健人",
+          "position": "FW",
+          "side": "home"
+        },
+        {
+          "name_ja": "藤田譲瑠チマ",
+          "position": "MF",
+          "side": "away"
+        },
+        {
+          "name_ja": "安藤智哉",
+          "position": "DF",
+          "side": "away"
+        },
+        {
+          "name_ja": "原大智",
+          "position": "FW",
+          "side": "away"
+        }
+      ],
+      "broadcasters": [],
+      "_source": "openligadb"
+    },
+    {
+      "id": "BL2_83910",
+      "competition_id": 79,
+      "competition_ja": "ブンデスリーガ2部",
+      "competition_category": "league",
+      "competition_flag": "🇩🇪",
+      "kickoff_jst": "2027-02-21T21:30:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "REGULAR_SEASON",
+      "matchday": 22,
+      "home_id": null,
+      "home_ja": "ホルシュタイン・キール",
+      "home_en": "Holstein Kiel",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "ハイデンハイム",
+      "away_en": "1. FC Heidenheim",
+      "away_crest": null,
+      "score": null,
+      "japanese_players": [
+        {
+          "name_ja": "髙橋仁胡",
+          "position": "DF",
+          "side": "home"
+        },
+        {
+          "name_ja": "安部大晴",
+          "position": "MF",
+          "side": "home"
+        },
+        {
+          "name_ja": "関根大輝",
+          "position": "DF",
+          "side": "home"
+        }
+      ],
+      "broadcasters": [],
+      "_source": "openligadb"
+    },
+    {
+      "id": "BL2_83911",
+      "competition_id": 79,
+      "competition_ja": "ブンデスリーガ2部",
+      "competition_category": "league",
+      "competition_flag": "🇩🇪",
+      "kickoff_jst": "2027-02-21T21:30:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "REGULAR_SEASON",
+      "matchday": 22,
+      "home_id": null,
+      "home_ja": "ビーレフェルト",
+      "home_en": "Arminia Bielefeld",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "ダルムシュタット",
+      "away_en": "Darmstadt 98",
+      "away_crest": null,
+      "score": null,
+      "japanese_players": [
+        {
+          "name_ja": "秋山裕紀",
+          "position": "MF",
+          "side": "away"
+        }
+      ],
+      "broadcasters": [],
+      "_source": "openligadb"
+    },
+    {
+      "id": "BL2_83913",
+      "competition_id": 79,
+      "competition_ja": "ブンデスリーガ2部",
+      "competition_category": "league",
+      "competition_flag": "🇩🇪",
+      "kickoff_jst": "2027-02-21T21:30:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "REGULAR_SEASON",
+      "matchday": 22,
+      "home_id": null,
+      "home_ja": "コットブス",
+      "home_en": "Energie Cottbus",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "カールスルーエ",
+      "away_en": "Karlsruher SC",
+      "away_crest": null,
+      "score": null,
+      "japanese_players": [
+        {
+          "name_ja": "福田師王",
+          "position": "FW",
+          "side": "away"
+        }
+      ],
+      "broadcasters": [],
+      "_source": "openligadb"
+    },
+    {
+      "id": "BL2_83914",
+      "competition_id": 79,
+      "competition_ja": "ブンデスリーガ2部",
+      "competition_category": "league",
+      "competition_flag": "🇩🇪",
+      "kickoff_jst": "2027-02-28T21:30:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "REGULAR_SEASON",
+      "matchday": 23,
+      "home_id": null,
+      "home_ja": "ザンクト・パウリ",
+      "home_en": "FC St. Pauli",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "コットブス",
+      "away_en": "Energie Cottbus",
+      "away_crest": null,
+      "score": null,
+      "japanese_players": [
+        {
+          "name_ja": "藤田譲瑠チマ",
+          "position": "MF",
+          "side": "home"
+        },
+        {
+          "name_ja": "安藤智哉",
+          "position": "DF",
+          "side": "home"
+        },
+        {
+          "name_ja": "原大智",
+          "position": "FW",
+          "side": "home"
+        }
+      ],
+      "broadcasters": [],
+      "_source": "openligadb"
+    },
+    {
+      "id": "BL2_83916",
+      "competition_id": 79,
+      "competition_ja": "ブンデスリーガ2部",
+      "competition_category": "league",
+      "competition_flag": "🇩🇪",
+      "kickoff_jst": "2027-02-28T21:30:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "REGULAR_SEASON",
+      "matchday": 23,
+      "home_id": null,
+      "home_ja": "ダルムシュタット",
+      "home_en": "Darmstadt 98",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "ヴォルフスブルク",
+      "away_en": "VfL Wolfsburg",
+      "away_crest": null,
+      "score": null,
+      "japanese_players": [
+        {
+          "name_ja": "秋山裕紀",
+          "position": "MF",
+          "side": "home"
+        },
+        {
+          "name_ja": "塩貝健人",
+          "position": "FW",
+          "side": "away"
+        }
+      ],
+      "broadcasters": [],
+      "_source": "openligadb"
+    },
+    {
+      "id": "BL2_83918",
+      "competition_id": 79,
+      "competition_ja": "ブンデスリーガ2部",
+      "competition_category": "league",
+      "competition_flag": "🇩🇪",
+      "kickoff_jst": "2027-02-28T21:30:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "REGULAR_SEASON",
+      "matchday": 23,
+      "home_id": null,
+      "home_ja": "ニュルンベルク",
+      "home_en": "1. FC Nürnberg",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "カールスルーエ",
+      "away_en": "Karlsruher SC",
+      "away_crest": null,
+      "score": null,
+      "japanese_players": [
+        {
+          "name_ja": "福田師王",
+          "position": "FW",
+          "side": "away"
+        }
+      ],
+      "broadcasters": [],
+      "_source": "openligadb"
+    },
+    {
+      "id": "BL2_83922",
+      "competition_id": 79,
+      "competition_ja": "ブンデスリーガ2部",
+      "competition_category": "league",
+      "competition_flag": "🇩🇪",
+      "kickoff_jst": "2027-02-28T21:30:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "REGULAR_SEASON",
+      "matchday": 23,
+      "home_id": null,
+      "home_ja": "オスナブリュック",
+      "home_en": "VfL Osnabrück",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "ホルシュタイン・キール",
+      "away_en": "Holstein Kiel",
+      "away_crest": null,
+      "score": null,
+      "japanese_players": [
+        {
+          "name_ja": "髙橋仁胡",
+          "position": "DF",
+          "side": "away"
+        },
+        {
+          "name_ja": "安部大晴",
+          "position": "MF",
+          "side": "away"
+        },
+        {
+          "name_ja": "関根大輝",
+          "position": "DF",
+          "side": "away"
+        }
+      ],
+      "broadcasters": [],
+      "_source": "openligadb"
+    },
+    {
+      "id": "BL2_83923",
+      "competition_id": 79,
+      "competition_ja": "ブンデスリーガ2部",
+      "competition_category": "league",
+      "competition_flag": "🇩🇪",
+      "kickoff_jst": "2027-03-04T02:30:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "REGULAR_SEASON",
+      "matchday": 24,
+      "home_id": null,
+      "home_ja": "ヴォルフスブルク",
+      "home_en": "VfL Wolfsburg",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "ニュルンベルク",
+      "away_en": "1. FC Nürnberg",
+      "away_crest": null,
+      "score": null,
+      "japanese_players": [
+        {
+          "name_ja": "塩貝健人",
+          "position": "FW",
+          "side": "home"
+        }
+      ],
+      "broadcasters": [],
+      "_source": "openligadb"
+    },
+    {
+      "id": "BL2_83926",
+      "competition_id": 79,
+      "competition_ja": "ブンデスリーガ2部",
+      "competition_category": "league",
+      "competition_flag": "🇩🇪",
+      "kickoff_jst": "2027-03-04T02:30:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "REGULAR_SEASON",
+      "matchday": 24,
+      "home_id": null,
+      "home_ja": "カールスルーエ",
+      "home_en": "Karlsruher SC",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "ザンクト・パウリ",
+      "away_en": "FC St. Pauli",
+      "away_crest": null,
+      "score": null,
+      "japanese_players": [
+        {
+          "name_ja": "福田師王",
+          "position": "FW",
+          "side": "home"
+        },
+        {
+          "name_ja": "藤田譲瑠チマ",
+          "position": "MF",
+          "side": "away"
+        },
+        {
+          "name_ja": "安藤智哉",
+          "position": "DF",
+          "side": "away"
+        },
+        {
+          "name_ja": "原大智",
+          "position": "FW",
+          "side": "away"
+        }
+      ],
+      "broadcasters": [],
+      "_source": "openligadb"
+    },
+    {
+      "id": "BL2_83928",
+      "competition_id": 79,
+      "competition_ja": "ブンデスリーガ2部",
+      "competition_category": "league",
+      "competition_flag": "🇩🇪",
+      "kickoff_jst": "2027-03-04T02:30:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "REGULAR_SEASON",
+      "matchday": 24,
+      "home_id": null,
+      "home_ja": "ホルシュタイン・キール",
+      "home_en": "Holstein Kiel",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "ブラウンシュヴァイク",
+      "away_en": "Eintracht Braunschweig",
+      "away_crest": null,
+      "score": null,
+      "japanese_players": [
+        {
+          "name_ja": "髙橋仁胡",
+          "position": "DF",
+          "side": "home"
+        },
+        {
+          "name_ja": "安部大晴",
+          "position": "MF",
+          "side": "home"
+        },
+        {
+          "name_ja": "関根大輝",
+          "position": "DF",
+          "side": "home"
+        }
+      ],
+      "broadcasters": [],
+      "_source": "openligadb"
+    },
+    {
+      "id": "BL2_83931",
+      "competition_id": 79,
+      "competition_ja": "ブンデスリーガ2部",
+      "competition_category": "league",
+      "competition_flag": "🇩🇪",
+      "kickoff_jst": "2027-03-04T02:30:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "REGULAR_SEASON",
+      "matchday": 24,
+      "home_id": null,
+      "home_ja": "コットブス",
+      "home_en": "Energie Cottbus",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "ダルムシュタット",
+      "away_en": "Darmstadt 98",
+      "away_crest": null,
+      "score": null,
+      "japanese_players": [
+        {
+          "name_ja": "秋山裕紀",
+          "position": "MF",
+          "side": "away"
+        }
+      ],
+      "broadcasters": [],
+      "_source": "openligadb"
+    },
+    {
+      "id": "BL2_83932",
+      "competition_id": 79,
+      "competition_ja": "ブンデスリーガ2部",
+      "competition_category": "league",
+      "competition_flag": "🇩🇪",
+      "kickoff_jst": "2027-03-07T21:30:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "REGULAR_SEASON",
+      "matchday": 25,
+      "home_id": null,
+      "home_ja": "ザンクト・パウリ",
+      "home_en": "FC St. Pauli",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "ハノーファー96",
+      "away_en": "Hannover 96",
+      "away_crest": null,
+      "score": null,
+      "japanese_players": [
+        {
+          "name_ja": "藤田譲瑠チマ",
+          "position": "MF",
+          "side": "home"
+        },
+        {
+          "name_ja": "安藤智哉",
+          "position": "DF",
+          "side": "home"
+        },
+        {
+          "name_ja": "原大智",
+          "position": "FW",
+          "side": "home"
+        }
+      ],
+      "broadcasters": [],
+      "_source": "openligadb"
+    },
+    {
+      "id": "BL2_83933",
+      "competition_id": 79,
+      "competition_ja": "ブンデスリーガ2部",
+      "competition_category": "league",
+      "competition_flag": "🇩🇪",
+      "kickoff_jst": "2027-03-07T21:30:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "REGULAR_SEASON",
+      "matchday": 25,
+      "home_id": null,
+      "home_ja": "ハイデンハイム",
+      "home_en": "1. FC Heidenheim",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "ヴォルフスブルク",
+      "away_en": "VfL Wolfsburg",
+      "away_crest": null,
+      "score": null,
+      "japanese_players": [
+        {
+          "name_ja": "塩貝健人",
+          "position": "FW",
+          "side": "away"
+        }
+      ],
+      "broadcasters": [],
+      "_source": "openligadb"
+    },
+    {
+      "id": "BL2_83934",
+      "competition_id": 79,
+      "competition_ja": "ブンデスリーガ2部",
+      "competition_category": "league",
+      "competition_flag": "🇩🇪",
+      "kickoff_jst": "2027-03-07T21:30:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "REGULAR_SEASON",
+      "matchday": 25,
+      "home_id": null,
+      "home_ja": "ダルムシュタット",
+      "home_en": "Darmstadt 98",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "カールスルーエ",
+      "away_en": "Karlsruher SC",
+      "away_crest": null,
+      "score": null,
+      "japanese_players": [
+        {
+          "name_ja": "秋山裕紀",
+          "position": "MF",
+          "side": "home"
+        },
+        {
+          "name_ja": "福田師王",
+          "position": "FW",
+          "side": "away"
+        }
+      ],
+      "broadcasters": [],
+      "_source": "openligadb"
+    },
+    {
+      "id": "BL2_83935",
+      "competition_id": 79,
+      "competition_ja": "ブンデスリーガ2部",
+      "competition_category": "league",
+      "competition_flag": "🇩🇪",
+      "kickoff_jst": "2027-03-07T21:30:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "REGULAR_SEASON",
+      "matchday": 25,
+      "home_id": null,
+      "home_ja": "ヘルタ・ベルリン",
+      "home_en": "Hertha BSC",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "ホルシュタイン・キール",
+      "away_en": "Holstein Kiel",
+      "away_crest": null,
+      "score": null,
+      "japanese_players": [
+        {
+          "name_ja": "髙橋仁胡",
+          "position": "DF",
+          "side": "away"
+        },
+        {
+          "name_ja": "安部大晴",
+          "position": "MF",
+          "side": "away"
+        },
+        {
+          "name_ja": "関根大輝",
+          "position": "DF",
+          "side": "away"
+        }
+      ],
+      "broadcasters": [],
+      "_source": "openligadb"
+    },
+    {
+      "id": "BL2_83941",
+      "competition_id": 79,
+      "competition_ja": "ブンデスリーガ2部",
+      "competition_category": "league",
+      "competition_flag": "🇩🇪",
+      "kickoff_jst": "2027-03-14T21:30:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "REGULAR_SEASON",
+      "matchday": 26,
+      "home_id": null,
+      "home_ja": "ヴォルフスブルク",
+      "home_en": "VfL Wolfsburg",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "ボーフム",
+      "away_en": "VfL Bochum",
+      "away_crest": null,
+      "score": null,
+      "japanese_players": [
+        {
+          "name_ja": "塩貝健人",
+          "position": "FW",
+          "side": "home"
+        }
+      ],
+      "broadcasters": [],
+      "_source": "openligadb"
+    },
+    {
+      "id": "BL2_83942",
+      "competition_id": 79,
+      "competition_ja": "ブンデスリーガ2部",
+      "competition_category": "league",
+      "competition_flag": "🇩🇪",
+      "kickoff_jst": "2027-03-14T21:30:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "REGULAR_SEASON",
+      "matchday": 26,
+      "home_id": null,
+      "home_ja": "ザンクト・パウリ",
+      "home_en": "FC St. Pauli",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "ダルムシュタット",
+      "away_en": "Darmstadt 98",
+      "away_crest": null,
+      "score": null,
+      "japanese_players": [
+        {
+          "name_ja": "藤田譲瑠チマ",
+          "position": "MF",
+          "side": "home"
+        },
+        {
+          "name_ja": "安藤智哉",
+          "position": "DF",
+          "side": "home"
+        },
+        {
+          "name_ja": "原大智",
+          "position": "FW",
+          "side": "home"
+        },
+        {
+          "name_ja": "秋山裕紀",
+          "position": "MF",
+          "side": "away"
+        }
+      ],
+      "broadcasters": [],
+      "_source": "openligadb"
+    },
+    {
+      "id": "BL2_83945",
+      "competition_id": 79,
+      "competition_ja": "ブンデスリーガ2部",
+      "competition_category": "league",
+      "competition_flag": "🇩🇪",
+      "kickoff_jst": "2027-03-14T21:30:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "REGULAR_SEASON",
+      "matchday": 26,
+      "home_id": null,
+      "home_ja": "カールスルーエ",
+      "home_en": "Karlsruher SC",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "マクデブルク",
+      "away_en": "1. FC Magdeburg",
+      "away_crest": null,
+      "score": null,
+      "japanese_players": [
+        {
+          "name_ja": "福田師王",
+          "position": "FW",
+          "side": "home"
+        }
+      ],
+      "broadcasters": [],
+      "_source": "openligadb"
+    },
+    {
+      "id": "BL2_83946",
+      "competition_id": 79,
+      "competition_ja": "ブンデスリーガ2部",
+      "competition_category": "league",
+      "competition_flag": "🇩🇪",
+      "kickoff_jst": "2027-03-14T21:30:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "REGULAR_SEASON",
+      "matchday": 26,
+      "home_id": null,
+      "home_ja": "ディナモ・ドレスデン",
+      "home_en": "Dynamo Dresden",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "ホルシュタイン・キール",
+      "away_en": "Holstein Kiel",
+      "away_crest": null,
+      "score": null,
+      "japanese_players": [
+        {
+          "name_ja": "髙橋仁胡",
+          "position": "DF",
+          "side": "away"
+        },
+        {
+          "name_ja": "安部大晴",
+          "position": "MF",
+          "side": "away"
+        },
+        {
+          "name_ja": "関根大輝",
+          "position": "DF",
+          "side": "away"
+        }
+      ],
+      "broadcasters": [],
+      "_source": "openligadb"
+    },
+    {
+      "id": "BL2_83950",
+      "competition_id": 79,
+      "competition_ja": "ブンデスリーガ2部",
+      "competition_category": "league",
+      "competition_flag": "🇩🇪",
+      "kickoff_jst": "2027-03-21T21:30:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "REGULAR_SEASON",
+      "matchday": 27,
+      "home_id": null,
+      "home_ja": "ハイデンハイム",
+      "home_en": "1. FC Heidenheim",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "カールスルーエ",
+      "away_en": "Karlsruher SC",
+      "away_crest": null,
+      "score": null,
+      "japanese_players": [
+        {
+          "name_ja": "福田師王",
+          "position": "FW",
+          "side": "away"
+        }
+      ],
+      "broadcasters": [],
+      "_source": "openligadb"
+    },
+    {
+      "id": "BL2_83952",
+      "competition_id": 79,
+      "competition_ja": "ブンデスリーガ2部",
+      "competition_category": "league",
+      "competition_flag": "🇩🇪",
+      "kickoff_jst": "2027-03-21T21:30:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "REGULAR_SEASON",
+      "matchday": 27,
+      "home_id": null,
+      "home_ja": "ニュルンベルク",
+      "home_en": "1. FC Nürnberg",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "ザンクト・パウリ",
+      "away_en": "FC St. Pauli",
+      "away_crest": null,
+      "score": null,
+      "japanese_players": [
+        {
+          "name_ja": "藤田譲瑠チマ",
+          "position": "MF",
+          "side": "away"
+        },
+        {
+          "name_ja": "安藤智哉",
+          "position": "DF",
+          "side": "away"
+        },
+        {
+          "name_ja": "原大智",
+          "position": "FW",
+          "side": "away"
+        }
+      ],
+      "broadcasters": [],
+      "_source": "openligadb"
+    },
+    {
+      "id": "BL2_83955",
+      "competition_id": 79,
+      "competition_ja": "ブンデスリーガ2部",
+      "competition_category": "league",
+      "competition_flag": "🇩🇪",
+      "kickoff_jst": "2027-03-21T21:30:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "REGULAR_SEASON",
+      "matchday": 27,
+      "home_id": null,
+      "home_ja": "ホルシュタイン・キール",
+      "home_en": "Holstein Kiel",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "グロイター・フュルト",
+      "away_en": "Greuther Fürth",
+      "away_crest": null,
+      "score": null,
+      "japanese_players": [
+        {
+          "name_ja": "髙橋仁胡",
+          "position": "DF",
+          "side": "home"
+        },
+        {
+          "name_ja": "安部大晴",
+          "position": "MF",
+          "side": "home"
+        },
+        {
+          "name_ja": "関根大輝",
+          "position": "DF",
+          "side": "home"
+        }
+      ],
+      "broadcasters": [],
+      "_source": "openligadb"
+    },
+    {
+      "id": "BL2_83956",
+      "competition_id": 79,
+      "competition_ja": "ブンデスリーガ2部",
+      "competition_category": "league",
+      "competition_flag": "🇩🇪",
+      "kickoff_jst": "2027-03-21T21:30:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "REGULAR_SEASON",
+      "matchday": 27,
+      "home_id": null,
+      "home_ja": "マクデブルク",
+      "home_en": "1. FC Magdeburg",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "ダルムシュタット",
+      "away_en": "Darmstadt 98",
+      "away_crest": null,
+      "score": null,
+      "japanese_players": [
+        {
+          "name_ja": "秋山裕紀",
+          "position": "MF",
+          "side": "away"
+        }
+      ],
+      "broadcasters": [],
+      "_source": "openligadb"
+    },
+    {
+      "id": "BL2_83958",
+      "competition_id": 79,
+      "competition_ja": "ブンデスリーガ2部",
+      "competition_category": "league",
+      "competition_flag": "🇩🇪",
+      "kickoff_jst": "2027-03-21T21:30:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "REGULAR_SEASON",
+      "matchday": 27,
+      "home_id": null,
+      "home_ja": "オスナブリュック",
+      "home_en": "VfL Osnabrück",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "ヴォルフスブルク",
+      "away_en": "VfL Wolfsburg",
+      "away_crest": null,
+      "score": null,
+      "japanese_players": [
+        {
+          "name_ja": "塩貝健人",
+          "position": "FW",
+          "side": "away"
+        }
+      ],
+      "broadcasters": [],
+      "_source": "openligadb"
+    },
+    {
+      "id": "BL2_83959",
+      "competition_id": 79,
+      "competition_ja": "ブンデスリーガ2部",
+      "competition_category": "league",
+      "competition_flag": "🇩🇪",
+      "kickoff_jst": "2027-04-04T20:30:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "REGULAR_SEASON",
+      "matchday": 28,
+      "home_id": null,
+      "home_ja": "ヴォルフスブルク",
+      "home_en": "VfL Wolfsburg",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "ヘルタ・ベルリン",
+      "away_en": "Hertha BSC",
+      "away_crest": null,
+      "score": null,
+      "japanese_players": [
+        {
+          "name_ja": "塩貝健人",
+          "position": "FW",
+          "side": "home"
+        }
+      ],
+      "broadcasters": [],
+      "_source": "openligadb"
+    },
+    {
+      "id": "BL2_83960",
+      "competition_id": 79,
+      "competition_ja": "ブンデスリーガ2部",
+      "competition_category": "league",
+      "competition_flag": "🇩🇪",
+      "kickoff_jst": "2027-04-04T20:30:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "REGULAR_SEASON",
+      "matchday": 28,
+      "home_id": null,
+      "home_ja": "ザンクト・パウリ",
+      "home_en": "FC St. Pauli",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "マクデブルク",
+      "away_en": "1. FC Magdeburg",
+      "away_crest": null,
+      "score": null,
+      "japanese_players": [
+        {
+          "name_ja": "藤田譲瑠チマ",
+          "position": "MF",
+          "side": "home"
+        },
+        {
+          "name_ja": "安藤智哉",
+          "position": "DF",
+          "side": "home"
+        },
+        {
+          "name_ja": "原大智",
+          "position": "FW",
+          "side": "home"
+        }
+      ],
+      "broadcasters": [],
+      "_source": "openligadb"
+    },
+    {
+      "id": "BL2_83962",
+      "competition_id": 79,
+      "competition_ja": "ブンデスリーガ2部",
+      "competition_category": "league",
+      "competition_flag": "🇩🇪",
+      "kickoff_jst": "2027-04-04T20:30:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "REGULAR_SEASON",
+      "matchday": 28,
+      "home_id": null,
+      "home_ja": "ダルムシュタット",
+      "home_en": "Darmstadt 98",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "ニュルンベルク",
+      "away_en": "1. FC Nürnberg",
+      "away_crest": null,
+      "score": null,
+      "japanese_players": [
+        {
+          "name_ja": "秋山裕紀",
+          "position": "MF",
+          "side": "home"
+        }
+      ],
+      "broadcasters": [],
+      "_source": "openligadb"
+    },
+    {
+      "id": "BL2_83964",
+      "competition_id": 79,
+      "competition_ja": "ブンデスリーガ2部",
+      "competition_category": "league",
+      "competition_flag": "🇩🇪",
+      "kickoff_jst": "2027-04-04T20:30:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "REGULAR_SEASON",
+      "matchday": 28,
+      "home_id": null,
+      "home_ja": "カールスルーエ",
+      "home_en": "Karlsruher SC",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "ボーフム",
+      "away_en": "VfL Bochum",
+      "away_crest": null,
+      "score": null,
+      "japanese_players": [
+        {
+          "name_ja": "福田師王",
+          "position": "FW",
+          "side": "home"
+        }
+      ],
+      "broadcasters": [],
+      "_source": "openligadb"
+    },
+    {
+      "id": "BL2_83965",
+      "competition_id": 79,
+      "competition_ja": "ブンデスリーガ2部",
+      "competition_category": "league",
+      "competition_flag": "🇩🇪",
+      "kickoff_jst": "2027-04-04T20:30:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "REGULAR_SEASON",
+      "matchday": 28,
+      "home_id": null,
+      "home_ja": "ビーレフェルト",
+      "home_en": "Arminia Bielefeld",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "ホルシュタイン・キール",
+      "away_en": "Holstein Kiel",
+      "away_crest": null,
+      "score": null,
+      "japanese_players": [
+        {
+          "name_ja": "髙橋仁胡",
+          "position": "DF",
+          "side": "away"
+        },
+        {
+          "name_ja": "安部大晴",
+          "position": "MF",
+          "side": "away"
+        },
+        {
+          "name_ja": "関根大輝",
+          "position": "DF",
+          "side": "away"
+        }
+      ],
+      "broadcasters": [],
+      "_source": "openligadb"
+    },
+    {
+      "id": "BL2_83968",
+      "competition_id": 79,
+      "competition_ja": "ブンデスリーガ2部",
+      "competition_category": "league",
+      "competition_flag": "🇩🇪",
+      "kickoff_jst": "2027-04-11T20:30:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "REGULAR_SEASON",
+      "matchday": 29,
+      "home_id": null,
+      "home_ja": "ハイデンハイム",
+      "home_en": "1. FC Heidenheim",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "ダルムシュタット",
+      "away_en": "Darmstadt 98",
+      "away_crest": null,
+      "score": null,
+      "japanese_players": [
+        {
+          "name_ja": "秋山裕紀",
+          "position": "MF",
+          "side": "away"
+        }
+      ],
+      "broadcasters": [],
+      "_source": "openligadb"
+    },
+    {
+      "id": "BL2_83970",
+      "competition_id": 79,
+      "competition_ja": "ブンデスリーガ2部",
+      "competition_category": "league",
+      "competition_flag": "🇩🇪",
+      "kickoff_jst": "2027-04-11T20:30:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "REGULAR_SEASON",
+      "matchday": 29,
+      "home_id": null,
+      "home_ja": "ボーフム",
+      "home_en": "VfL Bochum",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "ザンクト・パウリ",
+      "away_en": "FC St. Pauli",
+      "away_crest": null,
+      "score": null,
+      "japanese_players": [
+        {
+          "name_ja": "藤田譲瑠チマ",
+          "position": "MF",
+          "side": "away"
+        },
+        {
+          "name_ja": "安藤智哉",
+          "position": "DF",
+          "side": "away"
+        },
+        {
+          "name_ja": "原大智",
+          "position": "FW",
+          "side": "away"
+        }
+      ],
+      "broadcasters": [],
+      "_source": "openligadb"
+    },
+    {
+      "id": "BL2_83972",
+      "competition_id": 79,
+      "competition_ja": "ブンデスリーガ2部",
+      "competition_category": "league",
+      "competition_flag": "🇩🇪",
+      "kickoff_jst": "2027-04-11T20:30:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "REGULAR_SEASON",
+      "matchday": 29,
+      "home_id": null,
+      "home_ja": "ホルシュタイン・キール",
+      "home_en": "Holstein Kiel",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "ヴォルフスブルク",
+      "away_en": "VfL Wolfsburg",
+      "away_crest": null,
+      "score": null,
+      "japanese_players": [
+        {
+          "name_ja": "髙橋仁胡",
+          "position": "DF",
+          "side": "home"
+        },
+        {
+          "name_ja": "安部大晴",
+          "position": "MF",
+          "side": "home"
+        },
+        {
+          "name_ja": "関根大輝",
+          "position": "DF",
+          "side": "home"
+        },
+        {
+          "name_ja": "塩貝健人",
+          "position": "FW",
+          "side": "away"
+        }
+      ],
+      "broadcasters": [],
+      "_source": "openligadb"
+    },
+    {
+      "id": "BL2_83976",
+      "competition_id": 79,
+      "competition_ja": "ブンデスリーガ2部",
+      "competition_category": "league",
+      "competition_flag": "🇩🇪",
+      "kickoff_jst": "2027-04-11T20:30:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "REGULAR_SEASON",
+      "matchday": 29,
+      "home_id": null,
+      "home_ja": "オスナブリュック",
+      "home_en": "VfL Osnabrück",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "カールスルーエ",
+      "away_en": "Karlsruher SC",
+      "away_crest": null,
+      "score": null,
+      "japanese_players": [
+        {
+          "name_ja": "福田師王",
+          "position": "FW",
+          "side": "away"
+        }
+      ],
+      "broadcasters": [],
+      "_source": "openligadb"
+    },
+    {
+      "id": "BL2_83977",
+      "competition_id": 79,
+      "competition_ja": "ブンデスリーガ2部",
+      "competition_category": "league",
+      "competition_flag": "🇩🇪",
+      "kickoff_jst": "2027-04-18T20:30:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "REGULAR_SEASON",
+      "matchday": 30,
+      "home_id": null,
+      "home_ja": "ヴォルフスブルク",
+      "home_en": "VfL Wolfsburg",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "ブラウンシュヴァイク",
+      "away_en": "Eintracht Braunschweig",
+      "away_crest": null,
+      "score": null,
+      "japanese_players": [
+        {
+          "name_ja": "塩貝健人",
+          "position": "FW",
+          "side": "home"
+        }
+      ],
+      "broadcasters": [],
+      "_source": "openligadb"
+    },
+    {
+      "id": "BL2_83978",
+      "competition_id": 79,
+      "competition_ja": "ブンデスリーガ2部",
+      "competition_category": "league",
+      "competition_flag": "🇩🇪",
+      "kickoff_jst": "2027-04-18T20:30:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "REGULAR_SEASON",
+      "matchday": 30,
+      "home_id": null,
+      "home_ja": "ザンクト・パウリ",
+      "home_en": "FC St. Pauli",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "ディナモ・ドレスデン",
+      "away_en": "Dynamo Dresden",
+      "away_crest": null,
+      "score": null,
+      "japanese_players": [
+        {
+          "name_ja": "藤田譲瑠チマ",
+          "position": "MF",
+          "side": "home"
+        },
+        {
+          "name_ja": "安藤智哉",
+          "position": "DF",
+          "side": "home"
+        },
+        {
+          "name_ja": "原大智",
+          "position": "FW",
+          "side": "home"
+        }
+      ],
+      "broadcasters": [],
+      "_source": "openligadb"
+    },
+    {
+      "id": "BL2_83980",
+      "competition_id": 79,
+      "competition_ja": "ブンデスリーガ2部",
+      "competition_category": "league",
+      "competition_flag": "🇩🇪",
+      "kickoff_jst": "2027-04-18T20:30:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "REGULAR_SEASON",
+      "matchday": 30,
+      "home_id": null,
+      "home_ja": "ダルムシュタット",
+      "home_en": "Darmstadt 98",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "ボーフム",
+      "away_en": "VfL Bochum",
+      "away_crest": null,
+      "score": null,
+      "japanese_players": [
+        {
+          "name_ja": "秋山裕紀",
+          "position": "MF",
+          "side": "home"
+        }
+      ],
+      "broadcasters": [],
+      "_source": "openligadb"
+    },
+    {
+      "id": "BL2_83981",
+      "competition_id": 79,
+      "competition_ja": "ブンデスリーガ2部",
+      "competition_category": "league",
+      "competition_flag": "🇩🇪",
+      "kickoff_jst": "2027-04-18T20:30:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "REGULAR_SEASON",
+      "matchday": 30,
+      "home_id": null,
+      "home_ja": "カイザースラウテルン",
+      "home_en": "1. FC Kaiserslautern",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "ホルシュタイン・キール",
+      "away_en": "Holstein Kiel",
+      "away_crest": null,
+      "score": null,
+      "japanese_players": [
+        {
+          "name_ja": "髙橋仁胡",
+          "position": "DF",
+          "side": "away"
+        },
+        {
+          "name_ja": "安部大晴",
+          "position": "MF",
+          "side": "away"
+        },
+        {
+          "name_ja": "関根大輝",
+          "position": "DF",
+          "side": "away"
+        }
+      ],
+      "broadcasters": [],
+      "_source": "openligadb"
+    },
+    {
+      "id": "BL2_83983",
+      "competition_id": 79,
+      "competition_ja": "ブンデスリーガ2部",
+      "competition_category": "league",
+      "competition_flag": "🇩🇪",
+      "kickoff_jst": "2027-04-18T20:30:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "REGULAR_SEASON",
+      "matchday": 30,
+      "home_id": null,
+      "home_ja": "カールスルーエ",
+      "home_en": "Karlsruher SC",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "ヘルタ・ベルリン",
+      "away_en": "Hertha BSC",
+      "away_crest": null,
+      "score": null,
+      "japanese_players": [
+        {
+          "name_ja": "福田師王",
+          "position": "FW",
+          "side": "home"
+        }
+      ],
+      "broadcasters": [],
+      "_source": "openligadb"
+    },
+    {
+      "id": "BL2_83986",
+      "competition_id": 79,
+      "competition_ja": "ブンデスリーガ2部",
+      "competition_category": "league",
+      "competition_flag": "🇩🇪",
+      "kickoff_jst": "2027-04-25T20:30:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "REGULAR_SEASON",
+      "matchday": 31,
+      "home_id": null,
+      "home_ja": "ハイデンハイム",
+      "home_en": "1. FC Heidenheim",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "ザンクト・パウリ",
+      "away_en": "FC St. Pauli",
+      "away_crest": null,
+      "score": null,
+      "japanese_players": [
+        {
+          "name_ja": "藤田譲瑠チマ",
+          "position": "MF",
+          "side": "away"
+        },
+        {
+          "name_ja": "安藤智哉",
+          "position": "DF",
+          "side": "away"
+        },
+        {
+          "name_ja": "原大智",
+          "position": "FW",
+          "side": "away"
+        }
+      ],
+      "broadcasters": [],
+      "_source": "openligadb"
+    },
+    {
+      "id": "BL2_83993",
+      "competition_id": 79,
+      "competition_ja": "ブンデスリーガ2部",
+      "competition_category": "league",
+      "competition_flag": "🇩🇪",
+      "kickoff_jst": "2027-04-25T20:30:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "REGULAR_SEASON",
+      "matchday": 31,
+      "home_id": null,
+      "home_ja": "ホルシュタイン・キール",
+      "home_en": "Holstein Kiel",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "カールスルーエ",
+      "away_en": "Karlsruher SC",
+      "away_crest": null,
+      "score": null,
+      "japanese_players": [
+        {
+          "name_ja": "髙橋仁胡",
+          "position": "DF",
+          "side": "home"
+        },
+        {
+          "name_ja": "安部大晴",
+          "position": "MF",
+          "side": "home"
+        },
+        {
+          "name_ja": "関根大輝",
+          "position": "DF",
+          "side": "home"
+        },
+        {
+          "name_ja": "福田師王",
+          "position": "FW",
+          "side": "away"
+        }
+      ],
+      "broadcasters": [],
+      "_source": "openligadb"
+    },
+    {
+      "id": "BL2_83995",
+      "competition_id": 79,
+      "competition_ja": "ブンデスリーガ2部",
+      "competition_category": "league",
+      "competition_flag": "🇩🇪",
+      "kickoff_jst": "2027-04-25T20:30:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "REGULAR_SEASON",
+      "matchday": 31,
+      "home_id": null,
+      "home_ja": "マクデブルク",
+      "home_en": "1. FC Magdeburg",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "ヴォルフスブルク",
+      "away_en": "VfL Wolfsburg",
+      "away_crest": null,
+      "score": null,
+      "japanese_players": [
+        {
+          "name_ja": "塩貝健人",
+          "position": "FW",
+          "side": "away"
+        }
+      ],
+      "broadcasters": [],
+      "_source": "openligadb"
+    },
+    {
+      "id": "BL2_83997",
+      "competition_id": 79,
+      "competition_ja": "ブンデスリーガ2部",
+      "competition_category": "league",
+      "competition_flag": "🇩🇪",
+      "kickoff_jst": "2027-04-25T20:30:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "REGULAR_SEASON",
+      "matchday": 31,
+      "home_id": null,
+      "home_ja": "ブラウンシュヴァイク",
+      "home_en": "Eintracht Braunschweig",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "ダルムシュタット",
+      "away_en": "Darmstadt 98",
+      "away_crest": null,
+      "score": null,
+      "japanese_players": [
+        {
+          "name_ja": "秋山裕紀",
+          "position": "MF",
+          "side": "away"
+        }
+      ],
+      "broadcasters": [],
+      "_source": "openligadb"
+    },
+    {
+      "id": "BL2_84049",
+      "competition_id": 79,
+      "competition_ja": "ブンデスリーガ2部",
+      "competition_category": "league",
+      "competition_flag": "🇩🇪",
+      "kickoff_jst": "2027-05-09T20:30:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "REGULAR_SEASON",
+      "matchday": 32,
+      "home_id": null,
+      "home_ja": "ヴォルフスブルク",
+      "home_en": "VfL Wolfsburg",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "グロイター・フュルト",
+      "away_en": "Greuther Fürth",
+      "away_crest": null,
+      "score": null,
+      "japanese_players": [
+        {
+          "name_ja": "塩貝健人",
+          "position": "FW",
+          "side": "home"
+        }
+      ],
+      "broadcasters": [],
+      "_source": "openligadb"
+    },
+    {
+      "id": "BL2_84050",
+      "competition_id": 79,
+      "competition_ja": "ブンデスリーガ2部",
+      "competition_category": "league",
+      "competition_flag": "🇩🇪",
+      "kickoff_jst": "2027-05-09T20:30:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "REGULAR_SEASON",
+      "matchday": 32,
+      "home_id": null,
+      "home_ja": "ザンクト・パウリ",
+      "home_en": "FC St. Pauli",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "オスナブリュック",
+      "away_en": "VfL Osnabrück",
+      "away_crest": null,
+      "score": null,
+      "japanese_players": [
+        {
+          "name_ja": "藤田譲瑠チマ",
+          "position": "MF",
+          "side": "home"
+        },
+        {
+          "name_ja": "安藤智哉",
+          "position": "DF",
+          "side": "home"
+        },
+        {
+          "name_ja": "原大智",
+          "position": "FW",
+          "side": "home"
+        }
+      ],
+      "broadcasters": [],
+      "_source": "openligadb"
+    },
+    {
+      "id": "BL2_84052",
+      "competition_id": 79,
+      "competition_ja": "ブンデスリーガ2部",
+      "competition_category": "league",
+      "competition_flag": "🇩🇪",
+      "kickoff_jst": "2027-05-09T20:30:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "REGULAR_SEASON",
+      "matchday": 32,
+      "home_id": null,
+      "home_ja": "ハノーファー96",
+      "home_en": "Hannover 96",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "ホルシュタイン・キール",
+      "away_en": "Holstein Kiel",
+      "away_crest": null,
+      "score": null,
+      "japanese_players": [
+        {
+          "name_ja": "髙橋仁胡",
+          "position": "DF",
+          "side": "away"
+        },
+        {
+          "name_ja": "安部大晴",
+          "position": "MF",
+          "side": "away"
+        },
+        {
+          "name_ja": "関根大輝",
+          "position": "DF",
+          "side": "away"
+        }
+      ],
+      "broadcasters": [],
+      "_source": "openligadb"
+    },
+    {
+      "id": "BL2_84053",
+      "competition_id": 79,
+      "competition_ja": "ブンデスリーガ2部",
+      "competition_category": "league",
+      "competition_flag": "🇩🇪",
+      "kickoff_jst": "2027-05-09T20:30:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "REGULAR_SEASON",
+      "matchday": 32,
+      "home_id": null,
+      "home_ja": "ダルムシュタット",
+      "home_en": "Darmstadt 98",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "ヘルタ・ベルリン",
+      "away_en": "Hertha BSC",
+      "away_crest": null,
+      "score": null,
+      "japanese_players": [
+        {
+          "name_ja": "秋山裕紀",
+          "position": "MF",
+          "side": "home"
+        }
+      ],
+      "broadcasters": [],
+      "_source": "openligadb"
+    },
+    {
+      "id": "BL2_84056",
+      "competition_id": 79,
+      "competition_ja": "ブンデスリーガ2部",
+      "competition_category": "league",
+      "competition_flag": "🇩🇪",
+      "kickoff_jst": "2027-05-09T20:30:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "REGULAR_SEASON",
+      "matchday": 32,
+      "home_id": null,
+      "home_ja": "カールスルーエ",
+      "home_en": "Karlsruher SC",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "ブラウンシュヴァイク",
+      "away_en": "Eintracht Braunschweig",
+      "away_crest": null,
+      "score": null,
+      "japanese_players": [
+        {
+          "name_ja": "福田師王",
+          "position": "FW",
+          "side": "home"
+        }
+      ],
+      "broadcasters": [],
+      "_source": "openligadb"
+    },
+    {
+      "id": "BL2_84059",
+      "competition_id": 79,
+      "competition_ja": "ブンデスリーガ2部",
+      "competition_category": "league",
+      "competition_flag": "🇩🇪",
+      "kickoff_jst": "2027-05-16T20:30:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "REGULAR_SEASON",
+      "matchday": 33,
+      "home_id": null,
+      "home_ja": "ヘルタ・ベルリン",
+      "home_en": "Hertha BSC",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "ザンクト・パウリ",
+      "away_en": "FC St. Pauli",
+      "away_crest": null,
+      "score": null,
+      "japanese_players": [
+        {
+          "name_ja": "藤田譲瑠チマ",
+          "position": "MF",
+          "side": "away"
+        },
+        {
+          "name_ja": "安藤智哉",
+          "position": "DF",
+          "side": "away"
+        },
+        {
+          "name_ja": "原大智",
+          "position": "FW",
+          "side": "away"
+        }
+      ],
+      "broadcasters": [],
+      "_source": "openligadb"
+    },
+    {
+      "id": "BL2_84060",
+      "competition_id": 79,
+      "competition_ja": "ブンデスリーガ2部",
+      "competition_category": "league",
+      "competition_flag": "🇩🇪",
+      "kickoff_jst": "2027-05-16T20:30:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "REGULAR_SEASON",
+      "matchday": 33,
+      "home_id": null,
+      "home_ja": "ディナモ・ドレスデン",
+      "home_en": "Dynamo Dresden",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "カールスルーエ",
+      "away_en": "Karlsruher SC",
+      "away_crest": null,
+      "score": null,
+      "japanese_players": [
+        {
+          "name_ja": "福田師王",
+          "position": "FW",
+          "side": "away"
+        }
+      ],
+      "broadcasters": [],
+      "_source": "openligadb"
+    },
+    {
+      "id": "BL2_84061",
+      "competition_id": 79,
+      "competition_ja": "ブンデスリーガ2部",
+      "competition_category": "league",
+      "competition_flag": "🇩🇪",
+      "kickoff_jst": "2027-05-16T20:30:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "REGULAR_SEASON",
+      "matchday": 33,
+      "home_id": null,
+      "home_ja": "ホルシュタイン・キール",
+      "home_en": "Holstein Kiel",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "コットブス",
+      "away_en": "Energie Cottbus",
+      "away_crest": null,
+      "score": null,
+      "japanese_players": [
+        {
+          "name_ja": "髙橋仁胡",
+          "position": "DF",
+          "side": "home"
+        },
+        {
+          "name_ja": "安部大晴",
+          "position": "MF",
+          "side": "home"
+        },
+        {
+          "name_ja": "関根大輝",
+          "position": "DF",
+          "side": "home"
+        }
+      ],
+      "broadcasters": [],
+      "_source": "openligadb"
+    },
+    {
+      "id": "BL2_84062",
+      "competition_id": 79,
+      "competition_ja": "ブンデスリーガ2部",
+      "competition_category": "league",
+      "competition_flag": "🇩🇪",
+      "kickoff_jst": "2027-05-16T20:30:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "REGULAR_SEASON",
+      "matchday": 33,
+      "home_id": null,
+      "home_ja": "ビーレフェルト",
+      "home_en": "Arminia Bielefeld",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "ヴォルフスブルク",
+      "away_en": "VfL Wolfsburg",
+      "away_crest": null,
+      "score": null,
+      "japanese_players": [
+        {
+          "name_ja": "塩貝健人",
+          "position": "FW",
+          "side": "away"
+        }
+      ],
+      "broadcasters": [],
+      "_source": "openligadb"
+    },
+    {
+      "id": "BL2_84065",
+      "competition_id": 79,
+      "competition_ja": "ブンデスリーガ2部",
+      "competition_category": "league",
+      "competition_flag": "🇩🇪",
+      "kickoff_jst": "2027-05-16T20:30:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "REGULAR_SEASON",
+      "matchday": 33,
+      "home_id": null,
+      "home_ja": "グロイター・フュルト",
+      "home_en": "Greuther Fürth",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "ダルムシュタット",
+      "away_en": "Darmstadt 98",
+      "away_crest": null,
+      "score": null,
+      "japanese_players": [
+        {
+          "name_ja": "秋山裕紀",
+          "position": "MF",
+          "side": "away"
+        }
+      ],
+      "broadcasters": [],
+      "_source": "openligadb"
+    },
+    {
+      "id": "BL2_84067",
+      "competition_id": 79,
+      "competition_ja": "ブンデスリーガ2部",
+      "competition_category": "league",
+      "competition_flag": "🇩🇪",
+      "kickoff_jst": "2027-05-23T22:30:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "REGULAR_SEASON",
+      "matchday": 34,
+      "home_id": null,
+      "home_ja": "ヴォルフスブルク",
+      "home_en": "VfL Wolfsburg",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "ディナモ・ドレスデン",
+      "away_en": "Dynamo Dresden",
+      "away_crest": null,
+      "score": null,
+      "japanese_players": [
+        {
+          "name_ja": "塩貝健人",
+          "position": "FW",
+          "side": "home"
+        }
+      ],
+      "broadcasters": [],
+      "_source": "openligadb"
+    },
+    {
+      "id": "BL2_84068",
+      "competition_id": 79,
+      "competition_ja": "ブンデスリーガ2部",
+      "competition_category": "league",
+      "competition_flag": "🇩🇪",
+      "kickoff_jst": "2027-05-23T22:30:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "REGULAR_SEASON",
+      "matchday": 34,
+      "home_id": null,
+      "home_ja": "ザンクト・パウリ",
+      "home_en": "FC St. Pauli",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "ブラウンシュヴァイク",
+      "away_en": "Eintracht Braunschweig",
+      "away_crest": null,
+      "score": null,
+      "japanese_players": [
+        {
+          "name_ja": "藤田譲瑠チマ",
+          "position": "MF",
+          "side": "home"
+        },
+        {
+          "name_ja": "安藤智哉",
+          "position": "DF",
+          "side": "home"
+        },
+        {
+          "name_ja": "原大智",
+          "position": "FW",
+          "side": "home"
+        }
+      ],
+      "broadcasters": [],
+      "_source": "openligadb"
+    },
+    {
+      "id": "BL2_84071",
+      "competition_id": 79,
+      "competition_ja": "ブンデスリーガ2部",
+      "competition_category": "league",
+      "competition_flag": "🇩🇪",
+      "kickoff_jst": "2027-05-23T22:30:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "REGULAR_SEASON",
+      "matchday": 34,
+      "home_id": null,
+      "home_ja": "ダルムシュタット",
+      "home_en": "Darmstadt 98",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "オスナブリュック",
+      "away_en": "VfL Osnabrück",
+      "away_crest": null,
+      "score": null,
+      "japanese_players": [
+        {
+          "name_ja": "秋山裕紀",
+          "position": "MF",
+          "side": "home"
+        }
+      ],
+      "broadcasters": [],
+      "_source": "openligadb"
+    },
+    {
+      "id": "BL2_84073",
+      "competition_id": 79,
+      "competition_ja": "ブンデスリーガ2部",
+      "competition_category": "league",
+      "competition_flag": "🇩🇪",
+      "kickoff_jst": "2027-05-23T22:30:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "REGULAR_SEASON",
+      "matchday": 34,
+      "home_id": null,
+      "home_ja": "ボーフム",
+      "home_en": "VfL Bochum",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "ホルシュタイン・キール",
+      "away_en": "Holstein Kiel",
+      "away_crest": null,
+      "score": null,
+      "japanese_players": [
+        {
+          "name_ja": "髙橋仁胡",
+          "position": "DF",
+          "side": "away"
+        },
+        {
+          "name_ja": "安部大晴",
+          "position": "MF",
+          "side": "away"
+        },
+        {
+          "name_ja": "関根大輝",
+          "position": "DF",
+          "side": "away"
+        }
+      ],
+      "broadcasters": [],
+      "_source": "openligadb"
+    },
+    {
+      "id": "BL2_84074",
+      "competition_id": 79,
+      "competition_ja": "ブンデスリーガ2部",
+      "competition_category": "league",
+      "competition_flag": "🇩🇪",
+      "kickoff_jst": "2027-05-23T22:30:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "REGULAR_SEASON",
+      "matchday": 34,
+      "home_id": null,
+      "home_ja": "カールスルーエ",
+      "home_en": "Karlsruher SC",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "グロイター・フュルト",
+      "away_en": "Greuther Fürth",
+      "away_crest": null,
+      "score": null,
+      "japanese_players": [
+        {
+          "name_ja": "福田師王",
+          "position": "FW",
+          "side": "home"
+        }
+      ],
+      "broadcasters": [],
+      "_source": "openligadb"
     }
   ],
   "updated_yt_highlights": "2026-10-22T17:07:05.838081+09:00",
-  "updated_uefa_secondary": "2026-10-22T17:07:43.749849+09:00"
+  "updated_uefa_secondary": "2026-10-22T17:07:43.749849+09:00",
+  "updated_openligadb": "2026-10-22T21:13:23.880417+09:00"
 }
