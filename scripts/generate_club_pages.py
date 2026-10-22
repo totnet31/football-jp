@@ -6,13 +6,27 @@ generate_club_pages.py
 使い方: python3 scripts/generate_club_pages.py
 """
 
-from utils import is_result_pending, fix_unplayed_finished
+from utils import is_result_pending, fix_unplayed_finished, openligadb_matches_for_names
 import json
 import os
 import re
 import sys
 from collections import defaultdict
 from pathlib import Path
+
+from watch_source import load_league_guides, build_watch_cell  # 配信の取り出し方（共通・2026-10-22）
+
+_GUIDES = None
+
+
+def _guides() -> dict:
+    global _GUIDES
+    if _GUIDES is None:
+        _GUIDES = load_league_guides()
+    return _GUIDES
+
+
+WATCH_STATS = {"affiliate_links": 0, "unconfirmed_rows": 0}
 
 # ============================
 # パス設定
@@ -318,11 +332,25 @@ def get_club_standing(club_info: dict, standings_comps: dict) -> dict:
     return {}
 
 
+def _club_player_names(club_info: dict) -> set:
+    return {p.get("name_ja") for p in club_info.get("players", []) if p.get("name_ja")}
+
+
+def _club_side(m: dict, club_info: dict):
+    """クラブ番号の無いクラブの試合で、そのクラブがいる側（試合データの日本人選手の side）。"""
+    names = _club_player_names(club_info)
+    for jp in m.get("japanese_players") or []:
+        if jp.get("name_ja") in names:
+            return jp.get("side")
+    return None
+
+
 def get_club_recent_matches(club_info: dict, matches: list) -> list:
     """クラブの全試合を取得する（新しい順）。"""
     club_id = club_info.get("club_id")
     if not club_id:
-        return []
+        # クラブ番号の無いブンデス2部のクラブは、OpenLigaDB の試合を所属日本人選手の名前で選ぶ（2026-10-22）
+        return [m for m, _side in openligadb_matches_for_names(_club_player_names(club_info), matches)]
 
     club_matches = [
         m for m in matches
@@ -608,7 +636,10 @@ def build_club_page(club_info: dict, slug: str, standing: dict,
             comp_ja = m.get("competition_ja", "")
             home_id = m.get("home_id")
             club_id = club_info.get("club_id")
-            is_home = home_id == club_id
+            if club_id:
+                is_home = home_id == club_id
+            else:
+                is_home = _club_side(m, club_info) == "home"  # ブンデス2部（クラブ番号なし）
             extra_cls = " hidden-extra" if idx >= 10 else ""
 
             date_display = ""
@@ -659,16 +690,12 @@ def build_club_page(club_info: dict, slug: str, standing: dict,
                     opponent = esc(home_ja)
                 venue_cls = "venue-home" if is_home else "venue-away"
                 venue_label = "H" if is_home else "A"
-                broadcasters_list = m.get("broadcasters", [])
+                # 配信は選手ページと同じ情報源（league_guides.json の欄）から。欄が無い大会は「確認中」（2026-10-22）
                 league_ja_m = m.get("competition_ja", club_info.get("league_ja", ""))
-                bc_tags = ""
-                if broadcasters_list and services is not None:
-                    tags = [build_bc_tag(b, services, "club", slug, league_ja_m)
-                            for b in broadcasters_list[:2] if b.get("name")]
-                    bc_tags = " ".join(tags)
-                elif broadcasters_list:
-                    bc_names = [b.get("name", "") for b in broadcasters_list[:2] if b.get("name")]
-                    bc_tags = esc(" / ".join(bc_names))
+                bc_tags, _n_aff = build_watch_cell(_guides(), services or {}, m.get("competition_id"),
+                                                   league_ja_m, "club", slug)
+                WATCH_STATS["affiliate_links"] += _n_aff
+                WATCH_STATS["unconfirmed_rows"] += 1 if "bc-unconfirmed" in bc_tags else 0
                 _pending = is_result_pending(m)  # 開始から3時間すぎても予定のまま＝結果待ち
                 match_rows += f"""
           <div class="match-row {'result-pending' if _pending else 'scheduled'}{extra_cls}">
@@ -1069,6 +1096,7 @@ def build_club_page(club_info: dict, slug: str, standing: dict,
     .match-result.lose {{ color: #c0392b; }}
     .match-result.draw {{ color: #666; }}
     .match-result.pending {{ color: #8a6100; font-size: 12px; font-weight: 600; }}
+    .bc-unconfirmed {{ font-size: 11px; color: #888; }}
     .match-broadcast {{
       display: flex;
       flex-wrap: wrap;
@@ -1281,6 +1309,7 @@ def build_club_page(club_info: dict, slug: str, standing: dict,
 
   <footer class="site-footer">
     <p>データ提供: <a href="https://www.football-data.org/" target="_blank" rel="noopener">Football-Data.org</a></p>
+    <p class="oldb-credit">ブンデスリーガ2部の日程・結果: <a href="https://www.openligadb.de/" target="_blank" rel="noopener">OpenLigaDB</a>（www.openligadb.de）、<a href="https://opendatacommons.org/licenses/odbl/1-0/" target="_blank" rel="noopener">ODbL 1.0</a> で提供</p>
     <p class="footer-links">
       <a href="/">football-jp トップへ</a> |
       <a href="/players/">選手一覧</a> |
@@ -1618,6 +1647,7 @@ def main():
         print(f"  ✅ {club_ja} ({club_en}) → /clubs/{slug}/ ({size:,} bytes)")
 
     print(f"\n合計 {len(generated)} クラブページ生成完了")
+    print(f"  直近の試合の配信の列: 報酬リンク {WATCH_STATS['affiliate_links']}本・確認中 {WATCH_STATS['unconfirmed_rows']}行")
 
     print("\n生成済みslug一覧:")
     for club_ja, club_en, slug, size in generated:

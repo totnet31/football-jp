@@ -339,6 +339,7 @@ def common_nav_ja(active: str = "leagues") -> str:
 def common_footer_ja() -> str:
     return """  <footer>
     <p>データ提供: <a href="https://www.football-data.org/" target="_blank" rel="noopener">football-data.org</a></p>
+    <p class="oldb-credit">ブンデスリーガ2部の日程・結果: <a href="https://www.openligadb.de/" target="_blank" rel="noopener">OpenLigaDB</a>（www.openligadb.de）、<a href="https://opendatacommons.org/licenses/odbl/1-0/" target="_blank" rel="noopener">ODbL 1.0</a> で提供</p>
     <nav class="footer-nav">
       <a href="/players/">日本人選手一覧</a>
       <a href="/clubs/">クラブ一覧</a>
@@ -748,6 +749,31 @@ def build_standings_html(standings_comps: dict, comp_id: int, jp_club_ids: set, 
 # ============================
 # 試合カード生成
 # ============================
+from watch_source import build_watch_cell, affiliate_for  # 配信の取り出し方（共通・2026-10-22）
+
+_GUIDES_CACHE = None
+WATCH_STATS = {"affiliate_links": 0, "unconfirmed_cards": 0}
+
+
+def _guides_cached() -> dict:
+    global _GUIDES_CACHE
+    if _GUIDES_CACHE is None:
+        _GUIDES_CACHE = load_league_guides()
+    return _GUIDES_CACHE
+
+
+def match_watch_html(m: dict, services: dict, page_id: str, is_result: bool, unconfirmed_label: str = "確認中") -> str:
+    """試合カードの配信バッジ。結果（終わった試合）で欄が無いときは何も出さない。"""
+    html, n_aff = build_watch_cell(_guides_cached(), services or {}, m.get("competition_id"),
+                                   m.get("competition_ja", ""), "league", page_id, unconfirmed_label)
+    unconfirmed = "bc-unconfirmed" in html
+    if unconfirmed and is_result:
+        return ""
+    WATCH_STATS["affiliate_links"] += n_aff
+    WATCH_STATS["unconfirmed_cards"] += 1 if unconfirmed else 0
+    return f'<div class="bc-tags">{html}</div>'
+
+
 def build_match_card(m: dict, services: dict, league_slug_str: str, is_result: bool) -> str:
     kickoff = format_kickoff_ja(m.get("kickoff_jst", ""))
     home_ja = m.get("home_ja", "")
@@ -758,7 +784,6 @@ def build_match_card(m: dict, services: dict, league_slug_str: str, is_result: b
     home_score = score.get("home")
     away_score = score.get("away")
     jp_players = m.get("japanese_players", [])
-    broadcasters = m.get("broadcasters", [])
     match_id = str(m.get("id", ""))
 
     # 出場選手バッジ
@@ -773,11 +798,8 @@ def build_match_card(m: dict, services: dict, league_slug_str: str, is_result: b
     if jp_names:
         jp_html = f'<div class="jp-players-row">{"".join(jp_names)}</div>'
 
-    # 配信バッジ
-    bc_html = ""
-    if broadcasters:
-        bc_tags = [build_bc_tag(bc, services, "league", league_slug_str, league_slug_str) for bc in broadcasters]
-        bc_html = f'<div class="bc-tags">{"".join(bc_tags)}</div>'
+    # 配信バッジ（選手ページと同じ情報源＝league_guides.json の欄。欄が無い大会は「確認中」・2026-10-22）
+    bc_html = match_watch_html(m, services, league_slug_str, is_result)
 
     # スコア表示
     if is_result and home_score is not None and away_score is not None:
@@ -1014,7 +1036,7 @@ def build_watch_section(guide: dict, lg_slug: str, bc_services: dict = None) -> 
         parts.append(f'<!--AD-SLOT:{esc(key)}-->')
         href = sv.get("url", "")
         rel = "nofollow noopener"
-        aff = (bc_services.get(sv.get("url_service", "")) or {}).get("affiliate_url") if sv.get("url_service") else None
+        aff = affiliate_for(sv, bc_services)
         if aff:
             href, rel = aff, "sponsored nofollow noopener"
         parts.append(
@@ -1107,6 +1129,8 @@ def generate_league_page(
     canonical = f"{SITE_URL}/leagues/{lg_slug}/"
     en_url = f"{SITE_URL}/en/leagues/{lg_slug}/"
     guide = (guides.get("leagues") or {}).get(lg_slug)
+    # 手書きの文章がまだ無いリーグでも「どこで見られる？」欄だけは出す（league_guides.json の watch_only）
+    watch_only = None if guide else (guides.get("watch_only") or {}).get(lg_slug)
     season = guides.get("season", CURRENT_SEASON)
     title = f"{league_ja} の日本人選手 - 試合・配信情報 | football-jp"
     # メタdesc生成（100-160字）
@@ -1172,7 +1196,7 @@ def generate_league_page(
             ],
         }, ensure_ascii=False, indent=2)
         html_parts.append(f'  <script type="application/ld+json">\n{schema_faq}\n  </script>')
-    if guide:
+    if guide or watch_only:
         html_parts.append(f'  <style>{GUIDE_CSS}</style>')
     html_parts.append('  <style>.breadcrumb{font-size:12px;color:#888;padding:8px 16px;background:#f8f9fa;border-bottom:1px solid var(--c-border,#e5e7eb)}.breadcrumb a{color:#555;text-decoration:none}.breadcrumb a:hover{color:var(--c-accent,#0047ab);text-decoration:underline}</style>')
     html_parts.append("</head>")
@@ -1207,6 +1231,8 @@ def generate_league_page(
         html_parts.append(build_quick_table(players, seasoned, slug_map, season, cur_stats))
         html_parts.append(build_upcoming_section(upcoming_matches, services, lg_slug, league_ja))
         html_parts.append(build_watch_section(guide, lg_slug, services))
+    elif watch_only:
+        html_parts.append(build_watch_section(watch_only, lg_slug, services))
 
     # ============================
     # 選手一覧（クラブ別グループ）
@@ -1292,6 +1318,11 @@ def generate_league_page(
         html_parts.append('<li><a href="/leagues/">海外サッカーの日本人選手一覧（リーグ別）</a></li>')
         for c_slug, c in (guides.get("competitions") or {}).items():
             html_parts.append(f'<li><a href="/leagues/{esc(c_slug)}/">{esc(c.get("short_ja", c.get("name_ja", "")))}の日本人選手</a></li>')
+    elif watch_only:
+        # 「どこで見られる？」欄だけのリーグも、続きリンク（見方コラム）を関連リンクの先頭に出す
+        more = (watch_only.get("watch") or {}).get("more_link")
+        if more and more.get("href") != "/column/broadcast-guide-2025-26/":
+            html_parts.append(f'<li><a href="{esc(more["href"])}">{esc(more["text"])}</a></li>')
 
     # 選手リンク
     seen_slugs = set()
@@ -1742,7 +1773,7 @@ def build_index_table(ordered_leagues: list, league_groups: dict, idx: dict, sea
         + "".join(rows) +
         '</tbody></table></div>'
         f'<p class="lg-src">「どこで見られる」は公式ページで確かめた分だけ載せています（「—」はまだ確かめていないもの）。出どころ：{srcs}</p>'
-        '<p><a href="/column/broadcast-guide-2025-26/" class="link-more">海外サッカーの見方まとめ（2025-26版） →</a></p>'
+        '<p><a href="/column/broadcast-guide-2025-26/" class="link-more">海外サッカーの見方まとめ（2026-27版） →</a></p>'
         '</section>'
     )
 
@@ -1834,6 +1865,7 @@ def main():
     except Exception as e:
         print(f"  [ERROR] リーグ一覧: {e}", file=sys.stderr)
 
+    print(f"  試合カードの配信: 報酬リンク {WATCH_STATS['affiliate_links']}本・確認中 {WATCH_STATS['unconfirmed_cards']}枚")
     print(f"=== 完了: {generated} ファイル生成 ===")
 
 

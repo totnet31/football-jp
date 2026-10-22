@@ -41,6 +41,10 @@ jobs:
       - name: データ取得スクリプトを実行
         run: python3 scripts/fetch_matches.py
 
+      - name: ブンデスリーガ2部の日程・結果取得（OpenLigaDB・失敗しても前回のデータを残す）
+        run: python3 scripts/fetch_openligadb.py
+        continue-on-error: true
+
       - name: sitemap.xml 自動生成
         run: python3 scripts/generate_sitemap.py
         continue-on-error: true

@@ -1607,6 +1607,10 @@ footer a { color: var(--text-sub); }
   flex-wrap: wrap;
   gap: 4px;
 }
+.bc-unconfirmed {
+  font-size: 11px;
+  color: var(--text-sub, #888);
+}
 
 /* 関連リンク */
 .related-links {

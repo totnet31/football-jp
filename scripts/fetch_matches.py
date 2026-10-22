@@ -92,7 +92,7 @@ def to_jst(utc_str):
     return dt.astimezone(JST).isoformat()
 
 
-def transform_match(m, comp_meta, clubs, player_idx, broadcasters):
+def transform_match(m, comp_meta, clubs, player_idx):
     home_id = m["homeTeam"]["id"]
     away_id = m["awayTeam"]["id"]
     home_name_api = m["homeTeam"].get("shortName") or m["homeTeam"].get("name") or ""
@@ -132,7 +132,8 @@ def transform_match(m, comp_meta, clubs, player_idx, broadcasters):
         "away_crest": m["awayTeam"].get("crest"),
         "score": score,
         "japanese_players": jp_players,
-        "broadcasters": broadcasters.get(str(comp_meta["id"]), []),
+        # 配信は書き出す直前に watch_source.apply_to_matches が league_guides.json の欄から入れる（2026-10-22）
+        "broadcasters": [],
     }
 
 
@@ -141,10 +142,8 @@ def main():
     competitions = load_json("competitions.json")
     players = load_json("players.json")
     clubs_data = load_json("clubs.json")
-    broadcasters_data = load_json("broadcasters.json")
 
     clubs = clubs_data["clubs"]
-    broadcasters = broadcasters_data["broadcasters"]
     player_idx = build_player_index(players)
 
     today = datetime.now(JST).date()
@@ -163,7 +162,7 @@ def main():
         data = fetch(url, token)
         if data and "matches" in data:
             for m in data["matches"]:
-                all_matches.append(transform_match(m, comp, clubs, player_idx, broadcasters))
+                all_matches.append(transform_match(m, comp, clubs, player_idx))
             print(f"    -> {len(data['matches'])}試合")
         else:
             print(f"    -> 取得失敗または0件")
@@ -240,6 +239,13 @@ def main():
     fixed = fix_finished_status(accumulated_matches)
     if fixed:
         print(f"[INFO] status='FINISHED' に補正: {fixed}件")
+
+    # 配信先：過去から引き継いだ試合も含めて全試合を league_guides.json の欄（公式確認済み）で書き直す。
+    # 古い broadcasters.json の「broadcasters」（2026-04-29 時点）は使わない（2026-10-22）
+    sys.path.insert(0, str(Path(__file__).resolve().parent))
+    from watch_source import apply_to_matches
+    n_bc = apply_to_matches(accumulated_matches)
+    print(f"[INFO] 配信先を league_guides.json の欄から書き直し: {n_bc}試合")
 
     output = {
         "updated": datetime.now(JST).isoformat(),

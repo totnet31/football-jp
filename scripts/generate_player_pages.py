@@ -6,7 +6,7 @@ generate_player_pages.py
 使い方: python3 scripts/generate_player_pages.py
 """
 
-from utils import is_result_pending, fix_unplayed_finished
+from utils import is_result_pending, fix_unplayed_finished, openligadb_matches_for_names
 from second_team import is_second_team, page_player, adjust_html as adjust_second_team
 import json
 import os
@@ -111,6 +111,244 @@ def build_bc_tag(broadcaster: dict, services: dict, page_type: str, page_id: str
         f'{logo_html}{esc(name)}'
         f'</a>'
     )
+
+
+# ============================
+# 「次の試合・どこで見れる」欄（2026-10-22 追加）
+# 配信先は league_guides.json の「どこで見られる？」欄（公式ページで確かめた分だけ）から出す。
+# 欄が無い大会・リーグ（ブンデスリーガ2部・リーグ・ドゥ・代表戦など）は「配信先は確認中」とし、推測で書かない。
+# 成果報酬リンクは、欄の url_service が broadcasters.json の services で affiliate_url を持つときだけ付く。
+# 次の試合は作るたびに matches.json から選び直す（1日3回の自動更新で古くならない。日付は手で書かない）。
+# ============================
+LEAGUE_GUIDES_JSON = REPO_ROOT / "data" / "league_guides.json"
+NEXT_WATCH_SHOW = 2      # 最初に見せる試合の数
+NEXT_WATCH_SPARE = 1     # 作ったあとに試合が終わったとき用の控え（画面の中で入れ替える）
+_WD_JA = ["月", "火", "水", "木", "金", "土", "日"]
+
+
+# 取り出し方は scripts/watch_source.py に共通化（クラブ・リーグページ・matches.json と同じ。2026-10-22）
+from watch_source import load_league_guides, find_watch_guide, build_watch_cell, affiliate_for  # noqa: E402
+
+
+def _parse_ko(kickoff: str):
+    from datetime import datetime, timezone, timedelta
+    try:
+        dt = datetime.fromisoformat(kickoff.replace("Z", "+00:00"))
+    except Exception:
+        return None
+    if dt.tzinfo is None:
+        dt = dt.replace(tzinfo=timezone(timedelta(hours=9)))
+    return dt.astimezone(timezone(timedelta(hours=9)))
+
+
+def get_upcoming_matches(club_matches: list, now=None) -> list:
+    """まだ終わっていない試合（始まって2時間以内のものを含む）を古い順に。"""
+    from datetime import datetime, timezone, timedelta
+    now = now or datetime.now(timezone(timedelta(hours=9)))
+    out = []
+    for m in club_matches:
+        if m.get("status") == "FINISHED":
+            continue
+        dt = _parse_ko(m.get("kickoff_jst", ""))
+        if dt is None or dt < now - timedelta(hours=2):
+            continue
+        out.append((dt, m))
+    out.sort(key=lambda x: x[0])
+    return out
+
+
+def _jp_side(m: dict, name_ja: str):
+    """試合の japanese_players に選手の名前があれば、その side（"home"/"away"）を返す。無ければ None。"""
+    for jp in m.get("japanese_players") or []:
+        if jp.get("name_ja") == name_ja:
+            return jp.get("side")
+    return None
+
+
+def get_next_watch_matches(player: dict, matches: list, club_matches: list) -> list:
+    """「次の試合」欄の候補の試合。
+    クラブ番号（club_id）がある選手は、これまでどおりクラブの全試合から選ぶ。
+    クラブ番号が無い選手（ベルギー1部・ブンデス2部など、football-data.org に無いクラブ）は、
+    試合データの「出場する日本人選手」（japanese_players）に名前が入っている試合から選ぶ
+    （EL・ECL の試合は fetch_uefa_secondary.py がクラブ名で選手を付けている。1日3回の自動更新で付け直される）。2026-10-22"""
+    if player.get("club_id"):
+        return club_matches
+    name_ja = player.get("name_ja", "")
+    if not name_ja:
+        return []
+    return [m for m in matches if _jp_side(m, name_ja) in ("home", "away")]
+
+
+def _watch_services_html(watch: dict, bc_services: dict, slug: str) -> tuple:
+    """配信先のカード。返り値：(html, 報酬リンクが付いたか)"""
+    has_aff = False
+    rows = []
+    for sv in watch.get("services") or []:
+        name = sv.get("name", "")
+        href = sv.get("url", "")
+        rel = "nofollow noopener"
+        aff = affiliate_for(sv, bc_services)
+        if aff:
+            href, rel = aff, "sponsored nofollow noopener"
+            has_aff = True
+        link = ""
+        if href:
+            link = (f'<a class="nw-link" href="{esc(href)}" target="_blank" rel="{rel}" '
+                    f'data-svc="{esc(name)}" data-pagetype="player_next_watch" data-pageid="{esc(slug)}" '
+                    f'onclick="trackAffClick(this)">{esc(name)}の公式ページへ</a>')
+        detail = ""
+        if sv.get("scope"):
+            detail += f'<p class="nw-scope">{esc(sv["scope"])}</p>'
+        if sv.get("price"):
+            detail += f'<p class="nw-price">料金：{esc(sv["price"])}</p>'
+        if sv.get("checked"):
+            detail += f'<p class="nw-src">公式ページで確認：{esc(sv["checked"])}</p>'
+        rows.append(f'<div class="nw-svc"><div class="nw-svc-name">{esc(name)}</div>{detail}{link}</div>')
+    more = watch.get("more_link")
+    if more and more.get("href"):
+        rows.append(f'<p class="nw-more"><a href="{esc(more["href"])}">{esc(more.get("text", "見る方法"))} →</a></p>')
+    return "".join(rows), has_aff
+
+
+def build_table_watch_cell(guides: dict, bc_services: dict, competition_id, competition_ja: str, slug: str) -> tuple:
+    """「直近の試合」表の配信の列（2026-10-22）。上の「次の試合・どこで見れる」欄と同じ
+    league_guides.json の欄から出す（共通の取り出し方：scripts/watch_source.py）。
+    返り値：(html, 報酬リンクの数)"""
+    return build_watch_cell(guides, bc_services, competition_id, competition_ja, "player_table", slug)
+
+
+TABLE_WATCH_STATS = {"affiliate_links": 0, "unconfirmed_rows": 0}
+
+
+def _unconfirmed_html() -> str:
+    return ('<p class="nw-unconfirmed">配信先は確認中です（日本の配信サービスの公式ページで確かめられた分だけを載せています）。</p>')
+
+
+def build_next_watch_section(player: dict, slug: str, upcoming: list, guides: dict, bc_services: dict) -> tuple:
+    """選手ページ上部の「次の試合・どこで見れる」欄。
+    返り値：(html, 情報) 情報＝{"has_match", "unconfirmed", "affiliate"}"""
+    name_ja = player.get("name_ja", "")
+    club_id = player.get("club_id")
+    info = {"has_match": False, "unconfirmed": False, "affiliate": False}
+    cards = []
+    for i, (dt, m) in enumerate(upcoming[:NEXT_WATCH_SHOW + NEXT_WATCH_SPARE]):
+        if club_id:
+            is_home = m.get("home_id") == club_id
+        else:
+            is_home = _jp_side(m, name_ja) == "home"
+        opp = m.get("away_ja", "") if is_home else m.get("home_ja", "")
+        venue = "ホーム" if is_home else "アウェイ"
+        comp = m.get("competition_ja", "")
+        when = f'{dt.month}月{dt.day}日（{_WD_JA[dt.weekday()]}）{dt.strftime("%H:%M")}'
+        watch = find_watch_guide(guides, m.get("competition_id"), comp)
+        if watch.get("services"):
+            svc_html, aff = _watch_services_html(watch, bc_services, slug)
+        else:
+            svc_html, aff = _unconfirmed_html(), False
+        visible = i < NEXT_WATCH_SHOW
+        if visible:
+            info["has_match"] = True
+            if not watch.get("services"):
+                info["unconfirmed"] = True
+            if aff:
+                info["affiliate"] = True
+        label = "次の試合" if i == 0 else "その次の試合"
+        cards.append(
+            f'<div class="nw-card{"" if visible else " nw-spare"}" data-ko="{esc(dt.isoformat())}">'
+            f'<div class="nw-label"><span class="nw-label-text">{label}</span><span class="nw-when-rel"></span></div>'
+            f'<div class="nw-when">{esc(when)}<span class="nw-jst">（日本時間）</span></div>'
+            f'<div class="nw-match">vs {esc(opp)}<span class="nw-venue">{venue}</span></div>'
+            f'<div class="nw-comp">{esc(comp)}</div>'
+            f'<div class="nw-watch-h">日本で見られるところ</div>'
+            f'{svc_html}'
+            f'</div>'
+        )
+
+    league_ja = player.get("league_ja", "")
+    if not cards:
+        # 次の試合が無い（オフ・日程未発表・このサイトにリーグの日程が無い）
+        if club_id:
+            msg = "次の試合の日程は、まだこのサイトに入っていません。日程が出たら、1日3回の自動更新でここに載ります。"
+        else:
+            msg = f"{league_ja}の試合日程は、まだこのサイトに載せていません。"
+        watch = find_watch_guide(guides, None, league_ja)
+        if watch.get("services"):
+            svc_html, aff = _watch_services_html(watch, bc_services, slug)
+            info["affiliate"] = aff
+        else:
+            svc_html = _unconfirmed_html()
+            info["unconfirmed"] = True
+        body = (f'<p class="nw-none">{esc(msg)}</p>'
+                f'<div class="nw-card nw-card-league"><div class="nw-watch-h">{esc(league_ja)}を日本で見られるところ</div>{svc_html}</div>')
+    else:
+        body = "".join(cards) + '<p class="nw-none nw-none-js" hidden>次の試合の日程は、まだこのサイトに入っていません。日程が出たら、1日3回の自動更新でここに載ります。</p>'
+
+    note = "" if not cards else '<p class="nw-note">リーグ戦と欧州の大会（CL・EL・ECL）の日程から出しています。国内のカップ戦などは入っていないことがあります。配信先は大会ごとの案内で、その試合を必ず中継するとは限りません。</p>'
+    html = f"""
+    <section class="player-section nw-section" id="next-watch">
+      <h3>📺 {esc(name_ja)}の次の試合・どこで見れる</h3>
+      <div class="nw-cards">{body}</div>
+      {note}
+    </section>"""
+    return html, info
+
+
+NEXT_WATCH_CSS = """
+    .nw-section { background: #f5f8ff; }
+    .nw-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 12px; }
+    .nw-card { background: #fff; border: 1px solid var(--c-border, #e5e7eb); border-radius: 8px; padding: 12px 14px; min-width: 0; overflow-wrap: anywhere; }
+    .nw-spare { display: none; }
+    .nw-label { font-size: 12px; font-weight: 700; color: var(--c-accent, #0047ab); display: flex; gap: 8px; align-items: center; }
+    .nw-when-rel { background: #0047ab; color: #fff; border-radius: 10px; padding: 0 8px; font-size: 11px; }
+    .nw-when-rel:empty { display: none; }
+    .nw-when { font-size: 18px; font-weight: 700; margin-top: 4px; }
+    .nw-jst { font-size: 11px; font-weight: 400; color: #666; margin-left: 2px; }
+    .nw-match { font-size: 15px; font-weight: 700; margin-top: 2px; }
+    .nw-venue { font-size: 11px; font-weight: 400; color: #666; margin-left: 6px; }
+    .nw-comp { font-size: 12px; color: #555; margin-top: 2px; }
+    .nw-watch-h { font-size: 12px; font-weight: 700; margin: 10px 0 6px; padding-top: 8px; border-top: 1px dashed var(--c-border, #e5e7eb); }
+    .nw-card-league .nw-watch-h { border-top: none; padding-top: 0; margin-top: 0; }
+    .nw-svc { margin-bottom: 10px; }
+    .nw-svc-name { font-weight: 700; font-size: 14px; }
+    .nw-scope, .nw-price { font-size: 12px; color: #444; margin: 2px 0; line-height: 1.5; }
+    .nw-src { font-size: 11px; color: #888; margin: 2px 0; }
+    .nw-link { display: inline-block; margin-top: 4px; padding: 6px 12px; border-radius: 6px; background: var(--c-accent, #0047ab); color: #fff; font-size: 13px; font-weight: 700; text-decoration: none; }
+    .nw-more { font-size: 13px; margin: 6px 0 0; }
+    .nw-more a { color: var(--c-accent, #0047ab); }
+    .nw-unconfirmed { font-size: 13px; color: #555; margin: 0; }
+    .nw-none { font-size: 13px; color: #444; margin: 0 0 10px; }
+    .nw-note { font-size: 11px; color: #888; margin: 10px 0 0; line-height: 1.5; }
+"""
+
+NEXT_WATCH_JS = """
+(function() {
+  var sec = document.getElementById('next-watch');
+  if (!sec) return;
+  var now = Date.now();
+  var cards = Array.prototype.slice.call(sec.querySelectorAll('.nw-card[data-ko]'));
+  var shown = 0;
+  cards.forEach(function(c) {
+    var ko = Date.parse(c.getAttribute('data-ko'));
+    if (isNaN(ko)) return;
+    if (now > ko + 2 * 3600 * 1000) { c.style.display = 'none'; return; }
+    if (shown >= {show}) { c.style.display = 'none'; return; }
+    c.style.display = 'block';
+    var lt = c.querySelector('.nw-label-text');
+    if (lt) lt.textContent = shown === 0 ? '次の試合' : 'その次の試合';
+    shown++;
+    var rel = c.querySelector('.nw-when-rel');
+    if (!rel) return;
+    if (now >= ko) { rel.textContent = '試合中'; return; }
+    var j = function(t) { var d = new Date(t + 9 * 3600 * 1000); return Date.UTC(d.getUTCFullYear(), d.getUTCMonth(), d.getUTCDate()); };
+    var days = Math.round((j(ko) - j(now)) / 86400000);
+    rel.textContent = days === 0 ? '今日' : (days === 1 ? '明日' : 'あと' + days + '日');
+  });
+  if (cards.length && shown === 0) {
+    var n = sec.querySelector('.nw-none-js');
+    if (n) n.hidden = false;
+  }
+})();
+""".replace("{show}", str(NEXT_WATCH_SHOW))
 
 
 # ============================
@@ -324,7 +562,8 @@ def get_club_matches(player: dict, matches: list) -> list:
     """選手所属クラブの全試合を取得する（新しい順）。"""
     club_id = player.get("club_id")
     if not club_id:
-        return []
+        # クラブ番号の無いブンデス2部の選手は、OpenLigaDB の試合を名前で選ぶ（2026-10-22）
+        return [m for m, _side in openligadb_matches_for_names([player.get("name_ja")], matches)]
 
     club_matches = [
         m for m in matches
@@ -442,7 +681,11 @@ def build_player_page(player: dict, slug: str, scorer_stats: dict,
                       related_players: list = None,
                       player_info: dict = None,
                       highlights: list = None,
-                      player_videos: list = None) -> str:
+                      player_videos: list = None,
+                      next_watch_html: str = "",
+                      guides: dict = None) -> str:
+    if guides is None:
+        guides = load_league_guides()
     name_ja = player.get("name_ja", "")
     name_en = player.get("name_en", "")
     position = player.get("position", "")
@@ -567,7 +810,11 @@ def build_player_page(player: dict, slug: str, scorer_stats: dict,
             home_id = m.get("home_id")
             away_id = m.get("away_id")
             club_id = player.get("club_id")
-            is_home = home_id == club_id
+            if club_id:
+                is_home = home_id == club_id
+            else:
+                # クラブ番号の無い選手（ブンデス2部）は、試合データの日本人選手の側で決める
+                is_home = _jp_side(m, player.get("name_ja", "")) == "home"
             extra_cls = " hidden-extra" if idx >= 10 else ""
 
             # 日時表示（yyyy/mm/dd 改行 (曜) HH:MM JST）
@@ -622,16 +869,10 @@ def build_player_page(player: dict, slug: str, scorer_stats: dict,
                     opponent = esc(home_ja)
                 venue_cls = "venue-home" if is_home else "venue-away"
                 venue_label = "H" if is_home else "A"
-                broadcasters_list = m.get("broadcasters", [])
-                league_ja_m = m.get("competition_ja", player.get("league_ja", ""))
-                bc_tags = ""
-                if broadcasters_list and services is not None:
-                    tags = [build_bc_tag(b, services, "player", slug, league_ja_m)
-                            for b in broadcasters_list[:2] if b.get("name")]
-                    bc_tags = " ".join(tags)
-                elif broadcasters_list:
-                    bc_names = [b.get("name", "") for b in broadcasters_list[:2] if b.get("name")]
-                    bc_tags = esc(" / ".join(bc_names))
+                # 配信は上の「次の試合・どこで見れる」欄と同じ情報源（league_guides.json）から
+                bc_tags, _n_aff = build_table_watch_cell(guides, services or {}, m.get("competition_id"), comp_ja, slug)
+                TABLE_WATCH_STATS["affiliate_links"] += _n_aff
+                TABLE_WATCH_STATS["unconfirmed_rows"] += 1 if "bc-unconfirmed" in bc_tags else 0
                 _pending = is_result_pending(m)  # 開始から3時間すぎても予定のまま＝結果待ち
                 match_rows += f"""
           <div class="match-row {'result-pending' if _pending else 'scheduled'}{extra_cls}">
@@ -1126,6 +1367,7 @@ def build_player_page(player: dict, slug: str, scorer_stats: dict,
       align-items: center;
       justify-content: center;
     }}
+    .bc-unconfirmed {{ font-size: 11px; color: #888; }}
     .match-date-day {{ display: block; font-size: 12px; }}
     .match-date-time {{ display: block; font-size: 11px; color: #555; }}
     .venue-badge {{
@@ -1383,7 +1625,7 @@ def build_player_page(player: dict, slug: str, scorer_stats: dict,
       border-left: 3px solid #d4af37;
       border-radius: 2px;
     }}
-    @media (max-width: 600px) {{
+{NEXT_WATCH_CSS if next_watch_html else ""}    @media (max-width: 600px) {{
       .stats-grid {{ grid-template-columns: repeat(2, 1fr); }}
       .match-header, .match-row {{
         grid-template-columns: 80px 28px 1fr 45px;
@@ -1425,7 +1667,7 @@ def build_player_page(player: dict, slug: str, scorer_stats: dict,
 
 <div style="max-width: 860px; margin: 0 auto;">
 
-  {profile_info_html}
+  {next_watch_html}{profile_info_html}
 
   {stats_html}
 
@@ -1458,6 +1700,7 @@ def build_player_page(player: dict, slug: str, scorer_stats: dict,
 
   <footer class="site-footer">
     <p>データ提供: <a href="https://www.football-data.org/" target="_blank" rel="noopener">Football-Data.org</a></p>
+    <p class="oldb-credit">ブンデスリーガ2部の日程・結果: <a href="https://www.openligadb.de/" target="_blank" rel="noopener">OpenLigaDB</a>（www.openligadb.de）、<a href="https://opendatacommons.org/licenses/odbl/1-0/" target="_blank" rel="noopener">ODbL 1.0</a> で提供</p>
     <p class="footer-links">
       <a href="/">football-jp トップへ</a> |
       <a href="/players/">選手一覧</a> |
@@ -1468,7 +1711,7 @@ def build_player_page(player: dict, slug: str, scorer_stats: dict,
 </div>
 
 <script>
-function toggleMoreMatches(btn) {{
+{NEXT_WATCH_JS if next_watch_html else ""}function toggleMoreMatches(btn) {{
   var list = btn.previousElementSibling;
   list.querySelectorAll('.hidden-extra').forEach(function(r) {{
     r.classList.toggle('shown');
@@ -1877,6 +2120,8 @@ def main():
 
     generated = []
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
+    guides = load_league_guides()
+    nw_counts = {"pages": 0, "has_match": 0, "no_match": 0, "unconfirmed": [], "affiliate": []}
 
     for i, player in enumerate(players):
         slug = slug_map[i]
@@ -1899,13 +2144,27 @@ def main():
         pv_entry = player_videos_data.get(name_en, {})
         player_vids = pv_entry.get("videos", []) if pv_entry else []
 
+        # 次の試合・どこで見れる（セカンドチームの選手は、トップチームの試合を出さないので欄も出さない）
+        next_watch_html = ""
+        if not is_second_team(player):
+            next_watch_html, nw_info = build_next_watch_section(
+                player, slug, get_upcoming_matches(get_next_watch_matches(player, matches, club_matches)), guides, services)
+            nw_counts["pages"] += 1
+            nw_counts["has_match" if nw_info["has_match"] else "no_match"] += 1
+            if nw_info["unconfirmed"]:
+                nw_counts["unconfirmed"].append(name_ja)
+            if nw_info["affiliate"]:
+                nw_counts["affiliate"].append(name_ja)
+
         # HTMLページ生成
         html = build_player_page(page_player(player, "ja"), slug, scorer_stats, goal_events, club_matches, standing,
                                  wiki_stats=wiki_stats, services=services,
                                  related_players=related_players,
                                  player_info=pinfo,
                                  highlights=highlights,
-                                 player_videos=player_vids if player_vids else None)
+                                 player_videos=player_vids if player_vids else None,
+                                 next_watch_html=next_watch_html,
+                                 guides=guides)
         if is_second_team(player):
             html = adjust_second_team(html, player, "ja")
 
@@ -1939,6 +2198,10 @@ def main():
             print(f"  ✅ {p.get('name_ja')}（日本に復帰）→ /players/{slug}/")
 
     print(f"\n合計 {len(generated)} 選手ページ生成完了")
+    print(f"  次の試合・どこで見れる欄: {nw_counts['pages']}ページ（次の試合あり {nw_counts['has_match']}・なし {nw_counts['no_match']}）")
+    print(f"  配信先「確認中」を含む: {len(nw_counts['unconfirmed'])}人 {'・'.join(nw_counts['unconfirmed'])}")
+    print(f"  報酬リンクが付く: {len(nw_counts['affiliate'])}人 {'・'.join(nw_counts['affiliate'])}")
+    print(f"  直近の試合の表（配信の列）: 報酬リンク {TABLE_WATCH_STATS['affiliate_links']}本・確認中 {TABLE_WATCH_STATS['unconfirmed_rows']}行")
 
     # slug一覧
     print("\n生成済みslug一覧:")

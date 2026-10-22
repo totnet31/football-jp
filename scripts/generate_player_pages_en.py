@@ -6,7 +6,7 @@ generate_player_pages_en.py
 使い方: python3 scripts/generate_player_pages_en.py
 """
 
-from utils import is_result_pending, fix_unplayed_finished
+from utils import is_result_pending, fix_unplayed_finished, openligadb_matches_for_names
 from translation_dict import has_japanese
 from second_team import is_second_team, page_player, adjust_html as adjust_second_team
 import json
@@ -236,7 +236,8 @@ def get_player_goals(player: dict, events: dict, matches_dict: dict) -> list:
 def get_club_matches(player: dict, matches: list) -> list:
     club_id = player.get("club_id")
     if not club_id:
-        return []
+        # クラブ番号の無いブンデス2部の選手は、OpenLigaDB の試合を名前で選ぶ（日本語版と同じ・2026-10-22）
+        return [m for m, _side in openligadb_matches_for_names([player.get("name_ja")], matches)]
     club_matches = [m for m in matches if m.get("home_id") == club_id or m.get("away_id") == club_id]
     club_matches.sort(key=lambda x: x.get("kickoff_jst", ""), reverse=True)
     return club_matches
@@ -465,7 +466,12 @@ def build_player_page_en(player: dict, slug: str, scorer_stats: dict,
             comp_en_m = LEAGUE_JA_TO_EN.get(comp_ja_m, comp_ja_m)
             home_id = m.get("home_id")
             club_id = player.get("club_id")
-            is_home = home_id == club_id
+            if club_id:
+                is_home = home_id == club_id
+            else:
+                # クラブ番号の無い選手（ブンデス2部）は、試合データの日本人選手の側で決める
+                is_home = any(jp.get("name_ja") == player.get("name_ja") and jp.get("side") == "home"
+                              for jp in (m.get("japanese_players") or []))
             extra_cls = " hidden-extra" if idx >= 10 else ""
 
             date_display = ""
@@ -1196,6 +1202,7 @@ def build_player_page_en(player: dict, slug: str, scorer_stats: dict,
 
   <footer class="site-footer">
     <p>Data: <a href="https://www.football-data.org/" target="_blank" rel="noopener">Football-Data.org</a></p>
+    <p class="oldb-credit">2. Bundesliga fixtures &amp; results: <a href="https://www.openligadb.de/" target="_blank" rel="noopener">OpenLigaDB</a> (www.openligadb.de), licensed under <a href="https://opendatacommons.org/licenses/odbl/1-0/" target="_blank" rel="noopener">ODbL 1.0</a></p>
     <p class="footer-links">
       <a href="/en/">football-jp (English)</a> |
       <a href="/en/players/">Players</a> |
@@ -1241,6 +1248,103 @@ function trackAffClick(el) {{
 # ============================
 # メイン処理
 # ============================
+# ============================
+# English players list (/en/players/index.html)
+# ============================
+# 2026-10-22: この一覧は 2026-05 の手書きのまま更新されておらず、ページの無い選手（帰国・移籍済み）や
+# 古い英語名（daiki-sekine 等）へのリンクが残っていた。選手ページと同じ players.json・slug から
+# カード部分を毎回作り直す（ページの見た目・絞り込みの仕組みはそのまま）。
+EN_INDEX_PATH = OUTPUT_DIR / "index.html"
+EN_INDEX_START = '<div style="max-width: 900px; margin: 0 auto;">'
+EN_INDEX_END = '  <footer class="site-footer">'
+EN_STATIC_COUNT_PAGES = ["en/index.html", "en/clubs/index.html", "en/calendar/index.html",
+                         "en/standings/index.html", "en/results/index.html"]
+EN_LEAGUE_ORDER = [
+    "Premier League", "Championship", "Bundesliga", "2. Bundesliga", "La Liga",
+    "Serie A", "Ligue 1", "Ligue 2", "Eredivisie", "Primeira Liga", "Jupiler Pro League",
+]
+
+
+def _en_pos_category(pos: str) -> str:
+    p = (pos or "").upper()
+    if "GK" in p:
+        return "GK"
+    if p.startswith("DF") or p.endswith("DF"):
+        return "DF"
+    if p.startswith("FW") or p.endswith("FW"):
+        return "FW"
+    if "MF" in p:
+        return "MF"
+    return "MF"
+
+
+def update_en_players_index(players: list, slug_map: dict) -> None:
+    if not EN_INDEX_PATH.exists():
+        print("  [WARN] en/players/index.html not found; skip list update")
+        return
+    text = EN_INDEX_PATH.read_text(encoding="utf-8")
+    i = text.find(EN_INDEX_START)
+    j = text.find(EN_INDEX_END, i + 1)
+    if i < 0 or j < 0:
+        print("  [WARN] en/players/index.html markers not found; skip list update")
+        return
+    groups: dict = {}
+    for idx, p in enumerate(players):
+        slug = slug_map.get(idx)
+        if not p.get("name_en") or not slug or not (OUTPUT_DIR / slug / "index.html").exists():
+            continue  # ページの無い選手へはリンクしない
+        league = translate_league(p.get("league_ja", "")) or "Other"
+        groups.setdefault(league, []).append((slug, p))
+    leagues = sorted(groups, key=lambda l: EN_LEAGUE_ORDER.index(l) if l in EN_LEAGUE_ORDER else 99)
+    sections = ""
+    n = 0
+    for league in leagues:
+        cards = ""
+        for slug, p in groups[league]:
+            n += 1
+            pos = _en_pos_category(p.get("position", ""))
+            st = p.get("second_team") or {}
+            club = st.get("team_en") or p.get("club_en", "")
+            cards += f"""
+        <div class="player-card-fav-wrap" data-pos="{esc(pos)}" data-slug="{esc(slug)}">
+          <a class="player-card" href="/en/players/{esc(slug)}/" data-pos="{esc(pos)}">
+          <span class="player-card-flag">🇯🇵</span>
+          <div class="player-card-body">
+            <div class="player-card-name-ja">{esc(p.get('name_ja', ''))}</div>
+            <div class="player-card-name-en">{esc(p.get('name_en', ''))}</div>
+            <div class="player-card-meta">
+              <span class="pos-badge pos-{esc(pos.lower())}">{esc(pos)}</span>
+              <span class="club-name">{esc(club)}</span>
+            </div>
+          </div>
+        </a>
+          <button class="fav-btn" data-slug="{esc(slug)}" onclick="fjFavorites.toggle('{esc(slug)}'); refreshFavBtn(this); applyFavFilter();" title="Add to favorites" aria-label="Favorite"><span class="fav-star">☆</span></button>
+        </div>"""
+        sections += f"""
+      <section class="league-section">
+        <h2 class="league-heading">{esc(league)}</h2>
+        <div class="player-grid">
+{cards}
+        </div>
+      </section>
+"""
+    text = text[:i] + EN_INDEX_START + "\n" + sections + "\n" + text[j:]
+    text = re.sub(r"Japanese Soccer Players Abroad — \d+ Names", f"Japanese Soccer Players Abroad — {n} Names", text)
+    text = re.sub(r"Complete list of \d+ Japanese players", f"Complete list of {n} Japanese players", text)
+    text = re.sub(r"active in overseas leagues — \d+ players", f"active in overseas leagues — {n} players", text)
+    EN_INDEX_PATH.write_text(text, encoding="utf-8")
+    print(f"  ✅ /en/players/index.html → {n} players")
+    for rel in EN_STATIC_COUNT_PAGES:
+        path = REPO_ROOT / rel
+        if not path.exists():
+            continue
+        t = path.read_text(encoding="utf-8")
+        nt = re.sub(r"Japanese Players List \(\d+\)", f"Japanese Players List ({n})", t)
+        if nt != t:
+            path.write_text(nt, encoding="utf-8")
+            print(f"  ✅ /{rel} player count link → {n}")
+
+
 def main():
     print("Loading data...")
     players, matches, matches_dict, scorers_comps, events, standings_comps, player_stats, services, player_info, player_videos = load_data()
@@ -1318,6 +1422,8 @@ def main():
             out_dir.mkdir(parents=True, exist_ok=True)
             (out_dir / "index.html").write_text(html, encoding="utf-8")
             print(f"  ✅ {p.get('name_en')} (returned to Japan) → /en/players/{slug}/")
+
+    update_en_players_index(players, slug_map)
 
     print(f"\nTotal: {len(generated)} English player pages generated")
     return len(generated)

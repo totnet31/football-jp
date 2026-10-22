@@ -186,6 +186,7 @@
       align-items: center;
       justify-content: center;
     }
+    .bc-unconfirmed { font-size: 11px; color: #888; }
     .match-date-day { display: block; font-size: 12px; }
     .match-date-time { display: block; font-size: 11px; color: #555; }
     .venue-badge {
@@ -443,6 +444,31 @@
       border-left: 3px solid #d4af37;
       border-radius: 2px;
     }
+
+    .nw-section { background: #f5f8ff; }
+    .nw-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 12px; }
+    .nw-card { background: #fff; border: 1px solid var(--c-border, #e5e7eb); border-radius: 8px; padding: 12px 14px; min-width: 0; overflow-wrap: anywhere; }
+    .nw-spare { display: none; }
+    .nw-label { font-size: 12px; font-weight: 700; color: var(--c-accent, #0047ab); display: flex; gap: 8px; align-items: center; }
+    .nw-when-rel { background: #0047ab; color: #fff; border-radius: 10px; padding: 0 8px; font-size: 11px; }
+    .nw-when-rel:empty { display: none; }
+    .nw-when { font-size: 18px; font-weight: 700; margin-top: 4px; }
+    .nw-jst { font-size: 11px; font-weight: 400; color: #666; margin-left: 2px; }
+    .nw-match { font-size: 15px; font-weight: 700; margin-top: 2px; }
+    .nw-venue { font-size: 11px; font-weight: 400; color: #666; margin-left: 6px; }
+    .nw-comp { font-size: 12px; color: #555; margin-top: 2px; }
+    .nw-watch-h { font-size: 12px; font-weight: 700; margin: 10px 0 6px; padding-top: 8px; border-top: 1px dashed var(--c-border, #e5e7eb); }
+    .nw-card-league .nw-watch-h { border-top: none; padding-top: 0; margin-top: 0; }
+    .nw-svc { margin-bottom: 10px; }
+    .nw-svc-name { font-weight: 700; font-size: 14px; }
+    .nw-scope, .nw-price { font-size: 12px; color: #444; margin: 2px 0; line-height: 1.5; }
+    .nw-src { font-size: 11px; color: #888; margin: 2px 0; }
+    .nw-link { display: inline-block; margin-top: 4px; padding: 6px 12px; border-radius: 6px; background: var(--c-accent, #0047ab); color: #fff; font-size: 13px; font-weight: 700; text-decoration: none; }
+    .nw-more { font-size: 13px; margin: 6px 0 0; }
+    .nw-more a { color: var(--c-accent, #0047ab); }
+    .nw-unconfirmed { font-size: 13px; color: #555; margin: 0; }
+    .nw-none { font-size: 13px; color: #444; margin: 0 0 10px; }
+    .nw-note { font-size: 11px; color: #888; margin: 10px 0 0; line-height: 1.5; }
     @media (max-width: 600px) {
       .stats-grid { grid-template-columns: repeat(2, 1fr); }
       .match-header, .match-row {
@@ -501,6 +527,11 @@
 <div style="max-width: 860px; margin: 0 auto;">
 
   
+    <section class="player-section nw-section" id="next-watch">
+      <h3>📺 市原吏音の次の試合・どこで見れる</h3>
+      <div class="nw-cards"><div class="nw-card" data-ko="2026-10-23T01:45:00+09:00"><div class="nw-label"><span class="nw-label-text">次の試合</span><span class="nw-when-rel"></span></div><div class="nw-when">10月23日（金）01:45<span class="nw-jst">（日本時間）</span></div><div class="nw-match">vs アララト・アルメニア<span class="nw-venue">アウェイ</span></div><div class="nw-comp">UEFAヨーロッパリーグ</div><div class="nw-watch-h">日本で見られるところ</div><div class="nw-svc"><div class="nw-svc-name">WOWOW</div><p class="nw-scope">ヨーロッパリーグをリーグフェーズから決勝まで全試合配信。チャンピオンズリーグ（予選プレーオフ〜決勝の全試合）とカンファレンスリーグ（リーグフェーズ〜決勝の注目試合）も同じ料金で見られます。</p><p class="nw-price">料金：月額2,530円（税込）、またはCL・ELシーズンパス12,100円（税込・販売は2026年10月31日23:59まで・2027年6月30日まで視聴可）</p><p class="nw-src">公式ページで確認：2026-10-21</p><a class="nw-link" href="https://droog.tokyo/link.php?i=phejoijtz4o2&amp;m=mhotmxg90s1l" target="_blank" rel="sponsored nofollow noopener" data-svc="WOWOW" data-pagetype="player_next_watch" data-pageid="rion-ichihara" onclick="trackAffClick(this)">WOWOWの公式ページへ</a></div><div class="nw-svc"><div class="nw-svc-name">Lemino（Leminoプレミアム）</div><p class="nw-scope">2026年10月から決勝まで、ヨーロッパリーグの全試合を配信。ただしリーグフェーズの一部の試合は見逃し配信（あとから見る形）のみです。</p><p class="nw-price">料金：Leminoプレミアム：月額1,540円（税込・Web/ドコモショップで申し込み）。App Store・Google Playからは月額1,650円（税込）</p><p class="nw-src">公式ページで確認：2026-10-21</p><a class="nw-link" href="https://lemino.docomo.ne.jp/leminonews/articles/uefa-europa-league-schedule-2026-27" target="_blank" rel="nofollow noopener" data-svc="Lemino（Leminoプレミアム）" data-pagetype="player_next_watch" data-pageid="rion-ichihara" onclick="trackAffClick(this)">Lemino（Leminoプレミアム）の公式ページへ</a></div><p class="nw-more"><a href="/column/broadcast-guide-2025-26/">海外サッカーの見方まとめ（2026-27版） →</a></p></div><div class="nw-card" data-ko="2026-10-26T04:00:00+09:00"><div class="nw-label"><span class="nw-label-text">その次の試合</span><span class="nw-when-rel"></span></div><div class="nw-when">10月26日（月）04:00<span class="nw-jst">（日本時間）</span></div><div class="nw-match">vs トゥエンテ<span class="nw-venue">ホーム</span></div><div class="nw-comp">エールディビジ</div><div class="nw-watch-h">日本で見られるところ</div><div class="nw-svc"><div class="nw-svc-name">U-NEXT サッカーパック</div><p class="nw-scope">エールディヴィジ（オランダ1部）をライブ配信（見逃し配信あり。全試合かどうかは公式ページに書かれていません）。プレミアリーグ・ラ・リーガも同じパックで見られます。</p><p class="nw-price">料金：月額2,600円（税込）</p><p class="nw-src">公式ページで確認：2026-10-22</p><a class="nw-link" href="https://www.video.unext.jp/lp/football_pack" target="_blank" rel="nofollow noopener" data-svc="U-NEXT サッカーパック" data-pagetype="player_next_watch" data-pageid="rion-ichihara" onclick="trackAffClick(this)">U-NEXT サッカーパックの公式ページへ</a></div><p class="nw-more"><a href="/column/eredivisie-how-to-watch-2026-27/">エールディビジの見方 2026-27（U-NEXTの料金・初月1,400円の入り方） →</a></p></div><div class="nw-card nw-spare" data-ko="2026-11-01T05:00:00+09:00"><div class="nw-label"><span class="nw-label-text">その次の試合</span><span class="nw-when-rel"></span></div><div class="nw-when">11月1日（日）05:00<span class="nw-jst">（日本時間）</span></div><div class="nw-match">vs アヤックス<span class="nw-venue">アウェイ</span></div><div class="nw-comp">エールディビジ</div><div class="nw-watch-h">日本で見られるところ</div><div class="nw-svc"><div class="nw-svc-name">U-NEXT サッカーパック</div><p class="nw-scope">エールディヴィジ（オランダ1部）をライブ配信（見逃し配信あり。全試合かどうかは公式ページに書かれていません）。プレミアリーグ・ラ・リーガも同じパックで見られます。</p><p class="nw-price">料金：月額2,600円（税込）</p><p class="nw-src">公式ページで確認：2026-10-22</p><a class="nw-link" href="https://www.video.unext.jp/lp/football_pack" target="_blank" rel="nofollow noopener" data-svc="U-NEXT サッカーパック" data-pagetype="player_next_watch" data-pageid="rion-ichihara" onclick="trackAffClick(this)">U-NEXT サッカーパックの公式ページへ</a></div><p class="nw-more"><a href="/column/eredivisie-how-to-watch-2026-27/">エールディビジの見方 2026-27（U-NEXTの料金・初月1,400円の入り方） →</a></p></div><p class="nw-none nw-none-js" hidden>次の試合の日程は、まだこのサイトに入っていません。日程が出たら、1日3回の自動更新でここに載ります。</p></div>
+      <p class="nw-note">リーグ戦と欧州の大会（CL・EL・ECL）の日程から出しています。国内のカップ戦などは入っていないことがあります。配信先は大会ごとの案内で、その試合を必ず中継するとは限りません。</p>
+    </section>
     <section class="player-section">
       <h3>👤 プロフィール <a href="https://en.wikipedia.org/wiki/Rion_Ichihara" target="_blank" rel="noopener" style="font-size:11px;color:#888;">Wikipedia →</a></h3>
       <table class="profile-table">
@@ -540,7 +571,7 @@
             <div class="match-venue"><span class="venue-badge venue-away">A</span></div>
             <div class="match-opponent">vs ベンフィカ</div>
             <div class="match-result">—</div>
-            <div class="match-broadcast"><a class="bc-tag bc-wowow" href="https://droog.tokyo/link.php?i=phejoijtz4o2&amp;m=mhotmxg90s1l&amp;utm_source=football-jp&amp;utm_medium=player_page&amp;utm_content=rion-ichihara&amp;utm_campaign=UEFA%E3%83%A8%E3%83%BC%E3%83%AD%E3%83%83%E3%83%91%E3%83%AA%E3%83%BC%E3%82%B0" target="_blank" rel="noopener" data-svc="WOWOW" data-pagetype="player" data-pageid="rion-ichihara" onclick="trackAffClick(this)"><img class="bc-logo" src="/assets/broadcasters/wowow.png" alt="" width="16" height="16">WOWOW</a></div>
+            <div class="match-broadcast"><a class="bc-tag bc-wowow" href="https://droog.tokyo/link.php?i=phejoijtz4o2&amp;m=mhotmxg90s1l" target="_blank" rel="sponsored nofollow noopener" title="WOWOW" data-svc="WOWOW" data-pagetype="player_table" data-pageid="rion-ichihara" onclick="trackAffClick(this)"><img class="bc-logo" src="/assets/broadcasters/wowow.png" alt="" width="16" height="16">WOWOW</a> <a class="bc-tag bc-lemino" href="https://lemino.docomo.ne.jp/leminonews/articles/uefa-europa-league-schedule-2026-27" target="_blank" rel="nofollow noopener" title="Lemino（Leminoプレミアム）" data-svc="Lemino" data-pagetype="player_table" data-pageid="rion-ichihara" onclick="trackAffClick(this)"><img class="bc-logo" src="/assets/broadcasters/lemino.png" alt="" width="16" height="16">Lemino</a></div>
             <div class="match-comp">UEFAヨーロッパリーグ</div>
           </div>
           <div class="match-row scheduled">
@@ -548,7 +579,7 @@
             <div class="match-venue"><span class="venue-badge venue-home">H</span></div>
             <div class="match-opponent">vs ディナモ・ザグレブ</div>
             <div class="match-result">—</div>
-            <div class="match-broadcast"><a class="bc-tag bc-wowow" href="https://droog.tokyo/link.php?i=phejoijtz4o2&amp;m=mhotmxg90s1l&amp;utm_source=football-jp&amp;utm_medium=player_page&amp;utm_content=rion-ichihara&amp;utm_campaign=UEFA%E3%83%A8%E3%83%BC%E3%83%AD%E3%83%83%E3%83%91%E3%83%AA%E3%83%BC%E3%82%B0" target="_blank" rel="noopener" data-svc="WOWOW" data-pagetype="player" data-pageid="rion-ichihara" onclick="trackAffClick(this)"><img class="bc-logo" src="/assets/broadcasters/wowow.png" alt="" width="16" height="16">WOWOW</a></div>
+            <div class="match-broadcast"><a class="bc-tag bc-wowow" href="https://droog.tokyo/link.php?i=phejoijtz4o2&amp;m=mhotmxg90s1l" target="_blank" rel="sponsored nofollow noopener" title="WOWOW" data-svc="WOWOW" data-pagetype="player_table" data-pageid="rion-ichihara" onclick="trackAffClick(this)"><img class="bc-logo" src="/assets/broadcasters/wowow.png" alt="" width="16" height="16">WOWOW</a> <a class="bc-tag bc-lemino" href="https://lemino.docomo.ne.jp/leminonews/articles/uefa-europa-league-schedule-2026-27" target="_blank" rel="nofollow noopener" title="Lemino（Leminoプレミアム）" data-svc="Lemino" data-pagetype="player_table" data-pageid="rion-ichihara" onclick="trackAffClick(this)"><img class="bc-logo" src="/assets/broadcasters/lemino.png" alt="" width="16" height="16">Lemino</a></div>
             <div class="match-comp">UEFAヨーロッパリーグ</div>
           </div>
           <div class="match-row scheduled">
@@ -556,7 +587,7 @@
             <div class="match-venue"><span class="venue-badge venue-home">H</span></div>
             <div class="match-opponent">vs シュトゥルム・グラーツ</div>
             <div class="match-result">—</div>
-            <div class="match-broadcast"><a class="bc-tag bc-wowow" href="https://droog.tokyo/link.php?i=phejoijtz4o2&amp;m=mhotmxg90s1l&amp;utm_source=football-jp&amp;utm_medium=player_page&amp;utm_content=rion-ichihara&amp;utm_campaign=UEFA%E3%83%A8%E3%83%BC%E3%83%AD%E3%83%83%E3%83%91%E3%83%AA%E3%83%BC%E3%82%B0" target="_blank" rel="noopener" data-svc="WOWOW" data-pagetype="player" data-pageid="rion-ichihara" onclick="trackAffClick(this)"><img class="bc-logo" src="/assets/broadcasters/wowow.png" alt="" width="16" height="16">WOWOW</a></div>
+            <div class="match-broadcast"><a class="bc-tag bc-wowow" href="https://droog.tokyo/link.php?i=phejoijtz4o2&amp;m=mhotmxg90s1l" target="_blank" rel="sponsored nofollow noopener" title="WOWOW" data-svc="WOWOW" data-pagetype="player_table" data-pageid="rion-ichihara" onclick="trackAffClick(this)"><img class="bc-logo" src="/assets/broadcasters/wowow.png" alt="" width="16" height="16">WOWOW</a> <a class="bc-tag bc-lemino" href="https://lemino.docomo.ne.jp/leminonews/articles/uefa-europa-league-schedule-2026-27" target="_blank" rel="nofollow noopener" title="Lemino（Leminoプレミアム）" data-svc="Lemino" data-pagetype="player_table" data-pageid="rion-ichihara" onclick="trackAffClick(this)"><img class="bc-logo" src="/assets/broadcasters/lemino.png" alt="" width="16" height="16">Lemino</a></div>
             <div class="match-comp">UEFAヨーロッパリーグ</div>
           </div>
           <div class="match-row scheduled">
@@ -564,7 +595,7 @@
             <div class="match-venue"><span class="venue-badge venue-away">A</span></div>
             <div class="match-opponent">vs スパルタ・プラハ</div>
             <div class="match-result">—</div>
-            <div class="match-broadcast"><a class="bc-tag bc-wowow" href="https://droog.tokyo/link.php?i=phejoijtz4o2&amp;m=mhotmxg90s1l&amp;utm_source=football-jp&amp;utm_medium=player_page&amp;utm_content=rion-ichihara&amp;utm_campaign=UEFA%E3%83%A8%E3%83%BC%E3%83%AD%E3%83%83%E3%83%91%E3%83%AA%E3%83%BC%E3%82%B0" target="_blank" rel="noopener" data-svc="WOWOW" data-pagetype="player" data-pageid="rion-ichihara" onclick="trackAffClick(this)"><img class="bc-logo" src="/assets/broadcasters/wowow.png" alt="" width="16" height="16">WOWOW</a></div>
+            <div class="match-broadcast"><a class="bc-tag bc-wowow" href="https://droog.tokyo/link.php?i=phejoijtz4o2&amp;m=mhotmxg90s1l" target="_blank" rel="sponsored nofollow noopener" title="WOWOW" data-svc="WOWOW" data-pagetype="player_table" data-pageid="rion-ichihara" onclick="trackAffClick(this)"><img class="bc-logo" src="/assets/broadcasters/wowow.png" alt="" width="16" height="16">WOWOW</a> <a class="bc-tag bc-lemino" href="https://lemino.docomo.ne.jp/leminonews/articles/uefa-europa-league-schedule-2026-27" target="_blank" rel="nofollow noopener" title="Lemino（Leminoプレミアム）" data-svc="Lemino" data-pagetype="player_table" data-pageid="rion-ichihara" onclick="trackAffClick(this)"><img class="bc-logo" src="/assets/broadcasters/lemino.png" alt="" width="16" height="16">Lemino</a></div>
             <div class="match-comp">UEFAヨーロッパリーグ</div>
           </div>
           <div class="match-row scheduled">
@@ -572,7 +603,7 @@
             <div class="match-venue"><span class="venue-badge venue-home">H</span></div>
             <div class="match-opponent">vs ユヴェントス</div>
             <div class="match-result">—</div>
-            <div class="match-broadcast"><a class="bc-tag bc-wowow" href="https://droog.tokyo/link.php?i=phejoijtz4o2&amp;m=mhotmxg90s1l&amp;utm_source=football-jp&amp;utm_medium=player_page&amp;utm_content=rion-ichihara&amp;utm_campaign=UEFA%E3%83%A8%E3%83%BC%E3%83%AD%E3%83%83%E3%83%91%E3%83%AA%E3%83%BC%E3%82%B0" target="_blank" rel="noopener" data-svc="WOWOW" data-pagetype="player" data-pageid="rion-ichihara" onclick="trackAffClick(this)"><img class="bc-logo" src="/assets/broadcasters/wowow.png" alt="" width="16" height="16">WOWOW</a></div>
+            <div class="match-broadcast"><a class="bc-tag bc-wowow" href="https://droog.tokyo/link.php?i=phejoijtz4o2&amp;m=mhotmxg90s1l" target="_blank" rel="sponsored nofollow noopener" title="WOWOW" data-svc="WOWOW" data-pagetype="player_table" data-pageid="rion-ichihara" onclick="trackAffClick(this)"><img class="bc-logo" src="/assets/broadcasters/wowow.png" alt="" width="16" height="16">WOWOW</a> <a class="bc-tag bc-lemino" href="https://lemino.docomo.ne.jp/leminonews/articles/uefa-europa-league-schedule-2026-27" target="_blank" rel="nofollow noopener" title="Lemino（Leminoプレミアム）" data-svc="Lemino" data-pagetype="player_table" data-pageid="rion-ichihara" onclick="trackAffClick(this)"><img class="bc-logo" src="/assets/broadcasters/lemino.png" alt="" width="16" height="16">Lemino</a></div>
             <div class="match-comp">UEFAヨーロッパリーグ</div>
           </div>
           <div class="match-row scheduled">
@@ -580,7 +611,7 @@
             <div class="match-venue"><span class="venue-badge venue-away">A</span></div>
             <div class="match-opponent">vs アヤックス</div>
             <div class="match-result">—</div>
-            <div class="match-broadcast"><a class="bc-tag bc-unext" href="https://video.unext.jp/?utm_source=football-jp&amp;utm_medium=player_page&amp;utm_content=rion-ichihara&amp;utm_campaign=%E3%82%A8%E3%83%BC%E3%83%AB%E3%83%87%E3%82%A3%E3%83%93%E3%82%B8" target="_blank" rel="noopener" data-svc="U-NEXT" data-pagetype="player" data-pageid="rion-ichihara" onclick="trackAffClick(this)"><img class="bc-logo" src="/assets/broadcasters/unext.png" alt="" width="16" height="16">U-NEXT</a></div>
+            <div class="match-broadcast"><a class="bc-tag bc-unext" href="https://www.video.unext.jp/lp/football_pack" target="_blank" rel="nofollow noopener" title="U-NEXT サッカーパック" data-svc="U-NEXT" data-pagetype="player_table" data-pageid="rion-ichihara" onclick="trackAffClick(this)"><img class="bc-logo" src="/assets/broadcasters/unext.png" alt="" width="16" height="16">U-NEXT</a></div>
             <div class="match-comp">エールディビジ</div>
           </div>
           <div class="match-row scheduled">
@@ -588,7 +619,7 @@
             <div class="match-venue"><span class="venue-badge venue-home">H</span></div>
             <div class="match-opponent">vs トゥエンテ</div>
             <div class="match-result">—</div>
-            <div class="match-broadcast"><a class="bc-tag bc-unext" href="https://video.unext.jp/?utm_source=football-jp&amp;utm_medium=player_page&amp;utm_content=rion-ichihara&amp;utm_campaign=%E3%82%A8%E3%83%BC%E3%83%AB%E3%83%87%E3%82%A3%E3%83%93%E3%82%B8" target="_blank" rel="noopener" data-svc="U-NEXT" data-pagetype="player" data-pageid="rion-ichihara" onclick="trackAffClick(this)"><img class="bc-logo" src="/assets/broadcasters/unext.png" alt="" width="16" height="16">U-NEXT</a></div>
+            <div class="match-broadcast"><a class="bc-tag bc-unext" href="https://www.video.unext.jp/lp/football_pack" target="_blank" rel="nofollow noopener" title="U-NEXT サッカーパック" data-svc="U-NEXT" data-pagetype="player_table" data-pageid="rion-ichihara" onclick="trackAffClick(this)"><img class="bc-logo" src="/assets/broadcasters/unext.png" alt="" width="16" height="16">U-NEXT</a></div>
             <div class="match-comp">エールディビジ</div>
           </div>
           <div class="match-row scheduled">
@@ -596,7 +627,7 @@
             <div class="match-venue"><span class="venue-badge venue-away">A</span></div>
             <div class="match-opponent">vs アララト・アルメニア</div>
             <div class="match-result">—</div>
-            <div class="match-broadcast"><a class="bc-tag bc-wowow" href="https://droog.tokyo/link.php?i=phejoijtz4o2&amp;m=mhotmxg90s1l&amp;utm_source=football-jp&amp;utm_medium=player_page&amp;utm_content=rion-ichihara&amp;utm_campaign=UEFA%E3%83%A8%E3%83%BC%E3%83%AD%E3%83%83%E3%83%91%E3%83%AA%E3%83%BC%E3%82%B0" target="_blank" rel="noopener" data-svc="WOWOW" data-pagetype="player" data-pageid="rion-ichihara" onclick="trackAffClick(this)"><img class="bc-logo" src="/assets/broadcasters/wowow.png" alt="" width="16" height="16">WOWOW</a></div>
+            <div class="match-broadcast"><a class="bc-tag bc-wowow" href="https://droog.tokyo/link.php?i=phejoijtz4o2&amp;m=mhotmxg90s1l" target="_blank" rel="sponsored nofollow noopener" title="WOWOW" data-svc="WOWOW" data-pagetype="player_table" data-pageid="rion-ichihara" onclick="trackAffClick(this)"><img class="bc-logo" src="/assets/broadcasters/wowow.png" alt="" width="16" height="16">WOWOW</a> <a class="bc-tag bc-lemino" href="https://lemino.docomo.ne.jp/leminonews/articles/uefa-europa-league-schedule-2026-27" target="_blank" rel="nofollow noopener" title="Lemino（Leminoプレミアム）" data-svc="Lemino" data-pagetype="player_table" data-pageid="rion-ichihara" onclick="trackAffClick(this)"><img class="bc-logo" src="/assets/broadcasters/lemino.png" alt="" width="16" height="16">Lemino</a></div>
             <div class="match-comp">UEFAヨーロッパリーグ</div>
           </div>
           <div class="match-row">
@@ -857,6 +888,7 @@
 
   <footer class="site-footer">
     <p>データ提供: <a href="https://www.football-data.org/" target="_blank" rel="noopener">Football-Data.org</a></p>
+    <p class="oldb-credit">ブンデスリーガ2部の日程・結果: <a href="https://www.openligadb.de/" target="_blank" rel="noopener">OpenLigaDB</a>（www.openligadb.de）、<a href="https://opendatacommons.org/licenses/odbl/1-0/" target="_blank" rel="noopener">ODbL 1.0</a> で提供</p>
     <p class="footer-links">
       <a href="/">football-jp トップへ</a> |
       <a href="/players/">選手一覧</a> |
@@ -867,6 +899,34 @@
 </div>
 
 <script>
+
+(function() {
+  var sec = document.getElementById('next-watch');
+  if (!sec) return;
+  var now = Date.now();
+  var cards = Array.prototype.slice.call(sec.querySelectorAll('.nw-card[data-ko]'));
+  var shown = 0;
+  cards.forEach(function(c) {
+    var ko = Date.parse(c.getAttribute('data-ko'));
+    if (isNaN(ko)) return;
+    if (now > ko + 2 * 3600 * 1000) { c.style.display = 'none'; return; }
+    if (shown >= 2) { c.style.display = 'none'; return; }
+    c.style.display = 'block';
+    var lt = c.querySelector('.nw-label-text');
+    if (lt) lt.textContent = shown === 0 ? '次の試合' : 'その次の試合';
+    shown++;
+    var rel = c.querySelector('.nw-when-rel');
+    if (!rel) return;
+    if (now >= ko) { rel.textContent = '試合中'; return; }
+    var j = function(t) { var d = new Date(t + 9 * 3600 * 1000); return Date.UTC(d.getUTCFullYear(), d.getUTCMonth(), d.getUTCDate()); };
+    var days = Math.round((j(ko) - j(now)) / 86400000);
+    rel.textContent = days === 0 ? '今日' : (days === 1 ? '明日' : 'あと' + days + '日');
+  });
+  if (cards.length && shown === 0) {
+    var n = sec.querySelector('.nw-none-js');
+    if (n) n.hidden = false;
+  }
+})();
 function toggleMoreMatches(btn) {
   var list = btn.previousElementSibling;
   list.querySelectorAll('.hidden-extra').forEach(function(r) {
