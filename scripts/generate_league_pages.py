@@ -748,6 +748,31 @@ def build_standings_html(standings_comps: dict, comp_id: int, jp_club_ids: set, 
 # ============================
 # 試合カード生成
 # ============================
+from watch_source import build_watch_cell, affiliate_for  # 配信の取り出し方（共通・2026-10-22）
+
+_GUIDES_CACHE = None
+WATCH_STATS = {"affiliate_links": 0, "unconfirmed_cards": 0}
+
+
+def _guides_cached() -> dict:
+    global _GUIDES_CACHE
+    if _GUIDES_CACHE is None:
+        _GUIDES_CACHE = load_league_guides()
+    return _GUIDES_CACHE
+
+
+def match_watch_html(m: dict, services: dict, page_id: str, is_result: bool, unconfirmed_label: str = "確認中") -> str:
+    """試合カードの配信バッジ。結果（終わった試合）で欄が無いときは何も出さない。"""
+    html, n_aff = build_watch_cell(_guides_cached(), services or {}, m.get("competition_id"),
+                                   m.get("competition_ja", ""), "league", page_id, unconfirmed_label)
+    unconfirmed = "bc-unconfirmed" in html
+    if unconfirmed and is_result:
+        return ""
+    WATCH_STATS["affiliate_links"] += n_aff
+    WATCH_STATS["unconfirmed_cards"] += 1 if unconfirmed else 0
+    return f'<div class="bc-tags">{html}</div>'
+
+
 def build_match_card(m: dict, services: dict, league_slug_str: str, is_result: bool) -> str:
     kickoff = format_kickoff_ja(m.get("kickoff_jst", ""))
     home_ja = m.get("home_ja", "")
@@ -758,7 +783,6 @@ def build_match_card(m: dict, services: dict, league_slug_str: str, is_result: b
     home_score = score.get("home")
     away_score = score.get("away")
     jp_players = m.get("japanese_players", [])
-    broadcasters = m.get("broadcasters", [])
     match_id = str(m.get("id", ""))
 
     # 出場選手バッジ
@@ -773,11 +797,8 @@ def build_match_card(m: dict, services: dict, league_slug_str: str, is_result: b
     if jp_names:
         jp_html = f'<div class="jp-players-row">{"".join(jp_names)}</div>'
 
-    # 配信バッジ
-    bc_html = ""
-    if broadcasters:
-        bc_tags = [build_bc_tag(bc, services, "league", league_slug_str, league_slug_str) for bc in broadcasters]
-        bc_html = f'<div class="bc-tags">{"".join(bc_tags)}</div>'
+    # 配信バッジ（選手ページと同じ情報源＝league_guides.json の欄。欄が無い大会は「確認中」・2026-10-22）
+    bc_html = match_watch_html(m, services, league_slug_str, is_result)
 
     # スコア表示
     if is_result and home_score is not None and away_score is not None:
@@ -1014,7 +1035,7 @@ def build_watch_section(guide: dict, lg_slug: str, bc_services: dict = None) -> 
         parts.append(f'<!--AD-SLOT:{esc(key)}-->')
         href = sv.get("url", "")
         rel = "nofollow noopener"
-        aff = (bc_services.get(sv.get("url_service", "")) or {}).get("affiliate_url") if sv.get("url_service") else None
+        aff = affiliate_for(sv, bc_services)
         if aff:
             href, rel = aff, "sponsored nofollow noopener"
         parts.append(
@@ -1838,6 +1859,7 @@ def main():
     except Exception as e:
         print(f"  [ERROR] リーグ一覧: {e}", file=sys.stderr)
 
+    print(f"  試合カードの配信: 報酬リンク {WATCH_STATS['affiliate_links']}本・確認中 {WATCH_STATS['unconfirmed_cards']}枚")
     print(f"=== 完了: {generated} ファイル生成 ===")
 
 

@@ -14,6 +14,20 @@ import sys
 from collections import defaultdict
 from pathlib import Path
 
+from watch_source import load_league_guides, build_watch_cell  # 配信の取り出し方（共通・2026-10-22）
+
+_GUIDES = None
+
+
+def _guides() -> dict:
+    global _GUIDES
+    if _GUIDES is None:
+        _GUIDES = load_league_guides()
+    return _GUIDES
+
+
+WATCH_STATS = {"affiliate_links": 0, "unconfirmed_rows": 0}
+
 # ============================
 # パス設定
 # ============================
@@ -659,16 +673,12 @@ def build_club_page(club_info: dict, slug: str, standing: dict,
                     opponent = esc(home_ja)
                 venue_cls = "venue-home" if is_home else "venue-away"
                 venue_label = "H" if is_home else "A"
-                broadcasters_list = m.get("broadcasters", [])
+                # 配信は選手ページと同じ情報源（league_guides.json の欄）から。欄が無い大会は「確認中」（2026-10-22）
                 league_ja_m = m.get("competition_ja", club_info.get("league_ja", ""))
-                bc_tags = ""
-                if broadcasters_list and services is not None:
-                    tags = [build_bc_tag(b, services, "club", slug, league_ja_m)
-                            for b in broadcasters_list[:2] if b.get("name")]
-                    bc_tags = " ".join(tags)
-                elif broadcasters_list:
-                    bc_names = [b.get("name", "") for b in broadcasters_list[:2] if b.get("name")]
-                    bc_tags = esc(" / ".join(bc_names))
+                bc_tags, _n_aff = build_watch_cell(_guides(), services or {}, m.get("competition_id"),
+                                                   league_ja_m, "club", slug)
+                WATCH_STATS["affiliate_links"] += _n_aff
+                WATCH_STATS["unconfirmed_rows"] += 1 if "bc-unconfirmed" in bc_tags else 0
                 _pending = is_result_pending(m)  # 開始から3時間すぎても予定のまま＝結果待ち
                 match_rows += f"""
           <div class="match-row {'result-pending' if _pending else 'scheduled'}{extra_cls}">
@@ -1069,6 +1079,7 @@ def build_club_page(club_info: dict, slug: str, standing: dict,
     .match-result.lose {{ color: #c0392b; }}
     .match-result.draw {{ color: #666; }}
     .match-result.pending {{ color: #8a6100; font-size: 12px; font-weight: 600; }}
+    .bc-unconfirmed {{ font-size: 11px; color: #888; }}
     .match-broadcast {{
       display: flex;
       flex-wrap: wrap;
@@ -1618,6 +1629,7 @@ def main():
         print(f"  ✅ {club_ja} ({club_en}) → /clubs/{slug}/ ({size:,} bytes)")
 
     print(f"\n合計 {len(generated)} クラブページ生成完了")
+    print(f"  直近の試合の配信の列: 報酬リンク {WATCH_STATS['affiliate_links']}本・確認中 {WATCH_STATS['unconfirmed_rows']}行")
 
     print("\n生成済みslug一覧:")
     for club_ja, club_en, slug, size in generated:

@@ -56,7 +56,6 @@
   let jpPlayerEnMap = new Map(); // name_ja → name_en（英語表示用・苗字のみ）
   let dataRangeFrom = null;
   let dataRangeTo = null;
-  let bcAffiliateMap = new Map();  // broadcaster名 → affiliate_url（broadcasters.jsonから構築）
   const enabledLeagues = new Set();
   // ビューはURL（=ページ）で決まる。body[data-view] を優先、無ければレガシーlocalStorageを参照
   let currentView = document.body.dataset.view || localStorage.getItem('view') || 'schedule';
@@ -114,21 +113,16 @@
 
   async function loadAll() {
     try {
-      const [m, s, sc, players, evts, news, bcs] = await Promise.all([
+      const [m, s, sc, players, evts, news] = await Promise.all([
         fetchJson('/data/matches.json'),
         fetchJson('/data/standings.json').catch(() => null),
         fetchJson('/data/scorers.json').catch(() => null),
         fetchJson('/data/players.json').catch(() => null),
         fetchJson('/data/match_events.json').catch(() => null),
         fetchJson('/data/news.json').catch(() => null),
-        fetchJson('/data/broadcasters.json').catch(() => null),
       ]);
-      // broadcasters.json の services 内 affiliate_url を名前→URL マップに保存
-      if (bcs && bcs.services) {
-        for (const [name, info] of Object.entries(bcs.services)) {
-          if (info && info.affiliate_url) bcAffiliateMap.set(name, info.affiliate_url);
-        }
-      }
+      // 配信先は matches.json の broadcasters（scripts/watch_source.py が league_guides.json の欄から入れたもの）だけを使う。
+      // 報酬リンクは各配信の affiliate_url があるときだけ（サービス名で一律に付けない・2026-10-22）
       renderNews(news);
       allMatches = m.matches || [];
       normalizeUnplayedFinished(allMatches);
@@ -507,22 +501,7 @@
       primaryTags.push(`<span class="status-tag">${escape(stageLabel(m.stage))}</span>`);
     }
 
-    const broadcasterTags = [];
-    if (m.broadcasters && m.broadcasters.length > 0) {
-      for (const b of m.broadcasters) {
-        const brandCls = bcBrandClass(b.name);
-        const logoFile = bcLogoFile(b.name);
-        const logoHtml = logoFile
-          ? `<img class="bc-logo" src="/assets/broadcasters/${logoFile}" alt="" width="16" height="16" loading="lazy">`
-          : `<span class="bc-play">▶</span>`;
-        const linkUrl = bcAffiliateMap.get(b.name) || b.url;
-        if (linkUrl) {
-          broadcasterTags.push(`<a class="bc-tag ${brandCls}" href="${escape(linkUrl)}" target="_blank" rel="noopener">${logoHtml}${escape(b.name)}</a>`);
-        } else {
-          broadcasterTags.push(`<span class="bc-tag ${brandCls}">${logoHtml}${escape(b.name)}</span>`);
-        }
-      }
-    }
+    const broadcasterTags = broadcasterTagList(m, !finished, true);
 
     const cls = ['match'];
     if (isToday) cls.push('today');
@@ -562,6 +541,35 @@
         ${broadcasterTags.length ? `<div class="tags-row broadcasters">${broadcasterTags.join('')}</div>` : ''}
       </div>
     </div>`;
+  }
+
+  // 配信のタグ（試合カード・試合の詳しい窓で共通）。
+  // b.affiliate_url があるときだけ報酬リンク（rel=sponsored）。無ければ公式ページへのふつうのリンク。
+  // 配信が空（league_guides.json に欄が無い大会）で、まだ終わっていない試合は「確認中」。
+  function broadcasterTagList(m, showUnconfirmed, lazy) {
+    // source が league_guides のものだけ（古い 4/29 時点の配信が残ったデータは出さない＝確認中）
+    const list = (Array.isArray(m.broadcasters) ? m.broadcasters : []).filter(b => b && b.source === 'league_guides');
+    const tags = [];
+    for (const b of list) {
+      if (!b || !b.name) continue;
+      const brandCls = bcBrandClass(b.name);
+      const logoFile = bcLogoFile(b.name);
+      const logoHtml = logoFile
+        ? `<img class="bc-logo" src="/assets/broadcasters/${logoFile}" alt="" width="16" height="16"${lazy ? ' loading="lazy"' : ''}>`
+        : `<span class="bc-play">▶</span>`;
+      const title = b.label ? ` title="${escape(b.label)}"` : '';
+      const linkUrl = b.affiliate_url || b.url;
+      const rel = b.affiliate_url ? 'sponsored nofollow noopener' : 'nofollow noopener';
+      if (linkUrl) {
+        tags.push(`<a class="bc-tag ${brandCls}" href="${escape(linkUrl)}" target="_blank" rel="${rel}"${title}>${logoHtml}${escape(b.name)}</a>`);
+      } else {
+        tags.push(`<span class="bc-tag ${brandCls}"${title}>${logoHtml}${escape(b.name)}</span>`);
+      }
+    }
+    if (!tags.length && showUnconfirmed) {
+      tags.push(`<span class="bc-unconfirmed">${L('配信：確認中', 'Broadcast: TBC')}</span>`);
+    }
+    return tags;
   }
 
   function bcBrandClass(name) {
@@ -952,15 +960,7 @@
     const homeGoals = events.filter(e => e.type === 'goal' && e.side === 'home').sort((a,b) => a.minute - b.minute);
     const awayGoals = events.filter(e => e.type === 'goal' && e.side === 'away').sort((a,b) => a.minute - b.minute);
 
-    const bcs = (m.broadcasters || []).map(b => {
-      const cls = bcBrandClass(b.name);
-      const lf = bcLogoFile(b.name);
-      const logo = lf ? `<img class="bc-logo" src="/assets/broadcasters/${lf}" alt="" width="16" height="16">` : '<span class="bc-play">▶</span>';
-      const linkUrl = bcAffiliateMap.get(b.name) || b.url;
-      return linkUrl
-        ? `<a class="bc-tag ${cls}" href="${escape(linkUrl)}" target="_blank" rel="noopener">${logo}${escape(b.name)}</a>`
-        : `<span class="bc-tag ${cls}">${logo}${escape(b.name)}</span>`;
-    }).join('');
+    const bcs = broadcasterTagList(m, m.status !== 'FINISHED', false).join('');
 
     const highlights = (m.highlights || []).filter(h => h.url || h.video_id);
     const highlightHtml = highlights.length
