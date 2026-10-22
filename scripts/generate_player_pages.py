@@ -157,6 +157,28 @@ def get_upcoming_matches(club_matches: list, now=None) -> list:
     return out
 
 
+def _jp_side(m: dict, name_ja: str):
+    """試合の japanese_players に選手の名前があれば、その side（"home"/"away"）を返す。無ければ None。"""
+    for jp in m.get("japanese_players") or []:
+        if jp.get("name_ja") == name_ja:
+            return jp.get("side")
+    return None
+
+
+def get_next_watch_matches(player: dict, matches: list, club_matches: list) -> list:
+    """「次の試合」欄の候補の試合。
+    クラブ番号（club_id）がある選手は、これまでどおりクラブの全試合から選ぶ。
+    クラブ番号が無い選手（ベルギー1部・ブンデス2部など、football-data.org に無いクラブ）は、
+    試合データの「出場する日本人選手」（japanese_players）に名前が入っている試合から選ぶ
+    （EL・ECL の試合は fetch_uefa_secondary.py がクラブ名で選手を付けている。1日3回の自動更新で付け直される）。2026-10-22"""
+    if player.get("club_id"):
+        return club_matches
+    name_ja = player.get("name_ja", "")
+    if not name_ja:
+        return []
+    return [m for m in matches if _jp_side(m, name_ja) in ("home", "away")]
+
+
 def _watch_services_html(watch: dict, bc_services: dict, slug: str) -> tuple:
     """配信先のカード。返り値：(html, 報酬リンクが付いたか)"""
     has_aff = False
@@ -210,7 +232,10 @@ def build_next_watch_section(player: dict, slug: str, upcoming: list, guides: di
     info = {"has_match": False, "unconfirmed": False, "affiliate": False}
     cards = []
     for i, (dt, m) in enumerate(upcoming[:NEXT_WATCH_SHOW + NEXT_WATCH_SPARE]):
-        is_home = m.get("home_id") == club_id
+        if club_id:
+            is_home = m.get("home_id") == club_id
+        else:
+            is_home = _jp_side(m, name_ja) == "home"
         opp = m.get("away_ja", "") if is_home else m.get("home_ja", "")
         venue = "ホーム" if is_home else "アウェイ"
         comp = m.get("competition_ja", "")
@@ -2117,7 +2142,7 @@ def main():
         next_watch_html = ""
         if not is_second_team(player):
             next_watch_html, nw_info = build_next_watch_section(
-                player, slug, get_upcoming_matches(club_matches), guides, services)
+                player, slug, get_upcoming_matches(get_next_watch_matches(player, matches, club_matches)), guides, services)
             nw_counts["pages"] += 1
             nw_counts["has_match" if nw_info["has_match"] else "no_match"] += 1
             if nw_info["unconfirmed"]:
