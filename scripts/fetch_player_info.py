@@ -11,6 +11,7 @@ _ja サフィックス付きフィールドに日本語情報を追加する。
 import json
 import re
 import time
+import unicodedata
 import urllib.request
 import urllib.parse
 from pathlib import Path
@@ -375,28 +376,96 @@ def wiki_api_get(params, base_url=None):
         return json.loads(resp.read().decode("utf-8"))
 
 
-def search_wiki_title(name_en):
+def _norm_latin(s):
+    # type: (str) -> str
+    """アクセント記号を外して小文字に（Ryōya → ryoya）。"""
+    s = unicodedata.normalize("NFKD", s or "")
+    return "".join(c for c in s if not unicodedata.combining(c)).lower().replace("_", " ")
+
+
+def _norm_ja(s):
+    # type: (str) -> str
+    """日本語名の比較用（括弧の曖昧さ回避・空白・中黒を外す）。"""
+    s = re.sub(r"\s*[（(].*?[)）]\s*$", "", s or "")
+    return re.sub(r"[\s　・･]", "", s)
+
+
+def _ja_langlink(title):
+    # type: (str) -> str
+    """英語版記事の日本語版タイトル（無ければ空文字）。"""
+    try:
+        data = wiki_api_get({"action": "query", "titles": title, "prop": "langlinks",
+                             "lllang": "ja", "redirects": 1})
+        for page in data.get("query", {}).get("pages", {}).values():
+            for ll in page.get("langlinks", []):
+                return ll.get("*", "")
+    except Exception as e:
+        print("    langlink error: {}".format(e))
+    return ""
+
+
+def _en_title_from_ja(name_ja):
     # type: (str) -> Optional[str]
-    """選手名でWikipedia記事タイトルを検索する。"""
-    data = wiki_api_get({
-        "action": "query",
-        "list": "search",
-        "srsearch": "{} footballer".format(name_en),
-        "srlimit": 3,
-    })
-    results = data.get("query", {}).get("search", [])
-    if results:
-        return results[0]["title"]
-    # フォールバック: footballer なしで再検索
-    data2 = wiki_api_get({
-        "action": "query",
-        "list": "search",
-        "srsearch": name_en,
-        "srlimit": 3,
-    })
-    results2 = data2.get("query", {}).get("search", [])
-    if results2:
-        return results2[0]["title"]
+    """日本語版の選手記事から英語版記事のタイトルをたどる（無ければ None）。"""
+    if not name_ja:
+        return None
+    # 同名の人がいると日本語版は「名前 (サッカー選手)」になるので、そちらも見る
+    for ja_title in ("{} (サッカー選手)".format(name_ja), name_ja):
+        try:
+            data = wiki_api_get({"action": "query", "titles": ja_title, "prop": "langlinks",
+                                 "lllang": "en", "redirects": 1}, base_url=WIKI_JA_API)
+            for page in data.get("query", {}).get("pages", {}).values():
+                for ll in page.get("langlinks", []):
+                    if ll.get("*"):
+                        return ll["*"]
+        except Exception as e:
+            print("    JA→EN langlink error: {}".format(e))
+    return None
+
+
+def _is_football_article(title):
+    # type: (str) -> bool
+    """サッカー選手の記事か（同名のスキー選手などを弾く）。"""
+    try:
+        wt = get_infobox_wikitext(title)
+    except Exception as e:
+        print("    wikitext error: {}".format(e))
+        return False
+    return bool(re.search(r'\{\{\s*[Ii]nfobox\s+football\s+biograph', wt))
+
+
+def _is_player_article(title, name_en, name_ja):
+    # type: (str, str, str) -> bool
+    """検索で出た記事がその選手本人の記事か。
+    クラブ・シーズン・同姓の別人の記事（例：Ken Masui → KV Kortrijk）を弾く。
+    名前（ローマ字）が全部タイトルに入っている、または日本語版の記事名が一致すれば本人とみなす。"""
+    t = _norm_latin(title)
+    tokens = _norm_latin(name_en).split()
+    name_ok = bool(tokens) and all(tok in t for tok in tokens)
+    if not name_ok and name_ja:
+        ja = _ja_langlink(title)
+        name_ok = bool(ja) and _norm_ja(ja) == _norm_ja(name_ja)
+    return name_ok and _is_football_article(title)
+
+
+def search_wiki_title(name_en, name_ja=""):
+    # type: (str, str) -> Optional[str]
+    """選手名でWikipedia記事タイトルを検索する。
+    本人の記事と確かめられたものだけ返す（見つからなければ None）。"""
+    for query in ("{} footballer".format(name_en), name_en):
+        data = wiki_api_get({
+            "action": "query",
+            "list": "search",
+            "srsearch": query,
+            "srlimit": 3,
+        })
+        for r in data.get("query", {}).get("search", []):
+            if _is_player_article(r["title"], name_en, name_ja):
+                return r["title"]
+    # フォールバック: 日本語版の記事から英語版をたどる
+    title = _en_title_from_ja(name_ja)
+    if title and _is_football_article(title):
+        return title
     return None
 
 
@@ -790,9 +859,11 @@ def extract_social_links(wikitext):
     ext_links_m = re.search(r'==\s*External links?\s*==(.+?)(?:==|\Z)', wikitext, re.DOTALL | re.IGNORECASE)
     if ext_links_m:
         ext_section = ext_links_m.group(1)
-        m = re.search(r'\[https?://([\w./-]+)', ext_section)
-        if m:
-            links["official_url"] = "https://" + m.group(1)
+        # URL を最後まで取り、Wayback Machine の保存版は公式サイトとして出さない
+        # （以前は「:」で切れて https://web.archive.org/web/…/http のような壊れたリンクになっていた）
+        m = re.search(r'\[(https?://[^\s\]|]+)', ext_section)
+        if m and "archive.org" not in m.group(1):
+            links["official_url"] = m.group(1)
 
     return links
 
@@ -1064,20 +1135,21 @@ def fetch_player_info(name_en, name_ja="", club_translations=None):
     }
 
     # 記事タイトルを検索
-    title = search_wiki_title(name_en)
+    title = search_wiki_title(name_en, name_ja)
+    wikitext = ""
     if not title:
+        # 英語版に本人の記事が無い（クラブ等の記事で代用しない）。日本語版からの取得は続ける
         print("    → Wikipedia記事が見つかりません: {}".format(name_en))
-        return info
+    else:
+        info["wiki_url"] = "https://en.wikipedia.org/wiki/{}".format(
+            urllib.parse.quote(title.replace(' ', '_'))
+        )
+        print("    → {}".format(title))
 
-    info["wiki_url"] = "https://en.wikipedia.org/wiki/{}".format(
-        urllib.parse.quote(title.replace(' ', '_'))
-    )
-    print("    → {}".format(title))
-
-    # wikitext 取得
-    wikitext = get_infobox_wikitext(title)
-    if not wikitext:
-        return info
+        # wikitext 取得
+        wikitext = get_infobox_wikitext(title)
+        if not wikitext:
+            return info
 
     fields = extract_infobox(wikitext)
 
