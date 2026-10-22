@@ -1746,7 +1746,7 @@ def build_index_table(ordered_leagues: list, league_groups: dict, idx: dict, sea
         + "".join(rows) +
         '</tbody></table></div>'
         f'<p class="lg-src">「どこで見られる」は公式ページで確かめた分だけ載せています（「—」はまだ確かめていないもの）。出どころ：{srcs}</p>'
-        '<p><a href="/column/broadcast-guide-2025-26/" class="link-more">海外サッカーの見方まとめ（2025-26版） →</a></p>'
+        '<p><a href="/column/broadcast-guide-2025-26/" class="link-more">海外サッカーの見方まとめ（2026-27版） →</a></p>'
         '</section>'
     )
 
