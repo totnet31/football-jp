@@ -94,6 +94,17 @@ def format_kickoff(kickoff_jst: str) -> str:
         return kickoff_jst[:10]
 
 
+# 英語名を直して住所（slug）が変わった選手（旧 → 新）。_redirects の 301 と同じ組み合わせ
+PLAYER_SLUG_ALIASES = {
+    "yoshito-kamishiro": "keito-kumashiro",
+    "daichi-hara": "taichi-hara",
+    "hiroki-machida": "koki-machida",
+    "ko-watanabe": "tsuyoshi-watanabe",
+    "issei-sakamoto": "isa-sakamoto",
+    "riihito-yamamoto": "rihito-yamamoto",
+}
+
+
 def build_notification_for_subscriber(sub_data, matches_this_week):
     """
     購読者のお気に入りに合致する試合を選定し、通知メッセージを生成する
@@ -110,7 +121,8 @@ def build_notification_for_subscriber(sub_data, matches_this_week):
     Returns:
         (subscription_obj, message_dict) または None（対象なし）
     """
-    favorites      = sub_data.get("favorites", [])
+    # 英語名を直して住所（slug）が変わった選手：購読時に保存された古い slug を新しい slug に読み替える
+    favorites      = [PLAYER_SLUG_ALIASES.get(s, s) for s in sub_data.get("favorites", [])]
     fav_clubs      = sub_data.get("favorite_clubs", [])
     fav_leagues    = sub_data.get("favorite_leagues", [])
 

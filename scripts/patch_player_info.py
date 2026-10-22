@@ -52,7 +52,7 @@ PATCHES = {
             {"years": "2022–", "club": "Sporting CP"},
         ],
     },
-    "Issei Sakamoto": {
+    "Isa Sakamoto": {
         "birth_date": "2003-08-26",
         "birth_place": "Kumamoto, Kumamoto, Japan",
         "birth_place_ja": "熊本県熊本市",
@@ -65,7 +65,7 @@ PATCHES = {
             {"years": "2025–", "club": "KVC Westerlo"},
         ],
     },
-    "Riihito Yamamoto": {
+    "Rihito Yamamoto": {
         "birth_date": "2001-12-12",
         "birth_place": "Sagamihara, Kanagawa, Japan",
         "birth_place_ja": "神奈川県相模原市",
@@ -78,7 +78,7 @@ PATCHES = {
             {"years": "2024–", "club": "Sint-Truiden VV"},
         ],
     },
-    "Ko Watanabe": {
+    "Tsuyoshi Watanabe": {
         "birth_date": "1997-02-05",
         "birth_place": "Saitama, Japan",
         "birth_place_ja": "埼玉県",
@@ -125,7 +125,7 @@ PATCHES = {
             {"years": "2026–", "club": "Eintracht Frankfurt"},
         ],
     },
-    "Daichi Hara": {
+    "Taichi Hara": {
         "birth_date": "1999-05-05",
         "birth_place": "Hino, Tokyo, Japan",
         "birth_place_ja": "東京都日野市",

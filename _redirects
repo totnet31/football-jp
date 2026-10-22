@@ -13,6 +13,33 @@ https://football-jp.pages.dev/* https://football-jp.com/:splat 301
 /en/players/yoshito-kamishiro/  /en/players/keito-kumashiro/  301
 /en/players/yoshito-kamishiro  /en/players/keito-kumashiro/  301
 
+# 選手の英語名の直し（英語版 Wikipedia の本人の記事・2026-10-22）
+# 原大智 Daichi Hara → Taichi Hara
+/players/daichi-hara/  /players/taichi-hara/  301
+/players/daichi-hara  /players/taichi-hara/  301
+/en/players/daichi-hara/  /en/players/taichi-hara/  301
+/en/players/daichi-hara  /en/players/taichi-hara/  301
+# 町田浩樹 Hiroki Machida → Koki Machida
+/players/hiroki-machida/  /players/koki-machida/  301
+/players/hiroki-machida  /players/koki-machida/  301
+/en/players/hiroki-machida/  /en/players/koki-machida/  301
+/en/players/hiroki-machida  /en/players/koki-machida/  301
+# 渡辺剛 Ko Watanabe → Tsuyoshi Watanabe
+/players/ko-watanabe/  /players/tsuyoshi-watanabe/  301
+/players/ko-watanabe  /players/tsuyoshi-watanabe/  301
+/en/players/ko-watanabe/  /en/players/tsuyoshi-watanabe/  301
+/en/players/ko-watanabe  /en/players/tsuyoshi-watanabe/  301
+# 坂本一彩 Issei Sakamoto → Isa Sakamoto
+/players/issei-sakamoto/  /players/isa-sakamoto/  301
+/players/issei-sakamoto  /players/isa-sakamoto/  301
+/en/players/issei-sakamoto/  /en/players/isa-sakamoto/  301
+/en/players/issei-sakamoto  /en/players/isa-sakamoto/  301
+# 山本理仁 Riihito Yamamoto → Rihito Yamamoto
+/players/riihito-yamamoto/  /players/rihito-yamamoto/  301
+/players/riihito-yamamoto  /players/rihito-yamamoto/  301
+/en/players/riihito-yamamoto/  /en/players/rihito-yamamoto/  301
+/en/players/riihito-yamamoto  /en/players/rihito-yamamoto/  301
+
 # [自動生成] /worldcup/country.html?tla=XXX → 静的ページ 301リダイレクト
 /worldcup/country.html?tla=ALG  /worldcup/countries/algeria/  301
 /worldcup/country.html?tla=ARG  /worldcup/countries/argentina/  301
