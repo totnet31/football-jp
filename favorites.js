@@ -3,9 +3,28 @@
 window.fjFavorites = {
   KEY: 'fjPushFavorites',
 
+  // 英語名を直して住所（slug）が変わった選手：保存済みの古い slug を新しい slug に読み替える
+  ALIASES: {
+    'yoshito-kamishiro': 'keito-kumashiro',
+    'daichi-hara': 'taichi-hara',
+    'hiroki-machida': 'koki-machida',
+    'ko-watanabe': 'tsuyoshi-watanabe',
+    'issei-sakamoto': 'isa-sakamoto',
+    'riihito-yamamoto': 'rihito-yamamoto'
+  },
+
   list() {
     try {
-      return JSON.parse(localStorage.getItem(this.KEY) || '[]');
+      const raw = JSON.parse(localStorage.getItem(this.KEY) || '[]');
+      const favs = [];
+      raw.forEach((s) => {
+        const n = this.ALIASES[s] || s;
+        if (!favs.includes(n)) favs.push(n);
+      });
+      if (favs.length !== raw.length || favs.some((s, i) => s !== raw[i])) {
+        localStorage.setItem(this.KEY, JSON.stringify(favs));
+      }
+      return favs;
     } catch { return []; }
   },
 

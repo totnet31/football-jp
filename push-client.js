@@ -6,6 +6,15 @@ const API_BASE = 'https://football-jp-push-api.tot-tools.workers.dev'; // Cloudf
 const STORAGE_KEY         = 'fjPushFavorites';       // 選手 slug 配列（後方互換維持）
 const STORAGE_KEY_CLUBS   = 'fjPushFavoriteClubs';   // クラブ slug 配列（新規）
 const STORAGE_KEY_LEAGUES = 'fjPushFavoriteLeagues'; // リーグ slug 配列（新規）
+// 英語名を直して住所（slug）が変わった選手：保存済みの古い slug を新しい slug に読み替える
+const PLAYER_SLUG_ALIASES = {
+  'yoshito-kamishiro': 'keito-kumashiro',
+  'daichi-hara': 'taichi-hara',
+  'hiroki-machida': 'koki-machida',
+  'ko-watanabe': 'tsuyoshi-watanabe',
+  'issei-sakamoto': 'isa-sakamoto',
+  'riihito-yamamoto': 'rihito-yamamoto'
+};
 const SUB_KEY = 'fjPushSubscribed';
 
 function urlBase64ToUint8Array(base64String) {
@@ -37,7 +46,13 @@ window.fjPush = {
   // 選手お気に入り取得（後方互換）
   getFavorites() {
     try {
-      return JSON.parse(localStorage.getItem(STORAGE_KEY) || '[]');
+      const raw = JSON.parse(localStorage.getItem(STORAGE_KEY) || '[]');
+      const favs = [];
+      raw.forEach((s) => {
+        const n = PLAYER_SLUG_ALIASES[s] || s;
+        if (!favs.includes(n)) favs.push(n);
+      });
+      return favs;
     } catch { return []; }
   },
 
