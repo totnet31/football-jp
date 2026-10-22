@@ -6,7 +6,7 @@ generate_player_pages.py
 使い方: python3 scripts/generate_player_pages.py
 """
 
-from utils import is_result_pending, fix_unplayed_finished
+from utils import is_result_pending, fix_unplayed_finished, openligadb_matches_for_names
 from second_team import is_second_team, page_player, adjust_html as adjust_second_team
 import json
 import os
@@ -562,7 +562,8 @@ def get_club_matches(player: dict, matches: list) -> list:
     """選手所属クラブの全試合を取得する（新しい順）。"""
     club_id = player.get("club_id")
     if not club_id:
-        return []
+        # クラブ番号の無いブンデス2部の選手は、OpenLigaDB の試合を名前で選ぶ（2026-10-22）
+        return [m for m, _side in openligadb_matches_for_names([player.get("name_ja")], matches)]
 
     club_matches = [
         m for m in matches
@@ -809,7 +810,11 @@ def build_player_page(player: dict, slug: str, scorer_stats: dict,
             home_id = m.get("home_id")
             away_id = m.get("away_id")
             club_id = player.get("club_id")
-            is_home = home_id == club_id
+            if club_id:
+                is_home = home_id == club_id
+            else:
+                # クラブ番号の無い選手（ブンデス2部）は、試合データの日本人選手の側で決める
+                is_home = _jp_side(m, player.get("name_ja", "")) == "home"
             extra_cls = " hidden-extra" if idx >= 10 else ""
 
             # 日時表示（yyyy/mm/dd 改行 (曜) HH:MM JST）
