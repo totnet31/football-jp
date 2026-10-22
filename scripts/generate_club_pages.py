@@ -6,7 +6,7 @@ generate_club_pages.py
 使い方: python3 scripts/generate_club_pages.py
 """
 
-from utils import is_result_pending, fix_unplayed_finished
+from utils import is_result_pending, fix_unplayed_finished, openligadb_matches_for_names
 import json
 import os
 import re
@@ -332,11 +332,25 @@ def get_club_standing(club_info: dict, standings_comps: dict) -> dict:
     return {}
 
 
+def _club_player_names(club_info: dict) -> set:
+    return {p.get("name_ja") for p in club_info.get("players", []) if p.get("name_ja")}
+
+
+def _club_side(m: dict, club_info: dict):
+    """クラブ番号の無いクラブの試合で、そのクラブがいる側（試合データの日本人選手の side）。"""
+    names = _club_player_names(club_info)
+    for jp in m.get("japanese_players") or []:
+        if jp.get("name_ja") in names:
+            return jp.get("side")
+    return None
+
+
 def get_club_recent_matches(club_info: dict, matches: list) -> list:
     """クラブの全試合を取得する（新しい順）。"""
     club_id = club_info.get("club_id")
     if not club_id:
-        return []
+        # クラブ番号の無いブンデス2部のクラブは、OpenLigaDB の試合を所属日本人選手の名前で選ぶ（2026-10-22）
+        return [m for m, _side in openligadb_matches_for_names(_club_player_names(club_info), matches)]
 
     club_matches = [
         m for m in matches
@@ -622,7 +636,10 @@ def build_club_page(club_info: dict, slug: str, standing: dict,
             comp_ja = m.get("competition_ja", "")
             home_id = m.get("home_id")
             club_id = club_info.get("club_id")
-            is_home = home_id == club_id
+            if club_id:
+                is_home = home_id == club_id
+            else:
+                is_home = _club_side(m, club_info) == "home"  # ブンデス2部（クラブ番号なし）
             extra_cls = " hidden-extra" if idx >= 10 else ""
 
             date_display = ""
@@ -1292,6 +1309,7 @@ def build_club_page(club_info: dict, slug: str, standing: dict,
 
   <footer class="site-footer">
     <p>データ提供: <a href="https://www.football-data.org/" target="_blank" rel="noopener">Football-Data.org</a></p>
+    <p class="oldb-credit">ブンデスリーガ2部の日程・結果: <a href="https://www.openligadb.de/" target="_blank" rel="noopener">OpenLigaDB</a>（www.openligadb.de）、<a href="https://opendatacommons.org/licenses/odbl/1-0/" target="_blank" rel="noopener">ODbL 1.0</a> で提供</p>
     <p class="footer-links">
       <a href="/">football-jp トップへ</a> |
       <a href="/players/">選手一覧</a> |
