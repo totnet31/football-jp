@@ -10,6 +10,7 @@ generate_league_pages_en.py
 
 from utils import is_result_pending
 import json
+import re
 import sys
 from collections import defaultdict
 from pathlib import Path
@@ -28,6 +29,7 @@ from generate_league_pages import (
     get_player_stats_data, get_league_matches, split_matches_by_date,
     format_kickoff_ja, player_initials, position_color,
     build_standings_html, build_match_card,
+    load_league_guides, GUIDE_CSS,
 )
 
 OUTPUT_DIR = REPO_ROOT / "en" / "leagues"
@@ -355,6 +357,63 @@ def build_match_card_en(m: dict, services: dict, league_slug_str: str, is_result
 
 
 # ============================
+# どこで見られるか（英語版）
+# ============================
+def league_watch_en(guides: dict, lg_slug_str: str) -> dict:
+    """league_guides.json の leagues / watch_only から、このリーグの watch_en（英語の文）を返す。無ければ {}。"""
+    for sec in ("leagues", "watch_only"):
+        entry = (guides.get(sec) or {}).get(lg_slug_str)
+        if isinstance(entry, dict) and entry.get("watch_en"):
+            return entry["watch_en"]
+    return {}
+
+
+def format_checked_en(ymd: str) -> str:
+    """2026-10-22 → October 22, 2026"""
+    from datetime import datetime
+    try:
+        return datetime.strptime(ymd, "%Y-%m-%d").strftime("%B %-d, %Y")
+    except Exception:
+        return ymd
+
+
+def build_watch_section_en(w: dict, lg_slug_str: str, bc_services: dict = None) -> str:
+    """日本語版の build_watch_section と同じ形。url_service があれば broadcasters.json の affiliate_url を使う。"""
+    bc_services = bc_services or {}
+    services = (w or {}).get("services") or []
+    if not services:
+        return ""
+    parts = ['<section class="league-section lg-watch">',
+             f'<h2 class="section-title">{esc(w.get("heading", "Where to watch in Japan"))}</h2>']
+    for sv in services:
+        key = sv.get("key", "")
+        parts.append('<div class="lg-watch-card">')
+        parts.append(f'<h3>{esc(sv.get("name", ""))}</h3>')
+        for k in ("scope", "price", "trial"):
+            if sv.get(k):
+                parts.append(f'<p>{esc(sv[k])}</p>')
+        parts.append(f'<p class="lg-src">Checked: {esc(format_checked_en(sv.get("checked", "")))} · Source: {esc(sv.get("source_note", ""))}</p>')
+        parts.append(f'<!--AD-SLOT:{esc(key)}-->')
+        href = sv.get("url", "")
+        rel = "nofollow noopener"
+        aff = (bc_services.get(sv.get("url_service", "")) or {}).get("affiliate_url") if sv.get("url_service") else None
+        if aff:
+            href, rel = aff, "sponsored nofollow noopener"
+        link_name = re.sub(r"\s*\([^)]*\)", "", sv.get("name", ""))  # 「BS10 (free satellite TV)」→「BS10」
+        parts.append(
+            f'<a class="lg-watch-link" href="{esc(href)}" target="_blank" rel="{rel}" '
+            f'data-svc="{esc(sv.get("name", ""))}" data-pagetype="league_watch_en" data-pageid="{esc(lg_slug_str)}" '
+            f'onclick="trackAffClick(this)">Visit the official {esc(link_name)} site</a>'
+        )
+        parts.append(f'<!--/AD-SLOT:{esc(key)}-->')
+        parts.append('</div>')
+    parts.append('<p class="lg-src">Prices are in Japanese yen and are for viewers in Japan. '
+                 'Services and prices can change, so please check the official site before signing up.</p>')
+    parts.append('</section>')
+    return "\n".join(parts)
+
+
+# ============================
 # リーグ別ページ（英語版）
 # ============================
 def generate_league_page_en(
@@ -366,6 +425,7 @@ def generate_league_page_en(
     player_stats: dict,
     services: dict,
     all_players: list,
+    guides: dict = None,
 ) -> str:
     lg_en_name = league_en(league_ja)
     lg_slug_str = league_slug(league_ja)
@@ -412,6 +472,10 @@ def generate_league_page_en(
 
     html_parts = [common_head_en(title, description, canonical, ja_url)]
     html_parts.append(f'  <script type="application/ld+json">\n{schema}\n  </script>')
+    # どこで見られるか（日本語版と同じ配信先。確かめられなかったリーグは watch_en が無いので出ない）
+    watch_en = league_watch_en(guides or {}, lg_slug_str)
+    if watch_en:
+        html_parts.append(f'  <style>{GUIDE_CSS}</style>')
     html_parts.append("</head>")
     html_parts.append('<body data-view="leagues">')
     html_parts.append("""  <header>
@@ -480,6 +544,10 @@ def generate_league_page_en(
         html_parts.append('</div>')
         html_parts.append(f'<p style="text-align:right;margin-top:8px;"><a href="/en/" class="link-more">Full Schedule →</a></p>')
         html_parts.append('</section>')
+
+    # どこで見られるか
+    if watch_en:
+        html_parts.append(build_watch_section_en(watch_en, lg_slug_str, services))
 
     # 関連リンク
     html_parts.append('<section class="league-section">')
@@ -586,6 +654,7 @@ def main():
     players, matches, standings_comps, scorers_comps, player_stats, services = load_all_data()
 
     league_groups = group_players_by_league(players)
+    guides = load_league_guides()
     print(f"  リーグ数: {len(league_groups)}")
 
     generated = 0
@@ -602,7 +671,8 @@ def main():
         try:
             html = generate_league_page_en(
                 league_ja, lg_players, matches,
-                standings_comps, scorers_comps, player_stats, services, players
+                standings_comps, scorers_comps, player_stats, services, players,
+                guides,
             )
             out_path.write_text(html, encoding="utf-8")
             print(f"  [生成] {out_path}")

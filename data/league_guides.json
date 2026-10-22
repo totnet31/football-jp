@@ -90,6 +90,21 @@
           "text": "プレミアリーグの見方 2026-27（料金・初月1,400円の入り方・無料で見られるか）"
         }
       },
+      "watch_en": {
+        "heading": "Where to watch the Premier League in Japan",
+        "services": [
+          {
+            "key": "unext",
+            "name": "U-NEXT Football Pack",
+            "scope": "Every Premier League match is streamed live, with on-demand replays.",
+            "price": "¥2,600/month (tax included, as of October 2026).",
+            "trial": "There is no free trial for the Football Pack itself. If you sign up together with the U-NEXT monthly plan (31-day free trial), U-NEXT says the first month of the Football Pack is ¥1,400.",
+            "url": "https://www.video.unext.jp/lp/football_pack",
+            "checked": "2026-10-21",
+            "source_note": "U-NEXT official page, marked \"as of October 2026\""
+          }
+        ]
+      },
       "faq_watch": {
         "q": "プレミアリーグはどこで見られる？",
         "a": "日本では U-NEXT の「サッカーパック」（月額2,600円・税込）で全試合ライブ配信されています（U-NEXT公式ページで2026年10月21日に確認）。"
@@ -128,6 +143,29 @@
           "href": "/column/broadcast-guide-2025-26/",
           "text": "海外サッカーの見方まとめ（2026-27版）"
         }
+      },
+      "watch_en": {
+        "heading": "Where to watch the Bundesliga in Japan",
+        "services": [
+          {
+            "key": "abema",
+            "name": "ABEMA (free live broadcasts)",
+            "scope": "ABEMA shows selected matches live for free every matchday, mainly clubs with Japanese players. It is not every match (DAZN's official news says two matches per matchday).",
+            "price": "Free",
+            "url": "https://abema.tv/video/title/760-3",
+            "checked": "2026-10-21",
+            "source_note": "ABEMA official Bundesliga 26-27 page (\"selected matches free live every matchday, mainly clubs with Japanese players\"), DAZN official news (posted 2026-10-15)"
+          },
+          {
+            "key": "dazn",
+            "name": "DAZN",
+            "scope": "DAZN streams the Bundesliga live, plus the promotion/relegation play-off and the DFL Supercup. Matches outside ABEMA's free picks are on DAZN too (e.g. Matchday 6, Frankfurt vs Köln).",
+            "price": "DAZN Standard: ¥4,200/month, or an annual plan at ¥32,000 paid upfront or ¥3,200/month. ABEMA de DAZN (DAZN inside ABEMA): ¥3,800/month or ¥30,000/year paid upfront. All prices include tax, as of October 2026.",
+            "url": "https://www.dazn.com/ja-JP/welcome",
+            "checked": "2026-10-21",
+            "source_note": "DAZN official page (prices), DAZN official news (match viewing guide posted 2026-10-15), ABEMA official ABEMA de DAZN league list (Bundesliga 2026-27, season start August 28, 2026)"
+          }
+        ]
       },
       "faq_watch": {
         "q": "ブンデスリーガはどこで見られる？",
@@ -169,6 +207,30 @@
           "href": "/column/broadcast-guide-2025-26/",
           "text": "海外サッカーの見方まとめ（2026-27版）"
         }
+      },
+      "watch_en": {
+        "heading": "Where to watch La Liga in Japan",
+        "services": [
+          {
+            "key": "unext",
+            "name": "U-NEXT Football Pack",
+            "scope": "Every La Liga match is streamed live, with on-demand replays. The same pack also covers the Premier League.",
+            "price": "¥2,600/month (tax included, as of October 2026).",
+            "trial": "There is no free trial for the Football Pack itself. If you sign up together with the U-NEXT monthly plan (31-day free trial), U-NEXT says the first month of the Football Pack is ¥1,400.",
+            "url": "https://www.video.unext.jp/lp/football_pack",
+            "checked": "2026-10-21",
+            "source_note": "U-NEXT official page: \"Premier League / La Liga: all matches live, with replays\" (marked \"as of October 2026\")"
+          },
+          {
+            "key": "dazn",
+            "name": "DAZN",
+            "scope": "DAZN streams La Liga live (the official page does not say whether it is every match). Takefusa Kubo's Real Sociedad matches are on both DAZN and U-NEXT (e.g. Matchday 9, Málaga vs Real Sociedad on October 19).",
+            "price": "DAZN Standard: ¥4,200/month, or an annual plan at ¥32,000 paid upfront or ¥3,200/month. ABEMA de DAZN (DAZN inside ABEMA): ¥3,800/month or ¥30,000/year paid upfront. All prices include tax, as of October 2026.",
+            "url": "https://www.dazn.com/ja-JP/welcome",
+            "checked": "2026-10-21",
+            "source_note": "DAZN official page (La Liga listed in Standard; prices), DAZN official news (match viewing guide posted 2026-10-17), ABEMA official ABEMA de DAZN league list (La Liga 2026-27, season start August 16, 2026)"
+          }
+        ]
       },
       "faq_watch": {
         "q": "ラ・リーガはどこで見られる？",
@@ -440,7 +502,7 @@
     }
   },
   "watch_only": {
-    "_note": "手書きの文章（リード・早見表）がまだ無いリーグに「どこで見られる？」欄だけを出す。形は leagues の watch と同じ。公式ページで確かめた分だけ書く。確かめられなかったリーグ（ブンデスリーガ2部・リーグ・ドゥ）は入れない（2026-10-22 確認・根拠は 03_football-jp/plan_watch_20261022/broadcasters_check.md）。",
+    "_note": "手書きの文章（リード・早見表）がまだ無いリーグに「どこで見られる？」欄だけを出す。形は leagues の watch と同じ。公式ページで確かめた分だけ書く。確かめられなかったリーグ（ブンデスリーガ2部・リーグ・ドゥ）は入れない（2026-10-22 確認・根拠は 03_football-jp/plan_watch_20261022/broadcasters_check.md）。 watch_en＝英語版（/en/leagues/）の同じ欄。scripts/generate_league_pages_en.py が読む。料金は日本円のまま「as of October 2026」。",
     "serie-a": {
       "watch": {
         "heading": "セリエAはどこで見られる？",
@@ -459,6 +521,20 @@
           "href": "/column/broadcast-guide-2025-26/",
           "text": "海外サッカーの見方まとめ（2026-27版）"
         }
+      },
+      "watch_en": {
+        "heading": "Where to watch Serie A in Japan",
+        "services": [
+          {
+            "key": "dazn",
+            "name": "DAZN",
+            "scope": "DAZN streams Serie A live (the official page does not say whether it is every match). Serie A 2026-27 (started August 23, 2026) is also on ABEMA de DAZN, the DAZN package inside ABEMA.",
+            "price": "DAZN Standard: ¥4,200/month, or an annual plan at ¥32,000 paid upfront or ¥3,200/month. ABEMA de DAZN (DAZN inside ABEMA): ¥3,800/month or ¥30,000/year paid upfront. All prices include tax, as of October 2026.",
+            "url": "https://www.dazn.com/ja-JP/welcome",
+            "checked": "2026-10-22",
+            "source_note": "DAZN official page (Serie A listed in Standard; prices), ABEMA official ABEMA de DAZN league list"
+          }
+        ]
       }
     },
     "ligue-1": {
@@ -479,6 +555,20 @@
           "href": "/column/broadcast-guide-2025-26/",
           "text": "海外サッカーの見方まとめ（2026-27版）"
         }
+      },
+      "watch_en": {
+        "heading": "Where to watch Ligue 1 in Japan",
+        "services": [
+          {
+            "key": "dazn",
+            "name": "DAZN",
+            "scope": "DAZN streams Ligue 1 live (the official page does not say whether it is every match). Ligue 1 2026-27 (started August 22, 2026) is also on ABEMA de DAZN, the DAZN package inside ABEMA.",
+            "price": "DAZN Standard: ¥4,200/month, or an annual plan at ¥32,000 paid upfront or ¥3,200/month. ABEMA de DAZN (DAZN inside ABEMA): ¥3,800/month or ¥30,000/year paid upfront. All prices include tax, as of October 2026.",
+            "url": "https://www.dazn.com/ja-JP/welcome",
+            "checked": "2026-10-22",
+            "source_note": "DAZN official page (Ligue 1 listed in Standard; prices), ABEMA official ABEMA de DAZN league list"
+          }
+        ]
       }
     },
     "jupiler-pro-league": {
@@ -508,6 +598,29 @@
           "href": "/column/broadcast-guide-2025-26/",
           "text": "海外サッカーの見方まとめ（2026-27版）"
         }
+      },
+      "watch_en": {
+        "heading": "Where to watch the Jupiler Pro League in Japan",
+        "services": [
+          {
+            "key": "dazn",
+            "name": "DAZN",
+            "scope": "DAZN streams the Belgian league live (the official page does not say whether it is every match; e.g. Matchday 9, Club Brugge vs Sint-Truiden on October 26). The 2026-27 season (started August 7, 2026) is also on ABEMA de DAZN, the DAZN package inside ABEMA.",
+            "price": "DAZN Standard: ¥4,200/month, or an annual plan at ¥32,000 paid upfront or ¥3,200/month. ABEMA de DAZN (DAZN inside ABEMA): ¥3,800/month or ¥30,000/year paid upfront. All prices include tax, as of October 2026.",
+            "url": "https://www.dazn.com/ja-JP/welcome",
+            "checked": "2026-10-22",
+            "source_note": "DAZN official page (Belgian league listed in Standard; prices), DAZN official TV schedule (posted 2026-10-20), ABEMA official ABEMA de DAZN league list"
+          },
+          {
+            "key": "bs10",
+            "name": "BS10 (free satellite TV)",
+            "scope": "BS10 broadcasts Sint-Truidense VV matches free nationwide. The club has many Japanese players. The official page does not say whether it is every match.",
+            "price": "Free",
+            "url": "https://www.bs10.jp/program/sports/soccer_basketball/gogo_stvv/",
+            "checked": "2026-10-22",
+            "source_note": "BS10 official Sint-Truiden page (\"BS10 also broadcasts Sint-Truidense VV (STVV) matches\")"
+          }
+        ]
       }
     },
     "primeira-liga": {
@@ -528,6 +641,20 @@
           "href": "/column/broadcast-guide-2025-26/",
           "text": "海外サッカーの見方まとめ（2026-27版）"
         }
+      },
+      "watch_en": {
+        "heading": "Where to watch the Primeira Liga in Japan",
+        "services": [
+          {
+            "key": "dazn",
+            "name": "DAZN",
+            "scope": "DAZN streams selected Primeira Liga matches live — the ones in its TV schedule, not every match (e.g. Matchday 9, Gil Vicente vs Porto on October 25). The 2026-27 season (started August 9, 2026) is also on ABEMA de DAZN, the DAZN package inside ABEMA.",
+            "price": "DAZN Standard: ¥4,200/month, or an annual plan at ¥32,000 paid upfront or ¥3,200/month. ABEMA de DAZN (DAZN inside ABEMA): ¥3,800/month or ¥30,000/year paid upfront. All prices include tax, as of October 2026.",
+            "url": "https://www.dazn.com/ja-JP/welcome",
+            "checked": "2026-10-22",
+            "source_note": "DAZN official TV schedule (posted 2026-10-20), DAZN official page (prices), ABEMA official ABEMA de DAZN league list"
+          }
+        ]
       }
     },
     "eredivisie": {
@@ -549,6 +676,21 @@
           "href": "/column/broadcast-guide-2025-26/",
           "text": "海外サッカーの見方まとめ（2026-27版）"
         }
+      },
+      "watch_en": {
+        "heading": "Where to watch the Eredivisie in Japan",
+        "services": [
+          {
+            "key": "unext",
+            "name": "U-NEXT Football Pack",
+            "scope": "The Eredivisie is streamed live, with on-demand replays (the official page does not say whether it is every match). The same pack also covers the Premier League and La Liga.",
+            "price": "¥2,600/month (tax included, as of October 2026).",
+            "trial": "There is no free trial for the Football Pack itself. If you sign up together with the U-NEXT monthly plan (31-day free trial), U-NEXT says the first month of the Football Pack is ¥1,400.",
+            "url": "https://www.video.unext.jp/lp/football_pack",
+            "checked": "2026-10-22",
+            "source_note": "U-NEXT official page lists the Eredivisie under live streaming with replays (marked \"as of October 2026\")"
+          }
+        ]
       }
     },
     "championship": {
@@ -569,6 +711,20 @@
           "href": "/column/broadcast-guide-2025-26/",
           "text": "海外サッカーの見方まとめ（2026-27版）"
         }
+      },
+      "watch_en": {
+        "heading": "Where to watch the Championship in Japan",
+        "services": [
+          {
+            "key": "dazn",
+            "name": "DAZN",
+            "scope": "DAZN streams the EFL Championship live (the official page does not say whether it is every match; e.g. Matchday 12, Charlton vs Norwich on October 24).",
+            "price": "DAZN Standard: ¥4,200/month, or an annual plan at ¥32,000 paid upfront or ¥3,200/month (tax included, as of October 2026).",
+            "url": "https://www.dazn.com/ja-JP/welcome",
+            "checked": "2026-10-22",
+            "source_note": "DAZN official page (EFL Championship listed in Standard; prices), DAZN official TV schedule (posted 2026-10-20)"
+          }
+        ]
       }
     }
   }
