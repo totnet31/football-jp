@@ -213,6 +213,42 @@ def _watch_services_html(watch: dict, bc_services: dict, slug: str) -> tuple:
     return "".join(rows), has_aff
 
 
+def build_table_watch_cell(guides: dict, bc_services: dict, competition_id, competition_ja: str, slug: str) -> tuple:
+    """「直近の試合」表の配信の列（2026-10-22）。上の「次の試合・どこで見れる」欄と同じ
+    league_guides.json の欄から出す（古い broadcasters.json の試合ごとの配信は使わない）。
+    欄が無い大会は「確認中」。報酬リンクは上の欄と同じ条件（url_service が affiliate_url を持つときだけ）。
+    返り値：(html, 報酬リンクの数)"""
+    watch = find_watch_guide(guides, competition_id, competition_ja)
+    svcs = watch.get("services") or []
+    if not svcs:
+        return '<span class="bc-unconfirmed">確認中</span>', 0
+    n_aff = 0
+    tags = []
+    for sv in svcs:
+        name = sv.get("name", "")
+        short = name.split("（")[0].split(" ")[0].strip() or name
+        brand_cls = bc_brand_class(short)
+        logo_file = (bc_services.get(short) or {}).get("logo", "")
+        logo_html = (f'<img class="bc-logo" src="/assets/broadcasters/{esc(logo_file)}" alt="" width="16" height="16">'
+                     if logo_file else "")
+        href = sv.get("url", "")
+        rel = "nofollow noopener"
+        aff = (bc_services.get(sv.get("url_service", "")) or {}).get("affiliate_url") if sv.get("url_service") else None
+        if aff:
+            href, rel = aff, "sponsored nofollow noopener"
+            n_aff += 1
+        if href:
+            tags.append(f'<a class="bc-tag {esc(brand_cls)}" href="{esc(href)}" target="_blank" rel="{rel}" '
+                        f'title="{esc(name)}" data-svc="{esc(short)}" data-pagetype="player_table" data-pageid="{esc(slug)}" '
+                        f'onclick="trackAffClick(this)">{logo_html}{esc(short)}</a>')
+        else:
+            tags.append(f'<span class="bc-tag {esc(brand_cls)}" title="{esc(name)}">{logo_html}{esc(short)}</span>')
+    return " ".join(tags), n_aff
+
+
+TABLE_WATCH_STATS = {"affiliate_links": 0, "unconfirmed_rows": 0}
+
+
 def _unconfirmed_html() -> str:
     return ('<p class="nw-unconfirmed">配信先は確認中です（日本の配信サービスの公式ページで確かめられた分だけを載せています）。</p>')
 
@@ -671,7 +707,10 @@ def build_player_page(player: dict, slug: str, scorer_stats: dict,
                       player_info: dict = None,
                       highlights: list = None,
                       player_videos: list = None,
-                      next_watch_html: str = "") -> str:
+                      next_watch_html: str = "",
+                      guides: dict = None) -> str:
+    if guides is None:
+        guides = load_league_guides()
     name_ja = player.get("name_ja", "")
     name_en = player.get("name_en", "")
     position = player.get("position", "")
@@ -851,16 +890,10 @@ def build_player_page(player: dict, slug: str, scorer_stats: dict,
                     opponent = esc(home_ja)
                 venue_cls = "venue-home" if is_home else "venue-away"
                 venue_label = "H" if is_home else "A"
-                broadcasters_list = m.get("broadcasters", [])
-                league_ja_m = m.get("competition_ja", player.get("league_ja", ""))
-                bc_tags = ""
-                if broadcasters_list and services is not None:
-                    tags = [build_bc_tag(b, services, "player", slug, league_ja_m)
-                            for b in broadcasters_list[:2] if b.get("name")]
-                    bc_tags = " ".join(tags)
-                elif broadcasters_list:
-                    bc_names = [b.get("name", "") for b in broadcasters_list[:2] if b.get("name")]
-                    bc_tags = esc(" / ".join(bc_names))
+                # 配信は上の「次の試合・どこで見れる」欄と同じ情報源（league_guides.json）から
+                bc_tags, _n_aff = build_table_watch_cell(guides, services or {}, m.get("competition_id"), comp_ja, slug)
+                TABLE_WATCH_STATS["affiliate_links"] += _n_aff
+                TABLE_WATCH_STATS["unconfirmed_rows"] += 1 if "bc-unconfirmed" in bc_tags else 0
                 _pending = is_result_pending(m)  # 開始から3時間すぎても予定のまま＝結果待ち
                 match_rows += f"""
           <div class="match-row {'result-pending' if _pending else 'scheduled'}{extra_cls}">
@@ -1355,6 +1388,7 @@ def build_player_page(player: dict, slug: str, scorer_stats: dict,
       align-items: center;
       justify-content: center;
     }}
+    .bc-unconfirmed {{ font-size: 11px; color: #888; }}
     .match-date-day {{ display: block; font-size: 12px; }}
     .match-date-time {{ display: block; font-size: 11px; color: #555; }}
     .venue-badge {{
@@ -2149,7 +2183,8 @@ def main():
                                  player_info=pinfo,
                                  highlights=highlights,
                                  player_videos=player_vids if player_vids else None,
-                                 next_watch_html=next_watch_html)
+                                 next_watch_html=next_watch_html,
+                                 guides=guides)
         if is_second_team(player):
             html = adjust_second_team(html, player, "ja")
 
@@ -2186,6 +2221,7 @@ def main():
     print(f"  次の試合・どこで見れる欄: {nw_counts['pages']}ページ（次の試合あり {nw_counts['has_match']}・なし {nw_counts['no_match']}）")
     print(f"  配信先「確認中」を含む: {len(nw_counts['unconfirmed'])}人 {'・'.join(nw_counts['unconfirmed'])}")
     print(f"  報酬リンクが付く: {len(nw_counts['affiliate'])}人 {'・'.join(nw_counts['affiliate'])}")
+    print(f"  直近の試合の表（配信の列）: 報酬リンク {TABLE_WATCH_STATS['affiliate_links']}本・確認中 {TABLE_WATCH_STATS['unconfirmed_rows']}行")
 
     # slug一覧
     print("\n生成済みslug一覧:")
