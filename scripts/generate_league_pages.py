@@ -1328,6 +1328,9 @@ def generate_league_page(
         more = (watch_only.get("watch") or {}).get("more_link")
         if more and more.get("href") != "/column/broadcast-guide-2025-26/":
             html_parts.append(f'<li><a href="{esc(more["href"])}">{esc(more["text"])}</a></li>')
+        # 続きリンクの2本目以降（例：チャンピオンシップ → カラバオカップの見方・2026-10-23）
+        for ex in (watch_only.get("watch") or {}).get("more_links_extra") or []:
+            html_parts.append(f'<li><a href="{esc(ex["href"])}">{esc(ex["text"])}</a></li>')
 
     # 選手リンク
     seen_slugs = set()
