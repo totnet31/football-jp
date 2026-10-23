@@ -249,7 +249,12 @@ def get_club_matches(player: dict, matches: list) -> list:
     club_id = player.get("club_id")
     if not club_id:
         # クラブ番号の無いブンデス2部の選手は、OpenLigaDB の試合を名前で選ぶ（日本語版と同じ・2026-10-22）
-        return [m for m, _side in openligadb_matches_for_names([player.get("name_ja")], matches)]
+        # 国内カップ戦も試合データの日本人選手の名前で選ぶ（日本語版と同じ・2026-10-23）
+        out = [m for m, _side in openligadb_matches_for_names([player.get("name_ja")], matches)]
+        out += [m for m in matches if str(m.get("id", "")).startswith("CUP_")
+                and any(jp.get("name_ja") == player.get("name_ja") for jp in m.get("japanese_players") or [])]
+        out.sort(key=lambda x: x.get("kickoff_jst", ""), reverse=True)
+        return out
     club_matches = [m for m in matches if m.get("home_id") == club_id or m.get("away_id") == club_id]
     club_matches.sort(key=lambda x: x.get("kickoff_jst", ""), reverse=True)
     return club_matches

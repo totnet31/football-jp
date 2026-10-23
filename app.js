@@ -35,6 +35,15 @@
     'ジュピラー・プロ・リーグ': 'Jupiler Pro League',
     'リーグ・ドゥ': 'Ligue 2',
     'ブンデスリーガ2部': '2. Bundesliga',
+    // 国内カップ戦（2026-10-23）
+    'カラバオカップ': 'EFL Cup',
+    'FAカップ': 'FA Cup',
+    'DFBポカール': 'DFB-Pokal',
+    'コパ・デル・レイ': 'Copa del Rey',
+    'コッパ・イタリア': 'Coppa Italia',
+    'KNVBベーカー': 'KNVB Cup',
+    'ベルギーカップ': 'Belgian Cup',
+    'クープ・ドゥ・フランス': 'Coupe de France',
   };
   const WEEKDAY_EN = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
 
@@ -548,7 +557,8 @@
   // 配信が空（league_guides.json に欄が無い大会）で、まだ終わっていない試合は「確認中」。
   function broadcasterTagList(m, showUnconfirmed, lazy) {
     // source が league_guides のものだけ（古い 4/29 時点の配信が残ったデータは出さない＝確認中）
-    const list = (Array.isArray(m.broadcasters) ? m.broadcasters : []).filter(b => b && b.source === 'league_guides');
+    // 国内カップ戦は data/broadcasters.json の範囲だけ（source: broadcasters_json・2026-10-23）
+    const list = (Array.isArray(m.broadcasters) ? m.broadcasters : []).filter(b => b && (b.source === 'league_guides' || b.source === 'broadcasters_json'));
     const tags = [];
     for (const b of list) {
       if (!b || !b.name) continue;
@@ -567,7 +577,8 @@
       }
     }
     if (!tags.length && showUnconfirmed) {
-      tags.push(`<span class="bc-unconfirmed">${L('配信：確認中', 'Broadcast: TBC')}</span>`);
+      const isCup = m.competition_category === 'domestic_cup';
+      tags.push(`<span class="bc-unconfirmed">${isCup ? L('配信未確認', 'Broadcast: not confirmed') : L('配信：確認中', 'Broadcast: TBC')}</span>`);
     }
     return tags;
   }
