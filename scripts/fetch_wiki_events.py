@@ -108,6 +108,10 @@ def candidate_pages(club_en, club_id):
         "Sparta Rotterdam": ["Sparta Rotterdam"],
         "Gil Vicente": ["Gil Vicente F.C."],
         "Leeds": ["Leeds United F.C.", "Leeds United"],
+        "LOSC Lille": ["Lille OSC", "Lille"],
+        "Bolton": ["Bolton Wanderers"],
+        "PSV Eindhoven": ["PSV Eindhoven", "PSV"],
+        "AZ Alkmaar": ["AZ Alkmaar", "AZ"],
     }
     for alt in aliases.get(base, []):
         cands.extend([
@@ -197,19 +201,27 @@ def parse_box_field(box_text, field):
 def parse_goals_block(text):
     """goals1/goals2 の中身から [(wiki_target_or_name, [minutes])] を抽出"""
     # 各行（'*[[Wiki|Display]] {{goal|MIN[|...]}}, {{goal|...}}'）
+    # 書き方の違いも読む（2026-10-23）：
+    #   ・「*」の行（いつもの形）
+    #   ・「*」が無く <br> で区切った形（| goals2 = [[A|A]] {{goal|54}} など）
+    #   ・時間が名前の前に来る形（* {{goal|45+1|pen.}} [[Ayase Ueda|Ueda]]）
     out = []
-    for line in text.splitlines():
+    raw = re.sub(r"<br\s*/?>", "\n", text, flags=re.IGNORECASE)
+    star_lines = [l for l in raw.splitlines() if l.strip().startswith("*")]
+    lines = star_lines if star_lines else [l for l in raw.splitlines() if l.strip()]
+    for line in lines:
         line = line.strip()
-        if not line.startswith("*"):
-            continue
-        line = line[1:].strip()
+        if line.startswith("*"):
+            line = line[1:].strip()
         # プレーヤー名（ウィキリンク or プレーン）
         link_target = extract_link_target(line)
         display_name = None
         m = re.match(r"\[\[([^\]\|]+)(?:\|([^\]]+))?\]\]", line)
+        if not m and line.startswith("{{goal"):
+            m = re.search(r"\[\[([^\]\|]+)(?:\|([^\]]+))?\]\]", line)
         if m:
             display_name = (m.group(2) or m.group(1)).strip()
-            rest = line[m.end():]
+            rest = line[:m.start()] + " " + line[m.end():]
         else:
             # プレーンテキスト
             mp = re.match(r"([A-Za-zÀ-ÖØ-öø-ÿĀ-ž'\.\-\s]+?)(?=\s*\{\{)", line)
@@ -597,6 +609,19 @@ def find_match(jp_match, wiki_box):
     return False
 
 
+def _jp_clubs_of(m, players, jp_club_ids):
+    """この試合で見るクラブ：試合の「日本人選手」の印から＋日本人が在籍するクラブが出ていればそのクラブ"""
+    out = set()
+    names = {jp.get("name_ja") for jp in m.get("japanese_players", [])}
+    for p in players:
+        if p.get("name_ja") in names and p.get("club_id"):
+            out.add(p["club_id"])
+    for cid in (m.get("home_id"), m.get("away_id")):
+        if cid in jp_club_ids:
+            out.add(cid)
+    return out
+
+
 def main():
     matches = load_json("matches.json").get("matches", [])
     players = load_json("players.json").get("players", [])
@@ -613,8 +638,12 @@ def main():
     print(f"[INFO] 日本人選手 {len([p for p in players if p.get('name_en')])} 名 ロード")
 
     # 対象クラブを抽出（japanese_players が含まれる finished 試合のクラブ）
+    # 日本人が在籍するクラブの試合も対象にする（試合の「日本人選手」の印が付いていない試合がある：
+    # 移籍してきた選手の新しいクラブの試合など。ボルトンの伊藤敦樹。2026-10-23）
+    jp_club_ids = {p.get("club_id") for p in players if p.get("club_id")}
     finished_jp = [m for m in matches
-                   if m.get("status") == "FINISHED" and m.get("japanese_players")]
+                   if m.get("status") == "FINISHED"
+                   and (m.get("japanese_players") or m.get("home_id") in jp_club_ids or m.get("away_id") in jp_club_ids)]
     print(f"[INFO] 対象 FINISHED 試合: {len(finished_jp)}件")
 
     # クラブ別 → このクラブのシーズンページから日本人ゴール抽出
@@ -691,11 +720,7 @@ def main():
             mid = str(m["id"])
             if mid not in events_map:
                 continue
-            jp_clubs = set()
-            for p in players:
-                for jp in m.get("japanese_players", []):
-                    if p.get("name_ja") == jp.get("name_ja") and p.get("club_id"):
-                        jp_clubs.add(p["club_id"])
+            jp_clubs = _jp_clubs_of(m, players, jp_club_ids)
             if jp_clubs & refreshed_club_ids:
                 recompute.add(mid)
                 cleared += 1
@@ -710,11 +735,7 @@ def main():
         if events_map.get(mid) and mid not in recompute:
             continue  # キャッシュ済み（ゴールデータあり）
         # この試合のJP選手のクラブ群
-        jp_clubs = set()
-        for p in players:
-            for jp in m.get("japanese_players", []):
-                if p.get("name_ja") == jp.get("name_ja") and p.get("club_id"):
-                    jp_clubs.add(p["club_id"])
+        jp_clubs = _jp_clubs_of(m, players, jp_club_ids)
         # それらクラブのboxesから日付+対戦相手で照合
         events = []
         matched = False
@@ -744,6 +765,8 @@ def main():
                 # 名前の照合：①フルネーム（wiki のリンク先・表示名）→ ②苗字だけ（この試合に出ている
                 # 日本人の中で1人に決まるときだけ）。苗字が同じ選手（鈴木唯人と鈴木彩艶など）を取り違えないため（2026-10-23）
                 match_ja = {jp.get("name_ja") for jp in m.get("japanese_players", [])}
+                match_ja |= {p.get("name_ja") for p in players
+                             if p.get("club_id") and p.get("club_id") in (m.get("home_id"), m.get("away_id"))}
                 local_last = {}
                 for p in players:
                     if p.get("name_ja") in match_ja and p.get("name_en"):
