@@ -28,6 +28,14 @@ BROADCASTERS_JSON = REPO_ROOT / "data" / "broadcasters.json"
 MATCHES_JSON = REPO_ROOT / "data" / "matches.json"
 
 SOURCE_TAG = "league_guides"
+COMPETITIONS_JSON = REPO_ROOT / "data" / "competitions.json"
+
+# 国内カップ戦（2026-10-23）：league_guides.json に欄が無いので、data/broadcasters.json の
+# 「broadcasters」（2026-04-29 時点・大会番号ごと）に載っていて、契約期間（note の「〜2026-27」など）が
+# 今季を含むものだけを出す。載っていない・期間切れ・「未確定」の大会は「配信未確認」。推測で足さない。
+CUP_SOURCE_TAG = "broadcasters_json"
+CUP_UNCONFIRMED_LABEL = "配信未確認"
+_CUP_CACHE = {}
 
 
 def _esc(text) -> str:
@@ -70,9 +78,64 @@ def _league_slug_of(name_ja: str) -> str:
         return ""
 
 
+def domestic_cup_ids() -> set:
+    """data/competitions.json で category が "cup" の大会番号"""
+    if "ids" not in _CUP_CACHE:
+        try:
+            comps = json.loads(COMPETITIONS_JSON.read_text(encoding="utf-8")).get("competitions", [])
+            _CUP_CACHE["ids"] = {c["id"] for c in comps if c.get("category") == "cup"}
+        except Exception:
+            _CUP_CACHE["ids"] = set()
+    return _CUP_CACHE["ids"]
+
+
+def is_domestic_cup(competition_id) -> bool:
+    return competition_id is not None and competition_id in domestic_cup_ids()
+
+
+def _season_end_year(now=None) -> int:
+    from datetime import datetime, timedelta, timezone
+    now = now or datetime.now(timezone(timedelta(hours=9)))
+    return (now.year if now.month >= 7 else now.year - 1) + 1
+
+
+def cup_watch(competition_id, now=None) -> dict:
+    """国内カップ戦の watch（league_guides.json と同じ形）。出せるものが無ければ {}。"""
+    import re
+    if not BROADCASTERS_JSON.exists():
+        return {}
+    try:
+        data = json.loads(BROADCASTERS_JSON.read_text(encoding="utf-8"))
+    except Exception:
+        return {}
+    rows = (data.get("broadcasters") or {}).get(str(competition_id)) or []
+    services = data.get("services") or {}
+    updated = data.get("updated", "")
+    out = []
+    for r in rows:
+        name, note = r.get("name", ""), r.get("note") or ""
+        m = re.search(r"〜\s*(\d{4})-(\d{2})", note)
+        if not name or name == "未確定" or not m:
+            continue
+        if int(m.group(1)) + 1 < _season_end_year(now):
+            continue  # 契約期間が今季より前に終わっている
+        out.append({
+            "name": name,
+            "url_service": name if name in services else None,
+            "url": (services.get(name) or {}).get("url") or r.get("url", ""),
+            "scope": f"当サイトの配信表（{updated}時点）に「{name}・{note}」と載っている大会です。"
+                     f"この大会の配信を日本の配信サービスの公式ページで確かめたものではありません。",
+            "cup_source": True,
+        })
+    return {"services": out} if out else {}
+
+
 def find_watch_guide(guides: dict, competition_id=None, competition_ja: str = "") -> dict:
     """大会 → league_guides.json の watch（無ければ {}）。
-    大会（CL・EL・ECL）は competition_id で、リーグはリーグ名（日本語）→ slug で引く。"""
+    大会（CL・EL・ECL）は competition_id で、リーグはリーグ名（日本語）→ slug で引く。
+    国内カップ戦は data/broadcasters.json の範囲だけ（cup_watch）。"""
+    if is_domestic_cup(competition_id):
+        return cup_watch(competition_id)
     if not guides:
         return {}
     for cfg in (guides.get("competitions") or {}).values():
@@ -108,7 +171,8 @@ def match_watch_services(guides: dict, bc_services: dict, competition_id=None, c
     out = []
     for sv in watch.get("services") or []:
         label = sv.get("name", "")
-        item = {"name": service_short(label), "label": label, "url": sv.get("url", ""), "source": SOURCE_TAG}
+        item = {"name": service_short(label), "label": label, "url": sv.get("url", ""),
+                "source": CUP_SOURCE_TAG if sv.get("cup_source") else SOURCE_TAG}
         aff = affiliate_for(sv, bc_services)
         if aff:
             item["affiliate_url"] = aff
@@ -121,6 +185,8 @@ def build_watch_cell(guides: dict, bc_services: dict, competition_id, competitio
     """試合の配信の列のHTML。返り値：(html, 報酬リンクの数)。欄が無ければ「確認中」。"""
     svcs = match_watch_services(guides, bc_services, competition_id, competition_ja)
     if not svcs:
+        if is_domestic_cup(competition_id) and unconfirmed_label == "確認中":
+            unconfirmed_label = CUP_UNCONFIRMED_LABEL
         return f'<span class="bc-unconfirmed">{_esc(unconfirmed_label)}</span>', 0
     n_aff = 0
     tags = []
