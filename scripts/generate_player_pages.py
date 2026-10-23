@@ -609,10 +609,13 @@ def get_player_scorer_stats(player: dict, scorers_comps: dict) -> dict:
     return {}
 
 
-def get_player_goals(player: dict, events: dict, matches_dict: dict) -> list:
-    """選手のゴールイベントリストを取得する（最大10件）。"""
+def get_player_goals(player: dict, events: dict, matches_dict: dict, known_ja: set = None) -> list:
+    """選手のゴールイベントリストを取得する（最大10件）。
+    known_ja：追いかけている日本人選手の和名の一覧。記録の和名がこの中の誰かなら、その名前と一致するときだけ
+    数える（苗字が同じ選手のゴールを取り違えないため。2026-10-23）"""
     name_ja = player.get("name_ja", "")
     name_en = player.get("name_en", "")
+    known_ja = known_ja or set()
 
     goal_events = []
     for match_id, evs in events.items():
@@ -620,6 +623,18 @@ def get_player_goals(player: dict, events: dict, matches_dict: dict) -> list:
             if ev.get("type") == "goal" and ev.get("is_japanese"):
                 ev_name_ja = ev.get("player_ja", "")
                 ev_name_en = ev.get("player_en", "")
+                if ev_name_ja in known_ja:
+                    matched = ev_name_ja == name_ja
+                    if matched:
+                        match = matches_dict.get(match_id, {})
+                        goal_events.append({
+                            "match_id": match_id, "minute": ev.get("minute"),
+                            "minute_raw": ev.get("minute_raw", ""), "note": ev.get("note", ""),
+                            "home_ja": match.get("home_ja", ""), "away_ja": match.get("away_ja", ""),
+                            "score": match.get("score", {}), "kickoff_jst": match.get("kickoff_jst", ""),
+                            "competition_ja": match.get("competition_ja", ""), "side": ev.get("side", ""),
+                        })
+                    continue
                 # 名前マッチング（名前の一部）
                 matched = False
                 if ev_name_ja and name_ja and ev_name_ja in name_ja:
@@ -2248,7 +2263,8 @@ def main():
         # 統計データ取得
         wiki_stats = get_player_wiki_stats(player, player_stats)
         scorer_stats = get_player_scorer_stats(player, scorers_comps)
-        goal_events = get_player_goals(player, events, matches_dict)
+        goal_events = get_player_goals(player, events, matches_dict,
+                                       known_ja={q.get("name_ja") for q in players if q.get("name_ja")})
         club_matches = get_club_matches(player, matches)
         standing = get_club_standing(player, standings_comps)
         if is_second_team(player):
