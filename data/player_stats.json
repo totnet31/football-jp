@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-23T09:29:35+09:00",
+  "updated": "2026-10-23T12:58:02+09:00",
   "note": "Wikipediaの各クラブシーズンページから取得。Efsテンプレート形式とwikitable形式の両方に対応。league_apps/league_goalsがリーグ戦、total_apps/total_goalsが全大会合計。",
   "total_players": 23,
   "stats": {
@@ -57,10 +57,10 @@
     },
     "Kuryu Matsuki": {
       "apps": 20,
-      "goals": 0,
+      "goals": 4,
       "assists": 0,
-      "total_apps": 20,
-      "total_goals": 0,
+      "total_apps": 28,
+      "total_goals": 6,
       "club": "Southampton",
       "club_ja": "サウサンプトン",
       "name_ja": "松木玖生",
@@ -236,7 +236,8 @@
       "source": "wikipedia_cached",
       "competition_id": 88,
       "competition_name": "comp_88",
-      "note": "リーグ戦のみ（scorers経由）"
+      "note": "リーグ戦のみ（scorers経由）",
+      "assists_unconfirmed": "2026-05-05 時点の football-data.org 得点ランキングの途中の値で、確かめていない（2026-10-23）。出さない"
     },
     "Ko Itakura": {
       "apps": 18,
@@ -290,7 +291,8 @@
       "source": "wikipedia_cached",
       "competition_id": 88,
       "competition_name": "comp_88",
-      "note": "リーグ戦のみ（scorers経由）"
+      "note": "リーグ戦のみ（scorers経由）",
+      "assists_unconfirmed": "2026-05-05 時点の football-data.org 得点ランキングの途中の値で、シーズン終了後の数字と食い違う（2026-10-23 確認）。出さない"
     },
     "Hidemasa Morita": {
       "apps": 31,

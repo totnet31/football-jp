@@ -237,13 +237,12 @@ def parse_goals_block(text):
             tokens_raw = gm.group(1)
             # || は単独 | と等価扱い
             tokens = [t.strip() for t in re.split(r"\|+", tokens_raw) if t.strip() != ""]
-            current_note = ""
+            # {{goal|22|pen.|66}} は「22分がPK」（注記は直前の時間に付く）。以前は次の時間に付けていた（2026-10-23）
             for tok in tokens:
                 if re.match(r"^\d+\s*\+?\s*\d*$", tok):
-                    goals.append({"minute_raw": tok, "note": current_note.lower()})
-                    current_note = ""
-                else:
-                    current_note = tok
+                    goals.append({"minute_raw": tok, "note": ""})
+                elif goals and not goals[-1]["note"]:
+                    goals[-1]["note"] = re.sub(r"[\[\]]", "", tok).split("|")[-1].strip().lower()
         if display_name and goals:
             out.append({
                 "wiki_target": link_target,
