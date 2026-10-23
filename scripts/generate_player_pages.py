@@ -125,6 +125,95 @@ NEXT_WATCH_SHOW = 2      # 最初に見せる試合の数
 NEXT_WATCH_SPARE = 1     # 作ったあとに試合が終わったとき用の控え（画面の中で入れ替える）
 _WD_JA = ["月", "火", "水", "木", "金", "土", "日"]
 
+# ============================
+# 「今季成績・次の試合・どこで見れるか」型の試し（2026-10-23・strategy_20261023/plan.md 案1）
+# ここに入れた slug の日本語ページだけ、title・説明文・見出しをこの型にし、
+# 上のほうに「今季の成績」「次の試合」「どこで見れる？」を並べる。ほかの選手は今までどおり。
+# 効果を見てから人を増やす（slug を足すだけで効く）。
+# ============================
+TITLE_TRIAL_SLUGS = {"takefusa-kubo"}
+PLAYER_STATS_CUR_JSON = REPO_ROOT / "data" / "player_stats_2026-27.json"  # 2026-27（今季）の数字
+CUR_STATS_MAX_AGE_DAYS = 14  # 「○日時点」がこれより古ければ出さない（リーグページと同じ）
+
+
+def load_cur_stats() -> dict:
+    if not PLAYER_STATS_CUR_JSON.exists():
+        return {}
+    with open(PLAYER_STATS_CUR_JSON, encoding="utf-8") as f:
+        return json.load(f).get("stats", {})
+
+
+def get_cur_season_stats(player: dict, cur_stats: dict):
+    """今季（2026-27）の数字。Wikipedia の as_of が新しいものだけ。無ければ None（推測で埋めない）。"""
+    from datetime import datetime, timezone, timedelta
+    e = cur_stats.get(player.get("name_en", ""))
+    if not e or not e.get("as_of"):
+        return None
+    jst = timezone(timedelta(hours=9))
+    try:
+        as_of = datetime.strptime(e["as_of"], "%Y-%m-%d").replace(tzinfo=jst)
+    except ValueError:
+        return None
+    if (datetime.now(jst) - as_of).days > CUR_STATS_MAX_AGE_DAYS:
+        return None
+    return {"apps": e.get("apps"), "goals": e.get("goals"),
+            "total_apps": e.get("total_apps"), "total_goals": e.get("total_goals"),
+            "as_of": as_of, "wiki_page": e.get("wiki_page", ""),
+            "src": "Wikipedia（選手ページ）" if e.get("source") == "wikipedia_player_page" else "Wikipedia（クラブの今季ページ）"}
+
+
+def build_cur_stats_section(player: dict, cur: dict) -> str:
+    name_ja = player.get("name_ja", "")
+    league_ja = player.get("league_ja", "")
+    if not cur:
+        return f"""
+    <section class="player-section pt-stats" id="season-stats">
+      <h3>📊 {esc(name_ja)}の今季（2026-27）成績</h3>
+      <p class="no-data">今季の出場・得点の数字は、まだこのサイトに入っていません。</p>
+    </section>"""
+    def v(x):
+        return "—" if x is None else str(x)
+    wiki = ""
+    if cur.get("wiki_page"):
+        wiki = f' <a href="https://en.wikipedia.org/wiki/{esc(cur["wiki_page"].replace(" ", "_"))}" target="_blank" rel="noopener">→</a>'
+    return f"""
+    <section class="player-section pt-stats" id="season-stats">
+      <h3>📊 {esc(name_ja)}の今季（2026-27）成績</h3>
+      <div class="stats-grid">
+        <div class="stat-card"><div class="stat-label">{esc(league_ja)} 出場</div><div class="stat-value">{esc(v(cur.get("apps")))}</div></div>
+        <div class="stat-card"><div class="stat-label">{esc(league_ja)} ゴール</div><div class="stat-value">{esc(v(cur.get("goals")))}</div></div>
+        <div class="stat-card"><div class="stat-label">全大会 出場</div><div class="stat-value">{esc(v(cur.get("total_apps")))}</div></div>
+        <div class="stat-card"><div class="stat-label">全大会 ゴール</div><div class="stat-value">{esc(v(cur.get("total_goals")))}</div></div>
+      </div>
+      <div class="stats-source">{cur["as_of"].month}月{cur["as_of"].day}日の試合まで・出典：{esc(cur["src"])}{wiki}（全大会＝リーグ戦・国内カップ・欧州の大会の合計）</div>
+    </section>"""
+
+
+def build_where_section(player: dict, slug: str, upcoming: list, guides: dict, bc_services: dict) -> tuple:
+    """「どこで見れる？」欄（大会ごと）。返り値：(html, [(大会名, [配信名...])...])"""
+    name_ja = player.get("name_ja", "")
+    seen, blocks, summary = set(), [], []
+    comps = [(m.get("competition_id"), m.get("competition_ja", "")) for _, m in upcoming]
+    comps.insert(0, (player.get("competition_id"), player.get("league_ja", "")))
+    for cid, cja in comps:
+        if not cja or cja in seen:
+            continue
+        seen.add(cja)
+        watch = find_watch_guide(guides, cid, cja)
+        if watch.get("services"):
+            svc_html, _ = _watch_services_html(watch, bc_services, slug)
+            summary.append((cja, [sv.get("name", "") for sv in watch["services"]]))
+        else:
+            svc_html = _unconfirmed_html()
+        blocks.append(f'<div class="nw-card nw-card-league"><div class="nw-watch-h">{esc(cja)}</div>{svc_html}</div>')
+    html = f"""
+    <section class="player-section nw-section" id="where-to-watch">
+      <h3>📺 {esc(name_ja)}の試合はどこで見れる？</h3>
+      <div class="nw-cards">{"".join(blocks)}</div>
+      <p class="nw-note">今季このサイトに日程が入っている大会ごとの案内です。配信先・料金は各サービスの公式ページで確かめた日付つきで載せています。その試合を必ず中継するとは限りません。</p>
+    </section>"""
+    return html, summary
+
 
 # 取り出し方は scripts/watch_source.py に共通化（クラブ・リーグページ・matches.json と同じ。2026-10-22）
 from watch_source import load_league_guides, find_watch_guide, build_watch_cell, affiliate_for  # noqa: E402
@@ -224,7 +313,8 @@ def _unconfirmed_html() -> str:
     return ('<p class="nw-unconfirmed">配信先は確認中です（日本の配信サービスの公式ページで確かめられた分だけを載せています）。</p>')
 
 
-def build_next_watch_section(player: dict, slug: str, upcoming: list, guides: dict, bc_services: dict) -> tuple:
+def build_next_watch_section(player: dict, slug: str, upcoming: list, guides: dict, bc_services: dict,
+                             compact: bool = False) -> tuple:
     """選手ページ上部の「次の試合・どこで見れる」欄。
     返り値：(html, 情報) 情報＝{"has_match", "unconfirmed", "affiliate"}"""
     name_ja = player.get("name_ja", "")
@@ -245,6 +335,11 @@ def build_next_watch_section(player: dict, slug: str, upcoming: list, guides: di
             svc_html, aff = _watch_services_html(watch, bc_services, slug)
         else:
             svc_html, aff = _unconfirmed_html(), False
+        if compact:
+            # 試しの型：配信先は下の「どこで見れる？」欄にまとめ、ここは名前だけ
+            names = "・".join(sv.get("name", "") for sv in watch.get("services") or [])
+            svc_html = (f'<p class="nw-scope">{esc(names)}（<a href="#where-to-watch">くわしくは下へ</a>）</p>'
+                        if names else _unconfirmed_html())
         visible = i < NEXT_WATCH_SHOW
         if visible:
             info["has_match"] = True
@@ -286,7 +381,7 @@ def build_next_watch_section(player: dict, slug: str, upcoming: list, guides: di
     note = "" if not cards else '<p class="nw-note">リーグ戦と欧州の大会（CL・EL・ECL）の日程から出しています。国内のカップ戦などは入っていないことがあります。配信先は大会ごとの案内で、その試合を必ず中継するとは限りません。</p>'
     html = f"""
     <section class="player-section nw-section" id="next-watch">
-      <h3>📺 {esc(name_ja)}の次の試合・どこで見れる</h3>
+      <h3>{"📅" if compact else "📺"} {esc(name_ja)}の次の試合{"（日本時間）" if compact else "・どこで見れる"}</h3>
       <div class="nw-cards">{body}</div>
       {note}
     </section>"""
@@ -675,6 +770,12 @@ def foot_ja(foot: str) -> str:
     return foot or ""
 
 
+TRIAL_CSS = """
+    .pt-h1 { margin: 0; font-size: 1.5em; line-height: 1.3; }
+    .pt-h1-sub { display: block; font-size: 0.6em; font-weight: 700; color: #444; margin-top: 4px; }
+"""
+
+
 def build_player_page(player: dict, slug: str, scorer_stats: dict,
                       goal_events: list, club_matches: list, standing: dict,
                       wiki_stats: dict = None, services: dict = None,
@@ -683,7 +784,8 @@ def build_player_page(player: dict, slug: str, scorer_stats: dict,
                       highlights: list = None,
                       player_videos: list = None,
                       next_watch_html: str = "",
-                      guides: dict = None) -> str:
+                      guides: dict = None,
+                      trial: dict = None) -> str:
     if guides is None:
         guides = load_league_guides()
     name_ja = player.get("name_ja", "")
@@ -695,6 +797,8 @@ def build_player_page(player: dict, slug: str, scorer_stats: dict,
     note = player.get("note", "")
 
     title = f"{esc(name_ja)}（{esc(name_en)}）プロフィール｜football-jp"
+    if trial:
+        title = f"{name_ja}の今季成績・次の試合・どこで見れるか【2026-27】｜football-jp"
 
     # メタdesc生成（100-160字）
     goals_val = (wiki_stats or scorer_stats or {}).get("goals", 0) if (wiki_stats or scorer_stats) else 0
@@ -708,6 +812,18 @@ def build_player_page(player: dict, slug: str, scorer_stats: dict,
     if len(desc_raw) > 160:
         desc_raw = desc_raw[:157] + "…"
     desc = desc_raw
+    if trial:
+        cur = trial.get("cur")
+        parts = [f"{name_ja}（{club_ja}）の2026-27シーズンの成績"]
+        if cur:
+            parts.append(f"（{league_ja}{cur.get('apps')}試合{cur.get('goals')}ゴール・全大会{cur.get('total_apps')}試合{cur.get('total_goals')}ゴール、{cur['as_of'].month}月{cur['as_of'].day}日時点）")
+        parts.append("、次の試合の日本時間、どこで見れるか")
+        if trial.get("where"):
+            parts.append("（" + "／".join(f"{c}：{'・'.join(n)}" for c, n in trial["where"]) + "）")
+        parts.append("をまとめています。")
+        desc = "".join(parts)
+        if len(desc) > 160:
+            desc = desc[:157] + "…"
 
     canonical = f"{SITE_URL}/players/{slug}/"
 
@@ -1625,7 +1741,7 @@ def build_player_page(player: dict, slug: str, scorer_stats: dict,
       border-left: 3px solid #d4af37;
       border-radius: 2px;
     }}
-{NEXT_WATCH_CSS if next_watch_html else ""}    @media (max-width: 600px) {{
+{NEXT_WATCH_CSS if next_watch_html else ""}{TRIAL_CSS if trial else ""}    @media (max-width: 600px) {{
       .stats-grid {{ grid-template-columns: repeat(2, 1fr); }}
       .match-header, .match-row {{
         grid-template-columns: 80px 28px 1fr 45px;
@@ -1652,7 +1768,7 @@ def build_player_page(player: dict, slug: str, scorer_stats: dict,
 <div class="player-hero">
   <div class="name-block">
     <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;">
-      <h2 style="margin:0;">🇯🇵 {esc(name_ja)}</h2>
+      {f'<h1 class="pt-h1">🇯🇵 {esc(name_ja)}<span class="pt-h1-sub">の今季成績・次の試合・どこで見れるか</span></h1>' if trial else f'<h2 style="margin:0;">🇯🇵 {esc(name_ja)}</h2>'}
       <button class="fav-btn" data-slug="{slug}" onclick="fjFavorites.toggle('{slug}'); refreshFavBtn(this);" title="お気に入りに追加" aria-label="お気に入り"><span class="fav-star">☆</span></button>
     </div>
     <p class="name-en">{esc(name_en)}</p>
@@ -1667,9 +1783,9 @@ def build_player_page(player: dict, slug: str, scorer_stats: dict,
 
 <div style="max-width: 860px; margin: 0 auto;">
 
-  {next_watch_html}{profile_info_html}
+  {(trial["stats_html"] + next_watch_html + trial["where_html"]) if trial else next_watch_html}{profile_info_html}
 
-  {stats_html}
+  {"" if trial else stats_html}
 
   {standing_html}
 
@@ -2121,6 +2237,7 @@ def main():
     generated = []
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
     guides = load_league_guides()
+    cur_stats = load_cur_stats()
     nw_counts = {"pages": 0, "has_match": 0, "no_match": 0, "unconfirmed": [], "affiliate": []}
 
     for i, player in enumerate(players):
@@ -2146,9 +2263,18 @@ def main():
 
         # 次の試合・どこで見れる（セカンドチームの選手は、トップチームの試合を出さないので欄も出さない）
         next_watch_html = ""
+        trial = None
         if not is_second_team(player):
+            upcoming = get_upcoming_matches(get_next_watch_matches(player, matches, club_matches))
+            is_trial = slug in TITLE_TRIAL_SLUGS
             next_watch_html, nw_info = build_next_watch_section(
-                player, slug, get_upcoming_matches(get_next_watch_matches(player, matches, club_matches)), guides, services)
+                player, slug, upcoming, guides, services, compact=is_trial)
+            if is_trial:
+                cur = get_cur_season_stats(player, cur_stats)
+                where_html, where = build_where_section(player, slug, upcoming, guides, services)
+                trial = {"cur": cur, "where": where, "where_html": where_html,
+                         "stats_html": build_cur_stats_section(player, cur)}
+                print(f"  🧪 試しの型（今季成績・次の試合・どこで見れるか）: {name_ja} /players/{slug}/")
             nw_counts["pages"] += 1
             nw_counts["has_match" if nw_info["has_match"] else "no_match"] += 1
             if nw_info["unconfirmed"]:
@@ -2164,7 +2290,7 @@ def main():
                                  highlights=highlights,
                                  player_videos=player_vids if player_vids else None,
                                  next_watch_html=next_watch_html,
-                                 guides=guides)
+                                 guides=guides, trial=trial)
         if is_second_team(player):
             html = adjust_second_team(html, player, "ja")
 
