@@ -608,7 +608,8 @@ def load_data():
 
 def _from_scorers(entry: dict) -> bool:
     """football-data.org の得点ランキングから補った行（note に「scorers経由」）。アシストはそこに記録がある"""
-    return "scorers" in str(entry.get("note", ""))
+    # assists_unconfirmed が付いた行は、確かめられない値なので出さない（「—」）
+    return "scorers" in str(entry.get("note", "")) and not entry.get("assists_unconfirmed")
 
 
 def _stat_val(v) -> str:
@@ -626,7 +627,7 @@ def get_player_wiki_stats(player: dict, player_stats: dict) -> dict:
         return {
             "goals": entry.get("goals", 0),
             "assists": entry.get("assists") if _from_scorers(entry) else None,  # Wikipedia の成績表にアシストは無い（0 と出さず「—」。2026-10-23）
-            "from_scorers": _from_scorers(entry),
+            "from_scorers": "scorers" in str(entry.get("note", "")),
             "penalties": None,
             "played": entry.get("apps", 0),
             "source": "wikipedia",
@@ -947,7 +948,7 @@ def build_player_page(player: dict, slug: str, scorer_stats: dict,
     active_stats = wiki_stats if wiki_stats else scorer_stats
     stats_source_note = ""
     if wiki_stats:
-        stats_source_note = ('<div class="stats-source">出典: Football-Data.org の得点ランキング（PKは記録が無いため「—」）</div>'
+        stats_source_note = ('<div class="stats-source">出典: Football-Data.org の得点ランキング（記録が無い・確かめられない項目は「—」）</div>'
                              if wiki_stats.get("from_scorers") else
                              '<div class="stats-source">出典: Wikipedia（アシスト・PKは出典の成績表に無いため「—」）</div>')
     elif scorer_stats:
