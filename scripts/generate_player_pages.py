@@ -606,6 +606,16 @@ def load_data():
     return players, matches, matches_dict, scorers_comps, events, standings_comps, player_stats, services, player_info, player_videos
 
 
+def _from_scorers(entry: dict) -> bool:
+    """football-data.org の得点ランキングから補った行（note に「scorers経由」）。アシストはそこに記録がある"""
+    return "scorers" in str(entry.get("note", ""))
+
+
+def _stat_val(v) -> str:
+    """成績の数字。記録が無い（None）は 0 ではなく「—」"""
+    return "—" if v is None or v == "" else str(v)
+
+
 def get_player_wiki_stats(player: dict, player_stats: dict) -> dict:
     """player_stats.json（Wikipediaソース）から選手統計を取得する。"""
     name_en = player.get("name_en", "")
@@ -615,8 +625,9 @@ def get_player_wiki_stats(player: dict, player_stats: dict) -> dict:
     if entry:
         return {
             "goals": entry.get("goals", 0),
-            "assists": entry.get("assists", 0),
-            "penalties": 0,
+            "assists": entry.get("assists") if _from_scorers(entry) else None,  # Wikipedia の成績表にアシストは無い（0 と出さず「—」。2026-10-23）
+            "from_scorers": _from_scorers(entry),
+            "penalties": None,
             "played": entry.get("apps", 0),
             "source": "wikipedia",
         }
@@ -651,8 +662,8 @@ def get_player_scorer_stats(player: dict, scorers_comps: dict) -> dict:
                 if club_id and s.get("team_id") == club_id:
                     return {
                         "goals": s.get("goals", 0),
-                        "assists": s.get("assists", 0),
-                        "penalties": s.get("penalties", 0),
+                        "assists": s.get("assists"),
+                        "penalties": s.get("penalties"),
                         "played": s.get("playedMatches", 0),
                     }
 
@@ -936,9 +947,11 @@ def build_player_page(player: dict, slug: str, scorer_stats: dict,
     active_stats = wiki_stats if wiki_stats else scorer_stats
     stats_source_note = ""
     if wiki_stats:
-        stats_source_note = '<div class="stats-source">出典: Wikipedia</div>'
+        stats_source_note = ('<div class="stats-source">出典: Football-Data.org の得点ランキング（PKは記録が無いため「—」）</div>'
+                             if wiki_stats.get("from_scorers") else
+                             '<div class="stats-source">出典: Wikipedia（アシスト・PKは出典の成績表に無いため「—」）</div>')
     elif scorer_stats:
-        stats_source_note = '<div class="stats-source">出典: Football-Data.org</div>'
+        stats_source_note = '<div class="stats-source">出典: Football-Data.org（記録が無い項目は「—」）</div>'
 
     stats_html = ""
     if active_stats:
@@ -948,19 +961,19 @@ def build_player_page(player: dict, slug: str, scorer_stats: dict,
       <div class="stats-grid">
         <div class="stat-card">
           <div class="stat-label">出場試合</div>
-          <div class="stat-value">{esc(str(active_stats.get('played', '—')))}</div>
+          <div class="stat-value">{esc(_stat_val(active_stats.get('played')))}</div>
         </div>
         <div class="stat-card">
           <div class="stat-label">ゴール</div>
-          <div class="stat-value">{esc(str(active_stats.get('goals', '—')))}</div>
+          <div class="stat-value">{esc(_stat_val(active_stats.get('goals')))}</div>
         </div>
         <div class="stat-card">
           <div class="stat-label">アシスト</div>
-          <div class="stat-value">{esc(str(active_stats.get('assists', '—')))}</div>
+          <div class="stat-value">{esc(_stat_val(active_stats.get('assists')))}</div>
         </div>
         <div class="stat-card">
           <div class="stat-label">PK</div>
-          <div class="stat-value">{esc(str(active_stats.get('penalties', '—')))}</div>
+          <div class="stat-value">{esc(_stat_val(active_stats.get('penalties')))}</div>
         </div>
       </div>
       {stats_source_note}
@@ -1128,13 +1141,12 @@ def build_player_page(player: dict, slug: str, scorer_stats: dict,
             minute_raw = g.get("minute_raw", str(g.get("minute", "?")))
             goal_note = g.get("note", "")
             comp_ja_g = g.get("competition_ja", "")
-            if goal_note:
-                minute_raw += f" ({goal_note})"
+            note_ja = {"pen.": "PK", "o.g.": "オウンゴール"}.get(goal_note, goal_note)
             goal_rows += f"""
           <div class="goal-row">
             <div class="goal-date">{date_display}</div>
             <div class="goal-match">{esc(home_ja_g)} vs {esc(away_ja_g)}</div>
-            <div class="goal-minute">{esc(minute_raw)}分</div>
+            <div class="goal-minute">{esc(minute_raw)}分{f"（{esc(note_ja)}）" if note_ja else ""}</div>
             <div class="goal-comp">{esc(comp_ja_g)}</div>
           </div>"""
         goals_html = f"""
