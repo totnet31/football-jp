@@ -469,6 +469,11 @@
     .nw-unconfirmed { font-size: 13px; color: #555; margin: 0; }
     .nw-none { font-size: 13px; color: #444; margin: 0 0 10px; }
     .nw-note { font-size: 11px; color: #888; margin: 10px 0 0; line-height: 1.5; }
+
+    .cs-asof { display: inline-block; margin: 0 0 8px; padding: 3px 10px; border-radius: 12px; background: #0047ab; color: #fff; font-size: 13px; font-weight: 700; }
+    .cs-stale { margin: 0 0 8px; padding: 8px 10px; border-radius: 6px; background: #fff7e6; border: 1px solid #f5c26b; font-size: 13px; line-height: 1.5; }
+    .cs-scope { margin: 0 0 8px; font-size: 12px; color: #444; line-height: 1.5; }
+    .goals-note { margin: 8px 0 0; font-size: 12px; color: #555; line-height: 1.5; }
     @media (max-width: 600px) {
       .stats-grid { grid-template-columns: repeat(2, 1fr); }
       .match-header, .match-row {
@@ -543,6 +548,17 @@
     </section>
 
   
+    <section class="player-section pt-stats" id="season-stats">
+      <h3>📊 田中碧の今季（2026-27）成績</h3>
+      <p class="cs-asof">🗓 10月18日の試合までの数字です</p><p class="cs-scope">リーズ・ユナイテッドでの数字です。</p>
+      <div class="stats-grid">
+        <div class="stat-card"><div class="stat-label">プレミアリーグ 出場</div><div class="stat-value">6</div></div>
+        <div class="stat-card"><div class="stat-label">プレミアリーグ ゴール</div><div class="stat-value">0</div></div>
+        <div class="stat-card"><div class="stat-label">全大会 出場</div><div class="stat-value">8</div></div>
+        <div class="stat-card"><div class="stat-label">全大会 ゴール</div><div class="stat-value">0</div></div>
+      </div>
+      <div class="stats-source">出典：Wikipedia（クラブの今季ページ） <a href="https://en.wikipedia.org/wiki/2026–27_Leeds_United_F.C._season" target="_blank" rel="noopener">→</a>（全大会＝リーグ戦・国内カップ・欧州の大会の合計）</div>
+    </section>
     <section class="player-section">
       <h3>📊 2025-26シーズン成績（リーグ戦）</h3>
       <div class="stats-grid">
@@ -776,7 +792,8 @@
   
     <section class="player-section">
       <h3>⚽ 直近のゴール</h3>
-      <p class="no-data">今シーズンまだゴールなし（または取得範囲外）。</p>
+      <p class="no-data">今シーズンのゴールの記録は、まだありません。</p>
+      <p class="goals-note">10月18日の試合まで。リーグ戦と欧州の大会（CL・EL・ECL）のゴールです（国内カップ戦は入っていません）。出典：Wikipedia の試合記録</p>
     </section>
 
   

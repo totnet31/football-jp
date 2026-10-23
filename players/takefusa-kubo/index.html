@@ -472,6 +472,11 @@
 
     .pt-h1 { margin: 0; font-size: 1.5em; line-height: 1.3; }
     .pt-h1-sub { display: block; font-size: 0.6em; font-weight: 700; color: #444; margin-top: 4px; }
+
+    .cs-asof { display: inline-block; margin: 0 0 8px; padding: 3px 10px; border-radius: 12px; background: #0047ab; color: #fff; font-size: 13px; font-weight: 700; }
+    .cs-stale { margin: 0 0 8px; padding: 8px 10px; border-radius: 6px; background: #fff7e6; border: 1px solid #f5c26b; font-size: 13px; line-height: 1.5; }
+    .cs-scope { margin: 0 0 8px; font-size: 12px; color: #444; line-height: 1.5; }
+    .goals-note { margin: 8px 0 0; font-size: 12px; color: #555; line-height: 1.5; }
     @media (max-width: 600px) {
       .stats-grid { grid-template-columns: repeat(2, 1fr); }
       .match-header, .match-row {
@@ -532,13 +537,14 @@
   
     <section class="player-section pt-stats" id="season-stats">
       <h3>📊 久保建英の今季（2026-27）成績</h3>
+      <p class="cs-asof">🗓 10月22日の試合までの数字です</p>
       <div class="stats-grid">
         <div class="stat-card"><div class="stat-label">ラ・リーガ 出場</div><div class="stat-value">6</div></div>
         <div class="stat-card"><div class="stat-label">ラ・リーガ ゴール</div><div class="stat-value">1</div></div>
         <div class="stat-card"><div class="stat-label">全大会 出場</div><div class="stat-value">9</div></div>
         <div class="stat-card"><div class="stat-label">全大会 ゴール</div><div class="stat-value">1</div></div>
       </div>
-      <div class="stats-source">10月22日の試合まで・出典：Wikipedia（選手ページ） <a href="https://en.wikipedia.org/wiki/Takefusa_Kubo" target="_blank" rel="noopener">→</a>（全大会＝リーグ戦・国内カップ・欧州の大会の合計）</div>
+      <div class="stats-source">出典：Wikipedia（選手ページ） <a href="https://en.wikipedia.org/wiki/Takefusa_Kubo" target="_blank" rel="noopener">→</a>（全大会＝リーグ戦・国内カップ・欧州の大会の合計）</div>
     </section>
     <section class="player-section nw-section" id="next-watch">
       <h3>📅 久保建英の次の試合（日本時間）</h3>
@@ -892,6 +898,7 @@
             <div class="goal-comp">ラ・リーガ</div>
           </div>
       </div>
+      <p class="goals-note">10月23日の試合まで。リーグ戦と欧州の大会（CL・EL・ECL）のゴールです（国内カップ戦は入っていません）。出典：Wikipedia の試合記録</p>
     </section>
 
   

@@ -154,17 +154,24 @@ def get_cur_season_stats(player: dict, cur_stats: dict):
         as_of = datetime.strptime(e["as_of"], "%Y-%m-%d").replace(tzinfo=jst)
     except ValueError:
         return None
-    if (datetime.now(jst) - as_of).days > CUR_STATS_MAX_AGE_DAYS:
-        return None
+    # 古くても消さない（見出しの近くに「◯日の試合までの数字」と出す。2026-10-23 とっとさん判断）
     return {"apps": e.get("apps"), "goals": e.get("goals"),
             "total_apps": e.get("total_apps"), "total_goals": e.get("total_goals"),
             "as_of": as_of, "wiki_page": e.get("wiki_page", ""),
+            "club_page": e.get("source") != "wikipedia_player_page",
             "src": "Wikipedia（選手ページ）" if e.get("source") == "wikipedia_player_page" else "Wikipedia（クラブの今季ページ）"}
 
 
-def build_cur_stats_section(player: dict, cur: dict) -> str:
+def build_cur_stats_section(player: dict, cur: dict, latest_dt=None, goals_through=None,
+                            other_club_goals: bool = False) -> str:
+    """今季（2026-27）成績の欄。
+    latest_dt：このクラブの最新の終わった試合（日本時間）。表の日付より新しければ「まだ入っていない」と出す
+    goals_through：下の「直近のゴール」がいつの試合まで入っているか
+    other_club_goals：今季、いまのクラブ以外でのゴールが記録にある（＝途中で移籍してきた）"""
+    from datetime import timedelta
     name_ja = player.get("name_ja", "")
     league_ja = player.get("league_ja", "")
+    club_ja = player.get("club_ja", "")
     if not cur:
         return f"""
     <section class="player-section pt-stats" id="season-stats">
@@ -176,17 +183,60 @@ def build_cur_stats_section(player: dict, cur: dict) -> str:
     wiki = ""
     if cur.get("wiki_page"):
         wiki = f' <a href="https://en.wikipedia.org/wiki/{esc(cur["wiki_page"].replace(" ", "_"))}" target="_blank" rel="noopener">→</a>'
+    a = cur["as_of"]
+    notes = [f'<p class="cs-asof">🗓 {a.month}月{a.day}日の試合までの数字です</p>']
+    # 日本時間の日付は欧州の試合日の翌日になることがあるので、1日引いて比べる
+    if latest_dt is not None and (latest_dt - timedelta(days=1)).date() > a.date():
+        lt = f"{latest_dt.month}月{latest_dt.day}日"
+        gt = f"・下の「直近のゴール」は{goals_through.month}月{goals_through.day}日の試合まで入っているため、数字が合わないことがあります" if goals_through else ""
+        notes.append(f'<p class="cs-stale">⚠️ そのあとの試合（最新は{lt}）の分は、まだこの表に入っていません{gt}。</p>')
+    if cur.get("club_page"):
+        if other_club_goals:
+            notes.append(f'<p class="cs-scope">{esc(club_ja)}での数字です。今季の途中に移籍してきたため、前のクラブでの出場・得点は入っていません（下の「直近のゴール」には前のクラブでのゴールも載っています）。</p>')
+        else:
+            notes.append(f'<p class="cs-scope">{esc(club_ja)}での数字です。</p>')
     return f"""
     <section class="player-section pt-stats" id="season-stats">
       <h3>📊 {esc(name_ja)}の今季（2026-27）成績</h3>
+      {"".join(notes)}
       <div class="stats-grid">
         <div class="stat-card"><div class="stat-label">{esc(league_ja)} 出場</div><div class="stat-value">{esc(v(cur.get("apps")))}</div></div>
         <div class="stat-card"><div class="stat-label">{esc(league_ja)} ゴール</div><div class="stat-value">{esc(v(cur.get("goals")))}</div></div>
         <div class="stat-card"><div class="stat-label">全大会 出場</div><div class="stat-value">{esc(v(cur.get("total_apps")))}</div></div>
         <div class="stat-card"><div class="stat-label">全大会 ゴール</div><div class="stat-value">{esc(v(cur.get("total_goals")))}</div></div>
       </div>
-      <div class="stats-source">{cur["as_of"].month}月{cur["as_of"].day}日の試合まで・出典：{esc(cur["src"])}{wiki}（全大会＝リーグ戦・国内カップ・欧州の大会の合計）</div>
+      <div class="stats-source">出典：{esc(cur["src"])}{wiki}（全大会＝リーグ戦・国内カップ・欧州の大会の合計）</div>
     </section>"""
+
+
+def _season_marks(player: dict, club_matches: list, events: dict, goal_events: list, matches_dict: dict):
+    """(最新の終わった試合の日時, ゴール欄がいつの試合まで入っているか, 今季ほかのクラブでのゴールがあるか)"""
+    from datetime import datetime
+    latest, through = None, None
+    for m in club_matches:
+        if m.get("status") != "FINISHED" or not m.get("kickoff_jst"):
+            continue
+        try:
+            dt = datetime.fromisoformat(m["kickoff_jst"])
+        except ValueError:
+            continue
+        if latest is None or dt > latest:
+            latest = dt
+        if str(m.get("id")) in events and (through is None or dt > through):
+            through = dt
+    club_id = player.get("club_id")
+    other = False
+    if club_id:
+        for g in goal_events:
+            if g.get("kickoff_jst", "") < SEASON_START:
+                continue
+            m = matches_dict.get(g.get("match_id"), {})
+            if m and club_id not in (m.get("home_id"), m.get("away_id")):
+                other = True
+    return latest, through, other
+
+
+SEASON_START = "2026-07-01"
 
 
 def build_where_section(player: dict, slug: str, upcoming: list, guides: dict, bc_services: dict) -> tuple:
@@ -785,6 +835,13 @@ def foot_ja(foot: str) -> str:
     return foot or ""
 
 
+CUR_STATS_CSS = """
+    .cs-asof { display: inline-block; margin: 0 0 8px; padding: 3px 10px; border-radius: 12px; background: #0047ab; color: #fff; font-size: 13px; font-weight: 700; }
+    .cs-stale { margin: 0 0 8px; padding: 8px 10px; border-radius: 6px; background: #fff7e6; border: 1px solid #f5c26b; font-size: 13px; line-height: 1.5; }
+    .cs-scope { margin: 0 0 8px; font-size: 12px; color: #444; line-height: 1.5; }
+    .goals-note { margin: 8px 0 0; font-size: 12px; color: #555; line-height: 1.5; }
+"""
+
 TRIAL_CSS = """
     .pt-h1 { margin: 0; font-size: 1.5em; line-height: 1.3; }
     .pt-h1-sub { display: block; font-size: 0.6em; font-weight: 700; color: #444; margin-top: 4px; }
@@ -800,7 +857,9 @@ def build_player_page(player: dict, slug: str, scorer_stats: dict,
                       player_videos: list = None,
                       next_watch_html: str = "",
                       guides: dict = None,
-                      trial: dict = None) -> str:
+                      trial: dict = None,
+                      cur_stats_html: str = "",
+                      goals_through=None) -> str:
     if guides is None:
         guides = load_league_guides()
     name_ja = player.get("name_ja", "")
@@ -1048,6 +1107,9 @@ def build_player_page(player: dict, slug: str, scorer_stats: dict,
 
     # --- ゴールセクション ---
     goals_html = ""
+    through = f"{goals_through.month}月{goals_through.day}日の試合まで。" if goals_through else ""
+    goals_note = (f'<p class="goals-note">{through}リーグ戦と欧州の大会（CL・EL・ECL）のゴールです（国内カップ戦は入っていません）。'
+                  f'出典：Wikipedia の試合記録</p>')
     if goal_events:
         goal_rows = ""
         for g in goal_events:
@@ -1081,12 +1143,14 @@ def build_player_page(player: dict, slug: str, scorer_stats: dict,
       <div class="goals-list">
         {goal_rows}
       </div>
+      {goals_note}
     </section>"""
     else:
-        goals_html = """
+        goals_html = f"""
     <section class="player-section">
       <h3>⚽ 直近のゴール</h3>
-      <p class="no-data">今シーズンまだゴールなし（または取得範囲外）。</p>
+      <p class="no-data">今シーズンのゴールの記録は、まだありません。</p>
+      {goals_note}
     </section>"""
 
     # --- 選手別ゴール集動画セクション（優先） ---
@@ -1756,7 +1820,7 @@ def build_player_page(player: dict, slug: str, scorer_stats: dict,
       border-left: 3px solid #d4af37;
       border-radius: 2px;
     }}
-{NEXT_WATCH_CSS if next_watch_html else ""}{TRIAL_CSS if trial else ""}    @media (max-width: 600px) {{
+{NEXT_WATCH_CSS if next_watch_html else ""}{TRIAL_CSS if trial else ""}{CUR_STATS_CSS}    @media (max-width: 600px) {{
       .stats-grid {{ grid-template-columns: repeat(2, 1fr); }}
       .match-header, .match-row {{
         grid-template-columns: 80px 28px 1fr 45px;
@@ -1800,7 +1864,7 @@ def build_player_page(player: dict, slug: str, scorer_stats: dict,
 
   {(trial["stats_html"] + next_watch_html + trial["where_html"]) if trial else next_watch_html}{profile_info_html}
 
-  {"" if trial else stats_html}
+  {"" if trial else cur_stats_html + stats_html}
 
   {standing_html}
 
@@ -2280,16 +2344,22 @@ def main():
         # 次の試合・どこで見れる（セカンドチームの選手は、トップチームの試合を出さないので欄も出さない）
         next_watch_html = ""
         trial = None
+        # 今季の成績・ゴール欄の「いつの試合まで」
+        latest_dt, goals_through, other_club_goals = _season_marks(player, club_matches, events, goal_events, matches_dict)
+        cur = None if is_second_team(player) else get_cur_season_stats(player, cur_stats)
+        cur_stats_html = ""
+        if cur and slug not in TITLE_TRIAL_SLUGS:
+            cur_stats_html = build_cur_stats_section(player, cur, latest_dt, goals_through, other_club_goals)
         if not is_second_team(player):
             upcoming = get_upcoming_matches(get_next_watch_matches(player, matches, club_matches))
             is_trial = slug in TITLE_TRIAL_SLUGS
             next_watch_html, nw_info = build_next_watch_section(
                 player, slug, upcoming, guides, services, compact=is_trial)
             if is_trial:
-                cur = get_cur_season_stats(player, cur_stats)
                 where_html, where = build_where_section(player, slug, upcoming, guides, services)
                 trial = {"cur": cur, "where": where, "where_html": where_html,
-                         "stats_html": build_cur_stats_section(player, cur)}
+                         "stats_html": build_cur_stats_section(player, cur, latest_dt, goals_through, other_club_goals)
+                                       if cur else build_cur_stats_section(player, None)}
                 print(f"  🧪 試しの型（今季成績・次の試合・どこで見れるか）: {name_ja} /players/{slug}/")
             nw_counts["pages"] += 1
             nw_counts["has_match" if nw_info["has_match"] else "no_match"] += 1
@@ -2306,7 +2376,8 @@ def main():
                                  highlights=highlights,
                                  player_videos=player_vids if player_vids else None,
                                  next_watch_html=next_watch_html,
-                                 guides=guides, trial=trial)
+                                 guides=guides, trial=trial,
+                                 cur_stats_html=cur_stats_html, goals_through=goals_through)
         if is_second_team(player):
             html = adjust_second_team(html, player, "ja")
 

@@ -230,6 +230,9 @@ def _parse_header_cols(table_body: str):
             label_part = part
             if '|' in label_part:
                 label_part = label_part.split('|', 1)[-1]
+            # {{tooltip|Goals|Goals}}・{{abbr|Gls|Goals}} は表示の語を残す（消すと「得点の列が無い表」と
+            # 判定され、得点が0になっていた。2026–27 Southampton。2026-10-23）
+            label_part = re.sub(r'\{\{\s*(?:tooltip|abbr)\s*\|([^|}]*)(?:\|[^}]*)?\}\}', r'\1', label_part, flags=re.I)
             label = re.sub(r'\{\{[^}]*\}\}', '', label_part)
             label = re.sub(r'\[\[[^\]]*\]\]', '', label)
             label = re.sub(r'<[^>]+>', '', label).strip().lower()
@@ -253,6 +256,9 @@ def _flatten_cells(row: str) -> list:
                   and not l.startswith('|-') and not l.startswith('!')]
     cells = []
     for line in cell_lines:
+        # <!-- League --> のような注記を外す（2026–27 Southampton の表で、得点のセルが
+        # 「2<!-- League -->」になっていて数字と読めず、列が1つずれて得点0になっていた。2026-10-23）
+        line = re.sub(r'<!--.*?-->', '', line)
         # {{sortname}} を展開
         line = _expand_sortname(line)
         if '||' in line:
@@ -332,7 +338,8 @@ def parse_wikitable_format(wikitext: str) -> list:
         # 数値セルを収集（選手名セル以降）
         raw_values = []
         for c in cells[player_cell_idx + 1:]:
-            c_clean = c.strip()
+            # 太字（'''8(5)'''）も数字として読む（読めないと列がずれる。2026-10-23）
+            c_clean = c.strip().replace("'''", "")
             if re.match(r"^\d+(\+\d+)?$", c_clean) or re.match(r"^\d+\(\d+\)$", c_clean) or re.match(r"^'''\d+'''$", c_clean) or c_clean in ('-', '—', '–', ''):
                 raw_values.append(c_clean if c_clean else '0')
 
