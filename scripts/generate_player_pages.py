@@ -254,7 +254,7 @@ def build_where_section(player: dict, slug: str, upcoming: list, guides: dict, b
             svc_html, _ = _watch_services_html(watch, bc_services, slug)
             summary.append((cja, [sv.get("name", "") for sv in watch["services"]]))
         else:
-            svc_html = _unconfirmed_html()
+            svc_html = _unconfirmed_html(cid)
         blocks.append(f'<div class="nw-card nw-card-league"><div class="nw-watch-h">{esc(cja)}</div>{svc_html}</div>')
     html = f"""
     <section class="player-section nw-section" id="where-to-watch">
@@ -266,7 +266,7 @@ def build_where_section(player: dict, slug: str, upcoming: list, guides: dict, b
 
 
 # 取り出し方は scripts/watch_source.py に共通化（クラブ・リーグページ・matches.json と同じ。2026-10-22）
-from watch_source import load_league_guides, find_watch_guide, build_watch_cell, affiliate_for  # noqa: E402
+from watch_source import load_league_guides, find_watch_guide, build_watch_cell, affiliate_for, is_domestic_cup  # noqa: E402
 
 
 def _parse_ko(kickoff: str):
@@ -359,8 +359,46 @@ def build_table_watch_cell(guides: dict, bc_services: dict, competition_id, comp
 TABLE_WATCH_STATS = {"affiliate_links": 0, "unconfirmed_rows": 0}
 
 
-def _unconfirmed_html() -> str:
+def _unconfirmed_html(competition_id=None) -> str:
+    if is_domestic_cup(competition_id):
+        return ('<p class="nw-unconfirmed">配信未確認（この大会を日本で配信しているところは、まだ確かめられていません）。</p>')
     return ('<p class="nw-unconfirmed">配信先は確認中です（日本の配信サービスの公式ページで確かめられた分だけを載せています）。</p>')
+
+
+# 国内カップ戦（2026-10-23）。リーグ → その国のカップ戦。scripts/fetch_domestic_cups.py が Wikipedia から
+# 日本人所属クラブの試合を取り込む。試合データに1試合も無い大会は「まだ入っていません」と書く。
+LEAGUE_CUPS = {
+    "プレミアリーグ": ["カラバオカップ", "FAカップ"],
+    "チャンピオンシップ": ["カラバオカップ", "FAカップ"],
+    "ブンデスリーガ": ["DFBポカール"],
+    "ブンデスリーガ2部": ["DFBポカール"],
+    "ラ・リーガ": ["コパ・デル・レイ"],
+    "セリエA": ["コッパ・イタリア"],
+    "エールディビジ": ["KNVBベーカー"],
+    "ジュピラー・プロ・リーグ": ["ベルギーカップ"],
+    "リーグ・アン": ["クープ・ドゥ・フランス"],
+    "プリメイラ・リーガ": ["タッサ・デ・ポルトゥガル"],
+}
+CUPS_NOT_SUPPORTED = {"タッサ・デ・ポルトゥガル"}
+CUPS_WITH_DATA = set()  # main() で matches.json から入れる（国内カップ戦の大会名）
+
+
+def cup_scope(player: dict) -> tuple:
+    """(入っているカップ戦の名前, 入っていないカップ戦の名前)"""
+    cups = LEAGUE_CUPS.get(player.get("league_ja", ""), [])
+    return [c for c in cups if c in CUPS_WITH_DATA], [c for c in cups if c not in CUPS_WITH_DATA]
+
+
+def comps_phrase(player: dict) -> str:
+    """「リーグ戦・欧州の大会（CL・EL・ECL）・カラバオカップ」＋「（FAカップはまだ入っていません）」"""
+    inc, exc = cup_scope(player)
+    base = "リーグ戦と欧州の大会（CL・EL・ECL）" if not inc else f"リーグ戦・欧州の大会（CL・EL・ECL）・{'・'.join(inc)}"
+    if exc:
+        # タッサ・デ・ポルトゥガルは取り込む仕組みが無い（Wikipedia のページに試合ごとの記録の枠が無い）ので「まだ」と書かない
+        tail = f"（{'・'.join(exc)}は{'' if set(exc) <= CUPS_NOT_SUPPORTED else 'まだ'}入っていません）"
+    else:
+        tail = "" if inc else "（国内カップ戦は入っていません）"
+    return base, tail
 
 
 def build_next_watch_section(player: dict, slug: str, upcoming: list, guides: dict, bc_services: dict,
@@ -384,12 +422,12 @@ def build_next_watch_section(player: dict, slug: str, upcoming: list, guides: di
         if watch.get("services"):
             svc_html, aff = _watch_services_html(watch, bc_services, slug)
         else:
-            svc_html, aff = _unconfirmed_html(), False
+            svc_html, aff = _unconfirmed_html(m.get("competition_id")), False
         if compact:
             # 試しの型：配信先は下の「どこで見れる？」欄にまとめ、ここは名前だけ
             names = "・".join(sv.get("name", "") for sv in watch.get("services") or [])
             svc_html = (f'<p class="nw-scope">{esc(names)}（<a href="#where-to-watch">くわしくは下へ</a>）</p>'
-                        if names else _unconfirmed_html())
+                        if names else _unconfirmed_html(m.get("competition_id")))
         visible = i < NEXT_WATCH_SHOW
         if visible:
             info["has_match"] = True
@@ -428,7 +466,8 @@ def build_next_watch_section(player: dict, slug: str, upcoming: list, guides: di
     else:
         body = "".join(cards) + '<p class="nw-none nw-none-js" hidden>次の試合の日程は、まだこのサイトに入っていません。日程が出たら、1日3回の自動更新でここに載ります。</p>'
 
-    note = "" if not cards else '<p class="nw-note">リーグ戦と欧州の大会（CL・EL・ECL）の日程から出しています。国内のカップ戦などは入っていないことがあります。配信先は大会ごとの案内で、その試合を必ず中継するとは限りません。</p>'
+    _base, _tail = comps_phrase(player)
+    note = "" if not cards else f'<p class="nw-note">{esc(_base)}の日程から出しています{esc(_tail)}。配信先は大会ごとの案内で、その試合を必ず中継するとは限りません。</p>'
     html = f"""
     <section class="player-section nw-section" id="next-watch">
       <h3>{"📅" if compact else "📺"} {esc(name_ja)}の次の試合{"（日本時間）" if compact else "・どこで見れる"}</h3>
@@ -730,12 +769,24 @@ def get_player_goals(player: dict, events: dict, matches_dict: dict, known_ja: s
     return goal_events[:10]
 
 
+def cup_matches_for_name(name_ja: str, matches: list) -> list:
+    """国内カップ戦（scripts/fetch_domestic_cups.py の試合）のうち、name_ja の選手が試合データに載っているもの"""
+    if not name_ja:
+        return []
+    return [m for m in matches if str(m.get("id", "")).startswith("CUP_")
+            and any(jp.get("name_ja") == name_ja for jp in m.get("japanese_players") or [])]
+
+
 def get_club_matches(player: dict, matches: list) -> list:
     """選手所属クラブの全試合を取得する（新しい順）。"""
     club_id = player.get("club_id")
     if not club_id:
         # クラブ番号の無いブンデス2部の選手は、OpenLigaDB の試合を名前で選ぶ（2026-10-22）
-        return [m for m, _side in openligadb_matches_for_names([player.get("name_ja")], matches)]
+        # 国内カップ戦（ベルギーカップ・DFBポカールなど）も試合データの日本人選手の名前で選ぶ（2026-10-23）
+        out = [m for m, _side in openligadb_matches_for_names([player.get("name_ja")], matches)]
+        out += cup_matches_for_name(player.get("name_ja"), matches)
+        out.sort(key=lambda x: x.get("kickoff_jst", ""), reverse=True)
+        return out
 
     club_matches = [
         m for m in matches
@@ -1122,7 +1173,8 @@ def build_player_page(player: dict, slug: str, scorer_stats: dict,
     # --- ゴールセクション ---
     goals_html = ""
     through = f"{goals_through.month}月{goals_through.day}日の試合まで。" if goals_through else ""
-    goals_note = (f'<p class="goals-note">{through}リーグ戦と欧州の大会（CL・EL・ECL）のゴールです（国内カップ戦は入っていません）。'
+    _base, _tail = comps_phrase(player)
+    goals_note = (f'<p class="goals-note">{through}{esc(_base)}のゴールです{esc(_tail)}。'
                   f'出典：Wikipedia の試合記録</p>')
     if goal_events:
         goal_rows = ""
@@ -2321,7 +2373,8 @@ def main():
     print(f"  選手数: {len(players)}")
     print(f"  試合数: {len(matches)}")
     global TOTAL_PLAYERS
-    TOTAL_PLAYERS = len(players)  # 選手ページの説明文の「全◯名」に使う
+    TOTAL_PLAYERS = len(players)
+    CUPS_WITH_DATA.update(m.get("competition_ja") for m in matches if m.get("competition_category") == "domestic_cup")  # 選手ページの説明文の「全◯名」に使う
 
     # slug生成
     slug_map = make_unique_slugs(players)

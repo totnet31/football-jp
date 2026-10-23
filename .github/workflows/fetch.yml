@@ -113,6 +113,10 @@ jobs:
         run: python3 scripts/fetch_uefa_secondary.py
         continue-on-error: true
 
+      - name: 国内カップ戦（日本人所属クラブの試合・得点者）取得（Wikipedia）
+        run: python3 scripts/fetch_domestic_cups.py
+        continue-on-error: true
+
       - name: 選手統計取得（Wikipedia season ページ）
         run: python3 scripts/fetch_wiki_player_stats.py
         continue-on-error: true

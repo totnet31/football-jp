@@ -31,6 +31,15 @@ LEAGUE_JA_TO_EN = {
     "UEFAヨーロッパリーグ": "UEFA Europa League",
     "UEFAカンファレンスリーグ": "UEFA Conference League",
     "キリンチャレンジカップ": "Kirin Challenge Cup",
+    # 国内カップ戦（2026-10-23）
+    "カラバオカップ": "EFL Cup",
+    "FAカップ": "FA Cup",
+    "DFBポカール": "DFB-Pokal",
+    "コパ・デル・レイ": "Copa del Rey",
+    "コッパ・イタリア": "Coppa Italia",
+    "KNVBベーカー": "KNVB Cup",
+    "ベルギーカップ": "Belgian Cup",
+    "クープ・ドゥ・フランス": "Coupe de France",
 }
 
 # ============================

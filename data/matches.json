@@ -2,7 +2,7 @@
   "updated": "2026-10-23T17:03:38.518069+09:00",
   "date_from": "2026-10-16",
   "date_to": "2026-11-06",
-  "match_count": 1643,
+  "match_count": 1704,
   "_note": "累積保持モード：フェッチ窓外の過去試合データはそのまま保持される。",
   "matches": [
     {
@@ -14454,6 +14454,39 @@
       "venue": "国立競技場（東京）"
     },
     {
+      "id": "CUP_EFL_2026-08-06_Bristo_Walsal",
+      "competition_id": 48,
+      "competition_ja": "カラバオカップ",
+      "competition_category": "domestic_cup",
+      "competition_flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+      "kickoff_jst": "2026-08-07T03:45:00+09:00",
+      "status": "FINISHED",
+      "stage": "First round / Southern section",
+      "matchday": null,
+      "home_id": 387,
+      "home_ja": "ブリストル・シティ",
+      "home_en": "Bristol City",
+      "home_crest": "https://crests.football-data.org/387.png",
+      "away_id": null,
+      "away_ja": "Walsall",
+      "away_en": "Walsall",
+      "away_crest": null,
+      "score": {
+        "home": 0,
+        "away": 1
+      },
+      "japanese_players": [
+        {
+          "name_ja": "平河悠",
+          "position": "FW/MF",
+          "side": "home"
+        }
+      ],
+      "broadcasters": [],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 EFL Cup"
+    },
+    {
       "id": 558214,
       "competition_id": 88,
       "competition_ja": "エールディビジ",
@@ -14597,6 +14630,184 @@
       "_source": "openligadb"
     },
     {
+      "id": "CUP_EFL_2026-08-08_Queens_Millwa",
+      "competition_id": 48,
+      "competition_ja": "カラバオカップ",
+      "competition_category": "domestic_cup",
+      "competition_flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+      "kickoff_jst": "2026-08-08T22:00:00+09:00",
+      "status": "FINISHED",
+      "stage": "First round / Southern section",
+      "matchday": null,
+      "home_id": 69,
+      "home_ja": "QPR",
+      "home_en": "Queens Park Rangers",
+      "home_crest": "https://crests.football-data.org/69.png",
+      "away_id": 384,
+      "away_ja": "ミルウォール",
+      "away_en": "Millwall",
+      "away_crest": "https://crests.football-data.org/384.png",
+      "score": {
+        "home": 1,
+        "away": 1
+      },
+      "japanese_players": [
+        {
+          "name_ja": "斉藤光毅",
+          "position": "MF",
+          "side": "home"
+        }
+      ],
+      "broadcasters": [],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 EFL Cup",
+      "penalties": {
+        "home": 0,
+        "away": 2
+      }
+    },
+    {
+      "id": "CUP_EFL_2026-08-08_Burnle_NottsC",
+      "competition_id": 48,
+      "competition_ja": "カラバオカップ",
+      "competition_category": "domestic_cup",
+      "competition_flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+      "kickoff_jst": "2026-08-08T23:00:00+09:00",
+      "status": "FINISHED",
+      "stage": "First round / Northern section",
+      "matchday": null,
+      "home_id": 328,
+      "home_ja": "バーンリー",
+      "home_en": "Burnley",
+      "home_crest": "https://crests.football-data.org/328.png",
+      "away_id": null,
+      "away_ja": "Notts County",
+      "away_en": "Notts County",
+      "away_crest": null,
+      "score": {
+        "home": 1,
+        "away": 1
+      },
+      "japanese_players": [
+        {
+          "name_ja": "旗手怜央",
+          "position": "MF",
+          "side": "home"
+        }
+      ],
+      "broadcasters": [],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 EFL Cup",
+      "penalties": {
+        "home": 4,
+        "away": 3
+      }
+    },
+    {
+      "id": "CUP_EFL_2026-08-08_Burton_Blackb",
+      "competition_id": 48,
+      "competition_ja": "カラバオカップ",
+      "competition_category": "domestic_cup",
+      "competition_flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+      "kickoff_jst": "2026-08-08T23:00:00+09:00",
+      "status": "FINISHED",
+      "stage": "First round / Northern section",
+      "matchday": null,
+      "home_id": null,
+      "home_ja": "Burton Albion",
+      "home_en": "Burton Albion",
+      "home_crest": null,
+      "away_id": 59,
+      "away_ja": "ブラックバーン",
+      "away_en": "Blackburn",
+      "away_crest": "https://crests.football-data.org/59.png",
+      "score": {
+        "home": 1,
+        "away": 2
+      },
+      "japanese_players": [
+        {
+          "name_ja": "大橋祐紀",
+          "position": "FW",
+          "side": "away"
+        },
+        {
+          "name_ja": "森下龍矢",
+          "position": "FW/MF",
+          "side": "away"
+        }
+      ],
+      "broadcasters": [],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 EFL Cup"
+    },
+    {
+      "id": "CUP_EFL_2026-08-08_Sheffi_Bolton",
+      "competition_id": 48,
+      "competition_ja": "カラバオカップ",
+      "competition_category": "domestic_cup",
+      "competition_flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+      "kickoff_jst": "2026-08-08T23:00:00+09:00",
+      "status": "FINISHED",
+      "stage": "First round / Northern section",
+      "matchday": null,
+      "home_id": null,
+      "home_ja": "Sheffield Wednesday",
+      "home_en": "Sheffield Wednesday",
+      "home_crest": null,
+      "away_id": 60,
+      "away_ja": "ボルトン",
+      "away_en": "Bolton",
+      "away_crest": "https://crests.football-data.org/60.png",
+      "score": {
+        "home": 1,
+        "away": 0
+      },
+      "japanese_players": [
+        {
+          "name_ja": "伊藤敦樹",
+          "position": "MF",
+          "side": "away"
+        }
+      ],
+      "broadcasters": [],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 EFL Cup"
+    },
+    {
+      "id": "CUP_EFL_2026-08-08_Swanse_Birmin",
+      "competition_id": 48,
+      "competition_ja": "カラバオカップ",
+      "competition_category": "domestic_cup",
+      "competition_flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+      "kickoff_jst": "2026-08-08T23:00:00+09:00",
+      "status": "FINISHED",
+      "stage": "First round / Southern section",
+      "matchday": null,
+      "home_id": 72,
+      "home_ja": "スウォンジー",
+      "home_en": "Swansea",
+      "home_crest": "https://crests.football-data.org/72.png",
+      "away_id": 332,
+      "away_ja": "バーミンガム",
+      "away_en": "Birmingham",
+      "away_crest": "https://crests.football-data.org/332.png",
+      "score": {
+        "home": 0,
+        "away": 1
+      },
+      "japanese_players": [
+        {
+          "name_ja": "岩田智輝",
+          "position": "DF",
+          "side": "away"
+        }
+      ],
+      "broadcasters": [],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 EFL Cup"
+    },
+    {
       "id": 558215,
       "competition_id": 88,
       "competition_ja": "エールディビジ",
@@ -14679,6 +14890,39 @@
           "source": "league_guides"
         }
       ]
+    },
+    {
+      "id": "CUP_EFL_2026-08-08_Colche_Southa",
+      "competition_id": 48,
+      "competition_ja": "カラバオカップ",
+      "competition_category": "domestic_cup",
+      "competition_flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+      "kickoff_jst": "2026-08-09T01:30:00+09:00",
+      "status": "FINISHED",
+      "stage": "First round / Southern section",
+      "matchday": null,
+      "home_id": null,
+      "home_ja": "Colchester United",
+      "home_en": "Colchester United",
+      "home_crest": null,
+      "away_id": 340,
+      "away_ja": "サウサンプトン",
+      "away_en": "Southampton",
+      "away_crest": "https://crests.football-data.org/340.png",
+      "score": {
+        "home": 0,
+        "away": 2
+      },
+      "japanese_players": [
+        {
+          "name_ja": "松木玖生",
+          "position": "FW/MF",
+          "side": "away"
+        }
+      ],
+      "broadcasters": [],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 EFL Cup"
     },
     {
       "id": 558216,
@@ -15326,6 +15570,46 @@
       ],
       "broadcasters": [],
       "_source": "openligadb"
+    },
+    {
+      "id": "CUP_CIT_2026-08-14_Caglia_Arezzo",
+      "competition_id": 137,
+      "competition_ja": "コッパ・イタリア",
+      "competition_category": "domestic_cup",
+      "competition_flag": "🇮🇹",
+      "kickoff_jst": "2026-08-15T01:30:00+09:00",
+      "status": "FINISHED",
+      "stage": "First round",
+      "matchday": null,
+      "home_id": 104,
+      "home_ja": "カリアリ",
+      "home_en": "Cagliari",
+      "home_crest": "https://crests.football-data.org/104.png",
+      "away_id": null,
+      "away_ja": "Arezzo",
+      "away_en": "Arezzo",
+      "away_crest": null,
+      "score": {
+        "home": 1,
+        "away": 0
+      },
+      "japanese_players": [
+        {
+          "name_ja": "菅原由勢",
+          "position": "DF",
+          "side": "home"
+        }
+      ],
+      "broadcasters": [
+        {
+          "name": "DAZN",
+          "label": "DAZN",
+          "url": "https://www.dazn.com/ja-JP/",
+          "source": "broadcasters_json"
+        }
+      ],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 Coppa Italia"
     },
     {
       "id": 558223,
@@ -16760,6 +17044,77 @@
       ]
     },
     {
+      "id": "CUP_DFB_2026-08-21_Preuen_Karlsr",
+      "competition_id": 81,
+      "competition_ja": "DFBポカール",
+      "competition_category": "domestic_cup",
+      "competition_flag": "🇩🇪",
+      "kickoff_jst": "2026-08-22T01:00:00+09:00",
+      "status": "FINISHED",
+      "stage": "First round",
+      "matchday": null,
+      "home_id": null,
+      "home_ja": "Preußen Münster",
+      "home_en": "Preußen Münster",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "カールスルーエ",
+      "away_en": "Karlsruher SC",
+      "away_crest": null,
+      "score": {
+        "home": 1,
+        "away": 2
+      },
+      "japanese_players": [
+        {
+          "name_ja": "福田師王",
+          "position": "FW",
+          "side": "away"
+        }
+      ],
+      "broadcasters": [],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 DFB-Pokal"
+    },
+    {
+      "id": "CUP_DFB_2026-08-21_SCStTo_Eintra",
+      "competition_id": 81,
+      "competition_ja": "DFBポカール",
+      "competition_category": "domestic_cup",
+      "competition_flag": "🇩🇪",
+      "kickoff_jst": "2026-08-22T01:00:00+09:00",
+      "status": "FINISHED",
+      "stage": "First round",
+      "matchday": null,
+      "home_id": null,
+      "home_ja": "SC St. Tönis",
+      "home_en": "SC St. Tönis",
+      "home_crest": null,
+      "away_id": 19,
+      "away_ja": "フランクフルト",
+      "away_en": "Frankfurt",
+      "away_crest": "https://crests.football-data.org/19.png",
+      "score": {
+        "home": 0,
+        "away": 11
+      },
+      "japanese_players": [
+        {
+          "name_ja": "堂安律",
+          "position": "MF/FW",
+          "side": "away"
+        },
+        {
+          "name_ja": "小杉啓太",
+          "position": "FW/DF",
+          "side": "away"
+        }
+      ],
+      "broadcasters": [],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 DFB-Pokal"
+    },
+    {
       "id": 559715,
       "competition_id": 61,
       "competition_ja": "リーグ・アン",
@@ -17049,6 +17404,39 @@
           "source": "league_guides"
         }
       ]
+    },
+    {
+      "id": "CUP_DFB_2026-08-22_Erzgeb_TSGHof",
+      "competition_id": 81,
+      "competition_ja": "DFBポカール",
+      "competition_category": "domestic_cup",
+      "competition_flag": "🇩🇪",
+      "kickoff_jst": "2026-08-22T22:30:00+09:00",
+      "status": "FINISHED",
+      "stage": "First round",
+      "matchday": null,
+      "home_id": null,
+      "home_ja": "Erzgebirge Aue",
+      "home_en": "Erzgebirge Aue",
+      "home_crest": null,
+      "away_id": 2,
+      "away_ja": "ホッフェンハイム",
+      "away_en": "Hoffenheim",
+      "away_crest": "https://crests.football-data.org/2.png",
+      "score": {
+        "home": 0,
+        "away": 4
+      },
+      "japanese_players": [
+        {
+          "name_ja": "町田浩樹",
+          "position": "DF",
+          "side": "away"
+        }
+      ],
+      "broadcasters": [],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 DFB-Pokal"
     },
     {
       "id": 560544,
@@ -17624,6 +18012,49 @@
           "source": "league_guides"
         }
       ]
+    },
+    {
+      "id": "CUP_DFB_2026-08-22_Munich_Holste",
+      "competition_id": 81,
+      "competition_ja": "DFBポカール",
+      "competition_category": "domestic_cup",
+      "competition_flag": "🇩🇪",
+      "kickoff_jst": "2026-08-23T01:00:00+09:00",
+      "status": "FINISHED",
+      "stage": "First round",
+      "matchday": null,
+      "home_id": null,
+      "home_ja": "1860 Munich",
+      "home_en": "1860 Munich",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "ホルシュタイン・キール",
+      "away_en": "Holstein Kiel",
+      "away_crest": null,
+      "score": {
+        "home": 0,
+        "away": 2
+      },
+      "japanese_players": [
+        {
+          "name_ja": "髙橋仁胡",
+          "position": "DF",
+          "side": "away"
+        },
+        {
+          "name_ja": "安部大晴",
+          "position": "MF",
+          "side": "away"
+        },
+        {
+          "name_ja": "関根大輝",
+          "position": "DF",
+          "side": "away"
+        }
+      ],
+      "broadcasters": [],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 DFB-Pokal"
     },
     {
       "id": 560547,
@@ -18426,6 +18857,125 @@
       ]
     },
     {
+      "id": "CUP_DFB_2026-08-23_Schott_Boruss",
+      "competition_id": 81,
+      "competition_ja": "DFBポカール",
+      "competition_category": "domestic_cup",
+      "competition_flag": "🇩🇪",
+      "kickoff_jst": "2026-08-23T22:30:00+09:00",
+      "status": "FINISHED",
+      "stage": "First round",
+      "matchday": null,
+      "home_id": null,
+      "home_ja": "Schott Mainz",
+      "home_en": "Schott Mainz",
+      "home_crest": null,
+      "away_id": 18,
+      "away_ja": "ボルシアMG",
+      "away_en": "M'gladbach",
+      "away_crest": "https://crests.football-data.org/18.png",
+      "score": {
+        "home": 0,
+        "away": 5
+      },
+      "japanese_players": [
+        {
+          "name_ja": "町野修斗",
+          "position": "FW",
+          "side": "away"
+        },
+        {
+          "name_ja": "板倉滉",
+          "position": "DF",
+          "side": "away"
+        },
+        {
+          "name_ja": "橋岡大樹",
+          "position": "DF",
+          "side": "away"
+        },
+        {
+          "name_ja": "宇野禅斗",
+          "position": "MF",
+          "side": "away"
+        }
+      ],
+      "broadcasters": [],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 DFB-Pokal"
+    },
+    {
+      "id": "CUP_DFB_2026-08-23_VfBKri_Mainz",
+      "competition_id": 81,
+      "competition_ja": "DFBポカール",
+      "competition_category": "domestic_cup",
+      "competition_flag": "🇩🇪",
+      "kickoff_jst": "2026-08-23T22:30:00+09:00",
+      "status": "FINISHED",
+      "stage": "First round",
+      "matchday": null,
+      "home_id": null,
+      "home_ja": "VfB Krieschow",
+      "home_en": "VfB Krieschow",
+      "home_crest": null,
+      "away_id": 15,
+      "away_ja": "マインツ",
+      "away_en": "Mainz",
+      "away_crest": "https://crests.football-data.org/15.png",
+      "score": {
+        "home": 0,
+        "away": 9
+      },
+      "japanese_players": [
+        {
+          "name_ja": "佐野海舟",
+          "position": "MF",
+          "side": "away"
+        },
+        {
+          "name_ja": "川﨑颯太",
+          "position": "MF",
+          "side": "away"
+        }
+      ],
+      "broadcasters": [],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 DFB-Pokal"
+    },
+    {
+      "id": "CUP_DFB_2026-08-23_CarlZe_Darmst",
+      "competition_id": 81,
+      "competition_ja": "DFBポカール",
+      "competition_category": "domestic_cup",
+      "competition_flag": "🇩🇪",
+      "kickoff_jst": "2026-08-23T22:30:00+09:00",
+      "status": "FINISHED",
+      "stage": "First round",
+      "matchday": null,
+      "home_id": null,
+      "home_ja": "Carl Zeiss Jena",
+      "home_en": "Carl Zeiss Jena",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "ダルムシュタット",
+      "away_en": "Darmstadt 98",
+      "away_crest": null,
+      "score": {
+        "home": 1,
+        "away": 2
+      },
+      "japanese_players": [
+        {
+          "name_ja": "秋山裕紀",
+          "position": "MF",
+          "side": "away"
+        }
+      ],
+      "broadcasters": [],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 DFB-Pokal"
+    },
+    {
       "id": 567278,
       "competition_id": 94,
       "competition_ja": "プリメイラ・リーガ",
@@ -18664,6 +19214,97 @@
           "yt_published": "2026-08-23"
         }
       ]
+    },
+    {
+      "id": "CUP_DFB_2026-08-23_Fortun_SCFrei",
+      "competition_id": 81,
+      "competition_ja": "DFBポカール",
+      "competition_category": "domestic_cup",
+      "competition_flag": "🇩🇪",
+      "kickoff_jst": "2026-08-24T01:00:00+09:00",
+      "status": "FINISHED",
+      "stage": "First round",
+      "matchday": null,
+      "home_id": null,
+      "home_ja": "Fortuna Düsseldorf",
+      "home_en": "Fortuna Düsseldorf",
+      "home_crest": null,
+      "away_id": 17,
+      "away_ja": "フライブルク",
+      "away_en": "Freiburg",
+      "away_crest": "https://crests.football-data.org/17.png",
+      "score": {
+        "home": 1,
+        "away": 5
+      },
+      "japanese_players": [
+        {
+          "name_ja": "鈴木唯人",
+          "position": "MF/FW",
+          "side": "away"
+        },
+        {
+          "name_ja": "長田澪",
+          "position": "GK",
+          "side": "away"
+        },
+        {
+          "name_ja": "山本理仁",
+          "position": "MF",
+          "side": "away"
+        },
+        {
+          "name_ja": "後藤啓介",
+          "position": "FW",
+          "side": "away"
+        }
+      ],
+      "broadcasters": [],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 DFB-Pokal"
+    },
+    {
+      "id": "CUP_DFB_2026-08-23_RotWei_FCStPa",
+      "competition_id": 81,
+      "competition_ja": "DFBポカール",
+      "competition_category": "domestic_cup",
+      "competition_flag": "🇩🇪",
+      "kickoff_jst": "2026-08-24T01:00:00+09:00",
+      "status": "FINISHED",
+      "stage": "First round",
+      "matchday": null,
+      "home_id": null,
+      "home_ja": "Rot-Weiss Essen",
+      "home_en": "Rot-Weiss Essen",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "ザンクト・パウリ",
+      "away_en": "FC St. Pauli",
+      "away_crest": null,
+      "score": {
+        "home": 2,
+        "away": 0
+      },
+      "japanese_players": [
+        {
+          "name_ja": "藤田譲瑠チマ",
+          "position": "MF",
+          "side": "away"
+        },
+        {
+          "name_ja": "安藤智哉",
+          "position": "DF",
+          "side": "away"
+        },
+        {
+          "name_ja": "原大智",
+          "position": "FW",
+          "side": "away"
+        }
+      ],
+      "broadcasters": [],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 DFB-Pokal"
     },
     {
       "id": 558635,
@@ -19008,6 +19649,44 @@
       ]
     },
     {
+      "id": "CUP_DFB_2026-08-24_VSGAlt_VfLWol",
+      "competition_id": 81,
+      "competition_ja": "DFBポカール",
+      "competition_category": "domestic_cup",
+      "competition_flag": "🇩🇪",
+      "kickoff_jst": "2026-08-25T01:00:00+09:00",
+      "status": "FINISHED",
+      "stage": "First round",
+      "matchday": null,
+      "home_id": null,
+      "home_ja": "VSG Altglienicke",
+      "home_en": "VSG Altglienicke",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "ヴォルフスブルク",
+      "away_en": "VfL Wolfsburg",
+      "away_crest": null,
+      "score": {
+        "home": 3,
+        "away": 3
+      },
+      "japanese_players": [
+        {
+          "name_ja": "塩貝健人",
+          "position": "FW",
+          "side": "away"
+        }
+      ],
+      "broadcasters": [],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 DFB-Pokal",
+      "penalties": {
+        "home": 5,
+        "away": 6
+      },
+      "extra_time": true
+    },
+    {
       "id": 558630,
       "competition_id": 135,
       "competition_ja": "セリエA",
@@ -19137,6 +19816,40 @@
       ]
     },
     {
+      "id": "CUP_DFB_2026-08-24_Halles_Schalk",
+      "competition_id": 81,
+      "competition_ja": "DFBポカール",
+      "competition_category": "domestic_cup",
+      "competition_flag": "🇩🇪",
+      "kickoff_jst": "2026-08-25T03:45:00+09:00",
+      "status": "FINISHED",
+      "stage": "First round",
+      "matchday": null,
+      "home_id": null,
+      "home_ja": "Hallescher FC",
+      "home_en": "Hallescher FC",
+      "home_crest": null,
+      "away_id": 6,
+      "away_ja": "シャルケ04",
+      "away_en": "FC Schalke 04",
+      "away_crest": "https://crests.football-data.org/6.png",
+      "score": {
+        "home": 2,
+        "away": 5
+      },
+      "japanese_players": [
+        {
+          "name_ja": "田中聡",
+          "position": "MF",
+          "side": "away"
+        }
+      ],
+      "broadcasters": [],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 DFB-Pokal",
+      "extra_time": true
+    },
+    {
       "id": 560551,
       "competition_id": 39,
       "competition_ja": "プレミアリーグ",
@@ -19248,6 +19961,180 @@
       ]
     },
     {
+      "id": "CUP_EFL_2026-08-25_Blackb_Sheffi",
+      "competition_id": 48,
+      "competition_ja": "カラバオカップ",
+      "competition_category": "domestic_cup",
+      "competition_flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+      "kickoff_jst": "2026-08-26T03:45:00+09:00",
+      "status": "FINISHED",
+      "stage": "Second round / Northern section",
+      "matchday": null,
+      "home_id": 59,
+      "home_ja": "ブラックバーン",
+      "home_en": "Blackburn",
+      "home_crest": "https://crests.football-data.org/59.png",
+      "away_id": 356,
+      "away_ja": "シェフィールド・ユナイテッド",
+      "away_en": "Sheffield Utd",
+      "away_crest": "https://crests.football-data.org/356.png",
+      "score": {
+        "home": 1,
+        "away": 2
+      },
+      "japanese_players": [
+        {
+          "name_ja": "大橋祐紀",
+          "position": "FW",
+          "side": "home"
+        },
+        {
+          "name_ja": "森下龍矢",
+          "position": "FW/MF",
+          "side": "home"
+        }
+      ],
+      "broadcasters": [],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 EFL Cup"
+    },
+    {
+      "id": "CUP_EFL_2026-08-25_StokeC_HullCi",
+      "competition_id": 48,
+      "competition_ja": "カラバオカップ",
+      "competition_category": "domestic_cup",
+      "competition_flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+      "kickoff_jst": "2026-08-26T03:45:00+09:00",
+      "status": "FINISHED",
+      "stage": "Second round / Northern section",
+      "matchday": null,
+      "home_id": 70,
+      "home_ja": "ストーク",
+      "home_en": "Stoke",
+      "home_crest": "https://crests.football-data.org/70.png",
+      "away_id": 322,
+      "away_ja": "ハル・シティ",
+      "away_en": "Hull City",
+      "away_crest": "https://crests.football-data.org/322.png",
+      "score": {
+        "home": 1,
+        "away": 1
+      },
+      "japanese_players": [
+        {
+          "name_ja": "守田英正",
+          "position": "MF",
+          "side": "away"
+        }
+      ],
+      "broadcasters": [],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 EFL Cup",
+      "penalties": {
+        "home": 4,
+        "away": 5
+      }
+    },
+    {
+      "id": "CUP_EFL_2026-08-25_Ipswic_Leices",
+      "competition_id": 48,
+      "competition_ja": "カラバオカップ",
+      "competition_category": "domestic_cup",
+      "competition_flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+      "kickoff_jst": "2026-08-26T03:45:00+09:00",
+      "status": "FINISHED",
+      "stage": "Second round / Southern section",
+      "matchday": null,
+      "home_id": 349,
+      "home_ja": "イプスウィッチ",
+      "home_en": "Ipswich Town",
+      "home_crest": "https://crests.football-data.org/349.png",
+      "away_id": 338,
+      "away_ja": "レスター",
+      "away_en": "Leicester City",
+      "away_crest": "https://crests.football-data.org/338.png",
+      "score": {
+        "home": 3,
+        "away": 1
+      },
+      "japanese_players": [
+        {
+          "name_ja": "前田大然",
+          "position": "FW",
+          "side": "home"
+        }
+      ],
+      "broadcasters": [],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 EFL Cup"
+    },
+    {
+      "id": "CUP_EFL_2026-08-25_Plymou_Covent",
+      "competition_id": 48,
+      "competition_ja": "カラバオカップ",
+      "competition_category": "domestic_cup",
+      "competition_flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+      "kickoff_jst": "2026-08-26T03:45:00+09:00",
+      "status": "FINISHED",
+      "stage": "Second round / Southern section",
+      "matchday": null,
+      "home_id": null,
+      "home_ja": "Plymouth Argyle",
+      "home_en": "Plymouth Argyle",
+      "home_crest": null,
+      "away_id": 1076,
+      "away_ja": "コヴェントリー",
+      "away_en": "Coventry City",
+      "away_crest": "https://crests.football-data.org/1076.png",
+      "score": {
+        "home": 2,
+        "away": 4
+      },
+      "japanese_players": [
+        {
+          "name_ja": "坂元達裕",
+          "position": "MF",
+          "side": "away"
+        }
+      ],
+      "broadcasters": [],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 EFL Cup"
+    },
+    {
+      "id": "CUP_EFL_2026-08-25_Southa_WestHa",
+      "competition_id": 48,
+      "competition_ja": "カラバオカップ",
+      "competition_category": "domestic_cup",
+      "competition_flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+      "kickoff_jst": "2026-08-26T03:45:00+09:00",
+      "status": "FINISHED",
+      "stage": "Second round / Southern section",
+      "matchday": null,
+      "home_id": 340,
+      "home_ja": "サウサンプトン",
+      "home_en": "Southampton",
+      "home_crest": "https://crests.football-data.org/340.png",
+      "away_id": 563,
+      "away_ja": "ウェストハム",
+      "away_en": "West Ham",
+      "away_crest": "https://crests.football-data.org/563.png",
+      "score": {
+        "home": 1,
+        "away": 4
+      },
+      "japanese_players": [
+        {
+          "name_ja": "松木玖生",
+          "position": "FW/MF",
+          "side": "home"
+        }
+      ],
+      "broadcasters": [],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 EFL Cup"
+    },
+    {
       "id": 564637,
       "competition_id": 140,
       "competition_ja": "ラ・リーガ",
@@ -19299,6 +20186,109 @@
           "yt_published": "2026-08-25"
         }
       ]
+    },
+    {
+      "id": "CUP_EFL_2026-08-25_Nottin_LeedsU",
+      "competition_id": 48,
+      "competition_ja": "カラバオカップ",
+      "competition_category": "domestic_cup",
+      "competition_flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+      "kickoff_jst": "2026-08-26T04:00:00+09:00",
+      "status": "FINISHED",
+      "stage": "Second round / Northern section",
+      "matchday": null,
+      "home_id": null,
+      "home_ja": "ノッティンガム・フォレスト",
+      "home_en": "Nottingham Forest",
+      "home_crest": null,
+      "away_id": 341,
+      "away_ja": "リーズ",
+      "away_en": "Leeds United",
+      "away_crest": "https://crests.football-data.org/341.png",
+      "score": {
+        "home": 0,
+        "away": 2
+      },
+      "japanese_players": [
+        {
+          "name_ja": "田中碧",
+          "position": "MF",
+          "side": "away"
+        }
+      ],
+      "broadcasters": [],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 EFL Cup"
+    },
+    {
+      "id": "CUP_EFL_2026-08-25_Birmin_Brentf",
+      "competition_id": 48,
+      "competition_ja": "カラバオカップ",
+      "competition_category": "domestic_cup",
+      "competition_flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+      "kickoff_jst": "2026-08-26T04:00:00+09:00",
+      "status": "FINISHED",
+      "stage": "Second round / Southern section",
+      "matchday": null,
+      "home_id": 332,
+      "home_ja": "バーミンガム",
+      "home_en": "Birmingham",
+      "home_crest": "https://crests.football-data.org/332.png",
+      "away_id": 402,
+      "away_ja": "ブレントフォード",
+      "away_en": "Brentford",
+      "away_crest": "https://crests.football-data.org/402.png",
+      "score": {
+        "home": 1,
+        "away": 6
+      },
+      "japanese_players": [
+        {
+          "name_ja": "岩田智輝",
+          "position": "DF",
+          "side": "home"
+        }
+      ],
+      "broadcasters": [],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 EFL Cup"
+    },
+    {
+      "id": "CUP_EFL_2026-08-26_Bradfo_Burnle",
+      "competition_id": 48,
+      "competition_ja": "カラバオカップ",
+      "competition_category": "domestic_cup",
+      "competition_flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+      "kickoff_jst": "2026-08-27T03:45:00+09:00",
+      "status": "FINISHED",
+      "stage": "Second round / Northern section",
+      "matchday": null,
+      "home_id": null,
+      "home_ja": "Bradford City",
+      "home_en": "Bradford City",
+      "home_crest": null,
+      "away_id": 328,
+      "away_ja": "バーンリー",
+      "away_en": "Burnley",
+      "away_crest": "https://crests.football-data.org/328.png",
+      "score": {
+        "home": 0,
+        "away": 0
+      },
+      "japanese_players": [
+        {
+          "name_ja": "旗手怜央",
+          "position": "MF",
+          "side": "away"
+        }
+      ],
+      "broadcasters": [],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 EFL Cup",
+      "penalties": {
+        "home": 4,
+        "away": 2
+      }
     },
     {
       "id": 564631,
@@ -23075,6 +24065,39 @@
       ]
     },
     {
+      "id": "CUP_DFB_2026-09-02_VfLOsn_Bayern",
+      "competition_id": 81,
+      "competition_ja": "DFBポカール",
+      "competition_category": "domestic_cup",
+      "competition_flag": "🇩🇪",
+      "kickoff_jst": "2026-09-03T03:45:00+09:00",
+      "status": "FINISHED",
+      "stage": "First round",
+      "matchday": null,
+      "home_id": null,
+      "home_ja": "オスナブリュック",
+      "home_en": "VfL Osnabrück",
+      "home_crest": null,
+      "away_id": 5,
+      "away_ja": "バイエルン",
+      "away_en": "Bayern",
+      "away_crest": "https://crests.football-data.org/5.png",
+      "score": {
+        "home": 1,
+        "away": 4
+      },
+      "japanese_players": [
+        {
+          "name_ja": "伊藤洋輝",
+          "position": "DF",
+          "side": "away"
+        }
+      ],
+      "broadcasters": [],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 DFB-Pokal"
+    },
+    {
       "id": 561805,
       "competition_id": 40,
       "competition_ja": "チャンピオンシップ",
@@ -23205,6 +24228,46 @@
           "yt_published": "2026-09-03"
         }
       ]
+    },
+    {
+      "id": "CUP_CIT_2026-09-03_Caglia_Hellas",
+      "competition_id": 137,
+      "competition_ja": "コッパ・イタリア",
+      "competition_category": "domestic_cup",
+      "competition_flag": "🇮🇹",
+      "kickoff_jst": "2026-09-04T04:00:00+09:00",
+      "status": "FINISHED",
+      "stage": "Second round",
+      "matchday": null,
+      "home_id": 104,
+      "home_ja": "カリアリ",
+      "home_en": "Cagliari",
+      "home_crest": "https://crests.football-data.org/104.png",
+      "away_id": null,
+      "away_ja": "Hellas Verona",
+      "away_en": "Hellas Verona",
+      "away_crest": null,
+      "score": {
+        "home": 1,
+        "away": 2
+      },
+      "japanese_players": [
+        {
+          "name_ja": "菅原由勢",
+          "position": "DF",
+          "side": "home"
+        }
+      ],
+      "broadcasters": [
+        {
+          "name": "DAZN",
+          "label": "DAZN",
+          "url": "https://www.dazn.com/ja-JP/",
+          "source": "broadcasters_json"
+        }
+      ],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 Coppa Italia"
     },
     {
       "id": "BL2_83550",
@@ -26728,6 +27791,77 @@
       ]
     },
     {
+      "id": "CUP_EFL_2026-09-08_Crysta_Middle",
+      "competition_id": 48,
+      "competition_ja": "カラバオカップ",
+      "competition_category": "domestic_cup",
+      "competition_flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+      "kickoff_jst": "2026-09-09T03:45:00+09:00",
+      "status": "FINISHED",
+      "stage": "Third round",
+      "matchday": null,
+      "home_id": 354,
+      "home_ja": "クリスタル・パレス",
+      "home_en": "Crystal Palace",
+      "home_crest": "https://crests.football-data.org/354.png",
+      "away_id": 343,
+      "away_ja": "ミドルズブラ",
+      "away_en": "Middlesbrough",
+      "away_crest": "https://crests.football-data.org/343.png",
+      "score": {
+        "home": 3,
+        "away": 0
+      },
+      "japanese_players": [
+        {
+          "name_ja": "鎌田大地",
+          "position": "MF",
+          "side": "home"
+        },
+        {
+          "name_ja": "冨安健洋",
+          "position": "DF",
+          "side": "home"
+        }
+      ],
+      "broadcasters": [],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 EFL Cup"
+    },
+    {
+      "id": "CUP_EFL_2026-09-08_Sunder_HullCi",
+      "competition_id": 48,
+      "competition_ja": "カラバオカップ",
+      "competition_category": "domestic_cup",
+      "competition_flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+      "kickoff_jst": "2026-09-09T03:45:00+09:00",
+      "status": "FINISHED",
+      "stage": "Third round",
+      "matchday": null,
+      "home_id": 71,
+      "home_ja": "サンダーランド",
+      "home_en": "Sunderland",
+      "home_crest": "https://crests.football-data.org/71.png",
+      "away_id": 322,
+      "away_ja": "ハル・シティ",
+      "away_en": "Hull City",
+      "away_crest": "https://crests.football-data.org/322.png",
+      "score": {
+        "home": 1,
+        "away": 0
+      },
+      "japanese_players": [
+        {
+          "name_ja": "守田英正",
+          "position": "MF",
+          "side": "away"
+        }
+      ],
+      "broadcasters": [],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 EFL Cup"
+    },
+    {
       "id": 561827,
       "competition_id": 40,
       "competition_ja": "チャンピオンシップ",
@@ -27329,6 +28463,39 @@
           "source": "league_guides"
         }
       ]
+    },
+    {
+      "id": "CUP_EFL_2026-09-09_Chelse_LeedsU",
+      "competition_id": 48,
+      "competition_ja": "カラバオカップ",
+      "competition_category": "domestic_cup",
+      "competition_flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+      "kickoff_jst": "2026-09-10T04:15:00+09:00",
+      "status": "FINISHED",
+      "stage": "Third round",
+      "matchday": null,
+      "home_id": 61,
+      "home_ja": "チェルシー",
+      "home_en": "Chelsea",
+      "home_crest": "https://crests.football-data.org/61.png",
+      "away_id": 341,
+      "away_ja": "リーズ",
+      "away_en": "Leeds United",
+      "away_crest": "https://crests.football-data.org/341.png",
+      "score": {
+        "home": 6,
+        "away": 3
+      },
+      "japanese_players": [
+        {
+          "name_ja": "田中碧",
+          "position": "MF",
+          "side": "away"
+        }
+      ],
+      "broadcasters": [],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 EFL Cup"
     },
     {
       "id": 567282,
@@ -31127,6 +32294,72 @@
       ]
     },
     {
+      "id": "CUP_EFL_2026-09-15_Ipswic_Arsena",
+      "competition_id": 48,
+      "competition_ja": "カラバオカップ",
+      "competition_category": "domestic_cup",
+      "competition_flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+      "kickoff_jst": "2026-09-16T04:00:00+09:00",
+      "status": "FINISHED",
+      "stage": "Third round",
+      "matchday": null,
+      "home_id": 349,
+      "home_ja": "イプスウィッチ",
+      "home_en": "Ipswich Town",
+      "home_crest": "https://crests.football-data.org/349.png",
+      "away_id": 57,
+      "away_ja": "アーセナル",
+      "away_en": "Arsenal",
+      "away_crest": "https://crests.football-data.org/57.png",
+      "score": {
+        "home": 2,
+        "away": 4
+      },
+      "japanese_players": [
+        {
+          "name_ja": "前田大然",
+          "position": "FW",
+          "side": "home"
+        }
+      ],
+      "broadcasters": [],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 EFL Cup"
+    },
+    {
+      "id": "CUP_EFL_2026-09-15_Liverp_Totten",
+      "competition_id": 48,
+      "competition_ja": "カラバオカップ",
+      "competition_category": "domestic_cup",
+      "competition_flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+      "kickoff_jst": "2026-09-16T04:00:00+09:00",
+      "status": "FINISHED",
+      "stage": "Third round",
+      "matchday": null,
+      "home_id": 64,
+      "home_ja": "リヴァプール",
+      "home_en": "Liverpool",
+      "home_crest": "https://crests.football-data.org/64.png",
+      "away_id": 73,
+      "away_ja": "トッテナム",
+      "away_en": "Tottenham",
+      "away_crest": "https://crests.football-data.org/73.png",
+      "score": {
+        "home": 3,
+        "away": 1
+      },
+      "japanese_players": [
+        {
+          "name_ja": "遠藤航",
+          "position": "DF/MF",
+          "side": "home"
+        }
+      ],
+      "broadcasters": [],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 EFL Cup"
+    },
+    {
       "id": 564681,
       "competition_id": 140,
       "competition_ja": "ラ・リーガ",
@@ -31643,6 +32876,77 @@
       ],
       "_source": "wikipedia",
       "_source_page": "2026–27 UEFA Europa League league phase"
+    },
+    {
+      "id": "CUP_EFL_2026-09-16_Covent_AstonV",
+      "competition_id": 48,
+      "competition_ja": "カラバオカップ",
+      "competition_category": "domestic_cup",
+      "competition_flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+      "kickoff_jst": "2026-09-17T04:00:00+09:00",
+      "status": "FINISHED",
+      "stage": "Third round",
+      "matchday": null,
+      "home_id": 1076,
+      "home_ja": "コヴェントリー",
+      "home_en": "Coventry City",
+      "home_crest": "https://crests.football-data.org/1076.png",
+      "away_id": 58,
+      "away_ja": "アストン・ヴィラ",
+      "away_en": "Aston Villa",
+      "away_crest": "https://crests.football-data.org/58.png",
+      "score": {
+        "home": 1,
+        "away": 3
+      },
+      "japanese_players": [
+        {
+          "name_ja": "坂元達裕",
+          "position": "MF",
+          "side": "home"
+        },
+        {
+          "name_ja": "鈴木彩艶",
+          "position": "GK",
+          "side": "away"
+        }
+      ],
+      "broadcasters": [],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 EFL Cup"
+    },
+    {
+      "id": "CUP_EFL_2026-09-16_Manche_Bright",
+      "competition_id": 48,
+      "competition_ja": "カラバオカップ",
+      "competition_category": "domestic_cup",
+      "competition_flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+      "kickoff_jst": "2026-09-17T04:00:00+09:00",
+      "status": "FINISHED",
+      "stage": "Third round",
+      "matchday": null,
+      "home_id": 66,
+      "home_ja": "マンチェスター・ユナイテッド",
+      "home_en": "Man United",
+      "home_crest": "https://crests.football-data.org/66.png",
+      "away_id": 397,
+      "away_ja": "ブライトン",
+      "away_en": "Brighton Hove",
+      "away_crest": "https://crests.football-data.org/397.png",
+      "score": {
+        "home": 2,
+        "away": 3
+      },
+      "japanese_players": [
+        {
+          "name_ja": "三笘薫",
+          "position": "MF",
+          "side": "away"
+        }
+      ],
+      "broadcasters": [],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 EFL Cup"
     },
     {
       "id": 564687,
@@ -35408,6 +36712,44 @@
           "source": "league_guides"
         }
       ]
+    },
+    {
+      "id": "CUP_BEL_2026-09-26_Heist_Kortri",
+      "competition_id": 147,
+      "competition_ja": "ベルギーカップ",
+      "competition_category": "domestic_cup",
+      "competition_flag": "🇧🇪",
+      "kickoff_jst": "2026-09-27T03:00:00+09:00",
+      "status": "FINISHED",
+      "stage": "Sixth round",
+      "matchday": null,
+      "home_id": null,
+      "home_ja": "Heist",
+      "home_en": "Heist",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "KVコルトレイク",
+      "away_en": "KV Kortrijk",
+      "away_crest": null,
+      "score": {
+        "home": 2,
+        "away": 2
+      },
+      "japanese_players": [
+        {
+          "name_ja": "倍井謙",
+          "position": "FW",
+          "side": "away"
+        }
+      ],
+      "broadcasters": [],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 Belgian Cup",
+      "penalties": {
+        "home": 5,
+        "away": 4
+      },
+      "extra_time": true
     },
     {
       "id": "BL2_83620",
@@ -41490,6 +42832,49 @@
       ]
     },
     {
+      "id": "CUP_BEL_2026-10-16_Wester_PatroE",
+      "competition_id": 147,
+      "competition_ja": "ベルギーカップ",
+      "competition_category": "domestic_cup",
+      "competition_flag": "🇧🇪",
+      "kickoff_jst": "2026-10-17T03:30:00+09:00",
+      "status": "FINISHED",
+      "stage": "Seventh round",
+      "matchday": null,
+      "home_id": null,
+      "home_ja": "ウェステルロー",
+      "home_en": "Westerlo",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "Patro Eisden Maasmechelen",
+      "away_en": "Patro Eisden Maasmechelen",
+      "away_crest": null,
+      "score": {
+        "home": 2,
+        "away": 0
+      },
+      "japanese_players": [
+        {
+          "name_ja": "坂本一彩",
+          "position": "FW",
+          "side": "home"
+        },
+        {
+          "name_ja": "木村誠二",
+          "position": "DF",
+          "side": "home"
+        },
+        {
+          "name_ja": "斎藤俊輔",
+          "position": "MF",
+          "side": "home"
+        }
+      ],
+      "broadcasters": [],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 Belgian Cup"
+    },
+    {
       "id": 558573,
       "competition_id": 135,
       "competition_ja": "セリエA",
@@ -42637,6 +44022,87 @@
       ]
     },
     {
+      "id": "CUP_BEL_2026-10-17_Heist_Antwer",
+      "competition_id": 147,
+      "competition_ja": "ベルギーカップ",
+      "competition_category": "domestic_cup",
+      "competition_flag": "🇧🇪",
+      "kickoff_jst": "2026-10-18T00:30:00+09:00",
+      "status": "FINISHED",
+      "stage": "Seventh round",
+      "matchday": null,
+      "home_id": null,
+      "home_ja": "Heist",
+      "home_en": "Heist",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "ロイヤル・アントワープ",
+      "away_en": "Royal Antwerp",
+      "away_crest": null,
+      "score": {
+        "home": 0,
+        "away": 1
+      },
+      "japanese_players": [
+        {
+          "name_ja": "綱島悠斗",
+          "position": "MF",
+          "side": "away"
+        },
+        {
+          "name_ja": "野澤大志ブランドン",
+          "position": "GK",
+          "side": "away"
+        },
+        {
+          "name_ja": "安藤晃希",
+          "position": "",
+          "side": "away"
+        }
+      ],
+      "broadcasters": [],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 Belgian Cup"
+    },
+    {
+      "id": "CUP_BEL_2026-10-17_OHLeuv_Francs",
+      "competition_id": 147,
+      "competition_ja": "ベルギーカップ",
+      "competition_category": "domestic_cup",
+      "competition_flag": "🇧🇪",
+      "kickoff_jst": "2026-10-18T00:30:00+09:00",
+      "status": "FINISHED",
+      "stage": "Seventh round",
+      "matchday": null,
+      "home_id": null,
+      "home_ja": "OHルーヴェン",
+      "home_en": "OH Leuven",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "Francs Borains",
+      "away_en": "Francs Borains",
+      "away_crest": null,
+      "score": {
+        "home": 1,
+        "away": 0
+      },
+      "japanese_players": [
+        {
+          "name_ja": "荻原拓也",
+          "position": "DF",
+          "side": "home"
+        },
+        {
+          "name_ja": "山田新",
+          "position": "FW",
+          "side": "home"
+        }
+      ],
+      "broadcasters": [],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 Belgian Cup"
+    },
+    {
       "id": 558571,
       "competition_id": 135,
       "competition_ja": "セリエA",
@@ -43016,6 +44482,44 @@
       ]
     },
     {
+      "id": "CUP_BEL_2026-10-17_Virton_Genk",
+      "competition_id": 147,
+      "competition_ja": "ベルギーカップ",
+      "competition_category": "domestic_cup",
+      "competition_flag": "🇧🇪",
+      "kickoff_jst": "2026-10-18T03:45:00+09:00",
+      "status": "FINISHED",
+      "stage": "Seventh round",
+      "matchday": null,
+      "home_id": null,
+      "home_ja": "Virton",
+      "home_en": "Virton",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "ヘンク",
+      "away_en": "Genk",
+      "away_crest": null,
+      "score": {
+        "home": 0,
+        "away": 2
+      },
+      "japanese_players": [
+        {
+          "name_ja": "伊東純也",
+          "position": "FW/MF",
+          "side": "away"
+        },
+        {
+          "name_ja": "横山歩夢",
+          "position": "MF",
+          "side": "away"
+        }
+      ],
+      "broadcasters": [],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 Belgian Cup"
+    },
+    {
       "id": 564711,
       "competition_id": 140,
       "competition_ja": "ラ・リーガ",
@@ -43206,6 +44710,39 @@
       ],
       "broadcasters": [],
       "_source": "openligadb"
+    },
+    {
+      "id": "CUP_BEL_2026-10-18_UnionS_Nijlen",
+      "competition_id": 147,
+      "competition_ja": "ベルギーカップ",
+      "competition_category": "domestic_cup",
+      "competition_flag": "🇧🇪",
+      "kickoff_jst": "2026-10-18T20:30:00+09:00",
+      "status": "FINISHED",
+      "stage": "Seventh round",
+      "matchday": null,
+      "home_id": null,
+      "home_ja": "ユニオン・サンジロワーズ",
+      "home_en": "Royale Union Saint-Gilloise",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "Nijlen",
+      "away_en": "Nijlen",
+      "away_crest": null,
+      "score": {
+        "home": 3,
+        "away": 0
+      },
+      "japanese_players": [
+        {
+          "name_ja": "ハーフナー・ニッキ",
+          "position": "DF",
+          "side": "home"
+        }
+      ],
+      "broadcasters": [],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 Belgian Cup"
     },
     {
       "id": 564715,
@@ -43951,6 +45488,74 @@
           "yt_published": "2026-10-18"
         }
       ]
+    },
+    {
+      "id": "CUP_BEL_2026-10-18_SintTr_Lommel",
+      "competition_id": 147,
+      "competition_ja": "ベルギーカップ",
+      "competition_category": "domestic_cup",
+      "competition_flag": "🇧🇪",
+      "kickoff_jst": "2026-10-19T01:30:00+09:00",
+      "status": "FINISHED",
+      "stage": "Seventh round",
+      "matchday": null,
+      "home_id": null,
+      "home_ja": "シント＝トロイデン",
+      "home_en": "Sint-Truiden",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "Lommel",
+      "away_en": "Lommel",
+      "away_crest": null,
+      "score": {
+        "home": 4,
+        "away": 1
+      },
+      "japanese_players": [
+        {
+          "name_ja": "高井幸大",
+          "position": "DF",
+          "side": "home"
+        },
+        {
+          "name_ja": "小久保玲央ブライアン",
+          "position": "GK",
+          "side": "home"
+        },
+        {
+          "name_ja": "谷口彰悟",
+          "position": "DF",
+          "side": "home"
+        },
+        {
+          "name_ja": "畑大雅",
+          "position": "DF",
+          "side": "home"
+        },
+        {
+          "name_ja": "松澤海斗",
+          "position": "FW/MF",
+          "side": "home"
+        },
+        {
+          "name_ja": "新川志音",
+          "position": "MF/FW",
+          "side": "home"
+        },
+        {
+          "name_ja": "荒木遼太郎",
+          "position": "MF",
+          "side": "home"
+        },
+        {
+          "name_ja": "石渡ネルソン",
+          "position": "DF",
+          "side": "home"
+        }
+      ],
+      "broadcasters": [],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 Belgian Cup"
     },
     {
       "id": 558866,
@@ -49469,6 +51074,76 @@
       ]
     },
     {
+      "id": "CUP_DFB_2026-10-27_VfLBoc_Mainz",
+      "competition_id": 81,
+      "competition_ja": "DFBポカール",
+      "competition_category": "domestic_cup",
+      "competition_flag": "🇩🇪",
+      "kickoff_jst": "2026-10-28T02:00:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "Second round",
+      "matchday": null,
+      "home_id": null,
+      "home_ja": "ボーフム",
+      "home_en": "VfL Bochum",
+      "home_crest": null,
+      "away_id": 15,
+      "away_ja": "マインツ",
+      "away_en": "Mainz",
+      "away_crest": "https://crests.football-data.org/15.png",
+      "score": null,
+      "japanese_players": [
+        {
+          "name_ja": "佐野海舟",
+          "position": "MF",
+          "side": "away"
+        },
+        {
+          "name_ja": "川﨑颯太",
+          "position": "MF",
+          "side": "away"
+        }
+      ],
+      "broadcasters": [],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 DFB-Pokal"
+    },
+    {
+      "id": "CUP_DFB_2026-10-27_Hambur_Eintra",
+      "competition_id": 81,
+      "competition_ja": "DFBポカール",
+      "competition_category": "domestic_cup",
+      "competition_flag": "🇩🇪",
+      "kickoff_jst": "2026-10-28T02:00:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "Second round",
+      "matchday": null,
+      "home_id": null,
+      "home_ja": "Hamburger SV",
+      "home_en": "Hamburger SV",
+      "home_crest": null,
+      "away_id": 19,
+      "away_ja": "フランクフルト",
+      "away_en": "Frankfurt",
+      "away_crest": "https://crests.football-data.org/19.png",
+      "score": null,
+      "japanese_players": [
+        {
+          "name_ja": "堂安律",
+          "position": "MF/FW",
+          "side": "away"
+        },
+        {
+          "name_ja": "小杉啓太",
+          "position": "FW/DF",
+          "side": "away"
+        }
+      ],
+      "broadcasters": [],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 DFB-Pokal"
+    },
+    {
       "id": 558556,
       "competition_id": 135,
       "competition_ja": "セリエA",
@@ -49562,6 +51237,166 @@
       ]
     },
     {
+      "id": "CUP_DFB_2026-10-27_Boruss_Karlsr",
+      "competition_id": 81,
+      "competition_ja": "DFBポカール",
+      "competition_category": "domestic_cup",
+      "competition_flag": "🇩🇪",
+      "kickoff_jst": "2026-10-28T04:45:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "Second round",
+      "matchday": null,
+      "home_id": 18,
+      "home_ja": "ボルシアMG",
+      "home_en": "M'gladbach",
+      "home_crest": "https://crests.football-data.org/18.png",
+      "away_id": null,
+      "away_ja": "カールスルーエ",
+      "away_en": "Karlsruher SC",
+      "away_crest": null,
+      "score": null,
+      "japanese_players": [
+        {
+          "name_ja": "町野修斗",
+          "position": "FW",
+          "side": "home"
+        },
+        {
+          "name_ja": "板倉滉",
+          "position": "DF",
+          "side": "home"
+        },
+        {
+          "name_ja": "橋岡大樹",
+          "position": "DF",
+          "side": "home"
+        },
+        {
+          "name_ja": "宇野禅斗",
+          "position": "MF",
+          "side": "home"
+        },
+        {
+          "name_ja": "福田師王",
+          "position": "FW",
+          "side": "away"
+        }
+      ],
+      "broadcasters": [],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 DFB-Pokal"
+    },
+    {
+      "id": "CUP_DFB_2026-10-27_SVElve_Darmst",
+      "competition_id": 81,
+      "competition_ja": "DFBポカール",
+      "competition_category": "domestic_cup",
+      "competition_flag": "🇩🇪",
+      "kickoff_jst": "2026-10-28T04:45:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "Second round",
+      "matchday": null,
+      "home_id": null,
+      "home_ja": "SV Elversberg",
+      "home_en": "SV Elversberg",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "ダルムシュタット",
+      "away_en": "Darmstadt 98",
+      "away_crest": null,
+      "score": null,
+      "japanese_players": [
+        {
+          "name_ja": "秋山裕紀",
+          "position": "MF",
+          "side": "away"
+        }
+      ],
+      "broadcasters": [],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 DFB-Pokal"
+    },
+    {
+      "id": "CUP_DFB_2026-10-28_SCFrei_VfLWol",
+      "competition_id": 81,
+      "competition_ja": "DFBポカール",
+      "competition_category": "domestic_cup",
+      "competition_flag": "🇩🇪",
+      "kickoff_jst": "2026-10-29T02:00:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "Second round",
+      "matchday": null,
+      "home_id": 17,
+      "home_ja": "フライブルク",
+      "home_en": "Freiburg",
+      "home_crest": "https://crests.football-data.org/17.png",
+      "away_id": null,
+      "away_ja": "ヴォルフスブルク",
+      "away_en": "VfL Wolfsburg",
+      "away_crest": null,
+      "score": null,
+      "japanese_players": [
+        {
+          "name_ja": "鈴木唯人",
+          "position": "MF/FW",
+          "side": "home"
+        },
+        {
+          "name_ja": "長田澪",
+          "position": "GK",
+          "side": "home"
+        },
+        {
+          "name_ja": "山本理仁",
+          "position": "MF",
+          "side": "home"
+        },
+        {
+          "name_ja": "後藤啓介",
+          "position": "FW",
+          "side": "home"
+        },
+        {
+          "name_ja": "塩貝健人",
+          "position": "FW",
+          "side": "away"
+        }
+      ],
+      "broadcasters": [],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 DFB-Pokal"
+    },
+    {
+      "id": "CUP_DFB_2026-10-28_Dynamo_Schalk",
+      "competition_id": 81,
+      "competition_ja": "DFBポカール",
+      "competition_category": "domestic_cup",
+      "competition_flag": "🇩🇪",
+      "kickoff_jst": "2026-10-29T02:00:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "Second round",
+      "matchday": null,
+      "home_id": null,
+      "home_ja": "ディナモ・ドレスデン",
+      "home_en": "Dynamo Dresden",
+      "home_crest": null,
+      "away_id": 6,
+      "away_ja": "シャルケ04",
+      "away_en": "FC Schalke 04",
+      "away_crest": "https://crests.football-data.org/6.png",
+      "score": null,
+      "japanese_players": [
+        {
+          "name_ja": "田中聡",
+          "position": "MF",
+          "side": "away"
+        }
+      ],
+      "broadcasters": [],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 DFB-Pokal"
+    },
+    {
       "id": 558549,
       "competition_id": 135,
       "competition_ja": "セリエA",
@@ -49649,6 +51484,66 @@
       ]
     },
     {
+      "id": "CUP_KNVB_2026-10-28_Sparta_Fortun",
+      "competition_id": 90,
+      "competition_ja": "KNVBベーカー",
+      "competition_category": "domestic_cup",
+      "competition_flag": "🇳🇱",
+      "kickoff_jst": "2026-10-29T02:45:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "First round",
+      "matchday": null,
+      "home_id": 6806,
+      "home_ja": "スパルタ・ロッテルダム",
+      "home_en": "Sparta",
+      "home_crest": "https://crests.football-data.org/6806.png",
+      "away_id": null,
+      "away_ja": "Fortuna Sittard",
+      "away_en": "Fortuna Sittard",
+      "away_crest": null,
+      "score": null,
+      "japanese_players": [
+        {
+          "name_ja": "三戸舜介",
+          "position": "FW/MF",
+          "side": "home"
+        }
+      ],
+      "broadcasters": [],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 KNVB Cup"
+    },
+    {
+      "id": "CUP_EFL_2026-10-28_Manche_Bright",
+      "competition_id": 48,
+      "competition_ja": "カラバオカップ",
+      "competition_category": "domestic_cup",
+      "competition_flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+      "kickoff_jst": "2026-10-29T04:30:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "Fourth round",
+      "matchday": null,
+      "home_id": 65,
+      "home_ja": "マンチェスター・シティ",
+      "home_en": "Man City",
+      "home_crest": "https://crests.football-data.org/65.png",
+      "away_id": 397,
+      "away_ja": "ブライトン",
+      "away_en": "Brighton Hove",
+      "away_crest": "https://crests.football-data.org/397.png",
+      "score": null,
+      "japanese_players": [
+        {
+          "name_ja": "三笘薫",
+          "position": "MF",
+          "side": "away"
+        }
+      ],
+      "broadcasters": [],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 EFL Cup"
+    },
+    {
       "id": 558552,
       "competition_id": 135,
       "competition_ja": "セリエA",
@@ -49705,6 +51600,213 @@
           "source": "league_guides"
         }
       ]
+    },
+    {
+      "id": "CUP_EFL_2026-10-28_Bourne_AstonV",
+      "competition_id": 48,
+      "competition_ja": "カラバオカップ",
+      "competition_category": "domestic_cup",
+      "competition_flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+      "kickoff_jst": "2026-10-29T04:45:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "Fourth round",
+      "matchday": null,
+      "home_id": 1044,
+      "home_ja": "ボーンマス",
+      "home_en": "Bournemouth",
+      "home_crest": "https://crests.football-data.org/1044.png",
+      "away_id": 58,
+      "away_ja": "アストン・ヴィラ",
+      "away_en": "Aston Villa",
+      "away_crest": "https://crests.football-data.org/58.png",
+      "score": null,
+      "japanese_players": [
+        {
+          "name_ja": "鈴木彩艶",
+          "position": "GK",
+          "side": "away"
+        }
+      ],
+      "broadcasters": [],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 EFL Cup"
+    },
+    {
+      "id": "CUP_EFL_2026-10-28_Fulham_Crysta",
+      "competition_id": 48,
+      "competition_ja": "カラバオカップ",
+      "competition_category": "domestic_cup",
+      "competition_flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+      "kickoff_jst": "2026-10-29T04:45:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "Fourth round",
+      "matchday": null,
+      "home_id": 63,
+      "home_ja": "フラム",
+      "home_en": "Fulham",
+      "home_crest": "https://crests.football-data.org/63.png",
+      "away_id": 354,
+      "away_ja": "クリスタル・パレス",
+      "away_en": "Crystal Palace",
+      "away_crest": "https://crests.football-data.org/354.png",
+      "score": null,
+      "japanese_players": [
+        {
+          "name_ja": "鎌田大地",
+          "position": "MF",
+          "side": "away"
+        },
+        {
+          "name_ja": "冨安健洋",
+          "position": "DF",
+          "side": "away"
+        }
+      ],
+      "broadcasters": [],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 EFL Cup"
+    },
+    {
+      "id": "CUP_DFB_2026-10-28_Holste_TSGHof",
+      "competition_id": 81,
+      "competition_ja": "DFBポカール",
+      "competition_category": "domestic_cup",
+      "competition_flag": "🇩🇪",
+      "kickoff_jst": "2026-10-29T04:45:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "Second round",
+      "matchday": null,
+      "home_id": null,
+      "home_ja": "ホルシュタイン・キール",
+      "home_en": "Holstein Kiel",
+      "home_crest": null,
+      "away_id": 2,
+      "away_ja": "ホッフェンハイム",
+      "away_en": "Hoffenheim",
+      "away_crest": "https://crests.football-data.org/2.png",
+      "score": null,
+      "japanese_players": [
+        {
+          "name_ja": "髙橋仁胡",
+          "position": "DF",
+          "side": "home"
+        },
+        {
+          "name_ja": "安部大晴",
+          "position": "MF",
+          "side": "home"
+        },
+        {
+          "name_ja": "関根大輝",
+          "position": "DF",
+          "side": "home"
+        },
+        {
+          "name_ja": "町田浩樹",
+          "position": "DF",
+          "side": "away"
+        }
+      ],
+      "broadcasters": [],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 DFB-Pokal"
+    },
+    {
+      "id": "CUP_DFB_2026-10-28_Bayern_FCMagd",
+      "competition_id": 81,
+      "competition_ja": "DFBポカール",
+      "competition_category": "domestic_cup",
+      "competition_flag": "🇩🇪",
+      "kickoff_jst": "2026-10-29T04:45:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "Second round",
+      "matchday": null,
+      "home_id": 5,
+      "home_ja": "バイエルン",
+      "home_en": "Bayern",
+      "home_crest": "https://crests.football-data.org/5.png",
+      "away_id": null,
+      "away_ja": "マクデブルク",
+      "away_en": "1. FC Magdeburg",
+      "away_crest": null,
+      "score": null,
+      "japanese_players": [
+        {
+          "name_ja": "伊藤洋輝",
+          "position": "DF",
+          "side": "home"
+        }
+      ],
+      "broadcasters": [],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 DFB-Pokal"
+    },
+    {
+      "id": "CUP_CDR_2026-10-28_Tavern_Valenc",
+      "competition_id": 143,
+      "competition_ja": "コパ・デル・レイ",
+      "competition_category": "domestic_cup",
+      "competition_flag": "🇪🇸",
+      "kickoff_jst": "2026-10-29T05:00:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "First round / Group 3",
+      "matchday": null,
+      "home_id": null,
+      "home_ja": "Tavernes de la Valldigna",
+      "home_en": "Tavernes de la Valldigna",
+      "home_crest": null,
+      "away_id": 95,
+      "away_ja": "バレンシア",
+      "away_en": "Valencia",
+      "away_crest": "https://crests.football-data.org/95.png",
+      "score": null,
+      "japanese_players": [
+        {
+          "name_ja": "佐藤龍之介",
+          "position": "MF",
+          "side": "away"
+        }
+      ],
+      "broadcasters": [
+        {
+          "name": "U-NEXT",
+          "label": "U-NEXT",
+          "url": "https://video.unext.jp/",
+          "source": "broadcasters_json"
+        }
+      ],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 Copa del Rey"
+    },
+    {
+      "id": "CUP_EFL_2026-10-28_Liverp_Chelse",
+      "competition_id": 48,
+      "competition_ja": "カラバオカップ",
+      "competition_category": "domestic_cup",
+      "competition_flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+      "kickoff_jst": "2026-10-29T05:00:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "Fourth round",
+      "matchday": null,
+      "home_id": 64,
+      "home_ja": "リヴァプール",
+      "home_en": "Liverpool",
+      "home_crest": "https://crests.football-data.org/64.png",
+      "away_id": 61,
+      "away_ja": "チェルシー",
+      "away_en": "Chelsea",
+      "away_crest": "https://crests.football-data.org/61.png",
+      "score": null,
+      "japanese_players": [
+        {
+          "name_ja": "遠藤航",
+          "position": "DF/MF",
+          "side": "home"
+        }
+      ],
+      "broadcasters": [],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 EFL Cup"
     },
     {
       "id": 558558,
@@ -57161,6 +59263,151 @@
       "_source": "openligadb"
     },
     {
+      "id": "CUP_BEL_2026-12-04_UnionS_Wester",
+      "competition_id": 147,
+      "competition_ja": "ベルギーカップ",
+      "competition_category": "domestic_cup",
+      "competition_flag": "🇧🇪",
+      "kickoff_jst": "2026-12-05T05:00:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "Eighth round",
+      "matchday": null,
+      "home_id": null,
+      "home_ja": "ユニオン・サンジロワーズ",
+      "home_en": "Royale Union Saint-Gilloise",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "ウェステルロー",
+      "away_en": "Westerlo",
+      "away_crest": null,
+      "score": null,
+      "japanese_players": [
+        {
+          "name_ja": "ハーフナー・ニッキ",
+          "position": "DF",
+          "side": "home"
+        },
+        {
+          "name_ja": "坂本一彩",
+          "position": "FW",
+          "side": "away"
+        },
+        {
+          "name_ja": "木村誠二",
+          "position": "DF",
+          "side": "away"
+        },
+        {
+          "name_ja": "斎藤俊輔",
+          "position": "MF",
+          "side": "away"
+        }
+      ],
+      "broadcasters": [],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 Belgian Cup"
+    },
+    {
+      "id": "CUP_BEL_2026-12-05_Charle_SintTr",
+      "competition_id": 147,
+      "competition_ja": "ベルギーカップ",
+      "competition_category": "domestic_cup",
+      "competition_flag": "🇧🇪",
+      "kickoff_jst": "2026-12-06T01:30:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "Eighth round",
+      "matchday": null,
+      "home_id": null,
+      "home_ja": "Charleroi",
+      "home_en": "Charleroi",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "シント＝トロイデン",
+      "away_en": "Sint-Truiden",
+      "away_crest": null,
+      "score": null,
+      "japanese_players": [
+        {
+          "name_ja": "高井幸大",
+          "position": "DF",
+          "side": "away"
+        },
+        {
+          "name_ja": "小久保玲央ブライアン",
+          "position": "GK",
+          "side": "away"
+        },
+        {
+          "name_ja": "谷口彰悟",
+          "position": "DF",
+          "side": "away"
+        },
+        {
+          "name_ja": "畑大雅",
+          "position": "DF",
+          "side": "away"
+        },
+        {
+          "name_ja": "松澤海斗",
+          "position": "FW/MF",
+          "side": "away"
+        },
+        {
+          "name_ja": "新川志音",
+          "position": "MF/FW",
+          "side": "away"
+        },
+        {
+          "name_ja": "荒木遼太郎",
+          "position": "MF",
+          "side": "away"
+        },
+        {
+          "name_ja": "石渡ネルソン",
+          "position": "DF",
+          "side": "away"
+        }
+      ],
+      "broadcasters": [],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 Belgian Cup"
+    },
+    {
+      "id": "CUP_BEL_2026-12-05_Beersc_Genk",
+      "competition_id": 147,
+      "competition_ja": "ベルギーカップ",
+      "competition_category": "domestic_cup",
+      "competition_flag": "🇧🇪",
+      "kickoff_jst": "2026-12-06T04:45:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "Eighth round",
+      "matchday": null,
+      "home_id": null,
+      "home_ja": "Beerschot",
+      "home_en": "Beerschot",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "ヘンク",
+      "away_en": "Genk",
+      "away_crest": null,
+      "score": null,
+      "japanese_players": [
+        {
+          "name_ja": "伊東純也",
+          "position": "FW/MF",
+          "side": "away"
+        },
+        {
+          "name_ja": "横山歩夢",
+          "position": "MF",
+          "side": "away"
+        }
+      ],
+      "broadcasters": [],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 Belgian Cup"
+    },
+    {
       "id": "BL2_83726",
       "competition_id": 79,
       "competition_ja": "ブンデスリーガ2部",
@@ -57300,6 +59547,56 @@
       ],
       "broadcasters": [],
       "_source": "openligadb"
+    },
+    {
+      "id": "CUP_BEL_2026-12-06_Antwer_OHLeuv",
+      "competition_id": 147,
+      "competition_ja": "ベルギーカップ",
+      "competition_category": "domestic_cup",
+      "competition_flag": "🇧🇪",
+      "kickoff_jst": "2026-12-07T02:30:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "Eighth round",
+      "matchday": null,
+      "home_id": null,
+      "home_ja": "ロイヤル・アントワープ",
+      "home_en": "Royal Antwerp",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "OHルーヴェン",
+      "away_en": "OH Leuven",
+      "away_crest": null,
+      "score": null,
+      "japanese_players": [
+        {
+          "name_ja": "綱島悠斗",
+          "position": "MF",
+          "side": "home"
+        },
+        {
+          "name_ja": "野澤大志ブランドン",
+          "position": "GK",
+          "side": "home"
+        },
+        {
+          "name_ja": "安藤晃希",
+          "position": "",
+          "side": "home"
+        },
+        {
+          "name_ja": "荻原拓也",
+          "position": "DF",
+          "side": "away"
+        },
+        {
+          "name_ja": "山田新",
+          "position": "FW",
+          "side": "away"
+        }
+      ],
+      "broadcasters": [],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 Belgian Cup"
     },
     {
       "id": "ECL_2026-12-10_Kairat_Univer",
@@ -63852,5 +66149,6 @@
   ],
   "updated_openligadb": "2026-10-23T17:06:08.290697+09:00",
   "updated_yt_highlights": "2026-10-23T17:06:44.289820+09:00",
-  "updated_uefa_secondary": "2026-10-23T17:07:17.856709+09:00"
+  "updated_uefa_secondary": "2026-10-23T17:07:17.856709+09:00",
+  "updated_domestic_cups": "2026-10-23T18:10:53.844727+09:00"
 }
