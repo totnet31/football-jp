@@ -469,6 +469,11 @@
     .nw-unconfirmed { font-size: 13px; color: #555; margin: 0; }
     .nw-none { font-size: 13px; color: #444; margin: 0 0 10px; }
     .nw-note { font-size: 11px; color: #888; margin: 10px 0 0; line-height: 1.5; }
+
+    .cs-asof { display: inline-block; margin: 0 0 8px; padding: 3px 10px; border-radius: 12px; background: #0047ab; color: #fff; font-size: 13px; font-weight: 700; }
+    .cs-stale { margin: 0 0 8px; padding: 8px 10px; border-radius: 6px; background: #fff7e6; border: 1px solid #f5c26b; font-size: 13px; line-height: 1.5; }
+    .cs-scope { margin: 0 0 8px; font-size: 12px; color: #444; line-height: 1.5; }
+    .goals-note { margin: 8px 0 0; font-size: 12px; color: #555; line-height: 1.5; }
     @media (max-width: 600px) {
       .stats-grid { grid-template-columns: repeat(2, 1fr); }
       .match-header, .match-row {
@@ -543,6 +548,17 @@
     </section>
 
   
+    <section class="player-section pt-stats" id="season-stats">
+      <h3>📊 上田綺世の今季（2026-27）成績</h3>
+      <p class="cs-asof">🗓 9月6日の試合までの数字です</p><p class="cs-stale">⚠️ そのあとの試合（最新は10月22日）の分は、まだこの表に入っていません・下の「直近のゴール」は10月22日の試合まで入っているため、数字が合わないことがあります。</p><p class="cs-scope">リールでの数字です。今季の途中に移籍してきたため、前のクラブでの出場・得点は入っていません（下の「直近のゴール」には前のクラブでのゴールも載っています）。</p>
+      <div class="stats-grid">
+        <div class="stat-card"><div class="stat-label">リーグ・アン 出場</div><div class="stat-value">4</div></div>
+        <div class="stat-card"><div class="stat-label">リーグ・アン ゴール</div><div class="stat-value">2</div></div>
+        <div class="stat-card"><div class="stat-label">全大会 出場</div><div class="stat-value">6</div></div>
+        <div class="stat-card"><div class="stat-label">全大会 ゴール</div><div class="stat-value">3</div></div>
+      </div>
+      <div class="stats-source">出典：Wikipedia（クラブの今季ページ） <a href="https://en.wikipedia.org/wiki/2026–27_Lille_OSC_season" target="_blank" rel="noopener">→</a>（全大会＝リーグ戦・国内カップ・欧州の大会の合計）</div>
+    </section>
     <section class="player-section">
       <h3>📊 2025-26シーズン成績（リーグ戦）</h3>
       <div class="stats-grid">
@@ -560,10 +576,10 @@
         </div>
         <div class="stat-card">
           <div class="stat-label">PK</div>
-          <div class="stat-value">0</div>
+          <div class="stat-value">—</div>
         </div>
       </div>
-      <div class="stats-source">出典: Wikipedia</div>
+      <div class="stats-source">出典: Football-Data.org の得点ランキング（記録が無い・確かめられない項目は「—」）</div>
     </section>
 
   
@@ -826,18 +842,55 @@
       <div class="goals-list">
         
           <div class="goal-row">
-            <div class="goal-date">04/25</div>
-            <div class="goal-match">フェイエノールト vs フローニンゲン</div>
-            <div class="goal-minute">22分</div>
+            <div class="goal-date">09/21</div>
+            <div class="goal-match">ニース vs リール</div>
+            <div class="goal-minute">79分</div>
+            <div class="goal-comp">リーグ・アン</div>
+          </div>
+          <div class="goal-row">
+            <div class="goal-date">09/09</div>
+            <div class="goal-match">リール vs ベティス</div>
+            <div class="goal-minute">12分</div>
+            <div class="goal-comp">UEFAチャンピオンズリーグ</div>
+          </div>
+          <div class="goal-row">
+            <div class="goal-date">09/04</div>
+            <div class="goal-match">トゥールーズ vs リール</div>
+            <div class="goal-minute">73分</div>
+            <div class="goal-comp">リーグ・アン</div>
+          </div>
+          <div class="goal-row">
+            <div class="goal-date">08/30</div>
+            <div class="goal-match">フェイエノールト vs Den Haag</div>
+            <div class="goal-minute">62分</div>
+            <div class="goal-comp">エールディビジ</div>
+          </div>
+          <div class="goal-row">
+            <div class="goal-date">08/23</div>
+            <div class="goal-match">Cambuur vs フェイエノールト</div>
+            <div class="goal-minute">45+1分（PK）</div>
+            <div class="goal-comp">エールディビジ</div>
+          </div>
+          <div class="goal-row">
+            <div class="goal-date">08/16</div>
+            <div class="goal-match">フェイエノールト vs ゴー・アヘッド</div>
+            <div class="goal-minute">36分</div>
             <div class="goal-comp">エールディビジ</div>
           </div>
           <div class="goal-row">
             <div class="goal-date">04/25</div>
             <div class="goal-match">フェイエノールト vs フローニンゲン</div>
-            <div class="goal-minute">66 (pen.)分</div>
+            <div class="goal-minute">22分（PK）</div>
+            <div class="goal-comp">エールディビジ</div>
+          </div>
+          <div class="goal-row">
+            <div class="goal-date">04/25</div>
+            <div class="goal-match">フェイエノールト vs フローニンゲン</div>
+            <div class="goal-minute">66分</div>
             <div class="goal-comp">エールディビジ</div>
           </div>
       </div>
+      <p class="goals-note">10月22日の試合まで。リーグ戦と欧州の大会（CL・EL・ECL）のゴールです（国内カップ戦は入っていません）。出典：Wikipedia の試合記録</p>
     </section>
 
   

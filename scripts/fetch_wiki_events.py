@@ -4,7 +4,7 @@ Phase 1B: Wikipediaスクレイプで日本人選手の得点を抽出
 - 入力: data/players.json（67名）／data/matches.json（finished試合）／data/clubs.json
 - 出力: data/match_events.json（match_id → goals[]）
 - 仕組み:
-  1. 各クラブの「2025–26 Club season」Wikipediaページを取得
+  1. 各クラブの「{今季} Club season」Wikipediaページを取得（今季は current_season() で日付から決める）
   2. {{football box collapsible}} テンプレートを正規表現でパース
   3. goals1/goals2 から *[[player wiki|display]] {{goal|MIN}} を抽出
   4. football-dataの試合IDと date+対戦相手 で照合
@@ -25,6 +25,20 @@ DATA = ROOT / "data"
 JST = timezone(timedelta(hours=9))
 
 WIKI_API = "https://en.wikipedia.org/w/api.php"
+
+def current_season(now=None):
+    """いまのシーズン名（Wikipedia の表記 '2026–27'）。7月から新しいシーズン。
+    以前は '2025–26' を決め打ちしていたため、2026-27 の得点が入っていなかった（2026-10-23 直し）。"""
+    import os
+    if os.environ.get("WIKI_SEASON"):
+        return os.environ["WIKI_SEASON"]
+    now = now or datetime.now(JST)
+    y = now.year if now.month >= 7 else now.year - 1
+    return f"{y}–{(y + 1) % 100:02d}"
+
+
+SEASON = current_season()
+CACHE_MAX_HOURS = 20  # シーズンページはこの時間より古ければ取り直す（試合のたびに得点が足されるため）
 
 MONTH_MAP = {
     "January": 1, "February": 2, "March": 3, "April": 4, "May": 5, "June": 6,
@@ -61,12 +75,12 @@ def fetch_wikitext(page_title):
 
 
 def candidate_pages(club_en, club_id):
-    """クラブの2025-26シーズンページタイトル候補"""
+    """クラブの今季（SEASON）シーズンページタイトル候補"""
     base = club_en.strip()
     cands = [
-        f"2025–26 {base} season",
-        f"2025–26 {base} F.C. season",
-        f"2025–26 {base} FC season",
+        f"{SEASON} {base} season",
+        f"{SEASON} {base} F.C. season",
+        f"{SEASON} {base} FC season",
     ]
     # 既知のクラブ別エイリアス
     aliases = {
@@ -94,12 +108,16 @@ def candidate_pages(club_en, club_id):
         "Sparta Rotterdam": ["Sparta Rotterdam"],
         "Gil Vicente": ["Gil Vicente F.C."],
         "Leeds": ["Leeds United F.C.", "Leeds United"],
+        "LOSC Lille": ["Lille OSC", "Lille"],
+        "Bolton": ["Bolton Wanderers"],
+        "PSV Eindhoven": ["PSV Eindhoven", "PSV"],
+        "AZ Alkmaar": ["AZ Alkmaar", "AZ"],
     }
     for alt in aliases.get(base, []):
         cands.extend([
-            f"2025–26 {alt} season",
-            f"2025–26 {alt} F.C. season",
-            f"2025–26 {alt} FC season",
+            f"{SEASON} {alt} season",
+            f"{SEASON} {alt} F.C. season",
+            f"{SEASON} {alt} FC season",
         ])
     seen = set()
     out = []
@@ -113,7 +131,7 @@ def candidate_pages(club_en, club_id):
 
 def search_season_page(club_en):
     """Wikipedia 検索APIで '2025-26 {club} season' を探す"""
-    q = f"2025–26 {club_en} season"
+    q = f"{SEASON} {club_en} season"
     url = (f"{WIKI_API}?action=opensearch&search={quote(q)}"
            f"&limit=5&namespace=0&format=json")
     req = Request(url, headers={"User-Agent": "football-jp/0.1"})
@@ -123,7 +141,7 @@ def search_season_page(club_en):
         # opensearchの応答: [query, [titles], [descs], [urls]]
         if isinstance(data, list) and len(data) > 1:
             for t in data[1]:
-                if "2025" in t and "season" in t.lower():
+                if t.startswith(SEASON) and "season" in t.lower():
                     return t
     except (HTTPError, URLError):
         pass
@@ -183,19 +201,27 @@ def parse_box_field(box_text, field):
 def parse_goals_block(text):
     """goals1/goals2 の中身から [(wiki_target_or_name, [minutes])] を抽出"""
     # 各行（'*[[Wiki|Display]] {{goal|MIN[|...]}}, {{goal|...}}'）
+    # 書き方の違いも読む（2026-10-23）：
+    #   ・「*」の行（いつもの形）
+    #   ・「*」が無く <br> で区切った形（| goals2 = [[A|A]] {{goal|54}} など）
+    #   ・時間が名前の前に来る形（* {{goal|45+1|pen.}} [[Ayase Ueda|Ueda]]）
     out = []
-    for line in text.splitlines():
+    raw = re.sub(r"<br\s*/?>", "\n", text, flags=re.IGNORECASE)
+    star_lines = [l for l in raw.splitlines() if l.strip().startswith("*")]
+    lines = star_lines if star_lines else [l for l in raw.splitlines() if l.strip()]
+    for line in lines:
         line = line.strip()
-        if not line.startswith("*"):
-            continue
-        line = line[1:].strip()
+        if line.startswith("*"):
+            line = line[1:].strip()
         # プレーヤー名（ウィキリンク or プレーン）
         link_target = extract_link_target(line)
         display_name = None
         m = re.match(r"\[\[([^\]\|]+)(?:\|([^\]]+))?\]\]", line)
+        if not m and line.startswith("{{goal"):
+            m = re.search(r"\[\[([^\]\|]+)(?:\|([^\]]+))?\]\]", line)
         if m:
             display_name = (m.group(2) or m.group(1)).strip()
-            rest = line[m.end():]
+            rest = line[:m.start()] + " " + line[m.end():]
         else:
             # プレーンテキスト
             mp = re.match(r"([A-Za-zÀ-ÖØ-öø-ÿĀ-ž'\.\-\s]+?)(?=\s*\{\{)", line)
@@ -211,13 +237,12 @@ def parse_goals_block(text):
             tokens_raw = gm.group(1)
             # || は単独 | と等価扱い
             tokens = [t.strip() for t in re.split(r"\|+", tokens_raw) if t.strip() != ""]
-            current_note = ""
+            # {{goal|22|pen.|66}} は「22分がPK」（注記は直前の時間に付く）。以前は次の時間に付けていた（2026-10-23）
             for tok in tokens:
                 if re.match(r"^\d+\s*\+?\s*\d*$", tok):
-                    goals.append({"minute_raw": tok, "note": current_note.lower()})
-                    current_note = ""
-                else:
-                    current_note = tok
+                    goals.append({"minute_raw": tok, "note": ""})
+                elif goals and not goals[-1]["note"]:
+                    goals[-1]["note"] = re.sub(r"[\[\]]", "", tok).split("|")[-1].strip().lower()
         if display_name and goals:
             out.append({
                 "wiki_target": link_target,
@@ -429,9 +454,10 @@ def parse_wikitable_matches(wikitext, club_en):
 def parse_match_boxes(wikitext):
     """{{football box collapsible}} と {{football box}} 両方を抽出"""
     # collapsible版（メイン）
-    boxes = re.findall(r"\{\{[Ff]ootball box collapsible(.*?)\n\}\}", wikitext, re.DOTALL)
+    # 「footballbox collapsible」（空白なし）の書き方もある（2026–27 Real Sociedad の第9節など。2026-10-23 直し）
+    boxes = re.findall(r"\{\{\s*[Ff]ootball ?box collapsible(.*?)\n\}\}", wikitext, re.DOTALL)
     # 非collapsible版
-    boxes += re.findall(r"\{\{[Ff]ootball box\b(?! collapsible)(.*?)\n\}\}", wikitext, re.DOTALL)
+    boxes += re.findall(r"\{\{\s*[Ff]ootball ?box\b(?! collapsible)(.*?)\n\}\}", wikitext, re.DOTALL)
     out = []
     for b in boxes:
         date_raw = parse_box_field(b, "date")
@@ -485,7 +511,7 @@ def _ascii_fold(s):
     return unicodedata.normalize("NFKD", s).encode("ascii", "ignore").decode("ascii")
 
 
-def build_jp_lookup(players):
+def build_jp_lookup(players, with_last=True):
     """name_en + wiki_target_guess → name_ja のマップ
 
     Unicode正規化バリアントも登録（例: 'Dōan' → 'Doan' → '堂安律'）
@@ -498,6 +524,8 @@ def build_jp_lookup(players):
             continue
         for key in [nen, nen.lower(), _ascii_fold(nen), _ascii_fold(nen).lower()]:
             out.setdefault(key, nja)
+        if not with_last:
+            continue
         # 苗字（最後の単語）も登録
         last = nen.split()[-1]
         for key in [last, last.lower(), _ascii_fold(last), _ascii_fold(last).lower()]:
@@ -580,6 +608,19 @@ def find_match(jp_match, wiki_box):
     return False
 
 
+def _jp_clubs_of(m, players, jp_club_ids):
+    """この試合で見るクラブ：試合の「日本人選手」の印から＋日本人が在籍するクラブが出ていればそのクラブ"""
+    out = set()
+    names = {jp.get("name_ja") for jp in m.get("japanese_players", [])}
+    for p in players:
+        if p.get("name_ja") in names and p.get("club_id"):
+            out.add(p["club_id"])
+    for cid in (m.get("home_id"), m.get("away_id")):
+        if cid in jp_club_ids:
+            out.add(cid)
+    return out
+
+
 def main():
     matches = load_json("matches.json").get("matches", [])
     players = load_json("players.json").get("players", [])
@@ -592,11 +633,16 @@ def main():
     events_map = events_store.setdefault("events", {})
 
     jp_lookup = build_jp_lookup(players)
+    jp_full = build_jp_lookup(players, with_last=False)
     print(f"[INFO] 日本人選手 {len([p for p in players if p.get('name_en')])} 名 ロード")
 
     # 対象クラブを抽出（japanese_players が含まれる finished 試合のクラブ）
+    # 日本人が在籍するクラブの試合も対象にする（試合の「日本人選手」の印が付いていない試合がある：
+    # 移籍してきた選手の新しいクラブの試合など。ボルトンの伊藤敦樹。2026-10-23）
+    jp_club_ids = {p.get("club_id") for p in players if p.get("club_id")}
     finished_jp = [m for m in matches
-                   if m.get("status") == "FINISHED" and m.get("japanese_players")]
+                   if m.get("status") == "FINISHED"
+                   and (m.get("japanese_players") or m.get("home_id") in jp_club_ids or m.get("away_id") in jp_club_ids)]
     print(f"[INFO] 対象 FINISHED 試合: {len(finished_jp)}件")
 
     # クラブ別 → このクラブのシーズンページから日本人ゴール抽出
@@ -618,7 +664,12 @@ def main():
         cen = info["name_en"]
         # キャッシュチェック: boxes が空でなければ再利用
         cached = pages_cache.get(str(cid), {})
-        if cached.get("boxes"):
+        fresh = False
+        try:
+            fresh = (datetime.now(JST) - datetime.fromisoformat(cached.get("fetched_at", ""))).total_seconds() < CACHE_MAX_HOURS * 3600
+        except ValueError:
+            pass
+        if cached.get("boxes") and str(cached.get("title") or "").startswith(SEASON) and fresh:
             boxes = cached["boxes"]
             print(f"  [CACHE] {cen}: {len(boxes)}試合")
             boxes_per_club[cid] = boxes
@@ -643,18 +694,24 @@ def main():
                     used_title = found_title
         if not wt or not used_title:
             print(f"  [SKIP] {cen}: シーズンページ見つからず")
-            pages_cache[str(cid)] = {"title": None, "boxes": []}
+            if cached.get("boxes") and str(cached.get("title") or "").startswith(SEASON):
+                # 取り直しに失敗したときは、今季の前回分をそのまま使う
+                boxes_per_club[cid] = cached["boxes"]
+                continue
+            pages_cache[str(cid)] = {"title": None, "boxes": [], "fetched_at": datetime.now(JST).isoformat()}
             continue
         boxes = parse_all_matches(wt, cen)
         if boxes:
             # 新規取得または再取得成功 → events_map の再計算が必要
             refreshed_club_ids.add(cid)
-        pages_cache[str(cid)] = {"title": used_title, "boxes": boxes}
+        pages_cache[str(cid)] = {"title": used_title, "boxes": boxes, "fetched_at": datetime.now(JST).isoformat()}
         boxes_per_club[cid] = boxes
         print(f"  [WIKI] {cen} ({used_title}): {len(boxes)}試合")
         time.sleep(0.5)
 
-    # 再取得したクラブに関連する events_map エントリを削除して再計算させる
+    # 再取得したクラブに関連する試合は再計算する（消さずに印だけ。前のシーズンの試合で
+    # 新しいページに載っていないものは、前の記録をそのまま残す）
+    recompute = set()
     if refreshed_club_ids:
         # 各試合の JP 選手のクラブが refreshed_club_ids に含まれる場合は events_map から削除
         cleared = 0
@@ -662,30 +719,22 @@ def main():
             mid = str(m["id"])
             if mid not in events_map:
                 continue
-            jp_clubs = set()
-            for p in players:
-                for jp in m.get("japanese_players", []):
-                    if p.get("name_ja") == jp.get("name_ja") and p.get("club_id"):
-                        jp_clubs.add(p["club_id"])
+            jp_clubs = _jp_clubs_of(m, players, jp_club_ids)
             if jp_clubs & refreshed_club_ids:
-                del events_map[mid]
+                recompute.add(mid)
                 cleared += 1
         if cleared:
-            print(f"  [REFRESH] {cleared}試合のキャッシュをクリア（再計算対象）")
+            print(f"  [REFRESH] {cleared}試合を再計算対象に")
 
     # 各 finished_jp 試合に対して、関連クラブの boxes から日本人ゴール抽出
     found = 0
     for m in finished_jp:
         mid = str(m["id"])
         # ゴールデータが確認できた試合はスキップ（空 [] はマッチング失敗の可能性があるため再計算）
-        if events_map.get(mid):
+        if events_map.get(mid) and mid not in recompute:
             continue  # キャッシュ済み（ゴールデータあり）
         # この試合のJP選手のクラブ群
-        jp_clubs = set()
-        for p in players:
-            for jp in m.get("japanese_players", []):
-                if p.get("name_ja") == jp.get("name_ja") and p.get("club_id"):
-                    jp_clubs.add(p["club_id"])
+        jp_clubs = _jp_clubs_of(m, players, jp_club_ids)
         # それらクラブのboxesから日付+対戦相手で照合
         events = []
         matched = False
@@ -712,28 +761,37 @@ def main():
                     ]
 
                 # 各 goals ブロックから全得点を保存（日本人にはフラグ付与）
+                # 名前の照合：①フルネーム（wiki のリンク先・表示名）→ ②苗字だけ（この試合に出ている
+                # 日本人の中で1人に決まるときだけ）。苗字が同じ選手（鈴木唯人と鈴木彩艶など）を取り違えないため（2026-10-23）
+                match_ja = {jp.get("name_ja") for jp in m.get("japanese_players", [])}
+                match_ja |= {p.get("name_ja") for p in players
+                             if p.get("club_id") and p.get("club_id") in (m.get("home_id"), m.get("away_id"))}
+                local_last = {}
+                for p in players:
+                    if p.get("name_ja") in match_ja and p.get("name_en"):
+                        lst = _ascii_fold(p["name_en"].split()[-1]).lower()
+                        local_last.setdefault(lst, set()).add(p["name_ja"])
                 for side, gblock in side_pairs:
                     for entry in gblock:
-                        candidates = [entry.get("display", ""), entry.get("wiki_target") or ""]
+                        candidates = [entry.get("wiki_target") or "", entry.get("display", "")]
                         ja = None
                         for c in candidates:
                             if not c:
                                 continue
-                            # 通常照合 + ASCII折りたたみ照合（ō→o 等のアクセント対応）
                             for key in [c, c.lower(), _ascii_fold(c), _ascii_fold(c).lower()]:
-                                if key in jp_lookup:
-                                    ja = jp_lookup[key]
+                                if key in jp_full:
+                                    ja = jp_full[key]
                                     break
                             if ja:
                                 break
-                            # 苗字のみ照合
-                            last = c.split()[-1]
-                            for key in [last, last.lower(), _ascii_fold(last), _ascii_fold(last).lower()]:
-                                if key in jp_lookup:
-                                    ja = jp_lookup[key]
+                        if not ja:
+                            for c in candidates:
+                                if not c:
+                                    continue
+                                hit = local_last.get(_ascii_fold(re.sub(r"\s*\(.*?\)", "", c).split()[-1] if c.split() else "").lower())
+                                if hit and len(hit) == 1:
+                                    ja = next(iter(hit))
                                     break
-                            if ja:
-                                break
                         for g in entry["goals"]:
                             minute = parse_minute(g["minute_raw"])
                             if minute is None:
@@ -749,7 +807,8 @@ def main():
                                 "side": side,
                             })
                 break  # マッチ1試合のみ
-        events_map[mid] = events
+        if matched or mid not in events_map:
+            events_map[mid] = events
         if events:
             found += 1
             names = ", ".join(f"{e['player_ja']}{e['minute']}'" for e in events)
