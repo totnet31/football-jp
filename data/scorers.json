@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-24T16:43:29.860101+09:00",
+  "updated": "2026-10-24T22:16:07.440264+09:00",
   "competitions": {
     "39": {
       "name_ja": "プレミアリーグ",
@@ -720,6 +720,30 @@
           "playedMatches": 10
         },
         {
+          "player_id": 4223,
+          "player_name": "Patrick Bamford",
+          "nationality": "England",
+          "team_id": 356,
+          "team_ja": "シェフィールド・ユナイテッド",
+          "team_crest": "https://crests.football-data.org/356.png",
+          "goals": 5,
+          "assists": 1,
+          "penalties": null,
+          "playedMatches": 11
+        },
+        {
+          "player_id": 35126,
+          "player_name": "Lyndon Dykes",
+          "nationality": "Scotland",
+          "team_id": 325,
+          "team_ja": "ポーツマス",
+          "team_crest": "https://crests.football-data.org/325.png",
+          "goals": 5,
+          "assists": 1,
+          "penalties": 1,
+          "playedMatches": 11
+        },
+        {
           "player_id": 189593,
           "player_name": "Sam Dalby",
           "nationality": "England",
@@ -780,18 +804,6 @@
           "playedMatches": 11
         },
         {
-          "player_id": 4223,
-          "player_name": "Patrick Bamford",
-          "nationality": "England",
-          "team_id": 356,
-          "team_ja": "シェフィールド・ユナイテッド",
-          "team_crest": "https://crests.football-data.org/356.png",
-          "goals": 4,
-          "assists": 1,
-          "penalties": null,
-          "playedMatches": 11
-        },
-        {
           "player_id": 176016,
           "player_name": "August Priske",
           "nationality": "Denmark",
@@ -802,18 +814,6 @@
           "assists": 1,
           "penalties": 1,
           "playedMatches": 10
-        },
-        {
-          "player_id": 35126,
-          "player_name": "Lyndon Dykes",
-          "nationality": "Scotland",
-          "team_id": 384,
-          "team_ja": "ミルウォール",
-          "team_crest": "https://crests.football-data.org/384.png",
-          "goals": 4,
-          "assists": 1,
-          "penalties": 1,
-          "playedMatches": 11
         },
         {
           "player_id": 8226,
@@ -886,6 +886,18 @@
           "assists": 3,
           "penalties": null,
           "playedMatches": 11
+        },
+        {
+          "player_id": 145327,
+          "player_name": "Mathias Kvistgaarden",
+          "nationality": "Denmark",
+          "team_id": 68,
+          "team_ja": "ノリッジ",
+          "team_crest": "https://crests.football-data.org/68.png",
+          "goals": 3,
+          "assists": 2,
+          "penalties": null,
+          "playedMatches": 9
         },
         {
           "player_id": 5578,
@@ -970,6 +982,18 @@
           "assists": 1,
           "penalties": null,
           "playedMatches": 10
+        },
+        {
+          "player_id": 186708,
+          "player_name": "Bobby Clark",
+          "nationality": "England",
+          "team_id": 342,
+          "team_ja": "ダービー",
+          "team_crest": "https://crests.football-data.org/342.png",
+          "goals": 3,
+          "assists": 2,
+          "penalties": null,
+          "playedMatches": 11
         },
         {
           "player_id": 172231,
@@ -1116,18 +1140,6 @@
           "playedMatches": 10
         },
         {
-          "player_id": 145327,
-          "player_name": "Mathias Kvistgaarden",
-          "nationality": "Denmark",
-          "team_id": 68,
-          "team_ja": "ノリッジ",
-          "team_crest": "https://crests.football-data.org/68.png",
-          "goals": 2,
-          "assists": 1,
-          "penalties": null,
-          "playedMatches": 9
-        },
-        {
           "player_id": 165187,
           "player_name": "Josh Coburn",
           "nationality": "England",
@@ -1198,18 +1210,6 @@
           "assists": 1,
           "penalties": null,
           "playedMatches": 5
-        },
-        {
-          "player_id": 40541,
-          "player_name": "Manor Solomon",
-          "nationality": "Israel",
-          "team_id": 563,
-          "team_ja": "ウェストハム",
-          "team_crest": "https://crests.football-data.org/563.png",
-          "goals": 2,
-          "assists": 2,
-          "penalties": null,
-          "playedMatches": 11
         }
       ]
     },
@@ -1263,7 +1263,7 @@
           "goals": 7,
           "assists": 1,
           "penalties": null,
-          "playedMatches": 9
+          "playedMatches": 10
         },
         {
           "player_id": 2237,
@@ -1287,7 +1287,7 @@
           "goals": 7,
           "assists": null,
           "penalties": null,
-          "playedMatches": 9
+          "playedMatches": 10
         },
         {
           "player_id": 180218,
@@ -1300,6 +1300,18 @@
           "assists": null,
           "penalties": null,
           "playedMatches": 9
+        },
+        {
+          "player_id": 214497,
+          "player_name": "Fer Niño",
+          "nationality": "Spain",
+          "team_id": 285,
+          "team_ja": "エルチェ",
+          "team_crest": "https://crests.football-data.org/285.png",
+          "goals": 6,
+          "assists": null,
+          "penalties": 1,
+          "playedMatches": 10
         },
         {
           "player_id": 7801,
@@ -1322,18 +1334,6 @@
           "team_crest": "https://crests.football-data.org/78.png",
           "goals": 5,
           "assists": 2,
-          "penalties": null,
-          "playedMatches": 9
-        },
-        {
-          "player_id": 214497,
-          "player_name": "Fer Niño",
-          "nationality": "Spain",
-          "team_id": 285,
-          "team_ja": "エルチェ",
-          "team_crest": "https://crests.football-data.org/285.png",
-          "goals": 5,
-          "assists": null,
           "penalties": null,
           "playedMatches": 9
         },
@@ -1407,7 +1407,7 @@
           "goals": 3,
           "assists": 2,
           "penalties": null,
-          "playedMatches": 9
+          "playedMatches": 10
         },
         {
           "player_id": 633,
@@ -1623,7 +1623,7 @@
           "goals": 2,
           "assists": null,
           "penalties": null,
-          "playedMatches": 9
+          "playedMatches": 10
         },
         {
           "player_id": 98741,
@@ -2523,7 +2523,7 @@
           "goals": 4,
           "assists": null,
           "penalties": 1,
-          "playedMatches": 7
+          "playedMatches": 8
         },
         {
           "player_id": 43285,
@@ -2535,7 +2535,7 @@
           "goals": 3,
           "assists": null,
           "penalties": null,
-          "playedMatches": 7
+          "playedMatches": 8
         },
         {
           "player_id": 1754,
@@ -2631,7 +2631,7 @@
           "goals": 3,
           "assists": 1,
           "penalties": null,
-          "playedMatches": 7
+          "playedMatches": 8
         },
         {
           "player_id": 250304,
@@ -2715,7 +2715,7 @@
           "goals": 2,
           "assists": null,
           "penalties": null,
-          "playedMatches": 7
+          "playedMatches": 8
         },
         {
           "player_id": 192142,
@@ -2763,7 +2763,7 @@
           "goals": 2,
           "assists": null,
           "penalties": null,
-          "playedMatches": 6
+          "playedMatches": 7
         },
         {
           "player_id": 156912,
@@ -2775,7 +2775,7 @@
           "goals": 2,
           "assists": 1,
           "penalties": null,
-          "playedMatches": 7
+          "playedMatches": 8
         },
         {
           "player_id": 152770,
@@ -2823,7 +2823,7 @@
           "goals": 2,
           "assists": 2,
           "penalties": null,
-          "playedMatches": 7
+          "playedMatches": 8
         },
         {
           "player_id": 157538,
