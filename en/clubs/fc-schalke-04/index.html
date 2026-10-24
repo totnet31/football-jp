@@ -213,12 +213,12 @@
     <section class="club-section">
       <h3>🏆 Bundesliga Current Standings</h3>
       <div class="standing-row">
-        <span class="standing-pos">15</span>
+        <span class="standing-pos">16</span>
         <span class="standing-detail">
-          (of 18)&nbsp;&nbsp;6 played&nbsp;
-          1W 2D 3L&nbsp;
+          (of 18)&nbsp;&nbsp;7 played&nbsp;
+          1W 3D 3L&nbsp;
           4-7 GD&nbsp;
-          <strong>5 pts</strong>
+          <strong>6 pts</strong>
         </span>
       </div>
     </section>
@@ -253,6 +253,14 @@
         </div>
         
           <div class="match-row scheduled">
+            <div class="match-date"><span class="match-date-day">2026/11/09</span><span class="match-date-time">(Mon) 03:30</span></div>
+            <div class="match-venue"><span class="venue-badge venue-away">A</span></div>
+            <div class="match-opponent">vs Hoffenheim</div>
+            <div class="match-result">—</div>
+            <div class="match-broadcast">—</div>
+            <div class="match-comp">Bundesliga</div>
+          </div>
+          <div class="match-row scheduled">
             <div class="match-date"><span class="match-date-day">2026/10/31</span><span class="match-date-time">(Sat) 23:30</span></div>
             <div class="match-venue"><span class="venue-badge venue-home">H</span></div>
             <div class="match-opponent">vs RB Leipzig</div>
@@ -268,11 +276,11 @@
             <div class="match-broadcast">—</div>
             <div class="match-comp">DFB-Pokal</div>
           </div>
-          <div class="match-row scheduled">
+          <div class="match-row result-pending">
             <div class="match-date"><span class="match-date-day">2026/10/24</span><span class="match-date-time">(Sat) 22:30</span></div>
             <div class="match-venue"><span class="venue-badge venue-away">A</span></div>
             <div class="match-opponent">vs 1. FC Köln</div>
-            <div class="match-result">—</div>
+            <div class="match-result pending">Result pending</div>
             <div class="match-broadcast">—</div>
             <div class="match-comp">Bundesliga</div>
           </div>
@@ -324,7 +332,7 @@
             <div class="match-broadcast">—</div>
             <div class="match-comp">Bundesliga</div>
           </div>
-          <div class="match-row">
+          <div class="match-row hidden-extra">
             <div class="match-date"><span class="match-date-day">2026/08/25</span><span class="match-date-time">(Tue) 03:45</span></div>
             <div class="match-venue"><span class="venue-badge venue-away">A</span></div>
             <div class="match-opponent">vs Hallescher FC</div>
@@ -333,6 +341,9 @@
             <div class="match-comp">DFB-Pokal</div>
           </div>
       </div>
+      <button class="show-more-matches" onclick="toggleMoreMatches(this)" data-count="1" data-expanded="false">
+        Show more (1 remaining)
+      </button>
     </section>
 
   
