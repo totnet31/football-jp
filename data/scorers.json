@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-25T09:02:23.746474+09:00",
+  "updated": "2026-10-25T16:55:07.568645+09:00",
   "competitions": {
     "39": {
       "name_ja": "プレミアリーグ",
@@ -12,10 +12,10 @@
           "team_id": 65,
           "team_ja": "マンチェスター・シティ",
           "team_crest": "https://crests.football-data.org/65.png",
-          "goals": 9,
+          "goals": 8,
           "assists": null,
           "penalties": null,
-          "playedMatches": 8
+          "playedMatches": 7
         },
         {
           "player_id": 103125,
@@ -63,7 +63,7 @@
           "goals": 4,
           "assists": 1,
           "penalties": null,
-          "playedMatches": 8
+          "playedMatches": 7
         },
         {
           "player_id": 133242,
@@ -75,7 +75,7 @@
           "goals": 4,
           "assists": 2,
           "penalties": null,
-          "playedMatches": 8
+          "playedMatches": 7
         },
         {
           "player_id": 8626,
@@ -84,18 +84,6 @@
           "team_id": 66,
           "team_ja": "マンチェスター・ユナイテッド",
           "team_crest": "https://crests.football-data.org/66.png",
-          "goals": 4,
-          "assists": null,
-          "penalties": null,
-          "playedMatches": 7
-        },
-        {
-          "player_id": 152515,
-          "player_name": "Nicolas Jackson",
-          "nationality": "Senegal",
-          "team_id": 58,
-          "team_ja": "アストン・ヴィラ",
-          "team_crest": "https://crests.football-data.org/58.png",
           "goals": 4,
           "assists": null,
           "penalties": null,
@@ -123,7 +111,7 @@
           "goals": 3,
           "assists": null,
           "penalties": null,
-          "playedMatches": 8
+          "playedMatches": 7
         },
         {
           "player_id": 190851,
@@ -147,7 +135,7 @@
           "goals": 3,
           "assists": 1,
           "penalties": null,
-          "playedMatches": 8
+          "playedMatches": 7
         },
         {
           "player_id": 8273,
@@ -243,7 +231,7 @@
           "goals": 2,
           "assists": null,
           "penalties": null,
-          "playedMatches": 8
+          "playedMatches": 7
         },
         {
           "player_id": 7427,
@@ -255,7 +243,7 @@
           "goals": 2,
           "assists": null,
           "penalties": null,
-          "playedMatches": 8
+          "playedMatches": 7
         },
         {
           "player_id": 176628,
@@ -279,7 +267,7 @@
           "goals": 2,
           "assists": 1,
           "penalties": null,
-          "playedMatches": 8
+          "playedMatches": 7
         },
         {
           "player_id": 101910,
@@ -349,9 +337,9 @@
           "team_ja": "フラム",
           "team_crest": "https://crests.football-data.org/63.png",
           "goals": 2,
-          "assists": 1,
+          "assists": null,
           "penalties": null,
-          "playedMatches": 8
+          "playedMatches": 7
         },
         {
           "player_id": 144892,
@@ -363,7 +351,7 @@
           "goals": 2,
           "assists": 3,
           "penalties": null,
-          "playedMatches": 8
+          "playedMatches": 7
         },
         {
           "player_id": 77641,
@@ -459,7 +447,7 @@
           "goals": 2,
           "assists": null,
           "penalties": null,
-          "playedMatches": 7
+          "playedMatches": 6
         },
         {
           "player_id": 145613,
@@ -483,7 +471,19 @@
           "goals": 2,
           "assists": 2,
           "penalties": null,
-          "playedMatches": 5
+          "playedMatches": 4
+        },
+        {
+          "player_id": 152515,
+          "player_name": "Nicolas Jackson",
+          "nationality": "Senegal",
+          "team_id": 58,
+          "team_ja": "アストン・ヴィラ",
+          "team_crest": "https://crests.football-data.org/58.png",
+          "goals": 2,
+          "assists": null,
+          "penalties": null,
+          "playedMatches": 6
         },
         {
           "player_id": 4417,
@@ -507,7 +507,7 @@
           "goals": 2,
           "assists": 1,
           "penalties": null,
-          "playedMatches": 4
+          "playedMatches": 3
         },
         {
           "player_id": 131260,
@@ -531,7 +531,7 @@
           "goals": 2,
           "assists": null,
           "penalties": 1,
-          "playedMatches": 8
+          "playedMatches": 7
         },
         {
           "player_id": 6451,
@@ -3702,18 +3702,6 @@
           "playedMatches": 9
         },
         {
-          "player_id": 210841,
-          "player_name": "Jacob Trenskow",
-          "nationality": "Denmark",
-          "team_id": 673,
-          "team_ja": "ヘーレンフェーン",
-          "team_crest": "https://crests.football-data.org/673.png",
-          "goals": 6,
-          "assists": 2,
-          "penalties": null,
-          "playedMatches": 10
-        },
-        {
           "player_id": 178402,
           "player_name": "Ro-Zangelo Daal",
           "nationality": "Netherlands",
@@ -3735,19 +3723,7 @@
           "goals": 5,
           "assists": null,
           "penalties": 1,
-          "playedMatches": 7
-        },
-        {
-          "player_id": 178013,
-          "player_name": "Rafik el Arguioui",
-          "nationality": "Netherlands",
-          "team_id": 1909,
-          "team_ja": "Cambuur",
-          "team_crest": "https://crests.football-data.org/1909.png",
-          "goals": 5,
-          "assists": 1,
-          "penalties": null,
-          "playedMatches": 10
+          "playedMatches": 6
         },
         {
           "player_id": 215554,
@@ -3810,30 +3786,6 @@
           "playedMatches": 8
         },
         {
-          "player_id": 177650,
-          "player_name": "Ilyes Hamache",
-          "nationality": "France",
-          "team_id": 1909,
-          "team_ja": "Cambuur",
-          "team_crest": "https://crests.football-data.org/1909.png",
-          "goals": 5,
-          "assists": 2,
-          "penalties": null,
-          "playedMatches": 9
-        },
-        {
-          "player_id": 150305,
-          "player_name": "Nicolas Binder",
-          "nationality": "Austria",
-          "team_id": 1909,
-          "team_ja": "Cambuur",
-          "team_crest": "https://crests.football-data.org/1909.png",
-          "goals": 5,
-          "assists": 2,
-          "penalties": null,
-          "playedMatches": 9
-        },
-        {
           "player_id": 189601,
           "player_name": "Nacho Ferri",
           "nationality": "Spain",
@@ -3882,6 +3834,18 @@
           "playedMatches": 9
         },
         {
+          "player_id": 178013,
+          "player_name": "Rafik el Arguioui",
+          "nationality": "Netherlands",
+          "team_id": 1909,
+          "team_ja": "Cambuur",
+          "team_crest": "https://crests.football-data.org/1909.png",
+          "goals": 4,
+          "assists": null,
+          "penalties": null,
+          "playedMatches": 9
+        },
+        {
           "player_id": 117884,
           "player_name": "Stefán Ingi Sigurðarson",
           "nationality": "Iceland",
@@ -3894,6 +3858,18 @@
           "playedMatches": 10
         },
         {
+          "player_id": 210841,
+          "player_name": "Jacob Trenskow",
+          "nationality": "Denmark",
+          "team_id": 673,
+          "team_ja": "ヘーレンフェーン",
+          "team_crest": "https://crests.football-data.org/673.png",
+          "goals": 4,
+          "assists": 2,
+          "penalties": null,
+          "playedMatches": 9
+        },
+        {
           "player_id": 9701,
           "player_name": "Koen Kostons",
           "nationality": "Netherlands",
@@ -3903,7 +3879,7 @@
           "goals": 4,
           "assists": null,
           "penalties": 1,
-          "playedMatches": 10
+          "playedMatches": 9
         },
         {
           "player_id": 120981,
@@ -3928,6 +3904,18 @@
           "assists": 2,
           "penalties": 1,
           "playedMatches": 9
+        },
+        {
+          "player_id": 177650,
+          "player_name": "Ilyes Hamache",
+          "nationality": "France",
+          "team_id": 1909,
+          "team_ja": "Cambuur",
+          "team_crest": "https://crests.football-data.org/1909.png",
+          "goals": 4,
+          "assists": 1,
+          "penalties": null,
+          "playedMatches": 8
         },
         {
           "player_id": 226917,
@@ -3973,9 +3961,9 @@
           "team_ja": "Willem II",
           "team_crest": "https://crests.football-data.org/672.png",
           "goals": 3,
-          "assists": 2,
+          "assists": 1,
           "penalties": null,
-          "playedMatches": 10
+          "playedMatches": 9
         },
         {
           "player_id": 249025,
@@ -4023,7 +4011,7 @@
           "goals": 3,
           "assists": 2,
           "penalties": null,
-          "playedMatches": 10
+          "playedMatches": 9
         },
         {
           "player_id": 119460,
@@ -4098,18 +4086,6 @@
           "playedMatches": 10
         },
         {
-          "player_id": 102189,
-          "player_name": "Nigel Thomas",
-          "nationality": "Curaçao",
-          "team_id": 680,
-          "team_ja": "Den Haag",
-          "team_crest": "https://crests.football-data.org/680.png",
-          "goals": 3,
-          "assists": 1,
-          "penalties": null,
-          "playedMatches": 10
-        },
-        {
           "player_id": 7841,
           "player_name": "Davy Klaassen",
           "nationality": "Netherlands",
@@ -4122,6 +4098,18 @@
           "playedMatches": 9
         },
         {
+          "player_id": 150305,
+          "player_name": "Nicolas Binder",
+          "nationality": "Austria",
+          "team_id": 1909,
+          "team_ja": "Cambuur",
+          "team_crest": "https://crests.football-data.org/1909.png",
+          "goals": 3,
+          "assists": 2,
+          "penalties": null,
+          "playedMatches": 8
+        },
+        {
           "player_id": 191058,
           "player_name": "Angel Alarcon",
           "nationality": "Spain",
@@ -4131,7 +4119,7 @@
           "goals": 3,
           "assists": null,
           "penalties": null,
-          "playedMatches": 10
+          "playedMatches": 9
         },
         {
           "player_id": 179498,
@@ -4179,7 +4167,7 @@
           "goals": 2,
           "assists": 1,
           "penalties": null,
-          "playedMatches": 10
+          "playedMatches": 9
         },
         {
           "player_id": 82116,
@@ -4191,7 +4179,7 @@
           "goals": 2,
           "assists": 1,
           "penalties": null,
-          "playedMatches": 10
+          "playedMatches": 9
         },
         {
           "player_id": 254333,
@@ -4240,6 +4228,18 @@
           "assists": 2,
           "penalties": null,
           "playedMatches": 8
+        },
+        {
+          "player_id": 171440,
+          "player_name": "Philip Brittijn",
+          "nationality": "Netherlands",
+          "team_id": 1920,
+          "team_ja": "フォルトゥナ・シッタート",
+          "team_crest": "https://crests.football-data.org/1920.png",
+          "goals": 2,
+          "assists": null,
+          "penalties": null,
+          "playedMatches": 9
         }
       ]
     },
