@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-25T09:01:15.493633+09:00",
+  "updated": "2026-10-25T16:54:01.575575+09:00",
   "date_from": "2026-10-18",
   "date_to": "2026-11-08",
   "match_count": 1774,
@@ -48949,7 +48949,7 @@
       "competition_category": "league",
       "competition_flag": "🇩🇪",
       "kickoff_jst": "2026-10-24T22:30:00+09:00",
-      "status": "TIMED",
+      "status": "FINISHED",
       "stage": "REGULAR_SEASON",
       "matchday": 7,
       "home_id": 15,
@@ -48960,7 +48960,10 @@
       "away_ja": "ブレーメン",
       "away_en": "Bremen",
       "away_crest": "https://crests.football-data.org/12.png",
-      "score": null,
+      "score": {
+        "home": 2,
+        "away": 3
+      },
       "japanese_players": [
         {
           "name_ja": "佐野海舟",
@@ -48995,7 +48998,7 @@
       "competition_category": "league",
       "competition_flag": "🇩🇪",
       "kickoff_jst": "2026-10-24T22:30:00+09:00",
-      "status": "TIMED",
+      "status": "FINISHED",
       "stage": "REGULAR_SEASON",
       "matchday": 7,
       "home_id": 1,
@@ -49006,7 +49009,10 @@
       "away_ja": "Schalke",
       "away_en": "Schalke",
       "away_crest": "https://crests.football-data.org/6.png",
-      "score": null,
+      "score": {
+        "home": 0,
+        "away": 0
+      },
       "japanese_players": [
         {
           "name_ja": "田中聡",
@@ -49027,6 +49033,15 @@
           "url": "https://www.dazn.com/ja-JP/welcome",
           "source": "league_guides"
         }
+      ],
+      "highlights": [
+        {
+          "broadcaster": "DAZN",
+          "video_id": "YIHCkV4oF7w",
+          "url": "https://youtu.be/YIHCkV4oF7w",
+          "title": "【田中聡がフル出場！個人技からの惜しいシュートも｜ケルン×シャルケ｜ハイライト】ブンデスリーガ第7節｜2026-27シーズン",
+          "yt_published": "2026-10-24"
+        }
       ]
     },
     {
@@ -49036,7 +49051,7 @@
       "competition_category": "league",
       "competition_flag": "🇩🇪",
       "kickoff_jst": "2026-10-24T22:30:00+09:00",
-      "status": "IN_PLAY",
+      "status": "FINISHED",
       "stage": "REGULAR_SEASON",
       "matchday": 7,
       "home_id": 721,
@@ -49047,7 +49062,10 @@
       "away_ja": "Elversberg",
       "away_en": "Elversberg",
       "away_crest": "https://crests.football-data.org/719.png",
-      "score": null,
+      "score": {
+        "home": 4,
+        "away": 0
+      },
       "japanese_players": [],
       "broadcasters": [
         {
@@ -49071,7 +49089,7 @@
       "competition_category": "league",
       "competition_flag": "🇩🇪",
       "kickoff_jst": "2026-10-24T22:30:00+09:00",
-      "status": "TIMED",
+      "status": "FINISHED",
       "stage": "REGULAR_SEASON",
       "matchday": 7,
       "home_id": 29,
@@ -49082,7 +49100,10 @@
       "away_ja": "ハンブルガー",
       "away_en": "HSV",
       "away_crest": "https://crests.football-data.org/7.png",
-      "score": null,
+      "score": {
+        "home": 1,
+        "away": 0
+      },
       "japanese_players": [],
       "broadcasters": [
         {
@@ -49106,7 +49127,7 @@
       "competition_category": "league",
       "competition_flag": "🇩🇪",
       "kickoff_jst": "2026-10-24T22:30:00+09:00",
-      "status": "TIMED",
+      "status": "FINISHED",
       "stage": "REGULAR_SEASON",
       "matchday": 7,
       "home_id": 16,
@@ -49117,7 +49138,10 @@
       "away_ja": "ウニオン・ベルリン",
       "away_en": "Union Berlin",
       "away_crest": "https://crests.football-data.org/28.png",
-      "score": null,
+      "score": {
+        "home": 1,
+        "away": 1
+      },
       "japanese_players": [],
       "broadcasters": [
         {
@@ -49516,7 +49540,7 @@
       "competition_category": "league",
       "competition_flag": "🇳🇱",
       "kickoff_jst": "2026-10-24T23:30:00+09:00",
-      "status": "TIMED",
+      "status": "FINISHED",
       "stage": "REGULAR_SEASON",
       "matchday": 10,
       "home_id": 676,
@@ -49527,7 +49551,10 @@
       "away_ja": "ズヴォレ",
       "away_en": "Zwolle",
       "away_crest": "https://crests.football-data.org/684.png",
-      "score": null,
+      "score": {
+        "home": 1,
+        "away": 1
+      },
       "japanese_players": [],
       "broadcasters": [
         {
@@ -49682,7 +49709,7 @@
       "competition_category": "league",
       "competition_flag": "🇩🇪",
       "kickoff_jst": "2026-10-25T01:30:00+09:00",
-      "status": "IN_PLAY",
+      "status": "FINISHED",
       "stage": "REGULAR_SEASON",
       "matchday": 7,
       "home_id": 4,
@@ -49693,7 +49720,10 @@
       "away_ja": "フランクフルト",
       "away_en": "Frankfurt",
       "away_crest": "https://crests.football-data.org/19.png",
-      "score": null,
+      "score": {
+        "home": 1,
+        "away": 0
+      },
       "japanese_players": [
         {
           "name_ja": "堂安律",
@@ -49719,6 +49749,15 @@
           "url": "https://www.dazn.com/ja-JP/welcome",
           "source": "league_guides"
         }
+      ],
+      "highlights": [
+        {
+          "broadcaster": "DAZN Football",
+          "video_id": "BautWp1PPAM",
+          "url": "https://youtu.be/BautWp1PPAM",
+          "title": "Borussia Dortmund vs Eintracht Frankfurt | Matchday 7 | 2026-27 Bundesliga Highlights",
+          "yt_published": "2026-10-25"
+        }
       ]
     },
     {
@@ -49728,7 +49767,7 @@
       "competition_category": "league",
       "competition_flag": "🇳🇱",
       "kickoff_jst": "2026-10-25T01:45:00+09:00",
-      "status": "TIMED",
+      "status": "FINISHED",
       "stage": "REGULAR_SEASON",
       "matchday": 10,
       "home_id": 672,
@@ -49739,7 +49778,10 @@
       "away_ja": "Cambuur",
       "away_en": "Cambuur",
       "away_crest": "https://crests.football-data.org/1909.png",
-      "score": null,
+      "score": {
+        "home": 1,
+        "away": 6
+      },
       "japanese_players": [],
       "broadcasters": [
         {
@@ -49821,7 +49863,7 @@
       "competition_category": "league",
       "competition_flag": "🇫🇷",
       "kickoff_jst": "2026-10-25T03:45:00+09:00",
-      "status": "TIMED",
+      "status": "IN_PLAY",
       "stage": "REGULAR_SEASON",
       "matchday": 8,
       "home_id": 546,
@@ -49885,7 +49927,7 @@
       "competition_category": "league",
       "competition_flag": "🇳🇱",
       "kickoff_jst": "2026-10-25T04:00:00+09:00",
-      "status": "IN_PLAY",
+      "status": "FINISHED",
       "stage": "REGULAR_SEASON",
       "matchday": 10,
       "home_id": 680,
@@ -49896,7 +49938,10 @@
       "away_ja": "ヘーレンフェーン",
       "away_en": "Heerenveen",
       "away_crest": "https://crests.football-data.org/673.png",
-      "score": null,
+      "score": {
+        "home": 2,
+        "away": 3
+      },
       "japanese_players": [],
       "broadcasters": [
         {
@@ -68569,8 +68614,8 @@
       "_source": "openligadb"
     }
   ],
-  "updated_openligadb": "2026-10-25T09:03:40.223198+09:00",
-  "updated_yt_highlights": "2026-10-25T09:04:15.320525+09:00",
-  "updated_uefa_secondary": "2026-10-25T09:04:50.559087+09:00",
-  "updated_domestic_cups": "2026-10-25T09:05:07.528231+09:00"
+  "updated_openligadb": "2026-10-25T16:56:23.608787+09:00",
+  "updated_yt_highlights": "2026-10-25T16:56:54.579001+09:00",
+  "updated_uefa_secondary": "2026-10-25T16:57:28.735115+09:00",
+  "updated_domestic_cups": "2026-10-25T16:57:44.836230+09:00"
 }
