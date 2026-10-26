@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-27T01:05:25.085346+09:00",
+  "updated": "2026-10-27T07:03:11.638564+09:00",
   "competitions": {
     "39": {
       "name_ja": "プレミアリーグ",
@@ -1287,7 +1287,7 @@
           "goals": 7,
           "assists": null,
           "penalties": 4,
-          "playedMatches": 9
+          "playedMatches": 10
         },
         {
           "player_id": 180218,
@@ -1420,6 +1420,18 @@
           "assists": null,
           "penalties": 1,
           "playedMatches": 10
+        },
+        {
+          "player_id": 213043,
+          "player_name": "Isaac",
+          "nationality": "Spain",
+          "team_id": 559,
+          "team_ja": "セビージャ",
+          "team_crest": "https://crests.football-data.org/559.png",
+          "goals": 3,
+          "assists": 1,
+          "penalties": null,
+          "playedMatches": 9
         },
         {
           "player_id": 125010,
@@ -1576,18 +1588,6 @@
           "assists": null,
           "penalties": null,
           "playedMatches": 10
-        },
-        {
-          "player_id": 213043,
-          "player_name": "Isaac",
-          "nationality": "Spain",
-          "team_id": 559,
-          "team_ja": "セビージャ",
-          "team_crest": "https://crests.football-data.org/559.png",
-          "goals": 2,
-          "assists": 1,
-          "penalties": null,
-          "playedMatches": 8
         },
         {
           "player_id": 151439,
@@ -3141,7 +3141,7 @@
           "goals": 4,
           "assists": 1,
           "penalties": null,
-          "playedMatches": 7
+          "playedMatches": 8
         },
         {
           "player_id": 244696,
@@ -3213,7 +3213,7 @@
           "goals": 3,
           "assists": 1,
           "penalties": null,
-          "playedMatches": 7
+          "playedMatches": 8
         },
         {
           "player_id": 292172,
@@ -3393,7 +3393,7 @@
           "goals": 2,
           "assists": 3,
           "penalties": null,
-          "playedMatches": 7
+          "playedMatches": 8
         },
         {
           "player_id": 276430,
@@ -4254,10 +4254,10 @@
           "team_id": 1903,
           "team_ja": "ベンフィカ",
           "team_crest": "https://crests.football-data.org/1903.png",
-          "goals": 8,
+          "goals": 9,
           "assists": 3,
           "penalties": 2,
-          "playedMatches": 8
+          "playedMatches": 9
         },
         {
           "player_id": 32386,
@@ -4269,6 +4269,18 @@
           "goals": 8,
           "assists": 1,
           "penalties": 2,
+          "playedMatches": 9
+        },
+        {
+          "player_id": 182123,
+          "player_name": "Gianluca Prestianni",
+          "nationality": "Argentina",
+          "team_id": 1903,
+          "team_ja": "ベンフィカ",
+          "team_crest": "https://crests.football-data.org/1903.png",
+          "goals": 6,
+          "assists": 4,
+          "penalties": null,
           "playedMatches": 9
         },
         {
@@ -4294,18 +4306,6 @@
           "assists": null,
           "penalties": null,
           "playedMatches": 9
-        },
-        {
-          "player_id": 182123,
-          "player_name": "Gianluca Prestianni",
-          "nationality": "Argentina",
-          "team_id": 1903,
-          "team_ja": "ベンフィカ",
-          "team_crest": "https://crests.football-data.org/1903.png",
-          "goals": 5,
-          "assists": 3,
-          "penalties": null,
-          "playedMatches": 8
         },
         {
           "player_id": 15919,
@@ -4605,7 +4605,7 @@
           "goals": 2,
           "assists": null,
           "penalties": null,
-          "playedMatches": 6
+          "playedMatches": 7
         },
         {
           "player_id": 39102,
@@ -4642,6 +4642,18 @@
           "assists": 1,
           "penalties": null,
           "playedMatches": 8
+        },
+        {
+          "player_id": 227024,
+          "player_name": "Luis Fernando",
+          "nationality": "Brazil",
+          "team_id": 5530,
+          "team_ja": "サンタクララ",
+          "team_crest": "https://crests.football-data.org/5530.png",
+          "goals": 2,
+          "assists": null,
+          "penalties": 1,
+          "playedMatches": 9
         },
         {
           "player_id": 275465,
@@ -4834,18 +4846,6 @@
           "assists": 1,
           "penalties": null,
           "playedMatches": 9
-        },
-        {
-          "player_id": 149724,
-          "player_name": "Alioune Ndoye",
-          "nationality": "Senegal",
-          "team_id": 5543,
-          "team_ja": "ヴィトーリア",
-          "team_crest": "https://crests.football-data.org/5543.png",
-          "goals": 1,
-          "assists": null,
-          "penalties": null,
-          "playedMatches": 7
         }
       ]
     },
