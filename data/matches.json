@@ -1,8 +1,8 @@
 {
-  "updated": "2026-10-29T00:55:05.520457+09:00",
+  "updated": "2026-10-29T07:02:10.350118+09:00",
   "date_from": "2026-10-22",
   "date_to": "2026-11-12",
-  "match_count": 1773,
+  "match_count": 1774,
   "_note": "累積保持モード：フェッチ窓外の過去試合データはそのまま保持される。",
   "matches": [
     {
@@ -51833,7 +51833,7 @@
       "competition_category": "domestic_cup",
       "competition_flag": "🇩🇪",
       "kickoff_jst": "2026-10-29T02:00:00+09:00",
-      "status": "SCHEDULED",
+      "status": "FINISHED",
       "stage": "Second round",
       "matchday": null,
       "home_id": 17,
@@ -51844,7 +51844,10 @@
       "away_ja": "ヴォルフスブルク",
       "away_en": "VfL Wolfsburg",
       "away_crest": null,
-      "score": null,
+      "score": {
+        "home": 3,
+        "away": 2
+      },
       "japanese_players": [
         {
           "name_ja": "鈴木唯人",
@@ -51883,7 +51886,7 @@
       "competition_category": "domestic_cup",
       "competition_flag": "🇩🇪",
       "kickoff_jst": "2026-10-29T02:00:00+09:00",
-      "status": "SCHEDULED",
+      "status": "FINISHED",
       "stage": "Second round",
       "matchday": null,
       "home_id": null,
@@ -51894,7 +51897,10 @@
       "away_ja": "シャルケ04",
       "away_en": "FC Schalke 04",
       "away_crest": "https://crests.football-data.org/6.png",
-      "score": null,
+      "score": {
+        "home": 2,
+        "away": 0
+      },
       "japanese_players": [
         {
           "name_ja": "田中聡",
@@ -51913,7 +51919,7 @@
       "competition_category": "league",
       "competition_flag": "🇮🇹",
       "kickoff_jst": "2026-10-29T02:30:00+09:00",
-      "status": "TIMED",
+      "status": "FINISHED",
       "stage": "REGULAR_SEASON",
       "matchday": 9,
       "home_id": 98,
@@ -51924,7 +51930,10 @@
       "away_ja": "ボローニャ",
       "away_en": "Bologna",
       "away_crest": "https://crests.football-data.org/103.png",
-      "score": null,
+      "score": {
+        "home": 2,
+        "away": 4
+      },
       "japanese_players": [],
       "broadcasters": [
         {
@@ -51932,6 +51941,15 @@
           "label": "DAZN",
           "url": "https://www.dazn.com/ja-JP/welcome",
           "source": "league_guides"
+        }
+      ],
+      "highlights": [
+        {
+          "broadcaster": "DAZN Fussball",
+          "video_id": "vjVDXx-qNgI",
+          "url": "https://youtu.be/vjVDXx-qNgI",
+          "title": "Bologna schockt Milan: AC Milan - FC Bologna | 9. Spieltag | Serie A | DAZN Highlights",
+          "yt_published": "2026-10-28"
         }
       ]
     },
@@ -51942,7 +51960,7 @@
       "competition_category": "league",
       "competition_flag": "🇮🇹",
       "kickoff_jst": "2026-10-29T02:30:00+09:00",
-      "status": "TIMED",
+      "status": "FINISHED",
       "stage": "REGULAR_SEASON",
       "matchday": 9,
       "home_id": 454,
@@ -51953,7 +51971,10 @@
       "away_ja": "インテル",
       "away_en": "Inter",
       "away_crest": "https://crests.football-data.org/108.png",
-      "score": null,
+      "score": {
+        "home": 0,
+        "away": 2
+      },
       "japanese_players": [],
       "broadcasters": [
         {
@@ -51971,7 +51992,7 @@
       "competition_category": "league",
       "competition_flag": "🇮🇹",
       "kickoff_jst": "2026-10-29T02:30:00+09:00",
-      "status": "TIMED",
+      "status": "FINISHED",
       "stage": "REGULAR_SEASON",
       "matchday": 9,
       "home_id": 112,
@@ -51982,7 +52003,10 @@
       "away_ja": "ウディネーゼ",
       "away_en": "Udinese",
       "away_crest": "https://crests.football-data.org/115.png",
-      "score": null,
+      "score": {
+        "home": 0,
+        "away": 0
+      },
       "japanese_players": [],
       "broadcasters": [
         {
@@ -52000,7 +52024,7 @@
       "competition_category": "domestic_cup",
       "competition_flag": "🇳🇱",
       "kickoff_jst": "2026-10-29T02:45:00+09:00",
-      "status": "SCHEDULED",
+      "status": "FINISHED",
       "stage": "First round",
       "matchday": null,
       "home_id": 6806,
@@ -52011,7 +52035,10 @@
       "away_ja": "Fortuna Sittard",
       "away_en": "Fortuna Sittard",
       "away_crest": null,
-      "score": null,
+      "score": {
+        "home": 2,
+        "away": 2
+      },
       "japanese_players": [
         {
           "name_ja": "三戸舜介",
@@ -52021,7 +52048,12 @@
       ],
       "broadcasters": [],
       "_source": "wikipedia",
-      "_source_page": "2026–27 KNVB Cup"
+      "_source_page": "2026–27 KNVB Cup",
+      "penalties": {
+        "home": 2,
+        "away": 3
+      },
+      "extra_time": true
     },
     {
       "id": "CUP_EFL_2026-10-28_Manche_Bright",
@@ -52030,7 +52062,7 @@
       "competition_category": "domestic_cup",
       "competition_flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
       "kickoff_jst": "2026-10-29T04:30:00+09:00",
-      "status": "SCHEDULED",
+      "status": "FINISHED",
       "stage": "Fourth round",
       "matchday": null,
       "home_id": 65,
@@ -52041,7 +52073,10 @@
       "away_ja": "ブライトン",
       "away_en": "Brighton Hove",
       "away_crest": "https://crests.football-data.org/397.png",
-      "score": null,
+      "score": {
+        "home": 2,
+        "away": 2
+      },
       "japanese_players": [
         {
           "name_ja": "三笘薫",
@@ -52051,7 +52086,11 @@
       ],
       "broadcasters": [],
       "_source": "wikipedia",
-      "_source_page": "2026–27 EFL Cup"
+      "_source_page": "2026–27 EFL Cup",
+      "penalties": {
+        "home": 5,
+        "away": 3
+      }
     },
     {
       "id": 558552,
@@ -52060,7 +52099,7 @@
       "competition_category": "league",
       "competition_flag": "🇮🇹",
       "kickoff_jst": "2026-10-29T04:45:00+09:00",
-      "status": "TIMED",
+      "status": "FINISHED",
       "stage": "REGULAR_SEASON",
       "matchday": 9,
       "home_id": 107,
@@ -52071,7 +52110,10 @@
       "away_ja": "ユヴェントス",
       "away_en": "Juventus",
       "away_crest": "https://crests.football-data.org/109.png",
-      "score": null,
+      "score": {
+        "home": 2,
+        "away": 0
+      },
       "japanese_players": [],
       "broadcasters": [
         {
@@ -52089,7 +52131,7 @@
       "competition_category": "league",
       "competition_flag": "🇮🇹",
       "kickoff_jst": "2026-10-29T04:45:00+09:00",
-      "status": "TIMED",
+      "status": "FINISHED",
       "stage": "REGULAR_SEASON",
       "matchday": 9,
       "home_id": 5911,
@@ -52100,7 +52142,10 @@
       "away_ja": "ナポリ",
       "away_en": "Napoli",
       "away_crest": "https://crests.football-data.org/113.png",
-      "score": null,
+      "score": {
+        "home": 1,
+        "away": 4
+      },
       "japanese_players": [],
       "broadcasters": [
         {
@@ -60408,6 +60453,43 @@
           "source": "league_guides"
         }
       ]
+    },
+    {
+      "id": "CUP_CDR_2026-11-10_Tavern_Valenc",
+      "competition_id": 143,
+      "competition_ja": "コパ・デル・レイ",
+      "competition_category": "domestic_cup",
+      "competition_flag": "🇪🇸",
+      "kickoff_jst": "2026-11-11T05:00:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "First round / Group 3",
+      "matchday": null,
+      "home_id": null,
+      "home_ja": "Tavernes de la Valldigna",
+      "home_en": "Tavernes de la Valldigna",
+      "home_crest": null,
+      "away_id": 95,
+      "away_ja": "バレンシア",
+      "away_en": "Valencia",
+      "away_crest": "https://crests.football-data.org/95.png",
+      "score": null,
+      "japanese_players": [
+        {
+          "name_ja": "佐藤龍之介",
+          "position": "MF",
+          "side": "away"
+        }
+      ],
+      "broadcasters": [
+        {
+          "name": "U-NEXT",
+          "label": "U-NEXT",
+          "url": "https://video.unext.jp/",
+          "source": "broadcasters_json"
+        }
+      ],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 Copa del Rey"
     },
     {
       "id": "BL2_83697",
@@ -68979,8 +69061,8 @@
       "_source": "openligadb"
     }
   ],
-  "updated_openligadb": "2026-10-29T00:57:34.020772+09:00",
-  "updated_yt_highlights": "2026-10-29T00:58:14.996907+09:00",
-  "updated_uefa_secondary": "2026-10-29T00:58:55.745013+09:00",
-  "updated_domestic_cups": "2026-10-29T00:59:13.490448+09:00"
+  "updated_openligadb": "2026-10-29T07:04:36.200668+09:00",
+  "updated_yt_highlights": "2026-10-29T07:06:00.602924+09:00",
+  "updated_uefa_secondary": "2026-10-29T07:06:51.294211+09:00",
+  "updated_domestic_cups": "2026-10-29T07:07:11.113228+09:00"
 }
