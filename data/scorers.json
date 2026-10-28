@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-29T00:56:14.489214+09:00",
+  "updated": "2026-10-29T07:03:17.881487+09:00",
   "competitions": {
     "39": {
       "name_ja": "プレミアリーグ",
@@ -2436,10 +2436,10 @@
           "team_id": 5911,
           "team_ja": "Monza",
           "team_crest": "https://crests.football-data.org/5911.png",
-          "goals": 7,
+          "goals": 8,
           "assists": 1,
           "penalties": 1,
-          "playedMatches": 7
+          "playedMatches": 8
         },
         {
           "player_id": 7457,
@@ -2499,7 +2499,7 @@
           "goals": 5,
           "assists": 2,
           "penalties": null,
-          "playedMatches": 8
+          "playedMatches": 9
         },
         {
           "player_id": 136113,
@@ -2511,6 +2511,30 @@
           "goals": 5,
           "assists": null,
           "penalties": 1,
+          "playedMatches": 9
+        },
+        {
+          "player_id": 3654,
+          "player_name": "Kevin De Bruyne",
+          "nationality": "Belgium",
+          "team_id": 113,
+          "team_ja": "ナポリ",
+          "team_crest": "https://crests.football-data.org/113.png",
+          "goals": 4,
+          "assists": 1,
+          "penalties": 1,
+          "playedMatches": 9
+        },
+        {
+          "player_id": 192142,
+          "player_name": "Alphadjo Cisse",
+          "nationality": "Italy",
+          "team_id": 98,
+          "team_ja": "ミラン",
+          "team_crest": "https://crests.football-data.org/98.png",
+          "goals": 4,
+          "assists": null,
+          "penalties": null,
           "playedMatches": 9
         },
         {
@@ -2571,19 +2595,7 @@
           "goals": 3,
           "assists": null,
           "penalties": 1,
-          "playedMatches": 6
-        },
-        {
-          "player_id": 3654,
-          "player_name": "Kevin De Bruyne",
-          "nationality": "Belgium",
-          "team_id": 113,
-          "team_ja": "ナポリ",
-          "team_crest": "https://crests.football-data.org/113.png",
-          "goals": 3,
-          "assists": 1,
-          "penalties": 1,
-          "playedMatches": 8
+          "playedMatches": 7
         },
         {
           "player_id": 2200,
@@ -2619,7 +2631,7 @@
           "goals": 3,
           "assists": 1,
           "penalties": null,
-          "playedMatches": 8
+          "playedMatches": 9
         },
         {
           "player_id": 156912,
@@ -2630,6 +2642,18 @@
           "team_crest": "https://crests.football-data.org/7397.png",
           "goals": 3,
           "assists": 1,
+          "penalties": null,
+          "playedMatches": 9
+        },
+        {
+          "player_id": 152770,
+          "player_name": "Rasmus Højlund",
+          "nationality": "Denmark",
+          "team_id": 113,
+          "team_ja": "ナポリ",
+          "team_crest": "https://crests.football-data.org/113.png",
+          "goals": 3,
+          "assists": null,
           "penalties": null,
           "playedMatches": 9
         },
@@ -2655,7 +2679,7 @@
           "goals": 3,
           "assists": 1,
           "penalties": null,
-          "playedMatches": 7
+          "playedMatches": 8
         },
         {
           "player_id": 203511,
@@ -2742,6 +2766,18 @@
           "playedMatches": 9
         },
         {
+          "player_id": 217678,
+          "player_name": "Samuel Mbangula",
+          "nationality": "Belgium",
+          "team_id": 103,
+          "team_ja": "ボローニャ",
+          "team_crest": "https://crests.football-data.org/103.png",
+          "goals": 3,
+          "assists": null,
+          "penalties": null,
+          "playedMatches": 6
+        },
+        {
           "player_id": 822,
           "player_name": "Hassane Kamara",
           "nationality": "Ivory Coast",
@@ -2751,7 +2787,7 @@
           "goals": 2,
           "assists": 1,
           "penalties": null,
-          "playedMatches": 8
+          "playedMatches": 9
         },
         {
           "player_id": 2097,
@@ -2763,7 +2799,7 @@
           "goals": 2,
           "assists": 2,
           "penalties": 1,
-          "playedMatches": 8
+          "playedMatches": 9
         },
         {
           "player_id": 215433,
@@ -2775,7 +2811,7 @@
           "goals": 2,
           "assists": 1,
           "penalties": null,
-          "playedMatches": 8
+          "playedMatches": 9
         },
         {
           "player_id": 1106,
@@ -2787,7 +2823,7 @@
           "goals": 2,
           "assists": null,
           "penalties": null,
-          "playedMatches": 8
+          "playedMatches": 9
         },
         {
           "player_id": 246341,
@@ -2814,18 +2850,6 @@
           "playedMatches": 9
         },
         {
-          "player_id": 192142,
-          "player_name": "Alphadjo Cisse",
-          "nationality": "Italy",
-          "team_id": 98,
-          "team_ja": "ミラン",
-          "team_crest": "https://crests.football-data.org/98.png",
-          "goals": 2,
-          "assists": null,
-          "penalties": null,
-          "playedMatches": 8
-        },
-        {
           "player_id": 101431,
           "player_name": "Gonçalo Ramos",
           "nationality": "Portugal",
@@ -2835,7 +2859,7 @@
           "goals": 2,
           "assists": 1,
           "penalties": 1,
-          "playedMatches": 8
+          "playedMatches": 9
         },
         {
           "player_id": 2202,
@@ -2844,18 +2868,6 @@
           "team_id": 471,
           "team_ja": "サッスオーロ",
           "team_crest": "https://crests.football-data.org/471.png",
-          "goals": 2,
-          "assists": null,
-          "penalties": null,
-          "playedMatches": 8
-        },
-        {
-          "player_id": 152770,
-          "player_name": "Rasmus Højlund",
-          "nationality": "Denmark",
-          "team_id": 113,
-          "team_ja": "ナポリ",
-          "team_crest": "https://crests.football-data.org/113.png",
           "goals": 2,
           "assists": null,
           "penalties": null,
@@ -2898,6 +2910,18 @@
           "playedMatches": 8
         },
         {
+          "player_id": 2193,
+          "player_name": "Matteo Politano",
+          "nationality": "Italy",
+          "team_id": 113,
+          "team_ja": "ナポリ",
+          "team_crest": "https://crests.football-data.org/113.png",
+          "goals": 2,
+          "assists": 3,
+          "penalties": null,
+          "playedMatches": 9
+        },
+        {
           "player_id": 81440,
           "player_name": "Éderson",
           "nationality": "Brazil",
@@ -2917,9 +2941,9 @@
           "team_ja": "Monza",
           "team_crest": "https://crests.football-data.org/5911.png",
           "goals": 2,
-          "assists": null,
+          "assists": 1,
           "penalties": null,
-          "playedMatches": 8
+          "playedMatches": 9
         },
         {
           "player_id": 299423,
@@ -2931,7 +2955,7 @@
           "goals": 2,
           "assists": null,
           "penalties": null,
-          "playedMatches": 8
+          "playedMatches": 9
         },
         {
           "player_id": 82132,
@@ -2943,7 +2967,7 @@
           "goals": 2,
           "assists": null,
           "penalties": null,
-          "playedMatches": 8
+          "playedMatches": 9
         },
         {
           "player_id": 188464,
@@ -2955,7 +2979,7 @@
           "goals": 2,
           "assists": 1,
           "penalties": null,
-          "playedMatches": 8
+          "playedMatches": 9
         },
         {
           "player_id": 8658,
@@ -2991,7 +3015,7 @@
           "goals": 2,
           "assists": 1,
           "penalties": null,
-          "playedMatches": 7
+          "playedMatches": 8
         },
         {
           "player_id": 247056,
@@ -3004,30 +3028,6 @@
           "assists": null,
           "penalties": null,
           "playedMatches": 9
-        },
-        {
-          "player_id": 165857,
-          "player_name": "José Romero",
-          "nationality": "Argentina",
-          "team_id": 112,
-          "team_ja": "パルマ",
-          "team_crest": "https://crests.football-data.org/112.png",
-          "goals": 2,
-          "assists": null,
-          "penalties": null,
-          "playedMatches": 8
-        },
-        {
-          "player_id": 167689,
-          "player_name": "Carlos Augusto Lobaton",
-          "nationality": "Brazil",
-          "team_id": 108,
-          "team_ja": "インテル",
-          "team_crest": "https://crests.football-data.org/108.png",
-          "goals": 2,
-          "assists": 2,
-          "penalties": null,
-          "playedMatches": 8
         }
       ]
     },
