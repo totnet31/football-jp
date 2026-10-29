@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-29T07:02:10.350118+09:00",
+  "updated": "2026-10-29T10:34:36.211061+09:00",
   "date_from": "2026-10-22",
   "date_to": "2026-11-12",
   "match_count": 1774,
@@ -3376,6 +3376,87 @@
       ]
     },
     {
+      "id": "ECL_2026-04-30_Shakht_Crysta",
+      "competition_id": 848,
+      "competition_ja": "UEFAカンファレンスリーグ",
+      "competition_category": "european_cup",
+      "competition_flag": "🇪🇺",
+      "kickoff_jst": "2026-05-01T04:00:00+09:00",
+      "status": "FINISHED",
+      "stage": "SEMI_FINALS",
+      "matchday": null,
+      "home_id": null,
+      "home_ja": "シャフタール・ドネツク",
+      "home_en": "Shakhtar Donetsk",
+      "home_crest": null,
+      "away_id": 354,
+      "away_ja": "クリスタル・パレス",
+      "away_en": "Crystal Palace",
+      "away_crest": "https://crests.football-data.org/354.png",
+      "score": {
+        "home": 1,
+        "away": 3
+      },
+      "japanese_players": [
+        {
+          "name_ja": "鎌田大地",
+          "position": "MF",
+          "side": "away"
+        },
+        {
+          "name_ja": "冨安健洋",
+          "position": "DF",
+          "side": "away"
+        }
+      ],
+      "broadcasters": [
+        {
+          "name": "WOWOW",
+          "label": "WOWOW",
+          "url": "https://news.wowow.co.jp/5700.html",
+          "source": "league_guides",
+          "affiliate_url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l"
+        }
+      ],
+      "_source": "wikipedia",
+      "_source_page": "2025–26 UEFA Conference League knockout phase"
+    },
+    {
+      "id": "ECL_2026-04-30_RayoVa_Strasb",
+      "competition_id": 848,
+      "competition_ja": "UEFAカンファレンスリーグ",
+      "competition_category": "european_cup",
+      "competition_flag": "🇪🇺",
+      "kickoff_jst": "2026-05-01T04:00:00+09:00",
+      "status": "FINISHED",
+      "stage": "SEMI_FINALS",
+      "matchday": null,
+      "home_id": null,
+      "home_ja": "ラージョ・バジェカーノ",
+      "home_en": "Rayo Vallecano",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "ストラスブール",
+      "away_en": "Strasbourg",
+      "away_crest": null,
+      "score": {
+        "home": 1,
+        "away": 0
+      },
+      "japanese_players": [],
+      "broadcasters": [
+        {
+          "name": "WOWOW",
+          "label": "WOWOW",
+          "url": "https://news.wowow.co.jp/5700.html",
+          "source": "league_guides",
+          "affiliate_url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l"
+        }
+      ],
+      "_source": "wikipedia",
+      "_source_page": "2025–26 UEFA Conference League knockout phase"
+    },
+    {
       "id": "EL_2026-04-30_Braga_SCFrei",
       "competition_id": 3,
       "competition_ja": "UEFAヨーロッパリーグ",
@@ -3483,87 +3564,6 @@
       ],
       "_source": "wikipedia",
       "_source_page": "2025–26 UEFA Europa League knockout phase"
-    },
-    {
-      "id": "ECL_2026-04-30_Shakht_Crysta",
-      "competition_id": 848,
-      "competition_ja": "UEFAカンファレンスリーグ",
-      "competition_category": "european_cup",
-      "competition_flag": "🇪🇺",
-      "kickoff_jst": "2026-05-01T04:00:00+09:00",
-      "status": "FINISHED",
-      "stage": "SEMI_FINALS",
-      "matchday": null,
-      "home_id": null,
-      "home_ja": "シャフタール・ドネツク",
-      "home_en": "Shakhtar Donetsk",
-      "home_crest": null,
-      "away_id": 354,
-      "away_ja": "クリスタル・パレス",
-      "away_en": "Crystal Palace",
-      "away_crest": "https://crests.football-data.org/354.png",
-      "score": {
-        "home": 1,
-        "away": 3
-      },
-      "japanese_players": [
-        {
-          "name_ja": "鎌田大地",
-          "position": "MF",
-          "side": "away"
-        },
-        {
-          "name_ja": "冨安健洋",
-          "position": "DF",
-          "side": "away"
-        }
-      ],
-      "broadcasters": [
-        {
-          "name": "WOWOW",
-          "label": "WOWOW",
-          "url": "https://news.wowow.co.jp/5700.html",
-          "source": "league_guides",
-          "affiliate_url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l"
-        }
-      ],
-      "_source": "wikipedia",
-      "_source_page": "2025–26 UEFA Conference League knockout phase"
-    },
-    {
-      "id": "ECL_2026-04-30_RayoVa_Strasb",
-      "competition_id": 848,
-      "competition_ja": "UEFAカンファレンスリーグ",
-      "competition_category": "european_cup",
-      "competition_flag": "🇪🇺",
-      "kickoff_jst": "2026-05-01T04:00:00+09:00",
-      "status": "FINISHED",
-      "stage": "SEMI_FINALS",
-      "matchday": null,
-      "home_id": null,
-      "home_ja": "ラージョ・バジェカーノ",
-      "home_en": "Rayo Vallecano",
-      "home_crest": null,
-      "away_id": null,
-      "away_ja": "ストラスブール",
-      "away_en": "Strasbourg",
-      "away_crest": null,
-      "score": {
-        "home": 1,
-        "away": 0
-      },
-      "japanese_players": [],
-      "broadcasters": [
-        {
-          "name": "WOWOW",
-          "label": "WOWOW",
-          "url": "https://news.wowow.co.jp/5700.html",
-          "source": "league_guides",
-          "affiliate_url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l"
-        }
-      ],
-      "_source": "wikipedia",
-      "_source_page": "2025–26 UEFA Conference League knockout phase"
     },
     {
       "id": 537161,
@@ -6686,6 +6686,87 @@
       ]
     },
     {
+      "id": "ECL_2026-05-07_Crysta_Shakht",
+      "competition_id": 848,
+      "competition_ja": "UEFAカンファレンスリーグ",
+      "competition_category": "european_cup",
+      "competition_flag": "🇪🇺",
+      "kickoff_jst": "2026-05-08T04:00:00+09:00",
+      "status": "FINISHED",
+      "stage": "SEMI_FINALS",
+      "matchday": null,
+      "home_id": null,
+      "home_ja": "クリスタル・パレス",
+      "home_en": "Crystal Palace",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "シャフタール・ドネツク",
+      "away_en": "Shakhtar Donetsk",
+      "away_crest": null,
+      "score": {
+        "home": 2,
+        "away": 1
+      },
+      "japanese_players": [
+        {
+          "name_ja": "鎌田大地",
+          "position": "MF",
+          "side": "home"
+        },
+        {
+          "name_ja": "冨安健洋",
+          "position": "DF",
+          "side": "home"
+        }
+      ],
+      "broadcasters": [
+        {
+          "name": "WOWOW",
+          "label": "WOWOW",
+          "url": "https://news.wowow.co.jp/5700.html",
+          "source": "league_guides",
+          "affiliate_url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l"
+        }
+      ],
+      "_source": "wikipedia",
+      "_source_page": "2025–26 UEFA Conference League knockout phase"
+    },
+    {
+      "id": "ECL_2026-05-07_Strasb_RayoVa",
+      "competition_id": 848,
+      "competition_ja": "UEFAカンファレンスリーグ",
+      "competition_category": "european_cup",
+      "competition_flag": "🇪🇺",
+      "kickoff_jst": "2026-05-08T04:00:00+09:00",
+      "status": "FINISHED",
+      "stage": "SEMI_FINALS",
+      "matchday": null,
+      "home_id": null,
+      "home_ja": "ストラスブール",
+      "home_en": "Strasbourg",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "ラージョ・バジェカーノ",
+      "away_en": "Rayo Vallecano",
+      "away_crest": null,
+      "score": {
+        "home": 0,
+        "away": 1
+      },
+      "japanese_players": [],
+      "broadcasters": [
+        {
+          "name": "WOWOW",
+          "label": "WOWOW",
+          "url": "https://news.wowow.co.jp/5700.html",
+          "source": "league_guides",
+          "affiliate_url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l"
+        }
+      ],
+      "_source": "wikipedia",
+      "_source_page": "2025–26 UEFA Conference League knockout phase"
+    },
+    {
       "id": "EL_2026-05-07_SCFrei_Braga",
       "competition_id": 3,
       "competition_ja": "UEFAヨーロッパリーグ",
@@ -6793,87 +6874,6 @@
       ],
       "_source": "wikipedia",
       "_source_page": "2025–26 UEFA Europa League knockout phase"
-    },
-    {
-      "id": "ECL_2026-05-07_Crysta_Shakht",
-      "competition_id": 848,
-      "competition_ja": "UEFAカンファレンスリーグ",
-      "competition_category": "european_cup",
-      "competition_flag": "🇪🇺",
-      "kickoff_jst": "2026-05-08T04:00:00+09:00",
-      "status": "FINISHED",
-      "stage": "SEMI_FINALS",
-      "matchday": null,
-      "home_id": null,
-      "home_ja": "クリスタル・パレス",
-      "home_en": "Crystal Palace",
-      "home_crest": null,
-      "away_id": null,
-      "away_ja": "シャフタール・ドネツク",
-      "away_en": "Shakhtar Donetsk",
-      "away_crest": null,
-      "score": {
-        "home": 2,
-        "away": 1
-      },
-      "japanese_players": [
-        {
-          "name_ja": "鎌田大地",
-          "position": "MF",
-          "side": "home"
-        },
-        {
-          "name_ja": "冨安健洋",
-          "position": "DF",
-          "side": "home"
-        }
-      ],
-      "broadcasters": [
-        {
-          "name": "WOWOW",
-          "label": "WOWOW",
-          "url": "https://news.wowow.co.jp/5700.html",
-          "source": "league_guides",
-          "affiliate_url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l"
-        }
-      ],
-      "_source": "wikipedia",
-      "_source_page": "2025–26 UEFA Conference League knockout phase"
-    },
-    {
-      "id": "ECL_2026-05-07_Strasb_RayoVa",
-      "competition_id": 848,
-      "competition_ja": "UEFAカンファレンスリーグ",
-      "competition_category": "european_cup",
-      "competition_flag": "🇪🇺",
-      "kickoff_jst": "2026-05-08T04:00:00+09:00",
-      "status": "FINISHED",
-      "stage": "SEMI_FINALS",
-      "matchday": null,
-      "home_id": null,
-      "home_ja": "ストラスブール",
-      "home_en": "Strasbourg",
-      "home_crest": null,
-      "away_id": null,
-      "away_ja": "ラージョ・バジェカーノ",
-      "away_en": "Rayo Vallecano",
-      "away_crest": null,
-      "score": {
-        "home": 0,
-        "away": 1
-      },
-      "japanese_players": [],
-      "broadcasters": [
-        {
-          "name": "WOWOW",
-          "label": "WOWOW",
-          "url": "https://news.wowow.co.jp/5700.html",
-          "source": "league_guides",
-          "affiliate_url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l"
-        }
-      ],
-      "_source": "wikipedia",
-      "_source_page": "2025–26 UEFA Conference League knockout phase"
     },
     {
       "id": 540696,
@@ -41196,371 +41196,6 @@
       ]
     },
     {
-      "id": "ECL_2026-10-15_Lugano_RedSta",
-      "competition_id": 848,
-      "competition_ja": "UEFAカンファレンスリーグ",
-      "competition_category": "european_cup",
-      "competition_flag": "🇪🇺",
-      "kickoff_jst": "2026-10-16T01:45:00+09:00",
-      "status": "FINISHED",
-      "stage": "LEAGUE_STAGE",
-      "matchday": 1,
-      "home_id": null,
-      "home_ja": "ルガーノ",
-      "home_en": "Lugano",
-      "home_crest": null,
-      "away_id": null,
-      "away_ja": "ツルヴェナ・ズヴェズダ",
-      "away_en": "Red Star Belgrade",
-      "away_crest": null,
-      "score": {
-        "home": 3,
-        "away": 2
-      },
-      "japanese_players": [],
-      "broadcasters": [
-        {
-          "name": "WOWOW",
-          "label": "WOWOW",
-          "url": "https://news.wowow.co.jp/5700.html",
-          "source": "league_guides",
-          "affiliate_url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l"
-        }
-      ],
-      "_source": "wikipedia",
-      "_source_page": "2026–27 UEFA Conference League league phase"
-    },
-    {
-      "id": "ECL_2026-10-15_Hajduk_Ajax",
-      "competition_id": 848,
-      "competition_ja": "UEFAカンファレンスリーグ",
-      "competition_category": "european_cup",
-      "competition_flag": "🇪🇺",
-      "kickoff_jst": "2026-10-16T01:45:00+09:00",
-      "status": "FINISHED",
-      "stage": "LEAGUE_STAGE",
-      "matchday": 1,
-      "home_id": null,
-      "home_ja": "ハイドゥク・スプリト",
-      "home_en": "Hajduk Split",
-      "home_crest": null,
-      "away_id": 678,
-      "away_ja": "アヤックス",
-      "away_en": "Ajax",
-      "away_crest": "https://crests.football-data.org/678.png",
-      "score": {
-        "home": 2,
-        "away": 1
-      },
-      "japanese_players": [],
-      "broadcasters": [
-        {
-          "name": "WOWOW",
-          "label": "WOWOW",
-          "url": "https://news.wowow.co.jp/5700.html",
-          "source": "league_guides",
-          "affiliate_url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l"
-        }
-      ],
-      "_source": "wikipedia",
-      "_source_page": "2026–27 UEFA Conference League league phase"
-    },
-    {
-      "id": "ECL_2026-10-15_Gent_AGF",
-      "competition_id": 848,
-      "competition_ja": "UEFAカンファレンスリーグ",
-      "competition_category": "european_cup",
-      "competition_flag": "🇪🇺",
-      "kickoff_jst": "2026-10-16T01:45:00+09:00",
-      "status": "FINISHED",
-      "stage": "LEAGUE_STAGE",
-      "matchday": 1,
-      "home_id": null,
-      "home_ja": "ヘント",
-      "home_en": "Gent",
-      "home_crest": null,
-      "away_id": null,
-      "away_ja": "AGFオーフス",
-      "away_en": "AGF",
-      "away_crest": null,
-      "score": {
-        "home": 1,
-        "away": 0
-      },
-      "japanese_players": [],
-      "broadcasters": [
-        {
-          "name": "WOWOW",
-          "label": "WOWOW",
-          "url": "https://news.wowow.co.jp/5700.html",
-          "source": "league_guides",
-          "affiliate_url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l"
-        }
-      ],
-      "_source": "wikipedia",
-      "_source_page": "2026–27 UEFA Conference League league phase"
-    },
-    {
-      "id": "ECL_2026-10-15_Egnati_Midtjy",
-      "competition_id": 848,
-      "competition_ja": "UEFAカンファレンスリーグ",
-      "competition_category": "european_cup",
-      "competition_flag": "🇪🇺",
-      "kickoff_jst": "2026-10-16T01:45:00+09:00",
-      "status": "FINISHED",
-      "stage": "LEAGUE_STAGE",
-      "matchday": 1,
-      "home_id": null,
-      "home_ja": "エグナティア",
-      "home_en": "Egnatia",
-      "home_crest": null,
-      "away_id": null,
-      "away_ja": "ミッティラン",
-      "away_en": "Midtjylland",
-      "away_crest": null,
-      "score": {
-        "home": 1,
-        "away": 1
-      },
-      "japanese_players": [],
-      "broadcasters": [
-        {
-          "name": "WOWOW",
-          "label": "WOWOW",
-          "url": "https://news.wowow.co.jp/5700.html",
-          "source": "league_guides",
-          "affiliate_url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l"
-        }
-      ],
-      "_source": "wikipedia",
-      "_source_page": "2026–27 UEFA Conference League league phase"
-    },
-    {
-      "id": "ECL_2026-10-15_KuPS_Trabzo",
-      "competition_id": 848,
-      "competition_ja": "UEFAカンファレンスリーグ",
-      "competition_category": "european_cup",
-      "competition_flag": "🇪🇺",
-      "kickoff_jst": "2026-10-16T01:45:00+09:00",
-      "status": "FINISHED",
-      "stage": "LEAGUE_STAGE",
-      "matchday": 1,
-      "home_id": null,
-      "home_ja": "KuPS",
-      "home_en": "KuPS",
-      "home_crest": null,
-      "away_id": null,
-      "away_ja": "トラブゾンスポル",
-      "away_en": "Trabzonspor",
-      "away_crest": null,
-      "score": {
-        "home": 2,
-        "away": 4
-      },
-      "japanese_players": [],
-      "broadcasters": [
-        {
-          "name": "WOWOW",
-          "label": "WOWOW",
-          "url": "https://news.wowow.co.jp/5700.html",
-          "source": "league_guides",
-          "affiliate_url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l"
-        }
-      ],
-      "_source": "wikipedia",
-      "_source_page": "2026–27 UEFA Conference League league phase"
-    },
-    {
-      "id": "ECL_2026-10-15_Mjllby_InterC",
-      "competition_id": 848,
-      "competition_ja": "UEFAカンファレンスリーグ",
-      "competition_category": "european_cup",
-      "competition_flag": "🇪🇺",
-      "kickoff_jst": "2026-10-16T01:45:00+09:00",
-      "status": "FINISHED",
-      "stage": "LEAGUE_STAGE",
-      "matchday": 1,
-      "home_id": null,
-      "home_ja": "ミエルビー",
-      "home_en": "Mjällby AIF",
-      "home_crest": null,
-      "away_id": null,
-      "away_ja": "インテル・クルブ・デスカルデス",
-      "away_en": "Inter Club d'Escaldes",
-      "away_crest": null,
-      "score": {
-        "home": 2,
-        "away": 0
-      },
-      "japanese_players": [],
-      "broadcasters": [
-        {
-          "name": "WOWOW",
-          "label": "WOWOW",
-          "url": "https://news.wowow.co.jp/5700.html",
-          "source": "league_guides",
-          "affiliate_url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l"
-        }
-      ],
-      "_source": "wikipedia",
-      "_source_page": "2026–27 UEFA Conference League league phase"
-    },
-    {
-      "id": "ECL_2026-10-15_Panath_BoracB",
-      "competition_id": 848,
-      "competition_ja": "UEFAカンファレンスリーグ",
-      "competition_category": "european_cup",
-      "competition_flag": "🇪🇺",
-      "kickoff_jst": "2026-10-16T01:45:00+09:00",
-      "status": "FINISHED",
-      "stage": "LEAGUE_STAGE",
-      "matchday": 1,
-      "home_id": null,
-      "home_ja": "パナシナイコス",
-      "home_en": "Panathinaikos",
-      "home_crest": null,
-      "away_id": null,
-      "away_ja": "ボラツ・バニャ・ルカ",
-      "away_en": "Borac Banja Luka",
-      "away_crest": null,
-      "score": {
-        "home": 2,
-        "away": 1
-      },
-      "japanese_players": [],
-      "broadcasters": [
-        {
-          "name": "WOWOW",
-          "label": "WOWOW",
-          "url": "https://news.wowow.co.jp/5700.html",
-          "source": "league_guides",
-          "affiliate_url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l"
-        }
-      ],
-      "_source": "wikipedia",
-      "_source_page": "2026–27 UEFA Conference League league phase"
-    },
-    {
-      "id": "ECL_2026-10-15_CSKASo_Monaco",
-      "competition_id": 848,
-      "competition_ja": "UEFAカンファレンスリーグ",
-      "competition_category": "european_cup",
-      "competition_flag": "🇪🇺",
-      "kickoff_jst": "2026-10-16T01:45:00+09:00",
-      "status": "FINISHED",
-      "stage": "LEAGUE_STAGE",
-      "matchday": 1,
-      "home_id": null,
-      "home_ja": "CSKAソフィア",
-      "home_en": "CSKA Sofia",
-      "home_crest": null,
-      "away_id": 548,
-      "away_ja": "モナコ",
-      "away_en": "Monaco",
-      "away_crest": "https://crests.football-data.org/548.png",
-      "score": {
-        "home": 1,
-        "away": 2
-      },
-      "japanese_players": [
-        {
-          "name_ja": "南野拓実",
-          "position": "MF/FW",
-          "side": "away"
-        }
-      ],
-      "broadcasters": [
-        {
-          "name": "WOWOW",
-          "label": "WOWOW",
-          "url": "https://news.wowow.co.jp/5700.html",
-          "source": "league_guides",
-          "affiliate_url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l"
-        }
-      ],
-      "_source": "wikipedia",
-      "_source_page": "2026–27 UEFA Conference League league phase",
-      "highlights": [
-        {
-          "broadcaster": "WOWOW",
-          "video_id": "C40FcoIE2rg",
-          "url": "https://youtu.be/C40FcoIE2rg",
-          "title": "【CSKAソフィア vs モナコ】UEFAカンファレンスリーグ 2026-27 リーグフェーズ MD1／3分ハイライト【WOWOW】",
-          "yt_published": "2026-10-15"
-        }
-      ]
-    },
-    {
-      "id": "ECL_2026-10-15_Riga_Kairat",
-      "competition_id": 848,
-      "competition_ja": "UEFAカンファレンスリーグ",
-      "competition_category": "european_cup",
-      "competition_flag": "🇪🇺",
-      "kickoff_jst": "2026-10-16T01:45:00+09:00",
-      "status": "FINISHED",
-      "stage": "LEAGUE_STAGE",
-      "matchday": 1,
-      "home_id": null,
-      "home_ja": "リガFC",
-      "home_en": "Riga",
-      "home_crest": null,
-      "away_id": null,
-      "away_ja": "カイラト",
-      "away_en": "Kairat",
-      "away_crest": null,
-      "score": {
-        "home": 1,
-        "away": 1
-      },
-      "japanese_players": [],
-      "broadcasters": [
-        {
-          "name": "WOWOW",
-          "label": "WOWOW",
-          "url": "https://news.wowow.co.jp/5700.html",
-          "source": "league_guides",
-          "affiliate_url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l"
-        }
-      ],
-      "_source": "wikipedia",
-      "_source_page": "2026–27 UEFA Conference League league phase"
-    },
-    {
-      "id": "ECL_2026-10-15_Univer_Getafe",
-      "competition_id": 848,
-      "competition_ja": "UEFAカンファレンスリーグ",
-      "competition_category": "european_cup",
-      "competition_flag": "🇪🇺",
-      "kickoff_jst": "2026-10-16T01:45:00+09:00",
-      "status": "FINISHED",
-      "stage": "LEAGUE_STAGE",
-      "matchday": 1,
-      "home_id": null,
-      "home_ja": "ウニヴェルシタテア・クラヨーヴァ",
-      "home_en": "Universitatea Craiova",
-      "home_crest": null,
-      "away_id": 82,
-      "away_ja": "ヘタフェ",
-      "away_en": "Getafe",
-      "away_crest": "https://crests.football-data.org/82.png",
-      "score": {
-        "home": 1,
-        "away": 1
-      },
-      "japanese_players": [],
-      "broadcasters": [
-        {
-          "name": "WOWOW",
-          "label": "WOWOW",
-          "url": "https://news.wowow.co.jp/5700.html",
-          "source": "league_guides",
-          "affiliate_url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l"
-        }
-      ],
-      "_source": "wikipedia",
-      "_source_page": "2026–27 UEFA Conference League league phase"
-    },
-    {
       "id": "EL_2026-10-15_Sparta_Lilles",
       "competition_id": 3,
       "competition_ja": "UEFAヨーロッパリーグ",
@@ -41936,306 +41571,28 @@
       "_source_page": "2026–27 UEFA Europa League league phase"
     },
     {
-      "id": "ECL_2026-10-15_Atalan_Pafos",
+      "id": "ECL_2026-10-15_Lugano_RedSta",
       "competition_id": 848,
       "competition_ja": "UEFAカンファレンスリーグ",
       "competition_category": "european_cup",
       "competition_flag": "🇪🇺",
-      "kickoff_jst": "2026-10-16T04:00:00+09:00",
-      "status": "FINISHED",
-      "stage": "LEAGUE_STAGE",
-      "matchday": 1,
-      "home_id": 102,
-      "home_ja": "アタランタ",
-      "home_en": "Atalanta",
-      "home_crest": "https://crests.football-data.org/102.png",
-      "away_id": null,
-      "away_ja": "パフォス",
-      "away_en": "Pafos",
-      "away_crest": null,
-      "score": {
-        "home": 3,
-        "away": 1
-      },
-      "japanese_players": [],
-      "broadcasters": [
-        {
-          "name": "WOWOW",
-          "label": "WOWOW",
-          "url": "https://news.wowow.co.jp/5700.html",
-          "source": "league_guides",
-          "affiliate_url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l"
-        }
-      ],
-      "_source": "wikipedia",
-      "_source_page": "2026–27 UEFA Conference League league phase"
-    },
-    {
-      "id": "ECL_2026-10-15_Bright_Kaunoa",
-      "competition_id": 848,
-      "competition_ja": "UEFAカンファレンスリーグ",
-      "competition_category": "european_cup",
-      "competition_flag": "🇪🇺",
-      "kickoff_jst": "2026-10-16T04:00:00+09:00",
-      "status": "FINISHED",
-      "stage": "LEAGUE_STAGE",
-      "matchday": 1,
-      "home_id": 397,
-      "home_ja": "ブライトン",
-      "home_en": "Brighton Hove",
-      "home_crest": "https://crests.football-data.org/397.png",
-      "away_id": null,
-      "away_ja": "カウノ・ジャルギリス",
-      "away_en": "Kauno Žalgiris",
-      "away_crest": null,
-      "score": {
-        "home": 4,
-        "away": 0
-      },
-      "japanese_players": [
-        {
-          "name_ja": "三笘薫",
-          "position": "MF",
-          "side": "home"
-        }
-      ],
-      "broadcasters": [
-        {
-          "name": "WOWOW",
-          "label": "WOWOW",
-          "url": "https://news.wowow.co.jp/5700.html",
-          "source": "league_guides",
-          "affiliate_url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l"
-        }
-      ],
-      "_source": "wikipedia",
-      "_source_page": "2026–27 UEFA Conference League league phase"
-    },
-    {
-      "id": "ECL_2026-10-15_Copenh_Braga",
-      "competition_id": 848,
-      "competition_ja": "UEFAカンファレンスリーグ",
-      "competition_category": "european_cup",
-      "competition_flag": "🇪🇺",
-      "kickoff_jst": "2026-10-16T04:00:00+09:00",
-      "status": "FINISHED",
-      "stage": "LEAGUE_STAGE",
-      "matchday": 1,
-      "home_id": 1876,
-      "home_ja": "コペンハーゲン",
-      "home_en": "Copenhagen",
-      "home_crest": "https://crests.football-data.org/1876.png",
-      "away_id": 5613,
-      "away_ja": "ブラガ",
-      "away_en": "Braga",
-      "away_crest": "https://crests.football-data.org/5613.png",
-      "score": {
-        "home": 3,
-        "away": 0
-      },
-      "japanese_players": [],
-      "broadcasters": [
-        {
-          "name": "WOWOW",
-          "label": "WOWOW",
-          "url": "https://news.wowow.co.jp/5700.html",
-          "source": "league_guides",
-          "affiliate_url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l"
-        }
-      ],
-      "_source": "wikipedia",
-      "_source_page": "2026–27 UEFA Conference League league phase"
-    },
-    {
-      "id": "ECL_2026-10-15_Twente_Thun",
-      "competition_id": 848,
-      "competition_ja": "UEFAカンファレンスリーグ",
-      "competition_category": "european_cup",
-      "competition_flag": "🇪🇺",
-      "kickoff_jst": "2026-10-16T04:00:00+09:00",
-      "status": "FINISHED",
-      "stage": "LEAGUE_STAGE",
-      "matchday": 1,
-      "home_id": 666,
-      "home_ja": "トゥエンテ",
-      "home_en": "Twente",
-      "home_crest": "https://crests.football-data.org/666.png",
-      "away_id": null,
-      "away_ja": "トゥーン",
-      "away_en": "Thun",
-      "away_crest": null,
-      "score": {
-        "home": 1,
-        "away": 0
-      },
-      "japanese_players": [],
-      "broadcasters": [
-        {
-          "name": "WOWOW",
-          "label": "WOWOW",
-          "url": "https://news.wowow.co.jp/5700.html",
-          "source": "league_guides",
-          "affiliate_url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l"
-        }
-      ],
-      "_source": "wikipedia",
-      "_source_page": "2026–27 UEFA Conference League league phase"
-    },
-    {
-      "id": "ECL_2026-10-15_Hearto_Nordsj",
-      "competition_id": 848,
-      "competition_ja": "UEFAカンファレンスリーグ",
-      "competition_category": "european_cup",
-      "competition_flag": "🇪🇺",
-      "kickoff_jst": "2026-10-16T04:00:00+09:00",
+      "kickoff_jst": "2026-10-16T01:45:00+09:00",
       "status": "FINISHED",
       "stage": "LEAGUE_STAGE",
       "matchday": 1,
       "home_id": null,
-      "home_ja": "ハーツ",
-      "home_en": "Heart of Midlothian",
+      "home_ja": "ルガーノ",
+      "home_en": "Lugano",
       "home_crest": null,
       "away_id": null,
-      "away_ja": "ノアシェラン",
-      "away_en": "Nordsjælland",
-      "away_crest": null,
-      "score": {
-        "home": 1,
-        "away": 1
-      },
-      "japanese_players": [],
-      "broadcasters": [
-        {
-          "name": "WOWOW",
-          "label": "WOWOW",
-          "url": "https://news.wowow.co.jp/5700.html",
-          "source": "league_guides",
-          "affiliate_url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l"
-        }
-      ],
-      "_source": "wikipedia",
-      "_source_page": "2026–27 UEFA Conference League league phase"
-    },
-    {
-      "id": "ECL_2026-10-15_SintTr_Iberia",
-      "competition_id": 848,
-      "competition_ja": "UEFAカンファレンスリーグ",
-      "competition_category": "european_cup",
-      "competition_flag": "🇪🇺",
-      "kickoff_jst": "2026-10-16T04:00:00+09:00",
-      "status": "FINISHED",
-      "stage": "LEAGUE_STAGE",
-      "matchday": 1,
-      "home_id": null,
-      "home_ja": "シント＝トロイデン",
-      "home_en": "Sint-Truiden",
-      "home_crest": null,
-      "away_id": null,
-      "away_ja": "イベリア1999",
-      "away_en": "Iberia 1999",
-      "away_crest": null,
-      "score": {
-        "home": 2,
-        "away": 0
-      },
-      "japanese_players": [
-        {
-          "name_ja": "高井幸大",
-          "position": "DF",
-          "side": "home"
-        },
-        {
-          "name_ja": "小久保玲央ブライアン",
-          "position": "GK",
-          "side": "home"
-        },
-        {
-          "name_ja": "谷口彰悟",
-          "position": "DF",
-          "side": "home"
-        },
-        {
-          "name_ja": "畑大雅",
-          "position": "DF",
-          "side": "home"
-        },
-        {
-          "name_ja": "松澤海斗",
-          "position": "FW/MF",
-          "side": "home"
-        },
-        {
-          "name_ja": "新川志音",
-          "position": "MF/FW",
-          "side": "home"
-        },
-        {
-          "name_ja": "荒木遼太郎",
-          "position": "MF",
-          "side": "home"
-        },
-        {
-          "name_ja": "石渡ネルソン",
-          "position": "DF",
-          "side": "home"
-        }
-      ],
-      "broadcasters": [
-        {
-          "name": "WOWOW",
-          "label": "WOWOW",
-          "url": "https://news.wowow.co.jp/5700.html",
-          "source": "league_guides",
-          "affiliate_url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l"
-        }
-      ],
-      "_source": "wikipedia",
-      "_source_page": "2026–27 UEFA Conference League league phase"
-    },
-    {
-      "id": "ECL_2026-10-15_SCFrei_Jablon",
-      "competition_id": 848,
-      "competition_ja": "UEFAカンファレンスリーグ",
-      "competition_category": "european_cup",
-      "competition_flag": "🇪🇺",
-      "kickoff_jst": "2026-10-16T04:00:00+09:00",
-      "status": "FINISHED",
-      "stage": "LEAGUE_STAGE",
-      "matchday": 1,
-      "home_id": 17,
-      "home_ja": "フライブルク",
-      "home_en": "Freiburg",
-      "home_crest": "https://crests.football-data.org/17.png",
-      "away_id": null,
-      "away_ja": "ヤブロネツ",
-      "away_en": "Jablonec",
+      "away_ja": "ツルヴェナ・ズヴェズダ",
+      "away_en": "Red Star Belgrade",
       "away_crest": null,
       "score": {
         "home": 3,
         "away": 2
       },
-      "japanese_players": [
-        {
-          "name_ja": "鈴木唯人",
-          "position": "MF/FW",
-          "side": "home"
-        },
-        {
-          "name_ja": "長田澪",
-          "position": "GK",
-          "side": "home"
-        },
-        {
-          "name_ja": "山本理仁",
-          "position": "MF",
-          "side": "home"
-        },
-        {
-          "name_ja": "後藤啓介",
-          "position": "FW",
-          "side": "home"
-        }
-      ],
+      "japanese_players": [],
       "broadcasters": [
         {
           "name": "WOWOW",
@@ -42249,25 +41606,320 @@
       "_source_page": "2026–27 UEFA Conference League league phase"
     },
     {
-      "id": "ECL_2026-10-15_Brann_Lincol",
+      "id": "ECL_2026-10-15_Hajduk_Ajax",
       "competition_id": 848,
       "competition_ja": "UEFAカンファレンスリーグ",
       "competition_category": "european_cup",
       "competition_flag": "🇪🇺",
-      "kickoff_jst": "2026-10-16T04:00:00+09:00",
+      "kickoff_jst": "2026-10-16T01:45:00+09:00",
       "status": "FINISHED",
       "stage": "LEAGUE_STAGE",
       "matchday": 1,
       "home_id": null,
-      "home_ja": "ブラン",
-      "home_en": "Brann",
+      "home_ja": "ハイドゥク・スプリト",
+      "home_en": "Hajduk Split",
+      "home_crest": null,
+      "away_id": 678,
+      "away_ja": "アヤックス",
+      "away_en": "Ajax",
+      "away_crest": "https://crests.football-data.org/678.png",
+      "score": {
+        "home": 2,
+        "away": 1
+      },
+      "japanese_players": [],
+      "broadcasters": [
+        {
+          "name": "WOWOW",
+          "label": "WOWOW",
+          "url": "https://news.wowow.co.jp/5700.html",
+          "source": "league_guides",
+          "affiliate_url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l"
+        }
+      ],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 UEFA Conference League league phase"
+    },
+    {
+      "id": "ECL_2026-10-15_Gent_AGF",
+      "competition_id": 848,
+      "competition_ja": "UEFAカンファレンスリーグ",
+      "competition_category": "european_cup",
+      "competition_flag": "🇪🇺",
+      "kickoff_jst": "2026-10-16T01:45:00+09:00",
+      "status": "FINISHED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 1,
+      "home_id": null,
+      "home_ja": "ヘント",
+      "home_en": "Gent",
       "home_crest": null,
       "away_id": null,
-      "away_ja": "リンカーン・レッドインプス",
-      "away_en": "Lincoln Red Imps",
+      "away_ja": "AGFオーフス",
+      "away_en": "AGF",
+      "away_crest": null,
+      "score": {
+        "home": 1,
+        "away": 0
+      },
+      "japanese_players": [],
+      "broadcasters": [
+        {
+          "name": "WOWOW",
+          "label": "WOWOW",
+          "url": "https://news.wowow.co.jp/5700.html",
+          "source": "league_guides",
+          "affiliate_url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l"
+        }
+      ],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 UEFA Conference League league phase"
+    },
+    {
+      "id": "ECL_2026-10-15_Egnati_Midtjy",
+      "competition_id": 848,
+      "competition_ja": "UEFAカンファレンスリーグ",
+      "competition_category": "european_cup",
+      "competition_flag": "🇪🇺",
+      "kickoff_jst": "2026-10-16T01:45:00+09:00",
+      "status": "FINISHED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 1,
+      "home_id": null,
+      "home_ja": "エグナティア",
+      "home_en": "Egnatia",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "ミッティラン",
+      "away_en": "Midtjylland",
+      "away_crest": null,
+      "score": {
+        "home": 1,
+        "away": 1
+      },
+      "japanese_players": [],
+      "broadcasters": [
+        {
+          "name": "WOWOW",
+          "label": "WOWOW",
+          "url": "https://news.wowow.co.jp/5700.html",
+          "source": "league_guides",
+          "affiliate_url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l"
+        }
+      ],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 UEFA Conference League league phase"
+    },
+    {
+      "id": "ECL_2026-10-15_KuPS_Trabzo",
+      "competition_id": 848,
+      "competition_ja": "UEFAカンファレンスリーグ",
+      "competition_category": "european_cup",
+      "competition_flag": "🇪🇺",
+      "kickoff_jst": "2026-10-16T01:45:00+09:00",
+      "status": "FINISHED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 1,
+      "home_id": null,
+      "home_ja": "KuPS",
+      "home_en": "KuPS",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "トラブゾンスポル",
+      "away_en": "Trabzonspor",
       "away_crest": null,
       "score": {
         "home": 2,
+        "away": 4
+      },
+      "japanese_players": [],
+      "broadcasters": [
+        {
+          "name": "WOWOW",
+          "label": "WOWOW",
+          "url": "https://news.wowow.co.jp/5700.html",
+          "source": "league_guides",
+          "affiliate_url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l"
+        }
+      ],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 UEFA Conference League league phase"
+    },
+    {
+      "id": "ECL_2026-10-15_Mjllby_InterC",
+      "competition_id": 848,
+      "competition_ja": "UEFAカンファレンスリーグ",
+      "competition_category": "european_cup",
+      "competition_flag": "🇪🇺",
+      "kickoff_jst": "2026-10-16T01:45:00+09:00",
+      "status": "FINISHED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 1,
+      "home_id": null,
+      "home_ja": "ミエルビー",
+      "home_en": "Mjällby AIF",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "インテル・クルブ・デスカルデス",
+      "away_en": "Inter Club d'Escaldes",
+      "away_crest": null,
+      "score": {
+        "home": 2,
+        "away": 0
+      },
+      "japanese_players": [],
+      "broadcasters": [
+        {
+          "name": "WOWOW",
+          "label": "WOWOW",
+          "url": "https://news.wowow.co.jp/5700.html",
+          "source": "league_guides",
+          "affiliate_url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l"
+        }
+      ],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 UEFA Conference League league phase"
+    },
+    {
+      "id": "ECL_2026-10-15_Panath_BoracB",
+      "competition_id": 848,
+      "competition_ja": "UEFAカンファレンスリーグ",
+      "competition_category": "european_cup",
+      "competition_flag": "🇪🇺",
+      "kickoff_jst": "2026-10-16T01:45:00+09:00",
+      "status": "FINISHED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 1,
+      "home_id": null,
+      "home_ja": "パナシナイコス",
+      "home_en": "Panathinaikos",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "ボラツ・バニャ・ルカ",
+      "away_en": "Borac Banja Luka",
+      "away_crest": null,
+      "score": {
+        "home": 2,
+        "away": 1
+      },
+      "japanese_players": [],
+      "broadcasters": [
+        {
+          "name": "WOWOW",
+          "label": "WOWOW",
+          "url": "https://news.wowow.co.jp/5700.html",
+          "source": "league_guides",
+          "affiliate_url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l"
+        }
+      ],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 UEFA Conference League league phase"
+    },
+    {
+      "id": "ECL_2026-10-15_CSKASo_Monaco",
+      "competition_id": 848,
+      "competition_ja": "UEFAカンファレンスリーグ",
+      "competition_category": "european_cup",
+      "competition_flag": "🇪🇺",
+      "kickoff_jst": "2026-10-16T01:45:00+09:00",
+      "status": "FINISHED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 1,
+      "home_id": null,
+      "home_ja": "CSKAソフィア",
+      "home_en": "CSKA Sofia",
+      "home_crest": null,
+      "away_id": 548,
+      "away_ja": "モナコ",
+      "away_en": "Monaco",
+      "away_crest": "https://crests.football-data.org/548.png",
+      "score": {
+        "home": 1,
+        "away": 2
+      },
+      "japanese_players": [
+        {
+          "name_ja": "南野拓実",
+          "position": "MF/FW",
+          "side": "away"
+        }
+      ],
+      "broadcasters": [
+        {
+          "name": "WOWOW",
+          "label": "WOWOW",
+          "url": "https://news.wowow.co.jp/5700.html",
+          "source": "league_guides",
+          "affiliate_url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l"
+        }
+      ],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 UEFA Conference League league phase",
+      "highlights": [
+        {
+          "broadcaster": "WOWOW",
+          "video_id": "C40FcoIE2rg",
+          "url": "https://youtu.be/C40FcoIE2rg",
+          "title": "【CSKAソフィア vs モナコ】UEFAカンファレンスリーグ 2026-27 リーグフェーズ MD1／3分ハイライト【WOWOW】",
+          "yt_published": "2026-10-15"
+        }
+      ]
+    },
+    {
+      "id": "ECL_2026-10-15_Riga_Kairat",
+      "competition_id": 848,
+      "competition_ja": "UEFAカンファレンスリーグ",
+      "competition_category": "european_cup",
+      "competition_flag": "🇪🇺",
+      "kickoff_jst": "2026-10-16T01:45:00+09:00",
+      "status": "FINISHED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 1,
+      "home_id": null,
+      "home_ja": "リガFC",
+      "home_en": "Riga",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "カイラト",
+      "away_en": "Kairat",
+      "away_crest": null,
+      "score": {
+        "home": 1,
+        "away": 1
+      },
+      "japanese_players": [],
+      "broadcasters": [
+        {
+          "name": "WOWOW",
+          "label": "WOWOW",
+          "url": "https://news.wowow.co.jp/5700.html",
+          "source": "league_guides",
+          "affiliate_url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l"
+        }
+      ],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 UEFA Conference League league phase"
+    },
+    {
+      "id": "ECL_2026-10-15_Univer_Getafe",
+      "competition_id": 848,
+      "competition_ja": "UEFAカンファレンスリーグ",
+      "competition_category": "european_cup",
+      "competition_flag": "🇪🇺",
+      "kickoff_jst": "2026-10-16T01:45:00+09:00",
+      "status": "FINISHED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 1,
+      "home_id": null,
+      "home_ja": "ウニヴェルシタテア・クラヨーヴァ",
+      "home_en": "Universitatea Craiova",
+      "home_crest": null,
+      "away_id": 82,
+      "away_ja": "ヘタフェ",
+      "away_en": "Getafe",
+      "away_crest": "https://crests.football-data.org/82.png",
+      "score": {
+        "home": 1,
         "away": 1
       },
       "japanese_players": [],
@@ -42698,6 +42350,354 @@
       ],
       "_source": "wikipedia",
       "_source_page": "2026–27 UEFA Europa League league phase"
+    },
+    {
+      "id": "ECL_2026-10-15_Atalan_Pafos",
+      "competition_id": 848,
+      "competition_ja": "UEFAカンファレンスリーグ",
+      "competition_category": "european_cup",
+      "competition_flag": "🇪🇺",
+      "kickoff_jst": "2026-10-16T04:00:00+09:00",
+      "status": "FINISHED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 1,
+      "home_id": 102,
+      "home_ja": "アタランタ",
+      "home_en": "Atalanta",
+      "home_crest": "https://crests.football-data.org/102.png",
+      "away_id": null,
+      "away_ja": "パフォス",
+      "away_en": "Pafos",
+      "away_crest": null,
+      "score": {
+        "home": 3,
+        "away": 1
+      },
+      "japanese_players": [],
+      "broadcasters": [
+        {
+          "name": "WOWOW",
+          "label": "WOWOW",
+          "url": "https://news.wowow.co.jp/5700.html",
+          "source": "league_guides",
+          "affiliate_url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l"
+        }
+      ],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 UEFA Conference League league phase"
+    },
+    {
+      "id": "ECL_2026-10-15_Bright_Kaunoa",
+      "competition_id": 848,
+      "competition_ja": "UEFAカンファレンスリーグ",
+      "competition_category": "european_cup",
+      "competition_flag": "🇪🇺",
+      "kickoff_jst": "2026-10-16T04:00:00+09:00",
+      "status": "FINISHED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 1,
+      "home_id": 397,
+      "home_ja": "ブライトン",
+      "home_en": "Brighton Hove",
+      "home_crest": "https://crests.football-data.org/397.png",
+      "away_id": null,
+      "away_ja": "カウノ・ジャルギリス",
+      "away_en": "Kauno Žalgiris",
+      "away_crest": null,
+      "score": {
+        "home": 4,
+        "away": 0
+      },
+      "japanese_players": [
+        {
+          "name_ja": "三笘薫",
+          "position": "MF",
+          "side": "home"
+        }
+      ],
+      "broadcasters": [
+        {
+          "name": "WOWOW",
+          "label": "WOWOW",
+          "url": "https://news.wowow.co.jp/5700.html",
+          "source": "league_guides",
+          "affiliate_url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l"
+        }
+      ],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 UEFA Conference League league phase"
+    },
+    {
+      "id": "ECL_2026-10-15_Copenh_Braga",
+      "competition_id": 848,
+      "competition_ja": "UEFAカンファレンスリーグ",
+      "competition_category": "european_cup",
+      "competition_flag": "🇪🇺",
+      "kickoff_jst": "2026-10-16T04:00:00+09:00",
+      "status": "FINISHED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 1,
+      "home_id": 1876,
+      "home_ja": "コペンハーゲン",
+      "home_en": "Copenhagen",
+      "home_crest": "https://crests.football-data.org/1876.png",
+      "away_id": 5613,
+      "away_ja": "ブラガ",
+      "away_en": "Braga",
+      "away_crest": "https://crests.football-data.org/5613.png",
+      "score": {
+        "home": 3,
+        "away": 0
+      },
+      "japanese_players": [],
+      "broadcasters": [
+        {
+          "name": "WOWOW",
+          "label": "WOWOW",
+          "url": "https://news.wowow.co.jp/5700.html",
+          "source": "league_guides",
+          "affiliate_url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l"
+        }
+      ],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 UEFA Conference League league phase"
+    },
+    {
+      "id": "ECL_2026-10-15_Twente_Thun",
+      "competition_id": 848,
+      "competition_ja": "UEFAカンファレンスリーグ",
+      "competition_category": "european_cup",
+      "competition_flag": "🇪🇺",
+      "kickoff_jst": "2026-10-16T04:00:00+09:00",
+      "status": "FINISHED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 1,
+      "home_id": 666,
+      "home_ja": "トゥエンテ",
+      "home_en": "Twente",
+      "home_crest": "https://crests.football-data.org/666.png",
+      "away_id": null,
+      "away_ja": "トゥーン",
+      "away_en": "Thun",
+      "away_crest": null,
+      "score": {
+        "home": 1,
+        "away": 0
+      },
+      "japanese_players": [],
+      "broadcasters": [
+        {
+          "name": "WOWOW",
+          "label": "WOWOW",
+          "url": "https://news.wowow.co.jp/5700.html",
+          "source": "league_guides",
+          "affiliate_url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l"
+        }
+      ],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 UEFA Conference League league phase"
+    },
+    {
+      "id": "ECL_2026-10-15_Hearto_Nordsj",
+      "competition_id": 848,
+      "competition_ja": "UEFAカンファレンスリーグ",
+      "competition_category": "european_cup",
+      "competition_flag": "🇪🇺",
+      "kickoff_jst": "2026-10-16T04:00:00+09:00",
+      "status": "FINISHED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 1,
+      "home_id": null,
+      "home_ja": "ハーツ",
+      "home_en": "Heart of Midlothian",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "ノアシェラン",
+      "away_en": "Nordsjælland",
+      "away_crest": null,
+      "score": {
+        "home": 1,
+        "away": 1
+      },
+      "japanese_players": [],
+      "broadcasters": [
+        {
+          "name": "WOWOW",
+          "label": "WOWOW",
+          "url": "https://news.wowow.co.jp/5700.html",
+          "source": "league_guides",
+          "affiliate_url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l"
+        }
+      ],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 UEFA Conference League league phase"
+    },
+    {
+      "id": "ECL_2026-10-15_SintTr_Iberia",
+      "competition_id": 848,
+      "competition_ja": "UEFAカンファレンスリーグ",
+      "competition_category": "european_cup",
+      "competition_flag": "🇪🇺",
+      "kickoff_jst": "2026-10-16T04:00:00+09:00",
+      "status": "FINISHED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 1,
+      "home_id": null,
+      "home_ja": "シント＝トロイデン",
+      "home_en": "Sint-Truiden",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "イベリア1999",
+      "away_en": "Iberia 1999",
+      "away_crest": null,
+      "score": {
+        "home": 2,
+        "away": 0
+      },
+      "japanese_players": [
+        {
+          "name_ja": "高井幸大",
+          "position": "DF",
+          "side": "home"
+        },
+        {
+          "name_ja": "小久保玲央ブライアン",
+          "position": "GK",
+          "side": "home"
+        },
+        {
+          "name_ja": "谷口彰悟",
+          "position": "DF",
+          "side": "home"
+        },
+        {
+          "name_ja": "畑大雅",
+          "position": "DF",
+          "side": "home"
+        },
+        {
+          "name_ja": "松澤海斗",
+          "position": "FW/MF",
+          "side": "home"
+        },
+        {
+          "name_ja": "新川志音",
+          "position": "MF/FW",
+          "side": "home"
+        },
+        {
+          "name_ja": "荒木遼太郎",
+          "position": "MF",
+          "side": "home"
+        },
+        {
+          "name_ja": "石渡ネルソン",
+          "position": "DF",
+          "side": "home"
+        }
+      ],
+      "broadcasters": [
+        {
+          "name": "WOWOW",
+          "label": "WOWOW",
+          "url": "https://news.wowow.co.jp/5700.html",
+          "source": "league_guides",
+          "affiliate_url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l"
+        }
+      ],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 UEFA Conference League league phase"
+    },
+    {
+      "id": "ECL_2026-10-15_SCFrei_Jablon",
+      "competition_id": 848,
+      "competition_ja": "UEFAカンファレンスリーグ",
+      "competition_category": "european_cup",
+      "competition_flag": "🇪🇺",
+      "kickoff_jst": "2026-10-16T04:00:00+09:00",
+      "status": "FINISHED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 1,
+      "home_id": 17,
+      "home_ja": "フライブルク",
+      "home_en": "Freiburg",
+      "home_crest": "https://crests.football-data.org/17.png",
+      "away_id": null,
+      "away_ja": "ヤブロネツ",
+      "away_en": "Jablonec",
+      "away_crest": null,
+      "score": {
+        "home": 3,
+        "away": 2
+      },
+      "japanese_players": [
+        {
+          "name_ja": "鈴木唯人",
+          "position": "MF/FW",
+          "side": "home"
+        },
+        {
+          "name_ja": "長田澪",
+          "position": "GK",
+          "side": "home"
+        },
+        {
+          "name_ja": "山本理仁",
+          "position": "MF",
+          "side": "home"
+        },
+        {
+          "name_ja": "後藤啓介",
+          "position": "FW",
+          "side": "home"
+        }
+      ],
+      "broadcasters": [
+        {
+          "name": "WOWOW",
+          "label": "WOWOW",
+          "url": "https://news.wowow.co.jp/5700.html",
+          "source": "league_guides",
+          "affiliate_url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l"
+        }
+      ],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 UEFA Conference League league phase"
+    },
+    {
+      "id": "ECL_2026-10-15_Brann_Lincol",
+      "competition_id": 848,
+      "competition_ja": "UEFAカンファレンスリーグ",
+      "competition_category": "european_cup",
+      "competition_flag": "🇪🇺",
+      "kickoff_jst": "2026-10-16T04:00:00+09:00",
+      "status": "FINISHED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 1,
+      "home_id": null,
+      "home_ja": "ブラン",
+      "home_en": "Brann",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "リンカーン・レッドインプス",
+      "away_en": "Lincoln Red Imps",
+      "away_crest": null,
+      "score": {
+        "home": 2,
+        "away": 1
+      },
+      "japanese_players": [],
+      "broadcasters": [
+        {
+          "name": "WOWOW",
+          "label": "WOWOW",
+          "url": "https://news.wowow.co.jp/5700.html",
+          "source": "league_guides",
+          "affiliate_url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l"
+        }
+      ],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 UEFA Conference League league phase"
     },
     {
       "id": "BL2_83632",
@@ -46832,327 +46832,6 @@
       "_source_page": "2026–27 UEFA Conference League league phase"
     },
     {
-      "id": "ECL_2026-10-22_Iberia_Mjllby",
-      "competition_id": 848,
-      "competition_ja": "UEFAカンファレンスリーグ",
-      "competition_category": "european_cup",
-      "competition_flag": "🇪🇺",
-      "kickoff_jst": "2026-10-23T01:45:00+09:00",
-      "status": "FINISHED",
-      "stage": "LEAGUE_STAGE",
-      "matchday": 2,
-      "home_id": null,
-      "home_ja": "イベリア1999",
-      "home_en": "Iberia 1999",
-      "home_crest": null,
-      "away_id": null,
-      "away_ja": "ミエルビー",
-      "away_en": "Mjällby AIF",
-      "away_crest": null,
-      "score": {
-        "home": 1,
-        "away": 1
-      },
-      "japanese_players": [],
-      "broadcasters": [
-        {
-          "name": "WOWOW",
-          "label": "WOWOW",
-          "url": "https://news.wowow.co.jp/5700.html",
-          "source": "league_guides",
-          "affiliate_url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l"
-        }
-      ],
-      "_source": "wikipedia",
-      "_source_page": "2026–27 UEFA Conference League league phase"
-    },
-    {
-      "id": "ECL_2026-10-22_Nordsj_CSKASo",
-      "competition_id": 848,
-      "competition_ja": "UEFAカンファレンスリーグ",
-      "competition_category": "european_cup",
-      "competition_flag": "🇪🇺",
-      "kickoff_jst": "2026-10-23T01:45:00+09:00",
-      "status": "FINISHED",
-      "stage": "LEAGUE_STAGE",
-      "matchday": 2,
-      "home_id": null,
-      "home_ja": "ノアシェラン",
-      "home_en": "Nordsjælland",
-      "home_crest": null,
-      "away_id": null,
-      "away_ja": "CSKAソフィア",
-      "away_en": "CSKA Sofia",
-      "away_crest": null,
-      "score": {
-        "home": 2,
-        "away": 2
-      },
-      "japanese_players": [],
-      "broadcasters": [
-        {
-          "name": "WOWOW",
-          "label": "WOWOW",
-          "url": "https://news.wowow.co.jp/5700.html",
-          "source": "league_guides",
-          "affiliate_url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l"
-        }
-      ],
-      "_source": "wikipedia",
-      "_source_page": "2026–27 UEFA Conference League league phase"
-    },
-    {
-      "id": "ECL_2026-10-22_RedSta_Copenh",
-      "competition_id": 848,
-      "competition_ja": "UEFAカンファレンスリーグ",
-      "competition_category": "european_cup",
-      "competition_flag": "🇪🇺",
-      "kickoff_jst": "2026-10-23T01:45:00+09:00",
-      "status": "FINISHED",
-      "stage": "LEAGUE_STAGE",
-      "matchday": 2,
-      "home_id": null,
-      "home_ja": "ツルヴェナ・ズヴェズダ",
-      "home_en": "Red Star Belgrade",
-      "home_crest": null,
-      "away_id": 1876,
-      "away_ja": "コペンハーゲン",
-      "away_en": "Copenhagen",
-      "away_crest": "https://crests.football-data.org/1876.png",
-      "score": {
-        "home": 2,
-        "away": 2
-      },
-      "japanese_players": [],
-      "broadcasters": [
-        {
-          "name": "WOWOW",
-          "label": "WOWOW",
-          "url": "https://news.wowow.co.jp/5700.html",
-          "source": "league_guides",
-          "affiliate_url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l"
-        }
-      ],
-      "_source": "wikipedia",
-      "_source_page": "2026–27 UEFA Conference League league phase"
-    },
-    {
-      "id": "ECL_2026-10-22_Jablon_Bright",
-      "competition_id": 848,
-      "competition_ja": "UEFAカンファレンスリーグ",
-      "competition_category": "european_cup",
-      "competition_flag": "🇪🇺",
-      "kickoff_jst": "2026-10-23T01:45:00+09:00",
-      "status": "FINISHED",
-      "stage": "LEAGUE_STAGE",
-      "matchday": 2,
-      "home_id": null,
-      "home_ja": "ヤブロネツ",
-      "home_en": "Jablonec",
-      "home_crest": null,
-      "away_id": 397,
-      "away_ja": "ブライトン",
-      "away_en": "Brighton Hove",
-      "away_crest": "https://crests.football-data.org/397.png",
-      "score": {
-        "home": 0,
-        "away": 0
-      },
-      "japanese_players": [
-        {
-          "name_ja": "三笘薫",
-          "position": "MF",
-          "side": "away"
-        }
-      ],
-      "broadcasters": [
-        {
-          "name": "WOWOW",
-          "label": "WOWOW",
-          "url": "https://news.wowow.co.jp/5700.html",
-          "source": "league_guides",
-          "affiliate_url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l"
-        }
-      ],
-      "_source": "wikipedia",
-      "_source_page": "2026–27 UEFA Conference League league phase"
-    },
-    {
-      "id": "ECL_2026-10-22_Kaunoa_Brann",
-      "competition_id": 848,
-      "competition_ja": "UEFAカンファレンスリーグ",
-      "competition_category": "european_cup",
-      "competition_flag": "🇪🇺",
-      "kickoff_jst": "2026-10-23T01:45:00+09:00",
-      "status": "FINISHED",
-      "stage": "LEAGUE_STAGE",
-      "matchday": 2,
-      "home_id": null,
-      "home_ja": "カウノ・ジャルギリス",
-      "home_en": "Kauno Žalgiris",
-      "home_crest": null,
-      "away_id": null,
-      "away_ja": "ブラン",
-      "away_en": "Brann",
-      "away_crest": null,
-      "score": {
-        "home": 1,
-        "away": 4
-      },
-      "japanese_players": [],
-      "broadcasters": [
-        {
-          "name": "WOWOW",
-          "label": "WOWOW",
-          "url": "https://news.wowow.co.jp/5700.html",
-          "source": "league_guides",
-          "affiliate_url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l"
-        }
-      ],
-      "_source": "wikipedia",
-      "_source_page": "2026–27 UEFA Conference League league phase"
-    },
-    {
-      "id": "ECL_2026-10-22_Getafe_Lugano",
-      "competition_id": 848,
-      "competition_ja": "UEFAカンファレンスリーグ",
-      "competition_category": "european_cup",
-      "competition_flag": "🇪🇺",
-      "kickoff_jst": "2026-10-23T01:45:00+09:00",
-      "status": "FINISHED",
-      "stage": "LEAGUE_STAGE",
-      "matchday": 2,
-      "home_id": 82,
-      "home_ja": "ヘタフェ",
-      "home_en": "Getafe",
-      "home_crest": "https://crests.football-data.org/82.png",
-      "away_id": null,
-      "away_ja": "ルガーノ",
-      "away_en": "Lugano",
-      "away_crest": null,
-      "score": {
-        "home": 2,
-        "away": 5
-      },
-      "japanese_players": [],
-      "broadcasters": [
-        {
-          "name": "WOWOW",
-          "label": "WOWOW",
-          "url": "https://news.wowow.co.jp/5700.html",
-          "source": "league_guides",
-          "affiliate_url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l"
-        }
-      ],
-      "_source": "wikipedia",
-      "_source_page": "2026–27 UEFA Conference League league phase"
-    },
-    {
-      "id": "ECL_2026-10-22_InterC_Univer",
-      "competition_id": 848,
-      "competition_ja": "UEFAカンファレンスリーグ",
-      "competition_category": "european_cup",
-      "competition_flag": "🇪🇺",
-      "kickoff_jst": "2026-10-23T01:45:00+09:00",
-      "status": "FINISHED",
-      "stage": "LEAGUE_STAGE",
-      "matchday": 2,
-      "home_id": null,
-      "home_ja": "インテル・クルブ・デスカルデス",
-      "home_en": "Inter Club d'Escaldes",
-      "home_crest": null,
-      "away_id": null,
-      "away_ja": "ウニヴェルシタテア・クラヨーヴァ",
-      "away_en": "Universitatea Craiova",
-      "away_crest": null,
-      "score": {
-        "home": 1,
-        "away": 3
-      },
-      "japanese_players": [],
-      "broadcasters": [
-        {
-          "name": "WOWOW",
-          "label": "WOWOW",
-          "url": "https://news.wowow.co.jp/5700.html",
-          "source": "league_guides",
-          "affiliate_url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l"
-        }
-      ],
-      "_source": "wikipedia",
-      "_source_page": "2026–27 UEFA Conference League league phase"
-    },
-    {
-      "id": "ECL_2026-10-22_Pafos_Riga",
-      "competition_id": 848,
-      "competition_ja": "UEFAカンファレンスリーグ",
-      "competition_category": "european_cup",
-      "competition_flag": "🇪🇺",
-      "kickoff_jst": "2026-10-23T01:45:00+09:00",
-      "status": "FINISHED",
-      "stage": "LEAGUE_STAGE",
-      "matchday": 2,
-      "home_id": null,
-      "home_ja": "パフォス",
-      "home_en": "Pafos",
-      "home_crest": null,
-      "away_id": null,
-      "away_ja": "リガFC",
-      "away_en": "Riga",
-      "away_crest": null,
-      "score": {
-        "home": 1,
-        "away": 1
-      },
-      "japanese_players": [],
-      "broadcasters": [
-        {
-          "name": "WOWOW",
-          "label": "WOWOW",
-          "url": "https://news.wowow.co.jp/5700.html",
-          "source": "league_guides",
-          "affiliate_url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l"
-        }
-      ],
-      "_source": "wikipedia",
-      "_source_page": "2026–27 UEFA Conference League league phase"
-    },
-    {
-      "id": "ECL_2026-10-22_Trabzo_Hearto",
-      "competition_id": 848,
-      "competition_ja": "UEFAカンファレンスリーグ",
-      "competition_category": "european_cup",
-      "competition_flag": "🇪🇺",
-      "kickoff_jst": "2026-10-23T01:45:00+09:00",
-      "status": "FINISHED",
-      "stage": "LEAGUE_STAGE",
-      "matchday": 2,
-      "home_id": null,
-      "home_ja": "トラブゾンスポル",
-      "home_en": "Trabzonspor",
-      "home_crest": null,
-      "away_id": null,
-      "away_ja": "ハーツ",
-      "away_en": "Heart of Midlothian",
-      "away_crest": null,
-      "score": {
-        "home": 2,
-        "away": 0
-      },
-      "japanese_players": [],
-      "broadcasters": [
-        {
-          "name": "WOWOW",
-          "label": "WOWOW",
-          "url": "https://news.wowow.co.jp/5700.html",
-          "source": "league_guides",
-          "affiliate_url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l"
-        }
-      ],
-      "_source": "wikipedia",
-      "_source_page": "2026–27 UEFA Conference League league phase"
-    },
-    {
       "id": "EL_2026-10-22_Ararat_AZ",
       "competition_id": 3,
       "competition_ja": "UEFAヨーロッパリーグ",
@@ -47498,57 +47177,22 @@
       "_source_page": "2026–27 UEFA Europa League league phase"
     },
     {
-      "id": "ECL_2026-10-22_Ajax_Atalan",
+      "id": "ECL_2026-10-22_Iberia_Mjllby",
       "competition_id": 848,
       "competition_ja": "UEFAカンファレンスリーグ",
       "competition_category": "european_cup",
       "competition_flag": "🇪🇺",
-      "kickoff_jst": "2026-10-23T04:00:00+09:00",
-      "status": "FINISHED",
-      "stage": "LEAGUE_STAGE",
-      "matchday": 2,
-      "home_id": 678,
-      "home_ja": "アヤックス",
-      "home_en": "Ajax",
-      "home_crest": "https://crests.football-data.org/678.png",
-      "away_id": 102,
-      "away_ja": "アタランタ",
-      "away_en": "Atalanta",
-      "away_crest": "https://crests.football-data.org/102.png",
-      "score": {
-        "home": 2,
-        "away": 0
-      },
-      "japanese_players": [],
-      "broadcasters": [
-        {
-          "name": "WOWOW",
-          "label": "WOWOW",
-          "url": "https://news.wowow.co.jp/5700.html",
-          "source": "league_guides",
-          "affiliate_url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l"
-        }
-      ],
-      "_source": "wikipedia",
-      "_source_page": "2026–27 UEFA Conference League league phase"
-    },
-    {
-      "id": "ECL_2026-10-22_AGF_Egnati",
-      "competition_id": 848,
-      "competition_ja": "UEFAカンファレンスリーグ",
-      "competition_category": "european_cup",
-      "competition_flag": "🇪🇺",
-      "kickoff_jst": "2026-10-23T04:00:00+09:00",
+      "kickoff_jst": "2026-10-23T01:45:00+09:00",
       "status": "FINISHED",
       "stage": "LEAGUE_STAGE",
       "matchday": 2,
       "home_id": null,
-      "home_ja": "AGFオーフス",
-      "home_en": "AGF",
+      "home_ja": "イベリア1999",
+      "home_en": "Iberia 1999",
       "home_crest": null,
       "away_id": null,
-      "away_ja": "エグナティア",
-      "away_en": "Egnatia",
+      "away_ja": "ミエルビー",
+      "away_en": "Mjällby AIF",
       "away_crest": null,
       "score": {
         "home": 1,
@@ -47568,198 +47212,26 @@
       "_source_page": "2026–27 UEFA Conference League league phase"
     },
     {
-      "id": "ECL_2026-10-22_Monaco_SCFrei",
+      "id": "ECL_2026-10-22_Nordsj_CSKASo",
       "competition_id": 848,
       "competition_ja": "UEFAカンファレンスリーグ",
       "competition_category": "european_cup",
       "competition_flag": "🇪🇺",
-      "kickoff_jst": "2026-10-23T04:00:00+09:00",
-      "status": "FINISHED",
-      "stage": "LEAGUE_STAGE",
-      "matchday": 2,
-      "home_id": 548,
-      "home_ja": "モナコ",
-      "home_en": "Monaco",
-      "home_crest": "https://crests.football-data.org/548.png",
-      "away_id": 17,
-      "away_ja": "フライブルク",
-      "away_en": "Freiburg",
-      "away_crest": "https://crests.football-data.org/17.png",
-      "score": {
-        "home": 3,
-        "away": 0
-      },
-      "japanese_players": [
-        {
-          "name_ja": "南野拓実",
-          "position": "MF/FW",
-          "side": "home"
-        },
-        {
-          "name_ja": "鈴木唯人",
-          "position": "MF/FW",
-          "side": "away"
-        },
-        {
-          "name_ja": "長田澪",
-          "position": "GK",
-          "side": "away"
-        },
-        {
-          "name_ja": "山本理仁",
-          "position": "MF",
-          "side": "away"
-        },
-        {
-          "name_ja": "後藤啓介",
-          "position": "FW",
-          "side": "away"
-        }
-      ],
-      "broadcasters": [
-        {
-          "name": "WOWOW",
-          "label": "WOWOW",
-          "url": "https://news.wowow.co.jp/5700.html",
-          "source": "league_guides",
-          "affiliate_url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l"
-        }
-      ],
-      "_source": "wikipedia",
-      "_source_page": "2026–27 UEFA Conference League league phase"
-    },
-    {
-      "id": "ECL_2026-10-22_Midtjy_SintTr",
-      "competition_id": 848,
-      "competition_ja": "UEFAカンファレンスリーグ",
-      "competition_category": "european_cup",
-      "competition_flag": "🇪🇺",
-      "kickoff_jst": "2026-10-23T04:00:00+09:00",
+      "kickoff_jst": "2026-10-23T01:45:00+09:00",
       "status": "FINISHED",
       "stage": "LEAGUE_STAGE",
       "matchday": 2,
       "home_id": null,
-      "home_ja": "ミッティラン",
-      "home_en": "Midtjylland",
+      "home_ja": "ノアシェラン",
+      "home_en": "Nordsjælland",
       "home_crest": null,
       "away_id": null,
-      "away_ja": "シント＝トロイデン",
-      "away_en": "Sint-Truiden",
-      "away_crest": null,
-      "score": {
-        "home": 0,
-        "away": 1
-      },
-      "japanese_players": [
-        {
-          "name_ja": "高井幸大",
-          "position": "DF",
-          "side": "away"
-        },
-        {
-          "name_ja": "小久保玲央ブライアン",
-          "position": "GK",
-          "side": "away"
-        },
-        {
-          "name_ja": "谷口彰悟",
-          "position": "DF",
-          "side": "away"
-        },
-        {
-          "name_ja": "畑大雅",
-          "position": "DF",
-          "side": "away"
-        },
-        {
-          "name_ja": "松澤海斗",
-          "position": "FW/MF",
-          "side": "away"
-        },
-        {
-          "name_ja": "新川志音",
-          "position": "MF/FW",
-          "side": "away"
-        },
-        {
-          "name_ja": "荒木遼太郎",
-          "position": "MF",
-          "side": "away"
-        },
-        {
-          "name_ja": "石渡ネルソン",
-          "position": "DF",
-          "side": "away"
-        }
-      ],
-      "broadcasters": [
-        {
-          "name": "WOWOW",
-          "label": "WOWOW",
-          "url": "https://news.wowow.co.jp/5700.html",
-          "source": "league_guides",
-          "affiliate_url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l"
-        }
-      ],
-      "_source": "wikipedia",
-      "_source_page": "2026–27 UEFA Conference League league phase"
-    },
-    {
-      "id": "ECL_2026-10-22_Thun_Hajduk",
-      "competition_id": 848,
-      "competition_ja": "UEFAカンファレンスリーグ",
-      "competition_category": "european_cup",
-      "competition_flag": "🇪🇺",
-      "kickoff_jst": "2026-10-23T04:00:00+09:00",
-      "status": "FINISHED",
-      "stage": "LEAGUE_STAGE",
-      "matchday": 2,
-      "home_id": null,
-      "home_ja": "トゥーン",
-      "home_en": "Thun",
-      "home_crest": null,
-      "away_id": null,
-      "away_ja": "ハイドゥク・スプリト",
-      "away_en": "Hajduk Split",
-      "away_crest": null,
-      "score": {
-        "home": 0,
-        "away": 1
-      },
-      "japanese_players": [],
-      "broadcasters": [
-        {
-          "name": "WOWOW",
-          "label": "WOWOW",
-          "url": "https://news.wowow.co.jp/5700.html",
-          "source": "league_guides",
-          "affiliate_url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l"
-        }
-      ],
-      "_source": "wikipedia",
-      "_source_page": "2026–27 UEFA Conference League league phase"
-    },
-    {
-      "id": "ECL_2026-10-22_BoracB_KuPS",
-      "competition_id": 848,
-      "competition_ja": "UEFAカンファレンスリーグ",
-      "competition_category": "european_cup",
-      "competition_flag": "🇪🇺",
-      "kickoff_jst": "2026-10-23T04:00:00+09:00",
-      "status": "FINISHED",
-      "stage": "LEAGUE_STAGE",
-      "matchday": 2,
-      "home_id": null,
-      "home_ja": "ボラツ・バニャ・ルカ",
-      "home_en": "Borac Banja Luka",
-      "home_crest": null,
-      "away_id": null,
-      "away_ja": "KuPS",
-      "away_en": "KuPS",
+      "away_ja": "CSKAソフィア",
+      "away_en": "CSKA Sofia",
       "away_crest": null,
       "score": {
         "home": 2,
-        "away": 0
+        "away": 2
       },
       "japanese_players": [],
       "broadcasters": [
@@ -47775,23 +47247,99 @@
       "_source_page": "2026–27 UEFA Conference League league phase"
     },
     {
-      "id": "ECL_2026-10-22_Lincol_Twente",
+      "id": "ECL_2026-10-22_RedSta_Copenh",
       "competition_id": 848,
       "competition_ja": "UEFAカンファレンスリーグ",
       "competition_category": "european_cup",
       "competition_flag": "🇪🇺",
-      "kickoff_jst": "2026-10-23T04:00:00+09:00",
+      "kickoff_jst": "2026-10-23T01:45:00+09:00",
       "status": "FINISHED",
       "stage": "LEAGUE_STAGE",
       "matchday": 2,
       "home_id": null,
-      "home_ja": "リンカーン・レッドインプス",
-      "home_en": "Lincoln Red Imps",
+      "home_ja": "ツルヴェナ・ズヴェズダ",
+      "home_en": "Red Star Belgrade",
       "home_crest": null,
-      "away_id": 666,
-      "away_ja": "トゥエンテ",
-      "away_en": "Twente",
-      "away_crest": "https://crests.football-data.org/666.png",
+      "away_id": 1876,
+      "away_ja": "コペンハーゲン",
+      "away_en": "Copenhagen",
+      "away_crest": "https://crests.football-data.org/1876.png",
+      "score": {
+        "home": 2,
+        "away": 2
+      },
+      "japanese_players": [],
+      "broadcasters": [
+        {
+          "name": "WOWOW",
+          "label": "WOWOW",
+          "url": "https://news.wowow.co.jp/5700.html",
+          "source": "league_guides",
+          "affiliate_url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l"
+        }
+      ],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 UEFA Conference League league phase"
+    },
+    {
+      "id": "ECL_2026-10-22_Jablon_Bright",
+      "competition_id": 848,
+      "competition_ja": "UEFAカンファレンスリーグ",
+      "competition_category": "european_cup",
+      "competition_flag": "🇪🇺",
+      "kickoff_jst": "2026-10-23T01:45:00+09:00",
+      "status": "FINISHED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 2,
+      "home_id": null,
+      "home_ja": "ヤブロネツ",
+      "home_en": "Jablonec",
+      "home_crest": null,
+      "away_id": 397,
+      "away_ja": "ブライトン",
+      "away_en": "Brighton Hove",
+      "away_crest": "https://crests.football-data.org/397.png",
+      "score": {
+        "home": 0,
+        "away": 0
+      },
+      "japanese_players": [
+        {
+          "name_ja": "三笘薫",
+          "position": "MF",
+          "side": "away"
+        }
+      ],
+      "broadcasters": [
+        {
+          "name": "WOWOW",
+          "label": "WOWOW",
+          "url": "https://news.wowow.co.jp/5700.html",
+          "source": "league_guides",
+          "affiliate_url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l"
+        }
+      ],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 UEFA Conference League league phase"
+    },
+    {
+      "id": "ECL_2026-10-22_Kaunoa_Brann",
+      "competition_id": 848,
+      "competition_ja": "UEFAカンファレンスリーグ",
+      "competition_category": "european_cup",
+      "competition_flag": "🇪🇺",
+      "kickoff_jst": "2026-10-23T01:45:00+09:00",
+      "status": "FINISHED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 2,
+      "home_id": null,
+      "home_ja": "カウノ・ジャルギリス",
+      "home_en": "Kauno Žalgiris",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "ブラン",
+      "away_en": "Brann",
+      "away_crest": null,
       "score": {
         "home": 1,
         "away": 4
@@ -47810,22 +47358,127 @@
       "_source_page": "2026–27 UEFA Conference League league phase"
     },
     {
-      "id": "ECL_2026-10-22_Braga_Gent",
+      "id": "ECL_2026-10-22_Getafe_Lugano",
       "competition_id": 848,
       "competition_ja": "UEFAカンファレンスリーグ",
       "competition_category": "european_cup",
       "competition_flag": "🇪🇺",
-      "kickoff_jst": "2026-10-23T04:00:00+09:00",
+      "kickoff_jst": "2026-10-23T01:45:00+09:00",
       "status": "FINISHED",
       "stage": "LEAGUE_STAGE",
       "matchday": 2,
-      "home_id": 5613,
-      "home_ja": "ブラガ",
-      "home_en": "Braga",
-      "home_crest": "https://crests.football-data.org/5613.png",
+      "home_id": 82,
+      "home_ja": "ヘタフェ",
+      "home_en": "Getafe",
+      "home_crest": "https://crests.football-data.org/82.png",
       "away_id": null,
-      "away_ja": "ヘント",
-      "away_en": "Gent",
+      "away_ja": "ルガーノ",
+      "away_en": "Lugano",
+      "away_crest": null,
+      "score": {
+        "home": 2,
+        "away": 5
+      },
+      "japanese_players": [],
+      "broadcasters": [
+        {
+          "name": "WOWOW",
+          "label": "WOWOW",
+          "url": "https://news.wowow.co.jp/5700.html",
+          "source": "league_guides",
+          "affiliate_url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l"
+        }
+      ],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 UEFA Conference League league phase"
+    },
+    {
+      "id": "ECL_2026-10-22_InterC_Univer",
+      "competition_id": 848,
+      "competition_ja": "UEFAカンファレンスリーグ",
+      "competition_category": "european_cup",
+      "competition_flag": "🇪🇺",
+      "kickoff_jst": "2026-10-23T01:45:00+09:00",
+      "status": "FINISHED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 2,
+      "home_id": null,
+      "home_ja": "インテル・クルブ・デスカルデス",
+      "home_en": "Inter Club d'Escaldes",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "ウニヴェルシタテア・クラヨーヴァ",
+      "away_en": "Universitatea Craiova",
+      "away_crest": null,
+      "score": {
+        "home": 1,
+        "away": 3
+      },
+      "japanese_players": [],
+      "broadcasters": [
+        {
+          "name": "WOWOW",
+          "label": "WOWOW",
+          "url": "https://news.wowow.co.jp/5700.html",
+          "source": "league_guides",
+          "affiliate_url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l"
+        }
+      ],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 UEFA Conference League league phase"
+    },
+    {
+      "id": "ECL_2026-10-22_Pafos_Riga",
+      "competition_id": 848,
+      "competition_ja": "UEFAカンファレンスリーグ",
+      "competition_category": "european_cup",
+      "competition_flag": "🇪🇺",
+      "kickoff_jst": "2026-10-23T01:45:00+09:00",
+      "status": "FINISHED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 2,
+      "home_id": null,
+      "home_ja": "パフォス",
+      "home_en": "Pafos",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "リガFC",
+      "away_en": "Riga",
+      "away_crest": null,
+      "score": {
+        "home": 1,
+        "away": 1
+      },
+      "japanese_players": [],
+      "broadcasters": [
+        {
+          "name": "WOWOW",
+          "label": "WOWOW",
+          "url": "https://news.wowow.co.jp/5700.html",
+          "source": "league_guides",
+          "affiliate_url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l"
+        }
+      ],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 UEFA Conference League league phase"
+    },
+    {
+      "id": "ECL_2026-10-22_Trabzo_Hearto",
+      "competition_id": 848,
+      "competition_ja": "UEFAカンファレンスリーグ",
+      "competition_category": "european_cup",
+      "competition_flag": "🇪🇺",
+      "kickoff_jst": "2026-10-23T01:45:00+09:00",
+      "status": "FINISHED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 2,
+      "home_id": null,
+      "home_ja": "トラブゾンスポル",
+      "home_en": "Trabzonspor",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "ハーツ",
+      "away_en": "Heart of Midlothian",
       "away_crest": null,
       "score": {
         "home": 2,
@@ -48290,6 +47943,353 @@
       ],
       "_source": "wikipedia",
       "_source_page": "2026–27 UEFA Europa League league phase"
+    },
+    {
+      "id": "ECL_2026-10-22_Ajax_Atalan",
+      "competition_id": 848,
+      "competition_ja": "UEFAカンファレンスリーグ",
+      "competition_category": "european_cup",
+      "competition_flag": "🇪🇺",
+      "kickoff_jst": "2026-10-23T04:00:00+09:00",
+      "status": "FINISHED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 2,
+      "home_id": 678,
+      "home_ja": "アヤックス",
+      "home_en": "Ajax",
+      "home_crest": "https://crests.football-data.org/678.png",
+      "away_id": 102,
+      "away_ja": "アタランタ",
+      "away_en": "Atalanta",
+      "away_crest": "https://crests.football-data.org/102.png",
+      "score": {
+        "home": 2,
+        "away": 0
+      },
+      "japanese_players": [],
+      "broadcasters": [
+        {
+          "name": "WOWOW",
+          "label": "WOWOW",
+          "url": "https://news.wowow.co.jp/5700.html",
+          "source": "league_guides",
+          "affiliate_url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l"
+        }
+      ],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 UEFA Conference League league phase"
+    },
+    {
+      "id": "ECL_2026-10-22_AGF_Egnati",
+      "competition_id": 848,
+      "competition_ja": "UEFAカンファレンスリーグ",
+      "competition_category": "european_cup",
+      "competition_flag": "🇪🇺",
+      "kickoff_jst": "2026-10-23T04:00:00+09:00",
+      "status": "FINISHED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 2,
+      "home_id": null,
+      "home_ja": "AGFオーフス",
+      "home_en": "AGF",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "エグナティア",
+      "away_en": "Egnatia",
+      "away_crest": null,
+      "score": {
+        "home": 1,
+        "away": 1
+      },
+      "japanese_players": [],
+      "broadcasters": [
+        {
+          "name": "WOWOW",
+          "label": "WOWOW",
+          "url": "https://news.wowow.co.jp/5700.html",
+          "source": "league_guides",
+          "affiliate_url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l"
+        }
+      ],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 UEFA Conference League league phase"
+    },
+    {
+      "id": "ECL_2026-10-22_Monaco_SCFrei",
+      "competition_id": 848,
+      "competition_ja": "UEFAカンファレンスリーグ",
+      "competition_category": "european_cup",
+      "competition_flag": "🇪🇺",
+      "kickoff_jst": "2026-10-23T04:00:00+09:00",
+      "status": "FINISHED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 2,
+      "home_id": 548,
+      "home_ja": "モナコ",
+      "home_en": "Monaco",
+      "home_crest": "https://crests.football-data.org/548.png",
+      "away_id": 17,
+      "away_ja": "フライブルク",
+      "away_en": "Freiburg",
+      "away_crest": "https://crests.football-data.org/17.png",
+      "score": {
+        "home": 3,
+        "away": 0
+      },
+      "japanese_players": [
+        {
+          "name_ja": "南野拓実",
+          "position": "MF/FW",
+          "side": "home"
+        },
+        {
+          "name_ja": "鈴木唯人",
+          "position": "MF/FW",
+          "side": "away"
+        },
+        {
+          "name_ja": "長田澪",
+          "position": "GK",
+          "side": "away"
+        },
+        {
+          "name_ja": "山本理仁",
+          "position": "MF",
+          "side": "away"
+        },
+        {
+          "name_ja": "後藤啓介",
+          "position": "FW",
+          "side": "away"
+        }
+      ],
+      "broadcasters": [
+        {
+          "name": "WOWOW",
+          "label": "WOWOW",
+          "url": "https://news.wowow.co.jp/5700.html",
+          "source": "league_guides",
+          "affiliate_url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l"
+        }
+      ],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 UEFA Conference League league phase"
+    },
+    {
+      "id": "ECL_2026-10-22_Midtjy_SintTr",
+      "competition_id": 848,
+      "competition_ja": "UEFAカンファレンスリーグ",
+      "competition_category": "european_cup",
+      "competition_flag": "🇪🇺",
+      "kickoff_jst": "2026-10-23T04:00:00+09:00",
+      "status": "FINISHED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 2,
+      "home_id": null,
+      "home_ja": "ミッティラン",
+      "home_en": "Midtjylland",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "シント＝トロイデン",
+      "away_en": "Sint-Truiden",
+      "away_crest": null,
+      "score": {
+        "home": 0,
+        "away": 1
+      },
+      "japanese_players": [
+        {
+          "name_ja": "高井幸大",
+          "position": "DF",
+          "side": "away"
+        },
+        {
+          "name_ja": "小久保玲央ブライアン",
+          "position": "GK",
+          "side": "away"
+        },
+        {
+          "name_ja": "谷口彰悟",
+          "position": "DF",
+          "side": "away"
+        },
+        {
+          "name_ja": "畑大雅",
+          "position": "DF",
+          "side": "away"
+        },
+        {
+          "name_ja": "松澤海斗",
+          "position": "FW/MF",
+          "side": "away"
+        },
+        {
+          "name_ja": "新川志音",
+          "position": "MF/FW",
+          "side": "away"
+        },
+        {
+          "name_ja": "荒木遼太郎",
+          "position": "MF",
+          "side": "away"
+        },
+        {
+          "name_ja": "石渡ネルソン",
+          "position": "DF",
+          "side": "away"
+        }
+      ],
+      "broadcasters": [
+        {
+          "name": "WOWOW",
+          "label": "WOWOW",
+          "url": "https://news.wowow.co.jp/5700.html",
+          "source": "league_guides",
+          "affiliate_url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l"
+        }
+      ],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 UEFA Conference League league phase"
+    },
+    {
+      "id": "ECL_2026-10-22_Thun_Hajduk",
+      "competition_id": 848,
+      "competition_ja": "UEFAカンファレンスリーグ",
+      "competition_category": "european_cup",
+      "competition_flag": "🇪🇺",
+      "kickoff_jst": "2026-10-23T04:00:00+09:00",
+      "status": "FINISHED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 2,
+      "home_id": null,
+      "home_ja": "トゥーン",
+      "home_en": "Thun",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "ハイドゥク・スプリト",
+      "away_en": "Hajduk Split",
+      "away_crest": null,
+      "score": {
+        "home": 0,
+        "away": 1
+      },
+      "japanese_players": [],
+      "broadcasters": [
+        {
+          "name": "WOWOW",
+          "label": "WOWOW",
+          "url": "https://news.wowow.co.jp/5700.html",
+          "source": "league_guides",
+          "affiliate_url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l"
+        }
+      ],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 UEFA Conference League league phase"
+    },
+    {
+      "id": "ECL_2026-10-22_BoracB_KuPS",
+      "competition_id": 848,
+      "competition_ja": "UEFAカンファレンスリーグ",
+      "competition_category": "european_cup",
+      "competition_flag": "🇪🇺",
+      "kickoff_jst": "2026-10-23T04:00:00+09:00",
+      "status": "FINISHED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 2,
+      "home_id": null,
+      "home_ja": "ボラツ・バニャ・ルカ",
+      "home_en": "Borac Banja Luka",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "KuPS",
+      "away_en": "KuPS",
+      "away_crest": null,
+      "score": {
+        "home": 2,
+        "away": 0
+      },
+      "japanese_players": [],
+      "broadcasters": [
+        {
+          "name": "WOWOW",
+          "label": "WOWOW",
+          "url": "https://news.wowow.co.jp/5700.html",
+          "source": "league_guides",
+          "affiliate_url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l"
+        }
+      ],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 UEFA Conference League league phase"
+    },
+    {
+      "id": "ECL_2026-10-22_Lincol_Twente",
+      "competition_id": 848,
+      "competition_ja": "UEFAカンファレンスリーグ",
+      "competition_category": "european_cup",
+      "competition_flag": "🇪🇺",
+      "kickoff_jst": "2026-10-23T04:00:00+09:00",
+      "status": "FINISHED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 2,
+      "home_id": null,
+      "home_ja": "リンカーン・レッドインプス",
+      "home_en": "Lincoln Red Imps",
+      "home_crest": null,
+      "away_id": 666,
+      "away_ja": "トゥエンテ",
+      "away_en": "Twente",
+      "away_crest": "https://crests.football-data.org/666.png",
+      "score": {
+        "home": 1,
+        "away": 4
+      },
+      "japanese_players": [],
+      "broadcasters": [
+        {
+          "name": "WOWOW",
+          "label": "WOWOW",
+          "url": "https://news.wowow.co.jp/5700.html",
+          "source": "league_guides",
+          "affiliate_url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l"
+        }
+      ],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 UEFA Conference League league phase"
+    },
+    {
+      "id": "ECL_2026-10-22_Braga_Gent",
+      "competition_id": 848,
+      "competition_ja": "UEFAカンファレンスリーグ",
+      "competition_category": "european_cup",
+      "competition_flag": "🇪🇺",
+      "kickoff_jst": "2026-10-23T04:00:00+09:00",
+      "status": "FINISHED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 2,
+      "home_id": 5613,
+      "home_ja": "ブラガ",
+      "home_en": "Braga",
+      "home_crest": "https://crests.football-data.org/5613.png",
+      "away_id": null,
+      "away_ja": "ヘント",
+      "away_en": "Gent",
+      "away_crest": null,
+      "score": {
+        "home": 2,
+        "away": 0
+      },
+      "japanese_players": [],
+      "broadcasters": [
+        {
+          "name": "WOWOW",
+          "label": "WOWOW",
+          "url": "https://news.wowow.co.jp/5700.html",
+          "source": "league_guides",
+          "affiliate_url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l"
+        }
+      ],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 UEFA Conference League league phase"
     },
     {
       "id": "BL2_83648",
@@ -52163,7 +52163,7 @@
       "competition_category": "domestic_cup",
       "competition_flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
       "kickoff_jst": "2026-10-29T04:45:00+09:00",
-      "status": "SCHEDULED",
+      "status": "FINISHED",
       "stage": "Fourth round",
       "matchday": null,
       "home_id": 1044,
@@ -52174,7 +52174,10 @@
       "away_ja": "アストン・ヴィラ",
       "away_en": "Aston Villa",
       "away_crest": "https://crests.football-data.org/58.png",
-      "score": null,
+      "score": {
+        "home": 3,
+        "away": 0
+      },
       "japanese_players": [
         {
           "name_ja": "鈴木彩艶",
@@ -52193,7 +52196,7 @@
       "competition_category": "domestic_cup",
       "competition_flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
       "kickoff_jst": "2026-10-29T04:45:00+09:00",
-      "status": "SCHEDULED",
+      "status": "FINISHED",
       "stage": "Fourth round",
       "matchday": null,
       "home_id": 63,
@@ -52204,7 +52207,10 @@
       "away_ja": "クリスタル・パレス",
       "away_en": "Crystal Palace",
       "away_crest": "https://crests.football-data.org/354.png",
-      "score": null,
+      "score": {
+        "home": 0,
+        "away": 1
+      },
       "japanese_players": [
         {
           "name_ja": "鎌田大地",
@@ -52228,7 +52234,7 @@
       "competition_category": "domestic_cup",
       "competition_flag": "🇩🇪",
       "kickoff_jst": "2026-10-29T04:45:00+09:00",
-      "status": "SCHEDULED",
+      "status": "FINISHED",
       "stage": "Second round",
       "matchday": null,
       "home_id": null,
@@ -52239,7 +52245,10 @@
       "away_ja": "ホッフェンハイム",
       "away_en": "Hoffenheim",
       "away_crest": "https://crests.football-data.org/2.png",
-      "score": null,
+      "score": {
+        "home": 1,
+        "away": 1
+      },
       "japanese_players": [
         {
           "name_ja": "髙橋仁胡",
@@ -52264,7 +52273,12 @@
       ],
       "broadcasters": [],
       "_source": "wikipedia",
-      "_source_page": "2026–27 DFB-Pokal"
+      "_source_page": "2026–27 DFB-Pokal",
+      "penalties": {
+        "home": 4,
+        "away": 3
+      },
+      "extra_time": true
     },
     {
       "id": "CUP_DFB_2026-10-28_Bayern_FCMagd",
@@ -52273,7 +52287,7 @@
       "competition_category": "domestic_cup",
       "competition_flag": "🇩🇪",
       "kickoff_jst": "2026-10-29T04:45:00+09:00",
-      "status": "SCHEDULED",
+      "status": "FINISHED",
       "stage": "Second round",
       "matchday": null,
       "home_id": 5,
@@ -52284,7 +52298,10 @@
       "away_ja": "マクデブルク",
       "away_en": "1. FC Magdeburg",
       "away_crest": null,
-      "score": null,
+      "score": {
+        "home": 6,
+        "away": 1
+      },
       "japanese_players": [
         {
           "name_ja": "伊藤洋輝",
@@ -52303,7 +52320,7 @@
       "competition_category": "domestic_cup",
       "competition_flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
       "kickoff_jst": "2026-10-29T05:00:00+09:00",
-      "status": "SCHEDULED",
+      "status": "FINISHED",
       "stage": "Fourth round",
       "matchday": null,
       "home_id": 64,
@@ -52314,7 +52331,10 @@
       "away_ja": "チェルシー",
       "away_en": "Chelsea",
       "away_crest": "https://crests.football-data.org/61.png",
-      "score": null,
+      "score": {
+        "home": 1,
+        "away": 1
+      },
       "japanese_players": [
         {
           "name_ja": "遠藤航",
@@ -52324,7 +52344,11 @@
       ],
       "broadcasters": [],
       "_source": "wikipedia",
-      "_source_page": "2026–27 EFL Cup"
+      "_source_page": "2026–27 EFL Cup",
+      "penalties": {
+        "home": 6,
+        "away": 5
+      }
     },
     {
       "id": 558558,
@@ -56270,315 +56294,6 @@
       ]
     },
     {
-      "id": "ECL_2026-11-05_AGF_Braga",
-      "competition_id": 848,
-      "competition_ja": "UEFAカンファレンスリーグ",
-      "competition_category": "european_cup",
-      "competition_flag": "🇪🇺",
-      "kickoff_jst": "2026-11-06T02:45:00+09:00",
-      "status": "SCHEDULED",
-      "stage": "LEAGUE_STAGE",
-      "matchday": 3,
-      "home_id": null,
-      "home_ja": "AGFオーフス",
-      "home_en": "AGF",
-      "home_crest": null,
-      "away_id": 5613,
-      "away_ja": "ブラガ",
-      "away_en": "Braga",
-      "away_crest": "https://crests.football-data.org/5613.png",
-      "score": null,
-      "japanese_players": [],
-      "broadcasters": [
-        {
-          "name": "WOWOW",
-          "label": "WOWOW",
-          "url": "https://news.wowow.co.jp/5700.html",
-          "source": "league_guides",
-          "affiliate_url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l"
-        }
-      ],
-      "_source": "wikipedia",
-      "_source_page": "2026–27 UEFA Conference League league phase"
-    },
-    {
-      "id": "ECL_2026-11-05_Atalan_Kairat",
-      "competition_id": 848,
-      "competition_ja": "UEFAカンファレンスリーグ",
-      "competition_category": "european_cup",
-      "competition_flag": "🇪🇺",
-      "kickoff_jst": "2026-11-06T02:45:00+09:00",
-      "status": "SCHEDULED",
-      "stage": "LEAGUE_STAGE",
-      "matchday": 3,
-      "home_id": 102,
-      "home_ja": "アタランタ",
-      "home_en": "Atalanta",
-      "home_crest": "https://crests.football-data.org/102.png",
-      "away_id": null,
-      "away_ja": "カイラト",
-      "away_en": "Kairat",
-      "away_crest": null,
-      "score": null,
-      "japanese_players": [],
-      "broadcasters": [
-        {
-          "name": "WOWOW",
-          "label": "WOWOW",
-          "url": "https://news.wowow.co.jp/5700.html",
-          "source": "league_guides",
-          "affiliate_url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l"
-        }
-      ],
-      "_source": "wikipedia",
-      "_source_page": "2026–27 UEFA Conference League league phase"
-    },
-    {
-      "id": "ECL_2026-11-05_Midtjy_Ajax",
-      "competition_id": 848,
-      "competition_ja": "UEFAカンファレンスリーグ",
-      "competition_category": "european_cup",
-      "competition_flag": "🇪🇺",
-      "kickoff_jst": "2026-11-06T02:45:00+09:00",
-      "status": "SCHEDULED",
-      "stage": "LEAGUE_STAGE",
-      "matchday": 3,
-      "home_id": null,
-      "home_ja": "ミッティラン",
-      "home_en": "Midtjylland",
-      "home_crest": null,
-      "away_id": 678,
-      "away_ja": "アヤックス",
-      "away_en": "Ajax",
-      "away_crest": "https://crests.football-data.org/678.png",
-      "score": null,
-      "japanese_players": [],
-      "broadcasters": [
-        {
-          "name": "WOWOW",
-          "label": "WOWOW",
-          "url": "https://news.wowow.co.jp/5700.html",
-          "source": "league_guides",
-          "affiliate_url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l"
-        }
-      ],
-      "_source": "wikipedia",
-      "_source_page": "2026–27 UEFA Conference League league phase"
-    },
-    {
-      "id": "ECL_2026-11-05_Thun_Hearto",
-      "competition_id": 848,
-      "competition_ja": "UEFAカンファレンスリーグ",
-      "competition_category": "european_cup",
-      "competition_flag": "🇪🇺",
-      "kickoff_jst": "2026-11-06T02:45:00+09:00",
-      "status": "SCHEDULED",
-      "stage": "LEAGUE_STAGE",
-      "matchday": 3,
-      "home_id": null,
-      "home_ja": "トゥーン",
-      "home_en": "Thun",
-      "home_crest": null,
-      "away_id": null,
-      "away_ja": "ハーツ",
-      "away_en": "Heart of Midlothian",
-      "away_crest": null,
-      "score": null,
-      "japanese_players": [],
-      "broadcasters": [
-        {
-          "name": "WOWOW",
-          "label": "WOWOW",
-          "url": "https://news.wowow.co.jp/5700.html",
-          "source": "league_guides",
-          "affiliate_url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l"
-        }
-      ],
-      "_source": "wikipedia",
-      "_source_page": "2026–27 UEFA Conference League league phase"
-    },
-    {
-      "id": "ECL_2026-11-05_RedSta_InterC",
-      "competition_id": 848,
-      "competition_ja": "UEFAカンファレンスリーグ",
-      "competition_category": "european_cup",
-      "competition_flag": "🇪🇺",
-      "kickoff_jst": "2026-11-06T02:45:00+09:00",
-      "status": "SCHEDULED",
-      "stage": "LEAGUE_STAGE",
-      "matchday": 3,
-      "home_id": null,
-      "home_ja": "ツルヴェナ・ズヴェズダ",
-      "home_en": "Red Star Belgrade",
-      "home_crest": null,
-      "away_id": null,
-      "away_ja": "インテル・クルブ・デスカルデス",
-      "away_en": "Inter Club d'Escaldes",
-      "away_crest": null,
-      "score": null,
-      "japanese_players": [],
-      "broadcasters": [
-        {
-          "name": "WOWOW",
-          "label": "WOWOW",
-          "url": "https://news.wowow.co.jp/5700.html",
-          "source": "league_guides",
-          "affiliate_url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l"
-        }
-      ],
-      "_source": "wikipedia",
-      "_source_page": "2026–27 UEFA Conference League league phase"
-    },
-    {
-      "id": "ECL_2026-11-05_KuPS_Gent",
-      "competition_id": 848,
-      "competition_ja": "UEFAカンファレンスリーグ",
-      "competition_category": "european_cup",
-      "competition_flag": "🇪🇺",
-      "kickoff_jst": "2026-11-06T02:45:00+09:00",
-      "status": "SCHEDULED",
-      "stage": "LEAGUE_STAGE",
-      "matchday": 3,
-      "home_id": null,
-      "home_ja": "KuPS",
-      "home_en": "KuPS",
-      "home_crest": null,
-      "away_id": null,
-      "away_ja": "ヘント",
-      "away_en": "Gent",
-      "away_crest": null,
-      "score": null,
-      "japanese_players": [],
-      "broadcasters": [
-        {
-          "name": "WOWOW",
-          "label": "WOWOW",
-          "url": "https://news.wowow.co.jp/5700.html",
-          "source": "league_guides",
-          "affiliate_url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l"
-        }
-      ],
-      "_source": "wikipedia",
-      "_source_page": "2026–27 UEFA Conference League league phase"
-    },
-    {
-      "id": "ECL_2026-11-05_Lincol_Hajduk",
-      "competition_id": 848,
-      "competition_ja": "UEFAカンファレンスリーグ",
-      "competition_category": "european_cup",
-      "competition_flag": "🇪🇺",
-      "kickoff_jst": "2026-11-06T02:45:00+09:00",
-      "status": "SCHEDULED",
-      "stage": "LEAGUE_STAGE",
-      "matchday": 3,
-      "home_id": null,
-      "home_ja": "リンカーン・レッドインプス",
-      "home_en": "Lincoln Red Imps",
-      "home_crest": null,
-      "away_id": null,
-      "away_ja": "ハイドゥク・スプリト",
-      "away_en": "Hajduk Split",
-      "away_crest": null,
-      "score": null,
-      "japanese_players": [],
-      "broadcasters": [
-        {
-          "name": "WOWOW",
-          "label": "WOWOW",
-          "url": "https://news.wowow.co.jp/5700.html",
-          "source": "league_guides",
-          "affiliate_url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l"
-        }
-      ],
-      "_source": "wikipedia",
-      "_source_page": "2026–27 UEFA Conference League league phase"
-    },
-    {
-      "id": "ECL_2026-11-05_Mjllby_BoracB",
-      "competition_id": 848,
-      "competition_ja": "UEFAカンファレンスリーグ",
-      "competition_category": "european_cup",
-      "competition_flag": "🇪🇺",
-      "kickoff_jst": "2026-11-06T02:45:00+09:00",
-      "status": "SCHEDULED",
-      "stage": "LEAGUE_STAGE",
-      "matchday": 3,
-      "home_id": null,
-      "home_ja": "ミエルビー",
-      "home_en": "Mjällby AIF",
-      "home_crest": null,
-      "away_id": null,
-      "away_ja": "ボラツ・バニャ・ルカ",
-      "away_en": "Borac Banja Luka",
-      "away_crest": null,
-      "score": null,
-      "japanese_players": [],
-      "broadcasters": [
-        {
-          "name": "WOWOW",
-          "label": "WOWOW",
-          "url": "https://news.wowow.co.jp/5700.html",
-          "source": "league_guides",
-          "affiliate_url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l"
-        }
-      ],
-      "_source": "wikipedia",
-      "_source_page": "2026–27 UEFA Conference League league phase"
-    },
-    {
-      "id": "ECL_2026-11-05_Trabzo_SCFrei",
-      "competition_id": 848,
-      "competition_ja": "UEFAカンファレンスリーグ",
-      "competition_category": "european_cup",
-      "competition_flag": "🇪🇺",
-      "kickoff_jst": "2026-11-06T02:45:00+09:00",
-      "status": "SCHEDULED",
-      "stage": "LEAGUE_STAGE",
-      "matchday": 3,
-      "home_id": null,
-      "home_ja": "トラブゾンスポル",
-      "home_en": "Trabzonspor",
-      "home_crest": null,
-      "away_id": 17,
-      "away_ja": "フライブルク",
-      "away_en": "Freiburg",
-      "away_crest": "https://crests.football-data.org/17.png",
-      "score": null,
-      "japanese_players": [
-        {
-          "name_ja": "鈴木唯人",
-          "position": "MF/FW",
-          "side": "away"
-        },
-        {
-          "name_ja": "長田澪",
-          "position": "GK",
-          "side": "away"
-        },
-        {
-          "name_ja": "山本理仁",
-          "position": "MF",
-          "side": "away"
-        },
-        {
-          "name_ja": "後藤啓介",
-          "position": "FW",
-          "side": "away"
-        }
-      ],
-      "broadcasters": [
-        {
-          "name": "WOWOW",
-          "label": "WOWOW",
-          "url": "https://news.wowow.co.jp/5700.html",
-          "source": "league_guides",
-          "affiliate_url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l"
-        }
-      ],
-      "_source": "wikipedia",
-      "_source_page": "2026–27 UEFA Conference League league phase"
-    },
-    {
       "id": "EL_2026-11-05_Milan_Ferenc",
       "competition_id": 3,
       "competition_ja": "UEFAヨーロッパリーグ",
@@ -56948,92 +56663,118 @@
       "_source_page": "2026–27 UEFA Europa League league phase"
     },
     {
-      "id": "ECL_2026-11-05_Monaco_Nordsj",
+      "id": "ECL_2026-11-05_AGF_Braga",
       "competition_id": 848,
       "competition_ja": "UEFAカンファレンスリーグ",
       "competition_category": "european_cup",
       "competition_flag": "🇪🇺",
-      "kickoff_jst": "2026-11-06T05:00:00+09:00",
-      "status": "SCHEDULED",
-      "stage": "LEAGUE_STAGE",
-      "matchday": 3,
-      "home_id": 548,
-      "home_ja": "モナコ",
-      "home_en": "Monaco",
-      "home_crest": "https://crests.football-data.org/548.png",
-      "away_id": null,
-      "away_ja": "ノアシェラン",
-      "away_en": "Nordsjælland",
-      "away_crest": null,
-      "score": null,
-      "japanese_players": [
-        {
-          "name_ja": "南野拓実",
-          "position": "MF/FW",
-          "side": "home"
-        }
-      ],
-      "broadcasters": [
-        {
-          "name": "WOWOW",
-          "label": "WOWOW",
-          "url": "https://news.wowow.co.jp/5700.html",
-          "source": "league_guides",
-          "affiliate_url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l"
-        }
-      ],
-      "_source": "wikipedia",
-      "_source_page": "2026–27 UEFA Conference League league phase"
-    },
-    {
-      "id": "ECL_2026-11-05_Copenh_Iberia",
-      "competition_id": 848,
-      "competition_ja": "UEFAカンファレンスリーグ",
-      "competition_category": "european_cup",
-      "competition_flag": "🇪🇺",
-      "kickoff_jst": "2026-11-06T05:00:00+09:00",
-      "status": "SCHEDULED",
-      "stage": "LEAGUE_STAGE",
-      "matchday": 3,
-      "home_id": 1876,
-      "home_ja": "コペンハーゲン",
-      "home_en": "Copenhagen",
-      "home_crest": "https://crests.football-data.org/1876.png",
-      "away_id": null,
-      "away_ja": "イベリア1999",
-      "away_en": "Iberia 1999",
-      "away_crest": null,
-      "score": null,
-      "japanese_players": [],
-      "broadcasters": [
-        {
-          "name": "WOWOW",
-          "label": "WOWOW",
-          "url": "https://news.wowow.co.jp/5700.html",
-          "source": "league_guides",
-          "affiliate_url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l"
-        }
-      ],
-      "_source": "wikipedia",
-      "_source_page": "2026–27 UEFA Conference League league phase"
-    },
-    {
-      "id": "ECL_2026-11-05_Lugano_Kaunoa",
-      "competition_id": 848,
-      "competition_ja": "UEFAカンファレンスリーグ",
-      "competition_category": "european_cup",
-      "competition_flag": "🇪🇺",
-      "kickoff_jst": "2026-11-06T05:00:00+09:00",
+      "kickoff_jst": "2026-11-06T02:45:00+09:00",
       "status": "SCHEDULED",
       "stage": "LEAGUE_STAGE",
       "matchday": 3,
       "home_id": null,
-      "home_ja": "ルガーノ",
-      "home_en": "Lugano",
+      "home_ja": "AGFオーフス",
+      "home_en": "AGF",
+      "home_crest": null,
+      "away_id": 5613,
+      "away_ja": "ブラガ",
+      "away_en": "Braga",
+      "away_crest": "https://crests.football-data.org/5613.png",
+      "score": null,
+      "japanese_players": [],
+      "broadcasters": [
+        {
+          "name": "WOWOW",
+          "label": "WOWOW",
+          "url": "https://news.wowow.co.jp/5700.html",
+          "source": "league_guides",
+          "affiliate_url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l"
+        }
+      ],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 UEFA Conference League league phase"
+    },
+    {
+      "id": "ECL_2026-11-05_Atalan_Kairat",
+      "competition_id": 848,
+      "competition_ja": "UEFAカンファレンスリーグ",
+      "competition_category": "european_cup",
+      "competition_flag": "🇪🇺",
+      "kickoff_jst": "2026-11-06T02:45:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 3,
+      "home_id": 102,
+      "home_ja": "アタランタ",
+      "home_en": "Atalanta",
+      "home_crest": "https://crests.football-data.org/102.png",
+      "away_id": null,
+      "away_ja": "カイラト",
+      "away_en": "Kairat",
+      "away_crest": null,
+      "score": null,
+      "japanese_players": [],
+      "broadcasters": [
+        {
+          "name": "WOWOW",
+          "label": "WOWOW",
+          "url": "https://news.wowow.co.jp/5700.html",
+          "source": "league_guides",
+          "affiliate_url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l"
+        }
+      ],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 UEFA Conference League league phase"
+    },
+    {
+      "id": "ECL_2026-11-05_Midtjy_Ajax",
+      "competition_id": 848,
+      "competition_ja": "UEFAカンファレンスリーグ",
+      "competition_category": "european_cup",
+      "competition_flag": "🇪🇺",
+      "kickoff_jst": "2026-11-06T02:45:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 3,
+      "home_id": null,
+      "home_ja": "ミッティラン",
+      "home_en": "Midtjylland",
+      "home_crest": null,
+      "away_id": 678,
+      "away_ja": "アヤックス",
+      "away_en": "Ajax",
+      "away_crest": "https://crests.football-data.org/678.png",
+      "score": null,
+      "japanese_players": [],
+      "broadcasters": [
+        {
+          "name": "WOWOW",
+          "label": "WOWOW",
+          "url": "https://news.wowow.co.jp/5700.html",
+          "source": "league_guides",
+          "affiliate_url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l"
+        }
+      ],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 UEFA Conference League league phase"
+    },
+    {
+      "id": "ECL_2026-11-05_Thun_Hearto",
+      "competition_id": 848,
+      "competition_ja": "UEFAカンファレンスリーグ",
+      "competition_category": "european_cup",
+      "competition_flag": "🇪🇺",
+      "kickoff_jst": "2026-11-06T02:45:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 3,
+      "home_id": null,
+      "home_ja": "トゥーン",
+      "home_en": "Thun",
       "home_crest": null,
       "away_id": null,
-      "away_ja": "カウノ・ジャルギリス",
-      "away_en": "Kauno Žalgiris",
+      "away_ja": "ハーツ",
+      "away_en": "Heart of Midlothian",
       "away_crest": null,
       "score": null,
       "japanese_players": [],
@@ -57050,22 +56791,22 @@
       "_source_page": "2026–27 UEFA Conference League league phase"
     },
     {
-      "id": "ECL_2026-11-05_Twente_Pafos",
+      "id": "ECL_2026-11-05_RedSta_InterC",
       "competition_id": 848,
       "competition_ja": "UEFAカンファレンスリーグ",
       "competition_category": "european_cup",
       "competition_flag": "🇪🇺",
-      "kickoff_jst": "2026-11-06T05:00:00+09:00",
+      "kickoff_jst": "2026-11-06T02:45:00+09:00",
       "status": "SCHEDULED",
       "stage": "LEAGUE_STAGE",
       "matchday": 3,
-      "home_id": 666,
-      "home_ja": "トゥエンテ",
-      "home_en": "Twente",
-      "home_crest": "https://crests.football-data.org/666.png",
+      "home_id": null,
+      "home_ja": "ツルヴェナ・ズヴェズダ",
+      "home_en": "Red Star Belgrade",
+      "home_crest": null,
       "away_id": null,
-      "away_ja": "パフォス",
-      "away_en": "Pafos",
+      "away_ja": "インテル・クルブ・デスカルデス",
+      "away_en": "Inter Club d'Escaldes",
       "away_crest": null,
       "score": null,
       "japanese_players": [],
@@ -57082,200 +56823,142 @@
       "_source_page": "2026–27 UEFA Conference League league phase"
     },
     {
-      "id": "ECL_2026-11-05_Getafe_Bright",
+      "id": "ECL_2026-11-05_KuPS_Gent",
       "competition_id": 848,
       "competition_ja": "UEFAカンファレンスリーグ",
       "competition_category": "european_cup",
       "competition_flag": "🇪🇺",
-      "kickoff_jst": "2026-11-06T05:00:00+09:00",
+      "kickoff_jst": "2026-11-06T02:45:00+09:00",
       "status": "SCHEDULED",
       "stage": "LEAGUE_STAGE",
       "matchday": 3,
-      "home_id": 82,
-      "home_ja": "ヘタフェ",
-      "home_en": "Getafe",
-      "home_crest": "https://crests.football-data.org/82.png",
-      "away_id": 397,
-      "away_ja": "ブライトン",
-      "away_en": "Brighton Hove",
-      "away_crest": "https://crests.football-data.org/397.png",
+      "home_id": null,
+      "home_ja": "KuPS",
+      "home_en": "KuPS",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "ヘント",
+      "away_en": "Gent",
+      "away_crest": null,
+      "score": null,
+      "japanese_players": [],
+      "broadcasters": [
+        {
+          "name": "WOWOW",
+          "label": "WOWOW",
+          "url": "https://news.wowow.co.jp/5700.html",
+          "source": "league_guides",
+          "affiliate_url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l"
+        }
+      ],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 UEFA Conference League league phase"
+    },
+    {
+      "id": "ECL_2026-11-05_Lincol_Hajduk",
+      "competition_id": 848,
+      "competition_ja": "UEFAカンファレンスリーグ",
+      "competition_category": "european_cup",
+      "competition_flag": "🇪🇺",
+      "kickoff_jst": "2026-11-06T02:45:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 3,
+      "home_id": null,
+      "home_ja": "リンカーン・レッドインプス",
+      "home_en": "Lincoln Red Imps",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "ハイドゥク・スプリト",
+      "away_en": "Hajduk Split",
+      "away_crest": null,
+      "score": null,
+      "japanese_players": [],
+      "broadcasters": [
+        {
+          "name": "WOWOW",
+          "label": "WOWOW",
+          "url": "https://news.wowow.co.jp/5700.html",
+          "source": "league_guides",
+          "affiliate_url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l"
+        }
+      ],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 UEFA Conference League league phase"
+    },
+    {
+      "id": "ECL_2026-11-05_Mjllby_BoracB",
+      "competition_id": 848,
+      "competition_ja": "UEFAカンファレンスリーグ",
+      "competition_category": "european_cup",
+      "competition_flag": "🇪🇺",
+      "kickoff_jst": "2026-11-06T02:45:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 3,
+      "home_id": null,
+      "home_ja": "ミエルビー",
+      "home_en": "Mjällby AIF",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "ボラツ・バニャ・ルカ",
+      "away_en": "Borac Banja Luka",
+      "away_crest": null,
+      "score": null,
+      "japanese_players": [],
+      "broadcasters": [
+        {
+          "name": "WOWOW",
+          "label": "WOWOW",
+          "url": "https://news.wowow.co.jp/5700.html",
+          "source": "league_guides",
+          "affiliate_url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l"
+        }
+      ],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 UEFA Conference League league phase"
+    },
+    {
+      "id": "ECL_2026-11-05_Trabzo_SCFrei",
+      "competition_id": 848,
+      "competition_ja": "UEFAカンファレンスリーグ",
+      "competition_category": "european_cup",
+      "competition_flag": "🇪🇺",
+      "kickoff_jst": "2026-11-06T02:45:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 3,
+      "home_id": null,
+      "home_ja": "トラブゾンスポル",
+      "home_en": "Trabzonspor",
+      "home_crest": null,
+      "away_id": 17,
+      "away_ja": "フライブルク",
+      "away_en": "Freiburg",
+      "away_crest": "https://crests.football-data.org/17.png",
       "score": null,
       "japanese_players": [
         {
-          "name_ja": "三笘薫",
+          "name_ja": "鈴木唯人",
+          "position": "MF/FW",
+          "side": "away"
+        },
+        {
+          "name_ja": "長田澪",
+          "position": "GK",
+          "side": "away"
+        },
+        {
+          "name_ja": "山本理仁",
           "position": "MF",
+          "side": "away"
+        },
+        {
+          "name_ja": "後藤啓介",
+          "position": "FW",
           "side": "away"
         }
       ],
-      "broadcasters": [
-        {
-          "name": "WOWOW",
-          "label": "WOWOW",
-          "url": "https://news.wowow.co.jp/5700.html",
-          "source": "league_guides",
-          "affiliate_url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l"
-        }
-      ],
-      "_source": "wikipedia",
-      "_source_page": "2026–27 UEFA Conference League league phase"
-    },
-    {
-      "id": "ECL_2026-11-05_SintTr_Brann",
-      "competition_id": 848,
-      "competition_ja": "UEFAカンファレンスリーグ",
-      "competition_category": "european_cup",
-      "competition_flag": "🇪🇺",
-      "kickoff_jst": "2026-11-06T05:00:00+09:00",
-      "status": "SCHEDULED",
-      "stage": "LEAGUE_STAGE",
-      "matchday": 3,
-      "home_id": null,
-      "home_ja": "シント＝トロイデン",
-      "home_en": "Sint-Truiden",
-      "home_crest": null,
-      "away_id": null,
-      "away_ja": "ブラン",
-      "away_en": "Brann",
-      "away_crest": null,
-      "score": null,
-      "japanese_players": [
-        {
-          "name_ja": "高井幸大",
-          "position": "DF",
-          "side": "home"
-        },
-        {
-          "name_ja": "小久保玲央ブライアン",
-          "position": "GK",
-          "side": "home"
-        },
-        {
-          "name_ja": "谷口彰悟",
-          "position": "DF",
-          "side": "home"
-        },
-        {
-          "name_ja": "畑大雅",
-          "position": "DF",
-          "side": "home"
-        },
-        {
-          "name_ja": "松澤海斗",
-          "position": "FW/MF",
-          "side": "home"
-        },
-        {
-          "name_ja": "新川志音",
-          "position": "MF/FW",
-          "side": "home"
-        },
-        {
-          "name_ja": "荒木遼太郎",
-          "position": "MF",
-          "side": "home"
-        },
-        {
-          "name_ja": "石渡ネルソン",
-          "position": "DF",
-          "side": "home"
-        }
-      ],
-      "broadcasters": [
-        {
-          "name": "WOWOW",
-          "label": "WOWOW",
-          "url": "https://news.wowow.co.jp/5700.html",
-          "source": "league_guides",
-          "affiliate_url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l"
-        }
-      ],
-      "_source": "wikipedia",
-      "_source_page": "2026–27 UEFA Conference League league phase"
-    },
-    {
-      "id": "ECL_2026-11-05_Panath_CSKASo",
-      "competition_id": 848,
-      "competition_ja": "UEFAカンファレンスリーグ",
-      "competition_category": "european_cup",
-      "competition_flag": "🇪🇺",
-      "kickoff_jst": "2026-11-06T05:00:00+09:00",
-      "status": "SCHEDULED",
-      "stage": "LEAGUE_STAGE",
-      "matchday": 3,
-      "home_id": null,
-      "home_ja": "パナシナイコス",
-      "home_en": "Panathinaikos",
-      "home_crest": null,
-      "away_id": null,
-      "away_ja": "CSKAソフィア",
-      "away_en": "CSKA Sofia",
-      "away_crest": null,
-      "score": null,
-      "japanese_players": [],
-      "broadcasters": [
-        {
-          "name": "WOWOW",
-          "label": "WOWOW",
-          "url": "https://news.wowow.co.jp/5700.html",
-          "source": "league_guides",
-          "affiliate_url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l"
-        }
-      ],
-      "_source": "wikipedia",
-      "_source_page": "2026–27 UEFA Conference League league phase"
-    },
-    {
-      "id": "ECL_2026-11-05_Riga_Jablon",
-      "competition_id": 848,
-      "competition_ja": "UEFAカンファレンスリーグ",
-      "competition_category": "european_cup",
-      "competition_flag": "🇪🇺",
-      "kickoff_jst": "2026-11-06T05:00:00+09:00",
-      "status": "SCHEDULED",
-      "stage": "LEAGUE_STAGE",
-      "matchday": 3,
-      "home_id": null,
-      "home_ja": "リガFC",
-      "home_en": "Riga",
-      "home_crest": null,
-      "away_id": null,
-      "away_ja": "ヤブロネツ",
-      "away_en": "Jablonec",
-      "away_crest": null,
-      "score": null,
-      "japanese_players": [],
-      "broadcasters": [
-        {
-          "name": "WOWOW",
-          "label": "WOWOW",
-          "url": "https://news.wowow.co.jp/5700.html",
-          "source": "league_guides",
-          "affiliate_url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l"
-        }
-      ],
-      "_source": "wikipedia",
-      "_source_page": "2026–27 UEFA Conference League league phase"
-    },
-    {
-      "id": "ECL_2026-11-05_Univer_Egnati",
-      "competition_id": 848,
-      "competition_ja": "UEFAカンファレンスリーグ",
-      "competition_category": "european_cup",
-      "competition_flag": "🇪🇺",
-      "kickoff_jst": "2026-11-06T05:00:00+09:00",
-      "status": "SCHEDULED",
-      "stage": "LEAGUE_STAGE",
-      "matchday": 3,
-      "home_id": null,
-      "home_ja": "ウニヴェルシタテア・クラヨーヴァ",
-      "home_en": "Universitatea Craiova",
-      "home_crest": null,
-      "away_id": null,
-      "away_ja": "エグナティア",
-      "away_en": "Egnatia",
-      "away_crest": null,
-      "score": null,
-      "japanese_players": [],
       "broadcasters": [
         {
           "name": "WOWOW",
@@ -57646,6 +57329,347 @@
       ],
       "_source": "wikipedia",
       "_source_page": "2026–27 UEFA Europa League league phase"
+    },
+    {
+      "id": "ECL_2026-11-05_Monaco_Nordsj",
+      "competition_id": 848,
+      "competition_ja": "UEFAカンファレンスリーグ",
+      "competition_category": "european_cup",
+      "competition_flag": "🇪🇺",
+      "kickoff_jst": "2026-11-06T05:00:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 3,
+      "home_id": 548,
+      "home_ja": "モナコ",
+      "home_en": "Monaco",
+      "home_crest": "https://crests.football-data.org/548.png",
+      "away_id": null,
+      "away_ja": "ノアシェラン",
+      "away_en": "Nordsjælland",
+      "away_crest": null,
+      "score": null,
+      "japanese_players": [
+        {
+          "name_ja": "南野拓実",
+          "position": "MF/FW",
+          "side": "home"
+        }
+      ],
+      "broadcasters": [
+        {
+          "name": "WOWOW",
+          "label": "WOWOW",
+          "url": "https://news.wowow.co.jp/5700.html",
+          "source": "league_guides",
+          "affiliate_url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l"
+        }
+      ],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 UEFA Conference League league phase"
+    },
+    {
+      "id": "ECL_2026-11-05_Copenh_Iberia",
+      "competition_id": 848,
+      "competition_ja": "UEFAカンファレンスリーグ",
+      "competition_category": "european_cup",
+      "competition_flag": "🇪🇺",
+      "kickoff_jst": "2026-11-06T05:00:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 3,
+      "home_id": 1876,
+      "home_ja": "コペンハーゲン",
+      "home_en": "Copenhagen",
+      "home_crest": "https://crests.football-data.org/1876.png",
+      "away_id": null,
+      "away_ja": "イベリア1999",
+      "away_en": "Iberia 1999",
+      "away_crest": null,
+      "score": null,
+      "japanese_players": [],
+      "broadcasters": [
+        {
+          "name": "WOWOW",
+          "label": "WOWOW",
+          "url": "https://news.wowow.co.jp/5700.html",
+          "source": "league_guides",
+          "affiliate_url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l"
+        }
+      ],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 UEFA Conference League league phase"
+    },
+    {
+      "id": "ECL_2026-11-05_Lugano_Kaunoa",
+      "competition_id": 848,
+      "competition_ja": "UEFAカンファレンスリーグ",
+      "competition_category": "european_cup",
+      "competition_flag": "🇪🇺",
+      "kickoff_jst": "2026-11-06T05:00:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 3,
+      "home_id": null,
+      "home_ja": "ルガーノ",
+      "home_en": "Lugano",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "カウノ・ジャルギリス",
+      "away_en": "Kauno Žalgiris",
+      "away_crest": null,
+      "score": null,
+      "japanese_players": [],
+      "broadcasters": [
+        {
+          "name": "WOWOW",
+          "label": "WOWOW",
+          "url": "https://news.wowow.co.jp/5700.html",
+          "source": "league_guides",
+          "affiliate_url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l"
+        }
+      ],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 UEFA Conference League league phase"
+    },
+    {
+      "id": "ECL_2026-11-05_Twente_Pafos",
+      "competition_id": 848,
+      "competition_ja": "UEFAカンファレンスリーグ",
+      "competition_category": "european_cup",
+      "competition_flag": "🇪🇺",
+      "kickoff_jst": "2026-11-06T05:00:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 3,
+      "home_id": 666,
+      "home_ja": "トゥエンテ",
+      "home_en": "Twente",
+      "home_crest": "https://crests.football-data.org/666.png",
+      "away_id": null,
+      "away_ja": "パフォス",
+      "away_en": "Pafos",
+      "away_crest": null,
+      "score": null,
+      "japanese_players": [],
+      "broadcasters": [
+        {
+          "name": "WOWOW",
+          "label": "WOWOW",
+          "url": "https://news.wowow.co.jp/5700.html",
+          "source": "league_guides",
+          "affiliate_url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l"
+        }
+      ],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 UEFA Conference League league phase"
+    },
+    {
+      "id": "ECL_2026-11-05_Getafe_Bright",
+      "competition_id": 848,
+      "competition_ja": "UEFAカンファレンスリーグ",
+      "competition_category": "european_cup",
+      "competition_flag": "🇪🇺",
+      "kickoff_jst": "2026-11-06T05:00:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 3,
+      "home_id": 82,
+      "home_ja": "ヘタフェ",
+      "home_en": "Getafe",
+      "home_crest": "https://crests.football-data.org/82.png",
+      "away_id": 397,
+      "away_ja": "ブライトン",
+      "away_en": "Brighton Hove",
+      "away_crest": "https://crests.football-data.org/397.png",
+      "score": null,
+      "japanese_players": [
+        {
+          "name_ja": "三笘薫",
+          "position": "MF",
+          "side": "away"
+        }
+      ],
+      "broadcasters": [
+        {
+          "name": "WOWOW",
+          "label": "WOWOW",
+          "url": "https://news.wowow.co.jp/5700.html",
+          "source": "league_guides",
+          "affiliate_url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l"
+        }
+      ],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 UEFA Conference League league phase"
+    },
+    {
+      "id": "ECL_2026-11-05_SintTr_Brann",
+      "competition_id": 848,
+      "competition_ja": "UEFAカンファレンスリーグ",
+      "competition_category": "european_cup",
+      "competition_flag": "🇪🇺",
+      "kickoff_jst": "2026-11-06T05:00:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 3,
+      "home_id": null,
+      "home_ja": "シント＝トロイデン",
+      "home_en": "Sint-Truiden",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "ブラン",
+      "away_en": "Brann",
+      "away_crest": null,
+      "score": null,
+      "japanese_players": [
+        {
+          "name_ja": "高井幸大",
+          "position": "DF",
+          "side": "home"
+        },
+        {
+          "name_ja": "小久保玲央ブライアン",
+          "position": "GK",
+          "side": "home"
+        },
+        {
+          "name_ja": "谷口彰悟",
+          "position": "DF",
+          "side": "home"
+        },
+        {
+          "name_ja": "畑大雅",
+          "position": "DF",
+          "side": "home"
+        },
+        {
+          "name_ja": "松澤海斗",
+          "position": "FW/MF",
+          "side": "home"
+        },
+        {
+          "name_ja": "新川志音",
+          "position": "MF/FW",
+          "side": "home"
+        },
+        {
+          "name_ja": "荒木遼太郎",
+          "position": "MF",
+          "side": "home"
+        },
+        {
+          "name_ja": "石渡ネルソン",
+          "position": "DF",
+          "side": "home"
+        }
+      ],
+      "broadcasters": [
+        {
+          "name": "WOWOW",
+          "label": "WOWOW",
+          "url": "https://news.wowow.co.jp/5700.html",
+          "source": "league_guides",
+          "affiliate_url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l"
+        }
+      ],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 UEFA Conference League league phase"
+    },
+    {
+      "id": "ECL_2026-11-05_Panath_CSKASo",
+      "competition_id": 848,
+      "competition_ja": "UEFAカンファレンスリーグ",
+      "competition_category": "european_cup",
+      "competition_flag": "🇪🇺",
+      "kickoff_jst": "2026-11-06T05:00:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 3,
+      "home_id": null,
+      "home_ja": "パナシナイコス",
+      "home_en": "Panathinaikos",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "CSKAソフィア",
+      "away_en": "CSKA Sofia",
+      "away_crest": null,
+      "score": null,
+      "japanese_players": [],
+      "broadcasters": [
+        {
+          "name": "WOWOW",
+          "label": "WOWOW",
+          "url": "https://news.wowow.co.jp/5700.html",
+          "source": "league_guides",
+          "affiliate_url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l"
+        }
+      ],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 UEFA Conference League league phase"
+    },
+    {
+      "id": "ECL_2026-11-05_Riga_Jablon",
+      "competition_id": 848,
+      "competition_ja": "UEFAカンファレンスリーグ",
+      "competition_category": "european_cup",
+      "competition_flag": "🇪🇺",
+      "kickoff_jst": "2026-11-06T05:00:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 3,
+      "home_id": null,
+      "home_ja": "リガFC",
+      "home_en": "Riga",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "ヤブロネツ",
+      "away_en": "Jablonec",
+      "away_crest": null,
+      "score": null,
+      "japanese_players": [],
+      "broadcasters": [
+        {
+          "name": "WOWOW",
+          "label": "WOWOW",
+          "url": "https://news.wowow.co.jp/5700.html",
+          "source": "league_guides",
+          "affiliate_url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l"
+        }
+      ],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 UEFA Conference League league phase"
+    },
+    {
+      "id": "ECL_2026-11-05_Univer_Egnati",
+      "competition_id": 848,
+      "competition_ja": "UEFAカンファレンスリーグ",
+      "competition_category": "european_cup",
+      "competition_flag": "🇪🇺",
+      "kickoff_jst": "2026-11-06T05:00:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 3,
+      "home_id": null,
+      "home_ja": "ウニヴェルシタテア・クラヨーヴァ",
+      "home_en": "Universitatea Craiova",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "エグナティア",
+      "away_en": "Egnatia",
+      "away_crest": null,
+      "score": null,
+      "japanese_players": [],
+      "broadcasters": [
+        {
+          "name": "WOWOW",
+          "label": "WOWOW",
+          "url": "https://news.wowow.co.jp/5700.html",
+          "source": "league_guides",
+          "affiliate_url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l"
+        }
+      ],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 UEFA Conference League league phase"
     },
     {
       "id": 558845,
@@ -60665,306 +60689,6 @@
       "_source_page": "2026–27 UEFA Conference League league phase"
     },
     {
-      "id": "ECL_2026-11-26_Ajax_Thun",
-      "competition_id": 848,
-      "competition_ja": "UEFAカンファレンスリーグ",
-      "competition_category": "european_cup",
-      "competition_flag": "🇪🇺",
-      "kickoff_jst": "2026-11-27T02:45:00+09:00",
-      "status": "SCHEDULED",
-      "stage": "LEAGUE_STAGE",
-      "matchday": 4,
-      "home_id": 678,
-      "home_ja": "アヤックス",
-      "home_en": "Ajax",
-      "home_crest": "https://crests.football-data.org/678.png",
-      "away_id": null,
-      "away_ja": "トゥーン",
-      "away_en": "Thun",
-      "away_crest": null,
-      "score": null,
-      "japanese_players": [],
-      "broadcasters": [
-        {
-          "name": "WOWOW",
-          "label": "WOWOW",
-          "url": "https://news.wowow.co.jp/5700.html",
-          "source": "league_guides",
-          "affiliate_url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l"
-        }
-      ],
-      "_source": "wikipedia",
-      "_source_page": "2026–27 UEFA Conference League league phase"
-    },
-    {
-      "id": "ECL_2026-11-26_Bright_Univer",
-      "competition_id": 848,
-      "competition_ja": "UEFAカンファレンスリーグ",
-      "competition_category": "european_cup",
-      "competition_flag": "🇪🇺",
-      "kickoff_jst": "2026-11-27T02:45:00+09:00",
-      "status": "SCHEDULED",
-      "stage": "LEAGUE_STAGE",
-      "matchday": 4,
-      "home_id": 397,
-      "home_ja": "ブライトン",
-      "home_en": "Brighton Hove",
-      "home_crest": "https://crests.football-data.org/397.png",
-      "away_id": null,
-      "away_ja": "ウニヴェルシタテア・クラヨーヴァ",
-      "away_en": "Universitatea Craiova",
-      "away_crest": null,
-      "score": null,
-      "japanese_players": [
-        {
-          "name_ja": "三笘薫",
-          "position": "MF",
-          "side": "home"
-        }
-      ],
-      "broadcasters": [
-        {
-          "name": "WOWOW",
-          "label": "WOWOW",
-          "url": "https://news.wowow.co.jp/5700.html",
-          "source": "league_guides",
-          "affiliate_url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l"
-        }
-      ],
-      "_source": "wikipedia",
-      "_source_page": "2026–27 UEFA Conference League league phase"
-    },
-    {
-      "id": "ECL_2026-11-26_Iberia_Getafe",
-      "competition_id": 848,
-      "competition_ja": "UEFAカンファレンスリーグ",
-      "competition_category": "european_cup",
-      "competition_flag": "🇪🇺",
-      "kickoff_jst": "2026-11-27T02:45:00+09:00",
-      "status": "SCHEDULED",
-      "stage": "LEAGUE_STAGE",
-      "matchday": 4,
-      "home_id": null,
-      "home_ja": "イベリア1999",
-      "home_en": "Iberia 1999",
-      "home_crest": null,
-      "away_id": 82,
-      "away_ja": "ヘタフェ",
-      "away_en": "Getafe",
-      "away_crest": "https://crests.football-data.org/82.png",
-      "score": null,
-      "japanese_players": [],
-      "broadcasters": [
-        {
-          "name": "WOWOW",
-          "label": "WOWOW",
-          "url": "https://news.wowow.co.jp/5700.html",
-          "source": "league_guides",
-          "affiliate_url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l"
-        }
-      ],
-      "_source": "wikipedia",
-      "_source_page": "2026–27 UEFA Conference League league phase"
-    },
-    {
-      "id": "ECL_2026-11-26_Jablon_Lugano",
-      "competition_id": 848,
-      "competition_ja": "UEFAカンファレンスリーグ",
-      "competition_category": "european_cup",
-      "competition_flag": "🇪🇺",
-      "kickoff_jst": "2026-11-27T02:45:00+09:00",
-      "status": "SCHEDULED",
-      "stage": "LEAGUE_STAGE",
-      "matchday": 4,
-      "home_id": null,
-      "home_ja": "ヤブロネツ",
-      "home_en": "Jablonec",
-      "home_crest": null,
-      "away_id": null,
-      "away_ja": "ルガーノ",
-      "away_en": "Lugano",
-      "away_crest": null,
-      "score": null,
-      "japanese_players": [],
-      "broadcasters": [
-        {
-          "name": "WOWOW",
-          "label": "WOWOW",
-          "url": "https://news.wowow.co.jp/5700.html",
-          "source": "league_guides",
-          "affiliate_url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l"
-        }
-      ],
-      "_source": "wikipedia",
-      "_source_page": "2026–27 UEFA Conference League league phase"
-    },
-    {
-      "id": "ECL_2026-11-26_Kaunoa_Riga",
-      "competition_id": 848,
-      "competition_ja": "UEFAカンファレンスリーグ",
-      "competition_category": "european_cup",
-      "competition_flag": "🇪🇺",
-      "kickoff_jst": "2026-11-27T02:45:00+09:00",
-      "status": "SCHEDULED",
-      "stage": "LEAGUE_STAGE",
-      "matchday": 4,
-      "home_id": null,
-      "home_ja": "カウノ・ジャルギリス",
-      "home_en": "Kauno Žalgiris",
-      "home_crest": null,
-      "away_id": null,
-      "away_ja": "リガFC",
-      "away_en": "Riga",
-      "away_crest": null,
-      "score": null,
-      "japanese_players": [],
-      "broadcasters": [
-        {
-          "name": "WOWOW",
-          "label": "WOWOW",
-          "url": "https://news.wowow.co.jp/5700.html",
-          "source": "league_guides",
-          "affiliate_url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l"
-        }
-      ],
-      "_source": "wikipedia",
-      "_source_page": "2026–27 UEFA Conference League league phase"
-    },
-    {
-      "id": "ECL_2026-11-26_Hearto_Monaco",
-      "competition_id": 848,
-      "competition_ja": "UEFAカンファレンスリーグ",
-      "competition_category": "european_cup",
-      "competition_flag": "🇪🇺",
-      "kickoff_jst": "2026-11-27T02:45:00+09:00",
-      "status": "SCHEDULED",
-      "stage": "LEAGUE_STAGE",
-      "matchday": 4,
-      "home_id": null,
-      "home_ja": "ハーツ",
-      "home_en": "Heart of Midlothian",
-      "home_crest": null,
-      "away_id": 548,
-      "away_ja": "モナコ",
-      "away_en": "Monaco",
-      "away_crest": "https://crests.football-data.org/548.png",
-      "score": null,
-      "japanese_players": [
-        {
-          "name_ja": "南野拓実",
-          "position": "MF/FW",
-          "side": "away"
-        }
-      ],
-      "broadcasters": [
-        {
-          "name": "WOWOW",
-          "label": "WOWOW",
-          "url": "https://news.wowow.co.jp/5700.html",
-          "source": "league_guides",
-          "affiliate_url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l"
-        }
-      ],
-      "_source": "wikipedia",
-      "_source_page": "2026–27 UEFA Conference League league phase"
-    },
-    {
-      "id": "ECL_2026-11-26_Egnati_Lincol",
-      "competition_id": 848,
-      "competition_ja": "UEFAカンファレンスリーグ",
-      "competition_category": "european_cup",
-      "competition_flag": "🇪🇺",
-      "kickoff_jst": "2026-11-27T02:45:00+09:00",
-      "status": "SCHEDULED",
-      "stage": "LEAGUE_STAGE",
-      "matchday": 4,
-      "home_id": null,
-      "home_ja": "エグナティア",
-      "home_en": "Egnatia",
-      "home_crest": null,
-      "away_id": null,
-      "away_ja": "リンカーン・レッドインプス",
-      "away_en": "Lincoln Red Imps",
-      "away_crest": null,
-      "score": null,
-      "japanese_players": [],
-      "broadcasters": [
-        {
-          "name": "WOWOW",
-          "label": "WOWOW",
-          "url": "https://news.wowow.co.jp/5700.html",
-          "source": "league_guides",
-          "affiliate_url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l"
-        }
-      ],
-      "_source": "wikipedia",
-      "_source_page": "2026–27 UEFA Conference League league phase"
-    },
-    {
-      "id": "ECL_2026-11-26_Pafos_Midtjy",
-      "competition_id": 848,
-      "competition_ja": "UEFAカンファレンスリーグ",
-      "competition_category": "european_cup",
-      "competition_flag": "🇪🇺",
-      "kickoff_jst": "2026-11-27T02:45:00+09:00",
-      "status": "SCHEDULED",
-      "stage": "LEAGUE_STAGE",
-      "matchday": 4,
-      "home_id": null,
-      "home_ja": "パフォス",
-      "home_en": "Pafos",
-      "home_crest": null,
-      "away_id": null,
-      "away_ja": "ミッティラン",
-      "away_en": "Midtjylland",
-      "away_crest": null,
-      "score": null,
-      "japanese_players": [],
-      "broadcasters": [
-        {
-          "name": "WOWOW",
-          "label": "WOWOW",
-          "url": "https://news.wowow.co.jp/5700.html",
-          "source": "league_guides",
-          "affiliate_url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l"
-        }
-      ],
-      "_source": "wikipedia",
-      "_source_page": "2026–27 UEFA Conference League league phase"
-    },
-    {
-      "id": "ECL_2026-11-26_Brann_AGF",
-      "competition_id": 848,
-      "competition_ja": "UEFAカンファレンスリーグ",
-      "competition_category": "european_cup",
-      "competition_flag": "🇪🇺",
-      "kickoff_jst": "2026-11-27T02:45:00+09:00",
-      "status": "SCHEDULED",
-      "stage": "LEAGUE_STAGE",
-      "matchday": 4,
-      "home_id": null,
-      "home_ja": "ブラン",
-      "home_en": "Brann",
-      "home_crest": null,
-      "away_id": null,
-      "away_ja": "AGFオーフス",
-      "away_en": "AGF",
-      "away_crest": null,
-      "score": null,
-      "japanese_players": [],
-      "broadcasters": [
-        {
-          "name": "WOWOW",
-          "label": "WOWOW",
-          "url": "https://news.wowow.co.jp/5700.html",
-          "source": "league_guides",
-          "affiliate_url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l"
-        }
-      ],
-      "_source": "wikipedia",
-      "_source_page": "2026–27 UEFA Conference League league phase"
-    },
-    {
       "id": "EL_2026-11-26_Beikta_Hapoel",
       "competition_id": 3,
       "competition_ja": "UEFAヨーロッパリーグ",
@@ -61275,22 +60999,22 @@
       "_source_page": "2026–27 UEFA Europa League league phase"
     },
     {
-      "id": "ECL_2026-11-26_Nordsj_Panath",
+      "id": "ECL_2026-11-26_Ajax_Thun",
       "competition_id": 848,
       "competition_ja": "UEFAカンファレンスリーグ",
       "competition_category": "european_cup",
       "competition_flag": "🇪🇺",
-      "kickoff_jst": "2026-11-27T05:00:00+09:00",
+      "kickoff_jst": "2026-11-27T02:45:00+09:00",
       "status": "SCHEDULED",
       "stage": "LEAGUE_STAGE",
       "matchday": 4,
-      "home_id": null,
-      "home_ja": "ノアシェラン",
-      "home_en": "Nordsjælland",
-      "home_crest": null,
+      "home_id": 678,
+      "home_ja": "アヤックス",
+      "home_en": "Ajax",
+      "home_crest": "https://crests.football-data.org/678.png",
       "away_id": null,
-      "away_ja": "パナシナイコス",
-      "away_en": "Panathinaikos",
+      "away_ja": "トゥーン",
+      "away_en": "Thun",
       "away_crest": null,
       "score": null,
       "japanese_players": [],
@@ -61307,96 +61031,29 @@
       "_source_page": "2026–27 UEFA Conference League league phase"
     },
     {
-      "id": "ECL_2026-11-26_BoracB_Atalan",
+      "id": "ECL_2026-11-26_Bright_Univer",
       "competition_id": 848,
       "competition_ja": "UEFAカンファレンスリーグ",
       "competition_category": "european_cup",
       "competition_flag": "🇪🇺",
-      "kickoff_jst": "2026-11-27T05:00:00+09:00",
+      "kickoff_jst": "2026-11-27T02:45:00+09:00",
       "status": "SCHEDULED",
       "stage": "LEAGUE_STAGE",
       "matchday": 4,
-      "home_id": null,
-      "home_ja": "ボラツ・バニャ・ルカ",
-      "home_en": "Borac Banja Luka",
-      "home_crest": null,
-      "away_id": 102,
-      "away_ja": "アタランタ",
-      "away_en": "Atalanta",
-      "away_crest": "https://crests.football-data.org/102.png",
-      "score": null,
-      "japanese_players": [],
-      "broadcasters": [
-        {
-          "name": "WOWOW",
-          "label": "WOWOW",
-          "url": "https://news.wowow.co.jp/5700.html",
-          "source": "league_guides",
-          "affiliate_url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l"
-        }
-      ],
-      "_source": "wikipedia",
-      "_source_page": "2026–27 UEFA Conference League league phase"
-    },
-    {
-      "id": "ECL_2026-11-26_Hajduk_SintTr",
-      "competition_id": 848,
-      "competition_ja": "UEFAカンファレンスリーグ",
-      "competition_category": "european_cup",
-      "competition_flag": "🇪🇺",
-      "kickoff_jst": "2026-11-27T05:00:00+09:00",
-      "status": "SCHEDULED",
-      "stage": "LEAGUE_STAGE",
-      "matchday": 4,
-      "home_id": null,
-      "home_ja": "ハイドゥク・スプリト",
-      "home_en": "Hajduk Split",
-      "home_crest": null,
+      "home_id": 397,
+      "home_ja": "ブライトン",
+      "home_en": "Brighton Hove",
+      "home_crest": "https://crests.football-data.org/397.png",
       "away_id": null,
-      "away_ja": "シント＝トロイデン",
-      "away_en": "Sint-Truiden",
+      "away_ja": "ウニヴェルシタテア・クラヨーヴァ",
+      "away_en": "Universitatea Craiova",
       "away_crest": null,
       "score": null,
       "japanese_players": [
         {
-          "name_ja": "高井幸大",
-          "position": "DF",
-          "side": "away"
-        },
-        {
-          "name_ja": "小久保玲央ブライアン",
-          "position": "GK",
-          "side": "away"
-        },
-        {
-          "name_ja": "谷口彰悟",
-          "position": "DF",
-          "side": "away"
-        },
-        {
-          "name_ja": "畑大雅",
-          "position": "DF",
-          "side": "away"
-        },
-        {
-          "name_ja": "松澤海斗",
-          "position": "FW/MF",
-          "side": "away"
-        },
-        {
-          "name_ja": "新川志音",
-          "position": "MF/FW",
-          "side": "away"
-        },
-        {
-          "name_ja": "荒木遼太郎",
+          "name_ja": "三笘薫",
           "position": "MF",
-          "side": "away"
-        },
-        {
-          "name_ja": "石渡ネルソン",
-          "position": "DF",
-          "side": "away"
+          "side": "home"
         }
       ],
       "broadcasters": [
@@ -61412,23 +61069,23 @@
       "_source_page": "2026–27 UEFA Conference League league phase"
     },
     {
-      "id": "ECL_2026-11-26_InterC_Copenh",
+      "id": "ECL_2026-11-26_Iberia_Getafe",
       "competition_id": 848,
       "competition_ja": "UEFAカンファレンスリーグ",
       "competition_category": "european_cup",
       "competition_flag": "🇪🇺",
-      "kickoff_jst": "2026-11-27T05:00:00+09:00",
+      "kickoff_jst": "2026-11-27T02:45:00+09:00",
       "status": "SCHEDULED",
       "stage": "LEAGUE_STAGE",
       "matchday": 4,
       "home_id": null,
-      "home_ja": "インテル・クルブ・デスカルデス",
-      "home_en": "Inter Club d'Escaldes",
+      "home_ja": "イベリア1999",
+      "home_en": "Iberia 1999",
       "home_crest": null,
-      "away_id": 1876,
-      "away_ja": "コペンハーゲン",
-      "away_en": "Copenhagen",
-      "away_crest": "https://crests.football-data.org/1876.png",
+      "away_id": 82,
+      "away_ja": "ヘタフェ",
+      "away_en": "Getafe",
+      "away_crest": "https://crests.football-data.org/82.png",
       "score": null,
       "japanese_players": [],
       "broadcasters": [
@@ -61444,22 +61101,22 @@
       "_source_page": "2026–27 UEFA Conference League league phase"
     },
     {
-      "id": "ECL_2026-11-26_Gent_RedSta",
+      "id": "ECL_2026-11-26_Jablon_Lugano",
       "competition_id": 848,
       "competition_ja": "UEFAカンファレンスリーグ",
       "competition_category": "european_cup",
       "competition_flag": "🇪🇺",
-      "kickoff_jst": "2026-11-27T05:00:00+09:00",
+      "kickoff_jst": "2026-11-27T02:45:00+09:00",
       "status": "SCHEDULED",
       "stage": "LEAGUE_STAGE",
       "matchday": 4,
       "home_id": null,
-      "home_ja": "ヘント",
-      "home_en": "Gent",
+      "home_ja": "ヤブロネツ",
+      "home_en": "Jablonec",
       "home_crest": null,
       "away_id": null,
-      "away_ja": "ツルヴェナ・ズヴェズダ",
-      "away_en": "Red Star Belgrade",
+      "away_ja": "ルガーノ",
+      "away_en": "Lugano",
       "away_crest": null,
       "score": null,
       "japanese_players": [],
@@ -61476,22 +61133,22 @@
       "_source_page": "2026–27 UEFA Conference League league phase"
     },
     {
-      "id": "ECL_2026-11-26_CSKASo_Trabzo",
+      "id": "ECL_2026-11-26_Kaunoa_Riga",
       "competition_id": 848,
       "competition_ja": "UEFAカンファレンスリーグ",
       "competition_category": "european_cup",
       "competition_flag": "🇪🇺",
-      "kickoff_jst": "2026-11-27T05:00:00+09:00",
+      "kickoff_jst": "2026-11-27T02:45:00+09:00",
       "status": "SCHEDULED",
       "stage": "LEAGUE_STAGE",
       "matchday": 4,
       "home_id": null,
-      "home_ja": "CSKAソフィア",
-      "home_en": "CSKA Sofia",
+      "home_ja": "カウノ・ジャルギリス",
+      "home_en": "Kauno Žalgiris",
       "home_crest": null,
       "away_id": null,
-      "away_ja": "トラブゾンスポル",
-      "away_en": "Trabzonspor",
+      "away_ja": "リガFC",
+      "away_en": "Riga",
       "away_crest": null,
       "score": null,
       "japanese_players": [],
@@ -61508,78 +61165,127 @@
       "_source_page": "2026–27 UEFA Conference League league phase"
     },
     {
-      "id": "ECL_2026-11-26_Braga_KuPS",
+      "id": "ECL_2026-11-26_Hearto_Monaco",
       "competition_id": 848,
       "competition_ja": "UEFAカンファレンスリーグ",
       "competition_category": "european_cup",
       "competition_flag": "🇪🇺",
-      "kickoff_jst": "2026-11-27T05:00:00+09:00",
+      "kickoff_jst": "2026-11-27T02:45:00+09:00",
       "status": "SCHEDULED",
       "stage": "LEAGUE_STAGE",
       "matchday": 4,
-      "home_id": 5613,
-      "home_ja": "ブラガ",
-      "home_en": "Braga",
-      "home_crest": "https://crests.football-data.org/5613.png",
-      "away_id": null,
-      "away_ja": "KuPS",
-      "away_en": "KuPS",
-      "away_crest": null,
-      "score": null,
-      "japanese_players": [],
-      "broadcasters": [
-        {
-          "name": "WOWOW",
-          "label": "WOWOW",
-          "url": "https://news.wowow.co.jp/5700.html",
-          "source": "league_guides",
-          "affiliate_url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l"
-        }
-      ],
-      "_source": "wikipedia",
-      "_source_page": "2026–27 UEFA Conference League league phase"
-    },
-    {
-      "id": "ECL_2026-11-26_SCFrei_Twente",
-      "competition_id": 848,
-      "competition_ja": "UEFAカンファレンスリーグ",
-      "competition_category": "european_cup",
-      "competition_flag": "🇪🇺",
-      "kickoff_jst": "2026-11-27T05:00:00+09:00",
-      "status": "SCHEDULED",
-      "stage": "LEAGUE_STAGE",
-      "matchday": 4,
-      "home_id": 17,
-      "home_ja": "フライブルク",
-      "home_en": "Freiburg",
-      "home_crest": "https://crests.football-data.org/17.png",
-      "away_id": 666,
-      "away_ja": "トゥエンテ",
-      "away_en": "Twente",
-      "away_crest": "https://crests.football-data.org/666.png",
+      "home_id": null,
+      "home_ja": "ハーツ",
+      "home_en": "Heart of Midlothian",
+      "home_crest": null,
+      "away_id": 548,
+      "away_ja": "モナコ",
+      "away_en": "Monaco",
+      "away_crest": "https://crests.football-data.org/548.png",
       "score": null,
       "japanese_players": [
         {
-          "name_ja": "鈴木唯人",
+          "name_ja": "南野拓実",
           "position": "MF/FW",
-          "side": "home"
-        },
-        {
-          "name_ja": "長田澪",
-          "position": "GK",
-          "side": "home"
-        },
-        {
-          "name_ja": "山本理仁",
-          "position": "MF",
-          "side": "home"
-        },
-        {
-          "name_ja": "後藤啓介",
-          "position": "FW",
-          "side": "home"
+          "side": "away"
         }
       ],
+      "broadcasters": [
+        {
+          "name": "WOWOW",
+          "label": "WOWOW",
+          "url": "https://news.wowow.co.jp/5700.html",
+          "source": "league_guides",
+          "affiliate_url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l"
+        }
+      ],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 UEFA Conference League league phase"
+    },
+    {
+      "id": "ECL_2026-11-26_Egnati_Lincol",
+      "competition_id": 848,
+      "competition_ja": "UEFAカンファレンスリーグ",
+      "competition_category": "european_cup",
+      "competition_flag": "🇪🇺",
+      "kickoff_jst": "2026-11-27T02:45:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 4,
+      "home_id": null,
+      "home_ja": "エグナティア",
+      "home_en": "Egnatia",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "リンカーン・レッドインプス",
+      "away_en": "Lincoln Red Imps",
+      "away_crest": null,
+      "score": null,
+      "japanese_players": [],
+      "broadcasters": [
+        {
+          "name": "WOWOW",
+          "label": "WOWOW",
+          "url": "https://news.wowow.co.jp/5700.html",
+          "source": "league_guides",
+          "affiliate_url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l"
+        }
+      ],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 UEFA Conference League league phase"
+    },
+    {
+      "id": "ECL_2026-11-26_Pafos_Midtjy",
+      "competition_id": 848,
+      "competition_ja": "UEFAカンファレンスリーグ",
+      "competition_category": "european_cup",
+      "competition_flag": "🇪🇺",
+      "kickoff_jst": "2026-11-27T02:45:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 4,
+      "home_id": null,
+      "home_ja": "パフォス",
+      "home_en": "Pafos",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "ミッティラン",
+      "away_en": "Midtjylland",
+      "away_crest": null,
+      "score": null,
+      "japanese_players": [],
+      "broadcasters": [
+        {
+          "name": "WOWOW",
+          "label": "WOWOW",
+          "url": "https://news.wowow.co.jp/5700.html",
+          "source": "league_guides",
+          "affiliate_url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l"
+        }
+      ],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 UEFA Conference League league phase"
+    },
+    {
+      "id": "ECL_2026-11-26_Brann_AGF",
+      "competition_id": 848,
+      "competition_ja": "UEFAカンファレンスリーグ",
+      "competition_category": "european_cup",
+      "competition_flag": "🇪🇺",
+      "kickoff_jst": "2026-11-27T02:45:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 4,
+      "home_id": null,
+      "home_ja": "ブラン",
+      "home_en": "Brann",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "AGFオーフス",
+      "away_en": "AGF",
+      "away_crest": null,
+      "score": null,
+      "japanese_players": [],
       "broadcasters": [
         {
           "name": "WOWOW",
@@ -62010,6 +61716,324 @@
       ],
       "_source": "wikipedia",
       "_source_page": "2026–27 UEFA Europa League league phase"
+    },
+    {
+      "id": "ECL_2026-11-26_Nordsj_Panath",
+      "competition_id": 848,
+      "competition_ja": "UEFAカンファレンスリーグ",
+      "competition_category": "european_cup",
+      "competition_flag": "🇪🇺",
+      "kickoff_jst": "2026-11-27T05:00:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 4,
+      "home_id": null,
+      "home_ja": "ノアシェラン",
+      "home_en": "Nordsjælland",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "パナシナイコス",
+      "away_en": "Panathinaikos",
+      "away_crest": null,
+      "score": null,
+      "japanese_players": [],
+      "broadcasters": [
+        {
+          "name": "WOWOW",
+          "label": "WOWOW",
+          "url": "https://news.wowow.co.jp/5700.html",
+          "source": "league_guides",
+          "affiliate_url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l"
+        }
+      ],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 UEFA Conference League league phase"
+    },
+    {
+      "id": "ECL_2026-11-26_BoracB_Atalan",
+      "competition_id": 848,
+      "competition_ja": "UEFAカンファレンスリーグ",
+      "competition_category": "european_cup",
+      "competition_flag": "🇪🇺",
+      "kickoff_jst": "2026-11-27T05:00:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 4,
+      "home_id": null,
+      "home_ja": "ボラツ・バニャ・ルカ",
+      "home_en": "Borac Banja Luka",
+      "home_crest": null,
+      "away_id": 102,
+      "away_ja": "アタランタ",
+      "away_en": "Atalanta",
+      "away_crest": "https://crests.football-data.org/102.png",
+      "score": null,
+      "japanese_players": [],
+      "broadcasters": [
+        {
+          "name": "WOWOW",
+          "label": "WOWOW",
+          "url": "https://news.wowow.co.jp/5700.html",
+          "source": "league_guides",
+          "affiliate_url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l"
+        }
+      ],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 UEFA Conference League league phase"
+    },
+    {
+      "id": "ECL_2026-11-26_Hajduk_SintTr",
+      "competition_id": 848,
+      "competition_ja": "UEFAカンファレンスリーグ",
+      "competition_category": "european_cup",
+      "competition_flag": "🇪🇺",
+      "kickoff_jst": "2026-11-27T05:00:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 4,
+      "home_id": null,
+      "home_ja": "ハイドゥク・スプリト",
+      "home_en": "Hajduk Split",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "シント＝トロイデン",
+      "away_en": "Sint-Truiden",
+      "away_crest": null,
+      "score": null,
+      "japanese_players": [
+        {
+          "name_ja": "高井幸大",
+          "position": "DF",
+          "side": "away"
+        },
+        {
+          "name_ja": "小久保玲央ブライアン",
+          "position": "GK",
+          "side": "away"
+        },
+        {
+          "name_ja": "谷口彰悟",
+          "position": "DF",
+          "side": "away"
+        },
+        {
+          "name_ja": "畑大雅",
+          "position": "DF",
+          "side": "away"
+        },
+        {
+          "name_ja": "松澤海斗",
+          "position": "FW/MF",
+          "side": "away"
+        },
+        {
+          "name_ja": "新川志音",
+          "position": "MF/FW",
+          "side": "away"
+        },
+        {
+          "name_ja": "荒木遼太郎",
+          "position": "MF",
+          "side": "away"
+        },
+        {
+          "name_ja": "石渡ネルソン",
+          "position": "DF",
+          "side": "away"
+        }
+      ],
+      "broadcasters": [
+        {
+          "name": "WOWOW",
+          "label": "WOWOW",
+          "url": "https://news.wowow.co.jp/5700.html",
+          "source": "league_guides",
+          "affiliate_url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l"
+        }
+      ],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 UEFA Conference League league phase"
+    },
+    {
+      "id": "ECL_2026-11-26_InterC_Copenh",
+      "competition_id": 848,
+      "competition_ja": "UEFAカンファレンスリーグ",
+      "competition_category": "european_cup",
+      "competition_flag": "🇪🇺",
+      "kickoff_jst": "2026-11-27T05:00:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 4,
+      "home_id": null,
+      "home_ja": "インテル・クルブ・デスカルデス",
+      "home_en": "Inter Club d'Escaldes",
+      "home_crest": null,
+      "away_id": 1876,
+      "away_ja": "コペンハーゲン",
+      "away_en": "Copenhagen",
+      "away_crest": "https://crests.football-data.org/1876.png",
+      "score": null,
+      "japanese_players": [],
+      "broadcasters": [
+        {
+          "name": "WOWOW",
+          "label": "WOWOW",
+          "url": "https://news.wowow.co.jp/5700.html",
+          "source": "league_guides",
+          "affiliate_url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l"
+        }
+      ],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 UEFA Conference League league phase"
+    },
+    {
+      "id": "ECL_2026-11-26_Gent_RedSta",
+      "competition_id": 848,
+      "competition_ja": "UEFAカンファレンスリーグ",
+      "competition_category": "european_cup",
+      "competition_flag": "🇪🇺",
+      "kickoff_jst": "2026-11-27T05:00:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 4,
+      "home_id": null,
+      "home_ja": "ヘント",
+      "home_en": "Gent",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "ツルヴェナ・ズヴェズダ",
+      "away_en": "Red Star Belgrade",
+      "away_crest": null,
+      "score": null,
+      "japanese_players": [],
+      "broadcasters": [
+        {
+          "name": "WOWOW",
+          "label": "WOWOW",
+          "url": "https://news.wowow.co.jp/5700.html",
+          "source": "league_guides",
+          "affiliate_url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l"
+        }
+      ],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 UEFA Conference League league phase"
+    },
+    {
+      "id": "ECL_2026-11-26_CSKASo_Trabzo",
+      "competition_id": 848,
+      "competition_ja": "UEFAカンファレンスリーグ",
+      "competition_category": "european_cup",
+      "competition_flag": "🇪🇺",
+      "kickoff_jst": "2026-11-27T05:00:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 4,
+      "home_id": null,
+      "home_ja": "CSKAソフィア",
+      "home_en": "CSKA Sofia",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "トラブゾンスポル",
+      "away_en": "Trabzonspor",
+      "away_crest": null,
+      "score": null,
+      "japanese_players": [],
+      "broadcasters": [
+        {
+          "name": "WOWOW",
+          "label": "WOWOW",
+          "url": "https://news.wowow.co.jp/5700.html",
+          "source": "league_guides",
+          "affiliate_url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l"
+        }
+      ],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 UEFA Conference League league phase"
+    },
+    {
+      "id": "ECL_2026-11-26_Braga_KuPS",
+      "competition_id": 848,
+      "competition_ja": "UEFAカンファレンスリーグ",
+      "competition_category": "european_cup",
+      "competition_flag": "🇪🇺",
+      "kickoff_jst": "2026-11-27T05:00:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 4,
+      "home_id": 5613,
+      "home_ja": "ブラガ",
+      "home_en": "Braga",
+      "home_crest": "https://crests.football-data.org/5613.png",
+      "away_id": null,
+      "away_ja": "KuPS",
+      "away_en": "KuPS",
+      "away_crest": null,
+      "score": null,
+      "japanese_players": [],
+      "broadcasters": [
+        {
+          "name": "WOWOW",
+          "label": "WOWOW",
+          "url": "https://news.wowow.co.jp/5700.html",
+          "source": "league_guides",
+          "affiliate_url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l"
+        }
+      ],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 UEFA Conference League league phase"
+    },
+    {
+      "id": "ECL_2026-11-26_SCFrei_Twente",
+      "competition_id": 848,
+      "competition_ja": "UEFAカンファレンスリーグ",
+      "competition_category": "european_cup",
+      "competition_flag": "🇪🇺",
+      "kickoff_jst": "2026-11-27T05:00:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 4,
+      "home_id": 17,
+      "home_ja": "フライブルク",
+      "home_en": "Freiburg",
+      "home_crest": "https://crests.football-data.org/17.png",
+      "away_id": 666,
+      "away_ja": "トゥエンテ",
+      "away_en": "Twente",
+      "away_crest": "https://crests.football-data.org/666.png",
+      "score": null,
+      "japanese_players": [
+        {
+          "name_ja": "鈴木唯人",
+          "position": "MF/FW",
+          "side": "home"
+        },
+        {
+          "name_ja": "長田澪",
+          "position": "GK",
+          "side": "home"
+        },
+        {
+          "name_ja": "山本理仁",
+          "position": "MF",
+          "side": "home"
+        },
+        {
+          "name_ja": "後藤啓介",
+          "position": "FW",
+          "side": "home"
+        }
+      ],
+      "broadcasters": [
+        {
+          "name": "WOWOW",
+          "label": "WOWOW",
+          "url": "https://news.wowow.co.jp/5700.html",
+          "source": "league_guides",
+          "affiliate_url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l"
+        }
+      ],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 UEFA Conference League league phase"
     },
     {
       "id": "BL2_83709",
@@ -62545,315 +62569,6 @@
       "_source_page": "2026–27 UEFA Conference League league phase"
     },
     {
-      "id": "ECL_2026-12-10_Copenh_Lugano",
-      "competition_id": 848,
-      "competition_ja": "UEFAカンファレンスリーグ",
-      "competition_category": "european_cup",
-      "competition_flag": "🇪🇺",
-      "kickoff_jst": "2026-12-11T02:45:00+09:00",
-      "status": "SCHEDULED",
-      "stage": "LEAGUE_STAGE",
-      "matchday": 5,
-      "home_id": 1876,
-      "home_ja": "コペンハーゲン",
-      "home_en": "Copenhagen",
-      "home_crest": "https://crests.football-data.org/1876.png",
-      "away_id": null,
-      "away_ja": "ルガーノ",
-      "away_en": "Lugano",
-      "away_crest": null,
-      "score": null,
-      "japanese_players": [],
-      "broadcasters": [
-        {
-          "name": "WOWOW",
-          "label": "WOWOW",
-          "url": "https://news.wowow.co.jp/5700.html",
-          "source": "league_guides",
-          "affiliate_url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l"
-        }
-      ],
-      "_source": "wikipedia",
-      "_source_page": "2026–27 UEFA Conference League league phase"
-    },
-    {
-      "id": "ECL_2026-12-10_Iberia_RedSta",
-      "competition_id": 848,
-      "competition_ja": "UEFAカンファレンスリーグ",
-      "competition_category": "european_cup",
-      "competition_flag": "🇪🇺",
-      "kickoff_jst": "2026-12-11T02:45:00+09:00",
-      "status": "SCHEDULED",
-      "stage": "LEAGUE_STAGE",
-      "matchday": 5,
-      "home_id": null,
-      "home_ja": "イベリア1999",
-      "home_en": "Iberia 1999",
-      "home_crest": null,
-      "away_id": null,
-      "away_ja": "ツルヴェナ・ズヴェズダ",
-      "away_en": "Red Star Belgrade",
-      "away_crest": null,
-      "score": null,
-      "japanese_players": [],
-      "broadcasters": [
-        {
-          "name": "WOWOW",
-          "label": "WOWOW",
-          "url": "https://news.wowow.co.jp/5700.html",
-          "source": "league_guides",
-          "affiliate_url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l"
-        }
-      ],
-      "_source": "wikipedia",
-      "_source_page": "2026–27 UEFA Conference League league phase"
-    },
-    {
-      "id": "ECL_2026-12-10_Getafe_InterC",
-      "competition_id": 848,
-      "competition_ja": "UEFAカンファレンスリーグ",
-      "competition_category": "european_cup",
-      "competition_flag": "🇪🇺",
-      "kickoff_jst": "2026-12-11T02:45:00+09:00",
-      "status": "SCHEDULED",
-      "stage": "LEAGUE_STAGE",
-      "matchday": 5,
-      "home_id": 82,
-      "home_ja": "ヘタフェ",
-      "home_en": "Getafe",
-      "home_crest": "https://crests.football-data.org/82.png",
-      "away_id": null,
-      "away_ja": "インテル・クルブ・デスカルデス",
-      "away_en": "Inter Club d'Escaldes",
-      "away_crest": null,
-      "score": null,
-      "japanese_players": [],
-      "broadcasters": [
-        {
-          "name": "WOWOW",
-          "label": "WOWOW",
-          "url": "https://news.wowow.co.jp/5700.html",
-          "source": "league_guides",
-          "affiliate_url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l"
-        }
-      ],
-      "_source": "wikipedia",
-      "_source_page": "2026–27 UEFA Conference League league phase"
-    },
-    {
-      "id": "ECL_2026-12-10_KuPS_CSKASo",
-      "competition_id": 848,
-      "competition_ja": "UEFAカンファレンスリーグ",
-      "competition_category": "european_cup",
-      "competition_flag": "🇪🇺",
-      "kickoff_jst": "2026-12-11T02:45:00+09:00",
-      "status": "SCHEDULED",
-      "stage": "LEAGUE_STAGE",
-      "matchday": 5,
-      "home_id": null,
-      "home_ja": "KuPS",
-      "home_en": "KuPS",
-      "home_crest": null,
-      "away_id": null,
-      "away_ja": "CSKAソフィア",
-      "away_en": "CSKA Sofia",
-      "away_crest": null,
-      "score": null,
-      "japanese_players": [],
-      "broadcasters": [
-        {
-          "name": "WOWOW",
-          "label": "WOWOW",
-          "url": "https://news.wowow.co.jp/5700.html",
-          "source": "league_guides",
-          "affiliate_url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l"
-        }
-      ],
-      "_source": "wikipedia",
-      "_source_page": "2026–27 UEFA Conference League league phase"
-    },
-    {
-      "id": "ECL_2026-12-10_Lincol_Midtjy",
-      "competition_id": 848,
-      "competition_ja": "UEFAカンファレンスリーグ",
-      "competition_category": "european_cup",
-      "competition_flag": "🇪🇺",
-      "kickoff_jst": "2026-12-11T02:45:00+09:00",
-      "status": "SCHEDULED",
-      "stage": "LEAGUE_STAGE",
-      "matchday": 5,
-      "home_id": null,
-      "home_ja": "リンカーン・レッドインプス",
-      "home_en": "Lincoln Red Imps",
-      "home_crest": null,
-      "away_id": null,
-      "away_ja": "ミッティラン",
-      "away_en": "Midtjylland",
-      "away_crest": null,
-      "score": null,
-      "japanese_players": [],
-      "broadcasters": [
-        {
-          "name": "WOWOW",
-          "label": "WOWOW",
-          "url": "https://news.wowow.co.jp/5700.html",
-          "source": "league_guides",
-          "affiliate_url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l"
-        }
-      ],
-      "_source": "wikipedia",
-      "_source_page": "2026–27 UEFA Conference League league phase"
-    },
-    {
-      "id": "ECL_2026-12-10_Riga_Atalan",
-      "competition_id": 848,
-      "competition_ja": "UEFAカンファレンスリーグ",
-      "competition_category": "european_cup",
-      "competition_flag": "🇪🇺",
-      "kickoff_jst": "2026-12-11T02:45:00+09:00",
-      "status": "SCHEDULED",
-      "stage": "LEAGUE_STAGE",
-      "matchday": 5,
-      "home_id": null,
-      "home_ja": "リガFC",
-      "home_en": "Riga",
-      "home_crest": null,
-      "away_id": 102,
-      "away_ja": "アタランタ",
-      "away_en": "Atalanta",
-      "away_crest": "https://crests.football-data.org/102.png",
-      "score": null,
-      "japanese_players": [],
-      "broadcasters": [
-        {
-          "name": "WOWOW",
-          "label": "WOWOW",
-          "url": "https://news.wowow.co.jp/5700.html",
-          "source": "league_guides",
-          "affiliate_url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l"
-        }
-      ],
-      "_source": "wikipedia",
-      "_source_page": "2026–27 UEFA Conference League league phase"
-    },
-    {
-      "id": "ECL_2026-12-10_SCFrei_Panath",
-      "competition_id": 848,
-      "competition_ja": "UEFAカンファレンスリーグ",
-      "competition_category": "european_cup",
-      "competition_flag": "🇪🇺",
-      "kickoff_jst": "2026-12-11T02:45:00+09:00",
-      "status": "SCHEDULED",
-      "stage": "LEAGUE_STAGE",
-      "matchday": 5,
-      "home_id": 17,
-      "home_ja": "フライブルク",
-      "home_en": "Freiburg",
-      "home_crest": "https://crests.football-data.org/17.png",
-      "away_id": null,
-      "away_ja": "パナシナイコス",
-      "away_en": "Panathinaikos",
-      "away_crest": null,
-      "score": null,
-      "japanese_players": [
-        {
-          "name_ja": "鈴木唯人",
-          "position": "MF/FW",
-          "side": "home"
-        },
-        {
-          "name_ja": "長田澪",
-          "position": "GK",
-          "side": "home"
-        },
-        {
-          "name_ja": "山本理仁",
-          "position": "MF",
-          "side": "home"
-        },
-        {
-          "name_ja": "後藤啓介",
-          "position": "FW",
-          "side": "home"
-        }
-      ],
-      "broadcasters": [
-        {
-          "name": "WOWOW",
-          "label": "WOWOW",
-          "url": "https://news.wowow.co.jp/5700.html",
-          "source": "league_guides",
-          "affiliate_url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l"
-        }
-      ],
-      "_source": "wikipedia",
-      "_source_page": "2026–27 UEFA Conference League league phase"
-    },
-    {
-      "id": "ECL_2026-12-10_Brann_Braga",
-      "competition_id": 848,
-      "competition_ja": "UEFAカンファレンスリーグ",
-      "competition_category": "european_cup",
-      "competition_flag": "🇪🇺",
-      "kickoff_jst": "2026-12-11T02:45:00+09:00",
-      "status": "SCHEDULED",
-      "stage": "LEAGUE_STAGE",
-      "matchday": 5,
-      "home_id": null,
-      "home_ja": "ブラン",
-      "home_en": "Brann",
-      "home_crest": null,
-      "away_id": 5613,
-      "away_ja": "ブラガ",
-      "away_en": "Braga",
-      "away_crest": "https://crests.football-data.org/5613.png",
-      "score": null,
-      "japanese_players": [],
-      "broadcasters": [
-        {
-          "name": "WOWOW",
-          "label": "WOWOW",
-          "url": "https://news.wowow.co.jp/5700.html",
-          "source": "league_guides",
-          "affiliate_url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l"
-        }
-      ],
-      "_source": "wikipedia",
-      "_source_page": "2026–27 UEFA Conference League league phase"
-    },
-    {
-      "id": "ECL_2026-12-10_Trabzo_Jablon",
-      "competition_id": 848,
-      "competition_ja": "UEFAカンファレンスリーグ",
-      "competition_category": "european_cup",
-      "competition_flag": "🇪🇺",
-      "kickoff_jst": "2026-12-11T02:45:00+09:00",
-      "status": "SCHEDULED",
-      "stage": "LEAGUE_STAGE",
-      "matchday": 5,
-      "home_id": null,
-      "home_ja": "トラブゾンスポル",
-      "home_en": "Trabzonspor",
-      "home_crest": null,
-      "away_id": null,
-      "away_ja": "ヤブロネツ",
-      "away_en": "Jablonec",
-      "away_crest": null,
-      "score": null,
-      "japanese_players": [],
-      "broadcasters": [
-        {
-          "name": "WOWOW",
-          "label": "WOWOW",
-          "url": "https://news.wowow.co.jp/5700.html",
-          "source": "league_guides",
-          "affiliate_url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l"
-        }
-      ],
-      "_source": "wikipedia",
-      "_source_page": "2026–27 UEFA Conference League league phase"
-    },
-    {
       "id": "EL_2026-12-10_AZ_SturmG",
       "competition_id": 3,
       "competition_ja": "UEFAヨーロッパリーグ",
@@ -63186,23 +62901,23 @@
       "_source_page": "2026–27 UEFA Europa League league phase"
     },
     {
-      "id": "ECL_2026-12-10_AGF_Twente",
+      "id": "ECL_2026-12-10_Copenh_Lugano",
       "competition_id": 848,
       "competition_ja": "UEFAカンファレンスリーグ",
       "competition_category": "european_cup",
       "competition_flag": "🇪🇺",
-      "kickoff_jst": "2026-12-11T05:00:00+09:00",
+      "kickoff_jst": "2026-12-11T02:45:00+09:00",
       "status": "SCHEDULED",
       "stage": "LEAGUE_STAGE",
       "matchday": 5,
-      "home_id": null,
-      "home_ja": "AGFオーフス",
-      "home_en": "AGF",
-      "home_crest": null,
-      "away_id": 666,
-      "away_ja": "トゥエンテ",
-      "away_en": "Twente",
-      "away_crest": "https://crests.football-data.org/666.png",
+      "home_id": 1876,
+      "home_ja": "コペンハーゲン",
+      "home_en": "Copenhagen",
+      "home_crest": "https://crests.football-data.org/1876.png",
+      "away_id": null,
+      "away_ja": "ルガーノ",
+      "away_en": "Lugano",
+      "away_crest": null,
       "score": null,
       "japanese_players": [],
       "broadcasters": [
@@ -63218,202 +62933,203 @@
       "_source_page": "2026–27 UEFA Conference League league phase"
     },
     {
-      "id": "ECL_2026-12-10_Bright_Monaco",
+      "id": "ECL_2026-12-10_Iberia_RedSta",
       "competition_id": 848,
       "competition_ja": "UEFAカンファレンスリーグ",
       "competition_category": "european_cup",
       "competition_flag": "🇪🇺",
-      "kickoff_jst": "2026-12-11T05:00:00+09:00",
+      "kickoff_jst": "2026-12-11T02:45:00+09:00",
       "status": "SCHEDULED",
       "stage": "LEAGUE_STAGE",
       "matchday": 5,
-      "home_id": 397,
-      "home_ja": "ブライトン",
-      "home_en": "Brighton Hove",
-      "home_crest": "https://crests.football-data.org/397.png",
-      "away_id": 548,
-      "away_ja": "モナコ",
-      "away_en": "Monaco",
-      "away_crest": "https://crests.football-data.org/548.png",
+      "home_id": null,
+      "home_ja": "イベリア1999",
+      "home_en": "Iberia 1999",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "ツルヴェナ・ズヴェズダ",
+      "away_en": "Red Star Belgrade",
+      "away_crest": null,
+      "score": null,
+      "japanese_players": [],
+      "broadcasters": [
+        {
+          "name": "WOWOW",
+          "label": "WOWOW",
+          "url": "https://news.wowow.co.jp/5700.html",
+          "source": "league_guides",
+          "affiliate_url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l"
+        }
+      ],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 UEFA Conference League league phase"
+    },
+    {
+      "id": "ECL_2026-12-10_Getafe_InterC",
+      "competition_id": 848,
+      "competition_ja": "UEFAカンファレンスリーグ",
+      "competition_category": "european_cup",
+      "competition_flag": "🇪🇺",
+      "kickoff_jst": "2026-12-11T02:45:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 5,
+      "home_id": 82,
+      "home_ja": "ヘタフェ",
+      "home_en": "Getafe",
+      "home_crest": "https://crests.football-data.org/82.png",
+      "away_id": null,
+      "away_ja": "インテル・クルブ・デスカルデス",
+      "away_en": "Inter Club d'Escaldes",
+      "away_crest": null,
+      "score": null,
+      "japanese_players": [],
+      "broadcasters": [
+        {
+          "name": "WOWOW",
+          "label": "WOWOW",
+          "url": "https://news.wowow.co.jp/5700.html",
+          "source": "league_guides",
+          "affiliate_url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l"
+        }
+      ],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 UEFA Conference League league phase"
+    },
+    {
+      "id": "ECL_2026-12-10_KuPS_CSKASo",
+      "competition_id": 848,
+      "competition_ja": "UEFAカンファレンスリーグ",
+      "competition_category": "european_cup",
+      "competition_flag": "🇪🇺",
+      "kickoff_jst": "2026-12-11T02:45:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 5,
+      "home_id": null,
+      "home_ja": "KuPS",
+      "home_en": "KuPS",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "CSKAソフィア",
+      "away_en": "CSKA Sofia",
+      "away_crest": null,
+      "score": null,
+      "japanese_players": [],
+      "broadcasters": [
+        {
+          "name": "WOWOW",
+          "label": "WOWOW",
+          "url": "https://news.wowow.co.jp/5700.html",
+          "source": "league_guides",
+          "affiliate_url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l"
+        }
+      ],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 UEFA Conference League league phase"
+    },
+    {
+      "id": "ECL_2026-12-10_Lincol_Midtjy",
+      "competition_id": 848,
+      "competition_ja": "UEFAカンファレンスリーグ",
+      "competition_category": "european_cup",
+      "competition_flag": "🇪🇺",
+      "kickoff_jst": "2026-12-11T02:45:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 5,
+      "home_id": null,
+      "home_ja": "リンカーン・レッドインプス",
+      "home_en": "Lincoln Red Imps",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "ミッティラン",
+      "away_en": "Midtjylland",
+      "away_crest": null,
+      "score": null,
+      "japanese_players": [],
+      "broadcasters": [
+        {
+          "name": "WOWOW",
+          "label": "WOWOW",
+          "url": "https://news.wowow.co.jp/5700.html",
+          "source": "league_guides",
+          "affiliate_url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l"
+        }
+      ],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 UEFA Conference League league phase"
+    },
+    {
+      "id": "ECL_2026-12-10_Riga_Atalan",
+      "competition_id": 848,
+      "competition_ja": "UEFAカンファレンスリーグ",
+      "competition_category": "european_cup",
+      "competition_flag": "🇪🇺",
+      "kickoff_jst": "2026-12-11T02:45:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 5,
+      "home_id": null,
+      "home_ja": "リガFC",
+      "home_en": "Riga",
+      "home_crest": null,
+      "away_id": 102,
+      "away_ja": "アタランタ",
+      "away_en": "Atalanta",
+      "away_crest": "https://crests.football-data.org/102.png",
+      "score": null,
+      "japanese_players": [],
+      "broadcasters": [
+        {
+          "name": "WOWOW",
+          "label": "WOWOW",
+          "url": "https://news.wowow.co.jp/5700.html",
+          "source": "league_guides",
+          "affiliate_url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l"
+        }
+      ],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 UEFA Conference League league phase"
+    },
+    {
+      "id": "ECL_2026-12-10_SCFrei_Panath",
+      "competition_id": 848,
+      "competition_ja": "UEFAカンファレンスリーグ",
+      "competition_category": "european_cup",
+      "competition_flag": "🇪🇺",
+      "kickoff_jst": "2026-12-11T02:45:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 5,
+      "home_id": 17,
+      "home_ja": "フライブルク",
+      "home_en": "Freiburg",
+      "home_crest": "https://crests.football-data.org/17.png",
+      "away_id": null,
+      "away_ja": "パナシナイコス",
+      "away_en": "Panathinaikos",
+      "away_crest": null,
       "score": null,
       "japanese_players": [
         {
-          "name_ja": "三笘薫",
-          "position": "MF",
-          "side": "home"
-        },
-        {
-          "name_ja": "南野拓実",
+          "name_ja": "鈴木唯人",
           "position": "MF/FW",
-          "side": "away"
-        }
-      ],
-      "broadcasters": [
-        {
-          "name": "WOWOW",
-          "label": "WOWOW",
-          "url": "https://news.wowow.co.jp/5700.html",
-          "source": "league_guides",
-          "affiliate_url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l"
-        }
-      ],
-      "_source": "wikipedia",
-      "_source_page": "2026–27 UEFA Conference League league phase"
-    },
-    {
-      "id": "ECL_2026-12-10_Thun_Gent",
-      "competition_id": 848,
-      "competition_ja": "UEFAカンファレンスリーグ",
-      "competition_category": "european_cup",
-      "competition_flag": "🇪🇺",
-      "kickoff_jst": "2026-12-11T05:00:00+09:00",
-      "status": "SCHEDULED",
-      "stage": "LEAGUE_STAGE",
-      "matchday": 5,
-      "home_id": null,
-      "home_ja": "トゥーン",
-      "home_en": "Thun",
-      "home_crest": null,
-      "away_id": null,
-      "away_ja": "ヘント",
-      "away_en": "Gent",
-      "away_crest": null,
-      "score": null,
-      "japanese_players": [],
-      "broadcasters": [
-        {
-          "name": "WOWOW",
-          "label": "WOWOW",
-          "url": "https://news.wowow.co.jp/5700.html",
-          "source": "league_guides",
-          "affiliate_url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l"
-        }
-      ],
-      "_source": "wikipedia",
-      "_source_page": "2026–27 UEFA Conference League league phase"
-    },
-    {
-      "id": "ECL_2026-12-10_Hearto_BoracB",
-      "competition_id": 848,
-      "competition_ja": "UEFAカンファレンスリーグ",
-      "competition_category": "european_cup",
-      "competition_flag": "🇪🇺",
-      "kickoff_jst": "2026-12-11T05:00:00+09:00",
-      "status": "SCHEDULED",
-      "stage": "LEAGUE_STAGE",
-      "matchday": 5,
-      "home_id": null,
-      "home_ja": "ハーツ",
-      "home_en": "Heart of Midlothian",
-      "home_crest": null,
-      "away_id": null,
-      "away_ja": "ボラツ・バニャ・ルカ",
-      "away_en": "Borac Banja Luka",
-      "away_crest": null,
-      "score": null,
-      "japanese_players": [],
-      "broadcasters": [
-        {
-          "name": "WOWOW",
-          "label": "WOWOW",
-          "url": "https://news.wowow.co.jp/5700.html",
-          "source": "league_guides",
-          "affiliate_url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l"
-        }
-      ],
-      "_source": "wikipedia",
-      "_source_page": "2026–27 UEFA Conference League league phase"
-    },
-    {
-      "id": "ECL_2026-12-10_Hajduk_Nordsj",
-      "competition_id": 848,
-      "competition_ja": "UEFAカンファレンスリーグ",
-      "competition_category": "european_cup",
-      "competition_flag": "🇪🇺",
-      "kickoff_jst": "2026-12-11T05:00:00+09:00",
-      "status": "SCHEDULED",
-      "stage": "LEAGUE_STAGE",
-      "matchday": 5,
-      "home_id": null,
-      "home_ja": "ハイドゥク・スプリト",
-      "home_en": "Hajduk Split",
-      "home_crest": null,
-      "away_id": null,
-      "away_ja": "ノアシェラン",
-      "away_en": "Nordsjælland",
-      "away_crest": null,
-      "score": null,
-      "japanese_players": [],
-      "broadcasters": [
-        {
-          "name": "WOWOW",
-          "label": "WOWOW",
-          "url": "https://news.wowow.co.jp/5700.html",
-          "source": "league_guides",
-          "affiliate_url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l"
-        }
-      ],
-      "_source": "wikipedia",
-      "_source_page": "2026–27 UEFA Conference League league phase"
-    },
-    {
-      "id": "ECL_2026-12-10_SintTr_Ajax",
-      "competition_id": 848,
-      "competition_ja": "UEFAカンファレンスリーグ",
-      "competition_category": "european_cup",
-      "competition_flag": "🇪🇺",
-      "kickoff_jst": "2026-12-11T05:00:00+09:00",
-      "status": "SCHEDULED",
-      "stage": "LEAGUE_STAGE",
-      "matchday": 5,
-      "home_id": null,
-      "home_ja": "シント＝トロイデン",
-      "home_en": "Sint-Truiden",
-      "home_crest": null,
-      "away_id": 678,
-      "away_ja": "アヤックス",
-      "away_en": "Ajax",
-      "away_crest": "https://crests.football-data.org/678.png",
-      "score": null,
-      "japanese_players": [
-        {
-          "name_ja": "高井幸大",
-          "position": "DF",
           "side": "home"
         },
         {
-          "name_ja": "小久保玲央ブライアン",
+          "name_ja": "長田澪",
           "position": "GK",
           "side": "home"
         },
         {
-          "name_ja": "谷口彰悟",
-          "position": "DF",
-          "side": "home"
-        },
-        {
-          "name_ja": "畑大雅",
-          "position": "DF",
-          "side": "home"
-        },
-        {
-          "name_ja": "松澤海斗",
-          "position": "FW/MF",
-          "side": "home"
-        },
-        {
-          "name_ja": "新川志音",
-          "position": "MF/FW",
-          "side": "home"
-        },
-        {
-          "name_ja": "荒木遼太郎",
+          "name_ja": "山本理仁",
           "position": "MF",
           "side": "home"
         },
         {
-          "name_ja": "石渡ネルソン",
-          "position": "DF",
+          "name_ja": "後藤啓介",
+          "position": "FW",
           "side": "home"
         }
       ],
@@ -63430,23 +63146,23 @@
       "_source_page": "2026–27 UEFA Conference League league phase"
     },
     {
-      "id": "ECL_2026-12-10_Egnati_Kaunoa",
+      "id": "ECL_2026-12-10_Brann_Braga",
       "competition_id": 848,
       "competition_ja": "UEFAカンファレンスリーグ",
       "competition_category": "european_cup",
       "competition_flag": "🇪🇺",
-      "kickoff_jst": "2026-12-11T05:00:00+09:00",
+      "kickoff_jst": "2026-12-11T02:45:00+09:00",
       "status": "SCHEDULED",
       "stage": "LEAGUE_STAGE",
       "matchday": 5,
       "home_id": null,
-      "home_ja": "エグナティア",
-      "home_en": "Egnatia",
+      "home_ja": "ブラン",
+      "home_en": "Brann",
       "home_crest": null,
-      "away_id": null,
-      "away_ja": "カウノ・ジャルギリス",
-      "away_en": "Kauno Žalgiris",
-      "away_crest": null,
+      "away_id": 5613,
+      "away_ja": "ブラガ",
+      "away_en": "Braga",
+      "away_crest": "https://crests.football-data.org/5613.png",
       "score": null,
       "japanese_players": [],
       "broadcasters": [
@@ -63462,22 +63178,22 @@
       "_source_page": "2026–27 UEFA Conference League league phase"
     },
     {
-      "id": "ECL_2026-12-10_Mjllby_Pafos",
+      "id": "ECL_2026-12-10_Trabzo_Jablon",
       "competition_id": 848,
       "competition_ja": "UEFAカンファレンスリーグ",
       "competition_category": "european_cup",
       "competition_flag": "🇪🇺",
-      "kickoff_jst": "2026-12-11T05:00:00+09:00",
+      "kickoff_jst": "2026-12-11T02:45:00+09:00",
       "status": "SCHEDULED",
       "stage": "LEAGUE_STAGE",
       "matchday": 5,
       "home_id": null,
-      "home_ja": "ミエルビー",
-      "home_en": "Mjällby AIF",
+      "home_ja": "トラブゾンスポル",
+      "home_en": "Trabzonspor",
       "home_crest": null,
       "away_id": null,
-      "away_ja": "パフォス",
-      "away_en": "Pafos",
+      "away_ja": "ヤブロネツ",
+      "away_en": "Jablonec",
       "away_crest": null,
       "score": null,
       "japanese_players": [],
@@ -63889,6 +63605,314 @@
       ],
       "_source": "wikipedia",
       "_source_page": "2026–27 UEFA Europa League league phase"
+    },
+    {
+      "id": "ECL_2026-12-10_AGF_Twente",
+      "competition_id": 848,
+      "competition_ja": "UEFAカンファレンスリーグ",
+      "competition_category": "european_cup",
+      "competition_flag": "🇪🇺",
+      "kickoff_jst": "2026-12-11T05:00:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 5,
+      "home_id": null,
+      "home_ja": "AGFオーフス",
+      "home_en": "AGF",
+      "home_crest": null,
+      "away_id": 666,
+      "away_ja": "トゥエンテ",
+      "away_en": "Twente",
+      "away_crest": "https://crests.football-data.org/666.png",
+      "score": null,
+      "japanese_players": [],
+      "broadcasters": [
+        {
+          "name": "WOWOW",
+          "label": "WOWOW",
+          "url": "https://news.wowow.co.jp/5700.html",
+          "source": "league_guides",
+          "affiliate_url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l"
+        }
+      ],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 UEFA Conference League league phase"
+    },
+    {
+      "id": "ECL_2026-12-10_Bright_Monaco",
+      "competition_id": 848,
+      "competition_ja": "UEFAカンファレンスリーグ",
+      "competition_category": "european_cup",
+      "competition_flag": "🇪🇺",
+      "kickoff_jst": "2026-12-11T05:00:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 5,
+      "home_id": 397,
+      "home_ja": "ブライトン",
+      "home_en": "Brighton Hove",
+      "home_crest": "https://crests.football-data.org/397.png",
+      "away_id": 548,
+      "away_ja": "モナコ",
+      "away_en": "Monaco",
+      "away_crest": "https://crests.football-data.org/548.png",
+      "score": null,
+      "japanese_players": [
+        {
+          "name_ja": "三笘薫",
+          "position": "MF",
+          "side": "home"
+        },
+        {
+          "name_ja": "南野拓実",
+          "position": "MF/FW",
+          "side": "away"
+        }
+      ],
+      "broadcasters": [
+        {
+          "name": "WOWOW",
+          "label": "WOWOW",
+          "url": "https://news.wowow.co.jp/5700.html",
+          "source": "league_guides",
+          "affiliate_url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l"
+        }
+      ],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 UEFA Conference League league phase"
+    },
+    {
+      "id": "ECL_2026-12-10_Thun_Gent",
+      "competition_id": 848,
+      "competition_ja": "UEFAカンファレンスリーグ",
+      "competition_category": "european_cup",
+      "competition_flag": "🇪🇺",
+      "kickoff_jst": "2026-12-11T05:00:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 5,
+      "home_id": null,
+      "home_ja": "トゥーン",
+      "home_en": "Thun",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "ヘント",
+      "away_en": "Gent",
+      "away_crest": null,
+      "score": null,
+      "japanese_players": [],
+      "broadcasters": [
+        {
+          "name": "WOWOW",
+          "label": "WOWOW",
+          "url": "https://news.wowow.co.jp/5700.html",
+          "source": "league_guides",
+          "affiliate_url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l"
+        }
+      ],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 UEFA Conference League league phase"
+    },
+    {
+      "id": "ECL_2026-12-10_Hearto_BoracB",
+      "competition_id": 848,
+      "competition_ja": "UEFAカンファレンスリーグ",
+      "competition_category": "european_cup",
+      "competition_flag": "🇪🇺",
+      "kickoff_jst": "2026-12-11T05:00:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 5,
+      "home_id": null,
+      "home_ja": "ハーツ",
+      "home_en": "Heart of Midlothian",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "ボラツ・バニャ・ルカ",
+      "away_en": "Borac Banja Luka",
+      "away_crest": null,
+      "score": null,
+      "japanese_players": [],
+      "broadcasters": [
+        {
+          "name": "WOWOW",
+          "label": "WOWOW",
+          "url": "https://news.wowow.co.jp/5700.html",
+          "source": "league_guides",
+          "affiliate_url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l"
+        }
+      ],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 UEFA Conference League league phase"
+    },
+    {
+      "id": "ECL_2026-12-10_Hajduk_Nordsj",
+      "competition_id": 848,
+      "competition_ja": "UEFAカンファレンスリーグ",
+      "competition_category": "european_cup",
+      "competition_flag": "🇪🇺",
+      "kickoff_jst": "2026-12-11T05:00:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 5,
+      "home_id": null,
+      "home_ja": "ハイドゥク・スプリト",
+      "home_en": "Hajduk Split",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "ノアシェラン",
+      "away_en": "Nordsjælland",
+      "away_crest": null,
+      "score": null,
+      "japanese_players": [],
+      "broadcasters": [
+        {
+          "name": "WOWOW",
+          "label": "WOWOW",
+          "url": "https://news.wowow.co.jp/5700.html",
+          "source": "league_guides",
+          "affiliate_url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l"
+        }
+      ],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 UEFA Conference League league phase"
+    },
+    {
+      "id": "ECL_2026-12-10_SintTr_Ajax",
+      "competition_id": 848,
+      "competition_ja": "UEFAカンファレンスリーグ",
+      "competition_category": "european_cup",
+      "competition_flag": "🇪🇺",
+      "kickoff_jst": "2026-12-11T05:00:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 5,
+      "home_id": null,
+      "home_ja": "シント＝トロイデン",
+      "home_en": "Sint-Truiden",
+      "home_crest": null,
+      "away_id": 678,
+      "away_ja": "アヤックス",
+      "away_en": "Ajax",
+      "away_crest": "https://crests.football-data.org/678.png",
+      "score": null,
+      "japanese_players": [
+        {
+          "name_ja": "高井幸大",
+          "position": "DF",
+          "side": "home"
+        },
+        {
+          "name_ja": "小久保玲央ブライアン",
+          "position": "GK",
+          "side": "home"
+        },
+        {
+          "name_ja": "谷口彰悟",
+          "position": "DF",
+          "side": "home"
+        },
+        {
+          "name_ja": "畑大雅",
+          "position": "DF",
+          "side": "home"
+        },
+        {
+          "name_ja": "松澤海斗",
+          "position": "FW/MF",
+          "side": "home"
+        },
+        {
+          "name_ja": "新川志音",
+          "position": "MF/FW",
+          "side": "home"
+        },
+        {
+          "name_ja": "荒木遼太郎",
+          "position": "MF",
+          "side": "home"
+        },
+        {
+          "name_ja": "石渡ネルソン",
+          "position": "DF",
+          "side": "home"
+        }
+      ],
+      "broadcasters": [
+        {
+          "name": "WOWOW",
+          "label": "WOWOW",
+          "url": "https://news.wowow.co.jp/5700.html",
+          "source": "league_guides",
+          "affiliate_url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l"
+        }
+      ],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 UEFA Conference League league phase"
+    },
+    {
+      "id": "ECL_2026-12-10_Egnati_Kaunoa",
+      "competition_id": 848,
+      "competition_ja": "UEFAカンファレンスリーグ",
+      "competition_category": "european_cup",
+      "competition_flag": "🇪🇺",
+      "kickoff_jst": "2026-12-11T05:00:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 5,
+      "home_id": null,
+      "home_ja": "エグナティア",
+      "home_en": "Egnatia",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "カウノ・ジャルギリス",
+      "away_en": "Kauno Žalgiris",
+      "away_crest": null,
+      "score": null,
+      "japanese_players": [],
+      "broadcasters": [
+        {
+          "name": "WOWOW",
+          "label": "WOWOW",
+          "url": "https://news.wowow.co.jp/5700.html",
+          "source": "league_guides",
+          "affiliate_url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l"
+        }
+      ],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 UEFA Conference League league phase"
+    },
+    {
+      "id": "ECL_2026-12-10_Mjllby_Pafos",
+      "competition_id": 848,
+      "competition_ja": "UEFAカンファレンスリーグ",
+      "competition_category": "european_cup",
+      "competition_flag": "🇪🇺",
+      "kickoff_jst": "2026-12-11T05:00:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 5,
+      "home_id": null,
+      "home_ja": "ミエルビー",
+      "home_en": "Mjällby AIF",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "パフォス",
+      "away_en": "Pafos",
+      "away_crest": null,
+      "score": null,
+      "japanese_players": [],
+      "broadcasters": [
+        {
+          "name": "WOWOW",
+          "label": "WOWOW",
+          "url": "https://news.wowow.co.jp/5700.html",
+          "source": "league_guides",
+          "affiliate_url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l"
+        }
+      ],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 UEFA Conference League league phase"
     },
     {
       "id": "BL2_83743",
@@ -69061,8 +69085,8 @@
       "_source": "openligadb"
     }
   ],
-  "updated_openligadb": "2026-10-29T07:04:36.200668+09:00",
-  "updated_yt_highlights": "2026-10-29T07:06:00.602924+09:00",
-  "updated_uefa_secondary": "2026-10-29T07:06:51.294211+09:00",
-  "updated_domestic_cups": "2026-10-29T07:07:11.113228+09:00"
+  "updated_openligadb": "2026-10-29T10:37:00.914386+09:00",
+  "updated_yt_highlights": "2026-10-29T10:37:37.924478+09:00",
+  "updated_uefa_secondary": "2026-10-29T10:38:13.602928+09:00",
+  "updated_domestic_cups": "2026-10-29T10:38:30.026850+09:00"
 }
