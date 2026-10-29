@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-30T01:03:25.570421+09:00",
+  "updated": "2026-10-30T07:05:21.982240+09:00",
   "competitions": {
     "39": {
       "name_ja": "プレミアリーグ",
@@ -1384,6 +1384,21 @@
             },
             {
               "position": 6,
+              "team_id": 470,
+              "team_ja": "Frosinone",
+              "team_crest": "https://crests.football-data.org/470.png",
+              "playedGames": 9,
+              "won": 5,
+              "draw": 2,
+              "lost": 2,
+              "points": 17,
+              "goalsFor": 22,
+              "goalsAgainst": 14,
+              "goalDifference": 8,
+              "form": null
+            },
+            {
+              "position": 7,
               "team_id": 113,
               "team_ja": "ナポリ",
               "team_crest": "https://crests.football-data.org/113.png",
@@ -1395,21 +1410,6 @@
               "goalsFor": 17,
               "goalsAgainst": 11,
               "goalDifference": 6,
-              "form": null
-            },
-            {
-              "position": 7,
-              "team_id": 470,
-              "team_ja": "Frosinone",
-              "team_crest": "https://crests.football-data.org/470.png",
-              "playedGames": 8,
-              "won": 4,
-              "draw": 2,
-              "lost": 2,
-              "points": 14,
-              "goalsFor": 17,
-              "goalsAgainst": 13,
-              "goalDifference": 4,
               "form": null
             },
             {
@@ -1477,13 +1477,13 @@
               "team_id": 102,
               "team_ja": "アタランタ",
               "team_crest": "https://crests.football-data.org/102.png",
-              "playedGames": 8,
+              "playedGames": 9,
               "won": 3,
-              "draw": 1,
+              "draw": 2,
               "lost": 4,
-              "points": 10,
-              "goalsFor": 14,
-              "goalsAgainst": 15,
+              "points": 11,
+              "goalsFor": 16,
+              "goalsAgainst": 17,
               "goalDifference": -1,
               "form": null
             },
@@ -1507,14 +1507,14 @@
               "team_id": 5890,
               "team_ja": "レッチェ",
               "team_crest": "https://crests.football-data.org/5890.png",
-              "playedGames": 8,
+              "playedGames": 9,
               "won": 3,
               "draw": 0,
-              "lost": 5,
+              "lost": 6,
               "points": 9,
-              "goalsFor": 9,
-              "goalsAgainst": 14,
-              "goalDifference": -5,
+              "goalsFor": 10,
+              "goalsAgainst": 19,
+              "goalDifference": -9,
               "form": null
             },
             {
@@ -1564,6 +1564,21 @@
             },
             {
               "position": 18,
+              "team_id": 99,
+              "team_ja": "フィオレンティーナ",
+              "team_crest": "https://crests.football-data.org/99.png",
+              "playedGames": 9,
+              "won": 1,
+              "draw": 2,
+              "lost": 6,
+              "points": 5,
+              "goalsFor": 11,
+              "goalsAgainst": 21,
+              "goalDifference": -10,
+              "form": null
+            },
+            {
+              "position": 19,
               "team_id": 112,
               "team_ja": "パルマ",
               "team_crest": "https://crests.football-data.org/112.png",
@@ -1574,21 +1589,6 @@
               "points": 5,
               "goalsFor": 5,
               "goalsAgainst": 15,
-              "goalDifference": -10,
-              "form": null
-            },
-            {
-              "position": 19,
-              "team_id": 99,
-              "team_ja": "フィオレンティーナ",
-              "team_crest": "https://crests.football-data.org/99.png",
-              "playedGames": 8,
-              "won": 1,
-              "draw": 1,
-              "lost": 6,
-              "points": 4,
-              "goalsFor": 9,
-              "goalsAgainst": 19,
               "goalDifference": -10,
               "form": null
             },
