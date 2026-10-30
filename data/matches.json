@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-31T00:47:26.152400+09:00",
+  "updated": "2026-10-31T07:01:57.990942+09:00",
   "date_from": "2026-10-24",
   "date_to": "2026-11-14",
   "match_count": 1774,
@@ -52484,7 +52484,7 @@
       "competition_category": "league",
       "competition_flag": "🇫🇷",
       "kickoff_jst": "2026-10-31T03:00:00+09:00",
-      "status": "TIMED",
+      "status": "FINISHED",
       "stage": "REGULAR_SEASON",
       "matchday": 9,
       "home_id": 533,
@@ -52495,7 +52495,10 @@
       "away_ja": "PSG",
       "away_en": "PSG",
       "away_crest": "https://crests.football-data.org/524.png",
-      "score": null,
+      "score": {
+        "home": 1,
+        "away": 5
+      },
       "japanese_players": [
         {
           "name_ja": "瀬古歩夢",
@@ -52520,6 +52523,15 @@
           "url": "https://www.dazn.com/ja-JP/welcome",
           "source": "league_guides"
         }
+      ],
+      "highlights": [
+        {
+          "broadcaster": "DAZN Fussball",
+          "video_id": "SeaXCrEjez8",
+          "url": "https://youtu.be/SeaXCrEjez8",
+          "title": "Historisch! Hakimi mit Hattrick-Gala: Le Havre - PSG | 9. Spieltag | Ligue 1 | DAZN Highlights",
+          "yt_published": "2026-10-30"
+        }
       ]
     },
     {
@@ -52529,7 +52541,7 @@
       "competition_category": "league",
       "competition_flag": "🇫🇷",
       "kickoff_jst": "2026-10-31T03:00:00+09:00",
-      "status": "TIMED",
+      "status": "FINISHED",
       "stage": "REGULAR_SEASON",
       "matchday": 9,
       "home_id": 522,
@@ -52540,7 +52552,10 @@
       "away_ja": "レンヌ",
       "away_en": "Stade Rennais",
       "away_crest": "https://crests.football-data.org/529.png",
-      "score": null,
+      "score": {
+        "home": 5,
+        "away": 2
+      },
       "japanese_players": [],
       "broadcasters": [
         {
@@ -52558,7 +52573,7 @@
       "competition_category": "league",
       "competition_flag": "🇩🇪",
       "kickoff_jst": "2026-10-31T04:30:00+09:00",
-      "status": "TIMED",
+      "status": "FINISHED",
       "stage": "REGULAR_SEASON",
       "matchday": 8,
       "home_id": 719,
@@ -52569,7 +52584,10 @@
       "away_ja": "マインツ",
       "away_en": "Mainz",
       "away_crest": "https://crests.football-data.org/15.png",
-      "score": null,
+      "score": {
+        "home": 4,
+        "away": 1
+      },
       "japanese_players": [
         {
           "name_ja": "佐野海舟",
@@ -52633,7 +52651,7 @@
       "competition_category": "league",
       "competition_flag": "🇪🇸",
       "kickoff_jst": "2026-10-31T05:00:00+09:00",
-      "status": "TIMED",
+      "status": "FINISHED",
       "stage": "REGULAR_SEASON",
       "matchday": 11,
       "home_id": 94,
@@ -52644,7 +52662,10 @@
       "away_ja": "エスパニョール",
       "away_en": "Espanyol",
       "away_crest": "https://crests.football-data.org/80.png",
-      "score": null,
+      "score": {
+        "home": 0,
+        "away": 1
+      },
       "japanese_players": [],
       "broadcasters": [
         {
@@ -52668,7 +52689,7 @@
       "competition_category": "league",
       "competition_flag": "🇫🇷",
       "kickoff_jst": "2026-10-31T05:05:00+09:00",
-      "status": "TIMED",
+      "status": "FINISHED",
       "stage": "REGULAR_SEASON",
       "matchday": 9,
       "home_id": 521,
@@ -52679,7 +52700,10 @@
       "away_ja": "ランス",
       "away_en": "RC Lens",
       "away_crest": "https://crests.football-data.org/546.png",
-      "score": null,
+      "score": {
+        "home": 1,
+        "away": 0
+      },
       "japanese_players": [
         {
           "name_ja": "上田綺世",
@@ -52703,7 +52727,7 @@
       "competition_category": "league",
       "competition_flag": "🇵🇹",
       "kickoff_jst": "2026-10-31T05:15:00+09:00",
-      "status": "TIMED",
+      "status": "FINISHED",
       "stage": "REGULAR_SEASON",
       "matchday": 10,
       "home_id": 6618,
@@ -52714,7 +52738,10 @@
       "away_ja": "スポルティングCP",
       "away_en": "Sporting CP",
       "away_crest": "https://crests.football-data.org/498.png",
-      "score": null,
+      "score": {
+        "home": 0,
+        "away": 1
+      },
       "japanese_players": [],
       "broadcasters": [
         {
@@ -69154,8 +69181,8 @@
       "_source": "openligadb"
     }
   ],
-  "updated_openligadb": "2026-10-31T00:49:53.673548+09:00",
-  "updated_yt_highlights": "2026-10-31T00:50:31.096410+09:00",
-  "updated_uefa_secondary": "2026-10-31T00:51:07.463376+09:00",
-  "updated_domestic_cups": "2026-10-31T00:51:25.144185+09:00"
+  "updated_openligadb": "2026-10-31T07:04:20.413723+09:00",
+  "updated_yt_highlights": "2026-10-31T07:06:21.115439+09:00",
+  "updated_uefa_secondary": "2026-10-31T07:07:19.142305+09:00",
+  "updated_domestic_cups": "2026-10-31T07:07:37.857078+09:00"
 }
