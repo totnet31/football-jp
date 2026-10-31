@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-31T07:03:05.833720+09:00",
+  "updated": "2026-10-31T10:27:43.890884+09:00",
   "competitions": {
     "39": {
       "name_ja": "プレミアリーグ",
@@ -4596,6 +4596,18 @@
           "playedMatches": 9
         },
         {
+          "player_id": 128825,
+          "player_name": "Geny Catamo",
+          "nationality": "Mozambique",
+          "team_id": 498,
+          "team_ja": "スポルティングCP",
+          "team_crest": "https://crests.football-data.org/498.png",
+          "goals": 2,
+          "assists": 4,
+          "penalties": null,
+          "playedMatches": 10
+        },
+        {
           "player_id": 181456,
           "player_name": "Brenner",
           "nationality": "Brazil",
@@ -4834,18 +4846,6 @@
           "assists": null,
           "penalties": null,
           "playedMatches": 10
-        },
-        {
-          "player_id": 45514,
-          "player_name": "Samu",
-          "nationality": "Portugal",
-          "team_id": 5543,
-          "team_ja": "ヴィトーリア",
-          "team_crest": "https://crests.football-data.org/5543.png",
-          "goals": 1,
-          "assists": 1,
-          "penalties": null,
-          "playedMatches": 9
         }
       ]
     },
