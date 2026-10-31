@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-31T10:29:45.722181+09:00",
+  "updated": "2026-10-31T18:05:06.073939+09:00",
   "competitions": {
     "39": {
       "name_ja": "プレミアリーグ",
@@ -466,6 +466,21 @@
             },
             {
               "position": 10,
+              "team_id": 356,
+              "team_ja": "シェフィールド・ユナイテッド",
+              "team_crest": "https://crests.football-data.org/356.png",
+              "playedGames": 13,
+              "won": 5,
+              "draw": 4,
+              "lost": 4,
+              "points": 19,
+              "goalsFor": 17,
+              "goalsAgainst": 15,
+              "goalDifference": 2,
+              "form": null
+            },
+            {
+              "position": 11,
               "team_id": 59,
               "team_ja": "ブラックバーン",
               "team_crest": "https://crests.football-data.org/59.png",
@@ -480,7 +495,7 @@
               "form": null
             },
             {
-              "position": 11,
+              "position": 12,
               "team_id": 325,
               "team_ja": "ポーツマス",
               "team_crest": "https://crests.football-data.org/325.png",
@@ -489,21 +504,6 @@
               "draw": 3,
               "lost": 4,
               "points": 18,
-              "goalsFor": 16,
-              "goalsAgainst": 15,
-              "goalDifference": 1,
-              "form": null
-            },
-            {
-              "position": 12,
-              "team_id": 356,
-              "team_ja": "シェフィールド・ユナイテッド",
-              "team_crest": "https://crests.football-data.org/356.png",
-              "playedGames": 12,
-              "won": 4,
-              "draw": 4,
-              "lost": 4,
-              "points": 16,
               "goalsFor": 16,
               "goalsAgainst": 15,
               "goalDifference": 1,
@@ -574,33 +574,18 @@
               "team_id": 404,
               "team_ja": "レクサム",
               "team_crest": "https://crests.football-data.org/404.png",
-              "playedGames": 12,
+              "playedGames": 13,
               "won": 3,
               "draw": 5,
-              "lost": 4,
+              "lost": 5,
               "points": 14,
               "goalsFor": 15,
-              "goalsAgainst": 18,
-              "goalDifference": -3,
+              "goalsAgainst": 19,
+              "goalDifference": -4,
               "form": null
             },
             {
               "position": 18,
-              "team_id": 348,
-              "team_ja": "チャールトン",
-              "team_crest": "https://crests.football-data.org/348.png",
-              "playedGames": 12,
-              "won": 3,
-              "draw": 5,
-              "lost": 4,
-              "points": 14,
-              "goalsFor": 12,
-              "goalsAgainst": 18,
-              "goalDifference": -6,
-              "form": null
-            },
-            {
-              "position": 19,
               "team_id": 60,
               "team_ja": "Bolton",
               "team_crest": "https://crests.football-data.org/60.png",
@@ -615,6 +600,21 @@
               "form": null
             },
             {
+              "position": 19,
+              "team_id": 348,
+              "team_ja": "チャールトン",
+              "team_crest": "https://crests.football-data.org/348.png",
+              "playedGames": 12,
+              "won": 3,
+              "draw": 5,
+              "lost": 4,
+              "points": 14,
+              "goalsFor": 11,
+              "goalsAgainst": 18,
+              "goalDifference": -7,
+              "form": null
+            },
+            {
               "position": 20,
               "team_id": 68,
               "team_ja": "ノリッジ",
@@ -625,8 +625,8 @@
               "lost": 8,
               "points": 12,
               "goalsFor": 20,
-              "goalsAgainst": 23,
-              "goalDifference": -3,
+              "goalsAgainst": 22,
+              "goalDifference": -2,
               "form": null
             },
             {
