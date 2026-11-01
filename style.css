@@ -2260,3 +2260,21 @@ footer a { color: var(--text-sub); }
   .column-article h2 { font-size: 18px; }
   .column-article-lead { font-size: 14px; }
 }
+
+/* トップのサイト紹介（2026-11-01） */
+.site-intro {
+  width: calc(100% - 32px);
+  max-width: 688px;
+  margin: 12px auto 4px;
+  padding: 14px 16px;
+  background: var(--bg-subtle);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  font-size: 14px;
+  line-height: 1.75;
+}
+.site-intro h2 { font-size: 16px; margin: 0 0 8px; }
+.site-intro p { margin: 0 0 10px; }
+.site-intro-links { margin: 0; padding-left: 1.2em; }
+.site-intro-links li { margin: 2px 0; }
+.site-intro-links a { color: var(--accent); }

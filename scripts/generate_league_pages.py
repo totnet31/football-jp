@@ -894,6 +894,19 @@ def _player_club_list(players: list) -> str:
     return "、".join(f'{p.get("name_ja", "")}（{p.get("club_ja", "")}）' for p in players)
 
 
+def build_about_section(about: dict) -> str:
+    """リーグの説明（league_guides.json の about）。どのリーグにも出せる（2026-11-01 追加）。"""
+    if not about or not about.get("text"):
+        return ""
+    texts = about["text"] if isinstance(about["text"], list) else [about["text"]]
+    parts = ['<section class="league-section lg-about">']
+    parts.append(f'<h2 class="section-title">{esc(about.get("heading", ""))}</h2>')
+    for t in texts:
+        parts.append(f'<p>{esc(t)}</p>')
+    parts.append('</section>')
+    return "\n".join(parts)
+
+
 def build_guide_lead(league_ja: str, players: list, guide: dict, season: str, players_updated: str) -> str:
     n = len(players)
     parts = ['<section class="league-section lg-lead">']
@@ -1201,6 +1214,8 @@ def generate_league_page(
         html_parts.append(f'  <script type="application/ld+json">\n{schema_faq}\n  </script>')
     if guide or watch_only:
         html_parts.append(f'  <style>{GUIDE_CSS}</style>')
+    if (guides.get("about") or {}).get(lg_slug):
+        html_parts.append('  <style>.lg-about{padding:14px 16px;line-height:1.8}.lg-about p{margin:0 0 8px}</style>')
     html_parts.append('  <style>.breadcrumb{font-size:12px;color:#888;padding:8px 16px;background:#f8f9fa;border-bottom:1px solid var(--c-border,#e5e7eb)}.breadcrumb a{color:#555;text-decoration:none}.breadcrumb a:hover{color:var(--c-accent,#0047ab);text-decoration:underline}</style>')
     html_parts.append("</head>")
     html_parts.append('<body data-view="leagues">')
@@ -1225,6 +1240,11 @@ def generate_league_page(
     </div>
   </div>
 </div>""")
+
+    # リーグの説明（どんなリーグか・2026-11-01 追加）
+    about = (guides.get("about") or {}).get(lg_slug)
+    if about:
+        html_parts.append(build_about_section(about))
 
     # ============================
     # 手書きの文章があるリーグ：リード → 早見表 → 次の試合 → どこで見られるか

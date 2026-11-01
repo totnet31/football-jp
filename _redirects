@@ -48,6 +48,13 @@ https://football-jp.pages.dev/* https://football-jp.com/:splat 301
 /en/players/kota-takai-2/  /en/players/kota-takai/  301
 /en/players/kota-takai-2  /en/players/kota-takai/  301
 
+# W杯の歴代ページの一覧（中身は /worldcup/history.html）と、英語版に無い W杯の入口（2026-11-01）
+/worldcup/history/  /worldcup/history  301
+/en/worldcup/history/  /worldcup/history  301
+/en/worldcup/history  /worldcup/history  301
+/en/worldcup/  /worldcup/  301
+/en/worldcup  /worldcup/  301
+
 # [自動生成] /worldcup/country.html?tla=XXX → 静的ページ 301リダイレクト
 /worldcup/country.html?tla=ALG  /worldcup/countries/algeria/  301
 /worldcup/country.html?tla=ARG  /worldcup/countries/argentina/  301
