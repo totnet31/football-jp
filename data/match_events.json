@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-01T07:06:51.286358+09:00",
+  "updated": "2026-11-01T09:47:44.751299+09:00",
   "wikipedia_pages": {
     "64": {
       "title": "2026–27 Liverpool F.C. season",
@@ -26011,7 +26011,7 @@
     "682": {
       "title": null,
       "boxes": [],
-      "fetched_at": "2026-11-01T07:05:33.145622+09:00"
+      "fetched_at": "2026-11-01T09:46:37.093125+09:00"
     },
     "1915": {
       "title": null,
@@ -26020,7 +26020,7 @@
     "6806": {
       "title": null,
       "boxes": [],
-      "fetched_at": "2026-11-01T07:05:38.284884+09:00"
+      "fetched_at": "2026-11-01T09:46:42.756989+09:00"
     },
     "498": {
       "title": "2025–26 Sporting CP season",
@@ -28864,7 +28864,7 @@
     "674": {
       "title": null,
       "boxes": [],
-      "fetched_at": "2026-11-01T07:05:36.529887+09:00"
+      "fetched_at": "2026-11-01T09:46:40.729368+09:00"
     },
     "95": {
       "title": "2026–27 Valencia CF season",
@@ -30232,7 +30232,7 @@
     "712": {
       "title": null,
       "boxes": [],
-      "fetched_at": "2026-11-01T07:05:53.397363+09:00"
+      "fetched_at": "2026-11-01T09:46:44.579494+09:00"
     },
     "58": {
       "title": "2026–27 Aston Villa F.C. season",
@@ -32552,7 +32552,7 @@
     "104": {
       "title": null,
       "boxes": [],
-      "fetched_at": "2026-11-01T07:05:09.707644+09:00"
+      "fetched_at": "2026-11-01T09:46:33.515282+09:00"
     },
     "523": {
       "title": "2026–27 Olympique Lyonnais season",
@@ -47682,10 +47682,124 @@
         "side": "home"
       }
     ],
-    "560623": [],
-    "560624": [],
-    "560625": [],
-    "560629": [],
+    "560623": [
+      {
+        "type": "goal",
+        "player_ja": "Ayari",
+        "player_en": "Ayari",
+        "is_japanese": false,
+        "minute": 11,
+        "minute_raw": "11",
+        "note": "",
+        "side": "home"
+      }
+    ],
+    "560624": [
+      {
+        "type": "goal",
+        "player_ja": "Evanilson",
+        "player_en": "Evanilson",
+        "is_japanese": false,
+        "minute": 31,
+        "minute_raw": "31",
+        "note": "",
+        "side": "home"
+      },
+      {
+        "type": "goal",
+        "player_ja": "Adli",
+        "player_en": "Adli",
+        "is_japanese": false,
+        "minute": 94,
+        "minute_raw": "90+4",
+        "note": "",
+        "side": "home"
+      }
+    ],
+    "560625": [
+      {
+        "type": "goal",
+        "player_ja": "坂元達裕",
+        "player_en": "Sakamoto",
+        "is_japanese": true,
+        "minute": 17,
+        "minute_raw": "17",
+        "note": "",
+        "side": "home"
+      },
+      {
+        "type": "goal",
+        "player_ja": "Awoniyi",
+        "player_en": "Awoniyi",
+        "is_japanese": false,
+        "minute": 37,
+        "minute_raw": "37",
+        "note": "",
+        "side": "home"
+      },
+      {
+        "type": "goal",
+        "player_ja": "Rudoni",
+        "player_en": "Rudoni",
+        "is_japanese": false,
+        "minute": 52,
+        "minute_raw": "52",
+        "note": "",
+        "side": "home"
+      },
+      {
+        "type": "goal",
+        "player_ja": "Le Fée",
+        "player_en": "Le Fée",
+        "is_japanese": false,
+        "minute": 67,
+        "minute_raw": "67",
+        "note": "pen.",
+        "side": "away"
+      }
+    ],
+    "560629": [
+      {
+        "type": "goal",
+        "player_ja": "Iroegbunam",
+        "player_en": "Iroegbunam",
+        "is_japanese": false,
+        "minute": 58,
+        "minute_raw": "58",
+        "note": "",
+        "side": "home"
+      },
+      {
+        "type": "goal",
+        "player_ja": "McBurnie",
+        "player_en": "McBurnie",
+        "is_japanese": false,
+        "minute": 68,
+        "minute_raw": "68",
+        "note": "",
+        "side": "home"
+      },
+      {
+        "type": "goal",
+        "player_ja": "Florentino",
+        "player_en": "Florentino",
+        "is_japanese": false,
+        "minute": 22,
+        "minute_raw": "22",
+        "note": "",
+        "side": "away"
+      },
+      {
+        "type": "goal",
+        "player_ja": "Enciso",
+        "player_en": "Enciso",
+        "is_japanese": false,
+        "minute": 74,
+        "minute_raw": "74",
+        "note": "",
+        "side": "away"
+      }
+    ],
     "561907": [
       {
         "type": "goal",
@@ -47899,6 +48013,50 @@
     ],
     "558853": [],
     "BL2_83669": [],
-    "558851": []
+    "558851": [],
+    "560627": [
+      {
+        "type": "goal",
+        "player_ja": "Gray",
+        "player_en": "Gray",
+        "is_japanese": false,
+        "minute": 25,
+        "minute_raw": "25",
+        "note": "",
+        "side": "home"
+      },
+      {
+        "type": "goal",
+        "player_ja": "van Hecke",
+        "player_en": "van Hecke",
+        "is_japanese": false,
+        "minute": 73,
+        "minute_raw": "73",
+        "note": "",
+        "side": "home"
+      }
+    ],
+    "560628": [
+      {
+        "type": "goal",
+        "player_ja": "Jackson",
+        "player_en": "Jackson",
+        "is_japanese": false,
+        "minute": 39,
+        "minute_raw": "39",
+        "note": "",
+        "side": "home"
+      },
+      {
+        "type": "goal",
+        "player_ja": "鈴木彩艶",
+        "player_en": "Suzuki",
+        "is_japanese": true,
+        "minute": 64,
+        "minute_raw": "64",
+        "note": "o.g.",
+        "side": "away"
+      }
+    ]
   }
 }

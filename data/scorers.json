@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-01T07:03:02.033215+09:00",
+  "updated": "2026-11-01T09:44:44.128122+09:00",
   "competitions": {
     "39": {
       "name_ja": "プレミアリーグ",
@@ -4308,6 +4308,18 @@
           "playedMatches": 9
         },
         {
+          "player_id": 150519,
+          "player_name": "Gabriel Veiga",
+          "nationality": "Spain",
+          "team_id": 503,
+          "team_ja": "ポルト",
+          "team_crest": "https://crests.football-data.org/503.png",
+          "goals": 5,
+          "assists": 4,
+          "penalties": 1,
+          "playedMatches": 10
+        },
+        {
           "player_id": 15919,
           "player_name": "Gonçalo Paciência",
           "nationality": "Portugal",
@@ -4327,7 +4339,7 @@
           "team_ja": "ポルト",
           "team_crest": "https://crests.football-data.org/503.png",
           "goals": 5,
-          "assists": null,
+          "assists": 1,
           "penalties": null,
           "playedMatches": 10
         },
@@ -4352,18 +4364,6 @@
           "team_crest": "https://crests.football-data.org/503.png",
           "goals": 4,
           "assists": 2,
-          "penalties": 1,
-          "playedMatches": 10
-        },
-        {
-          "player_id": 150519,
-          "player_name": "Gabriel Veiga",
-          "nationality": "Spain",
-          "team_id": 503,
-          "team_ja": "ポルト",
-          "team_crest": "https://crests.football-data.org/503.png",
-          "goals": 4,
-          "assists": 4,
           "penalties": 1,
           "playedMatches": 10
         },
