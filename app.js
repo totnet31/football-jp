@@ -1183,7 +1183,7 @@
     if (!section || !list || !newsData || !Array.isArray(newsData.items) || newsData.items.length === 0) {
       return;
     }
-    const items = newsData.items.slice(0, 10);
+    const items = newsData.items.slice(0, 5);
     const INITIAL = 3;
     const renderItem = it => {
       const dateStr = it.published ? it.published.slice(0, 10) : '';
