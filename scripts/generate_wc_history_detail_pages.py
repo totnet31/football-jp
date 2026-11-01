@@ -569,7 +569,7 @@ def generate_html_ja(year, data, extra):
     gtag("config", "G-39G8CVXRW0");
   </script>
   <link rel="stylesheet" href="../../style.css">
-  <link rel="stylesheet" href="../../worldcup-history-detail.css">
+  <link rel="stylesheet" href="/worldcup-history-detail.css">
   <script src="../../wc-nav.js" defer></script>
 </head>
 <body class="wc-page">
@@ -667,7 +667,7 @@ def generate_html_ja(year, data, extra):
 
   <!-- ナビゲーション -->
   <nav class="year-nav">
-    <a href="../" class="year-nav-btn">← 歴代W杯一覧</a>
+    <a href="/worldcup/history.html" class="year-nav-btn">← 歴代W杯一覧</a>
     <div class="year-nav-years">
       {''.join(f'<a href="../{y}/" class="year-link{"active" if y == year else ""}">{y}</a>' for y in [1998,2002,2006,2010,2014,2018,2022])}
     </div>
@@ -1083,7 +1083,7 @@ def generate_html_ja_phase_b(year, data, extra):
     gtag("config", "G-39G8CVXRW0");
   </script>
   <link rel="stylesheet" href="../../style.css">
-  <link rel="stylesheet" href="../../worldcup-history-detail.css">
+  <link rel="stylesheet" href="/worldcup-history-detail.css">
   <script src="../../wc-nav.js" defer></script>
 </head>
 <body class="wc-page">
@@ -1174,7 +1174,7 @@ def generate_html_ja_phase_b(year, data, extra):
 
   <!-- ナビゲーション -->
   <nav class="year-nav">
-    <a href="../" class="year-nav-btn">← 歴代W杯一覧</a>
+    <a href="/worldcup/history.html" class="year-nav-btn">← 歴代W杯一覧</a>
     <div class="year-nav-years">
       {year_nav}
     </div>

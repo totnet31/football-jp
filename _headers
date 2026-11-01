@@ -2,7 +2,7 @@
 # https://developers.cloudflare.com/pages/configuration/headers/
 #
 # AdSense審査対応: 自動生成の薄いページをnoindex化
-# 更新: 2026-05-28
+# 更新: 2026-05-28 / 2026-11-01（W杯ページを追加）
 
 /players/*
   X-Robots-Tag: noindex, nofollow
@@ -25,5 +25,10 @@
 /en/*
   X-Robots-Tag: noindex, nofollow
 
-/worldcup/countries/*
+# W杯2026（7月に終了）の特集・歴代ページは、ページは残したまま検索に出さない（2026-11-01）
+# /worldcup/* は /worldcup/countries（末尾 / 無し）・/worldcup/countries/* も含む
+/worldcup
+  X-Robots-Tag: noindex, nofollow
+
+/worldcup/*
   X-Robots-Tag: noindex, nofollow

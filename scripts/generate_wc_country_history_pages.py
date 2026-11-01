@@ -721,9 +721,9 @@ def build_country_ja(country, wc_history_tournaments):
     gtag("js", new Date());
     gtag("config", "G-39G8CVXRW0");
   </script>
-  <link rel="stylesheet" href="{depth}style.css">
-  <link rel="stylesheet" href="{depth}worldcup-history-detail.css">
-  <script src="{depth}wc-nav.js" defer></script>
+  <link rel="stylesheet" href="/worldcup/style.css">
+  <link rel="stylesheet" href="/worldcup-history-detail.css">
+  <script src="/worldcup/wc-nav.js" defer></script>
   <style>{STYLE_BLOCK}</style>
   <link rel="manifest" href="/manifest.json">
   <meta name="theme-color" content="#0b1220">
@@ -740,8 +740,8 @@ def build_country_ja(country, wc_history_tournaments):
 
   <nav class="breadcrumb" aria-label="パンくず">
     <ol>
-      <li><a href="{depth}">W杯</a></li>
-      <li><a href="../../../">歴史と記録</a></li>
+      <li><a href="/worldcup/">W杯</a></li>
+      <li><a href="/worldcup/history.html">歴史と記録</a></li>
       <li>国別出場履歴</li>
       <li>{country['name_ja']}</li>
     </ol>
@@ -807,15 +807,15 @@ def build_country_ja(country, wc_history_tournaments):
   <section class="wc-section">
     <h2>🔗 関連ページ</h2>
     <ul style="list-style:none;padding:0;display:flex;flex-wrap:wrap;gap:8px;">
-      <li><a href="../../../" style="display:inline-block;padding:8px 14px;background:#fff;border:1px solid var(--c-border);color:var(--c-accent);text-decoration:none;font-size:13px;">← 歴史と記録一覧</a></li>
+      <li><a href="/worldcup/history.html" style="display:inline-block;padding:8px 14px;background:#fff;border:1px solid var(--c-border);color:var(--c-accent);text-decoration:none;font-size:13px;">← 歴史と記録一覧</a></li>
       <li><a href="../../scorers/" style="display:inline-block;padding:8px 14px;background:#fff;border:1px solid var(--c-border);color:var(--c-text);text-decoration:none;font-size:13px;">⚽ 歴代得点王ランキング</a></li>
     </ul>
   </section>
 
   <footer class="wc-footer">
     <p>データ出典: Wikipedia / FIFA公式記録（2022年大会終了時点）</p>
-    <p><a href="../../../">歴史と記録トップへ</a> ／ <a href="{depth}../">football-jp トップへ</a></p>
-    <p class="footer-links"><a href="{depth}../privacy">プライバシーポリシー</a></p>
+    <p><a href="/worldcup/history.html">歴史と記録トップへ</a> ／ <a href="/">football-jp トップへ</a></p>
+    <p class="footer-links"><a href="/privacy">プライバシーポリシー</a></p>
   </footer>
 </div>
 
@@ -919,8 +919,8 @@ def build_country_en(country, wc_history_tournaments):
     gtag("js", new Date());
     gtag("config", "G-39G8CVXRW0");
   </script>
-  <link rel="stylesheet" href="{depth_en}style.css">
-  <link rel="stylesheet" href="{depth_en}../worldcup-history-detail.css">
+  <link rel="stylesheet" href="/worldcup/style.css">
+  <link rel="stylesheet" href="/worldcup-history-detail.css">
   <style>{STYLE_BLOCK}</style>
   <link rel="manifest" href="/manifest.json">
   <meta name="theme-color" content="#0b1220">
@@ -930,8 +930,8 @@ def build_country_en(country, wc_history_tournaments):
 
   <nav class="breadcrumb" aria-label="Breadcrumb">
     <ol>
-      <li><a href="../../../">World Cup</a></li>
-      <li><a href="../../">History &amp; Records</a></li>
+      <li><a href="/worldcup/">World Cup</a></li>
+      <li><a href="/worldcup/history.html">History &amp; Records</a></li>
       <li>Country History</li>
       <li>{country['name_en']}</li>
     </ol>
@@ -997,14 +997,14 @@ def build_country_en(country, wc_history_tournaments):
   <section class="wc-section">
     <h2>🔗 Related Pages</h2>
     <ul style="list-style:none;padding:0;display:flex;flex-wrap:wrap;gap:8px;">
-      <li><a href="../../" style="display:inline-block;padding:8px 14px;background:#fff;border:1px solid var(--c-border);color:var(--c-accent);text-decoration:none;font-size:13px;">← History &amp; Records</a></li>
+      <li><a href="/worldcup/history.html" style="display:inline-block;padding:8px 14px;background:#fff;border:1px solid var(--c-border);color:var(--c-accent);text-decoration:none;font-size:13px;">← History &amp; Records</a></li>
       <li><a href="../../scorers/" style="display:inline-block;padding:8px 14px;background:#fff;border:1px solid var(--c-border);color:var(--c-text);text-decoration:none;font-size:13px;">⚽ All-Time Top Scorers</a></li>
     </ul>
   </section>
 
   <footer class="wc-footer">
     <p>Data source: Wikipedia / FIFA official records (as of 2022 World Cup)</p>
-    <p><a href="../../">History &amp; Records</a> / <a href="../../../../../">football-jp Top</a></p>
+    <p><a href="/worldcup/history.html">History &amp; Records</a> / <a href="../../../../../">football-jp Top</a></p>
     <p class="footer-links"><a href="../../../../../privacy">Privacy Policy</a></p>
   </footer>
 </div>

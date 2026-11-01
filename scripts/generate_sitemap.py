@@ -6,8 +6,6 @@ sitemap.xml を自動生成するスクリプト。
 使い方: python3 scripts/generate_sitemap.py
 """
 
-import json
-import re
 from datetime import datetime, timezone, timedelta
 from pathlib import Path
 from xml.etree import ElementTree as ET
@@ -16,138 +14,10 @@ from xml.etree import ElementTree as ET
 # パス設定
 # ============================
 REPO_ROOT = Path(__file__).parent.parent
-PROFILES_JSON = REPO_ROOT / "data" / "wc2026" / "country_profiles.json"
-PLAYERS_JSON = REPO_ROOT / "data" / "players.json"
 OUTPUT_FILE = REPO_ROOT / "sitemap.xml"
 COLUMN_DIR = REPO_ROOT / "column"
 
 BASE_URL = "https://football-jp.com"
-
-# ============================
-# slug生成（generate_country_pages.py と同じロジック）
-# ============================
-SLUG_OVERRIDE = {
-    "CUW": "curacao-cuw",  # 念のため残しておく（CUW削除済みだが安全のため）
-}
-
-
-def make_slug(en: str) -> str:
-    """英語国名をURLスラグに変換する。"""
-    s = en.lower()
-    s = s.replace("'", "")
-    s = s.replace(".", "")
-    # ウムラウト・特殊文字の変換（ü → u などクラブ名対応を追加）
-    s = (s.replace("ü", "u").replace("ö", "o").replace("ä", "a")
-          .replace("ç", "c").replace("ã", "a").replace("é", "e")
-          .replace("ñ", "n").replace("ó", "o").replace("á", "a")
-          .replace("í", "i").replace("ú", "u"))
-    s = re.sub(r"[^a-z0-9]+", "-", s)
-    s = s.strip("-")
-    return s
-
-
-# ============================
-# URL 定義（固定ページ）
-# ============================
-STATIC_URLS = [
-    # (path, priority, changefreq)
-    ("/",                           "1.0", "daily"),
-    ("/results/",                   "0.9", "daily"),
-    ("/calendar/",                  "0.8", "daily"),
-    ("/standings/",                 "0.8", "daily"),
-    ("/leagues/",                   "0.8", "weekly"),
-    ("/players/",                   "0.8", "weekly"),
-    ("/clubs/",                     "0.7", "weekly"),
-    ("/column/",                    "0.8", "weekly"),
-    ("/privacy",               "0.3", "yearly"),
-    ("/worldcup/",                  "0.9", "daily"),
-    ("/worldcup/japan.html",        "0.9", "daily"),
-    ("/worldcup/groups.html",       "0.7", "weekly"),
-    ("/worldcup/bracket.html",      "0.7", "weekly"),
-    ("/worldcup/rules.html",        "0.5", "monthly"),
-    ("/worldcup/countries.html",    "0.7", "weekly"),
-    ("/worldcup/history.html",      "0.8", "monthly"),
-    # W杯歴代詳細ページ（全大会 1930〜2022）
-    ("/worldcup/history/1930/",     "0.6", "monthly"),
-    ("/worldcup/history/1934/",     "0.6", "monthly"),
-    ("/worldcup/history/1938/",     "0.6", "monthly"),
-    ("/worldcup/history/1950/",     "0.6", "monthly"),
-    ("/worldcup/history/1954/",     "0.6", "monthly"),
-    ("/worldcup/history/1958/",     "0.6", "monthly"),
-    ("/worldcup/history/1962/",     "0.6", "monthly"),
-    ("/worldcup/history/1966/",     "0.6", "monthly"),
-    ("/worldcup/history/1970/",     "0.6", "monthly"),
-    ("/worldcup/history/1974/",     "0.6", "monthly"),
-    ("/worldcup/history/1978/",     "0.6", "monthly"),
-    ("/worldcup/history/1982/",     "0.6", "monthly"),
-    ("/worldcup/history/1986/",     "0.6", "monthly"),
-    ("/worldcup/history/1990/",     "0.6", "monthly"),
-    ("/worldcup/history/1994/",     "0.6", "monthly"),
-    ("/worldcup/history/1998/",     "0.7", "monthly"),
-    ("/worldcup/history/2002/",     "0.7", "monthly"),
-    ("/worldcup/history/2006/",     "0.7", "monthly"),
-    ("/worldcup/history/2010/",     "0.7", "monthly"),
-    ("/worldcup/history/2014/",     "0.7", "monthly"),
-    ("/worldcup/history/2018/",     "0.7", "monthly"),
-    ("/worldcup/history/2022/",     "0.7", "monthly"),
-    # English pages (Phase 1)
-    ("/en/",                        "0.9", "daily"),
-    ("/en/results/",                "0.8", "daily"),
-    ("/en/calendar/",               "0.7", "daily"),
-    ("/en/standings/",              "0.7", "daily"),
-    ("/en/players/",                "0.8", "weekly"),
-    ("/en/clubs/",                  "0.7", "weekly"),
-    ("/en/leagues/",                "0.7", "weekly"),
-    # English W杯歴代詳細ページ（全大会 1930〜2022）
-    ("/en/worldcup/history/1930/",  "0.5", "monthly"),
-    ("/en/worldcup/history/1934/",  "0.5", "monthly"),
-    ("/en/worldcup/history/1938/",  "0.5", "monthly"),
-    ("/en/worldcup/history/1950/",  "0.5", "monthly"),
-    ("/en/worldcup/history/1954/",  "0.5", "monthly"),
-    ("/en/worldcup/history/1958/",  "0.5", "monthly"),
-    ("/en/worldcup/history/1962/",  "0.5", "monthly"),
-    ("/en/worldcup/history/1966/",  "0.5", "monthly"),
-    ("/en/worldcup/history/1970/",  "0.5", "monthly"),
-    ("/en/worldcup/history/1974/",  "0.5", "monthly"),
-    ("/en/worldcup/history/1978/",  "0.5", "monthly"),
-    ("/en/worldcup/history/1982/",  "0.5", "monthly"),
-    ("/en/worldcup/history/1986/",  "0.5", "monthly"),
-    ("/en/worldcup/history/1990/",  "0.5", "monthly"),
-    ("/en/worldcup/history/1994/",  "0.5", "monthly"),
-    ("/en/worldcup/history/1998/",  "0.6", "monthly"),
-    ("/en/worldcup/history/2002/",  "0.6", "monthly"),
-    ("/en/worldcup/history/2006/",  "0.6", "monthly"),
-    ("/en/worldcup/history/2010/",  "0.6", "monthly"),
-    ("/en/worldcup/history/2014/",  "0.6", "monthly"),
-    ("/en/worldcup/history/2018/",  "0.6", "monthly"),
-    ("/en/worldcup/history/2022/",  "0.6", "monthly"),
-    # 歴代得点王ランキングページ
-    ("/worldcup/history/scorers/",      "0.7", "monthly"),
-    ("/en/worldcup/history/scorers/",   "0.6", "monthly"),
-    # 国別出場履歴ページ（日本語）
-    ("/worldcup/history/countries/brazil/",       "0.7", "monthly"),
-    ("/worldcup/history/countries/germany/",      "0.7", "monthly"),
-    ("/worldcup/history/countries/italy/",        "0.7", "monthly"),
-    ("/worldcup/history/countries/argentina/",    "0.7", "monthly"),
-    ("/worldcup/history/countries/france/",       "0.7", "monthly"),
-    ("/worldcup/history/countries/uruguay/",      "0.6", "monthly"),
-    ("/worldcup/history/countries/england/",      "0.7", "monthly"),
-    ("/worldcup/history/countries/spain/",        "0.7", "monthly"),
-    ("/worldcup/history/countries/japan/",        "0.8", "monthly"),
-    ("/worldcup/history/countries/netherlands/",  "0.6", "monthly"),
-    # 国別出場履歴ページ（英語）
-    ("/en/worldcup/history/countries/brazil/",       "0.6", "monthly"),
-    ("/en/worldcup/history/countries/germany/",      "0.6", "monthly"),
-    ("/en/worldcup/history/countries/italy/",        "0.6", "monthly"),
-    ("/en/worldcup/history/countries/argentina/",    "0.6", "monthly"),
-    ("/en/worldcup/history/countries/france/",       "0.6", "monthly"),
-    ("/en/worldcup/history/countries/uruguay/",      "0.5", "monthly"),
-    ("/en/worldcup/history/countries/england/",      "0.6", "monthly"),
-    ("/en/worldcup/history/countries/spain/",        "0.6", "monthly"),
-    ("/en/worldcup/history/countries/japan/",        "0.7", "monthly"),
-    ("/en/worldcup/history/countries/netherlands/",  "0.5", "monthly"),
-]
-
 
 def get_lastmod_jst() -> str:
     """現在のJST日付を YYYY-MM-DD 形式で返す。"""
@@ -155,82 +25,25 @@ def get_lastmod_jst() -> str:
     return datetime.now(jst).strftime("%Y-%m-%d")
 
 
+# ============================
+# 検索に出すページだけを載せる（2026-11-01 AdSense「有用性の低いコンテンツ」対応）
+# _headers で noindex にしている区分（players / clubs / leagues / standings / results /
+# calendar / en / worldcup）は sitemap に載せない。noindex を外した区分ができたら
+# ここに足すこと。
+# ============================
+INDEXABLE_STATIC_URLS = [
+    # (path, priority, changefreq)
+    ("/",         "1.0", "daily"),
+    ("/column/",  "0.8", "weekly"),
+    ("/about",    "0.3", "yearly"),
+    ("/privacy",  "0.3", "yearly"),
+    ("/contact",  "0.3", "yearly"),
+]
+
+
 def build_sitemap() -> str:
-    """sitemap.xml の文字列を生成して返す。"""
+    """sitemap.xml の文字列を生成して返す（検索に出すページだけ）。"""
     lastmod = get_lastmod_jst()
-
-    # country_profiles.json から各国 slug を取得
-    with open(PROFILES_JSON, encoding="utf-8") as f:
-        data = json.load(f)
-
-    country_urls = []
-    for tla, profile in data["profiles"].items():
-        en_name = profile.get("en", "")
-        slug = SLUG_OVERRIDE.get(tla) or make_slug(en_name)
-        path = f"/worldcup/countries/{slug}/"
-        country_urls.append((path, "0.6", "weekly"))
-
-    # players.json から選手ページ slug を取得
-    player_urls = []
-    club_urls = []
-    try:
-        with open(PLAYERS_JSON, encoding="utf-8") as f:
-            players_data = json.load(f)
-        players = players_data.get("players", [])
-
-        # 選手slug（重複対応）
-        used_slugs = {}
-        seen_clubs = {}
-        for p in players:
-            name_en = p.get("name_en", "")
-            base = make_slug(name_en)
-            if base not in used_slugs:
-                used_slugs[base] = 1
-                player_slug = base
-            else:
-                used_slugs[base] += 1
-                player_slug = f"{base}-{used_slugs[base]}"
-            player_urls.append((f"/players/{player_slug}/", "0.7", "weekly"))
-
-            # クラブslug（ユニーク）
-            club_en = p.get("club_en", "")
-            if club_en and club_en not in seen_clubs:
-                seen_clubs[club_en] = True
-                club_slug = make_slug(club_en)
-                club_urls.append((f"/clubs/{club_slug}/", "0.6", "weekly"))
-    except Exception as e:
-        print(f"[WARN] 選手/クラブデータ読み込みエラー: {e}")
-
-    # 英語版選手・クラブページ
-    en_player_urls = [(f"/en{path}", "0.6", "weekly") for path, _, _ in player_urls]
-    en_club_urls = [(f"/en{path}", "0.5", "weekly") for path, _, _ in club_urls]
-
-    # リーグページ（leagues/{slug}/ および en/leagues/{slug}/）
-    league_urls = []
-    try:
-        import sys as _sys
-        _scripts_dir = str(Path(__file__).parent)
-        if _scripts_dir not in _sys.path:
-            _sys.path.insert(0, _scripts_dir)
-        from generate_league_pages import LEAGUE_SLUG_MAP, group_players_by_league
-        league_groups = group_players_by_league(players)
-        for league_ja, lg_players in league_groups.items():
-            slug = LEAGUE_SLUG_MAP.get(league_ja)
-            if slug:
-                league_urls.append((f"/leagues/{slug}/", "0.7", "weekly"))
-    except Exception as e:
-        print(f"[WARN] リーグURLの取得エラー: {e}")
-    # 大会ページ（data/league_guides.json の competitions・日本語のみ。英語版は無いので en には入れない）
-    comp_urls = []
-    try:
-        _g = json.loads((REPO_ROOT / "data" / "league_guides.json").read_text(encoding="utf-8"))
-        for _slug in (_g.get("competitions") or {}):
-            if (REPO_ROOT / "leagues" / _slug / "index.html").exists():
-                comp_urls.append((f"/leagues/{_slug}/", "0.7", "weekly"))
-    except Exception as e:
-        print(f"[WARN] 大会ページURLの取得エラー: {e}")
-
-    en_league_urls = [(f"/en{path}", "0.6", "weekly") for path, _, _ in league_urls]
 
     # column/ 配下を動的スキャン
     column_urls = []
@@ -239,17 +52,7 @@ def build_sitemap() -> str:
             if d.is_dir() and (d / "index.html").exists():
                 column_urls.append((f"/column/{d.name}/", "0.7", "weekly"))
 
-    all_urls = (
-        STATIC_URLS
-        + sorted(country_urls, key=lambda x: x[0])
-        + sorted(player_urls, key=lambda x: x[0])
-        + sorted(club_urls, key=lambda x: x[0])
-        + sorted(league_urls + comp_urls, key=lambda x: x[0])
-        + sorted(en_player_urls, key=lambda x: x[0])
-        + sorted(en_club_urls, key=lambda x: x[0])
-        + sorted(en_league_urls, key=lambda x: x[0])
-        + column_urls
-    )
+    all_urls = INDEXABLE_STATIC_URLS + column_urls
 
     # XML 生成
     lines = ['<?xml version="1.0" encoding="UTF-8"?>']

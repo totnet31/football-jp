@@ -134,6 +134,22 @@
     </a>
   </nav>
 
+  <!-- サイトの紹介（静的・2026-11-01 AdSense 対応で追加） -->
+  <section class="site-intro" aria-labelledby="siteIntroTitle">
+    <h2 id="siteIntroTitle">football-jp でわかること</h2>
+    <p>football-jp は、海外のクラブでプレーする日本人選手の試合予定と結果を、日本時間でまとめているサイトです。プレミアリーグ、ラ・リーガ、セリエA、ブンデスリーガ、リーグ・アン、エールディビジ、ベルギーリーグなどのリーグ戦に加えて、チャンピオンズリーグやヨーロッパリーグ、各国のカップ戦の試合も載せています。下の一覧は「日本人選手の試合のみ」にしぼったり、リーグごとに切り替えたりできます。終わった試合は「結果を見る」、月ごとの予定は「カレンダー」で確かめられます。選手やクラブごとのページでは、所属や今季の出場試合も見られます。</p>
+    <p>海外サッカーは、リーグや大会ごとに見られる配信サービスが分かれています。どのサービスでどの試合が見られるのか、料金はいくらか、無料で見られる試合はあるのかを、リーグ別の「見方・配信」コラムで、各サービスの公式の案内をもとに確認した日付つきでまとめています。はじめての方は、全体を一覧にした配信ガイドから読むのがおすすめです。</p>
+    <ul class="site-intro-links">
+      <li><a href="/column/broadcast-guide-2025-26/">海外サッカーの見方・配信ガイド 2026-27（リーグ・大会別の早見表）</a></li>
+      <li><a href="/column/premier-league-how-to-watch-2026-27/">プレミアリーグの見方 2026-27</a></li>
+      <li><a href="/column/laliga-how-to-watch-2026-27/">ラ・リーガの見方 2026-27</a></li>
+      <li><a href="/column/serie-a-how-to-watch-2026-27/">セリエAの見方 2026-27</a></li>
+      <li><a href="/column/bundesliga-how-to-watch-2026-27/">ブンデスリーガの見方 2026-27</a></li>
+      <li><a href="/column/champions-league-how-to-watch-2026-27/">チャンピオンズリーグの見方 2026-27</a></li>
+      <li><a href="/column/">コラム一覧</a></li>
+    </ul>
+  </section>
+
   <section class="filters" id="matchFilters">
     <label class="toggle">
       <input type="checkbox" id="onlyJp">
@@ -146,16 +162,6 @@
   </section>
 
   <main>
-    <details class="news-section" id="newsSection" hidden>
-      <summary class="news-section-title">
-        <span class="news-icon">📰</span>
-        <span class="news-label">日本人選手 海外サッカーニュース</span>
-        <span class="news-count" id="newsCount"></span>
-        <span class="news-toggle-arrow" aria-hidden="true">▼</span>
-      </summary>
-      <div id="newsList" class="news-list"></div>
-      <p class="news-source-note">出典：サッカーキング・Football Channel・Footballista・THE WORLD・ゲキサカ・Football Zone 各公式RSS／毎朝7時更新</p>
-    </details>
 
     <div id="scheduleView" class="view"></div>
     <div id="resultsView" class="view hidden"></div>
@@ -189,6 +195,17 @@
       </div>
       <div id="scorersContent"></div>
     </div>
+
+    <details class="news-section" id="newsSection" hidden>
+      <summary class="news-section-title">
+        <span class="news-icon">📰</span>
+        <span class="news-label">日本人選手 海外サッカーニュース</span>
+        <span class="news-count" id="newsCount"></span>
+        <span class="news-toggle-arrow" aria-hidden="true">▼</span>
+      </summary>
+      <div id="newsList" class="news-list"></div>
+      <p class="news-source-note">出典：サッカーキング・Football Channel・Footballista・THE WORLD・ゲキサカ・Football Zone 各公式RSS／毎朝7時更新</p>
+    </details>
   </main>
 
   <footer>
@@ -200,9 +217,9 @@
       <a href="/clubs/">クラブ一覧（41）</a>
     </nav>
     <p class="footer-legal">
-      <a href="/about.html">運営者情報</a>
+      <a href="/about">運営者情報</a>
       &nbsp;|&nbsp;
-      <a href="/contact.html">お問い合わせ</a>
+      <a href="/contact">お問い合わせ</a>
       &nbsp;|&nbsp;
       <a href="/privacy">プライバシーポリシー</a>
       &nbsp;|&nbsp;

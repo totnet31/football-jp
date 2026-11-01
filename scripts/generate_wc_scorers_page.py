@@ -361,7 +361,7 @@ def build_ja_page(tournaments_data):
     gtag("config", "G-39G8CVXRW0");
   </script>
   <link rel="stylesheet" href="../../style.css">
-  <link rel="stylesheet" href="../../worldcup-history-detail.css">
+  <link rel="stylesheet" href="/worldcup-history-detail.css">
   <script src="../../wc-nav.js" defer></script>
   <style>
     .scorers-hero {{
@@ -463,7 +463,7 @@ def build_ja_page(tournaments_data):
   <nav class="breadcrumb" aria-label="パンくず">
     <ol>
       <li><a href="../../">W杯</a></li>
-      <li><a href="../">歴史と記録</a></li>
+      <li><a href="/worldcup/history.html">歴史と記録</a></li>
       <li>歴代得点王ランキング</li>
     </ol>
   </nav>
@@ -529,7 +529,7 @@ def build_ja_page(tournaments_data):
   <section class="wc-section">
     <h2>🔗 関連ページ</h2>
     <ul style="list-style:none;padding:0;display:flex;flex-wrap:wrap;gap:8px;">
-      <li><a href="../" style="display:inline-block;padding:8px 14px;background:#fff;border:1px solid var(--c-border);color:var(--c-accent);text-decoration:none;font-size:13px;">← 歴代大会一覧に戻る</a></li>
+      <li><a href="/worldcup/history.html" style="display:inline-block;padding:8px 14px;background:#fff;border:1px solid var(--c-border);color:var(--c-accent);text-decoration:none;font-size:13px;">← 歴代大会一覧に戻る</a></li>
       <li><a href="../countries/brazil/" style="display:inline-block;padding:8px 14px;background:#fff;border:1px solid var(--c-border);color:var(--c-text);text-decoration:none;font-size:13px;">🇧🇷 ブラジルの出場履歴</a></li>
       <li><a href="../countries/germany/" style="display:inline-block;padding:8px 14px;background:#fff;border:1px solid var(--c-border);color:var(--c-text);text-decoration:none;font-size:13px;">🇩🇪 ドイツの出場履歴</a></li>
       <li><a href="../countries/argentina/" style="display:inline-block;padding:8px 14px;background:#fff;border:1px solid var(--c-border);color:var(--c-text);text-decoration:none;font-size:13px;">🇦🇷 アルゼンチンの出場履歴</a></li>
@@ -538,7 +538,7 @@ def build_ja_page(tournaments_data):
 
   <footer class="wc-footer">
     <p>データ出典: Wikipedia / FIFA公式記録（2022年大会終了時点）</p>
-    <p><a href="../../">歴史と記録トップへ</a> ／ <a href="../../../">football-jp トップへ</a></p>
+    <p><a href="/worldcup/history.html">歴史と記録トップへ</a> ／ <a href="../../../">football-jp トップへ</a></p>
     <p class="footer-links"><a href="../../../privacy">プライバシーポリシー</a></p>
   </footer>
 </div>
@@ -698,8 +698,8 @@ def build_en_page(tournaments_data):
 
   <nav class="breadcrumb" aria-label="Breadcrumb">
     <ol>
-      <li><a href="../../../">World Cup</a></li>
-      <li><a href="../">History &amp; Records</a></li>
+      <li><a href="/worldcup/">World Cup</a></li>
+      <li><a href="/worldcup/history.html">History &amp; Records</a></li>
       <li>All-Time Top Scorers</li>
     </ol>
   </nav>
@@ -765,7 +765,7 @@ def build_en_page(tournaments_data):
   <section class="wc-section">
     <h2>🔗 Related Pages</h2>
     <ul style="list-style:none;padding:0;display:flex;flex-wrap:wrap;gap:8px;">
-      <li><a href="../" style="display:inline-block;padding:8px 14px;background:#fff;border:1px solid var(--c-border);color:var(--c-accent);text-decoration:none;font-size:13px;">← World Cup History</a></li>
+      <li><a href="/worldcup/history.html" style="display:inline-block;padding:8px 14px;background:#fff;border:1px solid var(--c-border);color:var(--c-accent);text-decoration:none;font-size:13px;">← World Cup History</a></li>
       <li><a href="../countries/brazil/" style="display:inline-block;padding:8px 14px;background:#fff;border:1px solid var(--c-border);color:var(--c-text);text-decoration:none;font-size:13px;">🇧🇷 Brazil History</a></li>
       <li><a href="../countries/germany/" style="display:inline-block;padding:8px 14px;background:#fff;border:1px solid var(--c-border);color:var(--c-text);text-decoration:none;font-size:13px;">🇩🇪 Germany History</a></li>
       <li><a href="../countries/argentina/" style="display:inline-block;padding:8px 14px;background:#fff;border:1px solid var(--c-border);color:var(--c-text);text-decoration:none;font-size:13px;">🇦🇷 Argentina History</a></li>
@@ -774,7 +774,7 @@ def build_en_page(tournaments_data):
 
   <footer class="wc-footer">
     <p>Data source: Wikipedia / FIFA official records (as of 2022 World Cup)</p>
-    <p><a href="../">History &amp; Records</a> / <a href="../../../../">football-jp Top</a></p>
+    <p><a href="/worldcup/history.html">History &amp; Records</a> / <a href="../../../../">football-jp Top</a></p>
     <p class="footer-links"><a href="../../../../privacy">Privacy Policy</a></p>
   </footer>
 </div>
