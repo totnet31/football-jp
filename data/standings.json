@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-02T07:05:19.424996+09:00",
+  "updated": "2026-11-02T10:21:10.932480+09:00",
   "competitions": {
     "39": {
       "name_ja": "プレミアリーグ",
@@ -2287,6 +2287,21 @@
             },
             {
               "position": 7,
+              "team_id": 5613,
+              "team_ja": "ブラガ",
+              "team_crest": "https://crests.football-data.org/5613.png",
+              "playedGames": 10,
+              "won": 4,
+              "draw": 2,
+              "lost": 4,
+              "points": 14,
+              "goalsFor": 12,
+              "goalsAgainst": 11,
+              "goalDifference": 1,
+              "form": null
+            },
+            {
+              "position": 8,
               "team_id": 5533,
               "team_ja": "ジル・ヴィセンテ",
               "team_crest": "https://crests.football-data.org/5533.png",
@@ -2298,21 +2313,6 @@
               "goalsFor": 8,
               "goalsAgainst": 7,
               "goalDifference": 1,
-              "form": null
-            },
-            {
-              "position": 8,
-              "team_id": 5613,
-              "team_ja": "ブラガ",
-              "team_crest": "https://crests.football-data.org/5613.png",
-              "playedGames": 10,
-              "won": 4,
-              "draw": 2,
-              "lost": 4,
-              "points": 14,
-              "goalsFor": 11,
-              "goalsAgainst": 11,
-              "goalDifference": 0,
               "form": null
             },
             {
@@ -2356,8 +2356,8 @@
               "lost": 4,
               "points": 10,
               "goalsFor": 14,
-              "goalsAgainst": 13,
-              "goalDifference": 1,
+              "goalsAgainst": 14,
+              "goalDifference": 0,
               "form": null
             },
             {

@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-02T07:01:19.063400+09:00",
+  "updated": "2026-11-02T10:18:02.790015+09:00",
   "date_from": "2026-10-26",
   "date_to": "2026-11-16",
   "match_count": 1774,
@@ -53934,6 +53934,15 @@
           "url": "https://www.dazn.com/ja-JP/welcome",
           "source": "league_guides"
         }
+      ],
+      "highlights": [
+        {
+          "broadcaster": "DAZN Football",
+          "video_id": "qfmDKqkNxSI",
+          "url": "https://youtu.be/qfmDKqkNxSI",
+          "title": "Udinese vs Roma | Matchday 10 | 2026-27 Serie A",
+          "yt_published": "2026-11-01"
+        }
       ]
     },
     {
@@ -54508,6 +54517,15 @@
           "url": "https://www.dazn.com/ja-JP/welcome",
           "source": "league_guides"
         }
+      ],
+      "highlights": [
+        {
+          "broadcaster": "DAZN Football",
+          "video_id": "4iET0HfaFOs",
+          "url": "https://youtu.be/4iET0HfaFOs",
+          "title": "Como vs Venezia | Matchday 10 | 2026-27 Serie A",
+          "yt_published": "2026-11-01"
+        }
       ]
     },
     {
@@ -55078,7 +55096,7 @@
       "competition_category": "league",
       "competition_flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
       "kickoff_jst": "2026-11-02T01:30:00+09:00",
-      "status": "TIMED",
+      "status": "FINISHED",
       "stage": "REGULAR_SEASON",
       "matchday": 9,
       "home_id": 64,
@@ -55089,7 +55107,10 @@
       "away_ja": "アーセナル",
       "away_en": "Arsenal",
       "away_crest": "https://crests.football-data.org/57.png",
-      "score": null,
+      "score": {
+        "home": 0,
+        "away": 1
+      },
       "japanese_players": [
         {
           "name_ja": "遠藤航",
@@ -55103,6 +55124,15 @@
           "label": "U-NEXT サッカーパック",
           "url": "https://www.video.unext.jp/lp/football_pack",
           "source": "league_guides"
+        }
+      ],
+      "highlights": [
+        {
+          "broadcaster": "U-NEXT",
+          "video_id": "PGdqEjdqByM",
+          "url": "https://youtu.be/PGdqEjdqByM",
+          "title": "【リヴァプール v アーセナル｜ショートハイライト】プレミアリーグ2026/27 第9節",
+          "yt_published": "2026-11-01"
         }
       ]
     },
@@ -55410,6 +55440,15 @@
           "url": "https://www.dazn.com/ja-JP/welcome",
           "source": "league_guides"
         }
+      ],
+      "highlights": [
+        {
+          "broadcaster": "DAZN Fussball",
+          "video_id": "ketnLRGKVvI",
+          "url": "https://youtu.be/ketnLRGKVvI",
+          "title": "Welttorhüter liefert ab: Athletic Bilbao - Real Sociedad | 11. Spieltag | LALIGA | DAZN Highlights",
+          "yt_published": "2026-11-01"
+        }
       ]
     },
     {
@@ -55431,7 +55470,7 @@
       "away_en": "Famalicão",
       "away_crest": "https://crests.football-data.org/5531.png",
       "score": {
-        "home": 2,
+        "home": 3,
         "away": 0
       },
       "japanese_players": [],
@@ -69523,8 +69562,8 @@
       "_source": "openligadb"
     }
   ],
-  "updated_openligadb": "2026-11-02T07:03:47.033902+09:00",
-  "updated_yt_highlights": "2026-11-02T07:05:18.932718+09:00",
-  "updated_uefa_secondary": "2026-11-02T07:05:53.535962+09:00",
-  "updated_domestic_cups": "2026-11-02T07:06:11.456322+09:00"
+  "updated_openligadb": "2026-11-02T10:20:35.710670+09:00",
+  "updated_yt_highlights": "2026-11-02T10:21:10.424977+09:00",
+  "updated_uefa_secondary": "2026-11-02T10:21:48.152042+09:00",
+  "updated_domestic_cups": "2026-11-02T10:22:06.555263+09:00"
 }
