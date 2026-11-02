@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-03T04:26:19.292071+09:00",
+  "updated": "2026-11-03T07:02:24.145178+09:00",
   "competitions": {
     "39": {
       "name_ja": "プレミアリーグ",
@@ -78,6 +78,18 @@
           "playedMatches": 8
         },
         {
+          "player_id": 171995,
+          "player_name": "Thierno Barry",
+          "nationality": "France",
+          "team_id": 62,
+          "team_ja": "エヴァートン",
+          "team_crest": "https://crests.football-data.org/62.png",
+          "goals": 4,
+          "assists": null,
+          "penalties": null,
+          "playedMatches": 9
+        },
+        {
           "player_id": 133242,
           "player_name": "Rayan Cherki",
           "nationality": "France",
@@ -136,18 +148,6 @@
           "assists": null,
           "penalties": 1,
           "playedMatches": 7
-        },
-        {
-          "player_id": 171995,
-          "player_name": "Thierno Barry",
-          "nationality": "France",
-          "team_id": 62,
-          "team_ja": "エヴァートン",
-          "team_crest": "https://crests.football-data.org/62.png",
-          "goals": 3,
-          "assists": null,
-          "penalties": null,
-          "playedMatches": 9
         },
         {
           "player_id": 190851,
@@ -1254,6 +1254,18 @@
           "playedMatches": 11
         },
         {
+          "player_id": 2237,
+          "player_name": "Ante Budimir",
+          "nationality": "Croatia",
+          "team_id": 79,
+          "team_ja": "オサスナ",
+          "team_crest": "https://crests.football-data.org/79.png",
+          "goals": 8,
+          "assists": null,
+          "penalties": 4,
+          "playedMatches": 11
+        },
+        {
           "player_id": 265516,
           "player_name": "Yassir Zabiri",
           "nationality": "Morocco",
@@ -1275,18 +1287,6 @@
           "goals": 7,
           "assists": 2,
           "penalties": null,
-          "playedMatches": 11
-        },
-        {
-          "player_id": 2237,
-          "player_name": "Ante Budimir",
-          "nationality": "Croatia",
-          "team_id": 79,
-          "team_ja": "オサスナ",
-          "team_crest": "https://crests.football-data.org/79.png",
-          "goals": 7,
-          "assists": null,
-          "penalties": 4,
           "playedMatches": 11
         },
         {
@@ -2766,6 +2766,18 @@
           "playedMatches": 10
         },
         {
+          "player_id": 299423,
+          "player_name": "Simone Lontani",
+          "nationality": "Italy",
+          "team_id": 112,
+          "team_ja": "パルマ",
+          "team_crest": "https://crests.football-data.org/112.png",
+          "goals": 3,
+          "assists": null,
+          "penalties": null,
+          "playedMatches": 10
+        },
+        {
           "player_id": 211564,
           "player_name": "Giorgi Kvernadze",
           "nationality": "Georgia",
@@ -2970,18 +2982,6 @@
           "playedMatches": 10
         },
         {
-          "player_id": 299423,
-          "player_name": "Simone Lontani",
-          "nationality": "Italy",
-          "team_id": 112,
-          "team_ja": "パルマ",
-          "team_crest": "https://crests.football-data.org/112.png",
-          "goals": 2,
-          "assists": null,
-          "penalties": null,
-          "playedMatches": 10
-        },
-        {
           "player_id": 82132,
           "player_name": "Akor Adams",
           "nationality": "Nigeria",
@@ -3180,6 +3180,18 @@
           "playedMatches": 9
         },
         {
+          "player_id": 723,
+          "player_name": "Ludovic Ajorque",
+          "nationality": "France",
+          "team_id": 512,
+          "team_ja": "ブレスト",
+          "team_crest": "https://crests.football-data.org/512.png",
+          "goals": 4,
+          "assists": 1,
+          "penalties": null,
+          "playedMatches": 9
+        },
+        {
           "player_id": 244696,
           "player_name": "Paris Brunner",
           "nationality": "Germany",
@@ -3262,18 +3274,6 @@
           "assists": null,
           "penalties": null,
           "playedMatches": 6
-        },
-        {
-          "player_id": 723,
-          "player_name": "Ludovic Ajorque",
-          "nationality": "France",
-          "team_id": 512,
-          "team_ja": "ブレスト",
-          "team_crest": "https://crests.football-data.org/512.png",
-          "goals": 3,
-          "assists": 1,
-          "penalties": null,
-          "playedMatches": 9
         },
         {
           "player_id": 292172,
@@ -4254,9 +4254,9 @@
           "team_id": 1903,
           "team_ja": "ベンフィカ",
           "team_crest": "https://crests.football-data.org/1903.png",
-          "goals": 9,
+          "goals": 10,
           "assists": 3,
-          "penalties": 2,
+          "penalties": 3,
           "playedMatches": 10
         },
         {
@@ -4461,7 +4461,7 @@
           "goals": 3,
           "assists": null,
           "penalties": null,
-          "playedMatches": 9
+          "playedMatches": 10
         },
         {
           "player_id": 142160,
@@ -4509,7 +4509,7 @@
           "goals": 3,
           "assists": null,
           "penalties": null,
-          "playedMatches": 5
+          "playedMatches": 6
         },
         {
           "player_id": 221262,
@@ -4605,7 +4605,7 @@
           "goals": 2,
           "assists": null,
           "penalties": null,
-          "playedMatches": 9
+          "playedMatches": 10
         },
         {
           "player_id": 128825,
@@ -4653,7 +4653,7 @@
           "goals": 2,
           "assists": 2,
           "penalties": 1,
-          "playedMatches": 7
+          "playedMatches": 8
         },
         {
           "player_id": 82403,

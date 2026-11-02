@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-03T04:25:12.555408+09:00",
+  "updated": "2026-11-03T07:01:16.966207+09:00",
   "date_from": "2026-10-27",
   "date_to": "2026-11-17",
   "match_count": 1774,
@@ -55503,7 +55503,7 @@
       "away_crest": "https://crests.football-data.org/99.png",
       "score": {
         "home": 2,
-        "away": 3
+        "away": 4
       },
       "japanese_players": [],
       "broadcasters": [
@@ -55512,6 +55512,15 @@
           "label": "DAZN",
           "url": "https://www.dazn.com/ja-JP/welcome",
           "source": "league_guides"
+        }
+      ],
+      "highlights": [
+        {
+          "broadcaster": "DAZN",
+          "video_id": "YhbsqhC5M5o",
+          "url": "https://youtu.be/YhbsqhC5M5o",
+          "title": "【サッスオーロ×フィオレンティーナ｜ハイライト】セリエA第10節｜2026-27シーズン",
+          "yt_published": "2026-11-02"
         }
       ]
     },
@@ -55522,7 +55531,7 @@
       "competition_category": "league",
       "competition_flag": "🇮🇹",
       "kickoff_jst": "2026-11-03T04:45:00+09:00",
-      "status": "TIMED",
+      "status": "FINISHED",
       "stage": "REGULAR_SEASON",
       "matchday": 10,
       "home_id": 102,
@@ -55533,7 +55542,10 @@
       "away_ja": "パルマ",
       "away_en": "Parma",
       "away_crest": "https://crests.football-data.org/112.png",
-      "score": null,
+      "score": {
+        "home": 0,
+        "away": 3
+      },
       "japanese_players": [],
       "broadcasters": [
         {
@@ -55551,7 +55563,7 @@
       "competition_category": "league",
       "competition_flag": "🇫🇷",
       "kickoff_jst": "2026-11-03T04:45:00+09:00",
-      "status": "TIMED",
+      "status": "FINISHED",
       "stage": "REGULAR_SEASON",
       "matchday": 9,
       "home_id": 525,
@@ -55562,7 +55574,10 @@
       "away_ja": "ブレスト",
       "away_en": "Brest",
       "away_crest": "https://crests.football-data.org/512.png",
-      "score": null,
+      "score": {
+        "home": 0,
+        "away": 2
+      },
       "japanese_players": [],
       "broadcasters": [
         {
@@ -55580,7 +55595,7 @@
       "competition_category": "league",
       "competition_flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
       "kickoff_jst": "2026-11-03T05:00:00+09:00",
-      "status": "TIMED",
+      "status": "FINISHED",
       "stage": "REGULAR_SEASON",
       "matchday": 9,
       "home_id": 67,
@@ -55591,7 +55606,10 @@
       "away_ja": "エヴァートン",
       "away_en": "Everton",
       "away_crest": "https://crests.football-data.org/62.png",
-      "score": null,
+      "score": {
+        "home": 0,
+        "away": 1
+      },
       "japanese_players": [],
       "broadcasters": [
         {
@@ -55609,7 +55627,7 @@
       "competition_category": "league",
       "competition_flag": "🇪🇸",
       "kickoff_jst": "2026-11-03T05:00:00+09:00",
-      "status": "TIMED",
+      "status": "FINISHED",
       "stage": "REGULAR_SEASON",
       "matchday": 11,
       "home_id": 560,
@@ -55620,7 +55638,10 @@
       "away_ja": "オサスナ",
       "away_en": "Osasuna",
       "away_crest": "https://crests.football-data.org/79.png",
-      "score": null,
+      "score": {
+        "home": 2,
+        "away": 1
+      },
       "japanese_players": [],
       "broadcasters": [
         {
@@ -55644,7 +55665,7 @@
       "competition_category": "league",
       "competition_flag": "🇵🇹",
       "kickoff_jst": "2026-11-03T05:15:00+09:00",
-      "status": "TIMED",
+      "status": "FINISHED",
       "stage": "REGULAR_SEASON",
       "matchday": 10,
       "home_id": 1903,
@@ -55655,7 +55676,10 @@
       "away_ja": "アルヴェルカ",
       "away_en": "Alverca",
       "away_crest": "https://crests.football-data.org/7822.png",
-      "score": null,
+      "score": {
+        "home": 1,
+        "away": 0
+      },
       "japanese_players": [],
       "broadcasters": [
         {
@@ -55673,7 +55697,7 @@
       "competition_category": "league",
       "competition_flag": "🇵🇹",
       "kickoff_jst": "2026-11-03T05:15:00+09:00",
-      "status": "TIMED",
+      "status": "FINISHED",
       "stage": "REGULAR_SEASON",
       "matchday": 10,
       "home_id": 5533,
@@ -55684,7 +55708,10 @@
       "away_ja": "ヴィトーリア",
       "away_en": "Vitória SC",
       "away_crest": "https://crests.football-data.org/5543.png",
-      "score": null,
+      "score": {
+        "home": 0,
+        "away": 0
+      },
       "japanese_players": [],
       "broadcasters": [
         {
@@ -69565,8 +69592,8 @@
       "_source": "openligadb"
     }
   ],
-  "updated_openligadb": "2026-11-03T04:27:38.071877+09:00",
-  "updated_yt_highlights": "2026-11-03T04:29:02.620157+09:00",
-  "updated_uefa_secondary": "2026-11-03T04:29:38.672884+09:00",
-  "updated_domestic_cups": "2026-11-03T04:29:56.422832+09:00"
+  "updated_openligadb": "2026-11-03T07:03:42.979226+09:00",
+  "updated_yt_highlights": "2026-11-03T07:04:15.767093+09:00",
+  "updated_uefa_secondary": "2026-11-03T07:04:50.722170+09:00",
+  "updated_domestic_cups": "2026-11-03T07:05:08.323070+09:00"
 }
