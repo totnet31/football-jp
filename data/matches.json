@@ -1,7 +1,7 @@
 {
-  "updated": "2026-11-02T19:13:32.554794+09:00",
-  "date_from": "2026-10-26",
-  "date_to": "2026-11-16",
+  "updated": "2026-11-03T04:25:12.555408+09:00",
+  "date_from": "2026-10-27",
+  "date_to": "2026-11-17",
   "match_count": 1774,
   "_note": "累積保持モード：フェッチ窓外の過去試合データはそのまま保持される。",
   "matches": [
@@ -55490,7 +55490,7 @@
       "competition_category": "league",
       "competition_flag": "🇮🇹",
       "kickoff_jst": "2026-11-03T02:30:00+09:00",
-      "status": "TIMED",
+      "status": "FINISHED",
       "stage": "REGULAR_SEASON",
       "matchday": 10,
       "home_id": 471,
@@ -55501,7 +55501,10 @@
       "away_ja": "フィオレンティーナ",
       "away_en": "Fiorentina",
       "away_crest": "https://crests.football-data.org/99.png",
-      "score": null,
+      "score": {
+        "home": 2,
+        "away": 3
+      },
       "japanese_players": [],
       "broadcasters": [
         {
@@ -56342,6 +56345,44 @@
       ]
     },
     {
+      "id": "EL_2026-11-04_Rennes_Olympi",
+      "competition_id": 3,
+      "competition_ja": "UEFAヨーロッパリーグ",
+      "competition_category": "european_cup",
+      "competition_flag": "🇪🇺",
+      "kickoff_jst": "2026-11-05T00:30:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 4,
+      "home_id": 529,
+      "home_ja": "レンヌ",
+      "home_en": "Stade Rennais",
+      "home_crest": "https://crests.football-data.org/529.png",
+      "away_id": 654,
+      "away_ja": "オリンピアコス",
+      "away_en": "Olympiacos",
+      "away_crest": "https://crests.football-data.org/654.png",
+      "score": null,
+      "japanese_players": [],
+      "broadcasters": [
+        {
+          "name": "WOWOW",
+          "label": "WOWOW",
+          "url": "https://news.wowow.co.jp/5700.html",
+          "source": "league_guides",
+          "affiliate_url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l"
+        },
+        {
+          "name": "Lemino",
+          "label": "Lemino（Leminoプレミアム）",
+          "url": "https://lemino.docomo.ne.jp/leminonews/articles/uefa-europa-league-schedule-2026-27",
+          "source": "league_guides"
+        }
+      ],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 UEFA Europa League league phase"
+    },
+    {
       "id": 575386,
       "competition_id": 2,
       "competition_ja": "UEFAチャンピオンズリーグ",
@@ -57081,44 +57122,6 @@
       "away_ja": "ザルツブルク",
       "away_en": "Red Bull Salzburg",
       "away_crest": null,
-      "score": null,
-      "japanese_players": [],
-      "broadcasters": [
-        {
-          "name": "WOWOW",
-          "label": "WOWOW",
-          "url": "https://news.wowow.co.jp/5700.html",
-          "source": "league_guides",
-          "affiliate_url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l"
-        },
-        {
-          "name": "Lemino",
-          "label": "Lemino（Leminoプレミアム）",
-          "url": "https://lemino.docomo.ne.jp/leminonews/articles/uefa-europa-league-schedule-2026-27",
-          "source": "league_guides"
-        }
-      ],
-      "_source": "wikipedia",
-      "_source_page": "2026–27 UEFA Europa League league phase"
-    },
-    {
-      "id": "EL_2026-11-05_Rennes_Olympi",
-      "competition_id": 3,
-      "competition_ja": "UEFAヨーロッパリーグ",
-      "competition_category": "european_cup",
-      "competition_flag": "🇪🇺",
-      "kickoff_jst": "2026-11-06T02:45:00+09:00",
-      "status": "SCHEDULED",
-      "stage": "LEAGUE_STAGE",
-      "matchday": 4,
-      "home_id": 529,
-      "home_ja": "レンヌ",
-      "home_en": "Stade Rennais",
-      "home_crest": "https://crests.football-data.org/529.png",
-      "away_id": 654,
-      "away_ja": "オリンピアコス",
-      "away_en": "Olympiacos",
-      "away_crest": "https://crests.football-data.org/654.png",
       "score": null,
       "japanese_players": [],
       "broadcasters": [
@@ -69562,8 +69565,8 @@
       "_source": "openligadb"
     }
   ],
-  "updated_openligadb": "2026-11-02T19:16:26.724743+09:00",
-  "updated_yt_highlights": "2026-11-02T19:17:02.928275+09:00",
-  "updated_uefa_secondary": "2026-11-02T19:17:41.260438+09:00",
-  "updated_domestic_cups": "2026-11-02T19:18:00.832026+09:00"
+  "updated_openligadb": "2026-11-03T04:27:38.071877+09:00",
+  "updated_yt_highlights": "2026-11-03T04:29:02.620157+09:00",
+  "updated_uefa_secondary": "2026-11-03T04:29:38.672884+09:00",
+  "updated_domestic_cups": "2026-11-03T04:29:56.422832+09:00"
 }
