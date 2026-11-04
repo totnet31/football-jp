@@ -1,8 +1,8 @@
 {
-  "updated": "2026-11-05T02:02:17.854587+09:00",
+  "updated": "2026-11-05T07:01:16.752437+09:00",
   "date_from": "2026-10-29",
   "date_to": "2026-11-19",
-  "match_count": 1774,
+  "match_count": 1782,
   "_note": "累積保持モード：フェッチ窓外の過去試合データはそのまま保持される。",
   "matches": [
     {
@@ -56486,7 +56486,7 @@
       "competition_category": "european_cup",
       "competition_flag": "🇪🇺",
       "kickoff_jst": "2026-11-05T00:30:00+09:00",
-      "status": "SCHEDULED",
+      "status": "FINISHED",
       "stage": "LEAGUE_STAGE",
       "matchday": 4,
       "home_id": 529,
@@ -56497,7 +56497,10 @@
       "away_ja": "オリンピアコス",
       "away_en": "Olympiacos",
       "away_crest": "https://crests.football-data.org/654.png",
-      "score": null,
+      "score": {
+        "home": 0,
+        "away": 0
+      },
       "japanese_players": [],
       "broadcasters": [
         {
@@ -56524,7 +56527,7 @@
       "competition_category": "europe",
       "competition_flag": "🇪🇺",
       "kickoff_jst": "2026-11-05T02:45:00+09:00",
-      "status": "TIMED",
+      "status": "FINISHED",
       "stage": "LEAGUE_STAGE",
       "matchday": 4,
       "home_id": 1899,
@@ -56535,7 +56538,10 @@
       "away_ja": "レアル・マドリー",
       "away_en": "Real Madrid",
       "away_crest": "https://crests.football-data.org/86.png",
-      "score": null,
+      "score": {
+        "home": 2,
+        "away": 3
+      },
       "japanese_players": [],
       "broadcasters": [
         {
@@ -56560,7 +56566,7 @@
       "competition_category": "europe",
       "competition_flag": "🇪🇺",
       "kickoff_jst": "2026-11-05T02:45:00+09:00",
-      "status": "TIMED",
+      "status": "FINISHED",
       "stage": "LEAGUE_STAGE",
       "matchday": 4,
       "home_id": 613,
@@ -56571,7 +56577,10 @@
       "away_ja": "リヴァプール",
       "away_en": "Liverpool",
       "away_crest": "https://crests.football-data.org/64.png",
-      "score": null,
+      "score": {
+        "home": 3,
+        "away": 2
+      },
       "japanese_players": [
         {
           "name_ja": "遠藤航",
@@ -56695,7 +56704,7 @@
       "competition_category": "europe",
       "competition_flag": "🇪🇺",
       "kickoff_jst": "2026-11-05T05:00:00+09:00",
-      "status": "TIMED",
+      "status": "FINISHED",
       "stage": "LEAGUE_STAGE",
       "matchday": 4,
       "home_id": 721,
@@ -56706,7 +56715,10 @@
       "away_ja": "マンチェスター・シティ",
       "away_en": "Man City",
       "away_crest": "https://crests.football-data.org/65.png",
-      "score": null,
+      "score": {
+        "home": 2,
+        "away": 3
+      },
       "japanese_players": [],
       "broadcasters": [
         {
@@ -56731,7 +56743,7 @@
       "competition_category": "europe",
       "competition_flag": "🇪🇺",
       "kickoff_jst": "2026-11-05T05:00:00+09:00",
-      "status": "TIMED",
+      "status": "FINISHED",
       "stage": "LEAGUE_STAGE",
       "matchday": 4,
       "home_id": 930,
@@ -56742,7 +56754,10 @@
       "away_ja": "アーセナル",
       "away_en": "Arsenal",
       "away_crest": "https://crests.football-data.org/57.png",
-      "score": null,
+      "score": {
+        "home": 1,
+        "away": 2
+      },
       "japanese_players": [],
       "broadcasters": [
         {
@@ -56767,7 +56782,7 @@
       "competition_category": "europe",
       "competition_flag": "🇪🇺",
       "kickoff_jst": "2026-11-05T05:00:00+09:00",
-      "status": "TIMED",
+      "status": "FINISHED",
       "stage": "LEAGUE_STAGE",
       "matchday": 4,
       "home_id": 674,
@@ -56778,7 +56793,10 @@
       "away_ja": "クラブ・ブルッヘ",
       "away_en": "Club Brugge",
       "away_crest": "https://crests.football-data.org/851.png",
-      "score": null,
+      "score": {
+        "home": 1,
+        "away": 2
+      },
       "japanese_players": [
         {
           "name_ja": "佐野航大",
@@ -56809,7 +56827,7 @@
       "competition_category": "europe",
       "competition_flag": "🇪🇺",
       "kickoff_jst": "2026-11-05T05:00:00+09:00",
-      "status": "TIMED",
+      "status": "FINISHED",
       "stage": "LEAGUE_STAGE",
       "matchday": 4,
       "home_id": 4,
@@ -56820,7 +56838,10 @@
       "away_ja": "ベティス",
       "away_en": "Real Betis",
       "away_crest": "https://crests.football-data.org/90.png",
-      "score": null,
+      "score": {
+        "home": 2,
+        "away": 1
+      },
       "japanese_players": [],
       "broadcasters": [
         {
@@ -56845,7 +56866,7 @@
       "competition_category": "europe",
       "competition_flag": "🇪🇺",
       "kickoff_jst": "2026-11-05T05:00:00+09:00",
-      "status": "TIMED",
+      "status": "FINISHED",
       "stage": "LEAGUE_STAGE",
       "matchday": 4,
       "home_id": 503,
@@ -56856,7 +56877,10 @@
       "away_ja": "ナポリ",
       "away_en": "Napoli",
       "away_crest": "https://crests.football-data.org/113.png",
-      "score": null,
+      "score": {
+        "home": 4,
+        "away": 1
+      },
       "japanese_players": [],
       "broadcasters": [
         {
@@ -56881,7 +56905,7 @@
       "competition_category": "europe",
       "competition_flag": "🇪🇺",
       "kickoff_jst": "2026-11-05T05:00:00+09:00",
-      "status": "TIMED",
+      "status": "FINISHED",
       "stage": "LEAGUE_STAGE",
       "matchday": 4,
       "home_id": 546,
@@ -56892,7 +56916,10 @@
       "away_ja": "コモ",
       "away_en": "Como 1907",
       "away_crest": "https://crests.football-data.org/7397.png",
-      "score": null,
+      "score": {
+        "home": 1,
+        "away": 9
+      },
       "japanese_players": [],
       "broadcasters": [
         {
@@ -56917,7 +56944,7 @@
       "competition_category": "europe",
       "competition_flag": "🇪🇺",
       "kickoff_jst": "2026-11-05T05:00:00+09:00",
-      "status": "TIMED",
+      "status": "FINISHED",
       "stage": "LEAGUE_STAGE",
       "matchday": 4,
       "home_id": 5720,
@@ -56928,7 +56955,10 @@
       "away_ja": "Sabah FK",
       "away_en": "Sabah FK",
       "away_crest": "https://crests.football-data.org/10233.png",
-      "score": null,
+      "score": {
+        "home": 4,
+        "away": 1
+      },
       "japanese_players": [],
       "broadcasters": [
         {
@@ -59456,35 +59486,6 @@
       ]
     },
     {
-      "id": 559637,
-      "competition_id": 61,
-      "competition_ja": "リーグ・アン",
-      "competition_category": "league",
-      "competition_flag": "🇫🇷",
-      "kickoff_jst": "2026-11-08T01:15:00+09:00",
-      "status": "TIMED",
-      "stage": "REGULAR_SEASON",
-      "matchday": 10,
-      "home_id": 519,
-      "home_ja": "オセール",
-      "home_en": "Auxerre",
-      "home_crest": "https://crests.football-data.org/519.png",
-      "away_id": 1045,
-      "away_ja": "パリFC",
-      "away_en": "Paris FC",
-      "away_crest": "https://crests.football-data.org/1045.png",
-      "score": null,
-      "japanese_players": [],
-      "broadcasters": [
-        {
-          "name": "DAZN",
-          "label": "DAZN",
-          "url": "https://www.dazn.com/ja-JP/welcome",
-          "source": "league_guides"
-        }
-      ]
-    },
-    {
       "id": 558535,
       "competition_id": 135,
       "competition_ja": "セリエA",
@@ -59648,6 +59649,35 @@
       ]
     },
     {
+      "id": 559637,
+      "competition_id": 61,
+      "competition_ja": "リーグ・アン",
+      "competition_category": "league",
+      "competition_flag": "🇫🇷",
+      "kickoff_jst": "2026-11-08T03:00:00+09:00",
+      "status": "TIMED",
+      "stage": "REGULAR_SEASON",
+      "matchday": 10,
+      "home_id": 519,
+      "home_ja": "オセール",
+      "home_en": "Auxerre",
+      "home_crest": "https://crests.football-data.org/519.png",
+      "away_id": 1045,
+      "away_ja": "パリFC",
+      "away_en": "Paris FC",
+      "away_crest": "https://crests.football-data.org/1045.png",
+      "score": null,
+      "japanese_players": [],
+      "broadcasters": [
+        {
+          "name": "DAZN",
+          "label": "DAZN",
+          "url": "https://www.dazn.com/ja-JP/welcome",
+          "source": "league_guides"
+        }
+      ]
+    },
+    {
       "id": 567347,
       "competition_id": 94,
       "competition_ja": "プリメイラ・リーガ",
@@ -59735,35 +59765,6 @@
       ]
     },
     {
-      "id": 559635,
-      "competition_id": 61,
-      "competition_ja": "リーグ・アン",
-      "competition_category": "league",
-      "competition_flag": "🇫🇷",
-      "kickoff_jst": "2026-11-08T04:45:00+09:00",
-      "status": "TIMED",
-      "stage": "REGULAR_SEASON",
-      "matchday": 10,
-      "home_id": 524,
-      "home_ja": "PSG",
-      "home_en": "PSG",
-      "home_crest": "https://crests.football-data.org/524.png",
-      "away_id": 531,
-      "away_ja": "Troyes",
-      "away_en": "Troyes",
-      "away_crest": "https://crests.football-data.org/531.png",
-      "score": null,
-      "japanese_players": [],
-      "broadcasters": [
-        {
-          "name": "DAZN",
-          "label": "DAZN",
-          "url": "https://www.dazn.com/ja-JP/welcome",
-          "source": "league_guides"
-        }
-      ]
-    },
-    {
       "id": 564741,
       "competition_id": 140,
       "competition_ja": "ラ・リーガ",
@@ -59829,6 +59830,35 @@
           "name": "U-NEXT",
           "label": "U-NEXT サッカーパック",
           "url": "https://www.video.unext.jp/lp/football_pack",
+          "source": "league_guides"
+        }
+      ]
+    },
+    {
+      "id": 559635,
+      "competition_id": 61,
+      "competition_ja": "リーグ・アン",
+      "competition_category": "league",
+      "competition_flag": "🇫🇷",
+      "kickoff_jst": "2026-11-08T05:05:00+09:00",
+      "status": "TIMED",
+      "stage": "REGULAR_SEASON",
+      "matchday": 10,
+      "home_id": 524,
+      "home_ja": "PSG",
+      "home_en": "PSG",
+      "home_crest": "https://crests.football-data.org/524.png",
+      "away_id": 531,
+      "away_ja": "Troyes",
+      "away_en": "Troyes",
+      "away_crest": "https://crests.football-data.org/531.png",
+      "score": null,
+      "japanese_players": [],
+      "broadcasters": [
+        {
+          "name": "DAZN",
+          "label": "DAZN",
+          "url": "https://www.dazn.com/ja-JP/welcome",
           "source": "league_guides"
         }
       ]
@@ -62816,6 +62846,206 @@
       "_source": "openligadb"
     },
     {
+      "id": "CUP_DFB_2026-12-01_Holste_FCKoln",
+      "competition_id": 81,
+      "competition_ja": "DFBポカール",
+      "competition_category": "domestic_cup",
+      "competition_flag": "🇩🇪",
+      "kickoff_jst": "2026-12-02T02:00:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "Round of 16",
+      "matchday": null,
+      "home_id": null,
+      "home_ja": "ホルシュタイン・キール",
+      "home_en": "Holstein Kiel",
+      "home_crest": null,
+      "away_id": 1,
+      "away_ja": "ケルン",
+      "away_en": "1. FC Köln",
+      "away_crest": "https://crests.football-data.org/1.png",
+      "score": null,
+      "japanese_players": [
+        {
+          "name_ja": "髙橋仁胡",
+          "position": "DF",
+          "side": "home"
+        },
+        {
+          "name_ja": "安部大晴",
+          "position": "MF",
+          "side": "home"
+        },
+        {
+          "name_ja": "関根大輝",
+          "position": "DF",
+          "side": "home"
+        }
+      ],
+      "broadcasters": [],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 DFB-Pokal"
+    },
+    {
+      "id": "CUP_DFB_2026-12-01_Boruss_Darmst",
+      "competition_id": 81,
+      "competition_ja": "DFBポカール",
+      "competition_category": "domestic_cup",
+      "competition_flag": "🇩🇪",
+      "kickoff_jst": "2026-12-02T04:45:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "Round of 16",
+      "matchday": null,
+      "home_id": 18,
+      "home_ja": "ボルシアMG",
+      "home_en": "M'gladbach",
+      "home_crest": "https://crests.football-data.org/18.png",
+      "away_id": null,
+      "away_ja": "ダルムシュタット",
+      "away_en": "Darmstadt 98",
+      "away_crest": null,
+      "score": null,
+      "japanese_players": [
+        {
+          "name_ja": "町野修斗",
+          "position": "FW",
+          "side": "home"
+        },
+        {
+          "name_ja": "板倉滉",
+          "position": "DF",
+          "side": "home"
+        },
+        {
+          "name_ja": "橋岡大樹",
+          "position": "DF",
+          "side": "home"
+        },
+        {
+          "name_ja": "宇野禅斗",
+          "position": "MF",
+          "side": "home"
+        },
+        {
+          "name_ja": "秋山裕紀",
+          "position": "MF",
+          "side": "away"
+        }
+      ],
+      "broadcasters": [],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 DFB-Pokal"
+    },
+    {
+      "id": "CUP_DFB_2026-12-01_Bayern_Hertha",
+      "competition_id": 81,
+      "competition_ja": "DFBポカール",
+      "competition_category": "domestic_cup",
+      "competition_flag": "🇩🇪",
+      "kickoff_jst": "2026-12-02T04:45:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "Round of 16",
+      "matchday": null,
+      "home_id": 5,
+      "home_ja": "バイエルン",
+      "home_en": "Bayern",
+      "home_crest": "https://crests.football-data.org/5.png",
+      "away_id": null,
+      "away_ja": "ヘルタ・ベルリン",
+      "away_en": "Hertha BSC",
+      "away_crest": null,
+      "score": null,
+      "japanese_players": [
+        {
+          "name_ja": "伊藤洋輝",
+          "position": "DF",
+          "side": "home"
+        }
+      ],
+      "broadcasters": [],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 DFB-Pokal"
+    },
+    {
+      "id": "CUP_DFB_2026-12-02_FCKais_SCFrei",
+      "competition_id": 81,
+      "competition_ja": "DFBポカール",
+      "competition_category": "domestic_cup",
+      "competition_flag": "🇩🇪",
+      "kickoff_jst": "2026-12-03T02:00:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "Round of 16",
+      "matchday": null,
+      "home_id": null,
+      "home_ja": "カイザースラウテルン",
+      "home_en": "1. FC Kaiserslautern",
+      "home_crest": null,
+      "away_id": 17,
+      "away_ja": "フライブルク",
+      "away_en": "Freiburg",
+      "away_crest": "https://crests.football-data.org/17.png",
+      "score": null,
+      "japanese_players": [
+        {
+          "name_ja": "鈴木唯人",
+          "position": "MF/FW",
+          "side": "away"
+        },
+        {
+          "name_ja": "長田澪",
+          "position": "GK",
+          "side": "away"
+        },
+        {
+          "name_ja": "山本理仁",
+          "position": "MF",
+          "side": "away"
+        },
+        {
+          "name_ja": "後藤啓介",
+          "position": "FW",
+          "side": "away"
+        }
+      ],
+      "broadcasters": [],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 DFB-Pokal"
+    },
+    {
+      "id": "CUP_DFB_2026-12-02_Eintra_Boruss",
+      "competition_id": 81,
+      "competition_ja": "DFBポカール",
+      "competition_category": "domestic_cup",
+      "competition_flag": "🇩🇪",
+      "kickoff_jst": "2026-12-03T04:45:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "Round of 16",
+      "matchday": null,
+      "home_id": 19,
+      "home_ja": "フランクフルト",
+      "home_en": "Frankfurt",
+      "home_crest": "https://crests.football-data.org/19.png",
+      "away_id": 4,
+      "away_ja": "ドルトムント",
+      "away_en": "Dortmund",
+      "away_crest": "https://crests.football-data.org/4.png",
+      "score": null,
+      "japanese_players": [
+        {
+          "name_ja": "堂安律",
+          "position": "MF/FW",
+          "side": "home"
+        },
+        {
+          "name_ja": "小杉啓太",
+          "position": "FW/DF",
+          "side": "home"
+        }
+      ],
+      "broadcasters": [],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 DFB-Pokal"
+    },
+    {
       "id": "CUP_BEL_2026-12-04_UnionS_Wester",
       "competition_id": 147,
       "competition_ja": "ベルギーカップ",
@@ -64693,6 +64923,101 @@
       ],
       "broadcasters": [],
       "_source": "openligadb"
+    },
+    {
+      "id": "CUP_KNVB_2026-12-16_GVVV_Feyeno",
+      "competition_id": 90,
+      "competition_ja": "KNVBベーカー",
+      "competition_category": "domestic_cup",
+      "competition_flag": "🇳🇱",
+      "kickoff_jst": "2026-12-17T02:45:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "Second round",
+      "matchday": null,
+      "home_id": null,
+      "home_ja": "GVVV",
+      "home_en": "GVVV",
+      "home_crest": null,
+      "away_id": 675,
+      "away_ja": "フェイエノールト",
+      "away_en": "Feyenoord",
+      "away_crest": "https://crests.football-data.org/675.png",
+      "score": null,
+      "japanese_players": [
+        {
+          "name_ja": "渡辺剛",
+          "position": "DF",
+          "side": "away"
+        }
+      ],
+      "broadcasters": [],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 KNVB Cup"
+    },
+    {
+      "id": "CUP_KNVB_2026-12-16_Hoek_AZ",
+      "competition_id": 90,
+      "competition_ja": "KNVBベーカー",
+      "competition_category": "domestic_cup",
+      "competition_flag": "🇳🇱",
+      "kickoff_jst": "2026-12-17T04:00:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "Second round",
+      "matchday": null,
+      "home_id": null,
+      "home_ja": "Hoek",
+      "home_en": "Hoek",
+      "home_crest": null,
+      "away_id": 682,
+      "away_ja": "AZアルクマール",
+      "away_en": "AZ Alkmaar",
+      "away_crest": "https://crests.football-data.org/682.png",
+      "score": null,
+      "japanese_players": [
+        {
+          "name_ja": "毎熊晟矢",
+          "position": "DF/MF",
+          "side": "away"
+        },
+        {
+          "name_ja": "市原吏音",
+          "position": "DF",
+          "side": "away"
+        }
+      ],
+      "broadcasters": [],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 KNVB Cup"
+    },
+    {
+      "id": "CUP_KNVB_2026-12-16_PSVEin_Vitess",
+      "competition_id": 90,
+      "competition_ja": "KNVBベーカー",
+      "competition_category": "domestic_cup",
+      "competition_flag": "🇳🇱",
+      "kickoff_jst": "2026-12-17T05:00:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "Second round",
+      "matchday": null,
+      "home_id": 674,
+      "home_ja": "PSVアイントホーフェン",
+      "home_en": "PSV Eindhoven",
+      "home_crest": "https://crests.football-data.org/674.png",
+      "away_id": null,
+      "away_ja": "Vitesse",
+      "away_en": "Vitesse",
+      "away_crest": null,
+      "score": null,
+      "japanese_players": [
+        {
+          "name_ja": "佐野航大",
+          "position": "MF",
+          "side": "home"
+        }
+      ],
+      "broadcasters": [],
+      "_source": "wikipedia",
+      "_source_page": "2026–27 KNVB Cup"
     },
     {
       "id": "ECL_2026-12-17_Ajax_Getafe",
@@ -69700,8 +70025,8 @@
       "_source": "openligadb"
     }
   ],
-  "updated_openligadb": "2026-11-05T02:04:41.217264+09:00",
-  "updated_yt_highlights": "2026-11-05T02:05:59.708523+09:00",
-  "updated_uefa_secondary": "2026-11-05T02:06:40.518233+09:00",
-  "updated_domestic_cups": "2026-11-05T02:06:57.650573+09:00"
+  "updated_openligadb": "2026-11-05T07:03:41.722567+09:00",
+  "updated_yt_highlights": "2026-11-05T07:04:17.258994+09:00",
+  "updated_uefa_secondary": "2026-11-05T07:05:11.089411+09:00",
+  "updated_domestic_cups": "2026-11-05T07:05:28.183076+09:00"
 }
