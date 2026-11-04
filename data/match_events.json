@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-04T19:10:34.151995+09:00",
+  "updated": "2026-11-05T02:06:57.712152+09:00",
   "wikipedia_pages": {
     "64": {
       "title": "2026–27 Liverpool F.C. season",
@@ -1143,7 +1143,7 @@
           "goals2": []
         }
       ],
-      "fetched_at": "2026-11-04T02:01:22.189423+09:00"
+      "fetched_at": "2026-11-05T02:05:06.851434+09:00"
     },
     "397": {
       "title": "2026–27 Brighton & Hove Albion F.C. season",
@@ -2265,7 +2265,7 @@
           "goals2": []
         }
       ],
-      "fetched_at": "2026-11-04T02:01:23.395837+09:00"
+      "fetched_at": "2026-11-05T02:05:07.946325+09:00"
     },
     "354": {
       "title": "2026–27 Crystal Palace F.C. season",
@@ -3071,6 +3071,15 @@
           ]
         },
         {
+          "date": "2026-12-16",
+          "team1": "Crystal Palace",
+          "team2": "Sunderland",
+          "score": "",
+          "round": "[[2026–27 EFL Cup#Quarter-finals|Quarter-finals]]",
+          "goals1": [],
+          "goals2": []
+        },
+        {
           "date": "2026-09-17",
           "team1": "Crystal Palace",
           "team2": "Lech Poznań",
@@ -3278,7 +3287,7 @@
           "goals2": []
         }
       ],
-      "fetched_at": "2026-11-04T02:01:24.552391+09:00"
+      "fetched_at": "2026-11-05T02:05:09.016503+09:00"
     },
     "341": {
       "title": "2026–27 Leeds United F.C. season",
@@ -4016,7 +4025,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-11-04T02:01:26.737352+09:00"
+      "fetched_at": "2026-11-05T02:05:11.052050+09:00"
     },
     "73": {
       "title": "2025–26 Tottenham Hotspur F.C. season",
@@ -6808,10 +6817,32 @@
           "date": "2026-11-03",
           "team1": "West Bromwich Albion",
           "team2": "Southampton",
-          "score": "",
+          "score": "1–1",
           "round": "14",
-          "goals1": [],
-          "goals2": []
+          "goals1": [
+            {
+              "wiki_target": "Isaac Price",
+              "display": "Price",
+              "goals": [
+                {
+                  "minute_raw": "22",
+                  "note": "pen."
+                }
+              ]
+            }
+          ],
+          "goals2": [
+            {
+              "wiki_target": "Samuel Edozie",
+              "display": "Edozie",
+              "goals": [
+                {
+                  "minute_raw": "53",
+                  "note": ""
+                }
+              ]
+            }
+          ]
         },
         {
           "date": "2026-11-07",
@@ -7079,7 +7110,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-11-04T02:01:27.904803+09:00"
+      "fetched_at": "2026-11-05T02:05:12.132135+09:00"
     },
     "1076": {
       "title": "2026–27 Coventry City F.C. season",
@@ -7711,7 +7742,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-11-04T02:01:30.827287+09:00"
+      "fetched_at": "2026-11-05T02:05:14.612485+09:00"
     },
     "322": {
       "title": "2026–27 Hull City A.F.C. season",
@@ -8468,7 +8499,7 @@
           "goals2": []
         }
       ],
-      "fetched_at": "2026-11-04T02:02:11.369472+09:00"
+      "fetched_at": "2026-11-05T02:05:51.818618+09:00"
     },
     "59": {
       "title": "2026–27 Blackburn Rovers F.C. season",
@@ -9171,10 +9202,42 @@
           "date": "2026-11-03",
           "team1": "Blackburn Rovers",
           "team2": "Stoke City",
-          "score": "",
+          "score": "1–2",
           "round": "14",
-          "goals1": [],
-          "goals2": []
+          "goals1": [
+            {
+              "wiki_target": "Andri Guðjohnsen",
+              "display": "Guðjohnsen",
+              "goals": [
+                {
+                  "minute_raw": "87",
+                  "note": ""
+                }
+              ]
+            }
+          ],
+          "goals2": [
+            {
+              "wiki_target": "Jack McGlynn",
+              "display": "McGlynn",
+              "goals": [
+                {
+                  "minute_raw": "43",
+                  "note": ""
+                }
+              ]
+            },
+            {
+              "wiki_target": "Moussa Baradji",
+              "display": "Baradji",
+              "goals": [
+                {
+                  "minute_raw": "68",
+                  "note": "o.g."
+                }
+              ]
+            }
+          ]
         },
         {
           "date": "2026-11-07",
@@ -9328,7 +9391,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-11-04T02:01:34.738383+09:00"
+      "fetched_at": "2026-11-05T02:05:18.135768+09:00"
     },
     "69": {
       "title": "2026–27 Queens Park Rangers F.C. season",
@@ -10054,10 +10117,32 @@
           "date": "2026-11-03",
           "team1": "Queens Park Rangers",
           "team2": "Burnley",
-          "score": "",
+          "score": "1–1",
           "round": "14",
-          "goals1": [],
-          "goals2": []
+          "goals1": [
+            {
+              "wiki_target": "Jonathan Varane",
+              "display": "Varane",
+              "goals": [
+                {
+                  "minute_raw": "65",
+                  "note": ""
+                }
+              ]
+            }
+          ],
+          "goals2": [
+            {
+              "wiki_target": "Largie Ramazani",
+              "display": "Ramazani",
+              "goals": [
+                {
+                  "minute_raw": "38",
+                  "note": ""
+                }
+              ]
+            }
+          ]
         },
         {
           "date": "2026-11-07",
@@ -10379,7 +10464,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-11-04T02:01:35.920731+09:00"
+      "fetched_at": "2026-11-05T02:05:19.251993+09:00"
     },
     "70": {
       "title": "2025–26 Stoke City F.C. season",
@@ -11389,7 +11474,38 @@
           "team2": "Millwall",
           "score": "",
           "round": "",
-          "goals1": [],
+          "goals1": [
+            {
+              "wiki_target": "Alex Cochrane (footballer)",
+              "display": "Cochrane",
+              "goals": [
+                {
+                  "minute_raw": "1",
+                  "note": ""
+                }
+              ]
+            },
+            {
+              "wiki_target": "Max Bird",
+              "display": "Bird",
+              "goals": [
+                {
+                  "minute_raw": "16",
+                  "note": ""
+                }
+              ]
+            },
+            {
+              "wiki_target": "Jay Stansfield",
+              "display": "Stansfield",
+              "goals": [
+                {
+                  "minute_raw": "29",
+                  "note": ""
+                }
+              ]
+            }
+          ],
           "goals2": [],
           "_wikitable": true
         },
@@ -11474,7 +11590,7 @@
           "_wikitable": true
         }
       ],
-      "fetched_at": "2026-11-04T02:01:38.584121+09:00"
+      "fetched_at": "2026-11-05T02:05:21.687745+09:00"
     },
     "5533": {
       "title": null,
@@ -12090,7 +12206,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-11-04T02:01:39.218568+09:00"
+      "fetched_at": "2026-11-05T02:05:22.304751+09:00"
     },
     "89": {
       "title": null,
@@ -13213,10 +13329,31 @@
           "date": "2026-11-03",
           "team1": "Atlético Madrid",
           "team2": "Bayern Munich",
-          "score": "",
+          "score": "0–2",
           "round": "[[2026–27 UEFA Champions League league phase#Atlético Madrid v Bayern Munich|4]]",
           "goals1": [],
-          "goals2": []
+          "goals2": [
+            {
+              "wiki_target": "Lennart Karl",
+              "display": "Karl",
+              "goals": [
+                {
+                  "minute_raw": "54",
+                  "note": ""
+                }
+              ]
+            },
+            {
+              "wiki_target": "Konrad Laimer",
+              "display": "Laimer",
+              "goals": [
+                {
+                  "minute_raw": "74",
+                  "note": ""
+                }
+              ]
+            }
+          ]
         },
         {
           "date": "2026-11-25",
@@ -13255,7 +13392,7 @@
           "goals2": []
         }
       ],
-      "fetched_at": "2026-11-04T02:01:41.418977+09:00"
+      "fetched_at": "2026-11-05T02:05:24.314552+09:00"
     },
     "19": {
       "title": "2026–27 Eintracht Frankfurt season",
@@ -14182,7 +14319,7 @@
           "goals2": []
         }
       ],
-      "fetched_at": "2026-11-04T02:01:42.076517+09:00"
+      "fetched_at": "2026-11-05T02:05:24.942030+09:00"
     },
     "17": {
       "title": "2026–27 SC Freiburg season",
@@ -14637,7 +14774,7 @@
           "goals2": []
         }
       ],
-      "fetched_at": "2026-11-04T02:01:42.723314+09:00"
+      "fetched_at": "2026-11-05T02:05:25.505833+09:00"
     },
     "15": {
       "title": "2026–27 1. FSV Mainz 05 season",
@@ -15203,7 +15340,7 @@
           "goals2": []
         }
       ],
-      "fetched_at": "2026-11-04T02:01:44.881270+09:00"
+      "fetched_at": "2026-11-05T02:05:27.499947+09:00"
     },
     "12": {
       "title": "2025–26 SV Werder Bremen season",
@@ -16943,7 +17080,7 @@
           "goals2": []
         }
       ],
-      "fetched_at": "2026-11-04T02:01:47.186642+09:00"
+      "fetched_at": "2026-11-05T02:05:29.640581+09:00"
     },
     "11": {
       "title": "2025–26 VfL Wolfsburg season",
@@ -21728,7 +21865,7 @@
           "goals2": []
         }
       ],
-      "fetched_at": "2026-11-04T02:01:49.330583+09:00"
+      "fetched_at": "2026-11-05T02:05:31.657650+09:00"
     },
     "112": {
       "title": null,
@@ -22506,7 +22643,7 @@
           "goals2": []
         }
       ],
-      "fetched_at": "2026-11-04T02:01:52.695642+09:00"
+      "fetched_at": "2026-11-05T02:05:34.761432+09:00"
     },
     "533": {
       "title": "2026–27 Le Havre AC season",
@@ -22877,7 +23014,7 @@
           "goals2": []
         }
       ],
-      "fetched_at": "2026-11-04T02:01:54.871897+09:00"
+      "fetched_at": "2026-11-05T02:05:36.726689+09:00"
     },
     "678": {
       "title": "2025–26 AFC Ajax season",
@@ -26021,7 +26158,7 @@
               "goals": [
                 {
                   "minute_raw": "81",
-                  "note": "o.g"
+                  "note": "o.g."
                 }
               ]
             }
@@ -26073,10 +26210,41 @@
           "date": "2026-11-03",
           "team1": "Feyenoord",
           "team2": "Inter Milan",
-          "score": "",
+          "score": "0–3",
           "round": "4",
           "goals1": [],
-          "goals2": []
+          "goals2": [
+            {
+              "wiki_target": "Yann Aurel Bisseck",
+              "display": "Bisseck",
+              "goals": [
+                {
+                  "minute_raw": "8",
+                  "note": ""
+                }
+              ]
+            },
+            {
+              "wiki_target": "Pio Esposito",
+              "display": "Esposito",
+              "goals": [
+                {
+                  "minute_raw": "34",
+                  "note": ""
+                }
+              ]
+            },
+            {
+              "wiki_target": "Piotr Zieliński",
+              "display": "Zieliński",
+              "goals": [
+                {
+                  "minute_raw": "54",
+                  "note": ""
+                }
+              ]
+            }
+          ]
         },
         {
           "date": "2026-11-24",
@@ -26115,12 +26283,12 @@
           "goals2": []
         }
       ],
-      "fetched_at": "2026-11-04T02:01:58.347352+09:00"
+      "fetched_at": "2026-11-05T02:05:39.919203+09:00"
     },
     "682": {
       "title": null,
       "boxes": [],
-      "fetched_at": "2026-11-04T19:09:34.962416+09:00"
+      "fetched_at": "2026-11-05T02:05:43.364482+09:00"
     },
     "1915": {
       "title": null,
@@ -26129,7 +26297,7 @@
     "6806": {
       "title": null,
       "boxes": [],
-      "fetched_at": "2026-11-04T19:09:39.759772+09:00"
+      "fetched_at": "2026-11-05T02:05:47.871490+09:00"
     },
     "498": {
       "title": "2025–26 Sporting CP season",
@@ -28801,7 +28969,7 @@
           "team1": "Stoke City",
           "team2": "Bristol City",
           "score": "0–0",
-          "round": "13",
+          "round": "12",
           "goals1": [],
           "goals2": []
         },
@@ -28810,7 +28978,7 @@
           "team1": "Bolton Wanderers",
           "team2": "Bristol City",
           "score": "2–3",
-          "round": "14",
+          "round": "13",
           "goals1": [
             {
               "wiki_target": "Josh Sheehan",
@@ -28871,7 +29039,7 @@
           "team1": "Bristol City",
           "team2": "Wolverhampton Wanderers",
           "score": "",
-          "round": "15",
+          "round": "14",
           "goals1": [],
           "goals2": []
         },
@@ -28880,7 +29048,7 @@
           "team1": "Bristol City",
           "team2": "Norwich City",
           "score": "",
-          "round": "16",
+          "round": "15",
           "goals1": [],
           "goals2": []
         },
@@ -28889,7 +29057,7 @@
           "team1": "Middlesbrough",
           "team2": "Bristol City",
           "score": "",
-          "round": "17",
+          "round": "16",
           "goals1": [],
           "goals2": []
         },
@@ -28898,7 +29066,7 @@
           "team1": "Bristol City",
           "team2": "Wrexham",
           "score": "",
-          "round": "18",
+          "round": "17",
           "goals1": [],
           "goals2": []
         },
@@ -28907,7 +29075,7 @@
           "team1": "West Bromwich Albion",
           "team2": "Bristol City",
           "score": "",
-          "round": "19",
+          "round": "18",
           "goals1": [],
           "goals2": []
         },
@@ -28916,7 +29084,7 @@
           "team1": "Bristol City",
           "team2": "Swansea City",
           "score": "",
-          "round": "20",
+          "round": "19",
           "goals1": [],
           "goals2": []
         },
@@ -28925,7 +29093,7 @@
           "team1": "Derby County",
           "team2": "Bristol City",
           "score": "",
-          "round": "21",
+          "round": "20",
           "goals1": [],
           "goals2": []
         },
@@ -28934,7 +29102,7 @@
           "team1": "West Ham United",
           "team2": "Bristol City",
           "score": "",
-          "round": "22",
+          "round": "21",
           "goals1": [],
           "goals2": []
         },
@@ -28943,7 +29111,7 @@
           "team1": "Bristol City",
           "team2": "Cardiff City",
           "score": "",
-          "round": "23",
+          "round": "22",
           "goals1": [],
           "goals2": []
         },
@@ -28968,12 +29136,12 @@
           ]
         }
       ],
-      "fetched_at": "2026-11-04T02:01:31.981323+09:00"
+      "fetched_at": "2026-11-05T02:05:15.684617+09:00"
     },
     "674": {
       "title": null,
       "boxes": [],
-      "fetched_at": "2026-11-04T19:09:38.110266+09:00"
+      "fetched_at": "2026-11-05T02:05:46.320467+09:00"
     },
     "95": {
       "title": "2026–27 Valencia CF season",
@@ -29587,7 +29755,7 @@
           "goals2": []
         }
       ],
-      "fetched_at": "2026-11-04T02:02:13.219564+09:00"
+      "fetched_at": "2026-11-05T02:05:53.515712+09:00"
     },
     "6": {
       "title": "2026–27 FC Schalke 04 season",
@@ -30347,12 +30515,12 @@
           "goals2": []
         }
       ],
-      "fetched_at": "2026-11-04T02:02:13.906827+09:00"
+      "fetched_at": "2026-11-05T02:05:54.134482+09:00"
     },
     "712": {
       "title": null,
       "boxes": [],
-      "fetched_at": "2026-11-04T19:09:41.353582+09:00"
+      "fetched_at": "2026-11-05T02:05:56.168238+09:00"
     },
     "58": {
       "title": "2026–27 Aston Villa F.C. season",
@@ -31624,9 +31792,34 @@
           "date": "2026-11-03",
           "team1": "Barcelona",
           "team2": "Aston Villa",
-          "score": "",
+          "score": "3–0",
           "round": "[[2026–27 UEFA Champions League league phase#Barcelona v Aston Villa|4]]",
-          "goals1": [],
+          "goals1": [
+            {
+              "wiki_target": "Lamine Yamal",
+              "display": "Yamal",
+              "goals": [
+                {
+                  "minute_raw": "7",
+                  "note": ""
+                }
+              ]
+            },
+            {
+              "wiki_target": "Raphinha",
+              "display": "Raphinha",
+              "goals": [
+                {
+                  "minute_raw": "52",
+                  "note": ""
+                },
+                {
+                  "minute_raw": "64",
+                  "note": ""
+                }
+              ]
+            }
+          ],
           "goals2": []
         },
         {
@@ -31666,7 +31859,7 @@
           "goals2": []
         }
       ],
-      "fetched_at": "2026-11-04T02:01:50.523048+09:00"
+      "fetched_at": "2026-11-05T02:05:32.769088+09:00"
     },
     "349": {
       "title": "2026–27 Ipswich Town F.C. season",
@@ -32667,12 +32860,12 @@
           ]
         }
       ],
-      "fetched_at": "2026-11-04T02:02:12.578167+09:00"
+      "fetched_at": "2026-11-05T02:05:52.905127+09:00"
     },
     "104": {
       "title": null,
       "boxes": [],
-      "fetched_at": "2026-11-04T19:09:31.870260+09:00"
+      "fetched_at": "2026-11-05T02:05:29.516387+09:00"
     },
     "523": {
       "title": "2026–27 Olympique Lyonnais season",
@@ -33835,7 +34028,7 @@
           "goals2": []
         }
       ],
-      "fetched_at": "2026-11-04T02:01:55.533548+09:00"
+      "fetched_at": "2026-11-05T02:05:37.319144+09:00"
     },
     "521": {
       "title": "2026–27 Lille OSC season",
@@ -34503,7 +34696,7 @@
           "date": "2026-11-03",
           "team1": "Bodø/Glimt",
           "team2": "Lille",
-          "score": "",
+          "score": "0–0",
           "round": "[[2026–27 UEFA Champions League league phase#Bodø/Glimt v Lille|4]]",
           "goals1": [],
           "goals2": []
@@ -34545,7 +34738,7 @@
           "goals2": []
         }
       ],
-      "fetched_at": "2026-11-04T02:01:57.699999+09:00"
+      "fetched_at": "2026-11-05T02:05:39.343817+09:00"
     },
     "60": {
       "title": "2026–27 Bolton Wanderers F.C. season",
@@ -35440,10 +35633,21 @@
           "date": "2026-11-03",
           "team1": "Charlton Athletic",
           "team2": "Bolton Wanderers",
-          "score": "",
+          "score": "0–1",
           "round": "14",
           "goals1": [],
-          "goals2": []
+          "goals2": [
+            {
+              "wiki_target": "Sam Dalby",
+              "display": "Dalby",
+              "goals": [
+                {
+                  "minute_raw": "18",
+                  "note": ""
+                }
+              ]
+            }
+          ]
         },
         {
           "date": "2026-11-06",
@@ -35754,7 +35958,7 @@
           "goals2": []
         }
       ],
-      "fetched_at": "2026-11-04T02:02:09.197376+09:00"
+      "fetched_at": "2026-11-05T02:05:49.820877+09:00"
     },
     "328": {
       "title": "2026–27 Burnley F.C. season",
@@ -36542,10 +36746,32 @@
           "date": "2026-11-03",
           "team1": "Queens Park Rangers",
           "team2": "Burnley",
-          "score": "",
+          "score": "1–1",
           "round": "14",
-          "goals1": [],
-          "goals2": []
+          "goals1": [
+            {
+              "wiki_target": "Jonathan Varane",
+              "display": "Varane",
+              "goals": [
+                {
+                  "minute_raw": "65",
+                  "note": ""
+                }
+              ]
+            }
+          ],
+          "goals2": [
+            {
+              "wiki_target": "Largie Ramazani",
+              "display": "Ramazani",
+              "goals": [
+                {
+                  "minute_raw": "38",
+                  "note": ""
+                }
+              ]
+            }
+          ]
         },
         {
           "date": "2026-11-07",
@@ -36687,7 +36913,7 @@
           "goals2": []
         }
       ],
-      "fetched_at": "2026-11-04T02:02:16.738673+09:00"
+      "fetched_at": "2026-11-05T02:05:56.755691+09:00"
     }
   },
   "events": {
@@ -43444,7 +43670,7 @@
         "is_japanese": false,
         "minute": 81,
         "minute_raw": "81",
-        "note": "o.g",
+        "note": "o.g.",
         "side": "home"
       },
       {
@@ -48346,14 +48572,181 @@
         "side": "away"
       }
     ],
-    "561920": [],
-    "561922": [],
-    "561928": [],
-    "561923": [],
-    "561917": [],
-    "575379": [],
+    "561920": [
+      {
+        "type": "goal",
+        "player_ja": "Varane",
+        "player_en": "Varane",
+        "is_japanese": false,
+        "minute": 65,
+        "minute_raw": "65",
+        "note": "",
+        "side": "away"
+      },
+      {
+        "type": "goal",
+        "player_ja": "Ramazani",
+        "player_en": "Ramazani",
+        "is_japanese": false,
+        "minute": 38,
+        "minute_raw": "38",
+        "note": "",
+        "side": "home"
+      }
+    ],
+    "561922": [
+      {
+        "type": "goal",
+        "player_ja": "Guðjohnsen",
+        "player_en": "Guðjohnsen",
+        "is_japanese": false,
+        "minute": 87,
+        "minute_raw": "87",
+        "note": "",
+        "side": "home"
+      },
+      {
+        "type": "goal",
+        "player_ja": "McGlynn",
+        "player_en": "McGlynn",
+        "is_japanese": false,
+        "minute": 43,
+        "minute_raw": "43",
+        "note": "",
+        "side": "away"
+      },
+      {
+        "type": "goal",
+        "player_ja": "Baradji",
+        "player_en": "Baradji",
+        "is_japanese": false,
+        "minute": 68,
+        "minute_raw": "68",
+        "note": "o.g.",
+        "side": "away"
+      }
+    ],
+    "561928": [
+      {
+        "type": "goal",
+        "player_ja": "Dalby",
+        "player_en": "Dalby",
+        "is_japanese": false,
+        "minute": 18,
+        "minute_raw": "18",
+        "note": "",
+        "side": "away"
+      }
+    ],
+    "561923": [
+      {
+        "type": "goal",
+        "player_ja": "Price",
+        "player_en": "Price",
+        "is_japanese": false,
+        "minute": 22,
+        "minute_raw": "22",
+        "note": "pen.",
+        "side": "home"
+      },
+      {
+        "type": "goal",
+        "player_ja": "Edozie",
+        "player_en": "Edozie",
+        "is_japanese": false,
+        "minute": 53,
+        "minute_raw": "53",
+        "note": "",
+        "side": "away"
+      }
+    ],
+    "561917": [
+      {
+        "type": "goal",
+        "player_ja": "Cochrane",
+        "player_en": "Cochrane",
+        "is_japanese": false,
+        "minute": 1,
+        "minute_raw": "1",
+        "note": "",
+        "side": "unknown"
+      },
+      {
+        "type": "goal",
+        "player_ja": "Bird",
+        "player_en": "Bird",
+        "is_japanese": false,
+        "minute": 16,
+        "minute_raw": "16",
+        "note": "",
+        "side": "unknown"
+      },
+      {
+        "type": "goal",
+        "player_ja": "Stansfield",
+        "player_en": "Stansfield",
+        "is_japanese": false,
+        "minute": 29,
+        "minute_raw": "29",
+        "note": "",
+        "side": "unknown"
+      }
+    ],
+    "575379": [
+      {
+        "type": "goal",
+        "player_ja": "Bisseck",
+        "player_en": "Bisseck",
+        "is_japanese": false,
+        "minute": 8,
+        "minute_raw": "8",
+        "note": "",
+        "side": "away"
+      },
+      {
+        "type": "goal",
+        "player_ja": "Esposito",
+        "player_en": "Esposito",
+        "is_japanese": false,
+        "minute": 34,
+        "minute_raw": "34",
+        "note": "",
+        "side": "away"
+      },
+      {
+        "type": "goal",
+        "player_ja": "Zieliński",
+        "player_en": "Zieliński",
+        "is_japanese": false,
+        "minute": 54,
+        "minute_raw": "54",
+        "note": "",
+        "side": "away"
+      }
+    ],
     "575380": [],
-    "575381": [],
+    "575381": [
+      {
+        "type": "goal",
+        "player_ja": "Karl",
+        "player_en": "Karl",
+        "is_japanese": false,
+        "minute": 54,
+        "minute_raw": "54",
+        "note": "",
+        "side": "home"
+      },
+      {
+        "type": "goal",
+        "player_ja": "Laimer",
+        "player_en": "Laimer",
+        "is_japanese": false,
+        "minute": 74,
+        "minute_raw": "74",
+        "note": "",
+        "side": "home"
+      }
+    ],
     "575384": []
   }
 }
