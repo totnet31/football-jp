@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-07T07:01:20.847370+09:00",
+  "updated": "2026-11-07T10:38:52.713886+09:00",
   "date_from": "2026-10-31",
   "date_to": "2026-11-21",
   "match_count": 1829,
@@ -58628,7 +58628,7 @@
       "competition_category": "league",
       "competition_flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
       "kickoff_jst": "2026-11-07T05:00:00+09:00",
-      "status": "TIMED",
+      "status": "FINISHED",
       "stage": "REGULAR_SEASON",
       "matchday": 10,
       "home_id": 62,
@@ -58639,7 +58639,10 @@
       "away_ja": "コヴェントリー",
       "away_en": "Coventry City",
       "away_crest": "https://crests.football-data.org/1076.png",
-      "score": null,
+      "score": {
+        "home": 3,
+        "away": 1
+      },
       "japanese_players": [
         {
           "name_ja": "坂元達裕",
@@ -58653,6 +58656,15 @@
           "label": "U-NEXT サッカーパック",
           "url": "https://www.video.unext.jp/lp/football_pack",
           "source": "league_guides"
+        }
+      ],
+      "highlights": [
+        {
+          "broadcaster": "U-NEXT",
+          "video_id": "7D1FViPwDUg",
+          "url": "https://youtu.be/7D1FViPwDUg",
+          "title": "【🇯🇵坂元達裕が先発出場｜エヴァートン v コヴェントリー｜ショートハイライト】プレミアリーグ2026/27 第10節",
+          "yt_published": "2026-11-07"
         }
       ]
     },
@@ -58701,7 +58713,7 @@
       "competition_category": "league",
       "competition_flag": "🇪🇸",
       "kickoff_jst": "2026-11-07T05:00:00+09:00",
-      "status": "TIMED",
+      "status": "FINISHED",
       "stage": "REGULAR_SEASON",
       "matchday": 12,
       "home_id": 559,
@@ -58712,7 +58724,10 @@
       "away_ja": "アラベス",
       "away_en": "Alavés",
       "away_crest": "https://crests.football-data.org/263.png",
-      "score": null,
+      "score": {
+        "home": 0,
+        "away": 0
+      },
       "japanese_players": [],
       "broadcasters": [
         {
@@ -58748,7 +58763,7 @@
       "away_en": "Arouca",
       "away_crest": "https://crests.football-data.org/712.png",
       "score": {
-        "home": 0,
+        "home": 1,
         "away": 0
       },
       "japanese_players": [
@@ -58877,7 +58892,7 @@
       "competition_category": "league",
       "competition_flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
       "kickoff_jst": "2026-11-07T21:30:00+09:00",
-      "status": "TIMED",
+      "status": "SCHEDULED",
       "stage": "REGULAR_SEASON",
       "matchday": 15,
       "home_id": 404,
@@ -58906,7 +58921,7 @@
       "competition_category": "league",
       "competition_flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
       "kickoff_jst": "2026-11-07T21:30:00+09:00",
-      "status": "TIMED",
+      "status": "SCHEDULED",
       "stage": "REGULAR_SEASON",
       "matchday": 15,
       "home_id": 325,
@@ -58935,7 +58950,7 @@
       "competition_category": "league",
       "competition_flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
       "kickoff_jst": "2026-11-07T21:30:00+09:00",
-      "status": "TIMED",
+      "status": "SCHEDULED",
       "stage": "REGULAR_SEASON",
       "matchday": 15,
       "home_id": 387,
@@ -59300,7 +59315,7 @@
       "competition_category": "league",
       "competition_flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
       "kickoff_jst": "2026-11-08T00:00:00+09:00",
-      "status": "TIMED",
+      "status": "SCHEDULED",
       "stage": "REGULAR_SEASON",
       "matchday": 15,
       "home_id": 69,
@@ -59335,7 +59350,7 @@
       "competition_category": "league",
       "competition_flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
       "kickoff_jst": "2026-11-08T00:00:00+09:00",
-      "status": "TIMED",
+      "status": "SCHEDULED",
       "stage": "REGULAR_SEASON",
       "matchday": 15,
       "home_id": 715,
@@ -59370,7 +59385,7 @@
       "competition_category": "league",
       "competition_flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
       "kickoff_jst": "2026-11-08T00:00:00+09:00",
-      "status": "TIMED",
+      "status": "SCHEDULED",
       "stage": "REGULAR_SEASON",
       "matchday": 15,
       "home_id": 348,
@@ -59399,7 +59414,7 @@
       "competition_category": "league",
       "competition_flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
       "kickoff_jst": "2026-11-08T00:00:00+09:00",
-      "status": "TIMED",
+      "status": "SCHEDULED",
       "stage": "REGULAR_SEASON",
       "matchday": 15,
       "home_id": 346,
@@ -59428,7 +59443,7 @@
       "competition_category": "league",
       "competition_flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
       "kickoff_jst": "2026-11-08T00:00:00+09:00",
-      "status": "TIMED",
+      "status": "SCHEDULED",
       "stage": "REGULAR_SEASON",
       "matchday": 15,
       "home_id": 59,
@@ -59468,7 +59483,7 @@
       "competition_category": "league",
       "competition_flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
       "kickoff_jst": "2026-11-08T00:00:00+09:00",
-      "status": "TIMED",
+      "status": "SCHEDULED",
       "stage": "REGULAR_SEASON",
       "matchday": 15,
       "home_id": 74,
@@ -59497,7 +59512,7 @@
       "competition_category": "league",
       "competition_flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
       "kickoff_jst": "2026-11-08T00:00:00+09:00",
-      "status": "TIMED",
+      "status": "SCHEDULED",
       "stage": "REGULAR_SEASON",
       "matchday": 15,
       "home_id": 1081,
@@ -59532,7 +59547,7 @@
       "competition_category": "league",
       "competition_flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
       "kickoff_jst": "2026-11-08T00:00:00+09:00",
-      "status": "TIMED",
+      "status": "SCHEDULED",
       "stage": "REGULAR_SEASON",
       "matchday": 15,
       "home_id": 332,
@@ -61552,42 +61567,13 @@
       ]
     },
     {
-      "id": 561941,
-      "competition_id": 40,
-      "competition_ja": "チャンピオンシップ",
-      "competition_category": "league",
-      "competition_flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
-      "kickoff_jst": "2026-11-21T21:30:00+09:00",
-      "status": "TIMED",
-      "stage": "REGULAR_SEASON",
-      "matchday": 16,
-      "home_id": 356,
-      "home_ja": "シェフィールド・ユナイテッド",
-      "home_en": "Sheffield Utd",
-      "home_crest": "https://crests.football-data.org/356.png",
-      "away_id": 346,
-      "away_ja": "ワトフォード",
-      "away_en": "Watford",
-      "away_crest": "https://crests.football-data.org/346.png",
-      "score": null,
-      "japanese_players": [],
-      "broadcasters": [
-        {
-          "name": "DAZN",
-          "label": "DAZN",
-          "url": "https://www.dazn.com/ja-JP/welcome",
-          "source": "league_guides"
-        }
-      ]
-    },
-    {
       "id": 561944,
       "competition_id": 40,
       "competition_ja": "チャンピオンシップ",
       "competition_category": "league",
       "competition_flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
       "kickoff_jst": "2026-11-21T21:30:00+09:00",
-      "status": "TIMED",
+      "status": "SCHEDULED",
       "stage": "REGULAR_SEASON",
       "matchday": 16,
       "home_id": 340,
@@ -61616,13 +61602,42 @@
       ]
     },
     {
+      "id": 561948,
+      "competition_id": 40,
+      "competition_ja": "チャンピオンシップ",
+      "competition_category": "league",
+      "competition_flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+      "kickoff_jst": "2026-11-21T21:30:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "REGULAR_SEASON",
+      "matchday": 16,
+      "home_id": 68,
+      "home_ja": "ノリッジ",
+      "home_en": "Norwich",
+      "home_crest": "https://crests.football-data.org/68.png",
+      "away_id": 715,
+      "away_ja": "Cardiff",
+      "away_en": "Cardiff",
+      "away_crest": "https://crests.football-data.org/715.png",
+      "score": null,
+      "japanese_players": [],
+      "broadcasters": [
+        {
+          "name": "DAZN",
+          "label": "DAZN",
+          "url": "https://www.dazn.com/ja-JP/welcome",
+          "source": "league_guides"
+        }
+      ]
+    },
+    {
       "id": 561950,
       "competition_id": 40,
       "competition_ja": "チャンピオンシップ",
       "competition_category": "league",
       "competition_flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
       "kickoff_jst": "2026-11-21T21:30:00+09:00",
-      "status": "TIMED",
+      "status": "SCHEDULED",
       "stage": "REGULAR_SEASON",
       "matchday": 16,
       "home_id": 384,
@@ -62162,13 +62177,42 @@
       ]
     },
     {
+      "id": 561941,
+      "competition_id": 40,
+      "competition_ja": "チャンピオンシップ",
+      "competition_category": "league",
+      "competition_flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+      "kickoff_jst": "2026-11-22T00:00:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "REGULAR_SEASON",
+      "matchday": 16,
+      "home_id": 356,
+      "home_ja": "シェフィールド・ユナイテッド",
+      "home_en": "Sheffield Utd",
+      "home_crest": "https://crests.football-data.org/356.png",
+      "away_id": 346,
+      "away_ja": "ワトフォード",
+      "away_en": "Watford",
+      "away_crest": "https://crests.football-data.org/346.png",
+      "score": null,
+      "japanese_players": [],
+      "broadcasters": [
+        {
+          "name": "DAZN",
+          "label": "DAZN",
+          "url": "https://www.dazn.com/ja-JP/welcome",
+          "source": "league_guides"
+        }
+      ]
+    },
+    {
       "id": 561942,
       "competition_id": 40,
       "competition_ja": "チャンピオンシップ",
       "competition_category": "league",
       "competition_flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
       "kickoff_jst": "2026-11-22T00:00:00+09:00",
-      "status": "TIMED",
+      "status": "SCHEDULED",
       "stage": "REGULAR_SEASON",
       "matchday": 16,
       "home_id": 72,
@@ -62197,7 +62241,7 @@
       "competition_category": "league",
       "competition_flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
       "kickoff_jst": "2026-11-22T00:00:00+09:00",
-      "status": "TIMED",
+      "status": "SCHEDULED",
       "stage": "REGULAR_SEASON",
       "matchday": 16,
       "home_id": 343,
@@ -62232,7 +62276,7 @@
       "competition_category": "league",
       "competition_flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
       "kickoff_jst": "2026-11-22T00:00:00+09:00",
-      "status": "TIMED",
+      "status": "SCHEDULED",
       "stage": "REGULAR_SEASON",
       "matchday": 16,
       "home_id": 60,
@@ -62267,7 +62311,7 @@
       "competition_category": "league",
       "competition_flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
       "kickoff_jst": "2026-11-22T00:00:00+09:00",
-      "status": "TIMED",
+      "status": "SCHEDULED",
       "stage": "REGULAR_SEASON",
       "matchday": 16,
       "home_id": 70,
@@ -62296,42 +62340,13 @@
       ]
     },
     {
-      "id": 561948,
-      "competition_id": 40,
-      "competition_ja": "チャンピオンシップ",
-      "competition_category": "league",
-      "competition_flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
-      "kickoff_jst": "2026-11-22T00:00:00+09:00",
-      "status": "TIMED",
-      "stage": "REGULAR_SEASON",
-      "matchday": 16,
-      "home_id": 68,
-      "home_ja": "ノリッジ",
-      "home_en": "Norwich",
-      "home_crest": "https://crests.football-data.org/68.png",
-      "away_id": 715,
-      "away_ja": "Cardiff",
-      "away_en": "Cardiff",
-      "away_crest": "https://crests.football-data.org/715.png",
-      "score": null,
-      "japanese_players": [],
-      "broadcasters": [
-        {
-          "name": "DAZN",
-          "label": "DAZN",
-          "url": "https://www.dazn.com/ja-JP/welcome",
-          "source": "league_guides"
-        }
-      ]
-    },
-    {
       "id": 561949,
       "competition_id": 40,
       "competition_ja": "チャンピオンシップ",
       "competition_category": "league",
       "competition_flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
       "kickoff_jst": "2026-11-22T00:00:00+09:00",
-      "status": "TIMED",
+      "status": "SCHEDULED",
       "stage": "REGULAR_SEASON",
       "matchday": 16,
       "home_id": 1126,
@@ -62360,7 +62375,7 @@
       "competition_category": "league",
       "competition_flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
       "kickoff_jst": "2026-11-22T00:00:00+09:00",
-      "status": "TIMED",
+      "status": "SCHEDULED",
       "stage": "REGULAR_SEASON",
       "matchday": 16,
       "home_id": 563,
@@ -62389,7 +62404,7 @@
       "competition_category": "league",
       "competition_flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
       "kickoff_jst": "2026-11-22T00:00:00+09:00",
-      "status": "TIMED",
+      "status": "SCHEDULED",
       "stage": "REGULAR_SEASON",
       "matchday": 16,
       "home_id": 76,
@@ -71826,8 +71841,8 @@
       "_source": "openligadb"
     }
   ],
-  "updated_openligadb": "2026-11-07T07:03:49.057893+09:00",
-  "updated_yt_highlights": "2026-11-07T07:04:30.358090+09:00",
-  "updated_uefa_secondary": "2026-11-07T07:05:03.558919+09:00",
-  "updated_domestic_cups": "2026-11-07T07:05:21.220039+09:00"
+  "updated_openligadb": "2026-11-07T10:41:21.880271+09:00",
+  "updated_yt_highlights": "2026-11-07T10:41:58.215264+09:00",
+  "updated_uefa_secondary": "2026-11-07T10:42:32.921526+09:00",
+  "updated_domestic_cups": "2026-11-07T10:42:50.572670+09:00"
 }
