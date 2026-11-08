@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-08T07:05:16.121384+09:00",
+  "updated": "2026-11-08T10:10:01.719000+09:00",
   "competitions": {
     "39": {
       "name_ja": "プレミアリーグ",
@@ -2257,21 +2257,6 @@
             },
             {
               "position": 5,
-              "team_id": 5527,
-              "team_ja": "Acad. Viseu",
-              "team_crest": "https://crests.football-data.org/5527.png",
-              "playedGames": 11,
-              "won": 6,
-              "draw": 3,
-              "lost": 2,
-              "points": 21,
-              "goalsFor": 15,
-              "goalsAgainst": 12,
-              "goalDifference": 3,
-              "form": null
-            },
-            {
-              "position": 6,
               "team_id": 712,
               "team_ja": "アロウカ",
               "team_crest": "https://crests.football-data.org/712.png",
@@ -2283,6 +2268,21 @@
               "goalsFor": 13,
               "goalsAgainst": 8,
               "goalDifference": 5,
+              "form": null
+            },
+            {
+              "position": 6,
+              "team_id": 5527,
+              "team_ja": "Acad. Viseu",
+              "team_crest": "https://crests.football-data.org/5527.png",
+              "playedGames": 10,
+              "won": 6,
+              "draw": 2,
+              "lost": 2,
+              "points": 20,
+              "goalsFor": 15,
+              "goalsAgainst": 12,
+              "goalDifference": 3,
               "form": null
             },
             {
@@ -2392,21 +2392,6 @@
             },
             {
               "position": 14,
-              "team_id": 5529,
-              "team_ja": "ナシオナル",
-              "team_crest": "https://crests.football-data.org/5529.png",
-              "playedGames": 11,
-              "won": 2,
-              "draw": 2,
-              "lost": 7,
-              "points": 8,
-              "goalsFor": 10,
-              "goalsAgainst": 19,
-              "goalDifference": -9,
-              "form": null
-            },
-            {
-              "position": 15,
               "team_id": 5575,
               "team_ja": "Marítimo",
               "team_crest": "https://crests.football-data.org/5575.png",
@@ -2421,7 +2406,7 @@
               "form": null
             },
             {
-              "position": 16,
+              "position": 15,
               "team_id": 6618,
               "team_ja": "カーザ・ピア",
               "team_crest": "https://crests.football-data.org/6618.png",
@@ -2433,6 +2418,21 @@
               "goalsFor": 6,
               "goalsAgainst": 20,
               "goalDifference": -14,
+              "form": null
+            },
+            {
+              "position": 16,
+              "team_id": 5529,
+              "team_ja": "ナシオナル",
+              "team_crest": "https://crests.football-data.org/5529.png",
+              "playedGames": 10,
+              "won": 2,
+              "draw": 1,
+              "lost": 7,
+              "points": 7,
+              "goalsFor": 10,
+              "goalsAgainst": 19,
+              "goalDifference": -9,
               "form": null
             },
             {
