@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-09T07:03:20.767330+09:00",
+  "updated": "2026-11-09T10:28:33.432646+09:00",
   "competitions": {
     "39": {
       "name_ja": "プレミアリーグ",
@@ -4254,7 +4254,7 @@
           "team_id": 1903,
           "team_ja": "ベンフィカ",
           "team_crest": "https://crests.football-data.org/1903.png",
-          "goals": 10,
+          "goals": 11,
           "assists": 3,
           "penalties": 3,
           "playedMatches": 11
@@ -4320,6 +4320,18 @@
           "playedMatches": 11
         },
         {
+          "player_id": 182080,
+          "player_name": "Leandro Antonetti",
+          "nationality": "Spain",
+          "team_id": 9136,
+          "team_ja": "アマドーラ",
+          "team_crest": "https://crests.football-data.org/9136.png",
+          "goals": 5,
+          "assists": 1,
+          "penalties": null,
+          "playedMatches": 11
+        },
+        {
           "player_id": 150519,
           "player_name": "Gabriel Veiga",
           "nationality": "Spain",
@@ -4366,18 +4378,6 @@
           "assists": 1,
           "penalties": 1,
           "playedMatches": 9
-        },
-        {
-          "player_id": 182080,
-          "player_name": "Leandro Antonetti",
-          "nationality": "Spain",
-          "team_id": 9136,
-          "team_ja": "アマドーラ",
-          "team_crest": "https://crests.football-data.org/9136.png",
-          "goals": 4,
-          "assists": 1,
-          "penalties": null,
-          "playedMatches": 11
         },
         {
           "player_id": 1760,
