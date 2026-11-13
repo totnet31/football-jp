@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-14T02:07:49.145648+09:00",
+  "updated": "2026-11-14T07:01:35.343549+09:00",
   "date_from": "2026-11-07",
   "date_to": "2026-11-28",
   "match_count": 1928,
@@ -3376,6 +3376,87 @@
       ]
     },
     {
+      "id": "ECL_2026-04-30_Shakht_Crysta",
+      "competition_id": 848,
+      "competition_ja": "UEFAカンファレンスリーグ",
+      "competition_category": "european_cup",
+      "competition_flag": "🇪🇺",
+      "kickoff_jst": "2026-05-01T04:00:00+09:00",
+      "status": "FINISHED",
+      "stage": "SEMI_FINALS",
+      "matchday": null,
+      "home_id": null,
+      "home_ja": "シャフタール・ドネツク",
+      "home_en": "Shakhtar Donetsk",
+      "home_crest": null,
+      "away_id": 354,
+      "away_ja": "クリスタル・パレス",
+      "away_en": "Crystal Palace",
+      "away_crest": "https://crests.football-data.org/354.png",
+      "score": {
+        "home": 1,
+        "away": 3
+      },
+      "japanese_players": [
+        {
+          "name_ja": "鎌田大地",
+          "position": "MF",
+          "side": "away"
+        },
+        {
+          "name_ja": "冨安健洋",
+          "position": "DF",
+          "side": "away"
+        }
+      ],
+      "broadcasters": [
+        {
+          "name": "WOWOW",
+          "label": "WOWOW",
+          "url": "https://news.wowow.co.jp/5700.html",
+          "source": "league_guides",
+          "affiliate_url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l"
+        }
+      ],
+      "_source": "wikipedia",
+      "_source_page": "2025–26 UEFA Conference League knockout phase"
+    },
+    {
+      "id": "ECL_2026-04-30_RayoVa_Strasb",
+      "competition_id": 848,
+      "competition_ja": "UEFAカンファレンスリーグ",
+      "competition_category": "european_cup",
+      "competition_flag": "🇪🇺",
+      "kickoff_jst": "2026-05-01T04:00:00+09:00",
+      "status": "FINISHED",
+      "stage": "SEMI_FINALS",
+      "matchday": null,
+      "home_id": null,
+      "home_ja": "ラージョ・バジェカーノ",
+      "home_en": "Rayo Vallecano",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "ストラスブール",
+      "away_en": "Strasbourg",
+      "away_crest": null,
+      "score": {
+        "home": 1,
+        "away": 0
+      },
+      "japanese_players": [],
+      "broadcasters": [
+        {
+          "name": "WOWOW",
+          "label": "WOWOW",
+          "url": "https://news.wowow.co.jp/5700.html",
+          "source": "league_guides",
+          "affiliate_url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l"
+        }
+      ],
+      "_source": "wikipedia",
+      "_source_page": "2025–26 UEFA Conference League knockout phase"
+    },
+    {
       "id": "EL_2026-04-30_Braga_SCFrei",
       "competition_id": 3,
       "competition_ja": "UEFAヨーロッパリーグ",
@@ -3483,87 +3564,6 @@
       ],
       "_source": "wikipedia",
       "_source_page": "2025–26 UEFA Europa League knockout phase"
-    },
-    {
-      "id": "ECL_2026-04-30_Shakht_Crysta",
-      "competition_id": 848,
-      "competition_ja": "UEFAカンファレンスリーグ",
-      "competition_category": "european_cup",
-      "competition_flag": "🇪🇺",
-      "kickoff_jst": "2026-05-01T04:00:00+09:00",
-      "status": "FINISHED",
-      "stage": "SEMI_FINALS",
-      "matchday": null,
-      "home_id": null,
-      "home_ja": "シャフタール・ドネツク",
-      "home_en": "Shakhtar Donetsk",
-      "home_crest": null,
-      "away_id": 354,
-      "away_ja": "クリスタル・パレス",
-      "away_en": "Crystal Palace",
-      "away_crest": "https://crests.football-data.org/354.png",
-      "score": {
-        "home": 1,
-        "away": 3
-      },
-      "japanese_players": [
-        {
-          "name_ja": "鎌田大地",
-          "position": "MF",
-          "side": "away"
-        },
-        {
-          "name_ja": "冨安健洋",
-          "position": "DF",
-          "side": "away"
-        }
-      ],
-      "broadcasters": [
-        {
-          "name": "WOWOW",
-          "label": "WOWOW",
-          "url": "https://news.wowow.co.jp/5700.html",
-          "source": "league_guides",
-          "affiliate_url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l"
-        }
-      ],
-      "_source": "wikipedia",
-      "_source_page": "2025–26 UEFA Conference League knockout phase"
-    },
-    {
-      "id": "ECL_2026-04-30_RayoVa_Strasb",
-      "competition_id": 848,
-      "competition_ja": "UEFAカンファレンスリーグ",
-      "competition_category": "european_cup",
-      "competition_flag": "🇪🇺",
-      "kickoff_jst": "2026-05-01T04:00:00+09:00",
-      "status": "FINISHED",
-      "stage": "SEMI_FINALS",
-      "matchday": null,
-      "home_id": null,
-      "home_ja": "ラージョ・バジェカーノ",
-      "home_en": "Rayo Vallecano",
-      "home_crest": null,
-      "away_id": null,
-      "away_ja": "ストラスブール",
-      "away_en": "Strasbourg",
-      "away_crest": null,
-      "score": {
-        "home": 1,
-        "away": 0
-      },
-      "japanese_players": [],
-      "broadcasters": [
-        {
-          "name": "WOWOW",
-          "label": "WOWOW",
-          "url": "https://news.wowow.co.jp/5700.html",
-          "source": "league_guides",
-          "affiliate_url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l"
-        }
-      ],
-      "_source": "wikipedia",
-      "_source_page": "2025–26 UEFA Conference League knockout phase"
     },
     {
       "id": 537161,
@@ -6686,6 +6686,87 @@
       ]
     },
     {
+      "id": "ECL_2026-05-07_Crysta_Shakht",
+      "competition_id": 848,
+      "competition_ja": "UEFAカンファレンスリーグ",
+      "competition_category": "european_cup",
+      "competition_flag": "🇪🇺",
+      "kickoff_jst": "2026-05-08T04:00:00+09:00",
+      "status": "FINISHED",
+      "stage": "SEMI_FINALS",
+      "matchday": null,
+      "home_id": null,
+      "home_ja": "クリスタル・パレス",
+      "home_en": "Crystal Palace",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "シャフタール・ドネツク",
+      "away_en": "Shakhtar Donetsk",
+      "away_crest": null,
+      "score": {
+        "home": 2,
+        "away": 1
+      },
+      "japanese_players": [
+        {
+          "name_ja": "鎌田大地",
+          "position": "MF",
+          "side": "home"
+        },
+        {
+          "name_ja": "冨安健洋",
+          "position": "DF",
+          "side": "home"
+        }
+      ],
+      "broadcasters": [
+        {
+          "name": "WOWOW",
+          "label": "WOWOW",
+          "url": "https://news.wowow.co.jp/5700.html",
+          "source": "league_guides",
+          "affiliate_url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l"
+        }
+      ],
+      "_source": "wikipedia",
+      "_source_page": "2025–26 UEFA Conference League knockout phase"
+    },
+    {
+      "id": "ECL_2026-05-07_Strasb_RayoVa",
+      "competition_id": 848,
+      "competition_ja": "UEFAカンファレンスリーグ",
+      "competition_category": "european_cup",
+      "competition_flag": "🇪🇺",
+      "kickoff_jst": "2026-05-08T04:00:00+09:00",
+      "status": "FINISHED",
+      "stage": "SEMI_FINALS",
+      "matchday": null,
+      "home_id": null,
+      "home_ja": "ストラスブール",
+      "home_en": "Strasbourg",
+      "home_crest": null,
+      "away_id": null,
+      "away_ja": "ラージョ・バジェカーノ",
+      "away_en": "Rayo Vallecano",
+      "away_crest": null,
+      "score": {
+        "home": 0,
+        "away": 1
+      },
+      "japanese_players": [],
+      "broadcasters": [
+        {
+          "name": "WOWOW",
+          "label": "WOWOW",
+          "url": "https://news.wowow.co.jp/5700.html",
+          "source": "league_guides",
+          "affiliate_url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l"
+        }
+      ],
+      "_source": "wikipedia",
+      "_source_page": "2025–26 UEFA Conference League knockout phase"
+    },
+    {
       "id": "EL_2026-05-07_SCFrei_Braga",
       "competition_id": 3,
       "competition_ja": "UEFAヨーロッパリーグ",
@@ -6793,87 +6874,6 @@
       ],
       "_source": "wikipedia",
       "_source_page": "2025–26 UEFA Europa League knockout phase"
-    },
-    {
-      "id": "ECL_2026-05-07_Crysta_Shakht",
-      "competition_id": 848,
-      "competition_ja": "UEFAカンファレンスリーグ",
-      "competition_category": "european_cup",
-      "competition_flag": "🇪🇺",
-      "kickoff_jst": "2026-05-08T04:00:00+09:00",
-      "status": "FINISHED",
-      "stage": "SEMI_FINALS",
-      "matchday": null,
-      "home_id": null,
-      "home_ja": "クリスタル・パレス",
-      "home_en": "Crystal Palace",
-      "home_crest": null,
-      "away_id": null,
-      "away_ja": "シャフタール・ドネツク",
-      "away_en": "Shakhtar Donetsk",
-      "away_crest": null,
-      "score": {
-        "home": 2,
-        "away": 1
-      },
-      "japanese_players": [
-        {
-          "name_ja": "鎌田大地",
-          "position": "MF",
-          "side": "home"
-        },
-        {
-          "name_ja": "冨安健洋",
-          "position": "DF",
-          "side": "home"
-        }
-      ],
-      "broadcasters": [
-        {
-          "name": "WOWOW",
-          "label": "WOWOW",
-          "url": "https://news.wowow.co.jp/5700.html",
-          "source": "league_guides",
-          "affiliate_url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l"
-        }
-      ],
-      "_source": "wikipedia",
-      "_source_page": "2025–26 UEFA Conference League knockout phase"
-    },
-    {
-      "id": "ECL_2026-05-07_Strasb_RayoVa",
-      "competition_id": 848,
-      "competition_ja": "UEFAカンファレンスリーグ",
-      "competition_category": "european_cup",
-      "competition_flag": "🇪🇺",
-      "kickoff_jst": "2026-05-08T04:00:00+09:00",
-      "status": "FINISHED",
-      "stage": "SEMI_FINALS",
-      "matchday": null,
-      "home_id": null,
-      "home_ja": "ストラスブール",
-      "home_en": "Strasbourg",
-      "home_crest": null,
-      "away_id": null,
-      "away_ja": "ラージョ・バジェカーノ",
-      "away_en": "Rayo Vallecano",
-      "away_crest": null,
-      "score": {
-        "home": 0,
-        "away": 1
-      },
-      "japanese_players": [],
-      "broadcasters": [
-        {
-          "name": "WOWOW",
-          "label": "WOWOW",
-          "url": "https://news.wowow.co.jp/5700.html",
-          "source": "league_guides",
-          "affiliate_url": "https://droog.tokyo/link.php?i=phejoijtz4o2&m=mhotmxg90s1l"
-        }
-      ],
-      "_source": "wikipedia",
-      "_source_page": "2025–26 UEFA Conference League knockout phase"
     },
     {
       "id": 540696,
@@ -75661,8 +75661,8 @@
       "_source": "openligadb"
     }
   ],
-  "updated_openligadb": "2026-11-14T02:10:17.639819+09:00",
-  "updated_yt_highlights": "2026-11-14T02:11:49.584597+09:00",
-  "updated_uefa_secondary": "2026-11-14T02:12:25.583978+09:00",
-  "updated_domestic_cups": "2026-11-14T02:12:44.202087+09:00"
+  "updated_openligadb": "2026-11-14T07:04:06.300777+09:00",
+  "updated_yt_highlights": "2026-11-14T07:04:43.153725+09:00",
+  "updated_uefa_secondary": "2026-11-14T07:05:18.892584+09:00",
+  "updated_domestic_cups": "2026-11-14T07:05:36.453090+09:00"
 }
