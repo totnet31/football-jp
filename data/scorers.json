@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-16T10:37:09.554884+09:00",
+  "updated": "2026-11-16T19:20:43.671797+09:00",
   "competitions": {
     "39": {
       "name_ja": "プレミアリーグ",
@@ -645,7 +645,7 @@
           "goals": 10,
           "assists": 3,
           "penalties": 3,
-          "playedMatches": 8
+          "playedMatches": 9
         },
         {
           "player_id": 15958,
@@ -705,7 +705,7 @@
           "goals": 6,
           "assists": 3,
           "penalties": 3,
-          "playedMatches": 8
+          "playedMatches": 7
         },
         {
           "player_id": 176016,
@@ -753,7 +753,7 @@
           "goals": 5,
           "assists": 1,
           "penalties": null,
-          "playedMatches": 6
+          "playedMatches": 7
         },
         {
           "player_id": 141451,
@@ -849,7 +849,7 @@
           "goals": 4,
           "assists": 1,
           "penalties": null,
-          "playedMatches": 7
+          "playedMatches": 6
         },
         {
           "player_id": 274561,
@@ -861,7 +861,7 @@
           "goals": 4,
           "assists": 4,
           "penalties": null,
-          "playedMatches": 8
+          "playedMatches": 7
         },
         {
           "player_id": 145327,
@@ -873,7 +873,7 @@
           "goals": 4,
           "assists": 4,
           "penalties": 1,
-          "playedMatches": 7
+          "playedMatches": 6
         },
         {
           "player_id": 125561,
@@ -972,6 +972,18 @@
           "playedMatches": 7
         },
         {
+          "player_id": 187238,
+          "player_name": "Lars-Jörgen Salvesen",
+          "nationality": "Norway",
+          "team_id": 342,
+          "team_ja": "ダービー",
+          "team_crest": "https://crests.football-data.org/342.png",
+          "goals": 4,
+          "assists": null,
+          "penalties": null,
+          "playedMatches": 7
+        },
+        {
           "player_id": 6145,
           "player_name": "Callum Lang",
           "nationality": "England",
@@ -993,7 +1005,7 @@
           "goals": 4,
           "assists": 1,
           "penalties": null,
-          "playedMatches": 8
+          "playedMatches": 9
         },
         {
           "player_id": 210648,
@@ -1041,7 +1053,7 @@
           "goals": 4,
           "assists": 3,
           "penalties": null,
-          "playedMatches": 6
+          "playedMatches": 7
         },
         {
           "player_id": 138015,
@@ -1053,7 +1065,7 @@
           "goals": 4,
           "assists": 2,
           "penalties": null,
-          "playedMatches": 8
+          "playedMatches": 7
         },
         {
           "player_id": 3305,
@@ -1125,7 +1137,7 @@
           "goals": 3,
           "assists": null,
           "penalties": 1,
-          "playedMatches": 5
+          "playedMatches": 6
         },
         {
           "player_id": 165004,
@@ -1161,7 +1173,7 @@
           "goals": 3,
           "assists": 2,
           "penalties": null,
-          "playedMatches": 9
+          "playedMatches": 8
         },
         {
           "player_id": 172231,
@@ -1198,18 +1210,6 @@
           "assists": 1,
           "penalties": null,
           "playedMatches": 8
-        },
-        {
-          "player_id": 26375,
-          "player_name": "Jimmy Dunne",
-          "nationality": "Ireland",
-          "team_id": 69,
-          "team_ja": "QPR",
-          "team_crest": "https://crests.football-data.org/69.png",
-          "goals": 3,
-          "assists": null,
-          "penalties": null,
-          "playedMatches": 7
         }
       ]
     },
