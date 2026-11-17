@@ -2230,6 +2230,20 @@ footer a { color: var(--text-sub); }
 .column-article a:hover {
   color: #312e81;
 }
+/* 濃い背景の申し込みボタンは白い文字（2026-11-17・#196）
+   .column-article a（青い文字）が .pw-link の白い文字を上書きして、紺の背景に青い文字になっていた */
+a.pw-link,
+a.pw-link:visited,
+.column-article a.pw-link,
+.column-article a.pw-link:visited {
+  color: #ffffff;
+  text-decoration: none;
+}
+a.pw-link:hover,
+.column-article a.pw-link:hover {
+  color: #ffffff;
+  background: #1f2a44;
+}
 .column-article-related {
   margin-top: 32px;
   padding: 18px;

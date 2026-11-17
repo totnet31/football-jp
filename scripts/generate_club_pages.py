@@ -6,7 +6,7 @@ generate_club_pages.py
 使い方: python3 scripts/generate_club_pages.py
 """
 
-from utils import is_result_pending, fix_unplayed_finished, openligadb_matches_for_names
+from utils import split_past_future, is_result_pending, fix_unplayed_finished, openligadb_matches_for_names
 import json
 import os
 import re
@@ -626,8 +626,16 @@ def build_club_page(club_info: dict, slug: str, standing: dict,
     # --- 直近の試合セクション ---
     matches_html = ""
     if recent_matches:
-        match_rows = ""
-        for idx, m in enumerate(recent_matches):
+        # 直近の試合（始まった試合・新しい順）と今後の予定（まだの試合・近い順）に分ける（2026-11-17・#202）
+        _past, _future = split_past_future(recent_matches)
+        _future_ids = {id(x) for x in _future}
+        _rows = {"past": "", "future": ""}
+        _cnt = {"past": 0, "future": 0}
+        for m in _past + _future:
+            _grp = "future" if id(m) in _future_ids else "past"
+            idx = _cnt[_grp]
+            _cnt[_grp] += 1
+            match_rows = ""
             kickoff = m.get("kickoff_jst", "")
             status = m.get("status", "")
             home_ja = m.get("home_ja", "")
@@ -707,18 +715,19 @@ def build_club_page(club_info: dict, slug: str, standing: dict,
             <div class="match-comp">{esc(comp_ja)}</div>
           </div>"""
 
-        total_matches = len(recent_matches)
-        extra_count = max(0, total_matches - 10)
-        show_more_btn = ""
-        if extra_count > 0:
-            show_more_btn = f"""
+            _rows[_grp] += match_rows
+
+        def _matches_table(title, rows, n):
+            extra_count = max(0, n - 10)
+            show_more_btn = ""
+            if extra_count > 0:
+                show_more_btn = f"""
       <button class="show-more-matches" onclick="toggleMoreMatches(this)" data-count="{extra_count}" data-expanded="false">
         もっと見る（残り {extra_count} 試合）
       </button>"""
-
-        matches_html = f"""
+            return f"""
     <section class="club-section">
-      <h3>📅 直近の試合</h3>
+      <h3>{title}</h3>
       <div class="matches-list">
         <div class="match-header">
           <div class="match-date">日時（JST）</div>
@@ -728,9 +737,20 @@ def build_club_page(club_info: dict, slug: str, standing: dict,
           <div class="match-broadcast">配信</div>
           <div class="match-comp">大会</div>
         </div>
-        {match_rows}
+        {rows}
       </div>{show_more_btn}
     </section>"""
+
+        if _past:
+            matches_html = _matches_table("📅 直近の試合", _rows["past"], len(_past))
+        else:
+            matches_html = """
+    <section class="club-section">
+      <h3>📅 直近の試合</h3>
+      <p class="no-data">まだ試合の結果はありません。</p>
+    </section>"""
+        if _future:
+            matches_html += _matches_table("🗓 今後の予定", _rows["future"], len(_future))
     else:
         matches_html = """
     <section class="club-section">
