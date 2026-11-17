@@ -60,6 +60,36 @@ def is_result_pending(m, now=None):
     return now - ko >= timedelta(hours=RESULT_PENDING_HOURS)
 
 
+def split_past_future(matches, now=None):
+    """選手・クラブページの試合表を「直近の試合」と「今後の予定」に分ける（2026-11-17・#202）。
+
+    直近の試合＝ページを作った時点より前に始まった試合（終わった試合・結果待ち・試合中）を新しい順。
+    今後の予定＝まだ始まっていない試合を近い順。
+    これまでは全部を新しい順に並べていたため、来年1月などの先の試合が「直近の試合」の上に出ていた。
+    開始時刻が読めない試合は、終わっていれば直近、そうでなければ今後に入れる。
+    """
+    from datetime import datetime, timedelta, timezone
+    jst = timezone(timedelta(hours=9))
+    if now is None:
+        now = datetime.now(jst)
+    past, future = [], []
+    for m in matches or []:
+        ko = None
+        try:
+            ko = datetime.fromisoformat((m.get('kickoff_jst') or '').replace('Z', '+00:00'))
+            if ko.tzinfo is None:
+                ko = ko.replace(tzinfo=jst)
+        except Exception:
+            ko = None
+        if m.get('status') == 'FINISHED' or (ko is not None and ko <= now):
+            past.append(m)
+        else:
+            future.append(m)
+    past.sort(key=lambda x: x.get('kickoff_jst') or '', reverse=True)
+    future.sort(key=lambda x: x.get('kickoff_jst') or '')
+    return past, future
+
+
 def fix_unplayed_finished(matches, now=None):
     """開始時刻がまだ来ていないのに「終了（FINISHED）」やスコア入りになっている試合を、予定の試合に戻す。
 
