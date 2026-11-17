@@ -375,7 +375,7 @@ def build_player_page_en(player: dict, slug: str, scorer_stats: dict,
     goals_val = (wiki_stats or scorer_stats or {}).get("goals", 0) if (wiki_stats or scorer_stats) else 0
     played_val = (wiki_stats or scorer_stats or {}).get("played", 0) if (wiki_stats or scorer_stats) else 0
     if goals_val and played_val:
-        desc = f"{name_en} ({position_en}, {club_en}) – {goals_val} goals in {played_val} apps {"in 2025-26" if wiki_stats else "this season"}. Match schedule, stats, and broadcaster info in JST. Japanese overseas player tracker."
+        desc = f"{name_en} ({position_en}, {club_en}) – {goals_val} goals in {played_val} apps {'in 2025-26' if wiki_stats else 'this season'}. Match schedule, stats, and broadcaster info in JST. Japanese overseas player tracker."
     else:
         desc = f"{name_en} ({position_en}) plays for {club_en} in the {league_en}. Match schedule, stats, broadcasters, and career info updated in Japan Standard Time."
     if len(desc) > 160:
