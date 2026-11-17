@@ -346,7 +346,7 @@
     <section class="player-section">
       <h3>👤 Profile <a href="https://en.wikipedia.org/wiki/Ao_Tanaka" target="_blank" rel="noopener" style="font-size:11px;color:#888;">Wikipedia →</a></h3>
       <table class="profile-table">
-        <tr><td class="profile-label">Height / Weight</td><td class="profile-value">186 cm / —</td></tr>
+        <tr><td class="profile-label">Height / Weight</td><td class="profile-value">180 cm / —</td></tr>
         <tr><td class="profile-label">Date of Birth</td><td class="profile-value">1998-09-10 (age 28)</td></tr>
         <tr><td class="profile-label">Birthplace</td><td class="profile-value">Kawasaki, Kanagawa, Japan</td></tr>
         <tr><td class="profile-label">Foot</td><td class="profile-value">—</td></tr>
@@ -381,11 +381,11 @@
     <section class="player-section">
       <h3>🏆 Premier League Current Standings</h3>
       <div class="standing-row">
-        <span class="standing-pos">7</span>
+        <span class="standing-pos">9</span>
         <span class="standing-detail">
-          (of 20)&nbsp;&nbsp;7 played&nbsp;
-          2W 4D 1L&nbsp;
-          10 pts
+          (of 20)&nbsp;&nbsp;10 played&nbsp;
+          3W 5D 2L&nbsp;
+          14 pts
         </span>
       </div>
     </section>
@@ -403,19 +403,27 @@
           <div class="match-comp">Competition</div>
         </div>
         
-          <div class="match-row scheduled">
-            <div class="match-date"><span class="match-date-day">2026/11/01</span><span class="match-date-time">(Sun) 00:00</span></div>
-            <div class="match-venue"><span class="venue-badge venue-away">A</span></div>
-            <div class="match-opponent">vs Bournemouth</div>
-            <div class="match-result">—</div>
+          <div class="match-row">
+            <div class="match-date"><span class="match-date-day">2026/11/07</span><span class="match-date-time">(Sat) 21:30</span></div>
+            <div class="match-venue"><span class="venue-badge venue-home">H</span></div>
+            <div class="match-opponent">vs Tottenham</div>
+            <div class="match-result win">1 - 0</div>
             <div class="match-broadcast">—</div>
             <div class="match-comp">Premier League</div>
           </div>
-          <div class="match-row scheduled">
+          <div class="match-row">
+            <div class="match-date"><span class="match-date-day">2026/11/01</span><span class="match-date-time">(Sun) 00:00</span></div>
+            <div class="match-venue"><span class="venue-badge venue-away">A</span></div>
+            <div class="match-opponent">vs Bournemouth</div>
+            <div class="match-result lose">0 - 2</div>
+            <div class="match-broadcast">—</div>
+            <div class="match-comp">Premier League</div>
+          </div>
+          <div class="match-row">
             <div class="match-date"><span class="match-date-day">2026/10/26</span><span class="match-date-time">(Mon) 01:30</span></div>
             <div class="match-venue"><span class="venue-badge venue-away">A</span></div>
             <div class="match-opponent">vs Sunderland</div>
-            <div class="match-result">—</div>
+            <div class="match-result draw">0 - 0</div>
             <div class="match-broadcast">—</div>
             <div class="match-comp">Premier League</div>
           </div>
@@ -475,7 +483,7 @@
             <div class="match-broadcast">—</div>
             <div class="match-comp">Premier League</div>
           </div>
-          <div class="match-row">
+          <div class="match-row hidden-extra">
             <div class="match-date"><span class="match-date-day">2026/08/26</span><span class="match-date-time">(Wed) 04:00</span></div>
             <div class="match-venue"><span class="venue-badge venue-away">A</span></div>
             <div class="match-opponent">vs Nottingham Forest</div>
@@ -524,9 +532,39 @@
             <div class="match-comp">Premier League</div>
           </div>
       </div>
-      <button class="show-more-matches" onclick="toggleMoreMatches(this)" data-count="5" data-expanded="false">
-        Show more (5 remaining)
+      <button class="show-more-matches" onclick="toggleMoreMatches(this)" data-count="6" data-expanded="false">
+        Show more (6 remaining)
       </button>
+    </section>
+    <section class="player-section">
+      <h3>🗓 Upcoming Fixtures</h3>
+      <div class="matches-list">
+        <div class="match-header">
+          <div class="match-date">Date (JST)</div>
+          <div class="match-venue">Venue</div>
+          <div class="match-opponent">Opponent</div>
+          <div class="match-result">Result</div>
+          <div class="match-broadcast">Stream</div>
+          <div class="match-comp">Competition</div>
+        </div>
+        
+          <div class="match-row scheduled">
+            <div class="match-date"><span class="match-date-day">2026/11/22</span><span class="match-date-time">(Sun) 00:00</span></div>
+            <div class="match-venue"><span class="venue-badge venue-away">A</span></div>
+            <div class="match-opponent">vs Chelsea</div>
+            <div class="match-result">—</div>
+            <div class="match-broadcast">—</div>
+            <div class="match-comp">Premier League</div>
+          </div>
+          <div class="match-row scheduled">
+            <div class="match-date"><span class="match-date-day">2026/11/29</span><span class="match-date-time">(Sun) 00:00</span></div>
+            <div class="match-venue"><span class="venue-badge venue-home">H</span></div>
+            <div class="match-opponent">vs Coventry City</div>
+            <div class="match-result">—</div>
+            <div class="match-broadcast">—</div>
+            <div class="match-comp">Premier League</div>
+          </div>
+      </div>
     </section>
 
   
@@ -534,6 +572,14 @@
       <h3>🎬 Season Goals & Highlights</h3>
       <div class="video-grid video-grid-player">
         
+        <a href="https://youtube.com/watch?v=U27mnxORbkI" target="_blank" rel="noopener" class="video-card video-card-player">
+          <div class="video-thumb-wrap">
+            <img src="https://i.ytimg.com/vi/U27mnxORbkI/mqdefault.jpg" alt="" loading="lazy">
+            
+          </div>
+          <div class="video-title">Ao Tanaka 田中 碧 - Magic Skills, Assists &amp;amp; Goals - Leeds United | HD</div>
+          <div class="video-meta">JM Productions HD · 05/15</div>
+        </a>
         <a href="https://youtube.com/watch?v=uRaujOEyJaU" target="_blank" rel="noopener" class="video-card video-card-player">
           <div class="video-thumb-wrap">
             <img src="https://i.ytimg.com/vi/uRaujOEyJaU/mqdefault.jpg" alt="" loading="lazy">
@@ -542,21 +588,13 @@
           <div class="video-title">Ao Tanaka - ALL 4 GOALS FOR LEEDS UNITED IN 2025/26 | Skills &amp;amp; Highlights</div>
           <div class="video-meta">Rain of Goals · 06/27</div>
         </a>
-        <a href="https://youtube.com/watch?v=UufQvCRR8uA" target="_blank" rel="noopener" class="video-card video-card-player">
+        <a href="https://youtube.com/watch?v=-iWjNogALwc" target="_blank" rel="noopener" class="video-card video-card-player">
           <div class="video-thumb-wrap">
-            <img src="https://i.ytimg.com/vi/UufQvCRR8uA/mqdefault.jpg" alt="" loading="lazy">
+            <img src="https://i.ytimg.com/vi/-iWjNogALwc/mqdefault.jpg" alt="" loading="lazy">
             
           </div>
-          <div class="video-title">Superb footwork and finish for Ao Tanaka goal!</div>
-          <div class="video-meta">Leeds United Official · 04/06</div>
-        </a>
-        <a href="https://youtube.com/watch?v=cSBq51rnU8U" target="_blank" rel="noopener" class="video-card video-card-player">
-          <div class="video-thumb-wrap">
-            <img src="https://i.ytimg.com/vi/cSBq51rnU8U/mqdefault.jpg" alt="" loading="lazy">
-            
-          </div>
-          <div class="video-title">Here&amp;#39;s why Manchester United want Ao Tanaka 🔴🔴</div>
-          <div class="video-meta">90 Minutes Football · 04/18</div>
+          <div class="video-title">Ao Tanaka - ALL 10 GOALS FOR FORTUNA DUSSELDORF | Skills &amp;amp; Highlights</div>
+          <div class="video-meta">Rain of Goals · 12/03</div>
         </a>
       </div>
     </section>
@@ -566,6 +604,11 @@
       <h3>Related Highlights</h3>
       <div class="video-grid">
         
+        <a href="https://youtu.be/hgziFcqWWQI" target="_blank" rel="noopener" class="video-card">
+          <img src="https://i.ytimg.com/vi/hgziFcqWWQI/mqdefault.jpg" alt="" loading="lazy">
+          <div class="video-title">【🇯🇵田中碧が先発出場 | ボーンマス v リーズ｜ショートハイライト】プレミアリーグ2026/27 第9節</div>
+          <div class="video-meta">U-NEXT · 11/01</div>
+        </a>
         <a href="https://youtu.be/l1TwPdtVpgk" target="_blank" rel="noopener" class="video-card">
           <img src="https://i.ytimg.com/vi/l1TwPdtVpgk/mqdefault.jpg" alt="" loading="lazy">
           <div class="video-title">⚔️ Leeds are taking on today a Man United struggling both on &amp; off the pitch #PremierLeague</div>
@@ -615,27 +658,11 @@
       <h3>📋 Career</h3>
       <div class="career-current">🟢 Current club: <strong>Leeds United</strong> (2024–)</div>
       <div class="career-list">
-        <div class="career-row is-current"><span class="career-years">2024–</span><span class="career-club">Leeds United</span></div><div class="career-row"><span class="career-years">2022–2024</span><span class="career-club">Fortuna Düsseldorf</span></div><div class="career-row"><span class="career-years">2021–2022</span><span class="career-club">→ Fortuna Düsseldorf (loan)</span></div><div class="career-row"><span class="career-years">2017–2022</span><span class="career-club">Kawasaki Frontale</span></div><div class="career-row"><span class="career-years">2007–2016</span><span class="career-club">Kawasaki Frontale (Youth)</span></div><div class="career-row"><span class="career-years">2001–2006</span><span class="career-club">Saginuma SC (Youth)</span></div>
+        <div class="career-row is-current"><span class="career-years">2024–</span><span class="career-club">Leeds United</span></div><div class="career-row"><span class="career-years">2022–2024</span><span class="career-club">Fortuna Düsseldorf</span></div><div class="career-row"><span class="career-years">2021–2022</span><span class="career-club">→ Fortuna Düsseldorf (loan)</span></div><div class="career-row"><span class="career-years">2017–2022</span><span class="career-club">Kawasaki Frontale</span></div>
       </div>
     </section>
 
   
-    <section class="player-section">
-      <h3>🇯🇵 International Career</h3>
-      <div class="national-team-list">
-        
-            <div class="nt-row">
-              <span class="nt-team">Japan U23</span>
-              <span class="nt-years">2019–2021</span>
-              <span class="nt-stats">18 caps / 2 goals</span>
-            </div>
-            <div class="nt-row">
-              <span class="nt-team">Japan</span>
-              <span class="nt-years">2019–</span>
-              <span class="nt-stats">45 caps / 8 goals</span>
-            </div>
-      </div>
-    </section>
 
   
     <section class="player-section">

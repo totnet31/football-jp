@@ -241,6 +241,7 @@ def translate_career_club(club_ja: str) -> str:
         "アーセナル": "Arsenal",
         "チェルシー": "Chelsea",
         "トッテナム": "Tottenham Hotspur",
+        "ラシン・サンタンデール": "Racing de Santander",
     }
     # → がある場合（ローン表記）
     if club_ja.startswith("→"):

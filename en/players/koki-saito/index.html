@@ -381,11 +381,11 @@
     <section class="player-section">
       <h3>🏆 Championship Current Standings</h3>
       <div class="standing-row">
-        <span class="standing-pos">9</span>
+        <span class="standing-pos">8</span>
         <span class="standing-detail">
-          (of 24)&nbsp;&nbsp;11 played&nbsp;
-          4W 5D 2L&nbsp;
-          17 pts
+          (of 24)&nbsp;&nbsp;15 played&nbsp;
+          6W 6D 3L&nbsp;
+          24 pts
         </span>
       </div>
     </section>
@@ -403,27 +403,35 @@
           <div class="match-comp">Competition</div>
         </div>
         
-          <div class="match-row scheduled">
+          <div class="match-row">
+            <div class="match-date"><span class="match-date-day">2026/11/08</span><span class="match-date-time">(Sun) 00:00</span></div>
+            <div class="match-venue"><span class="venue-badge venue-home">H</span></div>
+            <div class="match-opponent">vs Lincoln City</div>
+            <div class="match-result win">2 - 1</div>
+            <div class="match-broadcast">—</div>
+            <div class="match-comp">Championship</div>
+          </div>
+          <div class="match-row">
             <div class="match-date"><span class="match-date-day">2026/11/04</span><span class="match-date-time">(Wed) 04:45</span></div>
             <div class="match-venue"><span class="venue-badge venue-home">H</span></div>
             <div class="match-opponent">vs Burnley</div>
-            <div class="match-result">—</div>
+            <div class="match-result draw">1 - 1</div>
             <div class="match-broadcast">—</div>
             <div class="match-comp">Championship</div>
           </div>
-          <div class="match-row scheduled">
+          <div class="match-row">
             <div class="match-date"><span class="match-date-day">2026/11/01</span><span class="match-date-time">(Sun) 00:00</span></div>
             <div class="match-venue"><span class="venue-badge venue-away">A</span></div>
             <div class="match-opponent">vs Southampton</div>
-            <div class="match-result">—</div>
+            <div class="match-result lose">1 - 4</div>
             <div class="match-broadcast">—</div>
             <div class="match-comp">Championship</div>
           </div>
-          <div class="match-row scheduled">
+          <div class="match-row">
             <div class="match-date"><span class="match-date-day">2026/10/24</span><span class="match-date-time">(Sat) 23:00</span></div>
             <div class="match-venue"><span class="venue-badge venue-home">H</span></div>
             <div class="match-opponent">vs Swansea</div>
-            <div class="match-result">—</div>
+            <div class="match-result win">5 - 0</div>
             <div class="match-broadcast">—</div>
             <div class="match-comp">Championship</div>
           </div>
@@ -475,7 +483,7 @@
             <div class="match-broadcast">—</div>
             <div class="match-comp">Championship</div>
           </div>
-          <div class="match-row">
+          <div class="match-row hidden-extra">
             <div class="match-date"><span class="match-date-day">2026/09/05</span><span class="match-date-time">(Sat) 23:00</span></div>
             <div class="match-venue"><span class="venue-badge venue-home">H</span></div>
             <div class="match-opponent">vs Middlesbrough</div>
@@ -540,9 +548,47 @@
             <div class="match-comp">Championship</div>
           </div>
       </div>
-      <button class="show-more-matches" onclick="toggleMoreMatches(this)" data-count="7" data-expanded="false">
-        Show more (7 remaining)
+      <button class="show-more-matches" onclick="toggleMoreMatches(this)" data-count="8" data-expanded="false">
+        Show more (8 remaining)
       </button>
+    </section>
+    <section class="player-section">
+      <h3>🗓 Upcoming Fixtures</h3>
+      <div class="matches-list">
+        <div class="match-header">
+          <div class="match-date">Date (JST)</div>
+          <div class="match-venue">Venue</div>
+          <div class="match-opponent">Opponent</div>
+          <div class="match-result">Result</div>
+          <div class="match-broadcast">Stream</div>
+          <div class="match-comp">Competition</div>
+        </div>
+        
+          <div class="match-row scheduled">
+            <div class="match-date"><span class="match-date-day">2026/11/21</span><span class="match-date-time">(Sat) 21:30</span></div>
+            <div class="match-venue"><span class="venue-badge venue-away">A</span></div>
+            <div class="match-opponent">vs Millwall</div>
+            <div class="match-result">—</div>
+            <div class="match-broadcast">—</div>
+            <div class="match-comp">Championship</div>
+          </div>
+          <div class="match-row scheduled">
+            <div class="match-date"><span class="match-date-day">2026/11/25</span><span class="match-date-time">(Wed) 04:45</span></div>
+            <div class="match-venue"><span class="venue-badge venue-away">A</span></div>
+            <div class="match-opponent">vs Norwich</div>
+            <div class="match-result">—</div>
+            <div class="match-broadcast">—</div>
+            <div class="match-comp">Championship</div>
+          </div>
+          <div class="match-row scheduled">
+            <div class="match-date"><span class="match-date-day">2026/11/29</span><span class="match-date-time">(Sun) 00:00</span></div>
+            <div class="match-venue"><span class="venue-badge venue-home">H</span></div>
+            <div class="match-opponent">vs Sheffield Utd</div>
+            <div class="match-result">—</div>
+            <div class="match-broadcast">—</div>
+            <div class="match-comp">Championship</div>
+          </div>
+      </div>
     </section>
 
   
@@ -550,6 +596,14 @@
       <h3>🎬 Season Goals & Highlights</h3>
       <div class="video-grid video-grid-player">
         
+        <a href="https://youtube.com/watch?v=YEGrzCsQxr0" target="_blank" rel="noopener" class="video-card video-card-player">
+          <div class="video-thumb-wrap">
+            <img src="https://i.ytimg.com/vi/YEGrzCsQxr0/mqdefault.jpg" alt="" loading="lazy">
+            
+          </div>
+          <div class="video-title">Koki Saito (斉藤 光毅) ▶ Skills, Goals &amp;amp; Highlights 2023/2024ᴴᴰ</div>
+          <div class="video-meta">FCompsTV · 04/19</div>
+        </a>
         <a href="https://youtube.com/watch?v=6TbStAyKw5s" target="_blank" rel="noopener" class="video-card video-card-player">
           <div class="video-thumb-wrap">
             <img src="https://i.ytimg.com/vi/6TbStAyKw5s/mqdefault.jpg" alt="" loading="lazy">
@@ -558,21 +612,13 @@
           <div class="video-title">【斉藤光毅（Koki Saito）】QPRでの”衝撃”ゴール＆アシスト！最高評価9を叩き出す異国での止まらない台頭 | プレー集 #サッカー</div>
           <div class="video-meta">KOALA SOCCER · 05/25</div>
         </a>
-        <a href="https://youtube.com/watch?v=KKFIw4dotGI" target="_blank" rel="noopener" class="video-card video-card-player">
+        <a href="https://youtube.com/watch?v=VHCMWTK5cU0" target="_blank" rel="noopener" class="video-card video-card-player">
           <div class="video-thumb-wrap">
-            <img src="https://i.ytimg.com/vi/KKFIw4dotGI/mqdefault.jpg" alt="" loading="lazy">
+            <img src="https://i.ytimg.com/vi/VHCMWTK5cU0/mqdefault.jpg" alt="" loading="lazy">
             
           </div>
-          <div class="video-title">QPR Goal of the Season 2025/26 | WHO GETS YOUR VOTE?</div>
-          <div class="video-meta">QPR FC · 04/14</div>
-        </a>
-        <a href="https://youtube.com/watch?v=lBTPwoNZLtg" target="_blank" rel="noopener" class="video-card video-card-player">
-          <div class="video-thumb-wrap">
-            <img src="https://i.ytimg.com/vi/lBTPwoNZLtg/mqdefault.jpg" alt="" loading="lazy">
-            
-          </div>
-          <div class="video-title">斉藤光毅、チャンピオンシップ開幕戦で逆転ゴール！QPRがポーツマスを3対1撃破——敵地26年ぶりの歴史的白星に貢献</div>
-          <div class="video-meta">日本サッカー速報 · 08/22</div>
+          <div class="video-title">【斉藤光毅（Koki Saito）｜QPRの切り札】39試合3ゴール2アシスト！驚異のドリブル＆ゴール集</div>
+          <div class="video-meta">KOALA SOCCER · 05/17</div>
         </a>
       </div>
     </section>
@@ -604,57 +650,11 @@
       <h3>📋 Career</h3>
       <div class="career-current">🟢 Current club: <strong>Queens Park Rangers</strong> (2025–)</div>
       <div class="career-list">
-        <div class="career-row is-current"><span class="career-years">2025–</span><span class="career-club">Queens Park Rangers</span></div><div class="career-row"><span class="career-years">2024–2025</span><span class="career-club">→ Queens Park Rangers (loan)</span></div><div class="career-row"><span class="career-years">2022–2024</span><span class="career-club">→ Sparta Rotterdam (loan)</span></div><div class="career-row"><span class="career-years">2021–2025</span><span class="career-club">Lommel</span></div><div class="career-row"><span class="career-years">2018–2020</span><span class="career-club">Yokohama FC</span></div><div class="career-row"><span class="career-years">2014–2018</span><span class="career-club">Yokohama FC (Youth)</span></div><div class="career-row"><span class="career-years">2008–2013</span><span class="career-club">Inukura SC (Youth)</span></div>
+        <div class="career-row is-current"><span class="career-years">2025–</span><span class="career-club">Queens Park Rangers</span></div><div class="career-row"><span class="career-years">2024–2025</span><span class="career-club">→ Queens Park Rangers (loan)</span></div><div class="career-row"><span class="career-years">2022–2024</span><span class="career-club">→ Sparta Rotterdam (loan)</span></div><div class="career-row"><span class="career-years">2021–2025</span><span class="career-club">Lommel</span></div><div class="career-row"><span class="career-years">2018–2020</span><span class="career-club">Yokohama FC</span></div>
       </div>
     </section>
 
   
-    <section class="player-section">
-      <h3>🇯🇵 International Career</h3>
-      <div class="national-team-list">
-        
-            <div class="nt-row">
-              <span class="nt-team">Japan U16</span>
-              <span class="nt-years">2017</span>
-              <span class="nt-stats">7 caps / 7 goals</span>
-            </div>
-            <div class="nt-row">
-              <span class="nt-team">Japan U17</span>
-              <span class="nt-years">2017–2018</span>
-              <span class="nt-stats">8 caps / 9 goals</span>
-            </div>
-            <div class="nt-row">
-              <span class="nt-team">Japan U18</span>
-              <span class="nt-years">2018</span>
-              <span class="nt-stats">4 caps / 0 goals</span>
-            </div>
-            <div class="nt-row">
-              <span class="nt-team">Japan U19</span>
-              <span class="nt-years">2018</span>
-              <span class="nt-stats">5 caps / 3 goals</span>
-            </div>
-            <div class="nt-row">
-              <span class="nt-team">Japan U20</span>
-              <span class="nt-years">2019</span>
-              <span class="nt-stats">6 caps / 1 goals</span>
-            </div>
-            <div class="nt-row">
-              <span class="nt-team">Japan U21</span>
-              <span class="nt-years">2022</span>
-              <span class="nt-stats">5 caps / 1 goals</span>
-            </div>
-            <div class="nt-row">
-              <span class="nt-team">Japan U23</span>
-              <span class="nt-years">2022</span>
-              <span class="nt-stats">6 caps / 1 goals</span>
-            </div>
-            <div class="nt-row">
-              <span class="nt-team">Japan</span>
-              <span class="nt-years">2025–</span>
-              <span class="nt-stats">1 caps / 0 goals</span>
-            </div>
-      </div>
-    </section>
 
   
     <section class="player-section">
