@@ -773,7 +773,7 @@ def cup_matches_for_name(name_ja: str, matches: list) -> list:
     """国内カップ戦（scripts/fetch_domestic_cups.py の試合）のうち、name_ja の選手が試合データに載っているもの"""
     if not name_ja:
         return []
-    return [m for m in matches if str(m.get("id", "")).startswith("CUP_")
+    return [m for m in matches if str(m.get("id", "")).startswith(("CUP_", "ECL_", "EL_"))
             and any(jp.get("name_ja") == name_ja for jp in m.get("japanese_players") or [])]
 
 
