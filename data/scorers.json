@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-24T06:11:50.144297+09:00",
+  "updated": "2026-11-24T07:02:26.689463+09:00",
   "competitions": {
     "39": {
       "name_ja": "プレミアリーグ",
@@ -246,6 +246,18 @@
           "playedMatches": 11
         },
         {
+          "player_id": 10000,
+          "player_name": "Vitaly Janelt",
+          "nationality": "Germany",
+          "team_id": 402,
+          "team_ja": "ブレントフォード",
+          "team_crest": "https://crests.football-data.org/402.png",
+          "goals": 3,
+          "assists": null,
+          "penalties": null,
+          "playedMatches": 10
+        },
+        {
           "player_id": 190851,
           "player_name": "Jack Hinshelwood",
           "nationality": "England",
@@ -424,18 +436,6 @@
           "assists": 1,
           "penalties": 1,
           "playedMatches": 11
-        },
-        {
-          "player_id": 10000,
-          "player_name": "Vitaly Janelt",
-          "nationality": "Germany",
-          "team_id": 402,
-          "team_ja": "ブレントフォード",
-          "team_crest": "https://crests.football-data.org/402.png",
-          "goals": 2,
-          "assists": null,
-          "penalties": null,
-          "playedMatches": 10
         },
         {
           "player_id": 142075,
