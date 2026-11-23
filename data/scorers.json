@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-23T20:29:23.938301+09:00",
+  "updated": "2026-11-24T06:11:50.144297+09:00",
   "competitions": {
     "39": {
       "name_ja": "プレミアリーグ",
@@ -39,7 +39,7 @@
           "goals": 6,
           "assists": 1,
           "penalties": null,
-          "playedMatches": 10
+          "playedMatches": 11
         },
         {
           "player_id": 152515,
@@ -110,6 +110,18 @@
           "team_crest": "https://crests.football-data.org/65.png",
           "goals": 5,
           "assists": 2,
+          "penalties": null,
+          "playedMatches": 11
+        },
+        {
+          "player_id": 101910,
+          "player_name": "Keane Lewis-Potter",
+          "nationality": "England",
+          "team_id": 402,
+          "team_ja": "ブレントフォード",
+          "team_crest": "https://crests.football-data.org/402.png",
+          "goals": 4,
+          "assists": 1,
           "penalties": null,
           "playedMatches": 11
         },
@@ -231,7 +243,7 @@
           "goals": 3,
           "assists": 1,
           "penalties": null,
-          "playedMatches": 10
+          "playedMatches": 11
         },
         {
           "player_id": 190851,
@@ -291,7 +303,7 @@
           "goals": 3,
           "assists": null,
           "penalties": null,
-          "playedMatches": 10
+          "playedMatches": 11
         },
         {
           "player_id": 8076,
@@ -414,18 +426,6 @@
           "playedMatches": 11
         },
         {
-          "player_id": 101910,
-          "player_name": "Keane Lewis-Potter",
-          "nationality": "England",
-          "team_id": 402,
-          "team_ja": "ブレントフォード",
-          "team_crest": "https://crests.football-data.org/402.png",
-          "goals": 2,
-          "assists": 1,
-          "penalties": null,
-          "playedMatches": 10
-        },
-        {
           "player_id": 10000,
           "player_name": "Vitaly Janelt",
           "nationality": "Germany",
@@ -435,7 +435,7 @@
           "goals": 2,
           "assists": null,
           "penalties": null,
-          "playedMatches": 9
+          "playedMatches": 10
         },
         {
           "player_id": 142075,
@@ -1335,7 +1335,7 @@
           "goals": 6,
           "assists": null,
           "penalties": 1,
-          "playedMatches": 12
+          "playedMatches": 13
         },
         {
           "player_id": 11113,
@@ -1383,7 +1383,7 @@
           "goals": 5,
           "assists": 1,
           "penalties": null,
-          "playedMatches": 11
+          "playedMatches": 12
         },
         {
           "player_id": 221308,
@@ -1599,7 +1599,7 @@
           "goals": 3,
           "assists": null,
           "penalties": null,
-          "playedMatches": 12
+          "playedMatches": 13
         },
         {
           "player_id": 8924,
@@ -1779,7 +1779,7 @@
           "goals": 2,
           "assists": null,
           "penalties": null,
-          "playedMatches": 10
+          "playedMatches": 11
         },
         {
           "player_id": 101182,
@@ -2448,10 +2448,10 @@
           "team_id": 5911,
           "team_ja": "Monza",
           "team_crest": "https://crests.football-data.org/5911.png",
-          "goals": 9,
+          "goals": 11,
           "assists": 1,
-          "penalties": 2,
-          "playedMatches": 10
+          "penalties": 3,
+          "playedMatches": 11
         },
         {
           "player_id": 169216,
@@ -2655,7 +2655,7 @@
           "goals": 4,
           "assists": null,
           "penalties": null,
-          "playedMatches": 11
+          "playedMatches": 12
         },
         {
           "player_id": 3220,
@@ -2679,7 +2679,7 @@
           "goals": 4,
           "assists": null,
           "penalties": null,
-          "playedMatches": 11
+          "playedMatches": 12
         },
         {
           "player_id": 182192,
@@ -2814,6 +2814,18 @@
           "playedMatches": 12
         },
         {
+          "player_id": 265567,
+          "player_name": "Jay Robinson",
+          "nationality": "England",
+          "team_id": 5911,
+          "team_ja": "Monza",
+          "team_crest": "https://crests.football-data.org/5911.png",
+          "goals": 3,
+          "assists": 1,
+          "penalties": null,
+          "playedMatches": 12
+        },
+        {
           "player_id": 299423,
           "player_name": "Simone Lontani",
           "nationality": "Italy",
@@ -2919,7 +2931,7 @@
           "goals": 3,
           "assists": 2,
           "penalties": null,
-          "playedMatches": 11
+          "playedMatches": 12
         },
         {
           "player_id": 822,
@@ -3015,18 +3027,6 @@
           "goals": 2,
           "assists": 3,
           "penalties": null,
-          "playedMatches": 12
-        },
-        {
-          "player_id": 81440,
-          "player_name": "Éderson",
-          "nationality": "Brazil",
-          "team_id": 102,
-          "team_ja": "アタランタ",
-          "team_crest": "https://crests.football-data.org/102.png",
-          "goals": 2,
-          "assists": null,
-          "penalties": 1,
           "playedMatches": 12
         }
       ]
