@@ -2141,6 +2141,20 @@ footer a { color: var(--text-sub); }
   border-left: 3px solid #4338ca;
   border-radius: 4px;
 }
+/* W杯2026 大会終了の追記（2026-11-25） */
+.column-article-update-notice {
+  margin: 16px 0 0;
+  background: #fffbeb;
+  padding: 12px 16px;
+  border-left: 3px solid #d97706;
+  border-radius: 4px;
+}
+.column-article-update-notice p {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.7;
+  color: #555;
+}
 .column-article section {
   margin-bottom: 28px;
   scroll-margin-top: 16px;
