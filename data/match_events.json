@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-26T20:44:30.101447+09:00",
+  "updated": "2026-11-27T04:02:13.235152+09:00",
   "wikipedia_pages": {
     "64": {
       "title": "2026–27 Liverpool F.C. season",
@@ -1245,10 +1245,35 @@
           "date": "2026-11-25",
           "team1": "Club Brugge",
           "team2": "Liverpool",
-          "score": "",
+          "score": "0–3",
           "round": "5",
           "goals1": [],
-          "goals2": []
+          "goals2": [
+            {
+              "wiki_target": "Alexander Isak",
+              "display": "Isak",
+              "goals": [
+                {
+                  "minute_raw": "13",
+                  "note": ""
+                },
+                {
+                  "minute_raw": "82",
+                  "note": ""
+                }
+              ]
+            },
+            {
+              "wiki_target": "Florian Wirtz",
+              "display": "Wirtz",
+              "goals": [
+                {
+                  "minute_raw": "79",
+                  "note": ""
+                }
+              ]
+            }
+          ]
         },
         {
           "date": "2026-12-09",
@@ -1278,7 +1303,7 @@
           "goals2": []
         }
       ],
-      "fetched_at": "2026-11-26T04:10:02.747032+09:00"
+      "fetched_at": "2026-11-27T04:00:24.814198+09:00"
     },
     "397": {
       "title": "2026–27 Brighton & Hove Albion F.C. season",
@@ -2447,7 +2472,7 @@
           "goals2": []
         }
       ],
-      "fetched_at": "2026-11-26T04:10:03.907588+09:00"
+      "fetched_at": "2026-11-27T04:00:25.951516+09:00"
     },
     "354": {
       "title": "2026–27 Crystal Palace F.C. season",
@@ -3612,7 +3637,7 @@
           "goals2": []
         }
       ],
-      "fetched_at": "2026-11-26T04:10:05.067012+09:00"
+      "fetched_at": "2026-11-27T04:00:27.104535+09:00"
     },
     "341": {
       "title": "2026–27 Leeds United F.C. season",
@@ -4434,7 +4459,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-11-26T04:10:07.196687+09:00"
+      "fetched_at": "2026-11-27T04:00:29.242198+09:00"
     },
     "73": {
       "title": "2025–26 Tottenham Hotspur F.C. season",
@@ -7573,7 +7598,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-11-26T04:10:08.354550+09:00"
+      "fetched_at": "2026-11-27T04:00:30.464106+09:00"
     },
     "1076": {
       "title": "2026–27 Coventry City F.C. season",
@@ -8320,7 +8345,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-11-26T04:10:11.076668+09:00"
+      "fetched_at": "2026-11-27T04:00:33.122139+09:00"
     },
     "322": {
       "title": "2026–27 Hull City A.F.C. season",
@@ -9103,7 +9128,7 @@
           "goals2": []
         }
       ],
-      "fetched_at": "2026-11-26T04:10:51.315342+09:00"
+      "fetched_at": "2026-11-27T04:01:12.821538+09:00"
     },
     "59": {
       "title": "2026–27 Blackburn Rovers F.C. season",
@@ -9939,7 +9964,7 @@
           "date": "2026-11-25",
           "team1": "Watford",
           "team2": "Blackburn Rovers",
-          "score": "",
+          "score": "0–1",
           "round": "17",
           "goals1": [],
           "goals2": []
@@ -10142,7 +10167,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-11-26T04:10:14.953371+09:00"
+      "fetched_at": "2026-11-27T04:00:36.926649+09:00"
     },
     "69": {
       "title": "2026–27 Queens Park Rangers F.C. season",
@@ -11280,7 +11305,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-11-26T04:10:16.114863+09:00"
+      "fetched_at": "2026-11-27T04:00:38.061234+09:00"
     },
     "70": {
       "title": "2025–26 Stoke City F.C. season",
@@ -12351,7 +12376,28 @@
           "team2": "Birmingham",
           "score": "",
           "round": "",
-          "goals1": [],
+          "goals1": [
+            {
+              "wiki_target": "August Priske",
+              "display": "Priske",
+              "goals": [
+                {
+                  "minute_raw": "7",
+                  "note": ""
+                }
+              ]
+            },
+            {
+              "wiki_target": "Jaydon Banel",
+              "display": "Banel",
+              "goals": [
+                {
+                  "minute_raw": "52",
+                  "note": ""
+                }
+              ]
+            }
+          ],
           "goals2": [],
           "_wikitable": true
         },
@@ -12536,7 +12582,7 @@
           "_wikitable": true
         }
       ],
-      "fetched_at": "2026-11-26T04:10:18.784686+09:00"
+      "fetched_at": "2026-11-27T04:00:40.637520+09:00"
     },
     "5533": {
       "title": null,
@@ -13183,7 +13229,7 @@
           ]
         }
       ],
-      "fetched_at": "2026-11-26T04:10:19.413663+09:00"
+      "fetched_at": "2026-11-27T04:00:41.258242+09:00"
     },
     "89": {
       "title": null,
@@ -14462,10 +14508,42 @@
           "date": "2026-11-25",
           "team1": "Lille",
           "team2": "Bayern Munich",
-          "score": "",
+          "score": "2–1",
           "round": "[[2026–27 UEFA Champions League league phase#Lille v Bayern Munich|5]]",
-          "goals1": [],
-          "goals2": []
+          "goals1": [
+            {
+              "wiki_target": "Ayase Ueda",
+              "display": "Ueda",
+              "goals": [
+                {
+                  "minute_raw": "62",
+                  "note": ""
+                }
+              ]
+            },
+            {
+              "wiki_target": "Aleksandar Pavlović (footballer)",
+              "display": "Pavlović",
+              "goals": [
+                {
+                  "minute_raw": "65",
+                  "note": "o.g."
+                }
+              ]
+            }
+          ],
+          "goals2": [
+            {
+              "wiki_target": "Dayot Upamecano",
+              "display": "Upamecano",
+              "goals": [
+                {
+                  "minute_raw": "15",
+                  "note": ""
+                }
+              ]
+            }
+          ]
         },
         {
           "date": "2026-12-08",
@@ -14495,7 +14573,7 @@
           "goals2": []
         }
       ],
-      "fetched_at": "2026-11-26T04:10:21.578417+09:00"
+      "fetched_at": "2026-11-27T04:00:43.397493+09:00"
     },
     "19": {
       "title": "2026–27 Eintracht Frankfurt season",
@@ -15532,7 +15610,7 @@
           "goals2": []
         }
       ],
-      "fetched_at": "2026-11-26T04:10:22.198879+09:00"
+      "fetched_at": "2026-11-27T04:00:44.036175+09:00"
     },
     "17": {
       "title": "2026–27 SC Freiburg season",
@@ -16019,7 +16097,7 @@
           "goals2": []
         }
       ],
-      "fetched_at": "2026-11-26T04:10:22.804503+09:00"
+      "fetched_at": "2026-11-27T04:00:44.626595+09:00"
     },
     "15": {
       "title": "2026–27 1. FSV Mainz 05 season",
@@ -16662,7 +16740,7 @@
           "goals2": []
         }
       ],
-      "fetched_at": "2026-11-26T04:10:24.970128+09:00"
+      "fetched_at": "2026-11-27T04:00:46.752154+09:00"
     },
     "12": {
       "title": "2025–26 SV Werder Bremen season",
@@ -18455,7 +18533,7 @@
           "goals2": []
         }
       ],
-      "fetched_at": "2026-11-26T04:10:27.244541+09:00"
+      "fetched_at": "2026-11-27T04:00:49.057491+09:00"
     },
     "11": {
       "title": "2025–26 VfL Wolfsburg season",
@@ -23305,7 +23383,7 @@
           "goals2": []
         }
       ],
-      "fetched_at": "2026-11-26T04:10:29.448192+09:00"
+      "fetched_at": "2026-11-27T04:00:51.218490+09:00"
     },
     "112": {
       "title": null,
@@ -23611,7 +23689,7 @@
               "display": "Balogun",
               "goals": [
                 {
-                  "minute_raw": "76",
+                  "minute_raw": "65",
                   "note": ""
                 }
               ]
@@ -24148,7 +24226,7 @@
           "goals2": []
         }
       ],
-      "fetched_at": "2026-11-26T04:10:32.773707+09:00"
+      "fetched_at": "2026-11-27T04:00:54.476823+09:00"
     },
     "533": {
       "title": "2026–27 Le Havre AC season",
@@ -24519,7 +24597,7 @@
           "goals2": []
         }
       ],
-      "fetched_at": "2026-11-26T04:10:34.897215+09:00"
+      "fetched_at": "2026-11-27T04:00:56.586758+09:00"
     },
     "678": {
       "title": "2025–26 AFC Ajax season",
@@ -27939,12 +28017,12 @@
           "goals2": []
         }
       ],
-      "fetched_at": "2026-11-26T04:10:38.315665+09:00"
+      "fetched_at": "2026-11-27T04:00:59.958853+09:00"
     },
     "682": {
       "title": null,
       "boxes": [],
-      "fetched_at": "2026-11-26T20:43:23.779385+09:00"
+      "fetched_at": "2026-11-27T04:01:03.734568+09:00"
     },
     "1915": {
       "title": null,
@@ -27953,7 +28031,7 @@
     "6806": {
       "title": null,
       "boxes": [],
-      "fetched_at": "2026-11-26T20:43:29.297636+09:00"
+      "fetched_at": "2026-11-27T04:01:08.483626+09:00"
     },
     "498": {
       "title": "2025–26 Sporting CP season",
@@ -31029,12 +31107,12 @@
           ]
         }
       ],
-      "fetched_at": "2026-11-26T04:10:12.206533+09:00"
+      "fetched_at": "2026-11-27T04:00:34.236002+09:00"
     },
     "674": {
       "title": null,
       "boxes": [],
-      "fetched_at": "2026-11-26T20:43:27.386175+09:00"
+      "fetched_at": "2026-11-27T04:01:06.867960+09:00"
     },
     "95": {
       "title": "2026–27 Valencia CF season",
@@ -31754,7 +31832,7 @@
           "goals2": []
         }
       ],
-      "fetched_at": "2026-11-26T04:10:53.096100+09:00"
+      "fetched_at": "2026-11-27T04:01:14.549593+09:00"
     },
     "6": {
       "title": "2026–27 FC Schalke 04 season",
@@ -32609,12 +32687,12 @@
           "goals2": []
         }
       ],
-      "fetched_at": "2026-11-26T04:10:53.735978+09:00"
+      "fetched_at": "2026-11-27T04:01:15.194668+09:00"
     },
     "712": {
       "title": null,
       "boxes": [],
-      "fetched_at": "2026-11-26T20:43:31.167636+09:00"
+      "fetched_at": "2026-11-27T04:01:17.324862+09:00"
     },
     "58": {
       "title": "2026–27 Aston Villa F.C. season",
@@ -34046,7 +34124,7 @@
           "goals2": []
         }
       ],
-      "fetched_at": "2026-11-26T04:10:30.639099+09:00"
+      "fetched_at": "2026-11-27T04:00:52.366176+09:00"
     },
     "349": {
       "title": "2026–27 Ipswich Town F.C. season",
@@ -35100,12 +35178,12 @@
           ]
         }
       ],
-      "fetched_at": "2026-11-26T04:10:52.481859+09:00"
+      "fetched_at": "2026-11-27T04:01:13.954312+09:00"
     },
     "104": {
       "title": null,
       "boxes": [],
-      "fetched_at": "2026-11-26T20:43:20.196285+09:00"
+      "fetched_at": "2026-11-27T04:00:48.908143+09:00"
     },
     "523": {
       "title": "2026–27 Olympique Lyonnais season",
@@ -36322,7 +36400,7 @@
           "goals2": []
         }
       ],
-      "fetched_at": "2026-11-26T04:10:35.555825+09:00"
+      "fetched_at": "2026-11-27T04:00:57.230163+09:00"
     },
     "521": {
       "title": "2026–27 Lille OSC season",
@@ -37042,10 +37120,42 @@
           "date": "2026-11-25",
           "team1": "Lille",
           "team2": "Bayern Munich",
-          "score": "",
+          "score": "2–1",
           "round": "[[2026–27 UEFA Champions League league phase#Lille v Bayern Munich|5]]",
-          "goals1": [],
-          "goals2": []
+          "goals1": [
+            {
+              "wiki_target": "Ayase Ueda",
+              "display": "Ueda",
+              "goals": [
+                {
+                  "minute_raw": "62",
+                  "note": ""
+                }
+              ]
+            },
+            {
+              "wiki_target": "Aleksandar Pavlović (footballer)",
+              "display": "Pavlović",
+              "goals": [
+                {
+                  "minute_raw": "65",
+                  "note": "o.g."
+                }
+              ]
+            }
+          ],
+          "goals2": [
+            {
+              "wiki_target": "Dayot Upamecano",
+              "display": "Upamecano",
+              "goals": [
+                {
+                  "minute_raw": "15",
+                  "note": ""
+                }
+              ]
+            }
+          ]
         },
         {
           "date": "2026-12-09",
@@ -37075,7 +37185,7 @@
           "goals2": []
         }
       ],
-      "fetched_at": "2026-11-26T04:10:37.690211+09:00"
+      "fetched_at": "2026-11-27T04:00:59.333305+09:00"
     },
     "60": {
       "title": "2026–27 Bolton Wanderers F.C. season",
@@ -38072,10 +38182,46 @@
           "date": "2026-11-25",
           "team1": "Bolton Wanderers",
           "team2": "West Bromwich Albion",
-          "score": "",
+          "score": "1–3",
           "round": "17",
-          "goals1": [],
-          "goals2": []
+          "goals1": [
+            {
+              "wiki_target": "Rúben Rodrigues (footballer, born 1996)",
+              "display": "Rodrigues",
+              "goals": [
+                {
+                  "minute_raw": "63",
+                  "note": "pen."
+                }
+              ]
+            }
+          ],
+          "goals2": [
+            {
+              "wiki_target": "Aune Heggebø",
+              "display": "Heggebø",
+              "goals": [
+                {
+                  "minute_raw": "21",
+                  "note": ""
+                },
+                {
+                  "minute_raw": "83",
+                  "note": "pen."
+                }
+              ]
+            },
+            {
+              "wiki_target": "Felix Horn Myhre",
+              "display": "Horn Myhre",
+              "goals": [
+                {
+                  "minute_raw": "75",
+                  "note": ""
+                }
+              ]
+            }
+          ]
         },
         {
           "date": "2026-11-28",
@@ -38359,7 +38505,7 @@
           "goals2": []
         }
       ],
-      "fetched_at": "2026-11-26T04:10:49.155870+09:00"
+      "fetched_at": "2026-11-27T04:01:10.628460+09:00"
     },
     "328": {
       "title": "2026–27 Burnley F.C. season",
@@ -39324,10 +39470,31 @@
           "date": "2026-11-25",
           "team1": "Burnley",
           "team2": "Birmingham City",
-          "score": "",
+          "score": "0–2",
           "round": "17",
           "goals1": [],
-          "goals2": []
+          "goals2": [
+            {
+              "wiki_target": "August Priske",
+              "display": "Priske",
+              "goals": [
+                {
+                  "minute_raw": "7",
+                  "note": ""
+                }
+              ]
+            },
+            {
+              "wiki_target": "Jaydon Banel",
+              "display": "Banel",
+              "goals": [
+                {
+                  "minute_raw": "52",
+                  "note": "o.g."
+                }
+              ]
+            }
+          ]
         },
         {
           "date": "2026-11-28",
@@ -39442,7 +39609,7 @@
           "goals2": []
         }
       ],
-      "fetched_at": "2026-11-26T04:10:56.729575+09:00"
+      "fetched_at": "2026-11-27T04:01:17.951204+09:00"
     }
   },
   "events": {
@@ -51039,8 +51206,8 @@
         "player_ja": "Balogun",
         "player_en": "Balogun",
         "is_japanese": false,
-        "minute": 76,
-        "minute_raw": "76",
+        "minute": 65,
+        "minute_raw": "65",
         "note": "",
         "side": "away"
       }
@@ -52956,9 +53123,133 @@
     ],
     "575397": [],
     "561961": [],
-    "561963": [],
-    "561964": [],
-    "575409": [],
-    "575410": []
+    "561963": [
+      {
+        "type": "goal",
+        "player_ja": "Rodrigues",
+        "player_en": "Rodrigues",
+        "is_japanese": false,
+        "minute": 63,
+        "minute_raw": "63",
+        "note": "pen.",
+        "side": "home"
+      },
+      {
+        "type": "goal",
+        "player_ja": "Heggebø",
+        "player_en": "Heggebø",
+        "is_japanese": false,
+        "minute": 21,
+        "minute_raw": "21",
+        "note": "",
+        "side": "away"
+      },
+      {
+        "type": "goal",
+        "player_ja": "Heggebø",
+        "player_en": "Heggebø",
+        "is_japanese": false,
+        "minute": 83,
+        "minute_raw": "83",
+        "note": "pen.",
+        "side": "away"
+      },
+      {
+        "type": "goal",
+        "player_ja": "Horn Myhre",
+        "player_en": "Horn Myhre",
+        "is_japanese": false,
+        "minute": 75,
+        "minute_raw": "75",
+        "note": "",
+        "side": "away"
+      }
+    ],
+    "561964": [
+      {
+        "type": "goal",
+        "player_ja": "Priske",
+        "player_en": "Priske",
+        "is_japanese": false,
+        "minute": 7,
+        "minute_raw": "7",
+        "note": "",
+        "side": "away"
+      },
+      {
+        "type": "goal",
+        "player_ja": "Banel",
+        "player_en": "Banel",
+        "is_japanese": false,
+        "minute": 52,
+        "minute_raw": "52",
+        "note": "o.g.",
+        "side": "away"
+      }
+    ],
+    "575409": [
+      {
+        "type": "goal",
+        "player_ja": "Isak",
+        "player_en": "Isak",
+        "is_japanese": false,
+        "minute": 13,
+        "minute_raw": "13",
+        "note": "",
+        "side": "away"
+      },
+      {
+        "type": "goal",
+        "player_ja": "Isak",
+        "player_en": "Isak",
+        "is_japanese": false,
+        "minute": 82,
+        "minute_raw": "82",
+        "note": "",
+        "side": "away"
+      },
+      {
+        "type": "goal",
+        "player_ja": "Wirtz",
+        "player_en": "Wirtz",
+        "is_japanese": false,
+        "minute": 79,
+        "minute_raw": "79",
+        "note": "",
+        "side": "away"
+      }
+    ],
+    "575410": [
+      {
+        "type": "goal",
+        "player_ja": "上田綺世",
+        "player_en": "Ueda",
+        "is_japanese": true,
+        "minute": 62,
+        "minute_raw": "62",
+        "note": "",
+        "side": "home"
+      },
+      {
+        "type": "goal",
+        "player_ja": "Pavlović",
+        "player_en": "Pavlović",
+        "is_japanese": false,
+        "minute": 65,
+        "minute_raw": "65",
+        "note": "o.g.",
+        "side": "home"
+      },
+      {
+        "type": "goal",
+        "player_ja": "Upamecano",
+        "player_en": "Upamecano",
+        "is_japanese": false,
+        "minute": 15,
+        "minute_raw": "15",
+        "note": "",
+        "side": "away"
+      }
+    ]
   }
 }

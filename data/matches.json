@@ -1,8 +1,8 @@
 {
-  "updated": "2026-11-26T20:40:29.911484+09:00",
-  "date_from": "2026-11-19",
-  "date_to": "2026-12-10",
-  "match_count": 2082,
+  "updated": "2026-11-27T03:57:32.500436+09:00",
+  "date_from": "2026-11-20",
+  "date_to": "2026-12-11",
+  "match_count": 2088,
   "_note": "累積保持モード：フェッチ窓外の過去試合データはそのまま保持される。",
   "matches": [
     {
@@ -76180,6 +76180,210 @@
       "_source_page": "2026–27 UEFA Conference League league phase"
     },
     {
+      "id": 565888,
+      "competition_id": 78,
+      "competition_ja": "ブンデスリーガ",
+      "competition_category": "league",
+      "competition_flag": "🇩🇪",
+      "kickoff_jst": "2026-12-12T04:30:00+09:00",
+      "status": "TIMED",
+      "stage": "REGULAR_SEASON",
+      "matchday": 13,
+      "home_id": 7,
+      "home_ja": "ハンブルガー",
+      "home_en": "HSV",
+      "home_crest": "https://crests.football-data.org/7.png",
+      "away_id": 6,
+      "away_ja": "Schalke",
+      "away_en": "Schalke",
+      "away_crest": "https://crests.football-data.org/6.png",
+      "score": null,
+      "japanese_players": [
+        {
+          "name_ja": "田中聡",
+          "position": "MF",
+          "side": "away"
+        }
+      ],
+      "broadcasters": [
+        {
+          "name": "ABEMA",
+          "label": "ABEMA（無料の生中継）",
+          "url": "https://abema.tv/video/title/760-3",
+          "source": "league_guides"
+        },
+        {
+          "name": "DAZN",
+          "label": "DAZN",
+          "url": "https://www.dazn.com/ja-JP/welcome",
+          "source": "league_guides"
+        }
+      ]
+    },
+    {
+      "id": 558491,
+      "competition_id": 135,
+      "competition_ja": "セリエA",
+      "competition_category": "league",
+      "competition_flag": "🇮🇹",
+      "kickoff_jst": "2026-12-12T04:45:00+09:00",
+      "status": "TIMED",
+      "stage": "REGULAR_SEASON",
+      "matchday": 15,
+      "home_id": 115,
+      "home_ja": "ウディネーゼ",
+      "home_en": "Udinese",
+      "home_crest": "https://crests.football-data.org/115.png",
+      "away_id": 470,
+      "away_ja": "Frosinone",
+      "away_en": "Frosinone",
+      "away_crest": "https://crests.football-data.org/470.png",
+      "score": null,
+      "japanese_players": [],
+      "broadcasters": [
+        {
+          "name": "DAZN",
+          "label": "DAZN",
+          "url": "https://www.dazn.com/ja-JP/welcome",
+          "source": "league_guides"
+        }
+      ]
+    },
+    {
+      "id": 559602,
+      "competition_id": 61,
+      "competition_ja": "リーグ・アン",
+      "competition_category": "league",
+      "competition_flag": "🇫🇷",
+      "kickoff_jst": "2026-12-12T04:45:00+09:00",
+      "status": "TIMED",
+      "stage": "REGULAR_SEASON",
+      "matchday": 14,
+      "home_id": 519,
+      "home_ja": "オセール",
+      "home_en": "Auxerre",
+      "home_crest": "https://crests.football-data.org/519.png",
+      "away_id": 511,
+      "away_ja": "トゥールーズ",
+      "away_en": "Toulouse",
+      "away_crest": "https://crests.football-data.org/511.png",
+      "score": null,
+      "japanese_players": [],
+      "broadcasters": [
+        {
+          "name": "DAZN",
+          "label": "DAZN",
+          "url": "https://www.dazn.com/ja-JP/welcome",
+          "source": "league_guides"
+        }
+      ]
+    },
+    {
+      "id": 562006,
+      "competition_id": 40,
+      "competition_ja": "チャンピオンシップ",
+      "competition_category": "league",
+      "competition_flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+      "kickoff_jst": "2026-12-12T05:00:00+09:00",
+      "status": "SCHEDULED",
+      "stage": "REGULAR_SEASON",
+      "matchday": 21,
+      "home_id": 60,
+      "home_ja": "Bolton",
+      "home_en": "Bolton",
+      "home_crest": "https://crests.football-data.org/60.png",
+      "away_id": 404,
+      "away_ja": "レクサム",
+      "away_en": "Wrexham",
+      "away_crest": "https://crests.football-data.org/404.png",
+      "score": null,
+      "japanese_players": [
+        {
+          "name_ja": "伊藤敦樹",
+          "position": "MF",
+          "side": "home"
+        }
+      ],
+      "broadcasters": [
+        {
+          "name": "DAZN",
+          "label": "DAZN",
+          "url": "https://www.dazn.com/ja-JP/welcome",
+          "source": "league_guides"
+        }
+      ]
+    },
+    {
+      "id": 564783,
+      "competition_id": 140,
+      "competition_ja": "ラ・リーガ",
+      "competition_category": "league",
+      "competition_flag": "🇪🇸",
+      "kickoff_jst": "2026-12-12T05:00:00+09:00",
+      "status": "TIMED",
+      "stage": "REGULAR_SEASON",
+      "matchday": 16,
+      "home_id": 285,
+      "home_ja": "エルチェ",
+      "home_en": "Elche",
+      "home_crest": "https://crests.football-data.org/285.png",
+      "away_id": 559,
+      "away_ja": "セビージャ",
+      "away_en": "Sevilla FC",
+      "away_crest": "https://crests.football-data.org/559.png",
+      "score": null,
+      "japanese_players": [],
+      "broadcasters": [
+        {
+          "name": "U-NEXT",
+          "label": "U-NEXT サッカーパック",
+          "url": "https://www.video.unext.jp/lp/football_pack",
+          "source": "league_guides"
+        },
+        {
+          "name": "DAZN",
+          "label": "DAZN",
+          "url": "https://www.dazn.com/ja-JP/welcome",
+          "source": "league_guides"
+        }
+      ]
+    },
+    {
+      "id": 567375,
+      "competition_id": 94,
+      "competition_ja": "プリメイラ・リーガ",
+      "competition_category": "league",
+      "competition_flag": "🇵🇹",
+      "kickoff_jst": "2026-12-12T05:15:00+09:00",
+      "status": "TIMED",
+      "stage": "REGULAR_SEASON",
+      "matchday": 14,
+      "home_id": 5527,
+      "home_ja": "Acad. Viseu",
+      "home_en": "Acad. Viseu",
+      "home_crest": "https://crests.football-data.org/5527.png",
+      "away_id": 712,
+      "away_ja": "アロウカ",
+      "away_en": "Arouca",
+      "away_crest": "https://crests.football-data.org/712.png",
+      "score": null,
+      "japanese_players": [
+        {
+          "name_ja": "福井太智",
+          "position": "MF",
+          "side": "away"
+        }
+      ],
+      "broadcasters": [
+        {
+          "name": "DAZN",
+          "label": "DAZN",
+          "url": "https://www.dazn.com/ja-JP/welcome",
+          "source": "league_guides"
+        }
+      ]
+    },
+    {
       "id": "BL2_83743",
       "competition_id": 79,
       "competition_ja": "ブンデスリーガ2部",
@@ -81510,8 +81714,8 @@
       "_source": "openligadb"
     }
   ],
-  "updated_openligadb": "2026-11-26T20:42:57.571644+09:00",
-  "updated_yt_highlights": "2026-11-26T20:43:36.144872+09:00",
-  "updated_uefa_secondary": "2026-11-26T20:44:11.474300+09:00",
-  "updated_domestic_cups": "2026-11-26T20:44:30.046731+09:00"
+  "updated_openligadb": "2026-11-27T04:00:02.733954+09:00",
+  "updated_yt_highlights": "2026-11-27T04:01:22.201868+09:00",
+  "updated_uefa_secondary": "2026-11-27T04:01:55.957695+09:00",
+  "updated_domestic_cups": "2026-11-27T04:02:13.188242+09:00"
 }
